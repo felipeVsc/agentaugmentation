@@ -1,0 +1,25 @@
+# The 36 tasks of the published DOLAP 2026 paper (airports), imported unchanged:
+#   tasks import-published --config configs/airports_dolap2026.yaml --no-graph \
+#       --results data/dolap2026/test_results.csv --node-values data/dolap2026/ground_truth.csv
+# The same design on a new graph (or a new draw):  tasks build-published --config <a config like this one>
+
+dataset:
+  name: airports
+  node_type: Airport
+  context_max_hops: 3
+  source: neo4j
+  node_id_property: icao          # published files identify airports by ICAO
+
+properties:
+  exclude_properties: [airport_id]
+
+published:
+  profile: code                   # code = what the published code did; paper = Algorithm 2 as printed
+  seed: 42                        # with-context slice (published: unseeded)
+  node_key: icao
+  popularity_file: data/dolap2026/rank_properties.csv
+  centrality_file: data/dolap2026/ranks_pagerank.csv
+  context_slice: [2, 5, 10]
+
+task_set_version: airports-dolap2026
+output_dir: tasks/airports/dolap2026/

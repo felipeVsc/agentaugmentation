@@ -1,0 +1,44 @@
+# Task-set build for the airports graph (TASKDEFINITION_SPEC.md §8).
+# Run:  tasks check-connection --config configs/airports.yaml
+#       tasks build --config configs/airports.yaml
+
+dataset:
+  name: airports
+  node_type: Airport            # Neo4j label of the nodes whose properties are hidden
+  context_max_hops: 3           # max relationships on n:1 paths (Airport -> City -> Country)
+  source: neo4j                 # neo4j | snapshot (then set snapshot_dir)
+  # snapshot_dir: tasks/airports/v1/intermediate/snapshot
+  # label_priority: [Airport]   # element type of nodes with several labels
+  # node_id_property: iata      # use a domain property as node_id (must be unique)
+
+neo4j:
+  # URI and database can be overridden by NEO4J_URI / NEO4J_DATABASE.
+  # User and password are ONLY read from NEO4J_USER / NEO4J_PASSWORD (see .env.example).
+  uri: bolt://localhost:7687
+  database: null                # null = server default database
+  id_function: elementId        # elementId (Neo4j 5) | id (Neo4j 4)
+  # Export filters; leave unset to export the whole graph (keeps PageRank on the real graph).
+  # labels: [Airport, City, Country]
+  # relationship_types: [IN, HAS_ROUTE]
+
+centrality:
+  measure: pagerank             # pagerank | degree
+  epsilon: 1.0e-6
+  directed: true
+
+sampling:
+  max_n: 5                      # nodes drawn per centrality stratum
+  max_H: 3
+  max_G: 3
+  seed: 42
+
+properties:
+  # Property name ("id"), type-qualified name ("Airport.id"), or full prop_key.
+  exclude_properties: []        # e.g. [id, embedding, created_at]
+  never_hide: []                # may appear in G but never in H
+  leakage_pairs: []             # e.g. [[Airport.iata, Airport.code]]
+  empty_string_is_null: true
+  leak_min_substring_len: 4
+
+task_set_version: airports-v1
+output_dir: tasks/airports/v1/

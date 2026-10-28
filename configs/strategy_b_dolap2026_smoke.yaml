@@ -1,0 +1,66 @@
+# Cheap end-to-end test of Strategy B: cloud gemma4, 1 run per task, basic Tavily search, credit cap.
+# Same tasks, prompts and blocklist as strategy_b_dolap2026.yaml; separate output so it never mixes
+# with the advanced-search runs.
+#   strategy-b check --config configs/strategy_b_dolap2026_smoke.yaml
+#   strategy-b run   --config configs/strategy_b_dolap2026_smoke.yaml
+
+inputs:
+  tasks: tasks/airports/dolap2026/tasks.csv
+runs_per_task: 1
+output_dir: results/airports/dolap2026/strategy_b_smoke/
+search_cache_dir: results/airports/dolap2026/search_cache/
+search:
+  tool: tavily
+  depth: basic
+  api_key_env: TAVILY_API_KEY
+  timeout_s: 30
+search_max_credits: 150
+results_per_query: 5
+max_subqueries: 3
+max_evidence_tokens: 3000
+max_chars_per_result: 1500
+reuse_retrieval: true
+blocked_domains:
+- ourairports.com
+- openflights.org
+- github.com/jpatokal
+- github.com/davidmegginson
+- raw.githubusercontent.com/jpatokal
+- kaggle.com
+- github.com/felipeVsc
+pfe_tokenizer: cl100k_base
+variants:
+- id: search_evidence
+  plan: prompts/agent/plan.v1.txt
+  synthesize: prompts/agent/synth.v1.txt
+  synthesis: evidence_only
+- id: search_memory
+  plan: prompts/agent/plan.v1.txt
+  synthesize: prompts/agent/synth_memory.v1.txt
+  synthesis: evidence_and_memory
+model_defaults:
+  provider: ollama
+  params:
+    temperature: 0.7
+    max_tokens: 1024
+  max_concurrency: 1
+  timeout_s: 600
+  max_retries: 2
+  energy:
+    method: codecarbon
+    country_iso_code: BRA
+  options:
+    num_ctx: 8192
+    keep_alive: 30m
+    seed: 0
+models:
+- id: cloud-gemma4
+  model: gemma4:31b
+  options:
+    base_url: https://ollama.com
+  max_concurrency: 2   # the free Ollama Cloud tier answers 429 "too many concurrent requests" above this
+  max_retries: 5
+  energy:
+    method: ecologits
+    ecologits_provider: google_genai
+    ecologits_model: gemma-4-31b-it

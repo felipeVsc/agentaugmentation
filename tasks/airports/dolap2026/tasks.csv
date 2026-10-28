@@ -1,0 +1,469 @@
+task_id,task_set_version,dataset,design,node_type,node_id,node_centrality,node_centrality_raw,node_stratum,H_stratum,G_stratum,difficulty_prop,size_H,size_G,H,G,G_drawn,context,difficulty,specificity_H,specificity_G,published_difficulty,published_specificity_H,published_specificity_G,published_input,published_input_context
+7e954c4fead26a0e,airports-dolap2026,airports,dolap2026-import,Airport,PAKK,0.30449353858912614,0.7493457981058758,easy,easy,easy,easyeasy,3,2,"[{""prop_key"": ""Airport.location"", ""property_name"": ""location"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": 154.0, ""popularity"": 1.0, ""centrality"": 0.30449353858912614}, {""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": ""Koyuk"", ""popularity"": 0.9936347103143673, ""centrality"": 0.30449353858912614}]","[""altitude"", ""city""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 37.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 5788.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""United States""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Nome""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""OME""], [""node"", [""ROUTE_TO""], ""Airport"", ""timezone"", ""-9""]]",6.578786298759422,3.2841419382280166,3.2946443605314055,6.5787862987594234,3.2841419382280166,3.2946443605314064,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: altitude:154.0,city:Koyuk
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: altitude:154.0,city:Koyuk
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 37.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 5788.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'United States'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Nome'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'OME'], ['node', ['ROUTE_TO'], 'Airport', 'timezone', '-9']].
+    "
+e377c59d6a5373f3,airports-dolap2026,airports,dolap2026-import,Airport,PAKK,0.30449353858912614,0.7493457981058758,easy,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": 3000.0, ""popularity"": 0.732138217718888, ""centrality"": 0.30449353858912614}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.30449353858912614}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": 60.0, ""popularity"": 0.732138217718888, ""centrality"": 0.30449353858912614}]","[""runwaysLength"", ""runways"", ""runwaysWidth""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 37.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",7.776825532883594,3.2911398266239646,4.48568570625963,7.776825532883596,3.2911398266239655,4.48568570625963,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:3000.0,runways:1.0,runwaysWidth:60.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:3000.0,runways:1.0,runwaysWidth:60.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 37.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+76dea8b1a243600b,airports-dolap2026,airports,dolap2026-import,Airport,PAKK,0.30449353858912614,0.7493457981058758,easy,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": ""PAKK"", ""popularity"": 1.0, ""centrality"": 0.30449353858912614}, {""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": ""America/Anchorage"", ""popularity"": 1.0, ""centrality"": 0.30449353858912614}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": -161.154006958, ""popularity"": 1.0, ""centrality"": 0.30449353858912614}]","[""icao"", ""tz_database_timezone"", ""longitude""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 37.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",7.659785274414748,4.375643336186732,3.2841419382280166,7.659785274414748,4.375643336186732,3.2841419382280166,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:America/Anchorage,icao:PAKK,longitude:-161.154006958
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:America/Anchorage,icao:PAKK,longitude:-161.154006958
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 37.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+983f733904c4b040,airports-dolap2026,airports,dolap2026-import,Airport,PAKK,0.30449353858912614,0.7493457981058758,easy,hard,hard,hardhard,3,1,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""PAKK"", ""path"": ""Airport"", ""value"": 60.0, ""popularity"": 0.732138217718888, ""centrality"": 0.30449353858912614}]","[""runwaysWidth"", ""commercial_flights""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 37.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 5788.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""United States""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Nome""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""OME""], [""node"", [""ROUTE_TO""], ""Airport"", ""timezone"", ""-9""]]",16.721688618232598,4.375643336186732,12.346045282045866,16.721688618232598,4.375643336186732,12.346045282045866,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysWidth:60.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysWidth:60.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 37.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 5788.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'United States'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Nome'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'OME'], ['node', ['ROUTE_TO'], 'Airport', 'timezone', '-9']].
+    "
+a822549cd5e0df1f,airports-dolap2026,airports,dolap2026-import,Airport,YPPH,0.6866429839615714,5.642051821214265,easy,easy,easy,easyeasy,3,3,"[{""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": ""YPPH"", ""popularity"": 1.0, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 115.96700286865234, ""popularity"": 1.0, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": ""N"", ""popularity"": 1.0, ""centrality"": 0.6866429839615714}]","[""icao"", ""longitude"", ""dst""]","[[""node"", [""PASSENGERS""], ""Airport"", ""location"", [-0.461941, 51.4706]], [""node"", [""PASSENGERS""], ""Airport"", ""altitude"", 83.0], [""node"", [""PASSENGERS""], ""Airport"", ""dst"", ""E""], [""node"", [""PASSENGERS""], ""Airport"", ""type"", ""airport""], [""node"", [""PASSENGERS""], ""Airport"", ""runwaysLength"", 12400.0]]",2.912721817182263,1.4563609085911315,1.4563609085911315,2.912721817182263,1.4563609085911315,1.4563609085911315,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:N,icao:YPPH,longitude:115.96700286865234
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:N,icao:YPPH,longitude:115.96700286865234
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['PASSENGERS'], 'Airport', 'location', [-0.461941, 51.4706]], ['node', ['PASSENGERS'], 'Airport', 'altitude', 83.0], ['node', ['PASSENGERS'], 'Airport', 'dst', 'E'], ['node', ['PASSENGERS'], 'Airport', 'type', 'airport'], ['node', ['PASSENGERS'], 'Airport', 'runwaysLength', 12400.0]].
+    "
+9013282f7ebbd2b5,airports-dolap2026,airports,dolap2026-import,Airport,YPPH,0.6866429839615714,5.642051821214265,easy,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 2.0, ""popularity"": 0.732138217718888, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 9197.5, ""popularity"": 0.732138217718888, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 148.0, ""popularity"": 0.732138217718888, ""centrality"": 0.6866429839615714}]","[""runways"", ""runwaysLength"", ""runwaysWidth""]","[[""node"", [""PASSENGERS""], ""Airport"", ""location"", [-0.461941, 51.4706]], [""node"", [""PASSENGERS""], ""Airport"", ""altitude"", 83.0], [""node"", [""PASSENGERS""], ""Airport"", ""dst"", ""E""], [""node"", [""PASSENGERS""], ""Airport"", ""type"", ""airport""]]",3.4455493887782382,1.4563609085911315,1.9891884801871067,3.4455493887782382,1.4563609085911315,1.9891884801871067,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:9197.5,runways:2.0,runwaysWidth:148.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:9197.5,runways:2.0,runwaysWidth:148.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['PASSENGERS'], 'Airport', 'location', [-0.461941, 51.4706]], ['node', ['PASSENGERS'], 'Airport', 'altitude', 83.0], ['node', ['PASSENGERS'], 'Airport', 'dst', 'E'], ['node', ['PASSENGERS'], 'Airport', 'type', 'airport']].
+    "
+4ca0891af1534991,airports-dolap2026,airports,dolap2026-import,Airport,YPPH,0.6866429839615714,5.642051821214265,easy,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.distCity"", ""property_name"": ""distCity"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 10063.648487575283, ""popularity"": 0.8099506365289686, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.type"", ""property_name"": ""type"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": ""airport"", ""popularity"": 1.0, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": ""YPPH"", ""popularity"": 1.0, ""centrality"": 0.6866429839615714}]","[""distCity"", ""type"", ""icao""]","[[""node"", [""PASSENGERS""], ""Airport"", ""location"", [-0.461941, 51.4706]], [""node"", [""PASSENGERS""], ""Airport"", ""altitude"", 83.0], [""node"", [""PASSENGERS""], ""Airport"", ""dst"", ""E""], [""node"", [""PASSENGERS""], ""Airport"", ""type"", ""airport""]]",3.5027560979519166,1.9403899175557495,1.5623661803961668,3.5027560979519166,1.9403899175557495,1.5623661803961668,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: type:airport,icao:YPPH,distCity:10063.648487575283
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: type:airport,icao:YPPH,distCity:10063.648487575283
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['PASSENGERS'], 'Airport', 'location', [-0.461941, 51.4706]], ['node', ['PASSENGERS'], 'Airport', 'altitude', 83.0], ['node', ['PASSENGERS'], 'Airport', 'dst', 'E'], ['node', ['PASSENGERS'], 'Airport', 'type', 'airport']].
+    "
+dd99e06765dd5fb8,airports-dolap2026,airports,dolap2026-import,Airport,YPPH,0.6866429839615714,5.642051821214265,easy,hard,hard,hardhard,3,2,"[{""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 9197.5, ""popularity"": 0.732138217718888, ""centrality"": 0.6866429839615714}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""YPPH"", ""path"": ""Airport"", ""value"": 2.0, ""popularity"": 0.732138217718888, ""centrality"": 0.6866429839615714}]","[""runwaysLength"", ""runways""]","[[""node"", [""PASSENGERS""], ""Airport"", ""location"", [-0.461941, 51.4706]], [""node"", [""PASSENGERS""], ""Airport"", ""altitude"", 83.0], [""node"", [""PASSENGERS""], ""Airport"", ""dst"", ""E""], [""node"", [""PASSENGERS""], ""Airport"", ""type"", ""airport""]]",5.800037054942365,3.810848574755258,1.9891884801871067,5.800037054942365,3.810848574755258,1.9891884801871067,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:9197.5,runways:2.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:9197.5,runways:2.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['PASSENGERS'], 'Airport', 'location', [-0.461941, 51.4706]], ['node', ['PASSENGERS'], 'Airport', 'altitude', 83.0], ['node', ['PASSENGERS'], 'Airport', 'dst', 'E'], ['node', ['PASSENGERS'], 'Airport', 'type', 'airport']].
+    "
+36db6dd948650d17,airports-dolap2026,airports,dolap2026-import,Airport,VEGT,0.4448667222856503,1.5730283485134906,easy,easy,easy,easyeasy,3,3,"[{""prop_key"": ""Airport.distCity"", ""property_name"": ""distCity"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": ""Lokpriya Gopinath Bordoloi International Airport"", ""popularity"": 1.0, ""centrality"": 0.4448667222856503}, {""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": 26.10610008239746, ""popularity"": 1.0, ""centrality"": 0.4448667222856503}, {""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": ""OurAirports"", ""popularity"": 1.0, ""centrality"": 0.4448667222856503}]","[""name"", ""latitude"", ""source""]","[[""node"", [""OF""], ""City"", ""accent_name"", ""Guwahati""], [""node"", [""OF""], ""City"", ""location"", [91.733333, 26.183332999999998]], [""node"", [""OF""], ""City"", ""name"", ""guwahati""], [""node"", [""OF""], ""City"", ""longitude"", 91.733333], [""node"", [""OF""], ""City"", ""latitude"", 26.183332999999998], [""node"", [""OF""], ""City"", ""country"", ""India""], [""node"", [""OF""], ""City"", ""population"", 899132.0], [""node"", [""ROUTE_TO""], ""Airport"", ""tz_database_timezone"", ""Asia/Calcutta""]]",4.664483947774646,2.4166197001137544,2.2478642476608917,4.664483947774646,2.4166197001137544,2.2478642476608917,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: source:OurAirports,name:Lokpriya Gopinath Bordoloi International Airport,latitude:26.10610008239746
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: source:OurAirports,name:Lokpriya Gopinath Bordoloi International Airport,latitude:26.10610008239746
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['OF'], 'City', 'accent_name', 'Guwahati'], ['node', ['OF'], 'City', 'location', [91.733333, 26.183332999999998]], ['node', ['OF'], 'City', 'name', 'guwahati'], ['node', ['OF'], 'City', 'longitude', 91.733333], ['node', ['OF'], 'City', 'latitude', 26.183332999999998], ['node', ['OF'], 'City', 'country', 'India'], ['node', ['OF'], 'City', 'population', 899132.0], ['node', ['ROUTE_TO'], 'Airport', 'tz_database_timezone', 'Asia/Calcutta']].
+    "
+44c43f4b2f734a7c,airports-dolap2026,airports,dolap2026-import,Airport,VEGT,0.4448667222856503,1.5730283485134906,easy,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.4448667222856503}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": 9000.0, ""popularity"": 0.732138217718888, ""centrality"": 0.4448667222856503}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": ""GAU"", ""popularity"": 0.7887763055339049, ""centrality"": 0.4448667222856503}]","[""runways"", ""runwaysLength"", ""iata""]","[[""node"", [""OF""], ""City"", ""accent_name"", ""Guwahati""], [""node"", [""OF""], ""City"", ""location"", [91.733333, 26.183332999999998]], [""node"", [""OF""], ""City"", ""name"", ""guwahati""]]",5.247607469593513,2.2526540233253565,2.994953446268157,5.247607469593513,2.2526540233253565,2.994953446268157,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:9000.0,iata:GAU,runways:1.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:9000.0,iata:GAU,runways:1.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['OF'], 'City', 'accent_name', 'Guwahati'], ['node', ['OF'], 'City', 'location', [91.733333, 26.183332999999998]], ['node', ['OF'], 'City', 'name', 'guwahati']].
+    "
+0a24a4c91424d542,airports-dolap2026,airports,dolap2026-import,Airport,VEGT,0.4448667222856503,1.5730283485134906,easy,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": ""Asia/Calcutta"", ""popularity"": 1.0, ""centrality"": 0.4448667222856503}, {""prop_key"": ""Airport.country"", ""property_name"": ""country"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": ""India"", ""popularity"": 1.0, ""centrality"": 0.4448667222856503}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": ""Lokpriya Gopinath Bordoloi International Airport"", ""popularity"": 1.0, ""centrality"": 0.4448667222856503}]","[""tz_database_timezone"", ""country"", ""name""]","[[""node"", [""OF""], ""City"", ""accent_name"", ""Guwahati""], [""node"", [""OF""], ""City"", ""location"", [91.733333, 26.183332999999998]], [""node"", [""OF""], ""City"", ""name"", ""guwahati""], [""node"", [""OF""], ""City"", ""longitude"", 91.733333], [""node"", [""OF""], ""City"", ""latitude"", 26.183332999999998], [""node"", [""OF""], ""City"", ""country"", ""India""], [""node"", [""OF""], ""City"", ""population"", 899132.0], [""node"", [""ROUTE_TO""], ""Airport"", ""tz_database_timezone"", ""Asia/Calcutta""]]",8.277758351567856,6.0298941039069645,2.2478642476608917,8.277758351567856,6.0298941039069645,2.2478642476608917,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Asia/Calcutta,country:India,name:Lokpriya Gopinath Bordoloi International Airport
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Asia/Calcutta,country:India,name:Lokpriya Gopinath Bordoloi International Airport
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['OF'], 'City', 'accent_name', 'Guwahati'], ['node', ['OF'], 'City', 'location', [91.733333, 26.183332999999998]], ['node', ['OF'], 'City', 'name', 'guwahati'], ['node', ['OF'], 'City', 'longitude', 91.733333], ['node', ['OF'], 'City', 'latitude', 26.183332999999998], ['node', ['OF'], 'City', 'country', 'India'], ['node', ['OF'], 'City', 'population', 899132.0], ['node', ['ROUTE_TO'], 'Airport', 'tz_database_timezone', 'Asia/Calcutta']].
+    "
+18a51408039161c6,airports-dolap2026,airports,dolap2026-import,Airport,VEGT,0.4448667222856503,1.5730283485134906,easy,hard,hard,hardhard,3,1,"[{""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""VEGT"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.4448667222856503}]","[""runways"", ""commercial_flights""]","[[""node"", [""OF""], ""City"", ""accent_name"", ""Guwahati""], [""node"", [""OF""], ""City"", ""location"", [91.733333, 26.183332999999998]], [""node"", [""OF""], ""City"", ""name"", ""guwahati""], [""node"", [""OF""], ""City"", ""longitude"", 91.733333], [""node"", [""OF""], ""City"", ""latitude"", 26.183332999999998], [""node"", [""OF""], ""City"", ""country"", ""India""], [""node"", [""OF""], ""City"", ""population"", 899132.0], [""node"", [""ROUTE_TO""], ""Airport"", ""tz_database_timezone"", ""Asia/Calcutta""]]",11.445329316589783,2.994953446268157,8.450375870321626,11.445329316589783,2.994953446268157,8.450375870321626,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runways:1.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runways:1.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['OF'], 'City', 'accent_name', 'Guwahati'], ['node', ['OF'], 'City', 'location', [91.733333, 26.183332999999998]], ['node', ['OF'], 'City', 'name', 'guwahati'], ['node', ['OF'], 'City', 'longitude', 91.733333], ['node', ['OF'], 'City', 'latitude', 26.183332999999998], ['node', ['OF'], 'City', 'country', 'India'], ['node', ['OF'], 'City', 'population', 899132.0], ['node', ['ROUTE_TO'], 'Airport', 'tz_database_timezone', 'Asia/Calcutta']].
+    "
+70a4dbdd7d040c3a,airports-dolap2026,airports,dolap2026-import,Airport,ZUBJ,0.15147395059632074,0.33389791825166565,medium,easy,easy,easyeasy,3,2,"[{""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": ""N"", ""popularity"": 1.0, ""centrality"": 0.15147395059632074}, {""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": 4751.0, ""popularity"": 1.0, ""centrality"": 0.15147395059632074}]","[""dst"", ""altitude""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 50.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11975.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""China""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Guangzhou""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""CAN""]]",13.203590400371981,6.6017952001859905,6.6017952001859905,13.203590400371981,6.6017952001859905,6.6017952001859905,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: altitude:4751.0,dst:N
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: altitude:4751.0,dst:N
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 50.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11975.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'China'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Guangzhou'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'CAN']].
+    "
+3aa8337f55015d5d,airports-dolap2026,airports,dolap2026-import,Airport,ZUBJ,0.15147395059632074,0.33389791825166565,medium,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.location"", ""property_name"": ""location"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": ""BFJ"", ""popularity"": 0.7887763055339049, ""centrality"": 0.15147395059632074}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.15147395059632074}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": 8530.0, ""popularity"": 0.732138217718888, ""centrality"": 0.15147395059632074}]","[""iata"", ""runways"", ""runwaysLength""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 50.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",15.397730856410895,6.6017952001859905,8.795935656224904,15.397730856410895,6.6017952001859905,8.795935656224904,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:8530.0,iata:BFJ,runways:1.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:8530.0,iata:BFJ,runways:1.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 50.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+4da2eb14d40ad458,airports-dolap2026,airports,dolap2026-import,Airport,ZUBJ,0.15147395059632074,0.33389791825166565,medium,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": ""Bijie"", ""popularity"": 0.9936347103143673, ""centrality"": 0.15147395059632074}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": ""ZUBJ"", ""popularity"": 1.0, ""centrality"": 0.15147395059632074}, {""prop_key"": ""Airport.distCity"", ""property_name"": ""distCity"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": 18314.734739348147, ""popularity"": 0.8099506365289686, ""centrality"": 0.15147395059632074}]","[""city"", ""icao"", ""distCity""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 50.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11975.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""China""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Guangzhou""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""CAN""]]",15.893351949707714,8.795935656224904,7.0974162934828104,15.893351949707714,8.795935656224904,7.0974162934828104,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: city:Bijie,icao:ZUBJ,distCity:18314.734739348147
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: city:Bijie,icao:ZUBJ,distCity:18314.734739348147
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 50.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11975.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'China'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Guangzhou'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'CAN']].
+    "
+9c53af4bfcacfa5e,airports-dolap2026,airports,dolap2026-import,Airport,ZUBJ,0.15147395059632074,0.33389791825166565,medium,hard,hard,hardhard,3,2,"[{""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.15147395059632074}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""ZUBJ"", ""path"": ""Airport"", ""value"": 148.0, ""popularity"": 0.732138217718888, ""centrality"": 0.15147395059632074}]","[""runways"", ""runwaysWidth""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 50.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11975.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""China""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Guangzhou""]]",26.29201083628464,17.274867569600513,9.017143266684128,26.29201083628464,17.274867569600513,9.017143266684128,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runways:1.0,runwaysWidth:148.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runways:1.0,runwaysWidth:148.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 50.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11975.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'China'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Guangzhou']].
+    "
+01ac0cbb203456eb,airports-dolap2026,airports,dolap2026-import,Airport,KEUG,0.2560224304574313,0.5800646068136736,medium,easy,easy,easyeasy,3,3,"[{""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.distCity"", ""property_name"": ""distCity"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": 12927.753168152423, ""popularity"": 0.8099506365289686, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""Mahlon Sweet Field"", ""popularity"": 1.0, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""A"", ""popularity"": 1.0, ""centrality"": 0.2560224304574313}]","[""distCity"", ""name"", ""dst""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 9.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",8.096117877033075,3.9059077683674652,4.19021010866561,8.096117877033075,3.9059077683674652,4.19021010866561,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:A,name:Mahlon Sweet Field,distCity:12927.753168152423
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:A,name:Mahlon Sweet Field,distCity:12927.753168152423
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 9.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+482e12650f248568,airports-dolap2026,airports,dolap2026-import,Airport,KEUG,0.2560224304574313,0.5800646068136736,medium,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""EUG"", ""popularity"": 0.7887763055339049, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": 6412.333333333333, ""popularity"": 0.732138217718888, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": 3.0, ""popularity"": 0.732138217718888, ""centrality"": 0.2560224304574313}]","[""iata"", ""runwaysLength"", ""runways""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 9.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",9.109963993671354,3.9059077683674652,5.204056225303889,9.109963993671354,3.9059077683674652,5.204056225303889,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:6412.333333333333,iata:EUG,runways:3.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:6412.333333333333,iata:EUG,runways:3.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 9.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+429afdc18d62d7bc,airports-dolap2026,airports,dolap2026-import,Airport,KEUG,0.2560224304574313,0.5800646068136736,medium,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""A"", ""popularity"": 1.0, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""Mahlon Sweet Field"", ""popularity"": 1.0, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""KEUG"", ""popularity"": 1.0, ""centrality"": 0.2560224304574313}]","[""dst"", ""name"", ""icao""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 9.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",9.109963993671354,5.204056225303889,3.9059077683674652,9.109963993671354,5.204056225303889,3.9059077683674652,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:A,icao:KEUG,name:Mahlon Sweet Field
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:A,icao:KEUG,name:Mahlon Sweet Field
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 9.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+a8a05ffd15b45a02,airports-dolap2026,airports,dolap2026-import,Airport,KEUG,0.2560224304574313,0.5800646068136736,medium,hard,hard,hardhard,3,2,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": 150.0, ""popularity"": 0.732138217718888, ""centrality"": 0.2560224304574313}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""KEUG"", ""path"": ""Airport"", ""value"": ""EUG"", ""popularity"": 0.7887763055339049, ""centrality"": 0.2560224304574313}]","[""runwaysWidth"", ""iata""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 9.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""A""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 6261.75]]",15.617421748700181,10.477594564436718,5.139827184263464,15.617421748700181,10.477594564436718,5.139827184263464,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: iata:EUG,runwaysWidth:150.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: iata:EUG,runwaysWidth:150.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 9.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'A'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 6261.75]].
+    "
+1be3149e91296c5e,airports-dolap2026,airports,dolap2026-import,Airport,HESN,0.20683418692231226,0.4473270436126591,medium,easy,easy,easyeasy,3,2,"[{""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.distCity"", ""property_name"": ""distCity"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": 2, ""popularity"": 1.0, ""centrality"": 0.20683418692231226}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": ""HESN"", ""popularity"": 1.0, ""centrality"": 0.20683418692231226}]","[""timezone"", ""icao""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 616.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 9843.0]]",10.021495029380294,5.186704345693151,4.8347906836871415,10.021495029380294,5.186704345693151,4.8347906836871415,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: timezone:2,icao:HESN
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: timezone:2,icao:HESN
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 616.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 9843.0]].
+    "
+d441c9434bf90033,airports-dolap2026,airports,dolap2026-import,Airport,HESN,0.20683418692231226,0.4473270436126591,medium,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.country"", ""property_name"": ""country"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": ""ASW"", ""popularity"": 0.7887763055339049, ""centrality"": 0.20683418692231226}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": 11161.0, ""popularity"": 0.732138217718888, ""centrality"": 0.20683418692231226}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.20683418692231226}]","[""iata"", ""runwaysLength"", ""runways""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 616.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 9843.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Egypt""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Abu Simbel""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""ABS""]]",11.276448819921,4.8347906836871415,6.441658136233859,11.276448819921,4.8347906836871415,6.441658136233859,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:11161.0,iata:ASW,runways:1.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:11161.0,iata:ASW,runways:1.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 616.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 9843.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Egypt'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Abu Simbel'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'ABS']].
+    "
+68f203304ecd68ca,airports-dolap2026,airports,dolap2026-import,Airport,HESN,0.20683418692231226,0.4473270436126591,medium,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": 662.0, ""popularity"": 1.0, ""centrality"": 0.20683418692231226}, {""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": ""Africa/Cairo"", ""popularity"": 1.0, ""centrality"": 0.20683418692231226}, {""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": ""OurAirports"", ""popularity"": 1.0, ""centrality"": 0.20683418692231226}]","[""altitude"", ""tz_database_timezone"", ""source""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 616.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 9843.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Egypt""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Abu Simbel""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""ABS""]]",11.276448819921,6.441658136233859,4.8347906836871415,11.276448819921,6.441658136233859,4.8347906836871415,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Africa/Cairo,altitude:662.0,source:OurAirports
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Africa/Cairo,altitude:662.0,source:OurAirports
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 616.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 9843.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Egypt'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Abu Simbel'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'ABS']].
+    "
+cf04f732727f8c58,airports-dolap2026,airports,dolap2026-import,Airport,HESN,0.20683418692231226,0.4473270436126591,medium,hard,hard,hardhard,3,1,"[{""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""HESN"", ""path"": ""Airport"", ""value"": 148.0, ""popularity"": 0.732138217718888, ""centrality"": 0.20683418692231226}]","[""runwaysWidth"", ""commercial_flights""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 616.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""]]",24.617043315298744,6.441658136233859,18.175385179064886,24.617043315298744,6.441658136233859,18.175385179064886,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysWidth:148.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysWidth:148.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 616.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport']].
+    "
+e4ba772d672674bd,airports-dolap2026,airports,dolap2026-import,Airport,VVCA,0.07237323080794317,0.21985438913468003,hard,easy,easy,easyeasy,3,3,"[{""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": 108.706001282, ""popularity"": 1.0, ""centrality"": 0.07237323080794317}, {""prop_key"": ""Airport.type"", ""property_name"": ""type"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": ""airport"", ""popularity"": 1.0, ""centrality"": 0.07237323080794317}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": ""Chu Lai International Airport"", ""popularity"": 1.0, ""centrality"": 0.07237323080794317}]","[""longitude"", ""type"", ""name""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 39.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11482.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Vietnam""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Hanoi""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""HAN""]]",27.634526988402662,13.817263494201331,13.817263494201331,27.634526988402673,13.817263494201336,13.817263494201336,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: type:airport,name:Chu Lai International Airport,longitude:108.706001282
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: type:airport,name:Chu Lai International Airport,longitude:108.706001282
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 39.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11482.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Vietnam'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Hanoi'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'HAN']].
+    "
+04ade88d3143bab6,airports-dolap2026,airports,dolap2026-import,Airport,VVCA,0.07237323080794317,0.21985438913468003,hard,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.country"", ""property_name"": ""country"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": 10007.0, ""popularity"": 0.732138217718888, ""centrality"": 0.07237323080794317}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": 148.0, ""popularity"": 0.732138217718888, ""centrality"": 0.07237323080794317}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.07237323080794317}]","[""runwaysLength"", ""runwaysWidth"", ""runways""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 39.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11482.5]]",32.68974297936134,13.817263494201331,18.87247948516001,32.689742979361355,13.817263494201336,18.872479485160017,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:10007.0,runways:1.0,runwaysWidth:148.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:10007.0,runways:1.0,runwaysWidth:148.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 39.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11482.5]].
+    "
+70059e1c7be86ce1,airports-dolap2026,airports,dolap2026-import,Airport,VVCA,0.07237323080794317,0.21985438913468003,hard,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": ""Asia/Saigon"", ""popularity"": 1.0, ""centrality"": 0.07237323080794317}, {""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": 7, ""popularity"": 1.0, ""centrality"": 0.07237323080794317}, {""prop_key"": ""Airport.location"", ""property_name"": ""location"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": ""POINT(108.706001282,15.4033002853)"", ""popularity"": 1.0, ""centrality"": 0.07237323080794317}]","[""tz_database_timezone"", ""timezone"", ""location""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 39.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11482.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Vietnam""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Hanoi""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""HAN""], [""node"", [""ROUTE_TO""], ""Airport"", ""timezone"", ""7""]]",32.22676529708612,18.409501802884787,13.817263494201331,32.226765297086146,18.40950180288481,13.817263494201336,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Asia/Saigon,location:[108.706001282, 15.4033002853],timezone:7
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Asia/Saigon,location:[108.706001282, 15.4033002853],timezone:7
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 39.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11482.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Vietnam'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Hanoi'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'HAN'], ['node', ['ROUTE_TO'], 'Airport', 'timezone', '7']].
+    "
+a20b74f358b052b9,airports-dolap2026,airports,dolap2026-import,Airport,VVCA,0.07237323080794317,0.21985438913468003,hard,hard,hard,hardhard,3,1,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""VVCA"", ""path"": ""Airport"", ""value"": 10007.0, ""popularity"": 0.732138217718888, ""centrality"": 0.07237323080794317}]","[""runwaysLength"", ""commercial_flights""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 39.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11482.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Vietnam""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Hanoi""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""HAN""], [""node"", [""ROUTE_TO""], ""Airport"", ""timezone"", ""7""]]",70.35261631559406,18.409501802884787,51.94311451270927,70.35261631559413,18.40950180288481,51.943114512709315,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:10007.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:10007.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 39.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11482.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Vietnam'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Hanoi'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'HAN'], ['node', ['ROUTE_TO'], 'Airport', 'timezone', '7']].
+    "
+be0eb1b4e92ed84c,airports-dolap2026,airports,dolap2026-import,Airport,VRMT,0.11803427168907905,0.27982981827729125,hard,easy,easy,easyeasy,3,2,"[{""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": ""U"", ""popularity"": 1.0, ""centrality"": 0.11803427168907905}, {""prop_key"": ""Airport.type"", ""property_name"": ""type"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": ""airport"", ""popularity"": 1.0, ""centrality"": 0.11803427168907905}]","[""dst"", ""type""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 6.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11155.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Maldives""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Male""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""MLE""], [""node"", [""ROUTE_TO""], ""Airport"", ""timezone"", ""5""]]",16.962283776988635,8.490168130490993,8.47211564649764,16.96228377698864,8.490168130490998,8.472115646497643,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:U,type:airport
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:U,type:airport
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 6.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11155.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Maldives'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Male'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'MLE'], ['node', ['ROUTE_TO'], 'Airport', 'timezone', '5']].
+    "
+3c66f6193977d357,airports-dolap2026,airports,dolap2026-import,Airport,VRMT,0.11803427168907905,0.27982981827729125,hard,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.source"", ""property_name"": ""source"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.longitude"", ""property_name"": ""longitude"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": 4003.0, ""popularity"": 0.732138217718888, ""centrality"": 0.11803427168907905}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": ""KDM"", ""popularity"": 0.7887763055339049, ""centrality"": 0.11803427168907905}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.11803427168907905}]","[""runwaysLength"", ""iata"", ""runways""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 6.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11155.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Maldives""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Male""], [""node"", [""ROUTE_TO""], ""Airport"", ""iata"", ""MLE""]]",19.75998233109126,8.47211564649764,11.287866684593618,19.759982331091265,8.472115646497643,11.287866684593622,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:4003.0,iata:KDM,runways:1.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:4003.0,iata:KDM,runways:1.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 6.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11155.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Maldives'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Male'], ['node', ['ROUTE_TO'], 'Airport', 'iata', 'MLE']].
+    "
+add11e9c0c512ff0,airports-dolap2026,airports,dolap2026-import,Airport,VRMT,0.11803427168907905,0.27982981827729125,hard,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": ""Kaadedhdhoo"", ""popularity"": 0.9936347103143673, ""centrality"": 0.11803427168907905}, {""prop_key"": ""Airport.tz_database_timezone"", ""property_name"": ""tz_database_timezone"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": ""Indian/Maldives"", ""popularity"": 1.0, ""centrality"": 0.11803427168907905}, {""prop_key"": ""Airport.altitude"", ""property_name"": ""altitude"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": 2.0, ""popularity"": 1.0, ""centrality"": 0.11803427168907905}]","[""city"", ""tz_database_timezone"", ""altitude""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 6.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11155.0], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Maldives""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Male""]]",30.65908906633947,22.168920935848476,8.490168130490993,30.659089066339476,22.168920935848476,8.490168130490998,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Indian/Maldives,altitude:2.0,city:Kaadedhdhoo
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: tz_database_timezone:Indian/Maldives,altitude:2.0,city:Kaadedhdhoo
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 6.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11155.0], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Maldives'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Male']].
+    "
+8249cadde1b17165,airports-dolap2026,airports,dolap2026-import,Airport,VRMT,0.11803427168907905,0.27982981827729125,hard,hard,hard,hardhard,3,2,"[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": 1.0, ""popularity"": 0.732138217718888, ""centrality"": 0.11803427168907905}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""VRMT"", ""path"": ""Airport"", ""value"": ""KDM"", ""popularity"": 0.7887763055339049, ""centrality"": 0.11803427168907905}]","[""runways"", ""iata""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 6.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""U""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 11155.0]]",33.87499423992223,22.726443662064426,11.148550577857804,33.87499423992224,22.726443662064426,11.14855057785781,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: iata:KDM,runways:1.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: iata:KDM,runways:1.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'altitude', 6.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'U'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 11155.0]].
+    "
+645ba515b6082654,airports-dolap2026,airports,dolap2026-import,Airport,ENSD,0.10847819626776957,0.26605397604120523,hard,easy,easy,easyeasy,3,2,"[{""prop_key"": ""Airport.city"", ""property_name"": ""city"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.country"", ""property_name"": ""country"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.name"", ""property_name"": ""name"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 61.830001831055, ""popularity"": 1.0, ""centrality"": 0.10847819626776957}, {""prop_key"": ""Airport.distCity"", ""property_name"": ""distCity"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 9149.113244809485, ""popularity"": 0.8099506365289686, ""centrality"": 0.10847819626776957}]","[""latitude"", ""distCity""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""location"", [11.0502, 60.121]], [""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 681.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""E""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 10744.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Norway""]]",19.481110989517095,9.238085129353149,10.243025860163947,19.481110989517106,9.238085129353152,10.243025860163952,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: distCity:9149.113244809485,latitude:61.830001831055
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: distCity:9149.113244809485,latitude:61.830001831055
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'location', [11.0502, 60.121]], ['node', ['ROUTE_TO'], 'Airport', 'altitude', 681.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'E'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 10744.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Norway']].
+    "
+33b3d049ee72e901,airports-dolap2026,airports,dolap2026-import,Airport,ENSD,0.10847819626776957,0.26605397604120523,hard,easy,hard,easyhard,3,3,"[{""prop_key"": ""Airport.timezone"", ""property_name"": ""timezone"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.country"", ""property_name"": ""country"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 98.0, ""popularity"": 0.732138217718888, ""centrality"": 0.10847819626776957}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": ""SDN"", ""popularity"": 0.7887763055339049, ""centrality"": 0.10847819626776957}, {""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 3182.0, ""popularity"": 0.732138217718888, ""centrality"": 0.10847819626776957}]","[""runwaysWidth"", ""iata"", ""runwaysLength""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""location"", [11.0502, 60.121]], [""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 681.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""E""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 10744.5], [""node"", [""ROUTE_TO""], ""Airport"", ""country"", ""Norway""], [""node"", [""ROUTE_TO""], ""Airport"", ""city"", ""Oslo""]]",21.500681273149116,9.218442363584122,12.282238909564994,21.500681273149127,9.218442363584126,12.282238909564999,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:3182.0,iata:SDN,runwaysWidth:98.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:3182.0,iata:SDN,runwaysWidth:98.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'location', [11.0502, 60.121]], ['node', ['ROUTE_TO'], 'Airport', 'altitude', 681.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'E'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 10744.5], ['node', ['ROUTE_TO'], 'Airport', 'country', 'Norway'], ['node', ['ROUTE_TO'], 'Airport', 'city', 'Oslo']].
+    "
+d00e8b3401b030c1,airports-dolap2026,airports,dolap2026-import,Airport,ENSD,0.10847819626776957,0.26605397604120523,hard,hard,easy,hardeasy,3,3,"[{""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.latitude"", ""property_name"": ""latitude"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 61.830001831055, ""popularity"": 1.0, ""centrality"": 0.10847819626776957}, {""prop_key"": ""Airport.dst"", ""property_name"": ""dst"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": ""E"", ""popularity"": 1.0, ""centrality"": 0.10847819626776957}, {""prop_key"": ""Airport.icao"", ""property_name"": ""icao"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": ""ENSD"", ""popularity"": 1.0, ""centrality"": 0.10847819626776957}]","[""latitude"", ""dst"", ""icao""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""location"", [11.0502, 60.121]], [""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 681.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""E""], [""node"", [""ROUTE_TO""], ""Airport"", ""type"", ""airport""], [""node"", [""ROUTE_TO""], ""Airport"", ""runwaysLength"", 10744.5]]",33.340270775411334,24.12182841182721,9.218442363584122,33.34027077541135,24.12182841182722,9.218442363584126,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:E,icao:ENSD,latitude:61.830001831055
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: dst:E,icao:ENSD,latitude:61.830001831055
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'location', [11.0502, 60.121]], ['node', ['ROUTE_TO'], 'Airport', 'altitude', 681.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'E'], ['node', ['ROUTE_TO'], 'Airport', 'type', 'airport'], ['node', ['ROUTE_TO'], 'Airport', 'runwaysLength', 10744.5]].
+    "
+5d2d34012838d588,airports-dolap2026,airports,dolap2026-import,Airport,ENSD,0.10847819626776957,0.26605397604120523,hard,hard,hard,hardhard,3,2,"[{""prop_key"": ""Airport.runways"", ""property_name"": ""runways"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.commercial_flights"", ""property_name"": ""commercial_flights"", ""element_type"": ""Airport"", ""path"": ""Airport""}, {""prop_key"": ""Airport.iata"", ""property_name"": ""iata"", ""element_type"": ""Airport"", ""path"": ""Airport""}]","[{""prop_key"": ""Airport.runwaysLength"", ""property_name"": ""runwaysLength"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 3182.0, ""popularity"": 0.732138217718888, ""centrality"": 0.10847819626776957}, {""prop_key"": ""Airport.runwaysWidth"", ""property_name"": ""runwaysWidth"", ""element_type"": ""Airport"", ""element_id"": ""ENSD"", ""path"": ""Airport"", ""value"": 98.0, ""popularity"": 0.732138217718888, ""centrality"": 0.10847819626776957}]","[""runwaysLength"", ""runwaysWidth""]","[[""node"", [""ROUTE_TO""], ""Airport"", ""location"", [11.0502, 60.121]], [""node"", [""ROUTE_TO""], ""Airport"", ""altitude"", 681.0], [""node"", [""ROUTE_TO""], ""Airport"", ""dst"", ""E""]]",36.712951427240725,24.12182841182721,12.591123015413517,36.71295142724073,24.12182841182721,12.591123015413523,"
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:3182.0,runwaysWidth:98.0
+
+        context: [NO_CONTEXT_ADDED].
+    ","
+    Here is the entity extracted from the database that you should seek information about:
+
+        input: runwaysLength:3182.0,runwaysWidth:98.0
+
+        Here are some relationships and relationships information about this property in the graph: [['node', ['ROUTE_TO'], 'Airport', 'location', [11.0502, 60.121]], ['node', ['ROUTE_TO'], 'Airport', 'altitude', 681.0], ['node', ['ROUTE_TO'], 'Airport', 'dst', 'E']].
+    "

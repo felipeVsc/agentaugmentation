@@ -1,0 +1,6 @@
+removed 1 runs with status in ['api_error', 'retrieval_failed', 'timeout']; they will run again
+72 runs planned, 56 to do
+The model architecture is multimodal, expect lower precision. For further information visit https://ecologits.ai/tutorial/warnings_and_errors/#model-arch-multimodal
+50 runs written: {'ok': 50}
+done: {'ok': 56}; search: {'calls': 34, 'cache_hits': 36, 'failures': 0, 'credits': 34.0, 'budget_refused': 0}
+{'ok': 56}

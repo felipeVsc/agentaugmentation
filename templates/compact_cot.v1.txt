@@ -1,0 +1,9 @@
+### USER
+Known properties of a {node_type} from a database:
+{known_properties}
+
+Give the real-world values of:
+{target_properties}
+
+First identify the {node_type} and reason briefly. Use null when unsure. End with only this JSON in a ```json block:
+{output_format}

@@ -1,0 +1,2539 @@
+{
+  "assumptions": [
+    "Graph source is Neo4j; all later steps read the snapshot, not the live database.",
+    "Centrality is normalized per element type (divided by the type's maximum); 0 is replaced by epsilon.",
+    "Edge centrality is the mean of the normalized centralities of its two endpoints.",
+    "Direct neighbors are taken in both directions; n:1 paths follow outgoing relationships only.",
+    "Only scalar properties (string, integer, float, boolean, date) are eligible.",
+    "H strata use pop(p) over the distinct H-eligible properties of the node type, each counted once.",
+    "G strata use pop(p) * cent_p(e) over the set of elements in N ∪ context(N), each (element, property) once.",
+    "Strata: low = [Q0, Q1], mid = (Q1, Q3], high = (Q3, Q4]; if Q3 == Q4, values equal to Q4 go to high.",
+    "A combination with fewer candidates than size_H or size_G is skipped, not filled with fewer properties.",
+    "G holds distinct prop_keys; a prop_key shared by several elements is drawn at most once per task.",
+    "G excludes values that equal an H value, or contain a string H value of at least leak_min_substring_len chars.",
+    "task_id hashes (dataset, node_id, sorted H prop_keys, sorted G (prop_key, element_id)).",
+    "Random draws order candidates by sha256(seed, combination, candidate id)."
+  ],
+  "code_version": "unknown",
+  "config": {
+    "centrality": {
+      "damping": 0.85,
+      "directed": true,
+      "edge_measure": "endpoint_mean",
+      "epsilon": 1e-06,
+      "max_iter": 200,
+      "measure": "pagerank",
+      "tol": 1e-10
+    },
+    "dataset": {
+      "context_max_hops": 3,
+      "label_priority": [],
+      "name": "airports",
+      "node_id_property": "icao",
+      "node_type": "Airport",
+      "snapshot_dir": null,
+      "source": "neo4j"
+    },
+    "neo4j": {
+      "database": null,
+      "database_env": "NEO4J_DATABASE",
+      "fetch_size": 10000,
+      "id_function": "elementId",
+      "labels": null,
+      "password_env": "NEO4J_PASSWORD",
+      "relationship_types": null,
+      "uri": "bolt://localhost:7687",
+      "uri_env": "NEO4J_URI",
+      "user_env": "NEO4J_USER"
+    },
+    "output_dir": "tasks/airports/v2_noctx/",
+    "properties": {
+      "empty_string_is_null": true,
+      "exclude_properties": [
+        "airport_id"
+      ],
+      "leak_min_substring_len": 4,
+      "leakage_pairs": [],
+      "never_hide": []
+    },
+    "published": {
+      "apply_leakage_pairs": false,
+      "centrality_file": null,
+      "centrality_id_column": "icao",
+      "centrality_score_column": "score",
+      "context_slice": [
+        2,
+        5,
+        10
+      ],
+      "easy_threshold": 0.8,
+      "hidden_requires_value": null,
+      "min_G": null,
+      "node_key": "icao",
+      "node_strata": null,
+      "nodes_per_stratum": 3,
+      "popularity_file": null,
+      "popularity_scale": 100.0,
+      "profile": "code",
+      "properties": [],
+      "property_classes": null,
+      "redraw_H_per_task": null,
+      "seed": 42,
+      "size_G": 3,
+      "size_H": 3
+    },
+    "sampling": {
+      "G_strata_by": "popularity",
+      "max_G": 3,
+      "max_H": 1,
+      "max_n": 3,
+      "seed": 42,
+      "sizes_G": [
+        1,
+        3,
+        5
+      ],
+      "sizes_H": null,
+      "use_context": false
+    },
+    "task_set_version": "airports-v2-noctx"
+  },
+  "dataset": "airports",
+  "master_seed": 42,
+  "n1_relationships": [
+    {
+      "edges": 205,
+      "max_out_degree": 1,
+      "n1": true,
+      "relationship": "OF",
+      "source_type": "Airport",
+      "sources": 205,
+      "target_type": "City"
+    },
+    {
+      "edges": 9750,
+      "max_out_degree": 213,
+      "n1": false,
+      "relationship": "PASSENGERS",
+      "source_type": "Airport",
+      "sources": 345,
+      "target_type": "Airport"
+    },
+    {
+      "edges": 63354,
+      "max_out_degree": 912,
+      "n1": false,
+      "relationship": "ROUTE_TO",
+      "source_type": "Airport",
+      "sources": 2957,
+      "target_type": "Airport"
+    },
+    {
+      "edges": 72,
+      "max_out_degree": 1,
+      "n1": true,
+      "relationship": "IN",
+      "source_type": "City",
+      "sources": 72,
+      "target_type": "Country"
+    },
+    {
+      "edges": 5777,
+      "max_out_degree": 153,
+      "n1": false,
+      "relationship": "TRADE",
+      "source_type": "Country",
+      "sources": 54,
+      "target_type": "Country"
+    }
+  ],
+  "node_type": "Airport",
+  "package_version": "0.1.0",
+  "quartiles": {
+    "G_property_popularity": [
+      0.12763132941399583,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "H_property_popularity": [
+      0.12763132941399583,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "intervals": "low=[Q0,Q1) mid=[Q1,Q3) high=[Q3,Q4]; Q0==Q1 ties go to low",
+    "node_centrality": [
+      0.004950435695151708,
+      0.004950435695151708,
+      0.006736280407799917,
+      0.01528283148137401,
+      1.0
+    ]
+  },
+  "report": {
+    "G_strata_by": "popularity",
+    "duplicates_removed": 0,
+    "expected_before_skips": 243,
+    "nodes_available": {
+      "high": 1319,
+      "low": 2287,
+      "mid": 1667
+    },
+    "nodes_selected": {
+      "high": [
+        "nvvd",
+        "paak",
+        "pars"
+      ],
+      "low": [
+        "cyqw",
+        "kdht",
+        "uaol"
+      ],
+      "mid": [
+        "ybmc",
+        "zmkd",
+        "zwnl"
+      ]
+    },
+    "sizes_G": [
+      1,
+      3,
+      5
+    ],
+    "sizes_H": [
+      1
+    ],
+    "skipped": [
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 1,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 1,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "cyqw",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "kdht",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "uaol",
+        "node_stratum": "low",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "ybmc",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zmkd",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "zwnl",
+        "node_stratum": "mid",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "nvvd",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "paak",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 1,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 3,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "mid",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "H_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "available": 0,
+        "node_id": "pars",
+        "node_stratum": "high",
+        "reason": "G_insufficient",
+        "size_G": 5,
+        "size_H": 1
+      }
+    ],
+    "skipped_by_node_and_H_stratum": {
+      "high|high": 18,
+      "high|low": 27,
+      "high|mid": 27,
+      "low|high": 17,
+      "low|low": 24,
+      "low|mid": 27,
+      "mid|high": 18,
+      "mid|low": 27,
+      "mid|mid": 27
+    },
+    "skipped_by_reason": {
+      "G_insufficient": 59,
+      "H_insufficient": 153
+    },
+    "skipped_total": 212,
+    "tasks_per_G_stratum": {
+      "high": 30,
+      "low": 1
+    },
+    "tasks_per_H_stratum": {
+      "high": 28,
+      "low": 3
+    },
+    "tasks_per_combination": [
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "high",
+        "size_G": 1,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "high",
+        "size_G": 3,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "high",
+        "size_G": 5,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "low",
+        "size_G": 1,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "low",
+        "size_G": 3,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "low",
+        "size_G": 5,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "node_stratum": "low",
+        "size_G": 1,
+        "size_H": 1,
+        "tasks": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "node_stratum": "low",
+        "size_G": 1,
+        "size_H": 1,
+        "tasks": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "node_stratum": "low",
+        "size_G": 3,
+        "size_H": 1,
+        "tasks": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "low",
+        "node_stratum": "low",
+        "size_G": 5,
+        "size_H": 1,
+        "tasks": 1
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "mid",
+        "size_G": 1,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "mid",
+        "size_G": 3,
+        "size_H": 1,
+        "tasks": 3
+      },
+      {
+        "G_stratum": "high",
+        "H_stratum": "high",
+        "node_stratum": "mid",
+        "size_G": 5,
+        "size_H": 1,
+        "tasks": 3
+      }
+    ],
+    "tasks_per_node_stratum": {
+      "high": 9,
+      "low": 13,
+      "mid": 9
+    },
+    "tasks_total": 31,
+    "use_context": false,
+    "zero_difficulty": 0
+  },
+  "snapshot": {
+    "hash": "c8802350f7eb148a1bf5a78cc62eff4e13eb985a01c52b1e8c5015315705d1c2",
+    "path": "tasks/airports/v2_noctx/intermediate/snapshot",
+    "source": "neo4j",
+    "stats": {
+      "edges": 79158,
+      "edges_per_type": {
+        "IN": 72,
+        "OF": 205,
+        "PASSENGERS": 9750,
+        "ROUTE_TO": 63354,
+        "TRADE": 5777
+      },
+      "nodes": 5575,
+      "nodes_per_type": {
+        "Airport": 5273,
+        "City": 133,
+        "Country": 168,
+        "QueryCity": 1
+      }
+    }
+  },
+  "strata": {
+    "G_occurrence": {
+      "high": 10,
+      "low": 2,
+      "mid": 0
+    },
+    "H_property": {
+      "high": [
+        "altitude",
+        "dst",
+        "iata",
+        "icao",
+        "name",
+        "runways",
+        "runwaysLength",
+        "runwaysWidth",
+        "timezone",
+        "tz_database_timezone"
+      ],
+      "low": [
+        "commercial_flights",
+        "distCity"
+      ],
+      "mid": []
+    },
+    "H_property_popularity": {
+      "altitude": 1.0,
+      "commercial_flights": 0.12763132941399583,
+      "distCity": 0.5662810544282192,
+      "dst": 1.0,
+      "iata": 1.0,
+      "icao": 1.0,
+      "name": 1.0,
+      "runways": 1.0,
+      "runwaysLength": 1.0,
+      "runwaysWidth": 1.0,
+      "timezone": 1.0,
+      "tz_database_timezone": 1.0
+    },
+    "node": {
+      "high": 1319,
+      "low": 2287,
+      "mid": 1667
+    }
+  },
+  "task_set_version": "airports-v2-noctx"
+}

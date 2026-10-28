@@ -1,0 +1,139 @@
+# Strategy B (single-turn search agent) on the 36 published DOLAP 2026 tasks, with Ollama models.
+#   strategy-b check --config configs/strategy_b_dolap2026.yaml
+#   strategy-b run   --config configs/strategy_b_dolap2026.yaml --models cloud-gpt-oss-20b --limit 2 --runs 1
+# Needs TAVILY_API_KEY in .env.
+
+inputs:
+  tasks: tasks/airports/dolap2026/tasks.csv
+runs_per_task: 5
+output_dir: results/airports/dolap2026/strategy_b/
+search_cache_dir: results/airports/dolap2026/search_cache/   # shared by all models and variants: a repeated query is free
+
+search:
+  tool: tavily            # tavily | mock | "module:Class"
+  depth: advanced         # 2 credits per query (basic = 1); returns the most query-relevant chunks of each page
+  api_key_env: TAVILY_API_KEY
+  timeout_s: 30
+results_per_query: 5
+max_subqueries: 3         # |H| = 3 in this task set: about one query per hidden property
+max_evidence_tokens: 3000
+max_chars_per_result: 1500
+# Plan and search once per (task, model, variant), synthesize 5 times on that evidence.
+# 36 tasks x ~3 queries x 2 credits (advanced) = ~200 credits per model; the second variant reuses the plan
+# and searches through the caches (5x more with false).
+reuse_retrieval: true
+
+# Sources of the dataset itself: finding the raw table would measure lookup, not augmentation (AGENT_SPEC §7).
+# The airports graph was built from OurAirports / OpenFlights data and Kaggle copies of them.
+blocked_domains:
+  - ourairports.com
+  - openflights.org
+  - github.com/jpatokal
+  - github.com/davidmegginson
+  - raw.githubusercontent.com/jpatokal
+  - kaggle.com
+  - github.com/felipeVsc
+
+pfe_tokenizer: cl100k_base
+
+variants:
+  - id: search_evidence                 # evidence only: isolates the effect of search (AGENT_SPEC §5.3)
+    plan: prompts/agent/plan.v1.txt
+    synthesize: prompts/agent/synth.v1.txt
+    synthesis: evidence_only
+  - id: search_memory                   # evidence + own knowledge (AGENT_SPEC open question 2)
+    plan: prompts/agent/plan.v1.txt
+    synthesize: prompts/agent/synth_memory.v1.txt
+    synthesis: evidence_and_memory
+  # - id: search_evidence_ctx           # same, with the graph context of the task
+  #   plan: prompts/agent/plan.v1.txt
+  #   synthesize: prompts/agent/synth.v1.txt
+  #   with_context: true
+
+model_defaults:
+  provider: ollama
+  params: {temperature: 0.7, max_tokens: 1024}
+  max_concurrency: 1
+  timeout_s: 600
+  max_retries: 2
+  energy: {method: codecarbon, country_iso_code: BRA}
+  options: {num_ctx: 8192, keep_alive: 30m, seed: 0}   # evidence makes prompts longer than in Strategy A
+
+models:
+  - id: qwen3-4b-instruct                # for checking the pipeline on this Mac
+    model: qwen3:4b-instruct
+    enabled: false
+  # The models of the premise (30-70B) need a GPU machine (a 70B Q4 model needs ~40 GB of memory):
+  - id: qwen3-32b
+    model: qwen3:32b
+    options: {think: false}
+    enabled: false
+  - id: gemma3-27b
+    model: gemma3:27b
+    enabled: false
+  - id: mistral-small3.2-24b
+    model: mistral-small3.2:24b
+    enabled: false
+  - id: llama3.3-70b
+    model: llama3.3:70b
+    enabled: false
+  - id: qwen2.5-72b
+    model: qwen2.5:72b
+    enabled: false
+
+  # --- Ollama Cloud (pay per token; needs OLLAMA_API_KEY in .env). Sizes: Ollama model pages.
+  # The experiment lineup (enabled). Energy: EcoLogits estimates where it has the model (closest open model);
+  # none for Nemotron-3-Super and GLM-5.3-flash, which EcoLogits does not have.
+  # Concurrency: each model has its own pool of calls; the free tier answers 429 above ~2 concurrent calls,
+  # so run one model at a time or raise max_concurrency on a paid plan. 429s are retried with backoff.
+  - id: cloud-gpt-oss-20b               # 21B total, 3.6B active (MoE)
+    model: gpt-oss:20b
+    options: {base_url: "https://ollama.com", think: low}   # gpt-oss cannot turn reasoning off; low effort
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.07, output_per_mtok: 0.3, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-20b}
+  - id: cloud-gpt-oss-120b              # 117B total, 5.1B active (MoE)
+    model: gpt-oss:120b
+    options: {base_url: "https://ollama.com", think: low}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.6, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-120b}
+  - id: cloud-nemotron-3-super          # ~120B total (MoE)
+    model: nemotron-3-super
+    options: {base_url: "https://ollama.com", think: false}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.01, output_per_mtok: 0.6, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: none}
+  - id: cloud-glm-5.3-flash             # ~321B total, 18B active (MoE)
+    model: glm-5.3-flash
+    options: {base_url: "https://ollama.com", think: false}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.5, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: none}
+  - id: cloud-mistral-large-3           # 675B total, 41B active (MoE)
+    model: mistral-large-3:675b
+    options: {base_url: "https://ollama.com"}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.5, output_per_mtok: 1.5, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: mistral-large-2512}
+
+  # Not in the lineup: gemma4 (used for the one-run test in notebooks/cloud_smoke_gemma4.ipynb), DeepSeek (cost).
+  - id: cloud-gemma4                    # 31B dense
+    model: gemma4:31b
+    options: {base_url: "https://ollama.com"}
+    max_concurrency: 2
+    max_retries: 5
+    energy: {method: ecologits, ecologits_provider: google_genai, ecologits_model: gemma-4-31b-it}
+    enabled: false
+  - id: cloud-deepseek-v4-pro           # ~1.6T total, ~49B active; off-peak price is half
+    model: deepseek-v4-pro:0813
+    options: {base_url: "https://ollama.com", think: false}
+    max_concurrency: 2
+    max_retries: 5
+    energy: {method: none}
+    enabled: false

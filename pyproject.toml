@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentaugmentation"
+version = "0.1.0"
+description = "Data augmentation in property graphs using agentic AI: benchmark pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "neo4j>=5.0",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "pyarrow>=14",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+# Strategy A with local models (Ollama needs no SDK: it is called over HTTP).
+local = ["codecarbon>=3.0", "tiktoken>=0.7", "tokenizers>=0.19"]
+# Strategy B (search agent): LangGraph orchestration; Tavily is called over HTTP.
+agent = ["langgraph>=1.0"]
+# Strategy A with API models (optional).
+api = ["openai>=1.40", "anthropic>=0.40", "google-genai>=1.0", "ecologits>=0.6", "tiktoken>=0.7"]
+
+[project.scripts]
+tasks = "taskdef.cli:main"
+strategy-a = "strategy_a.cli:main"
+strategy-b = "strategy_b.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["taskdef*", "llmcore*", "strategy_a*", "strategy_b*", "evaluation*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

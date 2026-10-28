@@ -1,0 +1,114 @@
+# Strategy A on the 36 published DOLAP 2026 tasks, with the 9 published prompts, both conditions,
+# and open-weight models on Ollama. Tasks: tasks import-published --config configs/airports_dolap2026.yaml ...
+#   strategy-a check --config configs/strategy_a_dolap2026.yaml
+#   strategy-a run   --config configs/strategy_a_dolap2026.yaml --models cloud-gpt-oss-20b --limit 2 --runs 1   # cheap test
+#   strategy-a run   --config configs/strategy_a_dolap2026.yaml --models cloud-gpt-oss-20b                       # one model at a time
+
+inputs:
+  tasks: tasks/airports/dolap2026/tasks.csv
+runs_per_task: 5
+pfe_tokenizer: cl100k_base
+repair: false                     # the published run counted only answers in the requested CSV format
+output_dir: results/airports/dolap2026/strategy_a/
+
+# The published prompts, unchanged: system = prompt with [PROPERTIES] = H names, user = the published input.
+# Variant ids are the published prompt names; `_ctx` = with-context condition.
+templates:
+  - {id: compact,     file: templates/dolap2026/compact.v1.txt, output: csv}
+  - {id: zero,        file: templates/dolap2026/zero.v1.txt,    output: csv}
+  - {id: few1,        file: templates/dolap2026/few1.v1.txt,    output: csv}
+  - {id: few3,        file: templates/dolap2026/few3.v1.txt,    output: csv}
+  - {id: few5,        file: templates/dolap2026/few5.v1.txt,    output: csv}
+  - {id: zerocot,     file: templates/dolap2026/zerocot.v1.txt, output: csv, expected_output_tokens: 200}
+  - {id: 1cot,        file: templates/dolap2026/1cot.v1.txt,    output: csv, expected_output_tokens: 200}
+  - {id: 3cot,        file: templates/dolap2026/3cot.v1.txt,    output: csv, expected_output_tokens: 200}
+  - {id: 5cot,        file: templates/dolap2026/5cot.v1.txt,    output: csv, expected_output_tokens: 200}
+  - {id: compact_ctx, file: templates/dolap2026/compact.v1.txt, output: csv, with_context: true}
+  - {id: zero_ctx,    file: templates/dolap2026/zero.v1.txt,    output: csv, with_context: true}
+  - {id: few1_ctx,    file: templates/dolap2026/few1.v1.txt,    output: csv, with_context: true}
+  - {id: few3_ctx,    file: templates/dolap2026/few3.v1.txt,    output: csv, with_context: true}
+  - {id: few5_ctx,    file: templates/dolap2026/few5.v1.txt,    output: csv, with_context: true}
+  - {id: zerocot_ctx, file: templates/dolap2026/zerocot.v1.txt, output: csv, with_context: true, expected_output_tokens: 200}
+  - {id: 1cot_ctx,    file: templates/dolap2026/1cot.v1.txt,    output: csv, with_context: true, expected_output_tokens: 200}
+  - {id: 3cot_ctx,    file: templates/dolap2026/3cot.v1.txt,    output: csv, with_context: true, expected_output_tokens: 200}
+  - {id: 5cot_ctx,    file: templates/dolap2026/5cot.v1.txt,    output: csv, with_context: true, expected_output_tokens: 200}
+
+model_defaults:
+  provider: ollama
+  params: {temperature: 0.7, max_tokens: 1024}
+  max_concurrency: 1
+  timeout_s: 600
+  max_retries: 2
+  energy: {method: codecarbon, country_iso_code: BRA}
+  options: {num_ctx: 4096, keep_alive: 30m, seed: 0}
+
+models:
+  - id: qwen3-4b-instruct
+    model: qwen3:4b-instruct
+    enabled: false
+  - id: nemotron-mini-4b
+    model: nemotron-mini:4b
+    enabled: false
+  - id: llama3.2-1b
+    model: llama3.2:1b
+    enabled: false
+  - id: mistral-7b
+    model: mistral:7b
+    enabled: false                # ~4 h on this Mac for both conditions
+
+  # --- Ollama Cloud (pay per token; needs OLLAMA_API_KEY in .env). Sizes: Ollama model pages.
+  # The experiment lineup (enabled). Energy: EcoLogits estimates where it has the model (closest open model);
+  # none for Nemotron-3-Super and GLM-5.3-flash, which EcoLogits does not have.
+  # Concurrency: each model has its own pool of calls; the free tier answers 429 above ~2 concurrent calls,
+  # so run one model at a time or raise max_concurrency on a paid plan. 429s are retried with backoff.
+  - id: cloud-gpt-oss-20b               # 21B total, 3.6B active (MoE)
+    model: gpt-oss:20b
+    options: {base_url: "https://ollama.com", think: low}   # gpt-oss cannot turn reasoning off; low effort
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.07, output_per_mtok: 0.3, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-20b}
+  - id: cloud-gpt-oss-120b              # 117B total, 5.1B active (MoE)
+    model: gpt-oss:120b
+    options: {base_url: "https://ollama.com", think: low}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.6, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-120b}
+  - id: cloud-nemotron-3-super          # ~120B total (MoE)
+    model: nemotron-3-super
+    options: {base_url: "https://ollama.com", think: false}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.01, output_per_mtok: 0.6, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: none}
+  - id: cloud-glm-5.3-flash             # ~321B total, 18B active (MoE)
+    model: glm-5.3-flash
+    options: {base_url: "https://ollama.com", think: false}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.5, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: none}
+  - id: cloud-mistral-large-3           # 675B total, 41B active (MoE)
+    model: mistral-large-3:675b
+    options: {base_url: "https://ollama.com"}
+    max_concurrency: 2
+    max_retries: 5
+    pricing: {input_per_mtok: 0.5, output_per_mtok: 1.5, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: mistral-large-2512}
+
+  # Not in the lineup: gemma4 (used for the one-run test in notebooks/cloud_smoke_gemma4.ipynb), DeepSeek (cost).
+  - id: cloud-gemma4                    # 31B dense
+    model: gemma4:31b
+    options: {base_url: "https://ollama.com"}
+    max_concurrency: 2
+    max_retries: 5
+    energy: {method: ecologits, ecologits_provider: google_genai, ecologits_model: gemma-4-31b-it}
+    enabled: false
+  - id: cloud-deepseek-v4-pro           # ~1.6T total, ~49B active; off-peak price is half
+    model: deepseek-v4-pro:0813
+    options: {base_url: "https://ollama.com", think: false}
+    max_concurrency: 2
+    max_retries: 5
+    energy: {method: none}
+    enabled: false

@@ -1,0 +1,260 @@
+test,IATA_code,ICAO_code,altitude,city,class,commercial_flights,country,distCity,dst,entity,entityClass,entityName,entity_class,entity_name,iata,icao,latitude,location,longitude,name,real_world_entity,runways,runwaysLength,runwaysWidth,source,state,timezone,type,tz_database_timezone
+response213,,,107.25,Yichang,,,China,,,,,,,,,,,,111.40966575,Yichang Sanxia Airport,,,,,,,,Airport,
+response212,,,263.25,Yichang,,,,,,,,,,,,,30.5561,,111.44616375,Yichang Sanxia Airport,,,,,,,,Airport,
+response97,,,,,,,,,,,,,,,,PAPG,,,,Petersburg James A. Johnson Airport,,,,,,,AKDT,,America/Juneau
+response96,,,,Petersburg,,,,,,,,,,,,PAWG,,,,Petersburg James A. Johnson Airport,,,,,,,Alaska Time Zone,,America/Sitka
+response281,,,,,,,,,,,,,,,,,,,-41.2770004272,Lençóis,,,,,,,,Location,
+response306,,,,,,,,,,,,,,,YIH,,,,,Yichang Sanxia Airport,,,3200.0,45.0,,,,,
+response149,,,,Nukuʻalofa,,,,,False,,,,,,,,,,,,,,,,,,,,Pacific/Tongatapu
+response161,,,,Yeonpyeong-do,,,South Korea,,false,,,,,,,RKNY,26.0956,,,Yeonpyeong Airport,,,,,,,,,
+response148,,,,Port Vila,,,,,0,,,,,,,,,,,Bauerfield International Airport,,,,,,,,,Pacific/Port_Vila
+response185,,,,,,,,,,,,,,,,,,,-41.2770004272,Lençóis,,,,,,,,City,
+response46,,,,Wrangell,,,United States,,,,,,,,,,,,,Wrangell Airport,,,,,,Alaska,,,America/Sitka
+response247,,,,Andahuaylas,,,Peru,,,,,,,,,,,Andahuaylas,,Andahuaylas Airport,,,,,,,,,America/Lima
+response64,,,,Wrangell,,Yes,United States,,,,,,,,,,,,,Wrangell Airport,,1.0,1828,,,Alaska,,,
+response176,,,,Gothenburg,,true,Sweden,,,,,,,,GSE,,,,,Göteborg City Airport,,,2038,,,,,,
+response311,,,,Yichang,,true,China,,,,,,Location,,,,,,,Yichang Sanxia Airport,,,3200,45,,,,,
+response193,,,,Galatina,,,Italy,,E,,,,,,,,,,18.15743075,Lecce Galatina Airport,,,,,,,,Airport,
+response129,,,,,,,,,,,,,,,,,,,,,,1.0,1200 meters,30 meters,,,,,
+response100,,,,Wrangell,,,United States,,,,,,,,,,,,,Wrangell Airport,,,,,,Alaska,,,America/Sitka
+response101,,,,Wrangell,,,United States,,,,,,,,,,,,,Wrangell Airport,,,,,,,,,America/Sitka
+response128,,,,Uyuni,,,Bolivia,,,,,,,,,,,,,Joya Andina Airport,,1.0,4000,40,,,,,
+response231,,,,Campinas,,,,,,,,,,,,,,,,Viracopos International Airport,,,,,,,,,
+response218,,,530 ft,,,,,,,,,,,,,,,,111.48314599999999,Yichang Sanxia Airport,,,,,,,,Airport,
+response13,,,,,,,,,,,,,,,,,,,,Kutch District,,,,,,,,Location,Asia/Kolkata
+response219,,,,,Location,,,,,,,,,,ZHG,,,,,,,,2900.0,45.0,,,,,
+response134,,,,Craig Cove,,true,Vanuatu,,,,,,,,,,,,,Craig Cove Airport,,,610m,45 m,,,,,
+response135,,,,Coquelles,,True,South Korea,,,,,,,,,,,,,Calais-Dunkerque Airport,,,1530m,30m,,,,,
+response192,,,,Lecce,,,Italy,,true,,,,,,,,,,18.1561,Lecce Galatina Airport,,,,,,,,airport,
+response310,,,,Yichang,,,China,,,,,,,,,,,,,Yichang Sanxia Airport,,,3000.0,45.0,,,,,
+response246,,,,,Location,,,,,,,,,,,,,Andes,,Andes Airport,,,,,,,,,America/Bogota
+response143,,,,,,,China,,,,,,,,,,,,,Datong Yungang Airport,,,,,,,China Standard Time,,Asia/Shanghai
+response142,,,,Yichang,,,China,,,,,,,,,,,,,Yichang Sanxia Airport,,,,,,,UTC+8,,Asia/Shanghai
+response265,,,,Campos dos Goytacazes,,no,Brazil,,,,,,,,,,,,,Campos–Bartolomeu Lysandro Airport,,,1340.0,26.2,,,,,
+response251,,,,Andahuaylas,,,Peru,,,,,,,,,,,Andahuaylas,,Andahuaylas Airport,,,,,,,,,America/Lima
+response5,,,,Campinas,,,,,,,,,,,,,,,,Viracopos International Airport,,1.0,3240.0,45.0,,,,,
+response18,,,,,,,,,,,,,,,,,,,,,,,,,,,,Location,Asia/Kolkata
+response31,,,,Le Castellet,,True,France,,,,,,,,,,,,,Le Castellet Airport,,,2800m,45m,,,,,
+response123,CAW,SBMK,,,Location,No,,,,,,,Location,Bartolomeu Lysandro Airport,,,,,,,,,1300 meters,30 meters,,,,,
+response155,,,,Craig Cove,,,Vanuatu,,,,,,,,,NCCV,8.813350000000002,,,Craig Cove Airport,,,,,,,,,
+response198,,,,Gdańsk,,,Poland,,E,,,,,,,,,,12.96810275,Lecce Galatina Airport,,,,,,,,Airport,
+response324,,,,,,,,,,,,,,,,,-23.550505,,,São Paulo,,,,,,,,,
+response177,,,,,,false,,,,,,,,,GSE,,,,,,,,2035m,,,,,,
+response296,,,,Los Angeles,,true,United States,,,,,,,,LAX,,,,,Los Angeles International Airport,,,,46m,,,,,
+response50,,,,Wrangell,,,United States,,,,,,,,WRG,,,,,,,1.2,1829,,,,,,
+response204,,,,Lençóis,,,,,,,,,,,LEC,,,,,Lençóis Airport,,1.0,2045.0,45.0,,,,,
+response26,,,,Lençóis,,,,,,,,,,,,,,,,Lençóis Airport,,1.0,1875.0,41.25,,,,,
+response27,,,,,,,,,,,,,,,,,,,,Coronel Horácio de Mattos Airport,,1.0,2000 meters,45,,,,,
+response154,,,,,Location,,,,1.0,,,,,,,MUCL,22.154167,,,,,,,,,,,,
+response250,,,,,,,,,,,,,,,,,,Andahuaylas,,Andahuaylas Airport,,,,,,,,,America/Lima
+response307,,,,,,,,,,,,,,,YIH,,,,,Yichang Sanxia Airport,,,3200.0,45.0,,,,,
+response297,,,,,,true,,,,,,,,,LAX,,,,,,,,,150 feet,,,,,
+response12,,,,Campinas,,,Brazil,,,,,,,,,,,,,Viracopos International Airport,,1.0,3240.0,45.0,,,,,
+response230,,,,,,,,,,,,,,,,,,,-47.1343,,,,,,Wikipedia,,,Airport,
+response160,,,,,,,,,A,,,,,,,KCON,43.760416500000005,,,,,,,,,,,,
+response226,,,,,,,,,,,,,,,,,,,-47.133611,,,,,,Wikipedia,,,Airport,
+response30,,,,Mykolaiv,,0.0,Ukraine,,,,,,,,,,,,,Mykolaiv International Airport,,,2572.0,42.0,,,,,
+response19,,,,,,,,,,,,,,,,,,,,,,,,,,,,Marine Area,Asia/Kolkata
+response199,,,,,,,,,,,,,,,,,,,,,,1.0,2000 meters,45 meters,,,,,
+response205,,,,,,,China,,,,,,,,,,,,,,,,,,,,UTC+8,,Asia/Shanghai
+response51,,,,,,,,,,,,,,,WRG,,,,,,,1.0,1828.0,,,,,,
+response256,,,,Andahuaylas,,true,Peru,,,,,,,,,,,,,,,1.0,3000,,,,,,
+response90,,,,Wrangell,,,United States,,,,,,,,,PAWG,,,,Wrangell Airport,,,,,,,-8.0,,America/Sitka
+response167,,,,Gällivare,,,Sweden,,,,,,,,,ESNG,,,,Gällivare Airport,,,,,https://www.swedavia.com/gallivare/,,Europe/Stockholm,,
+response110,,,,Campos dos Goytacazes,,,Brazil,,,,,,,,CAW,,,,-45.837829,Campos–Bartolomeu Lisandro Airport,,,,,https://en.wikipedia.org/wiki/Bartolomeu_Lisandro_Airport,,,,America/Sao_Paulo
+response138,,,,,,true,,,,,,,,,,,,,,,,,2100,45,,,,,
+response111,,,,,,,,,,,,,,,,,,,-41.778140666666665,,,,,,Wikipedia,,,,America/Sao_Paulo
+response124,,,,Campos dos Goytacazes,,Yes,Brazil,,,,,,,,,,,,,Bartolomeu Lisandro Airport,,,1500,45,,,,,
+response221,,,,,,,,,,,,,,,YIH,,,,,Yichang Sanxia Airport,,,3200.0,45.0,,,,,
+response106,,,,Campos dos Goytacazes,,,Brazil,,,,,,,,,,,,-41.55963060910034,,,,,,Wikipedia,,,,America/Sao_Paulo
+response107,,,,Campos dos Goytacazes,,,Brazil,,,,,,,,CAW,SBCP,-21.9056,,-41.6085622,Bartolomeu Lisandro Airport,,,,,Wikipedia,,,,America/Sao_Paulo
+response203,,,,,,,,,,,,,,,,,,,,,,1.0,2000 meters,45 meters,,,,,
+response202,,,,Fortaleza,,,Brazil,,,,,,,,LAZ,,,,,Coronel Horácio de Mattos Airport,,1.0,1500,45,,,,,
+response237,,,,Campinas,,,Brazil,,,,,,,,VCP,,,,,Viracopos International Airport,,,3240.0,45.0,,,,,
+response14,,,,,,,,,,,,,,,,,,,,Porbandar Airport,,,,,,,,Airport,Asia/Kolkata
+response236,,,,Campinas,,,Brazil,,,,,,,,VCP,,,,,Viracopos International Airport,,,3240.0,45.0,,,,,
+response240,,,,Campinas,,,Brazil,,,,,,,,VCP,,,,,Viracopos International Airport,,,3240.0,45.0,,,,,
+response269,,,,,,true,,,,,,,Location,,,,,,,Cabo Frio International Airport,,,1500 meters,30 meters,,,,,
+response57,,,,Wrangell,,True,,,,,,,,,,,,,,Wrangell Airport,,1.0,1828,,,,,,
+response195,,,,Lecce,,,Italy,,E,,,,,,,,,,18.1568934,Lecce Galatina Airport,,,,,,,,airport,
+response170,,,,Gällivare,,,Sweden,,,,,,,,,ESNG,,,,Gällivare Lapland Airport,,,,,,,Europe/Stockholm,,
+response316,,,,Yichang,,true,China,,,,,,,,,,,,,Yichang Sanxia Airport,,,3200m,45m,,,,,
+response159,,,,Comiso,,,Vanuatu,,N,,,,,,,NCCV,1.488037000000001,,,Craig Cove Airport,,,,,,,,,
+response290,,,,Columbus,,,,Oroville,,,,,,,,KOTH,,,,Oroville Municipal Airport,,,,,FAA,,,,
+response317,,,,,,,,,,,,,,,,SBGR,-23.5505,,,São Paulo,,,,,,,,,
+response62,,,,,,true,,,,,,,,,,,,,,,,1.0,6000.0,,,,,,
+response188,,,,,,,,,,,,,,,,,,,-41.2770004272,Lençóis,,,,,,,,City,
+response63,,,,Whangarei,,true,New Zealand,,,,,,,,,,,,,Whangarei Airport,,1.75,1339.25,,,,,,
+response268,,,,Campos dos Goytacazes,,,,,,,,,,,,,,,,Campos–Bartolomeu Lysandro Airport,,,1300 m,30 m,,,,,
+response189,,,,,,,,,,,,,,,,,,,-41.2770004272,Lençóis,,,,,,,,City,
+response15,,,,,,,,,,,,,,,,,,,,Shyamji Krishna Verma Bhuj Airport,,,,,,,,Airport,Asia/Kolkata
+response21,,,,,,,,,,,,,,,,,,,,Arabian Sea,,,,,,,,Geographic Point,Asia/Kolkata
+response220,,,,,,,,,,,,,,,YIH,,,,,Yichang Sanxia Airport,,,3000.0,45.0,,,,,
+response139,,,,Yeosu,,Yes,South Korea,,,,,,,,,,,,,Yeosu Airport,,,2100,45,,,,,
+response166,,,,,,,,,,,,,,,,ESNG,,,,,,,,,Wikipedia,,Europe/Stockholm,,
+response153,,,,Funafuti,,,,,false,,,,,,,,,,,Funafuti International Airport,,,,,,,,,Pacific/Funafuti
+response152,,,,Luganville,,,,,false,,,,,,,,,,,Santo-Pekoa International Airport,,,,,,,,,Pacific/Tongatapu
+response91,,,,,,,,,,,,,,,,PAPG,,,,,,,,,,,Alaska Time,,America/Sitka
+response257,,,,Andahuaylas,,True,Peru,,,,,,,,,,,,,,,1.0,3000m,,,,,,
+response262,,,,Andahuaylas,,true,,,,,,,,,,,,,,,,1.0,3000,,,,,,
+response40,,,161.0,,,,Peru,,,,,,,,,,,,,Lima,,,,,,,,,
+response287,,,,North Bend,,,,North Bend,,,,,,,,KOTH,,,,Southwest Oregon Regional Airport,,,,,FAA,,,,
+response36,,,,Galatina,,No,Italy,,,,,,,,,,,,,Lecce Galatina Airport,,,1790m,30m,,,,,
+response214,,,138.33333333333334,,,,,,,,,,,,,,,,111.34020366666668,,,,,,,,,Airport,
+response215,,,163.66,Yichang,,,China,,,,,,,,,,,,111.3743668,Yichang Sanxia Airport,,,,,,,,International Airport,
+response37,,,161 meters,,Location,,Peru,,,,,,,,,,,,,,,,,,,,,,
+response125,,,,,,,,,,,,,,,,,,,,,,1.0,2570.0,45.0,,,,,
+response208,,,,,,,China,,,,,,,,,,,,,,,,,,,,UTC+8,,Asia/Shanghai
+response132,,,,,,True,,,,,,,,,,,,,,,,,2100 meters,45 meters,,,,,
+response323,,,,,,,,,,,,,,,,SBGR,-23.5505,,,São Paulo,,,,,,,,,
+response322,,,,,,,,,,,,,,,,,-23.5505,,,São Paulo,,,,,,,,,
+response9,,,,Campinas,,,,,,,,,,,,,,,,Viracopos International Airport,,1.0,3240.0,45.0,,,,,
+response291,,,,,,true,,,,,,,,,LAX,,,,,,,,,46 m,,,,,
+response145,,,,Funafuti,Location,,Vanuatu,,false,,,,,,,,,,,,Bauerfield International Airport,,,,,,,,Pacific/Funafuti
+response133,,,,Caçapava do Sul,,no,Brazil,,,,,,,,,,,,,Cali-Canal Airport,,,1200m,31.0,,,,,
+response20,,,,,,,,,,,,,,,,,,,,,,,,,,,,Geographic Point,Asia/Karachi
+response263,,,,Andahuaylas,,Yes,Peru,,,,,,,,,,,,,,,1.0,2400m,,,,,,
+response41,,,161 meters,,,,Peru,,,,,,,,,,,,,,,,,,,,,,
+response209,,,,Yulin,,,China,,,,,,,,,,,,,Yulin Yuyang Airport,,,,,,,China Standard Time,,Asia/Shanghai
+response171,,,,,,False,,,,,,,,,SOO,,,,,,,,2000.0,,,,,,
+response8,,,,,,,,,,,Location,Viracopos International Airport,,,,,,,,,,2.0,3240 m,45 m,,,,,
+response108,,,,Campos dos Goytacazes,,,Brazil,,,,,,,,CAW,SBCP,,,-41.63277766666667,Bartolomeu Lisandro Airport,,,,,Wikipedia,,,,America/Sao_Paulo
+response33,,,,Lecce,,0,Italy,,,,,,,,,,,,,Lecce Galatina Airport,,,2000 m,45,,,,,
+response238,,,,Campinas,,,Brazil,,,,,,,,VCP,,,,,Viracopos International Airport,,,3240.0,45.0,,,,,
+response211,,,138.5,Yichang,,,,,,,,,,,,,,,111.46065,Yichang Sanxia Airport,,,,,,,,Airport,
+response266,,,,Campos dos Goytacazes,,true,Brazil,,,,,,,,MEA,SBME,,,,Macaé Airport,,,1200,30,,,,,
+response267,,,,,,Yes,,,,,,,,,,,,,,,,,2600 meters,45 meters,,,,,
+response45,,,,Warangal,,,India,,,,,,,,,,,,,Warangal Airport,,,,,,,,,Asia/Kolkata
+response89,,,,,Location,,,,,,,,,,,PAWG,,,,,,,,,,,Alaska Time,,America/Sitka
+response283,,,,,,,,,,,,,,,,,,,,Lençóis,,,,,,,,Airport,
+response162,,,,Luanda,,,Vietnam,,N,,,,,,,FNLU,15.955659400000002,,,Luanda-4-de-Fevereiro Airport,,,,,,,,,
+response59,,,,Whangarei,,True,New Zealand,,,,,,,,,,,,,Whangarei Airport,,1.25,1097,,,,,,
+response58,,,,Warrnambool,,True,New Zealand,,,,,,,,,,,,,Whangarei Airport,,1.25,1349.0,,,,,,
+response157,,,,Luanda,,,Angola,,N,,,,,,,FQLL,17.737445,,,Luanda 4 de Fevereiro Airport,,,,,,,,,
+response319,,,,,,,,,,,,,,,,,-23.5505,,,São Paulo,,,,,,,,,
+response156,,,,Luang Prabang,,,Vanuatu,,N,,,,,,,VLPR,-14.587275249999998,,,Luang Prabang International Airport,,,,,,,,,
+response270,,,,Campos dos Goytacazes,,True,Brazil,,,,,,,,,,,,,Campos dos Goytacazes Airport,,,1500,45,,,,,
+response52,,,,Wrangell,,,United States,,,,,,,,WRG,,,,,Wrangell Airport,,1.0,1829.0,,,Alaska,,,
+response258,,,,Andahuaylas,,true,Peru,,,,,,,,,,,,,,,1.0,2950.0,,,,,,
+response271,,,,Campos dos Goytacazes,,Yes,Brazil,,,,,,,,,,,,,Bartolomeu Lisandro Airport,,,1500 meters,30 meters,,,,,
+response294,,,,Los Angeles,,true,United States,,,,,,,,LAX,,,,,Los Angeles International Airport,,,,150 ft,,,,,
+response295,,,,,,true,,,,,,,,,LAX,,,,,,,,,150 feet,,,,,
+response245,,,161 meters,,,,Peru,,,,,,Location,,,,,,,Lima,,,,,,,America/Lima,,
+response168,,,,,,,,,,,,,Location,,,ESNG,,,,,,,,,Wikipedia,,Europe/Stockholm,,
+response140,,,,Craig Cove,,true,Vanuatu,,,,,,,,,,,,,Craig Cove Airport,,,2200,45,,,,,
+response169,,,,Gällivare,,,Sweden,,,,,,,,,ESNG,,,,Gällivare Airport,,,,,https://en.wikipedia.org/wiki/Gällivare_Airport,,Europe/Stockholm,,
+response137,,,,Ongjin County,,true,Vanuatu,,,,,,,,,,,,,Yeonpyeong Island Heliport,,,2100,45.0,,,,,
+response11,,,,Campinas,,,Brazil,,,,,,,,,,,,,Viracopos International Airport,,1.0,3240,45,,,,,
+response24,,,,Gällivare,,,,,,,,,,,,ESNG,,,,Gällivare Airport,,,,,Wikipedia,,Europe/Stockholm,,
+response25,,,,,,,,,,,,,,,,,,,,,,1.0,2070,45,,,,,
+response207,,,,,,,China,,,,,,,,,,,,,,,,,,,,Beijing Time,,Asia/Shanghai
+response206,,,,Linfen,,,China,,,,,,,,,,,,,Yulin Yuyang Airport,,,,,,,UTC+8,,Asia/Shanghai
+response233,,,,Campinas,,,,,,,,,,,,,,,-47.808056,Viracopos International Airport,,,,,https://www.viracopos.com/,,,International Airport,
+response136,,,,,,true,,,,,,,,,,,,,,,,,3000 m,45 m,,,,,
+response53,,,,,,,,,,,,,,,PWE,,,,,,,1.0,1829,,,,,,
+response186,,,,,,,,,,,,,,,,,,,-41.2770004272,Coronel Horácio de Mattos Airport,,,,,,,,Airport,
+response187,,,,,,,,,,,,,,,,,,,-41.3861,Lençóis,,,,,,,,City,
+response44,,,161 meters,,,,Peru,,,,,,,,,,,,,Lima,,,,,,,,,
+response32,,,,,,false,,,,,,,,,,,,,,,,,2200 m,45 m,,,,,
+response225,,,,,,,,,,,,,,,,SBGR,-23.550506666666667,,,São Paulo,,,,,,,,,
+response224,,,,,,,,,,,,,,,YIH,,,,,Yichang Sanxia Airport,,,2600,45,,,,,
+response114,,,,Key West,,,,,EYW,,,,,,,KEYW,,,,,,,,,,,,,
+response305,,,,,,,,,,,,,,,YIH,,,,,,,,3200m,45m,,,,,
+response163,,,,,Location,,,,,Tupiza Airport,,,,,,,,,,,,1.0,2438,45,,,,,
+response253,,,,Andahuaylas,,,Peru,,,,,,,,,,,Andros Town,,Andahuaylas Airport,,,,,,,,,America/Lima
+response95,,,,,,,,,,,,,,,,PAWG,,,,,,,,,,,Alaska Time Zone,,America/Juneau
+response94,,,,Port Protection,,,,,,,,,,,,PANT,,,,Port Protection Seaplane Base,,,,,,,UTC-09:00,,America/Sitka
+response174,,,,Gällivare,,True,Sweden,,,,,,,,GEV,,,,,Gällivare Airport,,,2022.6,,,,,,
+response175,,,,,,false,,,,,,,,,GEK,,,,,,,,1859.5,,,,,,
+response313,,,,Yichang,,Yes,China,,,,,,,,,,,,,Yichang Sanxia Airport,,,2600,45,,,,,
+response244,,,,,,,,,,,,,,,,,,,,,,1.0,3240,45,,,,,
+response83,,,,North Bend,,,,,,,,,,,,KOTH,,,,Southwest Oregon Regional Airport,,,,,,,,,
+response289,,,,North Bend,,,,Coos Bay,,,,,,,,KOTH,,,,Southwest Oregon Regional Airport,,,,,Wikipedia,,,,
+response38,,,161,,,,Peru,,,,,,,,,,,,,Lima,,,,,,,,,
+response39,,,161,,,,Peru,,,,,,,,,,,,,Lima,,,,,,,America/Lima,,
+response10,,,,,,,,,,,,,,,,,,,,,,1.0,3240m,45m,,,,,
+response103,,,,Wrangell,,,United States,,,,,,,,,,,,,Wrangell Airport,,,,,,Alaska,,,America/Sitka
+response102,,,,,,,,,,,,,,,,,,Whangarei,,Whangarei Airport,,,,,,,,,Pacific/Auckland
+response312,,,,,,true,,,,,,,Location,Yichang Sanxia Airport,,,,,,,,,2600 meters,45 meters,,,,,
+response191,,,,Lecce,,,,,E,,,,,,,,,,18.153472,Lecce Galatina Airport,,,,,,,,Airport,
+response6,,,,Campinas,,,Brazil,,,,,,,,,,,,,Viracopos International Airport,,1.0,3240,45,,,,,
+response239,,,,,,,,,,,,,,,VCP,,,,,,,,3240.0,45.0,,,,,
+response282,,,,,,,,,,,,,,,,,,,,Lençóis Airport,,,,,,,,Airport,
+response318,,,,,,,,,,,,,,,,SBGR,-23.473870333333334,,,São Paulo/Guarulhos International Airport,,,,,,,,,
+response288,,,,,,,,North Bend,,,Location,,,,,KOTH,,,,,,,,,Wikipedia,,,,
+response259,,,,,,true,,,,,,,,,,,,,,,,1.0,3000,,,,,,
+response190,,,,,,,,,True,,,,,,,,,,18.156667,,,,,,,,,Airport,
+response7,,,,Campinas,,,Brazil,,,,,,,,,,,,,Viracopos International Airport,,1.0,3240,45,,,,,
+response109,,,,,,,,,,,,,,,,,,,-41.776667,,,,,,Wikipedia,,,,America/Sao_Paulo
+response210,,,177.0,,,,,,,,,,,,,,,,111.319722,,,,,,,,,Airport,
+response252,,,,,,,,,,,,,,,,,,Andahuaylas,,Andahuaylas Airport,,,,,,,,,America/Lima
+response232,,,,,,,,,,,,,,,,,,,-47.1422,,,,,,Aeroportos Brasil Viracopos,,,International Airport,
+response284,,,,,,,,,,,,,,,,,,,-41.2770004272,Lençóis,,,,,,,,City,
+response285,,,,Harrison,,,,Owensboro,,,,,,,,KOWB,,,,Ozark Regional Airport,,,,,Airport-Data.com,,,,
+response42,,,161 meters,,,,Peru,,,,,,,,,,,,,Lima,,,,,,,America/Lima,,
+response249,,,,Andahuaylas,,,Peru,,,,,,,,,,,Andahuaylas,,Andahuaylas Airport,,,,,,,,,America/Lima
+response260,,,,Andahuaylas,,true,,,,,,,,,,,,,,,,1.0,3000,,,,,,
+response43,,,161,,,,Peru,,,,,,,,,,,,,,,,,,,,,,
+response151,,,,Port Vila,,,,,false,,,,Location,,,,,,,,,,,,,,,,Pacific/Port_Vila
+response178,,,,Gävle,,true,Sweden,,,,,,,,GVX,,,,,Gävle Airport,,,1900m,,,,,,
+response92,,,,Wrangell,,,United States,,,,,,,,,PASI,,,,Wrangell Airport,,,,,,Alaska,UTC-9,,America/Sitka
+response179,,,,Gothenburg,,false,Sweden,,,,,,,,GSE,,,,,Gothenburg City Airport,,,2060,,,,,,
+response150,,,,Luganville,,,,,0.0,,,,,,,,,,,Futuna Airport,,,,,,,,,Pacific/Wallis
+response255,,,,Andahuaylas,Location,yes,Peru,,,,,,,,,,,,,,,1 (13/31),2800m,,,,,,
+response126,,,,Potosí,,,Bolivia,,,,,,,,,,,,,Potosí Airport,,1.0,2900,45,,,,,
+response35,,,,Lencois,,True,Italy,,,,,,,,,,,,,Lecce Galatina Airport,,,1500,30,,,,,
+response217,,,174.75,Yichang,,,China,,,,,,,,,,30.5522,,111.42673325,Yichang Sanxia Airport,,,,,,,,International Airport,
+response131,,,,Uyuni,,,Brazil,,,,,,,,,,,,,Joyas Andinas Airport,,1.0,4000,45,,,,,
+response201,,,,Fortaleza,,,,,,,,,,,,,,,,Lençóis Airport,,1.0,2011.25,41.25,,,,,
+response23,,,,Gällivare,,,,,,,,,,,,ESNG,,,,Gällivare Lapland Airport,,,,,,,Europe/Stockholm,,
+response99,,,,Wrangell,,,United States,,,,,,,,,,,,,Wrangell Airport,,,,,,Alaska,,,Australia/Sydney
+response173,,,,Gällivare,,false,Sweden,,,,,,,,GEV,,,,,Gällivare Airport,,,1713,,,,,,
+response315,,,,Yichang,,True,China,,,,,,,,,,,,,Yichang Sanxia Airport,,,3200m,45m,,,,,
+response98,,,,,Location,,,,,,,,,,,,,Wrangell,,Wrangell Airport,,,,,,,,,America/Sitka
+response314,,,,,,22233 (2019 aircraft movements),,,,,,,,,,,,,,,,,3200m,45m,,,,,
+response54,,,,Wrangell,,,United States,,,,,,,,WRG,,,,,Wrangell Airport,,1.25,1829,,,,,,
+response55,,,,,,,,,,,,,,,WRG,,,,,Wrangell Airport,,1.0,1829,,,,,,
+response321,,,,,,,,,,,,,,,,SBGR,-23.5505,,,São Paulo,,,,,,,,,
+response308,,,,,Location,True,,,,Yining Airport,,,,,,,,,,,,,2800m,45m,,,,,
+response147,,,,Luganville,,,,,0,,,,,,,,,,,Funafuti International Airport,,,,,,,,,Pacific/Efate
+response309,,,,Yichang,,true,China,,,,,,,,,,,,,Yichang Sanxia Airport,,,3200,45,,,,,
+response320,,,,,,,,,,,,,,,,,-23.55050398,,,São Paulo,,,,,,,,,
+response49,,,,Wrangell,,,United States,,,,,,,,WRG,,,,,,,1.25,3914.0,,,Alaska,,,
+response146,,,,Sola,,,,,0.0,,,,,,,,,,,Sola Airport,,,,,,,,,Pacific/Port_Vila
+response197,,,,Galatina,,,Italy,,observes DST,,,,,,,,,,17.392831,Lecce Galatina Airport,,,,,,,,Military Airport,
+response104,,,,,,,,,,,,,,,,,,Whangārei,,Whangarei Airport,,,,,,,,,Pacific/Auckland
+response105,,,,,Location,,,,,,,,,,,,,,-41.474810999999995,,,,,,Wikipedia,,,,America/Sao_Paulo
+response228,,,,Campinas,,,,,,,,,,,,,,,-47.135278,Viracopos International Airport,,,,,Wikipedia,,,Airport,
+response200,,,,,,,,,,,,,,,,,,,,Lençóis Airport,,1.0,1807.5,37.5,,,,,
+response229,,,,Campinas,,,Brazil,,,,,,,,,,-23.0076,,-47.134748,Viracopos International Airport,,,,,Wikipedia,,,Airport,
+response22,,,,,Location,,Sweden,,,Gällivare Lapland Airport,,,,,,ESNG,,,,,,,,,Wikipedia,,Europe/Stockholm,,
+response34,,,,,,Yes,,,,,,,,,,,,,,,,,1040,23,,,,,
+response223,,,,,,,,,,,,,,,YIH,,,,,,,,3200m,45,,,,,
+response222,,,,,,,,,,,,,,,YIH,,,,,Yichang Sanxia Airport,,,3200.0,45.0,,,,,
+response261,,,,,,true,,,,,,,,,,,,,,,,1.0,3000 meters,,,,,,
+response165,,,,Gällivare,,,Sweden,,,,,,,,,ESNG,,,,Gällivare Lapland Airport,,,,,Wikipedia,,Europe/Stockholm,,
+response298,,,,Los Angeles,,true,United States,,,,,,,,LAX,,,,,Los Angeles International Airport,,,,150 ft,,California,,,
+response299,,,,Los Angeles,,true,United States,,,,,,,,LAX,,,,,Los Angeles International Airport,,,,45.72 meters,,,,,
+response254,,,,Andahuaylas,,,Peru,,,,,,,,,,,Yigo,,Andahuaylas Airport,,,,,,,,,America/Lima
+response28,,,,,,No,,,,,,,,,,,,,,,,,2028m,40m,,,,,
+response112,,,,Campos dos Goytacazes,,,Brazil,,,,,,,,,,,,-41.6564841253418,Bartolomeu Lisandro Airport,,,,,Wikipedia,,,,America/Sao_Paulo
+response113,,,,Campos dos Goytacazes,,,Brazil,,,,,,,,,,,,-41.5891222,Aeroporto de Macaé - Bartolomeu Lisandro,,,,,Wikipedia,,,,America/Sao_Paulo
+response235,,,,,Location,,,,,,,,,,VCP,,,,,,,,3240,45,,,,,
+response234,,,,Campinas,,,Brazil,,,,,,,,,,-23.0084,,-47.13525,Viracopos International Airport,,,,,Wikipedia,,,International Airport,
+response172,,,,Ängelholm,,true,Sweden,,,,,,,,AGH,,,,,Ängelholm–Helsingborg Airport,,,1940,,,,,,
+response196,,,,,,,,,true,,,,,,,,,,18.143047,,,,,,,,,Airport,
+response48,,,,,,,,,,,,,,,WRG,,,,,,,1.0,1828.75,,,,,,
+response61,,,,Whangarei,,true,New Zealand,,,,,,,,,,,,,Whangarei Airport,,1.0,1374.6666666666667,,,,,,
+response242,,,,Campinas,,,Brazil,,,,,,,,VCP,,,,,Viracopos International Airport,,,3244.0,45.0,,,,,
+response60,,,,,,true,,,,,,,,,,,,,,,,1.0,2250 meters,,,,,,
+response243,,,,Campinas,,,Brazil,,,,,,,,VCP,,,,,Viracopos International Airport,,,3240,45,,,,,
+response84,,,,Ormond Beach,,,,North Platte,,,,,,,,KOTH,,,,Ormond Beach Municipal Airport,,,,,Wikipedia,,,,
+response16,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Asia/Kolkata
+response93,,,,,,,,,,,,,,,,PAPG,,,,,,,,,,,Alaska Time Zone,,America/Sitka
+response248,,,,Andahuaylas,,,Peru,,,,,,,,,,,Andahuaylas,,Andahuaylas Airport,,,,,,,,,America/Lima
+response130,,,,Tete,,,Mozambique,,,,,,,,,,,,,Chingozi Airport,,1.0,1700.0,30.0,,,,,
+response293,,,,,,true,,,,,,,,,LAX,,,,,,,,,,,,,,
+response292,,,,Los Angeles,,,,,,,,,,,LAX,,,,,Los Angeles International Airport,,,,,,,,,
+response127,,,,,,,,,,,,,,,,,,,,,,1.0,1000 meters,30 meters,,,,,
+response180,,,,,Location,Yes,,,,Ithaca Tompkins International Airport,,,,,ITH,,,,,,,,2012.0,,,,,,
+response17,,,,,,,,,,,,,,,,,,,,,,,,,,,,Oceanic Point,Asia/Kolkata

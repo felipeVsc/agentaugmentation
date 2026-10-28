@@ -1,0 +1,68 @@
+# Strategy A (LLM only) on the airports task set, with open-weight models served by Ollama.
+#   ollama serve                       # in another terminal (or the Ollama app)
+#   ollama pull qwen3:4b-instruct      # once per model
+#   strategy-a check  --config configs/strategy_a_airports.yaml
+#   strategy-a run    --config configs/strategy_a_airports.yaml --limit 2 --models llama3.2-1b
+#   strategy-a run    --config configs/strategy_a_airports.yaml
+
+inputs:
+  tasks: tasks/airports/v1/tasks.csv
+  # examples: examples/airports.v1.json     # needed by the few-shot templates below
+runs_per_task: 5
+pfe_tokenizer: cl100k_base                  # used when a model sets no tokenizer
+repair: true
+output_dir: results/airports/v1/strategy_a/
+
+templates:
+  - {id: base_zero_shot,    file: templates/base_zero_shot.v1.txt}
+  - {id: base_cot,          file: templates/base_cot.v1.txt, expected_output_tokens: 400}
+  - {id: compact_zero_shot, file: templates/compact_zero_shot.v1.txt}
+  - {id: compact_cot,       file: templates/compact_cot.v1.txt, expected_output_tokens: 300}
+  # Enable once inputs.examples exists (example nodes must not appear in tasks.csv):
+  # - {id: base_few_shot,    file: templates/base_few_shot.v1.txt, n_examples: [1, 3, 5]}
+  # - {id: compact_few_shot, file: templates/compact_few_shot.v1.txt, n_examples: [1, 3, 5]}
+
+model_defaults:
+  provider: ollama
+  params: {temperature: 0.7, max_tokens: 1024}
+  max_concurrency: 1                        # one call at a time on the local server (required by codecarbon)
+  timeout_s: 600                            # first call loads the model; CPU inference is slow
+  max_retries: 2
+  energy: {method: codecarbon, country_iso_code: BRA}   # where this machine runs (ISO 3166 alpha-3)
+  options:
+    num_ctx: 8192                           # `check` warns if a prompt may not fit
+    keep_alive: 30m
+    seed: 0                                 # run r uses seed 0 + r: runs differ but are reproducible
+
+models:
+  # `id` goes to results.csv; `model` is the Ollama tag (`ollama list`).
+  - id: llama3.2-1b
+    model: llama3.2:1b
+    # tokenizer: hf:meta-llama/Llama-3.2-1B-Instruct   # exact token counts (gated on Hugging Face)
+
+  - id: qwen3-4b-instruct
+    model: qwen3:4b-instruct
+    tokenizer: hf:Qwen/Qwen3-4B-Instruct-2507          # exact token counts for tokens_in and PFE
+
+  - id: mistral-7b
+    model: mistral:7b
+    # tokenizer: hf:mistralai/Mistral-7B-Instruct-v0.3
+
+  - id: nemotron-mini-4b
+    model: nemotron-mini:4b
+
+  # Larger models for the paper (pull them first; need a GPU or a lot of RAM):
+  - id: qwen3-14b
+    model: qwen3:14b
+    tokenizer: hf:Qwen/Qwen3-14B
+    options: {think: false}                 # qwen3 thinks by default; merged with model_defaults.options
+    enabled: false
+  - id: mistral-small3.2-24b
+    model: mistral-small3.2:24b
+    enabled: false
+  - id: gemma3-27b
+    model: gemma3:27b
+    enabled: false
+  - id: llama3.1-8b
+    model: llama3.1:8b
+    enabled: false

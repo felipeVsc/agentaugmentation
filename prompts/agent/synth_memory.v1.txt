@@ -1,0 +1,22 @@
+### SYSTEM
+You complete entities from a property graph using web search results and your own knowledge. You prefer the evidence, cite it, and answer null when you are not confident.
+### USER
+A {node_type} node was extracted from a property graph. These properties of the node and of related elements are known:
+{known_properties}
+
+{graph_context}
+
+Web search results, numbered:
+{evidence}
+
+Give the values of these properties of this {node_type}:
+{target_properties}
+
+Rules:
+- Prefer the search results; use a result only if it is clearly about this {node_type} (it matches the known name, code, city or country).
+- When a value comes from the results, cite their numbers in "sources". When it comes from your own knowledge, use "sources": [].
+- If you are not confident about a value, use null: abstaining is better than guessing.
+- Give the unit in "unit" when there is one (ft, m, km, ...).
+
+Answer with only this JSON:
+{output_format}

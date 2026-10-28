@@ -1,0 +1,38 @@
+# Task set with Algorithm 2 of the October 2026 draft (TASKDEFINITION_SPEC.md), without graph context.
+#   tasks build --config configs/airports_v2_noctx.yaml
+# 3 nodes per centrality stratum, |H| = 1, |G| in {1, 3, 5}: 27 x 3 x 1 x 3 = 243 tasks before skips.
+
+dataset:
+  name: airports
+  node_type: Airport
+  context_max_hops: 3
+  source: neo4j
+  node_id_property: icao          # same node ids as the published task set
+
+neo4j:
+  uri: bolt://localhost:7687      # overridden by NEO4J_URI; user/password only from NEO4J_USER / NEO4J_PASSWORD
+  database: null                  # overridden by NEO4J_DATABASE
+  id_function: elementId
+
+centrality:
+  measure: pagerank
+  epsilon: 1.0e-6
+  directed: true
+
+sampling:
+  max_n: 3
+  max_H: 1
+  sizes_G: [1, 3, 5]              # instead of 1..max_G
+  use_context: false              # G from the node's own properties only
+  G_strata_by: popularity         # H and G share one popularity partition (draft: one set of pairs)
+  seed: 42
+
+properties:
+  exclude_properties: [airport_id]
+  never_hide: []
+  leakage_pairs: []
+  empty_string_is_null: true
+  leak_min_substring_len: 4
+
+task_set_version: airports-v2-noctx
+output_dir: tasks/airports/v2_noctx/

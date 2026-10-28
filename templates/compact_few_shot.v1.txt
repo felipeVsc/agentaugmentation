@@ -1,0 +1,17 @@
+### USER
+Examples:
+
+{examples}
+
+Known properties of a {node_type} from a database:
+{known_properties}
+
+Give the real-world values of:
+{target_properties}
+
+Use null when unsure. Reply with only this JSON:
+{output_format}
+### EXAMPLE
+Known: {known_properties}
+Find: {target_properties}
+Answer: {answer}

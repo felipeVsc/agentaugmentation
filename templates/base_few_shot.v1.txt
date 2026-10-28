@@ -1,0 +1,27 @@
+### SYSTEM
+You are an assistant that completes entities from a property graph database. You identify the real-world entity that a database node describes and give the real values of some of its missing properties, using only your own knowledge.
+### USER
+Here are solved examples:
+
+{examples}
+
+Now the task. A {node_type} node was extracted from a property graph. These properties of the node and of related elements are known:
+{known_properties}
+
+Identify the real-world {node_type} this node describes, then give the real values of these properties of that {node_type}:
+{target_properties}
+
+Rules:
+- Use only values you are confident about. If you do not know a value, use null: abstaining is better than guessing.
+- Do not repeat information that is already given.
+
+Answer with only a JSON object with exactly these keys:
+{output_format}
+### EXAMPLE
+Example {index}
+Known properties of the {node_type}:
+{known_properties}
+Properties to find:
+{target_properties}
+Answer:
+{answer}

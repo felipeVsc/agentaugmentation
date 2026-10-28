@@ -1,0 +1,233 @@
+{
+  "strategy": "B",
+  "task_set_version": "airports-dolap2026",
+  "tasks_file": {
+    "path": "tasks/airports/dolap2026/tasks.csv",
+    "sha256": "5a467fded376454a70f791c7ce5ffb08f55f7c8fe395d4a555af6543d35719a2"
+  },
+  "variants": [
+    {
+      "id": "search_evidence",
+      "plan": "prompts/agent/plan.v1.txt",
+      "synthesize": "prompts/agent/synth.v1.txt",
+      "synthesis": "evidence_only",
+      "with_context": false,
+      "version": "v1",
+      "plan_sha256": "1422a4cac9e73e1e88325f4cafd77f19fbb586d22b81504b7b46b96538ab655f",
+      "synth_sha256": "bfcf335a0726a095fc6eed2ff8c6df9864516e697bd005a068b73cbfc3814f3b"
+    },
+    {
+      "id": "search_memory",
+      "plan": "prompts/agent/plan.v1.txt",
+      "synthesize": "prompts/agent/synth_memory.v1.txt",
+      "synthesis": "evidence_and_memory",
+      "with_context": false,
+      "version": "v1",
+      "plan_sha256": "1422a4cac9e73e1e88325f4cafd77f19fbb586d22b81504b7b46b96538ab655f",
+      "synth_sha256": "9b5da02658777b38e7c2d24549f2b83f580b6e55a09aa2069bd345bfdccbc63f"
+    }
+  ],
+  "search": {
+    "tool": "tavily",
+    "depth": "basic",
+    "timeout_s": 30
+  },
+  "blocked_domains": [
+    "ourairports.com",
+    "openflights.org",
+    "github.com/jpatokal",
+    "github.com/davidmegginson",
+    "raw.githubusercontent.com/jpatokal",
+    "kaggle.com",
+    "github.com/felipeVsc"
+  ],
+  "reuse_retrieval": true,
+  "pfe_tokens": {
+    "search_evidence|cloud-gemma4": 374,
+    "search_memory|cloud-gemma4": 372
+  },
+  "models": [
+    {
+      "id": "cloud-gemma4",
+      "provider": "ollama",
+      "model": "gemma4:31b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 1024
+      },
+      "max_concurrency": 2,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": null,
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com"
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "google_genai",
+        "ecologits_model": "gemma-4-31b-it",
+        "electricity_mix_zone": null,
+        "country_iso_code": "BRA"
+      },
+      "pricing": null,
+      "enabled": true
+    }
+  ],
+  "model_details": {
+    "cloud-gemma4": {
+      "model": "gemma4:31b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gemma4:31b",
+        "format": "",
+        "family": "gemma4",
+        "families": null,
+        "parameter_size": "32682372656",
+        "quantization_level": "BF16"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "show_error": null
+    }
+  },
+  "config": {
+    "inputs": {
+      "tasks": "tasks/airports/dolap2026/tasks.csv"
+    },
+    "runs_per_task": 1,
+    "output_dir": "results/airports/dolap2026/strategy_b_smoke/",
+    "search_cache_dir": "results/airports/dolap2026/search_cache/",
+    "search": {
+      "tool": "tavily",
+      "depth": "basic",
+      "api_key_env": "TAVILY_API_KEY",
+      "timeout_s": 30
+    },
+    "search_max_credits": 150,
+    "results_per_query": 5,
+    "max_subqueries": 3,
+    "max_evidence_tokens": 3000,
+    "max_chars_per_result": 1500,
+    "reuse_retrieval": true,
+    "blocked_domains": [
+      "ourairports.com",
+      "openflights.org",
+      "github.com/jpatokal",
+      "github.com/davidmegginson",
+      "raw.githubusercontent.com/jpatokal",
+      "kaggle.com",
+      "github.com/felipeVsc"
+    ],
+    "pfe_tokenizer": "cl100k_base",
+    "variants": [
+      {
+        "id": "search_evidence",
+        "plan": "prompts/agent/plan.v1.txt",
+        "synthesize": "prompts/agent/synth.v1.txt",
+        "synthesis": "evidence_only"
+      },
+      {
+        "id": "search_memory",
+        "plan": "prompts/agent/plan.v1.txt",
+        "synthesize": "prompts/agent/synth_memory.v1.txt",
+        "synthesis": "evidence_and_memory"
+      }
+    ],
+    "model_defaults": {
+      "provider": "ollama",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 1024
+      },
+      "max_concurrency": 1,
+      "timeout_s": 600,
+      "max_retries": 2,
+      "energy": {
+        "method": "codecarbon",
+        "country_iso_code": "BRA"
+      },
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0
+      }
+    },
+    "models": [
+      {
+        "id": "cloud-gemma4",
+        "model": "gemma4:31b",
+        "options": {
+          "base_url": "https://ollama.com"
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "google_genai",
+          "ecologits_model": "gemma-4-31b-it"
+        }
+      }
+    ]
+  },
+  "code_version": "unknown (not a git repository)",
+  "runs": [
+    {
+      "start": "2026-10-24T15:06:32.451858+00:00",
+      "end": "2026-10-24T15:06:49.760355+00:00",
+      "counts": {
+        "ok": 4
+      },
+      "search": {
+        "calls": 2,
+        "cache_hits": 2,
+        "failures": 0,
+        "credits": 2.0,
+        "budget_refused": 0
+      },
+      "callers": {
+        "cloud-gemma4": {
+          "calls": 8,
+          "cache_hits": 2,
+          "retries": 2,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-24T15:13:44.000004+00:00",
+      "end": "2026-10-24T15:15:55.629091+00:00",
+      "counts": {
+        "ok": 56
+      },
+      "search": {
+        "calls": 34,
+        "cache_hits": 36,
+        "failures": 0,
+        "credits": 34.0,
+        "budget_refused": 0
+      },
+      "callers": {
+        "cloud-gemma4": {
+          "calls": 83,
+          "cache_hits": 29,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    }
+  ],
+  "status_counts": {
+    "ok": 72
+  }
+}

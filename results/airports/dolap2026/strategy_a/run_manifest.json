@@ -1,0 +1,595 @@
+{
+  "strategy": "A",
+  "task_set_version": "airports-dolap2026",
+  "tasks_file": {
+    "path": "tasks/airports/dolap2026/tasks.csv",
+    "sha256": "5a467fded376454a70f791c7ce5ffb08f55f7c8fe395d4a555af6543d35719a2"
+  },
+  "examples_file": null,
+  "templates": {
+    "compact": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/compact.v1.txt",
+      "sha256": "07d785cd08c34cc73a82ee337e736826147515c19bdb01b7ce5d2a2d95bf3b0c"
+    },
+    "zero": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/zero.v1.txt",
+      "sha256": "96d5a8329f9a7183816c0e6e9e9d424dbf79d285b4f539e0645ea56698c73689"
+    },
+    "few1": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/few1.v1.txt",
+      "sha256": "03aa63dcc3732ec6a79a203e7928324655560c556840e5fb86136d0f7aff3b19"
+    },
+    "few3": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/few3.v1.txt",
+      "sha256": "2c73a82e175c27821a64e662bd3f0ef1171f9cbda1453818a3acf9cff0057db0"
+    },
+    "few5": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/few5.v1.txt",
+      "sha256": "8a46bcc85fee6cc5323437273373665132a34e66f2da4bb6555dc530505202c8"
+    },
+    "zerocot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/zerocot.v1.txt",
+      "sha256": "471f5a9d6ed69fa72d2a0984d0324b4ad5f0aa7c73730acf89c159eb2097e53c"
+    },
+    "1cot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/1cot.v1.txt",
+      "sha256": "e16b1060c743baa7fc6e2953d158554d9d6e081cb3901ca80a104ab431cd3934"
+    },
+    "3cot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/3cot.v1.txt",
+      "sha256": "8965dd43772eb7c4a290b7b04bbd80b67b88bc6bbd3d476f670ce4f39981770f"
+    },
+    "5cot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/5cot.v1.txt",
+      "sha256": "f8cc2fc909bc163549f56f45b475db69ead2dc3fbeff65be182104931d45b19d"
+    },
+    "compact_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/compact.v1.txt",
+      "sha256": "07d785cd08c34cc73a82ee337e736826147515c19bdb01b7ce5d2a2d95bf3b0c"
+    },
+    "zero_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/zero.v1.txt",
+      "sha256": "96d5a8329f9a7183816c0e6e9e9d424dbf79d285b4f539e0645ea56698c73689"
+    },
+    "few1_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/few1.v1.txt",
+      "sha256": "03aa63dcc3732ec6a79a203e7928324655560c556840e5fb86136d0f7aff3b19"
+    },
+    "few3_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/few3.v1.txt",
+      "sha256": "2c73a82e175c27821a64e662bd3f0ef1171f9cbda1453818a3acf9cff0057db0"
+    },
+    "few5_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/few5.v1.txt",
+      "sha256": "8a46bcc85fee6cc5323437273373665132a34e66f2da4bb6555dc530505202c8"
+    },
+    "zerocot_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/zerocot.v1.txt",
+      "sha256": "471f5a9d6ed69fa72d2a0984d0324b4ad5f0aa7c73730acf89c159eb2097e53c"
+    },
+    "1cot_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/1cot.v1.txt",
+      "sha256": "e16b1060c743baa7fc6e2953d158554d9d6e081cb3901ca80a104ab431cd3934"
+    },
+    "3cot_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/3cot.v1.txt",
+      "sha256": "8965dd43772eb7c4a290b7b04bbd80b67b88bc6bbd3d476f670ce4f39981770f"
+    },
+    "5cot_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/dolap2026/5cot.v1.txt",
+      "sha256": "f8cc2fc909bc163549f56f45b475db69ead2dc3fbeff65be182104931d45b19d"
+    }
+  },
+  "variants": [
+    {
+      "id": "compact",
+      "template": "compact",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "zero",
+      "template": "zero",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "few1",
+      "template": "few1",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "few3",
+      "template": "few3",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "few5",
+      "template": "few5",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "zerocot",
+      "template": "zerocot",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "1cot",
+      "template": "1cot",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "3cot",
+      "template": "3cot",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "5cot",
+      "template": "5cot",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "compact_ctx",
+      "template": "compact_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "zero_ctx",
+      "template": "zero_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "few1_ctx",
+      "template": "few1_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "few3_ctx",
+      "template": "few3_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "few5_ctx",
+      "template": "few5_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "zerocot_ctx",
+      "template": "zerocot_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "1cot_ctx",
+      "template": "1cot_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "3cot_ctx",
+      "template": "3cot_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    },
+    {
+      "id": "5cot_ctx",
+      "template": "5cot_ctx",
+      "n_examples": 0,
+      "prompt_version": "v1"
+    }
+  ],
+  "pfe_tokens": {
+    "compact|cloud-gpt-oss-20b": 81,
+    "zero|cloud-gpt-oss-20b": 192,
+    "few1|cloud-gpt-oss-20b": 227,
+    "few3|cloud-gpt-oss-20b": 293,
+    "few5|cloud-gpt-oss-20b": 381,
+    "zerocot|cloud-gpt-oss-20b": 244,
+    "1cot|cloud-gpt-oss-20b": 284,
+    "3cot|cloud-gpt-oss-20b": 345,
+    "5cot|cloud-gpt-oss-20b": 433,
+    "compact_ctx|cloud-gpt-oss-20b": 81,
+    "zero_ctx|cloud-gpt-oss-20b": 192,
+    "few1_ctx|cloud-gpt-oss-20b": 227,
+    "few3_ctx|cloud-gpt-oss-20b": 293,
+    "few5_ctx|cloud-gpt-oss-20b": 381,
+    "zerocot_ctx|cloud-gpt-oss-20b": 244,
+    "1cot_ctx|cloud-gpt-oss-20b": 284,
+    "3cot_ctx|cloud-gpt-oss-20b": 345,
+    "5cot_ctx|cloud-gpt-oss-20b": 433
+  },
+  "tokenizers": {
+    "cloud-gpt-oss-20b": "cl100k_base"
+  },
+  "models": [
+    {
+      "id": "cloud-gpt-oss-20b",
+      "provider": "ollama",
+      "model": "gpt-oss:20b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 1024
+      },
+      "max_concurrency": 2,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": null,
+      "base_url": null,
+      "options": {
+        "num_ctx": 4096,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": "low"
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "huggingface_hub",
+        "ecologits_model": "openai/gpt-oss-20b",
+        "electricity_mix_zone": null,
+        "country_iso_code": "BRA"
+      },
+      "pricing": null,
+      "enabled": true
+    }
+  ],
+  "model_versions": {
+    "cloud-gpt-oss-20b": [
+      "gpt-oss:20b (Ollama Cloud)"
+    ],
+    "cloud-gemma4": [
+      "gemma4:31b (Ollama Cloud)"
+    ],
+    "qwen3-4b-instruct": [
+      "qwen3:4b-instruct@0edcdef34593 (Q4_K_M)"
+    ]
+  },
+  "model_details": {
+    "cloud-gpt-oss-20b": {
+      "model": "gpt-oss:20b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gpt-oss:20b",
+        "format": "",
+        "family": "gptoss",
+        "families": null,
+        "parameter_size": "20914757184",
+        "quantization_level": "MXFP4"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "show_error": null
+    }
+  },
+  "config": {
+    "inputs": {
+      "tasks": "tasks/airports/dolap2026/tasks.csv"
+    },
+    "runs_per_task": 5,
+    "pfe_tokenizer": "cl100k_base",
+    "repair": false,
+    "output_dir": "results/airports/dolap2026/strategy_a/",
+    "templates": [
+      {
+        "id": "compact",
+        "file": "templates/dolap2026/compact.v1.txt",
+        "output": "csv"
+      },
+      {
+        "id": "zero",
+        "file": "templates/dolap2026/zero.v1.txt",
+        "output": "csv"
+      },
+      {
+        "id": "few1",
+        "file": "templates/dolap2026/few1.v1.txt",
+        "output": "csv"
+      },
+      {
+        "id": "few3",
+        "file": "templates/dolap2026/few3.v1.txt",
+        "output": "csv"
+      },
+      {
+        "id": "few5",
+        "file": "templates/dolap2026/few5.v1.txt",
+        "output": "csv"
+      },
+      {
+        "id": "zerocot",
+        "file": "templates/dolap2026/zerocot.v1.txt",
+        "output": "csv",
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "1cot",
+        "file": "templates/dolap2026/1cot.v1.txt",
+        "output": "csv",
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "3cot",
+        "file": "templates/dolap2026/3cot.v1.txt",
+        "output": "csv",
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "5cot",
+        "file": "templates/dolap2026/5cot.v1.txt",
+        "output": "csv",
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "compact_ctx",
+        "file": "templates/dolap2026/compact.v1.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "zero_ctx",
+        "file": "templates/dolap2026/zero.v1.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "few1_ctx",
+        "file": "templates/dolap2026/few1.v1.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "few3_ctx",
+        "file": "templates/dolap2026/few3.v1.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "few5_ctx",
+        "file": "templates/dolap2026/few5.v1.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "zerocot_ctx",
+        "file": "templates/dolap2026/zerocot.v1.txt",
+        "output": "csv",
+        "with_context": true,
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "1cot_ctx",
+        "file": "templates/dolap2026/1cot.v1.txt",
+        "output": "csv",
+        "with_context": true,
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "3cot_ctx",
+        "file": "templates/dolap2026/3cot.v1.txt",
+        "output": "csv",
+        "with_context": true,
+        "expected_output_tokens": 200
+      },
+      {
+        "id": "5cot_ctx",
+        "file": "templates/dolap2026/5cot.v1.txt",
+        "output": "csv",
+        "with_context": true,
+        "expected_output_tokens": 200
+      }
+    ],
+    "model_defaults": {
+      "provider": "ollama",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 1024
+      },
+      "max_concurrency": 1,
+      "timeout_s": 600,
+      "max_retries": 2,
+      "energy": {
+        "method": "codecarbon",
+        "country_iso_code": "BRA"
+      },
+      "options": {
+        "num_ctx": 4096,
+        "keep_alive": "30m",
+        "seed": 0
+      }
+    },
+    "models": [
+      {
+        "id": "qwen3-4b-instruct",
+        "model": "qwen3:4b-instruct",
+        "enabled": false
+      },
+      {
+        "id": "nemotron-mini-4b",
+        "model": "nemotron-mini:4b",
+        "enabled": false
+      },
+      {
+        "id": "llama3.2-1b",
+        "model": "llama3.2:1b",
+        "enabled": false
+      },
+      {
+        "id": "mistral-7b",
+        "model": "mistral:7b",
+        "enabled": false
+      },
+      {
+        "id": "cloud-gpt-oss-20b",
+        "model": "gpt-oss:20b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-20b"
+        }
+      },
+      {
+        "id": "cloud-gpt-oss-120b",
+        "model": "gpt-oss:120b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-120b"
+        }
+      },
+      {
+        "id": "cloud-nemotron-3-super",
+        "model": "nemotron-3-super",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "none"
+        }
+      },
+      {
+        "id": "cloud-glm-5.3-flash",
+        "model": "glm-5.3-flash",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "none"
+        }
+      },
+      {
+        "id": "cloud-mistral-large-3",
+        "model": "mistral-large-3:675b",
+        "options": {
+          "base_url": "https://ollama.com"
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "mistral-large-2512"
+        }
+      },
+      {
+        "id": "cloud-gemma4",
+        "model": "gemma4:31b",
+        "options": {
+          "base_url": "https://ollama.com"
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "google_genai",
+          "ecologits_model": "gemma-4-31b-it"
+        },
+        "enabled": false
+      },
+      {
+        "id": "cloud-deepseek-v4-pro",
+        "model": "deepseek-v4-pro:0813",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "max_concurrency": 2,
+        "max_retries": 5,
+        "energy": {
+          "method": "none"
+        },
+        "enabled": false
+      }
+    ]
+  },
+  "code_version": "unknown (not a git repository)",
+  "runs": [
+    {
+      "start": "2026-10-23T12:39:54.128459+00:00",
+      "end": "2026-10-23T14:04:17.805524+00:00",
+      "counts": {
+        "ok": 3237,
+        "truncated": 3
+      },
+      "callers": {
+        "qwen3-4b-instruct": {
+          "calls": 3240,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-24T15:05:22.648522+00:00",
+      "end": "2026-10-24T15:13:34.730174+00:00",
+      "counts": {
+        "ok": 648
+      },
+      "callers": {
+        "cloud-gemma4": {
+          "calls": 651,
+          "cache_hits": 0,
+          "retries": 3,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-27T17:35:53.384131+00:00",
+      "end": "2026-10-27T17:36:11.012453+00:00",
+      "counts": {
+        "ok": 17,
+        "parse_error": 1
+      },
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 18,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    }
+  ],
+  "status_counts": {
+    "ok": 3902,
+    "truncated": 3,
+    "parse_error": 1
+  }
+}

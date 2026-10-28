@@ -1,0 +1,9 @@
+648 runs planned, 0 already in results.csv, 648 to do
+The model architecture is multimodal, expect lower precision. For further information visit https://ecologits.ai/tutorial/warnings_and_errors/#model-arch-multimodal
+100 runs written: {'ok': 100}
+200 runs written: {'ok': 200}
+300 runs written: {'ok': 300}
+400 runs written: {'ok': 400}
+500 runs written: {'ok': 500}
+600 runs written: {'ok': 600}
+done: {'ok': 648}

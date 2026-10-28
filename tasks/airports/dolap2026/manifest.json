@@ -1,0 +1,192 @@
+{
+  "centrality": {
+    "log_max": 3.3856366543751624,
+    "log_min": -1.897119984885881,
+    "source": "file:data/dolap2026/ranks_pagerank.csv"
+  },
+  "code_version": "unknown",
+  "config": {
+    "centrality": {
+      "damping": 0.85,
+      "directed": true,
+      "edge_measure": "endpoint_mean",
+      "epsilon": 1e-06,
+      "max_iter": 200,
+      "measure": "pagerank",
+      "tol": 1e-10
+    },
+    "dataset": {
+      "context_max_hops": 3,
+      "label_priority": [],
+      "name": "airports",
+      "node_id_property": "icao",
+      "node_type": "Airport",
+      "snapshot_dir": null,
+      "source": "neo4j"
+    },
+    "neo4j": {
+      "database": null,
+      "database_env": "NEO4J_DATABASE",
+      "fetch_size": 10000,
+      "id_function": "elementId",
+      "labels": null,
+      "password_env": "NEO4J_PASSWORD",
+      "relationship_types": null,
+      "uri": "bolt://localhost:7687",
+      "uri_env": "NEO4J_URI",
+      "user_env": "NEO4J_USER"
+    },
+    "output_dir": "tasks/airports/dolap2026/",
+    "properties": {
+      "empty_string_is_null": true,
+      "exclude_properties": [
+        "airport_id"
+      ],
+      "leak_min_substring_len": 4,
+      "leakage_pairs": [],
+      "never_hide": []
+    },
+    "published": {
+      "apply_leakage_pairs": false,
+      "centrality_file": "data/dolap2026/ranks_pagerank.csv",
+      "centrality_id_column": "icao",
+      "centrality_score_column": "score",
+      "context_slice": [
+        2,
+        5,
+        10
+      ],
+      "easy_threshold": 0.8,
+      "hidden_requires_value": null,
+      "min_G": null,
+      "node_key": "icao",
+      "node_strata": null,
+      "nodes_per_stratum": 3,
+      "popularity_file": "data/dolap2026/rank_properties.csv",
+      "popularity_scale": 100.0,
+      "profile": "code",
+      "properties": [],
+      "property_classes": null,
+      "redraw_H_per_task": null,
+      "seed": 42,
+      "size_G": 3,
+      "size_H": 3
+    },
+    "sampling": {
+      "max_G": 3,
+      "max_H": 3,
+      "max_n": 5,
+      "seed": 42
+    },
+    "task_set_version": "airports-dolap2026"
+  },
+  "context_note": "The published file stores each node's full context; the with-context slice entries[2:randint(5,10)] is drawn here with published.seed, because the slices used in the published with-context run are not in this file.",
+  "dataset": "airports",
+  "design": "dolap2026",
+  "deviations": [
+    "Draws use random.Random(published.seed); the published run used unseeded random, so the same procedure gives other nodes and properties. Use `tasks import-published` for the exact published tasks.",
+    "Nodes whose normalized centrality is 0 (the minimum PageRank) are never drawn: ln(0) makes their difficulty undefined (the published code would have crashed on them).",
+    "code profile: when class ∩ props(n) has fewer than size_G properties, all of them are drawn (random.sample in the published code would have raised).",
+    "code profile: the top-up of G to min_G draws from the whole class, like the published code, so a G property can have no value on n; it is kept in G_drawn and in the difficulty, and left out of the input.",
+    "paper profile: 'before 1st / after 3rd quartile' is read as pop <= Q1 / pop >= Q3; with strict bounds the easy class is empty whenever Q3 = 1.0 (many properties are always present).",
+    "paper profile: G is drawn among n's own properties (no-context condition of the paper); Algorithm 2 line 11 would also allow context properties, which the published code never used.",
+    "paper profile: node strata are [Q0,Q1], (Q1,Q3], (Q3,Q4] so that no node is in two strata.",
+    "Context entries are written in the published format [kind, path, type, property, value]; their order (1-hop nodes, 1-hop edges, longer n:1 paths) approximates the published context generator."
+  ],
+  "difficulty_check": {
+    "max_abs_difference_vs_published": 7.105427357601002e-14,
+    "tasks_compared": 36
+  },
+  "ground_truth_written": true,
+  "mode": "import-published",
+  "node_type": "Airport",
+  "node_values_source": "node values file: data/dolap2026/ground_truth.csv",
+  "options": {
+    "hidden_requires_value": false,
+    "min_G": 2,
+    "node_strata": "terciles",
+    "property_classes": "threshold",
+    "redraw_H_per_task": true
+  },
+  "package_version": "0.1.0",
+  "popularity": {
+    "source": "file:data/dolap2026/rank_properties.csv",
+    "values": {
+      "altitude": 1.0,
+      "city": 0.9936347103143673,
+      "commercial_flights": 0.0966484801247077,
+      "country": 1.0,
+      "distCity": 0.8099506365289686,
+      "dst": 1.0,
+      "iata": 0.7887763055339049,
+      "icao": 1.0,
+      "latitude": 1.0,
+      "location": 1.0,
+      "longitude": 1.0,
+      "name": 1.0,
+      "runways": 0.732138217718888,
+      "runwaysLength": 0.732138217718888,
+      "runwaysWidth": 0.732138217718888,
+      "source": 1.0,
+      "timezone": 1.0,
+      "type": 1.0,
+      "tz_database_timezone": 1.0
+    }
+  },
+  "profile": "code",
+  "property_classes_threshold": {
+    "easy": [
+      "altitude",
+      "city",
+      "country",
+      "distCity",
+      "dst",
+      "icao",
+      "latitude",
+      "location",
+      "longitude",
+      "name",
+      "source",
+      "timezone",
+      "type",
+      "tz_database_timezone"
+    ],
+    "hard": [
+      "commercial_flights",
+      "iata",
+      "runways",
+      "runwaysLength",
+      "runwaysWidth"
+    ]
+  },
+  "report": {},
+  "source_file": {
+    "path": "data/dolap2026/test_results.csv",
+    "sha256": "867869869a157cda65d43878282c25238793b87b2f3a9f8e144b6429f1d757a5"
+  },
+  "summary": {
+    "H_properties_without_ground_truth": 6,
+    "per_difficulty_prop": {
+      "easyeasy": 9,
+      "easyhard": 9,
+      "hardeasy": 9,
+      "hardhard": 9
+    },
+    "per_node_stratum": {
+      "easy": 12,
+      "hard": 12,
+      "medium": 12
+    },
+    "size_G_drawn": {
+      "2": 14,
+      "3": 22
+    },
+    "size_G_given": {
+      "1": 4,
+      "2": 10,
+      "3": 22
+    },
+    "tasks": 36
+  },
+  "task_set_version": "airports-dolap2026"
+}
