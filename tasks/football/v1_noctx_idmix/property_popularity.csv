@@ -1,0 +1,64 @@
+property,popularity,H_stratum,tasks_hidden
+Name,1.0,high,2
+Date of birth,0.9954478085962312,high,2
+Nation,0.9859199661232267,high,1
++/-,0.7864704636883337,high,0
+Assists,0.7864704636883337,high,8
+Assists per 90 minutes,0.7864704636883337,high,0
+Fouls committed,0.7864704636883337,high,0
+Fouls suffered,0.7864704636883337,high,2
+Goals,0.7864704636883337,high,2
+Goals + assists,0.7864704636883337,high,2
+Goals + assists per 90 minutes,0.7864704636883337,high,0
+Goals + assists while on the pitch,0.7864704636883337,high,2
+Goals per 90 minutes,0.7864704636883337,high,3
+Goals scored while on the pitch,0.7864704636883337,high,1
+Interceptions,0.7864704636883337,high,2
+Matches fully played,0.7864704636883337,high,4
+Matches played,0.7864704636883337,high,2
+Minutes per match,0.7864704636883337,high,3
+Non-penalty goals,0.7864704636883337,high,0
+Non-penalty goals + assists per 90 minutes,0.7864704636883337,high,3
+Non-penalty goals per 90 minutes,0.7864704636883337,high,3
+Offsides,0.7864704636883337,high,3
+Own goals,0.7864704636883337,high,2
+Penalties attempted,0.7864704636883337,high,3
+Penalties scored,0.7864704636883337,high,2
+Percentage of playing time,0.7864704636883337,high,1
+Playing time in minutes,0.7864704636883337,high,1
+Playing time per 90 minutes,0.7864704636883337,high,0
+Points per match,0.7864704636883337,high,2
+Red cards,0.7864704636883337,high,0
+Second yellow cards,0.7864704636883337,high,2
+Shots,0.7864704636883337,high,0
+Shots on target,0.7864704636883337,high,0
+Shots on target per 90 minutes,0.7864704636883337,high,1
+Shots per 90 minutes,0.7864704636883337,high,3
+Squad,0.7864704636883337,high,2
+Starts,0.7864704636883337,high,0
+Substitutions,0.7864704636883337,high,2
+Tackles won,0.7864704636883337,high,0
+Unused substitutes,0.7864704636883337,high,0
+Yellow cards,0.7864704636883337,high,3
+goals scored - goals conceded per 90 minutes,0.7864704636883337,high,3
+passes into the goalkeeper's penalty area,0.7864704636883337,high,3
+Position,0.786364598771967,mid,12
+On-offsides,0.7724962947279271,mid,10
+Minutes per start,0.6567859411391065,mid,24
+Minutes per substitute appearance,0.6248147363963582,mid,3
+Goals per shot,0.6089349989413508,mid,17
+Shots on target percentage,0.6089349989413508,mid,11
+Goals per shotots on target,0.4912132119415626,mid,4
+Clean sheets,0.06182511115816219,low,9
+Draws,0.06182511115816219,low,8
+Goals conceded,0.06182511115816219,low,3
+Goals conceded per 90 minutes,0.06182511115816219,low,7
+Losses,0.06182511115816219,low,4
+Penalties missed,0.06182511115816219,low,8
+Penalties saved,0.06182511115816219,low,2
+Saves,0.06182511115816219,low,14
+Shots on target against,0.06182511115816219,low,1
+Wins,0.06182511115816219,low,10
+Save%,0.06076646199449502,low,0
+Clean sheet percentage,0.05981367774719458,low,9
+Penalty save percentage,0.04012280330298539,low,2

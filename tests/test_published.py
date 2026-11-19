@@ -125,6 +125,19 @@ def test_tolerance_rules():
     assert not D.matches_standard(truth, {"longitude": "161.15 E"}, "longitude")
 
 
+
+def test_standard_is_stricter_on_lists_and_text():
+    # A list answer to a single value is wrong, even when its first number would match.
+    assert not D.matches_standard({"runways": 1.0}, {"runways": ["01/19", "02/20", "10/28"]}, "runways")
+    assert not D.matches_standard({"runways": 1.0}, {"runways": "['01/19', '02/20']"}, "runways")  # after coerce
+    assert not D.matches_standard({"runwaysLength": 3879.5}, {"runwaysLength": [3225, 2580]}, "runwaysLength")
+    # Text must overlap in both directions; the paper's rule (min) still accepts the subset.
+    assert D.matches({"type": "airport"}, {"type": "International Airport"}, "type")
+    assert not D.matches_standard({"type": "airport"}, {"type": "International Airport"}, "type")
+    assert D.matches_standard({"name": "Guarulhos–São Paulo Airport"}, {"name": "Guarulhos/Sao Paulo Airport"}, "name")
+    assert D.matches_standard({"city": "Dinslaken"}, {"city": "dinslaken"}, "city")
+
+
 def test_vote():
     assert D.vote(["10", "20", None]) == 15.0
     assert D.vote(["Paris", "Paris", "Orly"]) == "Paris"

@@ -15,6 +15,7 @@ log = logging.getLogger(__name__)
 
 
 def pagerank(graph: Graph, directed: bool, damping: float, max_iter: int, tol: float) -> dict[str, float]:
+    """PageRank of every node of the snapshot (power iteration)."""
     node_ids = sorted(graph.nodes)
     n = len(node_ids)
     if n == 0:
@@ -40,6 +41,7 @@ def pagerank(graph: Graph, directed: bool, damping: float, max_iter: int, tol: f
 
 
 def degree(graph: Graph) -> dict[str, float]:
+    """Degree (in + out) of every node."""
     return {
         nid: float(len(graph.out_edges.get(nid, ())) + len(graph.in_edges.get(nid, ())))
         for nid in graph.nodes
@@ -73,6 +75,7 @@ class Centrality:
 
 
 def compute_centrality(graph: Graph, cfg: CentralityConfig) -> Centrality:
+    """Centrality of every element with the configured measure, normalised per element type."""
     if cfg.measure == "pagerank":
         raw = pagerank(graph, cfg.directed, cfg.damping, cfg.max_iter, cfg.tol)
     elif cfg.measure == "degree":
@@ -80,22 +83,35 @@ def compute_centrality(graph: Graph, cfg: CentralityConfig) -> Centrality:
     else:  # validated in config
         raise ValueError(cfg.measure)
 
-    # Normalize per element type: divide by the max of the type; 0 -> epsilon.
+    # Normalize per element type (cfg.normalize); 0 -> epsilon.
     by_type: dict[str, list[str]] = defaultdict(list)
     for nid, node in graph.nodes.items():
         by_type[node.type].append(nid)
-    normalized: dict[str, float] = {}
+    normalized = _normalize(raw, by_type, cfg)
+
+    # Edge centrality: mean of the normalized centralities of its endpoints, normalized per edge type.
+    edge_raw: dict[str, float] = {}
+    edge_types: dict[str, list[str]] = defaultdict(list)
+    for eid, edge in graph.edges.items():
+        edge_raw[eid] = (normalized[edge.src] + normalized[edge.dst]) / 2.0
+        edge_types[edge.type].append(eid)
+    if cfg.normalize == "percentile":
+        normalized.update(_normalize(edge_raw, edge_types, cfg))
+    else:  # endpoints are already in (0, 1]
+        normalized.update({eid: min(1.0, max(cfg.epsilon, v)) for eid, v in edge_raw.items()})
+
+    return Centrality({**raw, **edge_raw}, normalized)
+
+
+def _normalize(raw: dict[str, float], by_type: dict[str, list[str]], cfg: CentralityConfig) -> dict[str, float]:
+    out: dict[str, float] = {}
     for ids in by_type.values():
+        if cfg.normalize == "percentile":
+            ranks = pd.Series([raw[i] for i in ids]).rank(method="average", pct=True).to_numpy()
+            out.update({i: min(1.0, max(cfg.epsilon, float(r))) for i, r in zip(ids, ranks)})
+            continue
         top = max(raw[i] for i in ids)
         for i in ids:
             value = raw[i] / top if top > 0 else 0.0
-            normalized[i] = min(1.0, max(cfg.epsilon, value))
-
-    # Edge centrality: mean of the normalized centralities of its endpoints.
-    edge_raw: dict[str, float] = {}
-    for eid, edge in graph.edges.items():
-        value = (normalized[edge.src] + normalized[edge.dst]) / 2.0
-        edge_raw[eid] = value
-        normalized[eid] = min(1.0, max(cfg.epsilon, value))
-
-    return Centrality({**raw, **edge_raw}, normalized)
+            out[i] = min(1.0, max(cfg.epsilon, value))
+    return out

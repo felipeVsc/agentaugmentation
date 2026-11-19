@@ -1,0 +1,16 @@
+model,with search,→ correct with memory,→ wrong with memory,→ abstained with memory,tasks
+gpt-oss:20b,correct,16,6,2,24
+gpt-oss:20b,wrong,5,64,17,86
+gpt-oss:20b,abstained,13,21,95,129
+gemma4:31b,correct,18,2,0,20
+gemma4:31b,wrong,4,49,1,54
+gemma4:31b,abstained,11,16,138,165
+gpt-oss:120b,correct,21,2,4,27
+gpt-oss:120b,wrong,4,59,17,80
+gpt-oss:120b,abstained,10,15,107,132
+mistral-large-3,correct,26,3,0,29
+mistral-large-3,wrong,3,74,2,79
+mistral-large-3,abstained,15,20,96,131
+deepseek-v4.1-flash,correct,9,0,0,9
+deepseek-v4.1-flash,wrong,0,20,2,22
+deepseek-v4.1-flash,abstained,8,13,187,208

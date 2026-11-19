@@ -56,6 +56,7 @@ def _open_keys(runner: Runner, state: dict) -> set[str]:
 
 
 def submit(runner: Runner, dry_run: bool = False) -> list[dict]:
+    """Submit the pending, uncached requests as provider batches (one per model) and record them."""
     runner.prepare()
     state = _load(runner)
     in_flight = _open_keys(runner, state)
@@ -106,6 +107,7 @@ def submit(runner: Runner, dry_run: bool = False) -> list[dict]:
 
 
 def status(runner: Runner) -> list[dict]:
+    """Poll the recorded batches and return their status."""
     runner.prepare()
     state = _load(runner)
     rows = []
@@ -119,6 +121,7 @@ def status(runner: Runner) -> list[dict]:
 
 
 def collect(runner: Runner) -> dict:
+    """Download finished batches into the response cache; `strategy-a run --cache-only` then writes the runs."""
     runner.prepare()
     state = _load(runner)
     summary = defaultdict(int)

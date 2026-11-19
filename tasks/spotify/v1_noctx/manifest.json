@@ -1,0 +1,638 @@
+{
+  "assumptions": [
+    "Graph source is Neo4j; all later steps read the snapshot, not the live database.",
+    "Centrality is normalized per element type (divided by the type's maximum); 0 is replaced by epsilon.",
+    "Edge centrality is the mean of the normalized centralities of its two endpoints.",
+    "Direct neighbors are taken in both directions; n:1 paths follow outgoing relationships only.",
+    "Only scalar properties (string, integer, float, boolean, date) are eligible.",
+    "H strata use pop(p) over the distinct H-eligible properties of the node type, each counted once.",
+    "G strata use pop(p) * cent_p(e) over the set of elements in N ∪ context(N), each (element, property) once.",
+    "Strata: low = [Q0, Q1], mid = (Q1, Q3], high = (Q3, Q4]; if Q3 == Q4, values equal to Q4 go to high.",
+    "A combination with fewer candidates than size_H or size_G is skipped, not filled with fewer properties.",
+    "G holds distinct prop_keys; a prop_key shared by several elements is drawn at most once per task.",
+    "G excludes values that equal an H value, or contain a string H value of at least leak_min_substring_len chars.",
+    "task_id hashes (dataset, node_id, sorted H prop_keys, sorted G (prop_key, element_id)).",
+    "Random draws order candidates by sha256(seed, combination, candidate id)."
+  ],
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
+  "config": {
+    "centrality": {
+      "damping": 0.85,
+      "directed": false,
+      "edge_measure": "endpoint_mean",
+      "epsilon": 1e-06,
+      "max_iter": 200,
+      "measure": "pagerank",
+      "normalize": "max",
+      "tol": 1e-10
+    },
+    "dataset": {
+      "context_max_hops": null,
+      "label_priority": [],
+      "name": "spotify",
+      "node_id_property": "id",
+      "node_type": "Track",
+      "snapshot_dir": null,
+      "source": "neo4j"
+    },
+    "neo4j": {
+      "database": null,
+      "database_env": "NEO4J_DATABASE",
+      "fetch_size": 10000,
+      "id_function": "elementId",
+      "labels": null,
+      "password_env": "NEO4J_PASSWORD",
+      "relationship_types": null,
+      "uri": "bolt://localhost:7687",
+      "uri_env": "NEO4J_URI",
+      "user_env": "NEO4J_USER"
+    },
+    "output_dir": "tasks/spotify/v1_ctx/",
+    "properties": {
+      "empty_string_is_null": true,
+      "exclude_properties": [
+        "id",
+        "lyrics"
+      ],
+      "leak_min_substring_len": 4,
+      "leakage_pairs": [
+        [
+          "Track.popularity",
+          "Track.rank"
+        ]
+      ],
+      "never_hide": []
+    },
+    "published": {
+      "apply_leakage_pairs": false,
+      "centrality_file": null,
+      "centrality_id_column": "icao",
+      "centrality_score_column": "score",
+      "context_slice": [
+        2,
+        5,
+        10
+      ],
+      "easy_threshold": 0.8,
+      "hidden_requires_value": null,
+      "min_G": null,
+      "node_key": "icao",
+      "node_strata": null,
+      "nodes_per_stratum": 3,
+      "popularity_file": null,
+      "popularity_scale": 100.0,
+      "profile": "code",
+      "properties": [],
+      "property_classes": null,
+      "redraw_H_per_task": null,
+      "seed": 42,
+      "size_G": 3,
+      "size_H": 3
+    },
+    "sampling": {
+      "G_context_fallback": true,
+      "G_min_own": 1,
+      "G_strata_by": "popularity",
+      "max_G": 3,
+      "max_H": 1,
+      "max_n": 3,
+      "no_context_output_dir": "tasks/spotify/v1_noctx/",
+      "replace_unusable_nodes": true,
+      "seed": 42,
+      "sizes_G": [
+        1,
+        3,
+        5
+      ],
+      "sizes_H": null,
+      "use_context": true
+    },
+    "task_set_version": "spotify-v1-ctx"
+  },
+  "dataset": "spotify",
+  "master_seed": 42,
+  "n1_relationships": [
+    {
+      "cardinality": "many-to-many",
+      "edges": 9816,
+      "max_in_degree": 2245,
+      "max_out_degree": 10,
+      "n1": false,
+      "relationship": "HAS_GENRE",
+      "source_type": "Artist",
+      "sources": 5015,
+      "target_type": "Genre"
+    },
+    {
+      "cardinality": "many-to-one",
+      "edges": 10000,
+      "max_in_degree": 30,
+      "max_out_degree": 1,
+      "n1": true,
+      "relationship": "BELONGS_TO",
+      "source_type": "Track",
+      "sources": 10000,
+      "target_type": "Album"
+    },
+    {
+      "cardinality": "many-to-many",
+      "edges": 20419,
+      "max_in_degree": 5053,
+      "max_out_degree": 10,
+      "n1": false,
+      "relationship": "HAS_GENRE",
+      "source_type": "Track",
+      "sources": 10000,
+      "target_type": "Genre"
+    },
+    {
+      "cardinality": "many-to-many",
+      "edges": 14635,
+      "max_in_degree": 121,
+      "max_out_degree": 10,
+      "n1": false,
+      "relationship": "PERFORMED_BY",
+      "source_type": "Track",
+      "sources": 10000,
+      "target_type": "Artist"
+    }
+  ],
+  "node_type": "Track",
+  "package_version": "0.1.0",
+  "pairing": {
+    "not_filled": 36,
+    "on_replacement_nodes": 0,
+    "output_dir": "tasks/spotify/v1_noctx",
+    "paired": 108,
+    "paired_with": "spotify-v1-ctx",
+    "rule": "same node, H, |G| and G stratum; each context property of G replaced by an own property of the node from the same G stratum (stable random order); when the node cannot, the next nodes of its stratum are drawn until one fills the cell",
+    "skipped": [
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "1MhXdlCQPnO56T57MfmaRm",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "1c82c025f7f50273"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "7AzlLxHn24DxjgQX73F9fU",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "29fe98854c7fdaf5"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "7J41dYQolQJEtj3UmKLu5r",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "97815f3a7c6a7324"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "1MhXdlCQPnO56T57MfmaRm",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "733f41d42c19f1c8"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "7AzlLxHn24DxjgQX73F9fU",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "15012f5d892308c3"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "7J41dYQolQJEtj3UmKLu5r",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "8c87ca6eaa2feb01"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "1MhXdlCQPnO56T57MfmaRm",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "e6bbe1ddce579f80"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "7AzlLxHn24DxjgQX73F9fU",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "a6472c8113f62dfd"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "7J41dYQolQJEtj3UmKLu5r",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "4cacfa25f8d0c3db"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "1MhXdlCQPnO56T57MfmaRm",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "317abd2a478ad4ac"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "7AzlLxHn24DxjgQX73F9fU",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "36da68eaaa948c87"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "7J41dYQolQJEtj3UmKLu5r",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "da296bee3e10a8c2"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "2udGjDmpK1dH9VGyw7nrei",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "2994b457e8dafba7"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "3fjmSxt0PskST13CSdBUFx",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "c1a6b046d530c7da"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "6ieWL5CLN9WdC875guWtMe",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "d98d76cde96b750a"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "2udGjDmpK1dH9VGyw7nrei",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "033ff3e25c7bf7d7"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "3fjmSxt0PskST13CSdBUFx",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "c16d4192cbf293e6"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "6ieWL5CLN9WdC875guWtMe",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "23b615f46f2e3120"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "2udGjDmpK1dH9VGyw7nrei",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "f73d23ab65219133"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "3fjmSxt0PskST13CSdBUFx",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "55788658ba4f47c1"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "6ieWL5CLN9WdC875guWtMe",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "5921165882d3744d"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "2udGjDmpK1dH9VGyw7nrei",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "b7d0e33684b43673"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "3fjmSxt0PskST13CSdBUFx",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "232cfe6086cf2102"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "6ieWL5CLN9WdC875guWtMe",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "ff76e80a968328f2"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "0K0soSt52EhMS9FohRObdK",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "9ec42302f8d07847"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "331l3xABO0HMr1Kkyh2LZq",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "9b4f9f042562a674"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "6UgcN95w7vQxkR8sEFmwHG",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "55cc8c806944dc4d"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "0K0soSt52EhMS9FohRObdK",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "09c1d063ac46c091"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "331l3xABO0HMr1Kkyh2LZq",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "e91de9c146070fd8"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "6UgcN95w7vQxkR8sEFmwHG",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "e6e198d005776627"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "0K0soSt52EhMS9FohRObdK",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "43c37839d6d5ed21"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "331l3xABO0HMr1Kkyh2LZq",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "b379a5b5b3fc5ef3"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "6UgcN95w7vQxkR8sEFmwHG",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "6d1a834f7f9c1491"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "0K0soSt52EhMS9FohRObdK",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "e1c36b93230b9f51"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "331l3xABO0HMr1Kkyh2LZq",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "30ffc04377c0b3c0"
+      },
+      {
+        "G_stratum": "mid",
+        "H_stratum": "high",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "6UgcN95w7vQxkR8sEFmwHG",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "da4d4c2cac9c9e83"
+      }
+    ],
+    "task_set_version": "spotify-v1-noctx",
+    "tasks": 108
+  },
+  "quartiles": {
+    "G_property_popularity": [
+      0.9969,
+      0.9969,
+      0.9992030284917314,
+      1.0,
+      1.0
+    ],
+    "H_property_popularity": [
+      0.9969,
+      0.9969,
+      0.9992030284917314,
+      1.0,
+      1.0
+    ],
+    "intervals": "low=[Q0,Q1) mid=[Q1,Q3) high=[Q3,Q4]; Q0==Q1 ties go to low",
+    "node_centrality": [
+      0.17908091312405763,
+      0.2503688628406077,
+      0.2840512213624309,
+      0.32888346964887616,
+      1.0
+    ]
+  },
+  "snapshot": {
+    "hash": "58b5e3f32b75afd9f00b03bd220ab75936ee6b1faf323645f717067ef280d4b9",
+    "path": "tasks/spotify/v1_ctx/intermediate/snapshot",
+    "source": "neo4j",
+    "stats": {
+      "edges": 54870,
+      "edges_per_type": {
+        "BELONGS_TO": 10000,
+        "HAS_GENRE": 30235,
+        "PERFORMED_BY": 14635
+      },
+      "nodes": 22141,
+      "nodes_per_type": {
+        "Album": 7105,
+        "Artist": 5019,
+        "Genre": 17,
+        "Track": 10000
+      }
+    }
+  },
+  "strata": {
+    "G_occurrence": {
+      "high": 10,
+      "low": 12,
+      "mid": 4
+    },
+    "H_property": {
+      "high": [
+        "copies",
+        "duration_ms",
+        "isrc",
+        "name",
+        "popularity",
+        "rank",
+        "release_date"
+      ],
+      "low": [
+        "acousticness",
+        "danceability",
+        "energy",
+        "instrumentalness",
+        "key",
+        "liveness",
+        "loudness",
+        "mode",
+        "speechiness",
+        "tempo",
+        "time_signature",
+        "valence"
+      ],
+      "mid": []
+    },
+    "H_property_popularity": {
+      "acousticness": 0.9969,
+      "copies": 1.0,
+      "danceability": 0.9969,
+      "duration_ms": 1.0,
+      "energy": 0.9969,
+      "instrumentalness": 0.9969,
+      "isrc": 1.0,
+      "key": 0.9969,
+      "liveness": 0.9969,
+      "loudness": 0.9969,
+      "mode": 0.9969,
+      "name": 1.0,
+      "popularity": 1.0,
+      "rank": 1.0,
+      "release_date": 1.0,
+      "speechiness": 0.9969,
+      "tempo": 0.9969,
+      "time_signature": 0.9969,
+      "valence": 0.9969
+    },
+    "node": {
+      "high": 2500,
+      "low": 2500,
+      "mid": 5000
+    }
+  },
+  "task_set_version": "spotify-v1-noctx"
+}

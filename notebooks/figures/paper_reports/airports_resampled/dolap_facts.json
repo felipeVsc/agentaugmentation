@@ -1,0 +1,169 @@
+{
+ "paired_tasks": 77,
+ "identical_pairs": 36,
+ "pfe": {
+  "compact": 81,
+  "zero-shot": 192,
+  "1-shot": 228,
+  "zero-shot + CoT": 244,
+  "1-shot + CoT": 280,
+  "3-shot": 305,
+  "3-shot + CoT": 357,
+  "5-shot": 375,
+  "5-shot + CoT": 427
+ },
+ "energy_by_model_wh": {
+  "gpt-oss:20b": 0.00874,
+  "gemma4:31b": 0.00097,
+  "gpt-oss:120b": 0.02301,
+  "mistral-large-3": 0.09226,
+  "deepseek-v4.1-flash": 0.04067
+ },
+ "energy_prompt_range_per_model_wh": {
+  "gpt-oss:20b": [
+   0.00697,
+   0.01191
+  ],
+  "gemma4:31b": [
+   0.00066,
+   0.00307
+  ],
+  "gpt-oss:120b": [
+   0.02003,
+   0.03462
+  ],
+  "mistral-large-3": [
+   0.04631,
+   0.1334
+  ],
+  "deepseek-v4.1-flash": [
+   0.0321,
+   0.047
+  ]
+ },
+ "energy_prompt_ratio_per_model": {
+  "gpt-oss:20b": 1.7,
+  "gemma4:31b": 4.7,
+  "gpt-oss:120b": 1.7,
+  "mistral-large-3": 2.9,
+  "deepseek-v4.1-flash": 1.5
+ },
+ "most_expensive_prompt": {
+  "gpt-oss:20b": "compact",
+  "gemma4:31b": "compact",
+  "gpt-oss:120b": "compact",
+  "mistral-large-3": "5-shot + CoT",
+  "deepseek-v4.1-flash": "compact"
+ },
+ "spearman_template_energy": {
+  "gpt-oss:20b": -0.07,
+  "gemma4:31b": 0.25,
+  "gpt-oss:120b": -0.27,
+  "mistral-large-3": 0.73,
+  "deepseek-v4.1-flash": 0.08
+ },
+ "spearman_output_energy": {
+  "gpt-oss:20b": 0.98,
+  "gemma4:31b": 0.97,
+  "gpt-oss:120b": 0.98,
+  "mistral-large-3": 1.0,
+  "deepseek-v4.1-flash": 0.97
+ },
+ "fig3": {
+  "easy | gpt-oss:20b": {
+   "f1": 0.473
+  },
+  "easy | gemma4:31b": {
+   "f1": 0.64
+  },
+  "easy | gpt-oss:120b": {
+   "f1": 0.639
+  },
+  "easy | mistral-large-3": {
+   "f1": 0.562
+  },
+  "easy | deepseek-v4.1-flash": {
+   "f1": 0.624
+  },
+  "medium | gpt-oss:20b": {
+   "f1": 0.245
+  },
+  "medium | gemma4:31b": {
+   "f1": 0.23
+  },
+  "medium | gpt-oss:120b": {
+   "f1": 0.337
+  },
+  "medium | mistral-large-3": {
+   "f1": 0.289
+  },
+  "medium | deepseek-v4.1-flash": {
+   "f1": 0.406
+  },
+  "hard | gpt-oss:20b": {
+   "f1": 0.032
+  },
+  "hard | gemma4:31b": {
+   "f1": 0.033
+  },
+  "hard | gpt-oss:120b": {
+   "f1": 0.107
+  },
+  "hard | mistral-large-3": {
+   "f1": 0.146
+  },
+  "hard | deepseek-v4.1-flash": {
+   "f1": 0.2
+  }
+ },
+ "fig3_above_diagonal_f1": {
+  "easy": 0,
+  "medium": 0,
+  "hard": 2
+ },
+ "fig3_above_diagonal_precision": {
+  "easy": 1,
+  "medium": 0,
+  "hard": 2
+ },
+ "fig3_pooled": {
+  "false": {
+   "easy": 0.586,
+   "hard": 0.106,
+   "medium": 0.302
+  },
+  "true": {
+   "easy": 0.464,
+   "hard": 0.069,
+   "medium": 0.229
+  }
+ },
+ "fig4_spearman_effort_f1": {
+  "deepseek-v4.1-flash | noctx": 0.57,
+  "deepseek-v4.1-flash | ctx": 0.67,
+  "gemma4:31b | noctx": -0.34,
+  "gemma4:31b | ctx": -0.71,
+  "gpt-oss:120b | noctx": 0.24,
+  "gpt-oss:120b | ctx": -0.75,
+  "gpt-oss:20b | noctx": 0.67,
+  "gpt-oss:20b | ctx": 0.45,
+  "mistral-large-3 | noctx": 0.75,
+  "mistral-large-3 | ctx": 0.78
+ },
+ "fig4_ctx_better_configs": 1,
+ "fig4_configs": 45,
+ "pooled_context": {
+  "f1": {
+   "true": 0.265,
+   "false": 0.346
+  },
+  "precision": {
+   "true": 0.337,
+   "false": 0.398
+  },
+  "abstention": {
+   "true": 0.349,
+   "false": 0.231
+  }
+ }
+}

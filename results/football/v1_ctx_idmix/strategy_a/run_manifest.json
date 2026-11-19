@@ -1,0 +1,471 @@
+{
+  "strategy": "A",
+  "task_set_version": "football-v1-ctx-idmix",
+  "tasks_file": {
+    "path": "tasks/football/v1_ctx_idmix/tasks.csv",
+    "sha256": "cfd67099630b08dff761c251ad6b0986ed7583a7fe698b42781ad720f1dbd1e0"
+  },
+  "examples_file": {
+    "path": "data/examples/football_v1.json",
+    "sha256": "cf295b5940625f5250804f32d67fa11b2b3edec11c75e4d23e685eead47499a3",
+    "version": "v2"
+  },
+  "templates": {
+    "compact": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/compact.v2.txt",
+      "sha256": "4e9c35c3f204d4e57fcfb475f06b598edd6f1a8fbb908078f0ee48f7024185cd"
+    },
+    "zero": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/zero.v2.txt",
+      "sha256": "752278108fac0667b9edf403ae3d168946fc15dd8e6c481b4e54129a3f7f555c"
+    },
+    "few": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/few.v2.txt",
+      "sha256": "282c7acdec36e02de69e9cbc59a91aefcceddebe343cb93f5907eec837c3c02b"
+    },
+    "zerocot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/zerocot.v2.txt",
+      "sha256": "a67aa25cfba412d560950f3264475e5dc234c3f1e24cee8c26efd77489bcf01e"
+    },
+    "fewcot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/fewcot.v2.txt",
+      "sha256": "02cc987a84c8f0cad0ccd41224c5f4a4c0551d6b23eb40b1b08263088456f6fb"
+    }
+  },
+  "variants": [
+    {
+      "id": "compact",
+      "template": "compact",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zero",
+      "template": "zero",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_1",
+      "template": "few",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_3",
+      "template": "few",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_5",
+      "template": "few",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zerocot",
+      "template": "zerocot",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_1",
+      "template": "fewcot",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_3",
+      "template": "fewcot",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_5",
+      "template": "fewcot",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    }
+  ],
+  "pfe_tokens": {
+    "compact|cloud-deepseek-v4.1-flash": 81,
+    "zero|cloud-deepseek-v4.1-flash": 192,
+    "few_1|cloud-deepseek-v4.1-flash": 223,
+    "few_3|cloud-deepseek-v4.1-flash": 297,
+    "few_5|cloud-deepseek-v4.1-flash": 366,
+    "zerocot|cloud-deepseek-v4.1-flash": 244,
+    "fewcot_1|cloud-deepseek-v4.1-flash": 275,
+    "fewcot_3|cloud-deepseek-v4.1-flash": 349,
+    "fewcot_5|cloud-deepseek-v4.1-flash": 418
+  },
+  "tokenizers": {
+    "cloud-deepseek-v4.1-flash": "cl100k_base"
+  },
+  "models": [
+    {
+      "id": "cloud-deepseek-v4.1-flash",
+      "provider": "ollama",
+      "model": "deepseek-v4.1-flash",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": false
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "mistralai",
+        "ecologits_model": "zai-glm-5-3",
+        "electricity_mix_zone": null,
+        "country_iso_code": "FRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    }
+  ],
+  "model_versions": {
+    "cloud-deepseek-v4.1-flash": [
+      "deepseek-v4.1-flash (Ollama Cloud)"
+    ],
+    "cloud-mistral-large-3": [
+      "mistral-large-3:675b (Ollama Cloud)"
+    ],
+    "cloud-gemma4-31b": [
+      "gemma4:31b (Ollama Cloud)"
+    ],
+    "cloud-gpt-oss-120b": [
+      "gpt-oss:120b (Ollama Cloud)"
+    ],
+    "cloud-gpt-oss-20b": [
+      "gpt-oss:20b (Ollama Cloud)"
+    ]
+  },
+  "model_details": {
+    "cloud-deepseek-v4.1-flash": {
+      "model": "deepseek-v4.1-flash",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "deepseek-v4.1-flash",
+        "format": "",
+        "family": "deepseek_v41",
+        "families": null,
+        "parameter_size": "763205315794",
+        "quantization_level": "FP8"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "show_error": null
+    }
+  },
+  "config": {
+    "inputs": {
+      "tasks": "tasks/football/v1_ctx_idmix/tasks.csv",
+      "examples": "data/examples/football_v1.json"
+    },
+    "runs_per_task": 3,
+    "pfe_tokenizer": "cl100k_base",
+    "repair": true,
+    "output_dir": "results/football/v1_ctx_idmix/strategy_a/",
+    "cache_dir": "results/football/v1_ctx_idmix/strategy_a/cache/",
+    "templates": [
+      {
+        "id": "compact",
+        "file": "templates/figure2/compact.v2.txt",
+        "output": "csv"
+      },
+      {
+        "id": "zero",
+        "file": "templates/figure2/zero.v2.txt",
+        "output": "csv"
+      },
+      {
+        "id": "few",
+        "file": "templates/figure2/few.v2.txt",
+        "output": "csv",
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "id": "zerocot",
+        "file": "templates/figure2/zerocot.v2.txt",
+        "output": "csv",
+        "expected_output_tokens": 300
+      },
+      {
+        "id": "fewcot",
+        "file": "templates/figure2/fewcot.v2.txt",
+        "output": "csv",
+        "expected_output_tokens": 300,
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      }
+    ],
+    "model_defaults": {
+      "provider": "ollama",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "energy": {
+        "method": "none"
+      },
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0
+      }
+    },
+    "models": [
+      {
+        "id": "cloud-gpt-oss-20b",
+        "model": "gpt-oss:20b",
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "pricing": {
+          "input_per_mtok": 0.07,
+          "output_per_mtok": 0.3,
+          "as_of": "2026-10-27"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-20b"
+        }
+      },
+      {
+        "id": "cloud-gpt-oss-120b",
+        "model": "gpt-oss:120b",
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "pricing": {
+          "input_per_mtok": 0.15,
+          "output_per_mtok": 0.6,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-120b"
+        }
+      },
+      {
+        "id": "cloud-gemma4-31b",
+        "model": "gemma4:31b",
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "pricing": {
+          "input_per_mtok": 0.14,
+          "output_per_mtok": 0.4,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "google_genai",
+          "ecologits_model": "gemma-4-31b-it"
+        }
+      },
+      {
+        "id": "cloud-mistral-large-3",
+        "model": "mistral-large-3:675b",
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "options": {
+          "base_url": "https://ollama.com"
+        },
+        "pricing": {
+          "input_per_mtok": 0.5,
+          "output_per_mtok": 1.5,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "mistral-large-2512"
+        }
+      },
+      {
+        "id": "cloud-deepseek-v4.1-flash",
+        "model": "deepseek-v4.1-flash",
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "pricing": {
+          "input_per_mtok": 0.3,
+          "output_per_mtok": 1.2,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "zai-glm-5-3"
+        }
+      }
+    ]
+  },
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
+  "runs": [
+    {
+      "start": "2026-11-06T18:45:19.198645+00:00",
+      "end": "2026-11-06T18:45:24.470362+00:00",
+      "counts": {
+        "ok": 23623,
+        "not_cached": 8640,
+        "truncated": 2
+      },
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 4759,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 4725,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 4736,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-mistral-large-3": {
+          "calls": 0,
+          "cache_hits": 4725,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 0,
+          "cache_hits": 4733,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-06T18:45:54.471253+00:00",
+      "end": "2026-11-06T19:02:10.801408+00:00",
+      "counts": {
+        "ok": 1728
+      },
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 1737,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-06T19:02:11.313780+00:00",
+      "end": "2026-11-06T19:09:50.331386+00:00",
+      "counts": {
+        "ok": 1728
+      },
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 1728,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-06T19:09:50.772397+00:00",
+      "end": "2026-11-06T19:15:13.139655+00:00",
+      "counts": {
+        "ok": 1728
+      },
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 1733,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-06T19:15:13.620577+00:00",
+      "end": "2026-11-06T19:28:36.593916+00:00",
+      "counts": {
+        "ok": 1728
+      },
+      "callers": {
+        "cloud-mistral-large-3": {
+          "calls": 1728,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-06T19:28:37.017892+00:00",
+      "end": "2026-11-06T19:35:02.904774+00:00",
+      "counts": {
+        "ok": 1726,
+        "truncated": 2
+      },
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 1728,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    }
+  ],
+  "status_counts": {
+    "ok": 32261,
+    "truncated": 4
+  }
+}

@@ -36,10 +36,12 @@ RunKey = tuple[str, str, str, int]  # (task_id, model, variant, run_index)
 
 
 def run_key(row: dict) -> RunKey:
+    """(task_id, model, variant, run_index) of a results row."""
     return (row["task_id"], row["model"], row["variant"], int(row["run_index"]))
 
 
 def read_results(path: Path) -> list[dict]:
+    """Rows of a results.csv, or [] if it does not exist."""
     if not path.exists():
         return []
     with open(path, encoding="utf-8", newline="") as fh:
@@ -47,6 +49,7 @@ def read_results(path: Path) -> list[dict]:
 
 
 def load_done(path: Path, task_set_version: str) -> set[RunKey]:
+    """Keys of the runs already in results.csv; refuses a file written for another task set."""
     rows = read_results(path)
     versions = {r["task_set_version"] for r in rows}
     if versions and versions != {task_set_version}:

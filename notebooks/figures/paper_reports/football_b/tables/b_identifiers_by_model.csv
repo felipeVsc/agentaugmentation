@@ -1,0 +1,11 @@
+model,variant,abstention · name given,abstention · no name,F1 · name given,F1 · no name,F1 ign · name given,F1 ign · no name
+deepseek-v4.1-flash,search,0.6071,0.8302,0.1026,0.0968,0.3077,0.5
+deepseek-v4.1-flash,search + memory,0.2857,0.8302,0.25,0.0968,0.4615,0.5
+gemma4:31b,search,0.2857,0.7736,0.0833,0.1231,0.1818,0.5
+gemma4:31b,search + memory,0.1786,0.6792,0.1176,0.1429,0.2308,0.4545
+gpt-oss:120b,search,0.25,0.6038,0.1633,0.1622,0.32,0.4444
+gpt-oss:120b,search + memory,0.1429,0.5472,0.3077,0.1299,0.5,0.3448
+gpt-oss:20b,search,0.1786,0.5094,0.1176,0.1772,0.2308,0.4242
+gpt-oss:20b,search + memory,0.1071,0.5094,0.1132,0.1519,0.2143,0.375
+mistral-large-3,search,0.1071,0.717,0.2642,0.0588,0.4375,0.2353
+mistral-large-3,search + memory,0.0357,0.5094,0.2909,0.1013,0.4571,0.2667

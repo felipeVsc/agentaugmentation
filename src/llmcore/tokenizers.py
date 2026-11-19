@@ -30,6 +30,7 @@ class Tokenizer:
 
 @lru_cache(maxsize=None)
 def get_tokenizer(spec: str) -> Tokenizer:
+    """Tokenizer from a spec: 'simple', 'tiktoken:<encoding>', 'tiktoken-model:<model>' or 'hf:<repo>'."""
     kind, _, arg = spec.partition(":")
     if spec == "simple":
         return Tokenizer(spec, lambda text: len(_SIMPLE.findall(text)))

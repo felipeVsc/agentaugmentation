@@ -1,0 +1,1206 @@
+{
+ "task_set_version": "football-v1-ctx-id",
+ "derived_from": "football-v1-ctx",
+ "source_dir": "tasks/football/v1_ctx",
+ "snapshot": {
+  "hash": "795d71bab9d0f8b5eada1a146bff9549ad1ee58deec2b7b04f9359b2a0807bc4",
+  "path": "tasks/football/snapshot_lifted",
+  "source": "snapshot",
+  "stats": {
+   "edges": 25385,
+   "edges_per_type": {
+    "NATIONALITY": 4988,
+    "OCCURS_IN": 18,
+    "PLAYED_FOR": 8278,
+    "PLAYER_STATS_IN_LEAGUE": 11696,
+    "TEAM_STATS_IN_LEAGUE": 405
+   },
+   "nodes": 9819,
+   "nodes_per_type": {
+    "Country": 12,
+    "League": 18,
+    "Player": 9446,
+    "Team": 343
+   }
+  }
+ },
+ "identifier": "Player.Name",
+ "identifier_popularity": 1.0,
+ "rule": "each task of the source set with the node's name as the first entry of G, replacing the last sampled entry (|G| unchanged); tasks hiding the name are left out",
+ "tasks": 235,
+ "name_added": 232,
+ "name_already_in_G": 3,
+ "skipped": [
+  {
+   "task_id": "7d71eb8d68dfc36c",
+   "reason": "H is the name"
+  },
+  {
+   "task_id": "0fec6f08f3e3ee02",
+   "reason": "H is the name"
+  },
+  {
+   "task_id": "03e3bf3b9b707430",
+   "reason": "H is the name"
+  },
+  {
+   "task_id": "c6e6f5a473466803",
+   "reason": "H is the name"
+  }
+ ],
+ "source_manifest": {
+  "assumptions": [
+   "Graph source is Neo4j; all later steps read the snapshot, not the live database.",
+   "Centrality is normalized per element type (divided by the type's maximum); 0 is replaced by epsilon.",
+   "Edge centrality is the mean of the normalized centralities of its two endpoints.",
+   "Direct neighbors are taken in both directions; n:1 paths follow outgoing relationships only.",
+   "Only scalar properties (string, integer, float, boolean, date) are eligible.",
+   "H strata use pop(p) over the distinct H-eligible properties of the node type, each counted once.",
+   "G strata use pop(p) * cent_p(e) over the set of elements in N ∪ context(N), each (element, property) once.",
+   "Strata: low = [Q0, Q1], mid = (Q1, Q3], high = (Q3, Q4]; if Q3 == Q4, values equal to Q4 go to high.",
+   "A combination with fewer candidates than size_H or size_G is skipped, not filled with fewer properties.",
+   "G holds distinct prop_keys; a prop_key shared by several elements is drawn at most once per task.",
+   "G excludes values that equal an H value, or contain a string H value of at least leak_min_substring_len chars.",
+   "task_id hashes (dataset, node_id, sorted H prop_keys, sorted G (prop_key, element_id)).",
+   "Random draws order candidates by sha256(seed, combination, candidate id)."
+  ],
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
+  "config": {
+   "centrality": {
+    "damping": 0.85,
+    "directed": false,
+    "edge_measure": "endpoint_mean",
+    "epsilon": 1e-06,
+    "max_iter": 200,
+    "measure": "pagerank",
+    "normalize": "max",
+    "tol": 1e-10
+   },
+   "dataset": {
+    "context_max_hops": null,
+    "label_priority": [],
+    "name": "football",
+    "node_id_property": "Player ID",
+    "node_type": "Player",
+    "snapshot_dir": "tasks/football/snapshot_lifted",
+    "source": "snapshot"
+   },
+   "neo4j": {
+    "database": null,
+    "database_env": "NEO4J_DATABASE",
+    "fetch_size": 10000,
+    "id_function": "elementId",
+    "labels": null,
+    "password_env": "NEO4J_PASSWORD",
+    "relationship_types": null,
+    "uri": "bolt://localhost:7687",
+    "uri_env": "NEO4J_URI",
+    "user_env": "NEO4J_USER"
+   },
+   "output_dir": "tasks/football/v1_ctx/",
+   "properties": {
+    "empty_string_is_null": true,
+    "exclude_properties": [
+     "Player ID",
+     "Team ID",
+     "Country.Name",
+     "Country.Code",
+     "PLAYER_STATS_IN_LEAGUE.Country"
+    ],
+    "leak_min_substring_len": 4,
+    "leakage_pairs": [],
+    "never_hide": []
+   },
+   "published": {
+    "apply_leakage_pairs": false,
+    "centrality_file": null,
+    "centrality_id_column": "icao",
+    "centrality_score_column": "score",
+    "context_slice": [
+     2,
+     5,
+     10
+    ],
+    "easy_threshold": 0.8,
+    "hidden_requires_value": null,
+    "min_G": null,
+    "node_key": "icao",
+    "node_strata": null,
+    "nodes_per_stratum": 3,
+    "popularity_file": null,
+    "popularity_scale": 100.0,
+    "profile": "code",
+    "properties": [],
+    "property_classes": null,
+    "redraw_H_per_task": null,
+    "seed": 42,
+    "size_G": 3,
+    "size_H": 3
+   },
+   "sampling": {
+    "G_context_fallback": true,
+    "G_min_own": 1,
+    "G_strata_by": "popularity",
+    "max_G": 3,
+    "max_H": 1,
+    "max_n": 3,
+    "no_context_output_dir": "tasks/football/v1_noctx/",
+    "replace_unusable_nodes": true,
+    "seed": 42,
+    "sizes_G": [
+     1,
+     3,
+     5
+    ],
+    "sizes_H": null,
+    "use_context": true
+   },
+   "task_set_version": "football-v1-ctx"
+  },
+  "dataset": "football",
+  "master_seed": 42,
+  "n1_relationships": [
+   {
+    "cardinality": "many-to-one",
+    "edges": 18,
+    "max_in_degree": 4,
+    "max_out_degree": 1,
+    "n1": true,
+    "relationship": "OCCURS_IN",
+    "source_type": "League",
+    "sources": 18,
+    "target_type": "Country"
+   },
+   {
+    "cardinality": "many-to-one",
+    "edges": 4988,
+    "max_in_degree": 846,
+    "max_out_degree": 1,
+    "n1": true,
+    "relationship": "NATIONALITY",
+    "source_type": "Player",
+    "sources": 4988,
+    "target_type": "Country"
+   },
+   {
+    "cardinality": "many-to-many",
+    "edges": 8278,
+    "max_in_degree": 45,
+    "max_out_degree": 3,
+    "n1": false,
+    "relationship": "PLAYED_FOR",
+    "source_type": "Player",
+    "sources": 7618,
+    "target_type": "Team"
+   },
+   {
+    "cardinality": "many-to-many",
+    "edges": 11696,
+    "max_in_degree": 917,
+    "max_out_degree": 4,
+    "n1": false,
+    "relationship": "PLAYER_STATS_IN_LEAGUE",
+    "source_type": "Player",
+    "sources": 9446,
+    "target_type": "League"
+   },
+   {
+    "cardinality": "many-to-many",
+    "edges": 405,
+    "max_in_degree": 36,
+    "max_out_degree": 2,
+    "n1": false,
+    "relationship": "TEAM_STATS_IN_LEAGUE",
+    "source_type": "Team",
+    "sources": 343,
+    "target_type": "League"
+   }
+  ],
+  "no_context_set": {
+   "not_filled": 0,
+   "on_replacement_nodes": 6,
+   "output_dir": "tasks/football/v1_noctx",
+   "paired": 233,
+   "paired_with": "football-v1-ctx",
+   "task_set_version": "football-v1-noctx",
+   "tasks": 239
+  },
+  "node_type": "Player",
+  "package_version": "0.1.0",
+  "quartiles": {
+   "G_property_popularity": [
+    0.013252393980848154,
+    0.3645690834473324,
+    0.3648255813953488,
+    0.7864704636883337,
+    1.0
+   ],
+   "H_property_popularity": [
+    0.013252393980848154,
+    0.3645690834473324,
+    0.3648255813953488,
+    0.7864704636883337,
+    1.0
+   ],
+   "intervals": "low=[Q0,Q1) mid=[Q1,Q3) high=[Q3,Q4]; Q0==Q1 ties go to low",
+   "node_centrality": [
+    0.21760878709167344,
+    0.32169294742666,
+    0.419770603714035,
+    0.43175975252155085,
+    1.0
+   ]
+  },
+  "report": {
+   "G_context_fallback": true,
+   "G_min_own": 1,
+   "G_strata_by": "popularity",
+   "duplicates_removed": 0,
+   "expected_before_skips": 243,
+   "nodes_available": {
+    "high": 2362,
+    "low": 2353,
+    "mid": 4731
+   },
+   "nodes_replacing": {
+    "high": [
+     "19e50035",
+     "2d70dbe5",
+     "72e0ee7b",
+     "94c79a82",
+     "9886c32e",
+     "f333ac24",
+     "f679abe1"
+    ],
+    "low": [
+     "2a3416b6",
+     "30ce77a2",
+     "add304fc",
+     "c924b17d",
+     "d1c92690",
+     "fac1f795"
+    ],
+    "mid": [
+     "28d596a0",
+     "5c6b0637",
+     "6b91b999",
+     "a98a9189",
+     "f8d2d42c",
+     "fba79ac8"
+    ]
+   },
+   "nodes_selected": {
+    "high": [
+     "169df85b",
+     "6a99e0b1",
+     "a109e5c8"
+    ],
+    "low": [
+     "14f47102",
+     "1958c005",
+     "4accb7e0"
+    ],
+    "mid": [
+     "1f4ea94e",
+     "4737cebe",
+     "d2b135e1"
+    ]
+   },
+   "replace_unusable_nodes": true,
+   "sizes_G": [
+    1,
+    3,
+    5
+   ],
+   "sizes_H": [
+    1
+   ],
+   "skipped": [
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "available": 0,
+     "no_replacement_found": true,
+     "node_id": "14f47102",
+     "node_stratum": "low",
+     "reason": "H_insufficient",
+     "size_G": 5,
+     "size_H": 1
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "available": 0,
+     "no_replacement_found": true,
+     "node_id": "1958c005",
+     "node_stratum": "low",
+     "reason": "H_insufficient",
+     "size_G": 5,
+     "size_H": 1
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "available": 0,
+     "no_replacement_found": true,
+     "node_id": "4accb7e0",
+     "node_stratum": "low",
+     "reason": "H_insufficient",
+     "size_G": 5,
+     "size_H": 1
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "available": 0,
+     "no_replacement_found": true,
+     "node_id": "a109e5c8",
+     "node_stratum": "high",
+     "reason": "H_insufficient",
+     "size_G": 5,
+     "size_H": 1
+    }
+   ],
+   "skipped_by_node_and_H_stratum": {
+    "high|low": 1,
+    "low|low": 3
+   },
+   "skipped_by_reason": {
+    "H_insufficient": 4
+   },
+   "skipped_total": 4,
+   "tasks_per_G_stratum": {
+    "high": 81,
+    "low": 81,
+    "mid": 77
+   },
+   "tasks_per_H_stratum": {
+    "high": 81,
+    "low": 77,
+    "mid": 81
+   },
+   "tasks_per_combination": [
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 2
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "high",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "low",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "high",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "low",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "high",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "low",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 1,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 3,
+     "size_H": 1,
+     "tasks": 3
+    },
+    {
+     "G_stratum": "mid",
+     "H_stratum": "mid",
+     "node_stratum": "mid",
+     "size_G": 5,
+     "size_H": 1,
+     "tasks": 3
+    }
+   ],
+   "tasks_per_node_stratum": {
+    "high": 80,
+    "low": 78,
+    "mid": 81
+   },
+   "tasks_total": 239,
+   "tasks_with_context_only_G": 0,
+   "use_context": true,
+   "zero_difficulty": 0
+  },
+  "snapshot": {
+   "hash": "795d71bab9d0f8b5eada1a146bff9549ad1ee58deec2b7b04f9359b2a0807bc4",
+   "path": "tasks/football/snapshot_lifted",
+   "source": "snapshot",
+   "stats": {
+    "edges": 25385,
+    "edges_per_type": {
+     "NATIONALITY": 4988,
+     "OCCURS_IN": 18,
+     "PLAYED_FOR": 8278,
+     "PLAYER_STATS_IN_LEAGUE": 11696,
+     "TEAM_STATS_IN_LEAGUE": 405
+    },
+    "nodes": 9819,
+    "nodes_per_type": {
+     "Country": 12,
+     "League": 18,
+     "Player": 9446,
+     "Team": 343
+    }
+   }
+  },
+  "strata": {
+   "G_occurrence": {
+    "high": 47,
+    "low": 33,
+    "mid": 50
+   },
+   "H_property": {
+    "high": [
+     "+/-",
+     "Assists",
+     "Assists per 90 minutes",
+     "Date of birth",
+     "Fouls committed",
+     "Fouls suffered",
+     "Goals",
+     "Goals + assists",
+     "Goals + assists per 90 minutes",
+     "Goals + assists while on the pitch",
+     "Goals per 90 minutes",
+     "Goals scored while on the pitch",
+     "Interceptions",
+     "Matches fully played",
+     "Matches played",
+     "Minutes per match",
+     "Name",
+     "Nation",
+     "Non-penalty goals",
+     "Non-penalty goals + assists per 90 minutes",
+     "Non-penalty goals per 90 minutes",
+     "Offsides",
+     "Own goals",
+     "Penalties attempted",
+     "Penalties scored",
+     "Percentage of playing time",
+     "Playing time in minutes",
+     "Playing time per 90 minutes",
+     "Points per match",
+     "Red cards",
+     "Second yellow cards",
+     "Shots",
+     "Shots on target",
+     "Shots on target per 90 minutes",
+     "Shots per 90 minutes",
+     "Squad",
+     "Starts",
+     "Substitutions",
+     "Tackles won",
+     "Unused substitutes",
+     "Yellow cards",
+     "goals scored - goals conceded per 90 minutes",
+     "passes into the goalkeeper's penalty area"
+    ],
+    "low": [
+     "Clean sheet percentage",
+     "Clean sheets",
+     "Draws",
+     "Goals conceded",
+     "Goals conceded per 90 minutes",
+     "Losses",
+     "Penalties missed",
+     "Penalties saved",
+     "Penalty save percentage",
+     "Save%",
+     "Saves",
+     "Shots on target against",
+     "Wins"
+    ],
+    "mid": [
+     "Goals per shot",
+     "Goals per shotots on target",
+     "Minutes per start",
+     "Minutes per substitute appearance",
+     "On-offsides",
+     "Position",
+     "Shots on target percentage"
+    ]
+   },
+   "H_property_popularity": {
+    "+/-": 0.7864704636883337,
+    "Assists": 0.7864704636883337,
+    "Assists per 90 minutes": 0.7864704636883337,
+    "Clean sheet percentage": 0.05981367774719458,
+    "Clean sheets": 0.06182511115816219,
+    "Date of birth": 0.9954478085962312,
+    "Draws": 0.06182511115816219,
+    "Fouls committed": 0.7864704636883337,
+    "Fouls suffered": 0.7864704636883337,
+    "Goals": 0.7864704636883337,
+    "Goals + assists": 0.7864704636883337,
+    "Goals + assists per 90 minutes": 0.7864704636883337,
+    "Goals + assists while on the pitch": 0.7864704636883337,
+    "Goals conceded": 0.06182511115816219,
+    "Goals conceded per 90 minutes": 0.06182511115816219,
+    "Goals per 90 minutes": 0.7864704636883337,
+    "Goals per shot": 0.6089349989413508,
+    "Goals per shotots on target": 0.4912132119415626,
+    "Goals scored while on the pitch": 0.7864704636883337,
+    "Interceptions": 0.7864704636883337,
+    "Losses": 0.06182511115816219,
+    "Matches fully played": 0.7864704636883337,
+    "Matches played": 0.7864704636883337,
+    "Minutes per match": 0.7864704636883337,
+    "Minutes per start": 0.6567859411391065,
+    "Minutes per substitute appearance": 0.6248147363963582,
+    "Name": 1.0,
+    "Nation": 0.9859199661232267,
+    "Non-penalty goals": 0.7864704636883337,
+    "Non-penalty goals + assists per 90 minutes": 0.7864704636883337,
+    "Non-penalty goals per 90 minutes": 0.7864704636883337,
+    "Offsides": 0.7864704636883337,
+    "On-offsides": 0.7724962947279271,
+    "Own goals": 0.7864704636883337,
+    "Penalties attempted": 0.7864704636883337,
+    "Penalties missed": 0.06182511115816219,
+    "Penalties saved": 0.06182511115816219,
+    "Penalties scored": 0.7864704636883337,
+    "Penalty save percentage": 0.04012280330298539,
+    "Percentage of playing time": 0.7864704636883337,
+    "Playing time in minutes": 0.7864704636883337,
+    "Playing time per 90 minutes": 0.7864704636883337,
+    "Points per match": 0.7864704636883337,
+    "Position": 0.786364598771967,
+    "Red cards": 0.7864704636883337,
+    "Save%": 0.06076646199449502,
+    "Saves": 0.06182511115816219,
+    "Second yellow cards": 0.7864704636883337,
+    "Shots": 0.7864704636883337,
+    "Shots on target": 0.7864704636883337,
+    "Shots on target against": 0.06182511115816219,
+    "Shots on target per 90 minutes": 0.7864704636883337,
+    "Shots on target percentage": 0.6089349989413508,
+    "Shots per 90 minutes": 0.7864704636883337,
+    "Squad": 0.7864704636883337,
+    "Starts": 0.7864704636883337,
+    "Substitutions": 0.7864704636883337,
+    "Tackles won": 0.7864704636883337,
+    "Unused substitutes": 0.7864704636883337,
+    "Wins": 0.06182511115816219,
+    "Yellow cards": 0.7864704636883337,
+    "goals scored - goals conceded per 90 minutes": 0.7864704636883337,
+    "passes into the goalkeeper's penalty area": 0.7864704636883337
+   },
+   "node": {
+    "high": 2362,
+    "low": 2353,
+    "mid": 4731
+   }
+  },
+  "task_set_version": "football-v1-ctx"
+ }
+}

@@ -9,6 +9,7 @@
 Common filters: --models a,b  --templates t1,t2 (template or variant ids)  --limit N (first N tasks)
                 --runs N (runs per task, overrides runs_per_task).
 API keys are read from the environment or from .env, never from the config.
+--ollama cloud|local|URL runs the Ollama models on Ollama Cloud or on an on-premise server.
 """
 
 from __future__ import annotations
@@ -32,13 +33,14 @@ def _csv(value: str | None) -> list[str] | None:
 
 
 def _runner(args, read_cache: bool = True, connect: bool = True) -> Runner:
-    cfg = load_config(args.config)
+    cfg = load_config(args.config, ollama=getattr(args, "ollama", None))
     if getattr(args, "runs", None):
         cfg.runs_per_task = args.runs
     return Runner(cfg, _csv(args.models), _csv(args.templates), args.limit, read_cache=read_cache, connect=connect)
 
 
 def cmd_check(args) -> int:
+    """`strategy-a check`: load everything, connect to the providers and report problems."""
     runner = _runner(args)
     runner.prepare()  # loads tasks, templates, examples, providers (keys), energy models, tokenizers
     print(f"tasks: {len(runner.tasks)} (task set {runner.task_set_version})")
@@ -91,6 +93,7 @@ def cmd_check(args) -> int:
 
 
 def cmd_render(args) -> int:
+    """`strategy-a render`: print the prompt of one task and variant, without calling a model."""
     runner = _runner(args, connect=False)
     jobs = [j for j in runner.jobs() if j.run_index == 1]
     if args.task:
@@ -110,11 +113,13 @@ def cmd_render(args) -> int:
 
 
 def cmd_estimate(args) -> int:
+    """`strategy-a estimate`: estimated calls, tokens and cost."""
     print_estimate(estimate(_runner(args, connect=False), pending_only=args.pending))
     return 0
 
 
 def cmd_run(args) -> int:
+    """`strategy-a run`: run the pending jobs (resumable)."""
     runner = _runner(args, read_cache=not args.no_cache)
     counts = runner.run(cache_only=args.cache_only, retry_statuses=FAILED_STATUSES if args.retry_failed else None)
     if counts.get("not_cached"):
@@ -123,6 +128,7 @@ def cmd_run(args) -> int:
 
 
 def cmd_batch(args) -> int:
+    """`strategy-a batch submit|status|collect`: provider batch APIs."""
     runner = _runner(args)
     if args.action == "submit":
         batch.submit(runner, dry_run=args.dry_run)
@@ -134,6 +140,7 @@ def cmd_batch(args) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Entry point of the `strategy-a` command."""
     parser = argparse.ArgumentParser(prog="strategy-a", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="cmd", required=True)
 
@@ -144,6 +151,8 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("--limit", type=int, help="only the first N tasks")
         p.add_argument("--runs", type=int, help="runs per task (overrides runs_per_task, e.g. 1 for a test)")
         p.add_argument("--env-file", default=".env")
+        p.add_argument("--ollama", help="where the Ollama models run: cloud, local ($OLLAMA_HOST or localhost:11434) "
+                       "or a URL; overrides the config (ids become local-*/cloud-*, output_dir gets _local/_cloud)")
         return p
 
     p = common(sub.add_parser("check"))

@@ -1,0 +1,145 @@
+task_id,node_id,track,artists,node_stratum,H_stratum,G_stratum,size_G,hidden_property,true_value,G,n_G_own,n_G_context,G_context_fallback,difficulty
+e5d07552fced3f3a,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,low,1,time_signature,3,valence = 0.206,1,0,False,1.6291
+607a9ff8561e5186,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,low,1,mode,0,time_signature = 4,1,0,False,1.7492
+33de686cfe174fa5,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,low,1,valence,0.649,acousticness = 0.0227,1,0,False,1.7107
+1c82c025f7f50273,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,mid,1,time_signature,3,Artist.followers = 10264418,0,1,True,1.8624
+29fe98854c7fdaf5,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,mid,1,mode,0,Artist.name = Don Toliver,0,1,True,1.7619
+97815f3a7c6a7324,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,mid,1,valence,0.649,Artist.followers = 14076131,0,1,True,1.8094
+7d6f6efe67b312d8,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,high,1,time_signature,3,rank = 9101,1,0,False,1.6286
+e5212835a8521f95,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,high,1,mode,0,popularity = 81,1,0,False,1.7486
+add547f1cc2d046f,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,high,1,valence,0.649,release_date = 2001-08-07,1,0,False,1.7101
+d2f4766bce29d2dd,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,low,1,duration_ms,196721,key = 10,1,0,False,1.6286
+0ef2901d61814f5a,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,low,1,rank,1011,mode = 0,1,0,False,1.7486
+966ecd730d5bbf08,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,low,1,isrc,USAR10100232,loudness = -4.551,1,0,False,1.7101
+733f41d42c19f1c8,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,mid,1,duration_ms,196721,Artist.popularity = 79,0,1,True,1.8619
+15012f5d892308c3,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,mid,1,rank,1011,Artist.popularity = 87,0,1,True,1.7613
+8c87ca6eaa2feb01,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,mid,1,isrc,USAR10100232,Artist.followers = 14076131,0,1,True,1.8089
+1de67bc590db61dc,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,high,1,duration_ms,196721,isrc = GBUM71800863,1,0,False,1.628
+29a56b3752b585a3,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,high,1,rank,1011,isrc = USAT21903300,1,0,False,1.748
+0cd5ac9c1536f2a4,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,high,1,isrc,USAR10100232,duration_ms = 247901,1,0,False,1.7095
+3ef7b11f9d66d88f,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,low,3,loudness,-4.819,key = 10; tempo = 149.876; valence = 0.206,3,0,False,1.6291
+99af3ab0d698d888,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,low,3,acousticness,0.524,danceability = 0.652; liveness = 0.165; speechiness = 0.0893,3,0,False,1.7492
+cf4c15fff127a6a0,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,low,3,acousticness,0.0227,danceability = 0.816; mode = 1; speechiness = 0.03,3,0,False,1.7107
+e6bbe1ddce579f80,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,mid,3,loudness,-4.819,Album.name = Youngblood (Deluxe); Artist.followers = 10264418; Artist.popularity = 79,0,3,True,1.9107
+a6472c8113f62dfd,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,mid,3,acousticness,0.524,Artist.followers = 7824322; Artist.name = Don Toliver; Artist.popularity = 87,0,3,True,1.7682
+4cacfa25f8d0c3db,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,mid,3,acousticness,0.0227,Album.name = 8701; Artist.followers = 14076131; Artist.name = USHER,0,3,True,1.862
+40f9e3470d187ac5,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,high,3,loudness,-4.819,copies = 2; duration_ms = 196721; isrc = GBUM71800863,3,0,False,1.6283
+cb7aa346aefdb4db,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,high,3,acousticness,0.524,Genre.name = Hip Hop; duration_ms = 151601; rank = 1011,2,1,False,1.6353
+a5c02f6db53e2cec,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,high,3,acousticness,0.0227,Album.release_date = 2001-08-07; Album.type = album; release_date = 2001-08-07,1,2,False,1.8239
+3167de8e9945c938,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,low,3,isrc,GBUM71800863,energy = 0.561; instrumentalness = 0.0; time_signature = 3,3,0,False,1.6288
+7558f12a16153c19,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,low,3,name,No Idea,acousticness = 0.524; danceability = 0.652; loudness = -5.718,3,0,False,1.7489
+f633dfd0069756a1,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,low,3,name,U Got It Bad,danceability = 0.816; loudness = -4.551; tempo = 124.037,3,0,False,1.7104
+317abd2a478ad4ac,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,mid,3,isrc,GBUM71800863,Album.name = Youngblood (Deluxe); Artist.name = 5 Seconds of Summer; Artist.popularity = 79,0,3,True,1.9105
+36da68eaaa948c87,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,mid,3,name,No Idea,Album.name = Heaven Or Hell; Artist.name = Don Toliver; Artist.popularity = 87,0,3,True,1.7918
+da296bee3e10a8c2,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,mid,3,name,U Got It Bad,Album.name = 8701; Artist.followers = 14076131; Artist.popularity = 83,0,3,True,1.8618
+4416c7e8b3c7561b,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,high,3,isrc,GBUM71800863,Album.type = album; copies = 2; rank = 9101,2,1,False,1.6908
+b067cfb8a6fc3a39,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,high,3,name,No Idea,Genre.name = Hip Hop; copies = 566; release_date = 2020-03-13,2,1,False,1.635
+b860f05082568554,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,high,3,name,U Got It Bad,Genre.name = R&B; isrc = USAR10100232; release_date = 2001-08-07,2,1,False,1.6848
+63670afa8c69d02c,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,low,5,valence,0.206,acousticness = 0.0965; energy = 0.561; instrumentalness = 0.0; key = 10; tempo = 149.876,5,0,False,1.6291
+9e57638df78579cd,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,low,5,acousticness,0.524,instrumentalness = 0.000579; liveness = 0.165; speechiness = 0.0893; time_signature = 4; valence = 0.35,5,0,False,1.7492
+0c29d96ebd560788,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,low,5,energy,0.5,acousticness = 0.0227; instrumentalness = 1.53e-06; key = 1; loudness = -4.551; mode = 1,5,0,False,1.7107
+a77c578a60966809,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,low,high,5,valence,0.206,Genre.name = Pop; duration_ms = 196721; name = Ghost Of You; popularity = 71; release_date = 2018-06-15,4,1,False,1.5322
+38617006f835308b,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,low,high,5,acousticness,0.524,Album.release_date = 2020-03-13; Genre.name = Hip Hop; copies = 566; duration_ms = 151601; release_date = 2020-03-13,3,2,False,1.6971
+a3bf8522eb929ef2,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,low,high,5,energy,0.5,Album.release_date = 2001-08-07; copies = 32; duration_ms = 247901; isrc = USAR10100232; popularity = 73,4,1,False,1.7494
+f310c19146988f93,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,low,5,popularity,71,acousticness = 0.0965; energy = 0.561; speechiness = 0.0269; tempo = 149.876; time_signature = 3,5,0,False,1.6289
+8ae4d4699d1de3f2,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,low,5,name,No Idea,acousticness = 0.524; instrumentalness = 0.000579; speechiness = 0.0893; tempo = 127.998; valence = 0.35,5,0,False,1.749
+7cc3123b10ed8106,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,low,5,isrc,USAR10100232,energy = 0.5; loudness = -4.551; tempo = 124.037; time_signature = 4; valence = 0.649,5,0,False,1.7105
+f2645925c1d56332,1MhXdlCQPnO56T57MfmaRm,Ghost Of You,5 Seconds of Summer,low,high,high,5,popularity,71,Album.release_date = 2018-06-15; Album.type = album; Genre.name = Pop; duration_ms = 196721; isrc = GBUM71800863,2,3,False,1.6245
+da65abe95e5656b9,7AzlLxHn24DxjgQX73F9fU,No Idea,Don Toliver,low,high,high,5,name,No Idea,Album.release_date = 2020-03-13; Album.type = album; copies = 566; popularity = 81; release_date = 2020-03-13,3,2,False,1.789
+68696cd21f30a8ef,7J41dYQolQJEtj3UmKLu5r,U Got It Bad,USHER,low,high,high,5,isrc,USAR10100232,Album.release_date = 2001-08-07; Genre.name = R&B; copies = 32; popularity = 73; release_date = 2001-08-07,3,2,False,1.7336
+b0f2d48639703dd7,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,low,1,key,9,tempo = 105.267,1,0,False,1.4691
+9462034ff77e5135,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,low,1,acousticness,0.000386,loudness = -3.754,1,0,False,1.4795
+5ab7304569e3a549,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,low,1,tempo,134.985,instrumentalness = 0.0,1,0,False,1.4833
+2994b457e8dafba7,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,mid,1,key,9,Artist.name = Eric Clapton,0,1,True,1.7352
+c1a6b046d530c7da,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,mid,1,acousticness,0.000386,Artist.followers = 32633134,0,1,True,1.5024
+d98d76cde96b750a,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,mid,1,tempo,134.985,Artist.followers = 8515512,0,1,True,1.6469
+7c68bd0fc45b5f36,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,high,1,key,9,rank = 8841,1,0,False,1.4685
+ad1a65832a4958a3,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,high,1,acousticness,0.000386,isrc = USWB10300376,1,0,False,1.4789
+c28b5d02b61ee631,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,high,1,tempo,134.985,isrc = QZTGW2100011,1,0,False,1.4827
+f0c30f8d1f918f0f,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,low,1,release_date,1977-11-01,instrumentalness = 0.0337,1,0,False,1.4685
+dc991968838f40cb,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,low,1,isrc,USWB10300376,danceability = 0.451,1,0,False,1.4789
+9265c92d8fe0792e,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,low,1,rank,5511,valence = 0.595,1,0,False,1.4827
+033ff3e25c7bf7d7,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,mid,1,release_date,1977-11-01,Artist.popularity = 73,0,1,True,1.7348
+c16d4192cbf293e6,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,mid,1,isrc,USWB10300376,Album.name = Meteora (Bonus Edition),0,1,True,1.6254
+23b615f46f2e3120,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,mid,1,rank,5511,Artist.popularity = 82,0,1,True,1.6464
+6b2f802b7f786f17,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,high,1,release_date,1977-11-01,isrc = NLF057790024,1,0,False,1.4678
+9b0e8e1b46ccd1f7,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,high,1,isrc,USWB10300376,name = Somewhere I Belong,1,0,False,1.4783
+b234eaca870cd7b2,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,high,1,rank,5511,isrc = QZTGW2100011,1,0,False,1.4821
+1ecd424c3fe8b5be,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,low,3,acousticness,0.0607,loudness = -12.526; mode = 1; speechiness = 0.0278,3,0,False,1.4691
+3001814915aca5d6,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,low,3,liveness,0.261,acousticness = 0.000386; instrumentalness = 2.56e-06; time_signature = 4,3,0,False,1.4795
+bd65c84b50a921a2,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,low,3,tempo,134.985,key = 11; loudness = -5.123; speechiness = 0.0476,3,0,False,1.4833
+f73d23ab65219133,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,mid,3,acousticness,0.0607,Album.name = Slowhand 35th Anniversary; Artist.followers = 6665900; Artist.name = Eric Clapton,0,3,True,1.8297
+55788658ba4f47c1,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,mid,3,liveness,0.261,Artist.followers = 32633134; Artist.name = Linkin Park; Artist.popularity = 90,0,3,True,1.5136
+5921165882d3744d,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,mid,3,tempo,134.985,Album.name = Alone At Prom; Artist.followers = 8515512; Artist.name = Tory Lanez,0,3,True,1.7098
+9563e631bb2d33b7,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,high,3,acousticness,0.0607,Album.release_date = 1977-11-01; Genre.name = Rock; rank = 8841,1,2,False,1.5496
+89893623a1d41f00,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,high,3,liveness,0.261,Genre.name = Hip Hop; copies = 38; release_date = 2003-03-25,2,1,False,1.3939
+a8edb1f66b4b9a0f,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,high,3,tempo,134.985,Genre.name = Hip Hop; popularity = 73; rank = 5511,2,1,False,1.3973
+8bf85f6529cebeb8,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,low,3,rank,8841,acousticness = 0.0607; danceability = 0.699; liveness = 0.317,3,0,False,1.4688
+aa90387697e4cf2b,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,low,3,isrc,USWB10300376,key = 1; liveness = 0.261; valence = 0.441,3,0,False,1.4792
+a6286113bdfade7c,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,low,3,copies,9,instrumentalness = 0.0; loudness = -5.123; time_signature = 4,3,0,False,1.483
+b7d0e33684b43673,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,mid,3,rank,8841,Album.name = Slowhand 35th Anniversary; Artist.followers = 6665900; Artist.name = Eric Clapton,0,3,True,1.8295
+232cfe6086cf2102,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,mid,3,isrc,USWB10300376,Album.name = Meteora (Bonus Edition); Artist.followers = 32633134; Artist.name = Linkin Park,0,3,True,1.5766
+ff76e80a968328f2,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,mid,3,copies,9,Artist.followers = 8515512; Artist.name = Tory Lanez; Artist.popularity = 82,0,3,True,1.7175
+6981cc61b8a935a3,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,high,3,rank,8841,Album.type = album; isrc = NLF057790024; name = Cocaine,2,1,False,1.5959
+d5253c2ea30c6986,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,high,3,isrc,USWB10300376,Album.type = album; rank = 1441; release_date = 2003-03-25,2,1,False,1.5553
+730775faf2e9eebb,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,high,3,copies,9,Album.type = album; Genre.name = Pop; release_date = 2021-12-10,1,2,False,1.4382
+b817db20f30d56c0,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,low,5,valence,0.676,energy = 0.502; instrumentalness = 0.0337; key = 9; liveness = 0.317; mode = 1,5,0,False,1.4691
+68171731681965dd,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,low,5,energy,0.951,danceability = 0.451; instrumentalness = 2.56e-06; liveness = 0.261; mode = 1; time_signature = 4,5,0,False,1.4795
+5d608e29a31f0e1e,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,low,5,key,11,energy = 0.659; instrumentalness = 0.0; mode = 0; speechiness = 0.0476; valence = 0.595,5,0,False,1.4833
+ae152efcad645419,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,low,high,5,valence,0.676,copies = 91; duration_ms = 218761; isrc = NLF057790024; popularity = 71; release_date = 1977-11-01,5,0,False,1.468
+657eb20241132dc5,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,low,high,5,energy,0.951,Genre.name = Metal; copies = 38; duration_ms = 213081; name = Somewhere I Belong; popularity = 80,4,1,False,1.5779
+dac1f1b943a22bdf,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,low,high,5,key,11,Album.release_date = 2021-12-10; Album.type = album; Genre.name = Pop; isrc = QZTGW2100011; rank = 5511,2,3,False,1.5074
+7fef40a93d77b0b2,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,low,5,duration_ms,218761,acousticness = 0.0607; instrumentalness = 0.0337; loudness = -12.526; mode = 1; time_signature = 4,5,0,False,1.4689
+d720af1e74bf7daf,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,low,5,name,Somewhere I Belong,danceability = 0.451; instrumentalness = 2.56e-06; loudness = -3.754; tempo = 162.041; valence = 0.441,5,0,False,1.4793
+1425e1d68df95668,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,low,5,name,Lady Of Namek,acousticness = 0.194; key = 11; liveness = 0.283; mode = 0; time_signature = 4,5,0,False,1.4831
+b95ac863b0d38b2f,2udGjDmpK1dH9VGyw7nrei,Cocaine,Eric Clapton,mid,high,high,5,duration_ms,218761,Album.release_date = 1977-11-01; Genre.name = Rock; copies = 91; isrc = NLF057790024; rank = 8841,3,2,False,1.5231
+94ff4c304fdce03b,3fjmSxt0PskST13CSdBUFx,Somewhere I Belong,Linkin Park,mid,high,high,5,name,Somewhere I Belong,Genre.name = Metal; copies = 38; isrc = USWB10300376; rank = 1441; release_date = 2003-03-25,4,1,False,1.5778
+e8cfbf4f7995a18e,6ieWL5CLN9WdC875guWtMe,Lady Of Namek,Tory Lanez,mid,high,high,5,name,Lady Of Namek,Album.release_date = 2021-12-10; Genre.name = Pop; isrc = QZTGW2100011; popularity = 73; release_date = 2021-12-10,3,2,False,1.4531
+321f9d22b71f3732,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,low,1,time_signature,4,liveness = 0.236,1,0,False,1.1465
+7a6238180f98f298,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,low,1,liveness,0.232,danceability = 0.681,1,0,False,1.2732
+424e8425be1b2778,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,low,1,time_signature,4,energy = 0.517,1,0,False,1.3707
+9ec42302f8d07847,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,mid,1,time_signature,4,Album.name = Cómo Le Digo,0,1,True,1.4692
+9b4f9f042562a674,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,mid,1,liveness,0.232,Artist.popularity = 84,0,1,True,1.4661
+55cc8c806944dc4d,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,mid,1,time_signature,4,Artist.followers = 11463002,0,1,True,1.7292
+87603f237de63c8a,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,high,1,time_signature,4,duration_ms = 216641,1,0,False,1.1458
+ceb8b48d6a6257d9,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,high,1,liveness,0.232,popularity = 84,1,0,False,1.2726
+c2a5a648cca50598,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,high,1,time_signature,4,copies = 10,1,0,False,1.37
+5c51ea32b9d221d8,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,low,1,copies,2,energy = 0.385,1,0,False,1.1458
+5651ba781498b808,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,low,1,copies,976,speechiness = 0.0309,1,0,False,1.2726
+3c59c028224db0b6,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,low,1,duration_ms,304961,valence = 0.259,1,0,False,1.37
+09c1d063ac46c091,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,mid,1,copies,2,Album.name = Cómo Le Digo,0,1,True,1.4687
+e91de9c146070fd8,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,mid,1,copies,976,Artist.name = OneRepublic,0,1,True,1.4656
+e6e198d005776627,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,mid,1,duration_ms,304961,Artist.followers = 169306882,0,1,True,1.3305
+063d8be9e4269e09,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,high,1,copies,2,rank = 8986,1,0,False,1.1451
+881513f403d7a1c9,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,high,1,copies,976,release_date = 2024-04-05,1,0,False,1.2719
+0a08a8d99f8cdd03,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,high,1,duration_ms,304961,release_date = 2013-04-06,1,0,False,1.3694
+99fff9f6be1f8aee,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,low,3,valence,0.19,instrumentalness = 0.0; key = 0; time_signature = 4,3,0,False,1.1465
+11c4cc43f24d3144,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,low,3,valence,0.554,danceability = 0.681; instrumentalness = 0.0; tempo = 129.976,3,0,False,1.2732
+7d1ea13b48b31c50,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,low,3,danceability,0.644,loudness = -6.707; tempo = 106.906; valence = 0.259,3,0,False,1.3707
+43c37839d6d5ed21,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,mid,3,valence,0.19,Artist.followers = 134000; Artist.name = KHEA; Artist.popularity = 74,0,3,True,1.608
+b379a5b5b3fc5ef3,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,mid,3,valence,0.554,Album.name = I Don't Wanna Wait; Artist.name = David Guetta; Artist.popularity = 89,0,3,True,1.5038
+6d1a834f7f9c1491,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,mid,3,danceability,0.644,Album.name = Aashiqui 2; Artist.name = Arijit Singh; Artist.popularity = 93,0,3,True,1.4052
+c049f30a00b1f926,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,high,3,valence,0.19,Album.type = single; Genre.name = Latin; rank = 8986,1,2,False,1.3303
+67d2856d6d4cd91f,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,high,3,valence,0.554,Genre.name = Pop; duration_ms = 149741; rank = 439,2,1,False,1.156
+98e12cc0d1ea6434,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,high,3,danceability,0.644,Album.type = album; Genre.name = Traditional Music; release_date = 2013-04-06,1,2,False,1.4673
+0b3d36705e9de2f3,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,low,3,isrc,QZ5FN1855311,energy = 0.385; mode = 1; tempo = 129.958,3,0,False,1.1462
+53332cf0105b415d,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,low,3,duration_ms,149741,danceability = 0.681; key = 1; mode = 0,3,0,False,1.2729
+5b7adb47924803df,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,low,3,copies,10,acousticness = 0.521; loudness = -6.707; mode = 0,3,0,False,1.3704
+e1c36b93230b9f51,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,mid,3,isrc,QZ5FN1855311,Artist.followers = 6306533; Artist.name = Omar Varela; Artist.popularity = 59,0,3,True,1.6695
+30ffc04377c0b3c0,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,mid,3,duration_ms,149741,Album.name = I Don't Wanna Wait; Artist.followers = 27381522; Artist.popularity = 89,0,3,True,1.5036
+da4d4c2cac9c9e83,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,mid,3,copies,10,Artist.followers = 11463002; Artist.name = Palak Muchhal; Artist.popularity = 93,0,3,True,1.7169
+63fd2beb35f74bd1,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,high,3,isrc,QZ5FN1855311,Album.type = single; Genre.name = Hip Hop; rank = 8986,1,2,False,1.2912
+c2c5fdf226a290e3,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,high,3,duration_ms,149741,Genre.name = Electronic; rank = 439; release_date = 2024-04-05,2,1,False,1.2575
+d3768fa03b1dd948,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,high,3,copies,10,Album.release_date = 2013-04-06; Album.type = album; rank = 6900,1,2,False,1.5041
+4d2195a87de01699,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,low,5,liveness,0.236,acousticness = 0.181; instrumentalness = 0.0; key = 0; speechiness = 0.0817; time_signature = 4,5,0,False,1.1465
+86cbed933024d7da,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,low,5,valence,0.554,energy = 0.714; instrumentalness = 0.0; key = 1; mode = 0; time_signature = 4,5,0,False,1.2732
+a497f0defdd40eb9,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,low,5,mode,0,energy = 0.517; instrumentalness = 3.27e-06; key = 9; speechiness = 0.0273; time_signature = 4,5,0,False,1.3707
+b7575712a06d19c4,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,low,high,5,liveness,0.236,Album.type = single; Genre.name = Electronic; copies = 2; duration_ms = 216641; rank = 8986,3,2,False,1.2726
+126a2a8d8aee8570,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,low,high,5,valence,0.554,copies = 976; isrc = UKWLG2400013; name = I Don't Wanna Wait; rank = 439; release_date = 2024-04-05,5,0,False,1.2721
+92ad86091d886a19,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,low,high,5,mode,0,Album.release_date = 2013-04-06; Genre.name = Traditional Music; isrc = INS181303033; popularity = 72; release_date = 2013-04-06,3,2,False,1.4362
+eae3fc88413b4f65,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,low,5,isrc,QZ5FN1855311,energy = 0.385; instrumentalness = 0.0; liveness = 0.236; loudness = -8.444; tempo = 129.958,5,0,False,1.1463
+eadbb0d05d790783,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,low,5,popularity,84,danceability = 0.681; instrumentalness = 0.0; key = 1; speechiness = 0.0309; time_signature = 4,5,0,False,1.273
+f9f2bce79122eda1,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,low,5,release_date,2013-04-06,danceability = 0.644; instrumentalness = 3.27e-06; key = 9; liveness = 0.0905; mode = 0,5,0,False,1.3705
+c053f3c5f0db0fa4,0K0soSt52EhMS9FohRObdK,Cómo Le Digo,"KHEA, Omar Varela, Asan",high,high,high,5,isrc,QZ5FN1855311,Album.release_date = 2018-04-10; Album.type = single; copies = 2; duration_ms = 216641; popularity = 71,3,2,False,1.3773
+77036becfd0091b2,331l3xABO0HMr1Kkyh2LZq,I Don't Wanna Wait,"David Guetta, OneRepublic",high,high,high,5,popularity,84,copies = 976; duration_ms = 149741; isrc = UKWLG2400013; name = I Don't Wanna Wait; release_date = 2024-04-05,5,0,False,1.2719
+d1bae3ae846590fd,6UgcN95w7vQxkR8sEFmwHG,Chahun Main Ya Naa,"Palak Muchhal, Arijit Singh",high,high,high,5,release_date,2013-04-06,Album.type = album; Genre.name = Traditional Music; duration_ms = 304961; popularity = 72; rank = 6900,3,2,False,1.436

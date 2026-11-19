@@ -45,6 +45,7 @@ class BuildOutput:
 
 
 def code_version() -> str:
+    """Git commit of the code, or 'unknown'."""
     try:
         out = subprocess.run(
             ["git", "rev-parse", "HEAD"],
@@ -61,6 +62,7 @@ def code_version() -> str:
 
 
 def snapshot_dir(cfg: TaskDefConfig) -> Path:
+    """Folder of the graph snapshot of a task set."""
     return Path(cfg.output_dir) / "intermediate" / "snapshot"
 
 
@@ -86,6 +88,10 @@ def load_snapshot(cfg: TaskDefConfig, refresh: bool = False) -> tuple[Graph, dic
 
 
 def build(cfg: TaskDefConfig, refresh_snapshot: bool = False, overwrite: bool = False) -> BuildOutput:
+    """Build a task set: snapshot → centrality → context → popularity → sampling → validation → files.
+
+    A task set is never overwritten unless `overwrite` is set.
+    """
     out_dir = Path(cfg.output_dir)
     if (out_dir / "tasks.csv").exists() and not overwrite:
         raise FileExistsError(
@@ -126,6 +132,7 @@ def build(cfg: TaskDefConfig, refresh_snapshot: bool = False, overwrite: bool = 
         LeakagePairs(cfg.properties.leakage_pairs),
         cfg.properties.leak_min_substring_len,
         builder.g_value,
+        builder.h_value,
     )
 
     write_tasks(out_dir / "tasks.csv", result.tasks, cfg.version)
@@ -150,7 +157,7 @@ def build(cfg: TaskDefConfig, refresh_snapshot: bool = False, overwrite: bool = 
         ],
         "quartiles": {
             "node_centrality": list(result.node_quartiles.q),
-            "H_property_popularity": list(result.h_quartiles.q),
+            ("H_property_score" if cfg.sampling.G_strata_by == "pop_x_cent" else "H_property_popularity"): list(result.h_quartiles.q),
             ("G_property_popularity" if cfg.sampling.G_strata_by == "popularity" else "G_property_score"): list(
                 result.g_quartiles.q
             ),
@@ -160,6 +167,39 @@ def build(cfg: TaskDefConfig, refresh_snapshot: bool = False, overwrite: bool = 
         "report": result.report,
         "assumptions": ASSUMPTIONS,
     }
+    if cfg.sampling.no_context_output_dir:
+        manifest["no_context_set"] = _write_no_context(cfg, builder, partitions, result, manifest, overwrite)
     write_json(out_dir / "manifest.json", manifest)
     log.info("Wrote %d tasks to %s", len(result.tasks), out_dir)
     return BuildOutput(out_dir, result, manifest)
+
+
+def _write_no_context(cfg: TaskDefConfig, builder: TaskBuilder, partitions, result: BuildResult, manifest: dict,
+                      overwrite: bool) -> dict:
+    """The matched no-context task set (``sampling.no_context_output_dir``), with its own manifest."""
+    out = Path(cfg.sampling.no_context_output_dir)
+    if (out / "tasks.csv").exists() and not overwrite:
+        raise FileExistsError(f"{out} already holds a task set; use --overwrite while developing")
+    out.mkdir(parents=True, exist_ok=True)
+    tasks, skipped = builder.build_without_context(result.tasks, partitions)
+    gt = ground_truth_rows(tasks)
+    validate_tasks(tasks, gt, result.node_quartiles, result.h_quartiles, result.g_quartiles,
+                   LeakagePairs(cfg.properties.leakage_pairs), cfg.properties.leak_min_substring_len,
+                   builder.g_value, builder.h_value)
+    base = cfg.version[:-len("-ctx")] if cfg.version.endswith("-ctx") else cfg.version
+    version = f"{base}-noctx"
+    write_tasks(out / "tasks.csv", tasks, version)
+    write_ground_truth(out / "ground_truth.csv", gt)
+    info = {"task_set_version": version, "output_dir": str(out), "tasks": len(tasks),
+            "paired_with": cfg.version, "paired": sum(1 for t in tasks if t.paired_task_id),
+            "on_replacement_nodes": sum(1 for t in tasks if not t.paired_task_id), "not_filled": len(skipped)}
+    write_json(out / "manifest.json", {
+        **{k: v for k, v in manifest.items() if k not in ("report", "no_context_set")},
+        "task_set_version": version,
+        "pairing": {**info, "rule": "same node, H, |G| and G stratum; each context property of G replaced by an "
+                                    "own property of the node from the same G stratum (stable random order); when "
+                                    "the node cannot, the next nodes of its stratum are drawn until one fills the cell",
+                    "skipped": skipped},
+    })
+    log.info("Wrote %d no-context tasks to %s (%d cells not filled)", len(tasks), out, len(skipped))
+    return info

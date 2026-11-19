@@ -47,6 +47,7 @@ class Popularity:
 
 
 def compute_popularity(graph: Graph, empty_string_is_null: bool = True) -> Popularity:
+    """pop(p): share of the elements of each type with a non-null value for p."""
     totals: Counter = Counter()
     non_null: Counter = Counter()
     for element in list(graph.nodes.values()) + list(graph.edges.values()):

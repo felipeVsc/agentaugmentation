@@ -20,6 +20,9 @@ from .types import Request, Response
 
 
 def cache_key(cfg: ModelConfig, request: Request) -> str:
+    """Key of a cached LLM response: provider, model, base_url, options, params, system, messages and
+    run_index. The API key and concurrency settings are excluded, so they never change results.
+    """
     payload = {
         "provider": cfg.provider,
         "model": cfg.model,

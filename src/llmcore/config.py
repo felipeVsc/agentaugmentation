@@ -145,3 +145,66 @@ class ModelConfig:
         )
         cfg.validate()
         return cfg
+
+
+# --------------------------------------------------------------------------- Ollama Cloud or on-premise Ollama
+
+OLLAMA_CLOUD_URL = "https://ollama.com"  # exactly as in the configs, so cached cloud responses stay valid
+OLLAMA_LOCAL_URL = "http://localhost:11434"
+
+
+def ollama_url(target: str) -> str:
+    """Server URL of an Ollama target: 'cloud' (Ollama Cloud), 'local' ($OLLAMA_HOST, else localhost:11434) or a URL
+    (an on-premise server elsewhere, e.g. http://gpu-server:11434)."""
+    target = str(target).strip()
+    if target == "cloud":
+        return OLLAMA_CLOUD_URL
+    if target == "local":
+        host = os.environ.get("OLLAMA_HOST") or OLLAMA_LOCAL_URL
+        return (host if "://" in host else f"http://{host}").rstrip("/")
+    if "://" in target:
+        return target.rstrip("/")
+    raise ConfigError(f"ollama: expected 'cloud', 'local' or a URL such as http://host:11434, got {target!r}")
+
+
+def is_ollama_cloud(url: str | None) -> bool:
+    """True for an Ollama Cloud URL."""
+    return bool(url) and "ollama.com" in url
+
+
+def use_ollama(models: list[ModelConfig], target: str | None) -> str | None:
+    """Point every Ollama model of a config at Ollama Cloud or at an on-premise Ollama server.
+
+    The configs of the paper were written for Ollama Cloud (``base_url: https://ollama.com``, ids ``cloud-*``). When
+    ``target`` changes the endpoint of a model, its id changes prefix (``cloud-gpt-oss-20b`` <-> ``local-gpt-oss-20b``)
+    and, on-premise, its cloud pricing is dropped. Returns the endpoint kind ('cloud' or 'local') when at least one
+    model changed endpoint, so the caller can write the runs to a separate output folder; None otherwise.
+    Response caches stay correct either way: the cache key includes the server URL.
+    """
+    if not target:
+        return None
+    url = ollama_url(target)
+    kind = "cloud" if is_ollama_cloud(url) else "local"
+    other = "local" if kind == "cloud" else "cloud"
+    changed = False
+    for m in models:
+        if m.provider != "ollama":
+            continue
+        before = "cloud" if is_ollama_cloud(m.options.get("base_url") or m.base_url) else "local"
+        m.options = {**m.options, "base_url": url}
+        m.base_url = None
+        if before == kind:
+            continue
+        changed = True
+        m.id = f"{kind}-{m.id[len(other) + 1:]}" if m.id.startswith(f"{other}-") else f"{kind}-{m.id}"
+        if kind == "local":
+            m.pricing = None  # cloud prices do not apply to an own server
+    return kind if changed else None
+
+
+def endpoint_output_dir(output_dir: str, kind: str | None) -> str:
+    """``output_dir`` with a ``_<kind>`` suffix when ``use_ollama`` changed the endpoint, else unchanged."""
+    if not kind:
+        return output_dir
+    trailing = "/" if output_dir.endswith("/") else ""
+    return f"{output_dir.rstrip('/')}_{kind}{trailing}"

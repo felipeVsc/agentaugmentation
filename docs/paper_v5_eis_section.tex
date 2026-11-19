@@ -1,0 +1,172 @@
+% Draft: environmental impact of Strategy A and Strategy B (v5, airports, context on).
+% Numbers from notebooks/v5_eis.ipynb (built by notebooks/build_v5_eis_notebook.py); figures in notebooks/figures/v5_eis/.
+% Citation keys to check against the paper's .bib: bahi2026environmental (already cited), ecologits (the EcoLogits
+% reference of the DOLAP study), google2009search (new, entry at the end of this file).
+
+%% ------------------------------------------------------------------------------------------------ Metrics
+\subsubsection{Environmental impact}
+
+\paragraph{Energy of a run.}
+Both strategies are measured with the same formula, the agentic energy multiplier of Bahi et
+al.~\cite{bahi2026environmental}. The energy of a run is
+\[
+E_{\text{run}} = \left(N_{\text{calls}} + N_{\text{tools}} \cdot w_{\text{tool}}\right) \cdot E_{\text{single}},
+\]
+where:
+\begin{itemize}
+\item $N_{\text{calls}}$ is the number of LLM invocations of the run;
+\item $N_{\text{tools}}$ is the number of tool calls (here, web searches);
+\item $E_{\text{single}}$ is the energy of one LLM invocation;
+\item $w_{\text{tool}}$ is the energy of one tool call relative to one LLM invocation.
+\end{itemize}
+$E_{\text{single}}$ is the mean EcoLogits~\cite{ecologits} energy of one LLM call of the given model and strategy, so
+that $N_{\text{calls}} \cdot E_{\text{single}}$ is the EcoLogits energy of the run's calls.
+
+Bahi et al. give $w_{\text{tool}}$ only qualitatively, placing search over very large corpora among the most
+energy-intensive tool calls. We derive it from the energy of one web search, $e_{\text{search}}$:
+\[
+w_{\text{tool}} = \frac{e_{\text{search}}}{E_{\text{single}}}
+\qquad\Longrightarrow\qquad
+E_{\text{run}} = N_{\text{calls}} \cdot E_{\text{single}} + N_{\text{tools}} \cdot e_{\text{search}} .
+\]
+The search provider does not report the energy of its searches. We use $e_{\text{search}} = 0.3$\,Wh, the only public
+per-query figure for a web search engine~\cite{google2009search}. As this figure is dated and refers to another
+service, we also report results for $e_{\text{search}}$ between 0 and 1\,Wh. Searches are counted whether or not our
+local search cache answered them, since a user without the cache would make them.
+
+The two strategies differ only in the values the formula takes:
+\begin{itemize}
+\item \textbf{Strategy~A} makes one call per run (1.00--1.08 on average, with the repair calls of unparsable answers) and
+no tool calls. Its $E_{\text{run}}$ is therefore the EcoLogits energy of its calls.
+\item \textbf{Strategy~B} makes two calls (planning and synthesis) and 1.2--3.0 searches per run on average. Its
+$E_{\text{single}}$ is larger than in Strategy~A, because the synthesis call reads the retrieved evidence.
+\end{itemize}
+
+\paragraph{Composite environmental impact score.}
+As in the DOLAP study, we compute three indicators for each configuration (model and prompt for Strategy~A, model and
+variant for Strategy~B): energy consumption (EC, Wh), global warming potential (GWP, g\,CO$_2$e) and water consumption
+footprint (WCF, mL), each the mean over the configuration's runs. All three use the same formula as the energy:
+\[
+I_{\text{run}} = N_{\text{calls}} \cdot I_{\text{single}} + N_{\text{tools}} \cdot i_{\text{search}},
+\qquad I \in \{\mathrm{EC},\,\mathrm{GWP},\,\mathrm{WCF}\},
+\]
+where $I_{\text{single}}$ is the EcoLogits estimate of the indicator for one LLM call and $i_{\text{search}}$ is its
+value for one search. For EC, $i_{\text{search}} = e_{\text{search}}$. A search has no GWP or WCF estimate, so we take
+the GWP and WCF per Wh of the run's own LLM calls, i.e.\ we assume that a search runs in a data centre comparable to the
+model's. Each indicator $I$ is normalised with a log-based min--max over all configurations of \emph{both} strategies,
+and the three are averaged without weights:
+\[
+\mathrm{EIS} = \frac{1}{3} \sum_{I \in \{\mathrm{EC},\,\mathrm{GWP},\,\mathrm{WCF}\}}
+\frac{\ln I - \ln I_{\min}}{\ln I_{\max} - \ln I_{\min}} .
+\]
+Normalising both strategies together places them on a common scale: 0 is the configuration with the lowest impact in
+this study and 1 the one with the highest. The score is therefore relative to the configurations compared and cannot be
+compared number for number with the scores of the DOLAP study, which were normalised over different models; absolute
+values (Wh per run and per correct answer) are reported alongside it.
+
+%% ------------------------------------------------------------------------------------------------ Results
+\subsection{Environmental impact}
+
+Table~\ref{tab:eis} compares, for each model, its best Strategy~A prompt with the agent, and
+Figure~\ref{fig:eis-energy} shows the energy per run of every approach.
+
+\begin{table}[t]
+\centering
+\label{tab:eis}
+\small
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+& \multicolumn{2}{c}{EC per run (Wh)} & & Searches' & \multicolumn{2}{c}{EC per correct (Wh)} & \multicolumn{2}{c}{EIS} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+Model & A & B & B/A & share & A & B & A & B & F1: A / B \\
+\midrule
+gpt-oss:20b         & 0.009  & 0.69 & 75$\times$  & 97\% & 0.22 & 10.5 & 0.33 & 0.89 & 0.161 / 0.249 (0.38 / 0.50) \\
+gemma4:31b          & 0.0007 & 0.36 & 521$\times$ & 98\% & 0.02 & 10.5 & 0.00 & 0.81 & 0.190 / 0.152 (0.48 / 0.46) \\
+gpt-oss:120b        & 0.033  & 0.97 & 29$\times$  & 91\% & 0.44 & 11.9 & 0.49 & 0.93 & 0.237 / 0.316 (0.40 / 0.62) \\
+mistral-large-3     & 0.13   & 1.67 & 13$\times$  & 54\% & 1.96 & 20.7 & 0.62 & 0.94 & 0.219 / 0.294 (0.39 / 0.54) \\
+deepseek-v4.1-flash & 0.047  & 1.27 & 27$\times$  & 68\% & 0.69 & 34.4 & 0.49 & 0.89 & 0.231 / 0.163 (0.43 / 0.47) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/v5_eis/eis_energy_per_run.pdf}
+\caption{Energy per run (log scale) of each model with Strategy~A (zero-shot and best prompt) and Strategy~B (search,
+search and memory). The open diamond is the agent's LLM energy alone; the bars give the share of the agent's energy
+due to its web searches ($e_{\text{search}} = 0.3$\,Wh).}
+\label{fig:eis-energy}
+\end{figure}
+
+\paragraph{The agent has a much higher impact.}
+Per run, the agent uses 0.36--1.67\,Wh, against 0.0007--0.13\,Wh for the best Strategy~A prompt of the same model:
+13 (mistral-large-3) to 521 (gemma4:31b) times more. Its LLM calls alone account for a factor of 2.3--11, because the
+agent makes two calls instead of one and its synthesis call reads about 3{,}500 input tokens of evidence, against about
+400 for Strategy~A. The rest comes from the searches, which make up 91--98\% of the agent's energy for the two gpt-oss
+models and gemma4:31b, and 54--68\% for mistral-large-3 and deepseek-v4.1-flash: a search costs the same whichever
+model requests it, so it weighs most on the agents built on small models. Per correct answer, the agent needs
+10--34\,Wh, against 0.02--2.0\,Wh for the best Strategy~A prompt. Allowing the agent to use its own knowledge adds no
+search and almost no energy, and it lowers the energy per correct answer of the models whose accuracy it raises
+(gemma4:31b from 10.6 to 6.9\,Wh, deepseek-v4.1-flash from 34.4 to 21.6\,Wh).
+
+\paragraph{Composite score.}
+Over the 55 configurations, Strategy~A scores 0.00--0.62 and Strategy~B 0.81--0.94 (Figure~\ref{fig:eis-composite}):
+every agent configuration has a higher impact than every LLM-only configuration. Within each strategy the model
+remains the main factor, from gemma4:31b (lowest) to mistral-large-3 (highest). GWP does not follow EC exactly across
+models: EcoLogits assigns mistral-large-3 and deepseek-v4.1-flash a lower-carbon electricity mix, so that their GWP per
+Wh is a fifth to a quarter of that of the gpt-oss models. Counting the LLM calls alone, the two strategies would
+overlap (Strategy~B: 0.36--1.00): the separation rests on the energy of the searches.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/v5_eis/eis_composite_heatmap.pdf}
+\caption{Composite EIS of each model and approach, normalised over the 55 configurations of both strategies, with the
+web searches (left) and with the LLM calls only (right).}
+\label{fig:eis-composite}
+\end{figure}
+
+\paragraph{Impact against accuracy.}
+Figure~\ref{fig:eis-f1} relates the EIS of every configuration to its accuracy. For gpt-oss:20b, gpt-oss:120b and
+mistral-large-3, the agent reaches the highest F1 (0.25--0.32, against 0.16--0.24 for their best Strategy~A prompt) at
+the highest impact. For gemma4:31b and deepseek-v4.1-flash, the agent with search alone has both a higher impact and a
+lower F1 than the best Strategy~A prompt; allowing memory brings their F1 level with Strategy~A (0.21 and 0.24), at the
+agent's impact. With abstentions ignored, the agent is ahead for four models (0.50--0.62, and 0.53 for
+deepseek-v4.1-flash with memory, against 0.38--0.43) and level for gemma4:31b (0.46 against 0.48). The configuration
+with the lowest impact, gemma4:31b with Strategy~A, reaches F1 0.19 (0.48 with abstentions ignored), more than
+gpt-oss:20b with any Strategy~A prompt.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/v5_eis/eis_vs_f1.pdf}
+\caption{F1 (left) and F1 with abstentions ignored (right) against the composite EIS, for the 45 Strategy~A
+configurations (small markers; squares: each model's best prompt) and the 10 Strategy~B configurations (diamonds:
+search; triangles: search and memory).}
+\label{fig:eis-f1}
+\end{figure}
+
+\paragraph{Sensitivity to the energy of a search.}
+The size of the gap depends on $e_{\text{search}}$, which we cannot measure (Figure~\ref{fig:eis-sensitivity}). With
+the LLM calls only ($e_{\text{search}} = 0$), the agent uses 2--11 times the energy of the best Strategy~A prompt; at
+$e_{\text{search}} = 0.03$\,Wh, ten times below the Google figure, 5--62 times; at 1\,Wh, 29--1{,}710 times. The
+searches outweigh the LLM calls from 6--30\,mWh per search for the agents built on gemma4:31b and the gpt-oss models,
+and from 0.14--0.26\,Wh for deepseek-v4.1-flash and mistral-large-3. The conclusion that the agent has a higher impact
+than the LLM alone therefore holds for every model and every value of $e_{\text{search}}$; its magnitude does not, and
+a direct measurement of the energy of web search, e.g.\ on a self-hosted search engine, is needed to fix it.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/v5_eis/eis_search_sensitivity.pdf}
+\caption{Energy per run of the agent (search) relative to the best Strategy~A prompt (left) and share of the agent's
+energy due to web searches (right), as functions of the energy of one search. Dashed line: $e_{\text{search}} = 0.3$\,Wh.}
+\label{fig:eis-sensitivity}
+\end{figure}
+
+%% ------------------------------------------------------------------------------------------------ bib entry (new)
+% @misc{google2009search,
+%   author       = {{Google}},
+%   title        = {Powering a {Google} search},
+%   howpublished = {Official Google Blog},
+%   year         = {2009},
+%   month        = jan,
+%   note         = {11 January 2009. \url{https://googleblog.blogspot.com/2009/01/powering-google-search.html}}
+% }

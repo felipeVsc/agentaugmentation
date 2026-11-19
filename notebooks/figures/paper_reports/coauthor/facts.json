@@ -1,0 +1,3334 @@
+{
+ "best_prompt": {
+  "airports": {
+   "deepseek-v4.1-flash": "5-shot + CoT",
+   "gemma4:31b": "zero-shot + CoT",
+   "gpt-oss:120b": "compact",
+   "gpt-oss:20b": "3-shot + CoT",
+   "mistral-large-3": "5-shot + CoT"
+  },
+  "football": {
+   "deepseek-v4.1-flash": "3-shot",
+   "gemma4:31b": "compact",
+   "gpt-oss:120b": "compact",
+   "gpt-oss:20b": "compact",
+   "mistral-large-3": "5-shot"
+  }
+ },
+ "airports_a": {
+  "f1_range": [
+   0.10554089709762533,
+   0.23684210526315788
+  ],
+  "f1_ign_range": [
+   0.2527881040892193,
+   0.5666666666666667
+  ],
+  "precision_range": [
+   0.14468085106382977,
+   0.3953488372093023
+  ],
+  "best": {
+   "deepseek-v4.1-flash": {
+    "f1": 0.231,
+    "precision": 0.271,
+    "f1_ign": 0.426,
+    "abstention": 0.255
+   },
+   "gemma4:31b": {
+    "f1": 0.19,
+    "precision": 0.314,
+    "f1_ign": 0.478,
+    "abstention": 0.568
+   },
+   "gpt-oss:120b": {
+    "f1": 0.237,
+    "precision": 0.254,
+    "f1_ign": 0.404,
+    "abstention": 0.123
+   },
+   "gpt-oss:20b": {
+    "f1": 0.161,
+    "precision": 0.231,
+    "f1_ign": 0.375,
+    "abstention": 0.465
+   },
+   "mistral-large-3": {
+    "f1": 0.219,
+    "precision": 0.24,
+    "f1_ign": 0.387,
+    "abstention": 0.16
+   }
+  },
+  "span_over_models": {
+   "f1": 0.081,
+   "precision": 0.15,
+   "f1_ign": 0.188
+  },
+  "span_over_prompts": {
+   "f1": 0.057,
+   "precision": 0.102,
+   "f1_ign": 0.131
+  },
+  "prompt_range_per_model": {
+   "deepseek-v4.1-flash": 0.044,
+   "gemma4:31b": 0.055,
+   "gpt-oss:120b": 0.071,
+   "gpt-oss:20b": 0.055,
+   "mistral-large-3": 0.062
+  },
+  "abstention_range": [
+   0.01646090534979424,
+   0.6584362139917695
+  ],
+  "user_tokens": {
+   "compact": 130.0,
+   "1-shot": 277.0,
+   "3-shot": 354.0,
+   "5-shot": 424.0,
+   "1-shot + CoT": 329.0,
+   "3-shot + CoT": 406.0,
+   "5-shot + CoT": 476.0,
+   "zero-shot": 241.0,
+   "zero-shot + CoT": 293.0
+  },
+  "mean_over_models_per_prompt": {
+   "f1": {
+    "compact": 0.18,
+    "1-shot": 0.179,
+    "3-shot": 0.173,
+    "5-shot": 0.179,
+    "1-shot + CoT": 0.181,
+    "3-shot + CoT": 0.178,
+    "5-shot + CoT": 0.181,
+    "zero-shot": 0.174,
+    "zero-shot + CoT": 0.182
+   },
+   "precision": {
+    "compact": 0.195,
+    "1-shot": 0.264,
+    "3-shot": 0.244,
+    "5-shot": 0.255,
+    "1-shot + CoT": 0.27,
+    "3-shot + CoT": 0.259,
+    "5-shot + CoT": 0.257,
+    "zero-shot": 0.263,
+    "zero-shot + CoT": 0.277
+   },
+   "f1_ign": {
+    "compact": 0.324,
+    "1-shot": 0.415,
+    "3-shot": 0.39,
+    "5-shot": 0.403,
+    "1-shot + CoT": 0.423,
+    "3-shot + CoT": 0.41,
+    "5-shot + CoT": 0.407,
+    "zero-shot": 0.411,
+    "zero-shot + CoT": 0.43
+   }
+  },
+  "context": {
+   "pairs": 85,
+   "gpt-oss:20b f1": [
+    -0.054,
+    -0.09,
+    -0.022
+   ],
+   "gpt-oss:20b precision": [
+    -0.03,
+    -0.069,
+    0.008
+   ],
+   "gpt-oss:20b f1_ign": [
+    -0.039,
+    -0.091,
+    0.01
+   ],
+   "gemma4:31b f1": [
+    -0.06,
+    -0.095,
+    -0.024
+   ],
+   "gemma4:31b precision": [
+    -0.001,
+    -0.043,
+    0.041
+   ],
+   "gemma4:31b f1_ign": [
+    -0.001,
+    -0.049,
+    0.046
+   ],
+   "gpt-oss:120b f1": [
+    -0.089,
+    -0.125,
+    -0.052
+   ],
+   "gpt-oss:120b precision": [
+    -0.029,
+    -0.074,
+    0.017
+   ],
+   "gpt-oss:120b f1_ign": [
+    -0.029,
+    -0.073,
+    0.017
+   ],
+   "mistral-large-3 f1": [
+    -0.072,
+    -0.107,
+    -0.035
+   ],
+   "mistral-large-3 precision": [
+    -0.053,
+    -0.089,
+    -0.015
+   ],
+   "mistral-large-3 f1_ign": [
+    -0.058,
+    -0.098,
+    -0.016
+   ],
+   "deepseek-v4.1-flash f1": [
+    -0.162,
+    -0.196,
+    -0.124
+   ],
+   "deepseek-v4.1-flash precision": [
+    -0.121,
+    -0.16,
+    -0.081
+   ],
+   "deepseek-v4.1-flash f1_ign": [
+    -0.123,
+    -0.163,
+    -0.082
+   ]
+  },
+  "difficulty_pooled": {
+   "f1": {
+    "hard": 0.195,
+    "middle": 0.157,
+    "easy": 0.275
+   },
+   "precision": {
+    "hard": 0.243,
+    "middle": 0.197,
+    "easy": 0.329
+   },
+   "f1_ign": {
+    "hard": 0.391,
+    "middle": 0.329,
+    "easy": 0.495
+   },
+   "tasks": {
+    "hard": 405,
+    "middle": 405,
+    "easy": 405
+   }
+  },
+  "energy_mean": {
+   "deepseek-v4.1-flash": 0.0404,
+   "gemma4:31b": 0.001,
+   "gpt-oss:120b": 0.0232,
+   "gpt-oss:20b": 0.0085,
+   "mistral-large-3": 0.0957
+  },
+  "energy_prompt_ratio": {
+   "deepseek-v4.1-flash": 1.5,
+   "gemma4:31b": 4.4,
+   "gpt-oss:120b": 1.6,
+   "gpt-oss:20b": 1.7,
+   "mistral-large-3": 2.7
+  },
+  "prf": {
+   "precision": [
+    0.145,
+    0.395
+   ],
+   "recall": [
+    0.082,
+    0.222
+   ],
+   "abstention": [
+    0.016,
+    0.658
+   ]
+  },
+  "prf_per_model_mean": {
+   "precision": {
+    "deepseek-v4.1-flash": 0.256,
+    "gemma4:31b": 0.269,
+    "gpt-oss:120b": 0.337,
+    "gpt-oss:20b": 0.187,
+    "mistral-large-3": 0.219
+   },
+   "recall": {
+    "deepseek-v4.1-flash": 0.175,
+    "gemma4:31b": 0.115,
+    "gpt-oss:120b": 0.138,
+    "gpt-oss:20b": 0.111,
+    "mistral-large-3": 0.177
+   },
+   "abstention": {
+    "deepseek-v4.1-flash": 0.305,
+    "gemma4:31b": 0.567,
+    "gpt-oss:120b": 0.577,
+    "gpt-oss:20b": 0.395,
+    "mistral-large-3": 0.185
+   }
+  }
+ },
+ "football_a": {
+  "f1_range": [
+   0.054474708171206226,
+   0.42792792792792794
+  ],
+  "f1_ign_range": [
+   0.40229885057471265,
+   0.8
+  ],
+  "precision_range": [
+   0.2517985611510791,
+   0.6666666666666666
+  ],
+  "best": {
+   "deepseek-v4.1-flash": {
+    "f1": 0.428,
+    "precision": 0.463,
+    "f1_ign": 0.633,
+    "abstention": 0.142
+   },
+   "gemma4:31b": {
+    "f1": 0.292,
+    "precision": 0.399,
+    "f1_ign": 0.57,
+    "abstention": 0.423
+   },
+   "gpt-oss:120b": {
+    "f1": 0.185,
+    "precision": 0.252,
+    "f1_ign": 0.402,
+    "abstention": 0.418
+   },
+   "gpt-oss:20b": {
+    "f1": 0.25,
+    "precision": 0.274,
+    "f1_ign": 0.43,
+    "abstention": 0.159
+   },
+   "mistral-large-3": {
+    "f1": 0.413,
+    "precision": 0.486,
+    "f1_ign": 0.654,
+    "abstention": 0.259
+   }
+  },
+  "span_over_models": {
+   "f1": 0.282,
+   "precision": 0.176,
+   "f1_ign": 0.161
+  },
+  "span_over_prompts": {
+   "f1": 0.159,
+   "precision": 0.255,
+   "f1_ign": 0.249
+  },
+  "prompt_range_per_model": {
+   "deepseek-v4.1-flash": 0.137,
+   "gemma4:31b": 0.216,
+   "gpt-oss:120b": 0.131,
+   "gpt-oss:20b": 0.147,
+   "mistral-large-3": 0.163
+  },
+  "abstention_range": [
+   0.09623430962343096,
+   0.9330543933054394
+  ],
+  "user_tokens": {
+   "compact": 117.0,
+   "1-shot": 259.0,
+   "3-shot": 333.0,
+   "5-shot": 402.0,
+   "1-shot + CoT": 311.0,
+   "3-shot + CoT": 385.0,
+   "5-shot + CoT": 454.0,
+   "zero-shot": 228.0,
+   "zero-shot + CoT": 280.0
+  },
+  "mean_over_models_per_prompt": {
+   "f1": {
+    "compact": 0.273,
+    "1-shot": 0.183,
+    "3-shot": 0.241,
+    "5-shot": 0.254,
+    "1-shot + CoT": 0.181,
+    "3-shot + CoT": 0.235,
+    "5-shot + CoT": 0.238,
+    "zero-shot": 0.183,
+    "zero-shot + CoT": 0.187
+   },
+   "precision": {
+    "compact": 0.323,
+    "1-shot": 0.441,
+    "3-shot": 0.518,
+    "5-shot": 0.514,
+    "1-shot + CoT": 0.448,
+    "3-shot + CoT": 0.547,
+    "5-shot + CoT": 0.525,
+    "zero-shot": 0.38,
+    "zero-shot + CoT": 0.439
+   },
+   "f1_ign": {
+    "compact": 0.483,
+    "1-shot": 0.611,
+    "3-shot": 0.678,
+    "5-shot": 0.675,
+    "1-shot + CoT": 0.616,
+    "3-shot + CoT": 0.703,
+    "5-shot + CoT": 0.683,
+    "zero-shot": 0.549,
+    "zero-shot + CoT": 0.61
+   }
+  },
+  "context": {
+   "pairs": 33,
+   "gpt-oss:20b f1": [
+    -0.055,
+    -0.118,
+    0.015
+   ],
+   "gpt-oss:20b precision": [
+    -0.02,
+    -0.147,
+    0.117
+   ],
+   "gpt-oss:20b f1_ign": [
+    -0.02,
+    -0.15,
+    0.116
+   ],
+   "gemma4:31b f1": [
+    0.026,
+    -0.016,
+    0.068
+   ],
+   "gemma4:31b precision": [
+    0.033,
+    -0.038,
+    0.11
+   ],
+   "gemma4:31b f1_ign": [
+    0.032,
+    -0.039,
+    0.104
+   ],
+   "gpt-oss:120b f1": [
+    -0.052,
+    -0.106,
+    -0.002
+   ],
+   "gpt-oss:120b precision": [
+    0.005,
+    -0.146,
+    0.155
+   ],
+   "gpt-oss:120b f1_ign": [
+    0.005,
+    -0.16,
+    0.155
+   ],
+   "mistral-large-3 f1": [
+    0.015,
+    -0.035,
+    0.064
+   ],
+   "mistral-large-3 precision": [
+    0.006,
+    -0.053,
+    0.065
+   ],
+   "mistral-large-3 f1_ign": [
+    0.006,
+    -0.058,
+    0.068
+   ],
+   "deepseek-v4.1-flash f1": [
+    0.033,
+    -0.015,
+    0.078
+   ],
+   "deepseek-v4.1-flash precision": [
+    0.037,
+    -0.013,
+    0.084
+   ],
+   "deepseek-v4.1-flash f1_ign": [
+    0.036,
+    -0.012,
+    0.082
+   ]
+  },
+  "difficulty_pooled": {
+   "f1": {
+    "easy": 0.277,
+    "hard": 0.399,
+    "middle": 0.269
+   },
+   "precision": {
+    "easy": 0.338,
+    "hard": 0.453,
+    "middle": 0.335
+   },
+   "f1_ign": {
+    "easy": 0.505,
+    "hard": 0.623,
+    "middle": 0.501
+   },
+   "tasks": {
+    "easy": 400,
+    "hard": 400,
+    "middle": 395
+   }
+  },
+  "energy_mean": {
+   "deepseek-v4.1-flash": 0.0402,
+   "gemma4:31b": 0.0008,
+   "gpt-oss:120b": 0.0178,
+   "gpt-oss:20b": 0.0065,
+   "mistral-large-3": 0.077
+  },
+  "energy_prompt_ratio": {
+   "deepseek-v4.1-flash": 1.9,
+   "gemma4:31b": 5.9,
+   "gpt-oss:120b": 1.7,
+   "gpt-oss:20b": 2.6,
+   "mistral-large-3": 1.7
+  },
+  "prf": {
+   "precision": [
+    0.252,
+    0.667
+   ],
+   "recall": [
+    0.029,
+    0.397
+   ],
+   "abstention": [
+    0.096,
+    0.933
+   ]
+  },
+  "prf_per_model_mean": {
+   "precision": {
+    "deepseek-v4.1-flash": 0.446,
+    "gemma4:31b": 0.459,
+    "gpt-oss:120b": 0.492,
+    "gpt-oss:20b": 0.502,
+    "mistral-large-3": 0.397
+   },
+   "recall": {
+    "deepseek-v4.1-flash": 0.33,
+    "gemma4:31b": 0.079,
+    "gpt-oss:120b": 0.06,
+    "gpt-oss:20b": 0.105,
+    "mistral-large-3": 0.282
+   },
+   "abstention": {
+    "deepseek-v4.1-flash": 0.261,
+    "gemma4:31b": 0.819,
+    "gpt-oss:120b": 0.853,
+    "gpt-oss:20b": 0.759,
+    "mistral-large-3": 0.285
+   }
+  }
+ },
+ "airports_b": {
+  "scores": {
+   "deepseek-v4.1-flash | A zero-shot": [
+    0.206,
+    0.446,
+    0.44,
+    0.287
+   ],
+   "gemma4:31b | A zero-shot": [
+    0.175,
+    0.462,
+    0.588,
+    0.3
+   ],
+   "gpt-oss:120b | A zero-shot": [
+    0.196,
+    0.524,
+    0.617,
+    0.355
+   ],
+   "gpt-oss:20b | A zero-shot": [
+    0.106,
+    0.256,
+    0.44,
+    0.147
+   ],
+   "mistral-large-3 | A zero-shot": [
+    0.187,
+    0.366,
+    0.284,
+    0.224
+   ],
+   "deepseek-v4.1-flash | A best": [
+    0.231,
+    0.426,
+    0.255,
+    0.271
+   ],
+   "gemma4:31b | A best": [
+    0.19,
+    0.478,
+    0.568,
+    0.314
+   ],
+   "gpt-oss:120b | A best": [
+    0.237,
+    0.404,
+    0.123,
+    0.254
+   ],
+   "gpt-oss:20b | A best": [
+    0.161,
+    0.375,
+    0.465,
+    0.231
+   ],
+   "mistral-large-3 | A best": [
+    0.219,
+    0.387,
+    0.16,
+    0.24
+   ],
+   "deepseek-v4.1-flash | B search": [
+    0.163,
+    0.466,
+    0.634,
+    0.303
+   ],
+   "gemma4:31b | B search": [
+    0.152,
+    0.455,
+    0.65,
+    0.294
+   ],
+   "gpt-oss:120b | B search": [
+    0.316,
+    0.624,
+    0.465,
+    0.454
+   ],
+   "gpt-oss:20b | B search": [
+    0.249,
+    0.503,
+    0.412,
+    0.336
+   ],
+   "mistral-large-3 | B search": [
+    0.294,
+    0.541,
+    0.346,
+    0.371
+   ],
+   "deepseek-v4.1-flash | B search + memory": [
+    0.238,
+    0.534,
+    0.514,
+    0.364
+   ],
+   "gemma4:31b | B search + memory": [
+    0.205,
+    0.461,
+    0.477,
+    0.299
+   ],
+   "gpt-oss:120b | B search + memory": [
+    0.324,
+    0.593,
+    0.374,
+    0.421
+   ],
+   "gpt-oss:20b | B search + memory": [
+    0.256,
+    0.464,
+    0.263,
+    0.302
+   ],
+   "mistral-large-3 | B search + memory": [
+    0.265,
+    0.475,
+    0.259,
+    0.311
+   ]
+  },
+  "pooled": {
+   "f1": {
+    "A zero-shot": 0.174,
+    "A best": 0.21,
+    "B search": 0.239,
+    "B search + memory": 0.259
+   },
+   "f1_ign": {
+    "A zero-shot": 0.402,
+    "A best": 0.41,
+    "B search": 0.529,
+    "B search + memory": 0.504
+   },
+   "precision": {
+    "A zero-shot": 0.252,
+    "A best": 0.258,
+    "B search": 0.36,
+    "B search + memory": 0.337
+   },
+   "abstention": {
+    "A zero-shot": 0.474,
+    "A best": 0.314,
+    "B search": 0.501,
+    "B search + memory": 0.378
+   }
+  },
+  "paired": [
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search",
+    "score": "f1",
+    "diff": 0.088,
+    "lo": 0.011,
+    "hi": 0.156
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search",
+    "score": "precision",
+    "diff": 0.105,
+    "lo": -0.003,
+    "hi": 0.201
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": 0.128,
+    "lo": -0.003,
+    "hi": 0.251
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": 0.095,
+    "lo": 0.031,
+    "hi": 0.152
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": 0.071,
+    "lo": -0.019,
+    "hi": 0.146
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": 0.089,
+    "lo": -0.023,
+    "hi": 0.183
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.007,
+    "lo": -0.03,
+    "hi": 0.054
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": -0.034,
+    "lo": -0.083,
+    "hi": 0.026
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": -0.039,
+    "lo": -0.095,
+    "hi": 0.031
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.037,
+    "lo": -0.115,
+    "hi": 0.036
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search",
+    "score": "precision",
+    "diff": -0.02,
+    "lo": -0.156,
+    "hi": 0.107
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": -0.024,
+    "lo": -0.174,
+    "hi": 0.126
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": 0.016,
+    "lo": -0.055,
+    "hi": 0.09
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": -0.015,
+    "lo": -0.12,
+    "hi": 0.092
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": -0.018,
+    "lo": -0.143,
+    "hi": 0.11
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.053,
+    "lo": 0.02,
+    "hi": 0.089
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.005,
+    "lo": -0.057,
+    "hi": 0.069
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.006,
+    "lo": -0.066,
+    "hi": 0.085
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search",
+    "score": "f1",
+    "diff": 0.08,
+    "lo": 0.013,
+    "hi": 0.148
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search",
+    "score": "precision",
+    "diff": 0.2,
+    "lo": 0.117,
+    "hi": 0.288
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": 0.22,
+    "lo": 0.131,
+    "hi": 0.315
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": 0.087,
+    "lo": 0.018,
+    "hi": 0.15
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": 0.168,
+    "lo": 0.088,
+    "hi": 0.244
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": 0.188,
+    "lo": 0.1,
+    "hi": 0.272
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.008,
+    "lo": -0.033,
+    "hi": 0.048
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": -0.033,
+    "lo": -0.09,
+    "hi": 0.025
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": -0.032,
+    "lo": -0.088,
+    "hi": 0.025
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search",
+    "score": "f1",
+    "diff": 0.074,
+    "lo": 0.013,
+    "hi": 0.138
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search",
+    "score": "precision",
+    "diff": 0.131,
+    "lo": 0.052,
+    "hi": 0.213
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": 0.154,
+    "lo": 0.064,
+    "hi": 0.247
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": 0.046,
+    "lo": -0.016,
+    "hi": 0.105
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": 0.071,
+    "lo": 0.002,
+    "hi": 0.142
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": 0.087,
+    "lo": 0.003,
+    "hi": 0.172
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": -0.029,
+    "lo": -0.06,
+    "hi": 0.001
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": -0.06,
+    "lo": -0.099,
+    "hi": -0.023
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": -0.067,
+    "lo": -0.11,
+    "hi": -0.025
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.068,
+    "lo": -0.137,
+    "hi": 0.001
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search",
+    "score": "precision",
+    "diff": 0.033,
+    "lo": -0.069,
+    "hi": 0.145
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": 0.039,
+    "lo": -0.089,
+    "hi": 0.167
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": 0.007,
+    "lo": -0.054,
+    "hi": 0.078
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": 0.094,
+    "lo": 0.01,
+    "hi": 0.186
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": 0.108,
+    "lo": 0.012,
+    "hi": 0.214
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.076,
+    "lo": 0.036,
+    "hi": 0.118
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.061,
+    "lo": -0.006,
+    "hi": 0.128
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.069,
+    "lo": -0.006,
+    "hi": 0.148
+   }
+  ],
+  "entity": {
+   "named": {
+    "gpt-oss:20b": 0.362,
+    "gemma4:31b": 0.347,
+    "gpt-oss:120b": 0.306,
+    "mistral-large-3": 0.587,
+    "deepseek-v4.1-flash": 0.365
+   },
+   "match": {
+    "gpt-oss:20b": 0.084,
+    "gemma4:31b": 0.119,
+    "gpt-oss:120b": 0.145,
+    "mistral-large-3": 0.204,
+    "deepseek-v4.1-flash": 0.167
+   },
+   "answered": {
+    "gpt-oss:20b": 0.392,
+    "gemma4:31b": 0.269,
+    "gpt-oss:120b": 0.351,
+    "mistral-large-3": 0.521,
+    "deepseek-v4.1-flash": 0.28
+   }
+  },
+  "entity_f1": {
+   "gpt-oss:20b | other runs": [
+    0.154,
+    0.29,
+    0.45
+   ],
+   "gpt-oss:20b | right entity": [
+    0.472,
+    0.556,
+    0.714
+   ],
+   "gemma4:31b | other runs": [
+    0.106,
+    0.304,
+    0.466
+   ],
+   "gemma4:31b | right entity": [
+    0.365,
+    0.443,
+    0.614
+   ],
+   "gpt-oss:120b | other runs": [
+    0.202,
+    0.439,
+    0.61
+   ],
+   "gpt-oss:120b | right entity": [
+    0.491,
+    0.623,
+    0.768
+   ],
+   "mistral-large-3 | other runs": [
+    0.209,
+    0.333,
+    0.5
+   ],
+   "mistral-large-3 | right entity": [
+    0.438,
+    0.5,
+    0.667
+   ],
+   "deepseek-v4.1-flash | other runs": [
+    0.074,
+    0.218,
+    0.358
+   ],
+   "deepseek-v4.1-flash | right entity": [
+    0.396,
+    0.5,
+    0.667
+   ]
+  },
+  "memory_sources": {
+   "gpt-oss:20b | cites the evidence": [
+    0.809,
+    0.355,
+    313
+   ],
+   "gpt-oss:20b | no citation (memory)": [
+    0.191,
+    0.311,
+    74
+   ],
+   "gemma4:31b | cites the evidence": [
+    0.779,
+    0.356,
+    250
+   ],
+   "gemma4:31b | no citation (memory)": [
+    0.221,
+    0.169,
+    71
+   ],
+   "gpt-oss:120b | cites the evidence": [
+    0.813,
+    0.498,
+    269
+   ],
+   "gpt-oss:120b | no citation (memory)": [
+    0.187,
+    0.419,
+    62
+   ],
+   "mistral-large-3 | cites the evidence": [
+    0.924,
+    0.352,
+    426
+   ],
+   "mistral-large-3 | no citation (memory)": [
+    0.076,
+    0.086,
+    35
+   ],
+   "deepseek-v4.1-flash | cites the evidence": [
+    0.878,
+    0.414,
+    244
+   ],
+   "deepseek-v4.1-flash | no citation (memory)": [
+    0.122,
+    0.059,
+    34
+   ]
+  },
+  "strata": {
+   "A best": {
+    "f1": {
+     "high/high": 0.43,
+     "high/low": 0.12,
+     "low/mid": 0.06,
+     "mid/high": 0.19,
+     "high/mid": 0.36,
+     "low/low": 0.02,
+     "mid/low": 0.25,
+     "mid/mid": 0.35,
+     "low/high": 0.07
+    },
+    "precision": {
+     "high/high": 0.49,
+     "high/low": 0.15,
+     "low/mid": 0.07,
+     "mid/high": 0.22,
+     "high/mid": 0.41,
+     "low/low": 0.03,
+     "mid/low": 0.3,
+     "mid/mid": 0.41,
+     "low/high": 0.08
+    },
+    "f1_ign": {
+     "high/high": 0.65,
+     "high/low": 0.27,
+     "low/mid": 0.14,
+     "mid/high": 0.36,
+     "high/mid": 0.58,
+     "low/low": 0.06,
+     "mid/low": 0.46,
+     "mid/mid": 0.58,
+     "low/high": 0.15
+    },
+    "tasks": {
+     "high/high": 135,
+     "high/low": 135,
+     "low/mid": 135,
+     "mid/high": 135,
+     "high/mid": 135,
+     "low/low": 135,
+     "mid/low": 135,
+     "mid/mid": 135,
+     "low/high": 135
+    }
+   },
+   "B search": {
+    "f1": {
+     "high/high": 0.44,
+     "high/low": 0.13,
+     "low/mid": 0.12,
+     "mid/high": 0.3,
+     "high/mid": 0.49,
+     "low/low": 0.03,
+     "mid/low": 0.2,
+     "mid/mid": 0.2,
+     "low/high": 0.05
+    },
+    "precision": {
+     "high/high": 0.53,
+     "high/low": 0.3,
+     "low/mid": 0.26,
+     "mid/high": 0.35,
+     "high/mid": 0.54,
+     "low/low": 0.12,
+     "mid/low": 0.32,
+     "mid/mid": 0.23,
+     "low/high": 0.12
+    },
+    "f1_ign": {
+     "high/high": 0.69,
+     "high/low": 0.46,
+     "low/mid": 0.42,
+     "mid/high": 0.51,
+     "high/mid": 0.71,
+     "low/low": 0.21,
+     "mid/low": 0.49,
+     "mid/mid": 0.37,
+     "low/high": 0.21
+    },
+    "tasks": {
+     "high/high": 135,
+     "high/low": 135,
+     "low/mid": 135,
+     "mid/high": 135,
+     "high/mid": 135,
+     "low/low": 135,
+     "mid/low": 135,
+     "mid/mid": 135,
+     "low/high": 135
+    }
+   },
+   "B search + memory": {
+    "f1": {
+     "high/high": 0.55,
+     "high/low": 0.12,
+     "low/mid": 0.18,
+     "mid/high": 0.28,
+     "high/mid": 0.55,
+     "low/low": 0.04,
+     "mid/low": 0.18,
+     "mid/mid": 0.21,
+     "low/high": 0.08
+    },
+    "precision": {
+     "high/high": 0.62,
+     "high/low": 0.2,
+     "low/mid": 0.29,
+     "mid/high": 0.3,
+     "high/mid": 0.58,
+     "low/low": 0.05,
+     "mid/low": 0.29,
+     "mid/mid": 0.23,
+     "low/high": 0.15
+    },
+    "f1_ign": {
+     "high/high": 0.77,
+     "high/low": 0.34,
+     "low/mid": 0.45,
+     "mid/high": 0.47,
+     "high/mid": 0.74,
+     "low/low": 0.1,
+     "mid/low": 0.44,
+     "mid/mid": 0.38,
+     "low/high": 0.26
+    },
+    "tasks": {
+     "high/high": 135,
+     "high/low": 135,
+     "low/mid": 135,
+     "mid/high": 135,
+     "high/mid": 135,
+     "low/low": 135,
+     "mid/low": 135,
+     "mid/mid": 135,
+     "low/high": 135
+    }
+   }
+  },
+  "energy": {
+   "gpt-oss:20b": {
+    "search": 0.691,
+    "memory": 0.691,
+    "llm_search": 0.021,
+    "searches": 2.23,
+    "x_A_mean": 81.0
+   },
+   "gemma4:31b": {
+    "search": 0.362,
+    "memory": 0.362,
+    "llm_search": 0.008,
+    "searches": 1.18,
+    "x_A_mean": 369.0
+   },
+   "gpt-oss:120b": {
+    "search": 0.966,
+    "memory": 0.967,
+    "llm_search": 0.086,
+    "searches": 2.93,
+    "x_A_mean": 42.0
+   },
+   "mistral-large-3": {
+    "search": 1.671,
+    "memory": 1.753,
+    "llm_search": 0.771,
+    "searches": 3.0,
+    "x_A_mean": 17.0
+   },
+   "deepseek-v4.1-flash": {
+    "search": 1.272,
+    "memory": 1.276,
+    "llm_search": 0.408,
+    "searches": 2.88,
+    "x_A_mean": 32.0
+   }
+  },
+  "properties": {
+   "country | A best": [
+    0.3,
+    0.34,
+    0.51,
+    0.24
+   ],
+   "commercial_flights | A best": [
+    0.05,
+    0.07,
+    0.12,
+    0.4
+   ],
+   "icao | A best": [
+    0.09,
+    0.11,
+    0.21,
+    0.36
+   ],
+   "runwaysLength | A best": [
+    0.12,
+    0.14,
+    0.25,
+    0.3
+   ],
+   "type | A best": [
+    0.87,
+    1.0,
+    1.0,
+    0.23
+   ],
+   "altitude | A best": [
+    0.16,
+    0.2,
+    0.33,
+    0.33
+   ],
+   "source | A best": [
+    0.7,
+    0.79,
+    0.89,
+    0.22
+   ],
+   "runways | A best": [
+    0.62,
+    0.67,
+    0.8,
+    0.14
+   ],
+   "longitude | A best": [
+    0.03,
+    0.04,
+    0.07,
+    0.26
+   ],
+   "runwaysWidth | A best": [
+    0.17,
+    0.23,
+    0.37,
+    0.41
+   ],
+   "distCity | A best": [
+    0.26,
+    0.32,
+    0.48,
+    0.31
+   ],
+   "city | A best": [
+    0.05,
+    0.06,
+    0.11,
+    0.28
+   ],
+   "tz_database_timezone | A best": [
+    0.19,
+    0.22,
+    0.36,
+    0.28
+   ],
+   "latitude | A best": [
+    0.0,
+    0.0,
+    0.0,
+    0.34
+   ],
+   "country | B search": [
+    0.45,
+    0.54,
+    0.7,
+    0.3
+   ],
+   "commercial_flights | B search": [
+    0.07,
+    0.18,
+    0.31,
+    0.77
+   ],
+   "icao | B search": [
+    0.27,
+    0.36,
+    0.53,
+    0.4
+   ],
+   "runwaysLength | B search": [
+    0.2,
+    0.25,
+    0.39,
+    0.34
+   ],
+   "type | B search": [
+    0.57,
+    0.62,
+    0.76,
+    0.13
+   ],
+   "altitude | B search": [
+    0.42,
+    0.5,
+    0.67,
+    0.27
+   ],
+   "source | B search": [
+    0.56,
+    0.91,
+    0.95,
+    0.56
+   ],
+   "runways | B search": [
+    0.21,
+    0.25,
+    0.4,
+    0.27
+   ],
+   "longitude | B search": [
+    0.22,
+    0.32,
+    0.48,
+    0.46
+   ],
+   "runwaysWidth | B search": [
+    0.56,
+    0.66,
+    0.8,
+    0.25
+   ],
+   "distCity | B search": [
+    0.04,
+    0.06,
+    0.11,
+    0.36
+   ],
+   "city | B search": [
+    0.08,
+    0.11,
+    0.2,
+    0.4
+   ],
+   "tz_database_timezone | B search": [
+    0.28,
+    0.39,
+    0.56,
+    0.44
+   ],
+   "latitude | B search": [
+    0.04,
+    0.06,
+    0.12,
+    0.54
+   ],
+   "country | B search + memory": [
+    0.39,
+    0.45,
+    0.62,
+    0.24
+   ],
+   "commercial_flights | B search + memory": [
+    0.1,
+    0.15,
+    0.27,
+    0.55
+   ],
+   "icao | B search + memory": [
+    0.24,
+    0.31,
+    0.48,
+    0.36
+   ],
+   "runwaysLength | B search + memory": [
+    0.16,
+    0.2,
+    0.34,
+    0.33
+   ],
+   "type | B search + memory": [
+    0.92,
+    0.93,
+    0.96,
+    0.03
+   ],
+   "altitude | B search + memory": [
+    0.44,
+    0.5,
+    0.67,
+    0.2
+   ],
+   "source | B search + memory": [
+    0.71,
+    0.97,
+    0.98,
+    0.42
+   ],
+   "runways | B search + memory": [
+    0.22,
+    0.26,
+    0.41,
+    0.22
+   ],
+   "longitude | B search + memory": [
+    0.25,
+    0.32,
+    0.48,
+    0.37
+   ],
+   "runwaysWidth | B search + memory": [
+    0.53,
+    0.62,
+    0.77,
+    0.25
+   ],
+   "distCity | B search + memory": [
+    0.08,
+    0.1,
+    0.18,
+    0.25
+   ],
+   "city | B search + memory": [
+    0.08,
+    0.1,
+    0.18,
+    0.31
+   ],
+   "tz_database_timezone | B search + memory": [
+    0.25,
+    0.29,
+    0.45,
+    0.24
+   ],
+   "latitude | B search + memory": [
+    0.04,
+    0.06,
+    0.11,
+    0.49
+   ]
+  }
+ },
+ "football_b": {
+  "scores": {
+   "deepseek-v4.1-flash | A zero-shot": [
+    0.368,
+    0.599,
+    0.247,
+    0.428
+   ],
+   "gemma4:31b | A zero-shot": [
+    0.088,
+    0.522,
+    0.858,
+    0.353
+   ],
+   "gpt-oss:120b | A zero-shot": [
+    0.06,
+    0.471,
+    0.891,
+    0.308
+   ],
+   "gpt-oss:20b | A zero-shot": [
+    0.103,
+    0.609,
+    0.866,
+    0.438
+   ],
+   "mistral-large-3 | A zero-shot": [
+    0.294,
+    0.545,
+    0.351,
+    0.374
+   ],
+   "deepseek-v4.1-flash | A best": [
+    0.428,
+    0.633,
+    0.142,
+    0.463
+   ],
+   "gemma4:31b | A best": [
+    0.292,
+    0.57,
+    0.423,
+    0.399
+   ],
+   "gpt-oss:120b | A best": [
+    0.185,
+    0.402,
+    0.418,
+    0.252
+   ],
+   "gpt-oss:20b | A best": [
+    0.25,
+    0.43,
+    0.159,
+    0.274
+   ],
+   "mistral-large-3 | A best": [
+    0.413,
+    0.654,
+    0.259,
+    0.486
+   ],
+   "deepseek-v4.1-flash | B search": [
+    0.067,
+    0.45,
+    0.87,
+    0.29
+   ],
+   "gemma4:31b | B search": [
+    0.128,
+    0.426,
+    0.69,
+    0.27
+   ],
+   "gpt-oss:120b | B search": [
+    0.156,
+    0.403,
+    0.552,
+    0.252
+   ],
+   "gpt-oss:20b | B search": [
+    0.138,
+    0.358,
+    0.54,
+    0.218
+   ],
+   "mistral-large-3 | B search": [
+    0.167,
+    0.423,
+    0.548,
+    0.269
+   ],
+   "deepseek-v4.1-flash | B search + memory": [
+    0.118,
+    0.507,
+    0.791,
+    0.34
+   ],
+   "gemma4:31b | B search + memory": [
+    0.195,
+    0.496,
+    0.582,
+    0.33
+   ],
+   "gpt-oss:120b | B search + memory": [
+    0.2,
+    0.479,
+    0.536,
+    0.315
+   ],
+   "gpt-oss:20b | B search + memory": [
+    0.187,
+    0.428,
+    0.477,
+    0.272
+   ],
+   "mistral-large-3 | B search + memory": [
+    0.232,
+    0.476,
+    0.41,
+    0.312
+   ]
+  },
+  "pooled": {
+   "f1": {
+    "A zero-shot": 0.208,
+    "A best": 0.317,
+    "B search": 0.134,
+    "B search + memory": 0.189
+   },
+   "f1_ign": {
+    "A zero-shot": 0.567,
+    "A best": 0.55,
+    "B search": 0.404,
+    "B search + memory": 0.472
+   },
+   "precision": {
+    "A zero-shot": 0.396,
+    "A best": 0.379,
+    "B search": 0.253,
+    "B search + memory": 0.309
+   },
+   "abstention": {
+    "A zero-shot": 0.643,
+    "A best": 0.28,
+    "B search": 0.64,
+    "B search + memory": 0.559
+   }
+  },
+  "paired": [
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.112,
+    "lo": -0.183,
+    "hi": -0.038
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search",
+    "score": "precision",
+    "diff": -0.055,
+    "lo": -0.147,
+    "hi": 0.045
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": -0.071,
+    "lo": -0.193,
+    "hi": 0.058
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": -0.063,
+    "lo": -0.138,
+    "hi": 0.007
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": -0.002,
+    "lo": -0.094,
+    "hi": 0.088
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": -0.002,
+    "lo": -0.12,
+    "hi": 0.106
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.049,
+    "lo": -0.002,
+    "hi": 0.104
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.054,
+    "lo": -0.019,
+    "hi": 0.137
+   },
+   {
+    "model": "gpt-oss:20b",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.069,
+    "lo": -0.025,
+    "hi": 0.174
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.164,
+    "lo": -0.238,
+    "hi": -0.086
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search",
+    "score": "precision",
+    "diff": -0.128,
+    "lo": -0.254,
+    "hi": 0.005
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": -0.144,
+    "lo": -0.297,
+    "hi": 0.006
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": -0.097,
+    "lo": -0.174,
+    "hi": -0.015
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": -0.069,
+    "lo": -0.181,
+    "hi": 0.053
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": -0.074,
+    "lo": -0.195,
+    "hi": 0.055
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.067,
+    "lo": 0.025,
+    "hi": 0.118
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.06,
+    "lo": -0.015,
+    "hi": 0.145
+   },
+   {
+    "model": "gemma4:31b",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.071,
+    "lo": -0.016,
+    "hi": 0.177
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.029,
+    "lo": -0.096,
+    "hi": 0.036
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search",
+    "score": "precision",
+    "diff": 0.001,
+    "lo": -0.099,
+    "hi": 0.099
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": 0.001,
+    "lo": -0.128,
+    "hi": 0.124
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": 0.015,
+    "lo": -0.055,
+    "hi": 0.082
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": 0.064,
+    "lo": -0.035,
+    "hi": 0.161
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": 0.077,
+    "lo": -0.043,
+    "hi": 0.194
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.044,
+    "lo": -0.002,
+    "hi": 0.09
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.063,
+    "lo": -0.008,
+    "hi": 0.137
+   },
+   {
+    "model": "gpt-oss:120b",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.076,
+    "lo": -0.01,
+    "hi": 0.165
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.246,
+    "lo": -0.332,
+    "hi": -0.172
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search",
+    "score": "precision",
+    "diff": -0.217,
+    "lo": -0.328,
+    "hi": -0.115
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": -0.231,
+    "lo": -0.361,
+    "hi": -0.119
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": -0.182,
+    "lo": -0.263,
+    "hi": -0.112
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": -0.174,
+    "lo": -0.273,
+    "hi": -0.085
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": -0.178,
+    "lo": -0.291,
+    "hi": -0.085
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.064,
+    "lo": 0.016,
+    "hi": 0.114
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.044,
+    "lo": -0.022,
+    "hi": 0.11
+   },
+   {
+    "model": "mistral-large-3",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.052,
+    "lo": -0.025,
+    "hi": 0.137
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search",
+    "score": "f1",
+    "diff": -0.361,
+    "lo": -0.442,
+    "hi": -0.285
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search",
+    "score": "precision",
+    "diff": -0.173,
+    "lo": -0.35,
+    "hi": 0.021
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search",
+    "score": "f1_ign",
+    "diff": -0.183,
+    "lo": -0.417,
+    "hi": 0.02
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search + memory",
+    "score": "f1",
+    "diff": -0.31,
+    "lo": -0.391,
+    "hi": -0.231
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search + memory",
+    "score": "precision",
+    "diff": -0.123,
+    "lo": -0.269,
+    "hi": 0.034
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "B search + memory",
+    "score": "f1_ign",
+    "diff": -0.126,
+    "lo": -0.296,
+    "hi": 0.031
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "memory - search",
+    "score": "f1",
+    "diff": 0.051,
+    "lo": 0.018,
+    "hi": 0.089
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "memory - search",
+    "score": "precision",
+    "diff": 0.05,
+    "lo": -0.064,
+    "hi": 0.164
+   },
+   {
+    "model": "deepseek-v4.1-flash",
+    "b": "memory - search",
+    "score": "f1_ign",
+    "diff": 0.057,
+    "lo": -0.072,
+    "hi": 0.2
+   }
+  ],
+  "entity": {
+   "named": {
+    "gpt-oss:20b": 0.12,
+    "gemma4:31b": 0.113,
+    "gpt-oss:120b": 0.12,
+    "mistral-large-3": 0.17,
+    "deepseek-v4.1-flash": 0.146
+   },
+   "match": {
+    "gpt-oss:20b": 0.102,
+    "gemma4:31b": 0.107,
+    "gpt-oss:120b": 0.106,
+    "mistral-large-3": 0.117,
+    "deepseek-v4.1-flash": 0.119
+   },
+   "answered": {
+    "gpt-oss:20b": 0.232,
+    "gemma4:31b": 0.216,
+    "gpt-oss:120b": 0.233,
+    "mistral-large-3": 0.303,
+    "deepseek-v4.1-flash": 0.075
+   }
+  },
+  "entity_f1": {
+   "deepseek-v4.1-flash | other runs": [
+    0.027,
+    0.31,
+    0.474
+   ],
+   "deepseek-v4.1-flash | right entity": [
+    0.073,
+    0.16,
+    0.276
+   ],
+   "gemma4:31b | other runs": [
+    0.091,
+    0.309,
+    0.472
+   ],
+   "gemma4:31b | right entity": [
+    0.098,
+    0.133,
+    0.235
+   ],
+   "gpt-oss:120b | other runs": [
+    0.089,
+    0.268,
+    0.422
+   ],
+   "gpt-oss:120b | right entity": [
+    0.121,
+    0.175,
+    0.298
+   ],
+   "gpt-oss:20b | other runs": [
+    0.084,
+    0.267,
+    0.421
+   ],
+   "gpt-oss:20b | right entity": [
+    0.168,
+    0.217,
+    0.357
+   ],
+   "mistral-large-3 | other runs": [
+    0.094,
+    0.245,
+    0.394
+   ],
+   "mistral-large-3 | right entity": [
+    0.24,
+    0.273,
+    0.429
+   ]
+  },
+  "memory_sources": {
+   "deepseek-v4.1-flash | cites the evidence": [
+    0.965,
+    0.293,
+    82
+   ],
+   "deepseek-v4.1-flash | no citation (memory)": [
+    0.035,
+    0.667,
+    3
+   ],
+   "gemma4:31b | cites the evidence": [
+    0.863,
+    0.302,
+    189
+   ],
+   "gemma4:31b | no citation (memory)": [
+    0.137,
+    0.367,
+    30
+   ],
+   "gpt-oss:120b | cites the evidence": [
+    0.924,
+    0.288,
+    170
+   ],
+   "gpt-oss:120b | no citation (memory)": [
+    0.076,
+    0.5,
+    14
+   ],
+   "gpt-oss:20b | cites the evidence": [
+    0.863,
+    0.26,
+    177
+   ],
+   "gpt-oss:20b | no citation (memory)": [
+    0.137,
+    0.464,
+    28
+   ],
+   "mistral-large-3 | cites the evidence": [
+    0.98,
+    0.309,
+    301
+   ],
+   "mistral-large-3 | no citation (memory)": [
+    0.02,
+    0.5,
+    6
+   ]
+  },
+  "strata": {
+   "A best": {
+    "f1": {
+     "high/high": 0.3,
+     "low/mid": 0.17,
+     "high/mid": 0.23,
+     "high/low": 0.49,
+     "mid/high": 0.33,
+     "mid/mid": 0.3,
+     "low/low": 0.32,
+     "mid/low": 0.44,
+     "low/high": 0.26
+    },
+    "precision": {
+     "high/high": 0.36,
+     "low/mid": 0.2,
+     "high/mid": 0.31,
+     "high/low": 0.6,
+     "mid/high": 0.39,
+     "mid/mid": 0.37,
+     "low/low": 0.38,
+     "mid/low": 0.48,
+     "low/high": 0.29
+    },
+    "f1_ign": {
+     "high/high": 0.53,
+     "low/mid": 0.34,
+     "high/mid": 0.47,
+     "high/low": 0.75,
+     "mid/high": 0.56,
+     "mid/mid": 0.54,
+     "low/low": 0.55,
+     "mid/low": 0.65,
+     "low/high": 0.44
+    },
+    "tasks": {
+     "high/high": 135,
+     "low/mid": 115,
+     "high/mid": 135,
+     "high/low": 135,
+     "mid/high": 135,
+     "mid/mid": 135,
+     "low/low": 135,
+     "mid/low": 135,
+     "low/high": 135
+    }
+   },
+   "B search": {
+    "f1": {
+     "high/high": 0.14,
+     "low/mid": 0.12,
+     "high/mid": 0.07,
+     "high/low": 0.13,
+     "mid/high": 0.11,
+     "mid/mid": 0.17,
+     "low/low": 0.17,
+     "mid/low": 0.14,
+     "low/high": 0.16
+    },
+    "precision": {
+     "high/high": 0.21,
+     "low/mid": 0.26,
+     "high/mid": 0.15,
+     "high/low": 0.31,
+     "mid/high": 0.22,
+     "mid/mid": 0.33,
+     "low/low": 0.31,
+     "mid/low": 0.32,
+     "low/high": 0.23
+    },
+    "f1_ign": {
+     "high/high": 0.34,
+     "low/mid": 0.41,
+     "high/mid": 0.26,
+     "high/low": 0.47,
+     "mid/high": 0.36,
+     "mid/mid": 0.49,
+     "low/low": 0.47,
+     "mid/low": 0.49,
+     "low/high": 0.38
+    },
+    "tasks": {
+     "high/high": 135,
+     "low/mid": 115,
+     "high/mid": 135,
+     "high/low": 135,
+     "mid/high": 135,
+     "mid/mid": 135,
+     "low/low": 135,
+     "mid/low": 135,
+     "low/high": 135
+    }
+   },
+   "B search + memory": {
+    "f1": {
+     "high/high": 0.14,
+     "low/mid": 0.19,
+     "high/mid": 0.14,
+     "high/low": 0.24,
+     "mid/high": 0.14,
+     "mid/mid": 0.21,
+     "low/low": 0.25,
+     "mid/low": 0.19,
+     "low/high": 0.2
+    },
+    "precision": {
+     "high/high": 0.2,
+     "low/mid": 0.37,
+     "high/mid": 0.3,
+     "high/low": 0.38,
+     "mid/high": 0.21,
+     "mid/mid": 0.36,
+     "low/low": 0.42,
+     "mid/low": 0.35,
+     "low/high": 0.28
+    },
+    "f1_ign": {
+     "high/high": 0.34,
+     "low/mid": 0.54,
+     "high/mid": 0.46,
+     "high/low": 0.55,
+     "mid/high": 0.35,
+     "mid/mid": 0.53,
+     "low/low": 0.59,
+     "mid/low": 0.51,
+     "low/high": 0.43
+    },
+    "tasks": {
+     "high/high": 135,
+     "low/mid": 115,
+     "high/mid": 135,
+     "high/low": 135,
+     "mid/high": 135,
+     "mid/mid": 135,
+     "low/low": 135,
+     "mid/low": 135,
+     "low/high": 135
+    }
+   }
+  },
+  "energy": {
+   "gpt-oss:20b": {
+    "search": 0.681,
+    "memory": 0.681,
+    "llm_search": 0.02,
+    "searches": 2.21,
+    "x_A_mean": 105.0
+   },
+   "gemma4:31b": {
+    "search": 0.359,
+    "memory": 0.359,
+    "llm_search": 0.008,
+    "searches": 1.17,
+    "x_A_mean": 429.0
+   },
+   "gpt-oss:120b": {
+    "search": 0.988,
+    "memory": 0.986,
+    "llm_search": 0.083,
+    "searches": 3.02,
+    "x_A_mean": 55.0
+   },
+   "mistral-large-3": {
+    "search": 1.577,
+    "memory": 1.686,
+    "llm_search": 0.67,
+    "searches": 3.02,
+    "x_A_mean": 20.0
+   },
+   "deepseek-v4.1-flash": {
+    "search": 1.297,
+    "memory": 1.298,
+    "llm_search": 0.425,
+    "searches": 2.91,
+    "x_A_mean": 32.0
+   }
+  },
+  "properties": {
+   "Assists | A best": [
+    0.48,
+    0.55,
+    0.71,
+    0.23
+   ],
+   "Clean sheets | A best": [
+    0.22,
+    0.24,
+    0.38,
+    0.16
+   ],
+   "Goals per shotots on target | A best": [
+    0.09,
+    0.5,
+    0.67,
+    0.9
+   ],
+   "Position | A best": [
+    0.07,
+    0.08,
+    0.15,
+    0.15
+   ],
+   "Penalties missed | A best": [
+    0.61,
+    0.72,
+    0.84,
+    0.28
+   ],
+   "Clean sheet percentage | A best": [
+    0.29,
+    0.35,
+    0.52,
+    0.31
+   ],
+   "Draws | A best": [
+    0.19,
+    0.25,
+    0.4,
+    0.4
+   ],
+   "On-offsides | A best": [
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "Goals conceded per 90 minutes | A best": [
+    0.3,
+    0.35,
+    0.51,
+    0.26
+   ],
+   "Minutes per start | A best": [
+    0.82,
+    0.87,
+    0.93,
+    0.11
+   ],
+   "Goals per shot | A best": [
+    0.23,
+    0.26,
+    0.41,
+    0.22
+   ],
+   "Shots on target percentage | A best": [
+    0.25,
+    0.29,
+    0.44,
+    0.24
+   ],
+   "Wins | A best": [
+    0.11,
+    0.11,
+    0.2,
+    0.12
+   ],
+   "Saves | A best": [
+    0.23,
+    0.26,
+    0.41,
+    0.23
+   ],
+   "Assists | B search": [
+    0.15,
+    0.29,
+    0.44,
+    0.65
+   ],
+   "Clean sheets | B search": [
+    0.11,
+    0.14,
+    0.25,
+    0.38
+   ],
+   "Goals per shotots on target | B search": [
+    0.08,
+    0.2,
+    0.33,
+    0.75
+   ],
+   "Position | B search": [
+    0.02,
+    0.03,
+    0.07,
+    0.52
+   ],
+   "Penalties missed | B search": [
+    0.26,
+    0.54,
+    0.7,
+    0.68
+   ],
+   "Clean sheet percentage | B search": [
+    0.1,
+    0.18,
+    0.3,
+    0.62
+   ],
+   "Draws | B search": [
+    0.08,
+    0.17,
+    0.29,
+    0.7
+   ],
+   "On-offsides | B search": [
+    0.0,
+    0.0,
+    0.0,
+    0.84
+   ],
+   "Goals conceded per 90 minutes | B search": [
+    0.32,
+    0.53,
+    0.7,
+    0.57
+   ],
+   "Minutes per start | B search": [
+    0.26,
+    0.76,
+    0.86,
+    0.79
+   ],
+   "Goals per shot | B search": [
+    0.08,
+    0.15,
+    0.26,
+    0.61
+   ],
+   "Shots on target percentage | B search": [
+    0.26,
+    0.43,
+    0.61,
+    0.58
+   ],
+   "Wins | B search": [
+    0.03,
+    0.11,
+    0.2,
+    0.82
+   ],
+   "Saves | B search": [
+    0.13,
+    0.21,
+    0.34,
+    0.51
+   ],
+   "Assists | B search + memory": [
+    0.25,
+    0.41,
+    0.58,
+    0.57
+   ],
+   "Clean sheets | B search + memory": [
+    0.11,
+    0.13,
+    0.24,
+    0.33
+   ],
+   "Goals per shotots on target | B search + memory": [
+    0.07,
+    0.12,
+    0.22,
+    0.6
+   ],
+   "Position | B search + memory": [
+    0.0,
+    0.0,
+    0.0,
+    0.3
+   ],
+   "Penalties missed | B search + memory": [
+    0.36,
+    0.67,
+    0.8,
+    0.62
+   ],
+   "Clean sheet percentage | B search + memory": [
+    0.21,
+    0.33,
+    0.5,
+    0.53
+   ],
+   "Draws | B search + memory": [
+    0.19,
+    0.36,
+    0.53,
+    0.65
+   ],
+   "On-offsides | B search + memory": [
+    0.0,
+    0.0,
+    0.0,
+    0.78
+   ],
+   "Goals conceded per 90 minutes | B search + memory": [
+    0.44,
+    0.6,
+    0.75,
+    0.43
+   ],
+   "Minutes per start | B search + memory": [
+    0.42,
+    0.87,
+    0.93,
+    0.68
+   ],
+   "Goals per shot | B search + memory": [
+    0.09,
+    0.13,
+    0.23,
+    0.46
+   ],
+   "Shots on target percentage | B search + memory": [
+    0.28,
+    0.44,
+    0.61,
+    0.55
+   ],
+   "Wins | B search + memory": [
+    0.1,
+    0.25,
+    0.4,
+    0.76
+   ],
+   "Saves | B search + memory": [
+    0.2,
+    0.27,
+    0.42,
+    0.41
+   ]
+  }
+ },
+ "both_hstratum": {
+  "airports f1": {
+   "A zero-shot": [
+    0.035,
+    0.197,
+    0.272
+   ],
+   "A best": [
+    0.049,
+    0.261,
+    0.308
+   ],
+   "B search": [
+    0.068,
+    0.234,
+    0.377
+   ],
+   "B search + memory": [
+    0.095,
+    0.227,
+    0.431
+   ]
+  },
+  "airports precision": {
+   "A zero-shot": [
+    0.06,
+    0.278,
+    0.356
+   ],
+   "A best": [
+    0.066,
+    0.311,
+    0.364
+   ],
+   "B search": [
+    0.183,
+    0.293,
+    0.502
+   ],
+   "B search + memory": [
+    0.154,
+    0.271,
+    0.525
+   ]
+  },
+  "airports f1_ign": {
+   "A zero-shot": [
+    0.114,
+    0.435,
+    0.525
+   ],
+   "A best": [
+    0.124,
+    0.474,
+    0.533
+   ],
+   "B search": [
+    0.309,
+    0.453,
+    0.668
+   ],
+   "B search + memory": [
+    0.267,
+    0.426,
+    0.688
+   ]
+  },
+  "football f1": {
+   "A zero-shot": [
+    0.159,
+    0.227,
+    0.236
+   ],
+   "A best": [
+    0.254,
+    0.359,
+    0.338
+   ],
+   "B search": [
+    0.152,
+    0.139,
+    0.113
+   ],
+   "B search + memory": [
+    0.217,
+    0.179,
+    0.173
+   ]
+  },
+  "football precision": {
+   "A zero-shot": [
+    0.311,
+    0.42,
+    0.448
+   ],
+   "A best": [
+    0.294,
+    0.419,
+    0.428
+   ],
+   "B search": [
+    0.263,
+    0.287,
+    0.214
+   ],
+   "B search + memory": [
+    0.343,
+    0.297,
+    0.287
+   ]
+  },
+  "football f1_ign": {
+   "A zero-shot": [
+    0.474,
+    0.592,
+    0.619
+   ],
+   "A best": [
+    0.454,
+    0.591,
+    0.599
+   ],
+   "B search": [
+    0.416,
+    0.446,
+    0.352
+   ],
+   "B search + memory": [
+    0.51,
+    0.458,
+    0.446
+   ]
+  }
+ },
+ "both_difficulty": {
+  "airports f1": {
+   "A zero-shot": [
+    0.238,
+    0.122,
+    0.157
+   ],
+   "A best": [
+    0.275,
+    0.157,
+    0.195
+   ],
+   "B search": [
+    0.307,
+    0.196,
+    0.209
+   ],
+   "B search + memory": [
+    0.343,
+    0.179,
+    0.247
+   ]
+  },
+  "airports precision": {
+   "A zero-shot": [
+    0.318,
+    0.183,
+    0.241
+   ],
+   "A best": [
+    0.329,
+    0.197,
+    0.243
+   ],
+   "B search": [
+    0.414,
+    0.309,
+    0.341
+   ],
+   "B search + memory": [
+    0.413,
+    0.24,
+    0.345
+   ]
+  },
+  "airports f1_ign": {
+   "A zero-shot": [
+    0.483,
+    0.31,
+    0.388
+   ],
+   "A best": [
+    0.495,
+    0.329,
+    0.391
+   ],
+   "B search": [
+    0.586,
+    0.472,
+    0.508
+   ],
+   "B search + memory": [
+    0.585,
+    0.387,
+    0.513
+   ]
+  },
+  "football f1": {
+   "A zero-shot": [
+    0.179,
+    0.168,
+    0.276
+   ],
+   "A best": [
+    0.277,
+    0.269,
+    0.399
+   ],
+   "B search": [
+    0.132,
+    0.112,
+    0.158
+   ],
+   "B search + memory": [
+    0.166,
+    0.165,
+    0.237
+   ]
+  },
+  "football precision": {
+   "A zero-shot": [
+    0.312,
+    0.368,
+    0.507
+   ],
+   "A best": [
+    0.338,
+    0.335,
+    0.453
+   ],
+   "B search": [
+    0.23,
+    0.216,
+    0.323
+   ],
+   "B search + memory": [
+    0.259,
+    0.28,
+    0.391
+   ]
+  },
+  "football f1_ign": {
+   "A zero-shot": [
+    0.476,
+    0.538,
+    0.673
+   ],
+   "A best": [
+    0.505,
+    0.501,
+    0.623
+   ],
+   "B search": [
+    0.374,
+    0.355,
+    0.488
+   ],
+   "B search + memory": [
+    0.412,
+    0.438,
+    0.562
+   ]
+  }
+ },
+ "amplification": {
+  "airports": {
+   "deepseek-v4.1-flash | A (mean of 9 prompts)": 1.31,
+   "deepseek-v4.1-flash | B search": 6.39,
+   "deepseek-v4.1-flash | B search + memory": 6.28,
+   "gemma4:31b | A (mean of 9 prompts)": 1.43,
+   "gemma4:31b | B search": 5.71,
+   "gemma4:31b | B search + memory": 5.61,
+   "gpt-oss:120b | A (mean of 9 prompts)": 1.88,
+   "gpt-oss:120b | B search": 6.94,
+   "gpt-oss:120b | B search + memory": 6.83,
+   "gpt-oss:20b | A (mean of 9 prompts)": 2.09,
+   "gpt-oss:20b | B search": 6.55,
+   "gpt-oss:20b | B search + memory": 6.54,
+   "mistral-large-3 | A (mean of 9 prompts)": 1.39,
+   "mistral-large-3 | B search": 7.23,
+   "mistral-large-3 | B search + memory": 7.15
+  },
+  "airports per prompt": {
+   "compact": 2.57,
+   "1-shot": 1.57,
+   "3-shot": 1.47,
+   "5-shot": 1.41,
+   "1-shot + CoT": 1.52,
+   "3-shot + CoT": 1.44,
+   "5-shot + CoT": 1.39,
+   "zero-shot": 1.65,
+   "zero-shot + CoT": 1.6
+  },
+  "football": {
+   "deepseek-v4.1-flash | A (mean of 9 prompts)": 1.17,
+   "deepseek-v4.1-flash | B search": 6.34,
+   "deepseek-v4.1-flash | B search + memory": 6.23,
+   "gemma4:31b | A (mean of 9 prompts)": 1.27,
+   "gemma4:31b | B search": 6.45,
+   "gemma4:31b | B search + memory": 6.34,
+   "gpt-oss:120b | A (mean of 9 prompts)": 1.68,
+   "gpt-oss:120b | B search": 6.92,
+   "gpt-oss:120b | B search + memory": 6.78,
+   "gpt-oss:20b | A (mean of 9 prompts)": 1.87,
+   "gpt-oss:20b | B search": 6.64,
+   "gpt-oss:20b | B search + memory": 6.52,
+   "mistral-large-3 | A (mean of 9 prompts)": 1.21,
+   "mistral-large-3 | B search": 7.01,
+   "mistral-large-3 | B search + memory": 6.98
+  },
+  "football per prompt": {
+   "compact": 2.32,
+   "1-shot": 1.39,
+   "3-shot": 1.31,
+   "5-shot": 1.24,
+   "1-shot + CoT": 1.35,
+   "3-shot + CoT": 1.28,
+   "5-shot + CoT": 1.22,
+   "zero-shot": 1.45,
+   "zero-shot + CoT": 1.4
+  }
+ },
+ "prf": {
+  "airports": {
+   "deepseek-v4.1-flash | A zero-shot": [
+    0.287,
+    0.16,
+    0.44
+   ],
+   "gemma4:31b | A zero-shot": [
+    0.3,
+    0.123,
+    0.588
+   ],
+   "gpt-oss:120b | A zero-shot": [
+    0.355,
+    0.136,
+    0.617
+   ],
+   "gpt-oss:20b | A zero-shot": [
+    0.147,
+    0.082,
+    0.44
+   ],
+   "mistral-large-3 | A zero-shot": [
+    0.224,
+    0.16,
+    0.284
+   ],
+   "deepseek-v4.1-flash | A best": [
+    0.271,
+    0.202,
+    0.255
+   ],
+   "gemma4:31b | A best": [
+    0.314,
+    0.136,
+    0.568
+   ],
+   "gpt-oss:120b | A best": [
+    0.254,
+    0.222,
+    0.123
+   ],
+   "gpt-oss:20b | A best": [
+    0.231,
+    0.123,
+    0.465
+   ],
+   "mistral-large-3 | A best": [
+    0.24,
+    0.202,
+    0.16
+   ],
+   "deepseek-v4.1-flash | B search": [
+    0.303,
+    0.111,
+    0.634
+   ],
+   "gemma4:31b | B search": [
+    0.294,
+    0.103,
+    0.65
+   ],
+   "gpt-oss:120b | B search": [
+    0.454,
+    0.243,
+    0.465
+   ],
+   "gpt-oss:20b | B search": [
+    0.336,
+    0.198,
+    0.412
+   ],
+   "mistral-large-3 | B search": [
+    0.371,
+    0.243,
+    0.346
+   ],
+   "deepseek-v4.1-flash | B search + memory": [
+    0.364,
+    0.177,
+    0.514
+   ],
+   "gemma4:31b | B search + memory": [
+    0.299,
+    0.156,
+    0.477
+   ],
+   "gpt-oss:120b | B search + memory": [
+    0.421,
+    0.263,
+    0.374
+   ],
+   "gpt-oss:20b | B search + memory": [
+    0.302,
+    0.222,
+    0.263
+   ],
+   "mistral-large-3 | B search + memory": [
+    0.311,
+    0.23,
+    0.259
+   ]
+  },
+  "airports pooled": {
+   "precision": {
+    "A zero-shot": 0.252,
+    "A best": 0.258,
+    "B search": 0.36,
+    "B search + memory": 0.337
+   },
+   "recall": {
+    "A zero-shot": 0.133,
+    "A best": 0.177,
+    "B search": 0.179,
+    "B search + memory": 0.21
+   },
+   "abstention": {
+    "A zero-shot": 0.474,
+    "A best": 0.314,
+    "B search": 0.501,
+    "B search + memory": 0.378
+   }
+  },
+  "football": {
+   "deepseek-v4.1-flash | A zero-shot": [
+    0.428,
+    0.322,
+    0.247
+   ],
+   "gemma4:31b | A zero-shot": [
+    0.353,
+    0.05,
+    0.858
+   ],
+   "gpt-oss:120b | A zero-shot": [
+    0.308,
+    0.033,
+    0.891
+   ],
+   "gpt-oss:20b | A zero-shot": [
+    0.438,
+    0.059,
+    0.866
+   ],
+   "mistral-large-3 | A zero-shot": [
+    0.374,
+    0.243,
+    0.351
+   ],
+   "deepseek-v4.1-flash | A best": [
+    0.463,
+    0.397,
+    0.142
+   ],
+   "gemma4:31b | A best": [
+    0.399,
+    0.23,
+    0.423
+   ],
+   "gpt-oss:120b | A best": [
+    0.252,
+    0.146,
+    0.418
+   ],
+   "gpt-oss:20b | A best": [
+    0.274,
+    0.23,
+    0.159
+   ],
+   "mistral-large-3 | A best": [
+    0.486,
+    0.36,
+    0.259
+   ],
+   "deepseek-v4.1-flash | B search": [
+    0.29,
+    0.038,
+    0.87
+   ],
+   "gemma4:31b | B search": [
+    0.27,
+    0.084,
+    0.69
+   ],
+   "gpt-oss:120b | B search": [
+    0.252,
+    0.113,
+    0.552
+   ],
+   "gpt-oss:20b | B search": [
+    0.218,
+    0.1,
+    0.54
+   ],
+   "mistral-large-3 | B search": [
+    0.269,
+    0.121,
+    0.548
+   ],
+   "deepseek-v4.1-flash | B search + memory": [
+    0.34,
+    0.071,
+    0.791
+   ],
+   "gemma4:31b | B search + memory": [
+    0.33,
+    0.138,
+    0.582
+   ],
+   "gpt-oss:120b | B search + memory": [
+    0.315,
+    0.146,
+    0.536
+   ],
+   "gpt-oss:20b | B search + memory": [
+    0.272,
+    0.142,
+    0.477
+   ],
+   "mistral-large-3 | B search + memory": [
+    0.312,
+    0.184,
+    0.41
+   ]
+  },
+  "football pooled": {
+   "precision": {
+    "A zero-shot": 0.396,
+    "A best": 0.379,
+    "B search": 0.253,
+    "B search + memory": 0.309
+   },
+   "recall": {
+    "A zero-shot": 0.141,
+    "A best": 0.273,
+    "B search": 0.091,
+    "B search + memory": 0.136
+   },
+   "abstention": {
+    "A zero-shot": 0.643,
+    "A best": 0.28,
+    "B search": 0.64,
+    "B search + memory": 0.559
+   }
+  }
+ },
+ "f1_box": {
+  "airports": {
+   "gpt-oss:20b": [
+    0.106,
+    0.131,
+    0.142,
+    0.148,
+    0.161
+   ],
+   "gemma4:31b": [
+    0.135,
+    0.154,
+    0.16,
+    0.173,
+    0.19
+   ],
+   "gpt-oss:120b": [
+    0.166,
+    0.177,
+    0.188,
+    0.196,
+    0.237
+   ],
+   "mistral-large-3": [
+    0.158,
+    0.187,
+    0.196,
+    0.212,
+    0.219
+   ],
+   "deepseek-v4.1-flash": [
+    0.187,
+    0.189,
+    0.206,
+    0.216,
+    0.231
+   ]
+  },
+  "football": {
+   "gpt-oss:20b": [
+    0.103,
+    0.135,
+    0.159,
+    0.186,
+    0.25
+   ],
+   "gemma4:31b": [
+    0.076,
+    0.1,
+    0.116,
+    0.123,
+    0.292
+   ],
+   "gpt-oss:120b": [
+    0.054,
+    0.06,
+    0.107,
+    0.135,
+    0.185
+   ],
+   "mistral-large-3": [
+    0.251,
+    0.295,
+    0.311,
+    0.365,
+    0.413
+   ],
+   "deepseek-v4.1-flash": [
+    0.291,
+    0.368,
+    0.387,
+    0.41,
+    0.428
+   ]
+  }
+ }
+}

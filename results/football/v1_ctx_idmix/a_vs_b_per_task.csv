@@ -1,0 +1,1196 @@
+model,runs,A best prompt,task_id,property,truth,B answer,B,A best answer,A best,A zero-shot answer,A zero-shot,B memory answer,B memory,node_id,node_stratum,H_stratum,G_stratum,size_G,n_G_own,n_G_context,condition,has_name,has_team
+gpt-oss-20b,3,compact,01fe10d2305bd9f9,Assists,0.0,17.0,wrong,9.0,wrong,,abstained,0.0,correct,1f4ea94e,mid,high,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,045827cc3a078eeb,Clean sheets,0.0,16.0,wrong,112.0,wrong,,abstained,16.0,wrong,2a3416b6,low,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0464d75309b3a5bb,Squad,BB Bodrumspor,,abstained,Chelsea FC,wrong,,abstained,Tigre,wrong,f333ac24,high,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,046b541a748d0097,Shots on target per 90 minutes,0.0,,abstained,4.366666666666666,wrong,,abstained,4.78,wrong,6b91b999,mid,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0488348dfd69f85b,Shots per 90 minutes,2.23,0.80 per 90 minutes,wrong,3.466666666666667,wrong,,abstained,0.8,wrong,d2b135e1,mid,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,06d78f0904c3bd81,goals scored - goals conceded per 90 minutes,0.17,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,08a930f725433d3d,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0aa86a5110618adc,Nation,cz CZE,,abstained,Italy,wrong,,abstained,England,wrong,30ce77a2,low,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0b115f1efc45a4d2,Position,MF,,abstained,Midfielder,wrong,,abstained,,abstained,4accb7e0,low,mid,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0c399068d98f9903,Penalties missed,0.0,0.0,correct,0.5,wrong,,abstained,0.0,correct,6b91b999,mid,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,0cd527299b045a3f,Clean sheets,3.0,8.0,wrong,15.0,wrong,,abstained,8.0,wrong,30ce77a2,low,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0dae5edb8df8db7d,Interceptions,12.0,8.07,wrong,1.905,wrong,,abstained,0.38,wrong,94c79a82,high,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,0e0e0bfdad18617a,Position,"DF,MF",,abstained,Defender,wrong,,abstained,,abstained,1958c005,low,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,0e4304f8067e460a,Position,"DF,MF",,abstained,Defender,wrong,Defender,wrong,LW,wrong,1f4ea94e,mid,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,0ffc423ebaba646a,Clean sheet percentage,100.0,,abstained,40.0%,wrong,,abstained,50 %,wrong,72e0ee7b,high,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,10d1dfdadd7622ec,Position,"DF,MF",,abstained,Defender,wrong,,abstained,,abstained,1f4ea94e,mid,mid,high,3,2,1,team,False,True
+gpt-oss-20b,3,compact,114388c8053d1dda,Non-penalty goals per 90 minutes,0.0,,abstained,,abstained,,abstained,0.0,correct,a98a9189,mid,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,11ece662b16a8af5,Draws,7.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,135b009daacf67e2,Date of birth,2004.0,02/07/2004,wrong,2004-08-30,correct,20 August 2001,wrong,2 July 2004,wrong,169df85b,high,high,high,3,1,2,both,True,True
+gpt-oss-20b,3,compact,139b203f8baf1504,Goals per 90 minutes,0.35,0.83,wrong,,abstained,,abstained,0.83 per 90 minutes,wrong,d2b135e1,mid,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,145e8f18b6aa675c,On-offsides,0.71,,abstained,0.0,wrong,,abstained,,abstained,a98a9189,mid,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,1636b9c94ecd3f39,Goals conceded,16.0,,abstained,9.0,wrong,,abstained,,abstained,30ce77a2,low,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,163e62b32180505f,Position,MF,,abstained,Football club (association football team),wrong,,abstained,Midfielder,wrong,4accb7e0,low,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,1757a93591a07bb8,Goals per shotots on target,0.31,0.0612,wrong,,abstained,,abstained,0.0,wrong,d2b135e1,mid,mid,high,5,4,1,both,True,True
+gpt-oss-20b,3,compact,1827c482c454f763,Non-penalty goals + assists per 90 minutes,0.0,0 per 90 minutes,correct,,abstained,,abstained,0 per 90 minutes,correct,1f4ea94e,mid,high,high,5,4,1,name,True,False
+gpt-oss-20b,3,compact,18cffa7b70d2eb23,Own goals,0,,abstained,0.0,correct,,abstained,,abstained,f8d2d42c,mid,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,196abb0077aab084,Yellow cards,11,1.0,wrong,1.0,wrong,,abstained,1.0,wrong,14f47102,low,high,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,1a32294127461515,Shots on target against,132.0,0.0,wrong,0.0,wrong,,abstained,,abstained,28d596a0,mid,low,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,1a4142a3e45098bd,Clean sheets,3.0,202.0,wrong,5.5,wrong,,abstained,202.0,wrong,30ce77a2,low,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,1bd0560f4d37fecf,Points per match,1.38,,abstained,,abstained,,abstained,,abstained,94c79a82,high,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,22174a449ffdfe1c,Goals,2,1.5,correct,0.0,wrong,,abstained,1.0,wrong,4737cebe,mid,high,high,3,3,0,none,False,False
+gpt-oss-20b,3,compact,24ddb374e3e93f30,On-offsides,0.85,,abstained,0.0,wrong,,abstained,,abstained,4737cebe,mid,mid,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,25cd6c3a478ca770,Goals conceded,16.0,12.0,correct,4.0,wrong,,abstained,14.666666666666666,correct,30ce77a2,low,low,high,5,5,0,both,True,True
+gpt-oss-20b,3,compact,2741777c0e37b21f,Position,GK,,abstained,Pitcher,wrong,,abstained,,abstained,30ce77a2,low,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,2acea8127627bc69,Goals conceded per 90 minutes,1.4,,abstained,0.92,wrong,,abstained,,abstained,2d70dbe5,high,low,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,2d1f512a7ae2a503,Clean sheet percentage,0.0,33.3 %,wrong,55.0,wrong,,abstained,0 %,correct,2a3416b6,low,low,high,3,2,1,both,True,True
+gpt-oss-20b,3,compact,300693cf942c5ac7,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,a98a9189,mid,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,307784646da7a0b3,Clean sheet percentage,100.0,,abstained,31%,wrong,,abstained,,abstained,72e0ee7b,high,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,326e8ea533723e1a,Minutes per match,90.0,,abstained,90.0,correct,90.0,correct,,abstained,d1c92690,low,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,331dee0840466b9d,Losses,14.0,5.5,wrong,0.0,wrong,,abstained,2.0,wrong,fac1f795,low,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,34778288acf1c215,Goals per shot,0.08,,abstained,,abstained,,abstained,0.23850000000000002,wrong,9886c32e,high,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,34d8a7b99fe81d5f,Penalties missed,0.0,2.6666666666666665,wrong,0.0,correct,,abstained,4.0,wrong,f8d2d42c,mid,low,high,5,5,0,name,True,False
+gpt-oss-20b,3,compact,35b4d1902c7f161e,goals scored - goals conceded per 90 minutes,-0.1,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,35ec9a61b407ccab,Goals + assists while on the pitch,8.0,4.0,wrong,,abstained,,abstained,,abstained,4737cebe,mid,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,36cda05b4a92841c,Shots on target percentage,19.2,,abstained,Unable to determine due to insufficient context.,wrong,,abstained,44.2 %,wrong,9886c32e,high,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,3782cb8bc431b5f5,Name,Rome-Jayden Owusu-Oduro,,abstained,Jasper Cillessen,wrong,,abstained,,abstained,169df85b,high,high,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,3838ef52244a6848,Minutes per match,90.0,101.75 min,correct,90.0,correct,90.0,correct,83.57 min,correct,19e50035,high,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,38cbf936d8a847ee,Shots on target percentage,25.0,,abstained,33%,correct,0.33,wrong,24.24 %,correct,4accb7e0,low,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,3b552b92db836e03,Draws,0.0,0.0,correct,0.0,correct,0.0,correct,0.0,correct,2a3416b6,low,low,high,5,4,1,team,False,True
+gpt-oss-20b,3,compact,3cc70e13afc92f2d,Goals per shot,0.08,,abstained,1.2,wrong,1.2,wrong,1.2,wrong,9886c32e,high,mid,high,5,5,0,team,False,True
+gpt-oss-20b,3,compact,3d616c29859a24b5,Draws,7.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,3f23f1b27b29fcc5,On-offsides,1.24,,abstained,0.0,wrong,,abstained,,abstained,72e0ee7b,high,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,40132164c55c01f4,Losses,3.0,,abstained,0.0,wrong,,abstained,5.0,wrong,d1c92690,low,low,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,402e781e4608f4ad,Percentage of playing time,9.0,,abstained,100.0%,wrong,,abstained,,abstained,f333ac24,high,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,40bc557ea1ba77a3,goals scored - goals conceded per 90 minutes,-0.41,0.00 - 0.67 per 90 minutes,wrong,,abstained,,abstained,,abstained,f679abe1,high,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,41cafe5e3c5464cf,Wins,1.0,,abstained,0.0,wrong,,abstained,,abstained,d1c92690,low,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,4544966dbdd1a448,Clean sheets,0.0,,abstained,0.6666666666666666,wrong,,abstained,0.0,correct,d1c92690,low,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,46b8c0f7a2fafae7,On-offsides,0.44,0.59,wrong,0.0,wrong,,abstained,0.07,wrong,94c79a82,high,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,46baa6e8fd01c9b5,Goals per shot,0.0,,abstained,0.165,wrong,,abstained,,abstained,f333ac24,high,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,4748fd6e3de25ee5,On-offsides,0.85,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,49646ccdf0d3234b,Fouls suffered,1.0,,abstained,10.75,wrong,,abstained,,abstained,2a3416b6,low,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,49bda315024321c6,Goals + assists,3.0,12.0,wrong,,abstained,,abstained,9.0,wrong,4accb7e0,low,high,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,4a24b6e45c3a7be2,Goals per shot,0.09,,abstained,0.13,wrong,,abstained,,abstained,d2b135e1,mid,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,4aae54d36244ddb0,Playing time in minutes,90.0,,abstained,90.0,correct,90.0,correct,,abstained,2a3416b6,low,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,4afe53d515741a6e,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,f8d2d42c,mid,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,4ca14c28b21a9b19,Minutes per start,90.0,,abstained,165.0,wrong,,abstained,90 minutes,correct,d1c92690,low,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,4d42c26210893463,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,0.0,correct,,abstained,72e0ee7b,high,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,4da9a671a064c0c4,Assists,1.0,,abstained,2.25,wrong,,abstained,0.0,wrong,4737cebe,mid,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,4dc466cc81efcc39,On-offsides,-1.12,,abstained,0.0,wrong,,abstained,,abstained,2a3416b6,low,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,4df62db34d55516e,Matches fully played,4.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,4ea6a3f980724dfa,Non-penalty goals + assists per 90 minutes,0.26,,abstained,0.66,wrong,,abstained,,abstained,94c79a82,high,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,4fdd4ac9cae4f5c9,Losses,3.0,,abstained,10.5,wrong,,abstained,,abstained,d1c92690,low,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,508a342300f4544b,Offsides,1.0,,abstained,0.0,wrong,,abstained,,abstained,9886c32e,high,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,5099a031dfd4300b,Minutes per start,74.0,,abstained,90.0,correct,,abstained,,abstained,4737cebe,mid,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,5131170164179569,passes into the goalkeeper's penalty area,54.0,,abstained,16.0,wrong,,abstained,,abstained,9886c32e,high,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,519ffa653c2d5352,Wins,1.0,,abstained,0.0,wrong,,abstained,0.0,wrong,d1c92690,low,low,high,3,3,0,none,False,False
+gpt-oss-20b,3,compact,53d3b69ddd332dbc,Wins,1.0,,abstained,0.0,wrong,,abstained,,abstained,72e0ee7b,high,low,high,3,3,0,none,False,False
+gpt-oss-20b,3,compact,53e62dc6c81bcb07,Goals per shot,0.09,0.18,wrong,0.17,wrong,,abstained,0.176,wrong,94c79a82,high,mid,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,576e9adaef46e680,Wins,4.0,,abstained,20.0,wrong,,abstained,,abstained,f679abe1,high,low,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,5853eda6a41dba81,Goals conceded,36.0,,abstained,1.0,wrong,,abstained,,abstained,5c6b0637,mid,low,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,5b87a0c548fe2a0c,Matches fully played,5.0,96.0,wrong,15.0,wrong,,abstained,50.0,wrong,1958c005,low,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,5c216dd5500873f1,Saves,29.0,,abstained,403.0,wrong,,abstained,,abstained,f679abe1,high,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,5cbb9c72ade7a08d,Minutes per start,90.0,,abstained,90.0,correct,,abstained,90 minutes,correct,2a3416b6,low,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,5e0afd656981be8c,Saves,29.0,67.5,wrong,23.666666666666668,correct,0.0,wrong,55.0,wrong,f679abe1,high,low,high,3,3,0,name,True,False
+gpt-oss-20b,3,compact,5e3231bede929ab8,Goals per shot,0.0,0.1356,wrong,0.33999999999999997,wrong,,abstained,0.136,wrong,1958c005,low,mid,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,5e69189507073e23,Minutes per start,90.0,,abstained,90.0,correct,,abstained,89.5 minutes,correct,19e50035,high,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,5eedad84c12c42fe,Assists,1.0,,abstained,1.3333333333333333,correct,,abstained,,abstained,4737cebe,mid,high,high,5,5,0,none,False,False
+gpt-oss-20b,3,compact,615e3ba6583f1bf9,Goals conceded per 90 minutes,1.33,,abstained,0.7999999999999999,wrong,,abstained,,abstained,f8d2d42c,mid,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,660cc1569f99bd4b,Minutes per start,61.0,88 minutes,wrong,82.95,wrong,,abstained,,abstained,f333ac24,high,mid,high,5,5,0,none,False,False
+gpt-oss-20b,3,compact,660ee4342cd2fc59,Shots on target percentage,28.9,,abstained,Unable to determine without specific player identity.,wrong,,abstained,,abstained,d2b135e1,mid,mid,high,3,1,2,team,False,True
+gpt-oss-20b,3,compact,685078d060c69a8a,Shots on target percentage,30.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,68f784bbce7bdd96,Saves,29.0,35.0,correct,12.0,wrong,,abstained,49.0,wrong,f679abe1,high,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,69e42778710169ac,Matches fully played,5.0,,abstained,"2,000",wrong,,abstained,,abstained,1958c005,low,high,high,5,5,0,none,False,False
+gpt-oss-20b,3,compact,6b2ba700a9c7c593,Penalties missed,0.0,0.0,correct,4.5,wrong,,abstained,0.0,correct,19e50035,high,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,6b4bdad085c1c87a,Wins,1.0,5.0,wrong,0.5,wrong,,abstained,1.0,correct,72e0ee7b,high,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,6cd58b6302dfa96a,Minutes per start,74.0,109.6 minutes,wrong,79.66666666666667,correct,,abstained,26.25 minutes,wrong,4737cebe,mid,mid,high,3,3,0,name,True,False
+gpt-oss-20b,3,compact,6d3aac3dcbe17580,Position,GK,,abstained,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,d1c92690,low,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,6dd0dad214c271a7,Goals per shot,0.13,,abstained,0.30000000000000004,wrong,,abstained,0.4,wrong,4737cebe,mid,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,6fc1d0538bb93545,Minutes per start,83.0,,abstained,80.0,correct,,abstained,,abstained,1f4ea94e,mid,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,705abe6d685ae340,Saves,29.0,90.5,wrong,5.5,wrong,,abstained,,abstained,f679abe1,high,low,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,70cc5f1ca6f5989f,Goals scored while on the pitch,32.0,,abstained,65.0,wrong,0.0,wrong,0.0,wrong,6b91b999,mid,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,70eb40eb0e32700f,On-offsides,-0.79,,abstained,0.0,wrong,,abstained,,abstained,f679abe1,high,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,71e5563536cc9749,Nation,gh GHA,Spain,wrong,Spain,wrong,Spain,wrong,Spain,wrong,6a99e0b1,high,high,high,3,1,2,team,False,True
+gpt-oss-20b,3,compact,72570d858546c7f9,Goals per shot,0.0,0.1356,wrong,0.33999999999999997,wrong,,abstained,0.136,wrong,14f47102,low,mid,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,74474791ba8c2f43,Shots on target percentage,19.2,0.00 %,wrong,,abstained,,abstained,0.00 %,wrong,9886c32e,high,mid,high,3,3,0,name,True,False
+gpt-oss-20b,3,compact,754a46924811288a,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,75ea4153219f7fd7,Penalties missed,0.0,,abstained,0.0,correct,,abstained,,abstained,6b91b999,mid,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,76c6466b5f4060c5,Saves,58.0,21.0,wrong,56.5,correct,,abstained,32.666666666666664,wrong,6b91b999,mid,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,77c6cb72f19d21b6,Wins,1.0,96.0,wrong,Unable to determine due to insufficient identifying information.,wrong,,abstained,138.0,wrong,72e0ee7b,high,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,7868a5cb2b4611aa,Clean sheet percentage,33.3,,abstained,70.0,wrong,,abstained,,abstained,f8d2d42c,mid,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,78c70d8c3d41d98d,Draws,16.0,97.0,wrong,0.0,wrong,,abstained,,abstained,19e50035,high,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,7a008e9bc008841a,Goals per shot,0.13,0.1625,correct,0.195,wrong,,abstained,0.19090000000000001,wrong,4737cebe,mid,mid,high,5,4,1,both,True,True
+gpt-oss-20b,3,compact,7aa89f348b151a8b,Minutes per start,88.0,,abstained,90.0,correct,,abstained,,abstained,6b91b999,mid,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,7afce4eced53ac63,Clean sheet percentage,100.0,,abstained,52.7%,wrong,,abstained,,abstained,72e0ee7b,high,low,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,7c17b32503ad0d78,Penalty save percentage,100.0,0.0 %,wrong,,abstained,,abstained,,abstained,30ce77a2,low,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,7c7a9a384f807afd,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,d1c92690,low,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,7dc6bcd6d7a28f1d,Goals conceded per 90 minutes,1.33,1.0,correct,1.0150000000000001,correct,,abstained,0.83 per 90 minutes,wrong,f8d2d42c,mid,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,7f43df83a9f2f079,Penalties attempted,0,0.5,wrong,0.3333333333333333,wrong,,abstained,0.3333333333333333,wrong,4accb7e0,low,high,high,3,2,1,both,True,True
+gpt-oss-20b,3,compact,801fab7f2dc87ff0,Penalties saved,0.0,4.0,wrong,0.3333333333333333,wrong,,abstained,4.0,wrong,a98a9189,mid,low,high,5,3,2,both,True,True
+gpt-oss-20b,3,compact,8235f87a0ececf20,Goals per shot,0.0,0.10000000000000002,wrong,0.0,correct,,abstained,0.10000000000000002,wrong,14f47102,low,mid,high,3,3,0,name,True,False
+gpt-oss-20b,3,compact,83c8fa246a8a8834,Minutes per substitute appearance,39.0,,abstained,25.0,wrong,,abstained,,abstained,a98a9189,mid,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,83d416a3ff082726,Clean sheets,5.0,16.0,wrong,0.4,wrong,,abstained,10.5,wrong,fba79ac8,mid,low,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,8582af03e2827b02,Minutes per start,82.0,,abstained,82.66666666666667,correct,,abstained,,abstained,94c79a82,high,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,85b07a6d6783b650,Minutes per start,88.0,85 min,correct,90.0,correct,,abstained,90 min,correct,6b91b999,mid,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,871ee8ba1b4511dd,Penalties saved,0.0,5.0,wrong,0.0,correct,,abstained,,abstained,a98a9189,mid,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,884da7b9826ad161,Matches fully played,4.0,31.0,wrong,18.0,wrong,,abstained,,abstained,1f4ea94e,mid,high,high,3,1,2,team,False,True
+gpt-oss-20b,3,compact,88b5398cec9c6dab,Minutes per start,80.0,,abstained,74.0,correct,,abstained,,abstained,4accb7e0,low,mid,high,3,2,1,team,False,True
+gpt-oss-20b,3,compact,89eac82d92dc8290,Minutes per substitute appearance,13.0,18 minutes,wrong,Unable to determine without additional context.,wrong,,abstained,,abstained,9886c32e,high,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,8a04e97565db29c8,Points per match,1.33,,abstained,3.35,wrong,,abstained,,abstained,add304fc,low,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,8afd48205cfaae2f,Minutes per substitute appearance,13.0,37.0,wrong,27.0,wrong,,abstained,90 minutes,wrong,9886c32e,high,mid,high,1,1,0,name,True,False
+gpt-oss-20b,3,compact,8c5dc71f26a6aef5,Goals per shot,0.0,,abstained,,abstained,,abstained,,abstained,f679abe1,high,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,8cd239b5c76042b1,Saves,58.0,16.333333333333332,wrong,59.666666666666664,correct,5.4,wrong,35.666666666666664,wrong,6b91b999,mid,low,high,5,5,0,name,True,False
+gpt-oss-20b,3,compact,8d220077fd7098b7,Goals + assists,3.0,1.0,wrong,,abstained,,abstained,1.0,wrong,4accb7e0,low,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,8d798640c4d05216,Name,Joe Walsh,Alisson,wrong,,abstained,,abstained,Alisson,wrong,72e0ee7b,high,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,8dd577e1e708e945,Draws,7.0,,abstained,50.0,wrong,,abstained,2.0,wrong,6b91b999,mid,low,high,1,1,0,name,True,False
+gpt-oss-20b,3,compact,8eef5c6ab7fa4291,Losses,3.0,496.0,wrong,,abstained,,abstained,,abstained,d1c92690,low,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,90627e25b54f66e2,Assists,0.0,,abstained,0.0,correct,0.0,correct,0.0,correct,a98a9189,mid,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,90d671547d9fe26c,Fouls suffered,0.0,0.0,correct,12.4,wrong,,abstained,,abstained,d1c92690,low,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,921317420d02bc69,Clean sheets,0.0,,abstained,2.0,wrong,,abstained,,abstained,d1c92690,low,low,high,5,5,0,team,False,True
+gpt-oss-20b,3,compact,92ac3b7fd1b8f0b1,Goals per 90 minutes,0.35,,abstained,,abstained,,abstained,0.47,wrong,d2b135e1,mid,high,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,93d5dbdf0a27385e,passes into the goalkeeper's penalty area,50.0,,abstained,0.0,wrong,,abstained,,abstained,1958c005,low,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,949ae58aa337a44b,Date of birth,2006.0,21 September 1999,wrong,1523-05-18,correct,,abstained,21 September 1999,wrong,a109e5c8,high,high,high,5,1,4,team,False,True
+gpt-oss-20b,3,compact,94f2b587262b49cb,Goals per shot,0.09,0.1667,wrong,,abstained,,abstained,0.1667,wrong,d2b135e1,mid,mid,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,965820830e352960,Saves,19.0,11.333333333333334,wrong,0.0,wrong,,abstained,89.0,wrong,a98a9189,mid,low,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,970128f64e075037,Goals,2,1.0,wrong,,abstained,,abstained,1.0,wrong,4737cebe,mid,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,976d29ccf3d29b4b,Assists,0.0,16.0,wrong,1.5,wrong,,abstained,16.0,wrong,19e50035,high,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,981fcc60a86a12a3,Saves,29.0,104.0,wrong,15.0,wrong,78.0,wrong,20.0,wrong,f679abe1,high,low,high,5,5,0,both,True,True
+gpt-oss-20b,3,compact,987b6a810a781259,Clean sheets,0.0,12.0,wrong,16.0,wrong,,abstained,16.0,wrong,2a3416b6,low,low,high,1,1,0,name,True,False
+gpt-oss-20b,3,compact,990841add4eddcf0,Penalties scored,0,0.0,correct,0.0,correct,,abstained,0.0,correct,4accb7e0,low,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,99b87c2a4d75ec6c,Penalty save percentage,100.0,0.0 %,wrong,57%,wrong,,abstained,0.0 %,wrong,30ce77a2,low,low,high,3,3,0,team,False,True
+gpt-oss-20b,3,compact,99c4994f966eeb2b,Minutes per start,80.0,90.56 minutes,correct,86.5,correct,,abstained,90.56 minutes,correct,4accb7e0,low,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,9a70e1f6f1f790bd,Shots per 90 minutes,0.0,,abstained,4.0,wrong,,abstained,,abstained,72e0ee7b,high,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,9a7c1dd721982a32,Own goals,0,0.0,correct,0.0,correct,0.0,correct,0.0,correct,2a3416b6,low,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,9e053324a20026a8,Minutes per start,83.0,96.5,correct,81.86666666666666,correct,,abstained,96.5 minutes,correct,1f4ea94e,mid,mid,high,5,5,0,team,False,True
+gpt-oss-20b,3,compact,9fc9107c62c86ea9,On-offsides,1.24,0.0,wrong,0.0,wrong,,abstained,0.0,wrong,72e0ee7b,high,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,9ff858e4efbb6f9c,Goals per shot,0.09,0.1305,wrong,0.41000000000000003,wrong,,abstained,0.38,wrong,94c79a82,high,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,a062e19353346ed4,Second yellow cards,0,1.0,wrong,2.0,wrong,,abstained,,abstained,30ce77a2,low,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,a081ca59e9608ce5,Draws,0.0,,abstained,0.0,correct,,abstained,,abstained,2a3416b6,low,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,a108aba50f44efae,Offsides,5.0,,abstained,5.0,correct,,abstained,,abstained,d2b135e1,mid,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,a1287028a237c3a2,Goals per shot,0.0,0.0,correct,0.42500000000000004,wrong,,abstained,0.0,correct,1958c005,low,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,a202b3b4825a94fe,Assists,0.0,0.0,correct,,abstained,,abstained,0.0,correct,1f4ea94e,mid,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,a2d523ab32e78d50,Wins,1.0,,abstained,0.0,wrong,,abstained,0.0,wrong,72e0ee7b,high,low,high,5,4,1,both,True,True
+gpt-oss-20b,3,compact,a39bd5a5e7953dfd,Squad,Beerschot Wilrijk,,abstained,Arsenal,wrong,,abstained,Crystal Palace,wrong,f8d2d42c,mid,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,a494ce443e1088c1,Draws,6.0,,abstained,0.0,wrong,,abstained,,abstained,c924b17d,low,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,a4f87cdebc768916,Saves,87.0,71.0,correct,63.0,wrong,,abstained,71.0,correct,19e50035,high,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,a610cbd51d4ad3f7,Penalties missed,0.0,1.0,wrong,1.0,wrong,,abstained,,abstained,19e50035,high,low,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,a695575fe94d0c58,Shots on target percentage,30.0,31 %,correct,50%,wrong,,abstained,,abstained,f333ac24,high,mid,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,a94aac6c2ec8bb76,Yellow cards,11,1.0 cards,wrong,37.5,wrong,,abstained,1.0,wrong,14f47102,low,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,aa164ef4db659ff3,Penalties missed,0.0,,abstained,0.0,correct,,abstained,,abstained,f8d2d42c,mid,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,aa3402c2d6019923,Saves,19.0,,abstained,120.0,wrong,,abstained,93 per 90,wrong,a98a9189,mid,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,ac968012f26b5499,Draws,16.0,,abstained,6.0,wrong,,abstained,,abstained,19e50035,high,low,high,5,5,0,name,True,False
+gpt-oss-20b,3,compact,aec5ac6680fd770f,Clean sheet percentage,0.0,,abstained,76.47%,wrong,,abstained,,abstained,2a3416b6,low,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,b14c0ef7558f6fed,Matches played,28,6.0,wrong,1.0,wrong,,abstained,,abstained,14f47102,low,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,b5908bcf3defb513,Penalties missed,0.0,,abstained,0.0,correct,,abstained,,abstained,6b91b999,mid,low,high,3,2,1,team,False,True
+gpt-oss-20b,3,compact,b62d645570047130,Minutes per match,88.0,,abstained,90.0,correct,90.0,correct,,abstained,f679abe1,high,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,b65349cdc8407d84,Name,Iñaki Williams,Iñaki Williams,correct,Kwadwo Asare,wrong,,abstained,Iñaki Williams,correct,6a99e0b1,high,high,high,5,2,3,team,False,True
+gpt-oss-20b,3,compact,b67d16d1041f7be0,Saves,19.0,60.0,wrong,90.0,wrong,,abstained,18.5,correct,a98a9189,mid,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,b8af9cf23254bb23,Shots on target percentage,0.0,,abstained,52.0,wrong,,abstained,,abstained,f679abe1,high,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,b92daae320b1fd24,Name,Rome-Jayden Owusu-Oduro,,abstained,Netherlands,wrong,Netherlands,wrong,,abstained,169df85b,high,high,high,5,1,4,team,False,True
+gpt-oss-20b,3,compact,b98634f6b8e3a55b,Penalties attempted,2.0,,abstained,2.0,correct,2.0,correct,2.3333333333333335,correct,6b91b999,mid,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,baca2dce3ee66d18,Minutes per start,90.0,,abstained,82.5,correct,,abstained,,abstained,14f47102,low,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,bbb126fd32c1c595,On-offsides,0.53,,abstained,50.0,wrong,,abstained,,abstained,19e50035,high,mid,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,bbb4774195f4aef5,Second yellow cards,0,,abstained,0.0,correct,,abstained,,abstained,19e50035,high,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,bcc283e8003abde3,Minutes per start,88.0,,abstained,80.0,correct,,abstained,,abstained,6b91b999,mid,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,be00c3808c03179b,Goals per shot,0.0,0.18,wrong,,abstained,,abstained,0.18,wrong,f333ac24,high,mid,high,3,3,0,both,True,True
+gpt-oss-20b,3,compact,c0b0d4577172bd7d,passes into the goalkeeper's penalty area,50.0,,abstained,0.1,wrong,,abstained,,abstained,1958c005,low,high,high,3,2,1,team,False,True
+gpt-oss-20b,3,compact,c59dbf8b5b50a70e,Minutes per start,82.0,,abstained,80.0,correct,79.4,correct,,abstained,94c79a82,high,mid,high,3,3,0,name,True,False
+gpt-oss-20b,3,compact,c5f3ecdca36688e9,Non-penalty goals per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,ca213a35f86091b6,Penalties attempted,0,,abstained,7.0,wrong,,abstained,,abstained,4accb7e0,low,high,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,cc6333394da0c50c,Goals per shot,0.0,13.6 %,wrong,0.42333333333333334,wrong,,abstained,0.13636,wrong,14f47102,low,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,cd74fa724fdb5b42,Minutes per start,90.0,,abstained,90.0,correct,,abstained,90 minutes,correct,f8d2d42c,mid,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,cddc784b84e3a80c,Assists,0.0,7.0,wrong,13.0,wrong,,abstained,,abstained,1958c005,low,high,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,cde2eb862757f363,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,d0b05b08d8d9491e,Clean sheets,0.0,5.0,wrong,16.0,wrong,,abstained,6.0,wrong,2a3416b6,low,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,d28313d4e50b7bf6,Goals per shot,0.0,,abstained,0.3833333333333333,wrong,,abstained,,abstained,14f47102,low,mid,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,d2895c48e00a17f2,Shots per 90 minutes,2.23,1.70 per 90,correct,1.6666666666666667,wrong,,abstained,0.9,wrong,d2b135e1,mid,high,high,3,2,1,team,False,True
+gpt-oss-20b,3,compact,d33aa660f4bb9800,Shots on target percentage,33.3,,abstained,,abstained,,abstained,,abstained,1958c005,low,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,d3a50092ce8dec20,Non-penalty goals + assists per 90 minutes,0.0,0.17,wrong,0.09,wrong,,abstained,,abstained,1f4ea94e,mid,high,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,d42d4fc6f52f0ccf,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,2a3416b6,low,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,d4ad1e07b994b6b6,Saves,87.0,62.333333333333336,wrong,34.63333333333333,wrong,118.0,wrong,44.666666666666664,wrong,19e50035,high,low,high,3,2,1,none,False,False
+gpt-oss-20b,3,compact,d52e349dac6c61f8,Wins,4.0,,abstained,10.0,wrong,,abstained,,abstained,f679abe1,high,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,d58cc0aabb29f8d8,Yellow cards,0,0.0,correct,10.0,wrong,,abstained,0.5,wrong,d1c92690,low,high,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,d6d1bd55cdec79ea,Goals conceded per 90 minutes,0.68,,abstained,0.825,correct,1.02,wrong,,abstained,a98a9189,mid,low,high,3,2,1,team,False,True
+gpt-oss-20b,3,compact,d8d02aef85493fca,Minutes per start,90.0,,abstained,86.0,correct,,abstained,103.14 min,correct,14f47102,low,mid,high,5,5,0,none,False,False
+gpt-oss-20b,3,compact,d9fa43a17c695487,Goals per shotots on target,0.31,"0.09 goals per shot, 11 shots on target",wrong,,abstained,,abstained,0.09,wrong,d2b135e1,mid,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,dad80a5b7fda5b3a,Penalties missed,0.0,,abstained,2.0,wrong,,abstained,0.0,correct,19e50035,high,low,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,dce9e1c04ec7c829,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,30ce77a2,low,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,dd15950ea27ad776,Substitutions,2.0,,abstained,0.0,wrong,,abstained,0.0,wrong,a98a9189,mid,high,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,dd9de28ac9090055,Wins,1.0,,abstained,0.6666666666666666,wrong,1.0,correct,,abstained,72e0ee7b,high,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,dda040746bd30249,Substitutions,0.0,13.0,wrong,44.5,wrong,,abstained,13.0,wrong,14f47102,low,high,high,5,5,0,none,False,False
+gpt-oss-20b,3,compact,e01ca449d21eef6c,Shots on target percentage,28.9,39.3,wrong,42.0%,wrong,,abstained,39.3 %,wrong,d2b135e1,mid,mid,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,e0f361f12aa63267,Goals conceded per 90 minutes,0.68,,abstained,2.665,wrong,,abstained,,abstained,a98a9189,mid,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,e13f7cb6828c2717,Saves,87.0,34.0,wrong,1.4,wrong,,abstained,34.0,wrong,19e50035,high,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,e43f1cb7ad173126,Offsides,5.0,,abstained,1.3333333333333333,wrong,,abstained,,abstained,d2b135e1,mid,high,high,5,4,1,team,False,True
+gpt-oss-20b,3,compact,e52642c37c590be6,Matches played,28,72.5,wrong,25.666666666666668,correct,,abstained,75.33333333333333,wrong,14f47102,low,high,high,3,2,1,both,True,True
+gpt-oss-20b,3,compact,e6c454c6459e5882,Clean sheet percentage,33.3,,abstained,,abstained,,abstained,33.3 %,correct,f8d2d42c,mid,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,e7b056019179b080,Shots on target percentage,33.3,,abstained,0.0%,wrong,,abstained,,abstained,1958c005,low,mid,high,5,4,1,team,False,True
+gpt-oss-20b,3,compact,ea21ea8dcd33526e,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,72e0ee7b,high,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,eaa46854d64e7938,Wins,4.0,,abstained,24.0,wrong,,abstained,,abstained,f679abe1,high,low,low,1,1,0,none,False,False
+gpt-oss-20b,3,compact,eb1cff0ada1bdf29,Minutes per start,90.0,66.5,wrong,90.0,correct,,abstained,90 minutes,correct,19e50035,high,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,eb8bccd75209a74a,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,f8d2d42c,mid,mid,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,ed49a56ce555b15a,Clean sheet percentage,33.3,5.56 %,wrong,33.33,correct,,abstained,5.56 %,wrong,f8d2d42c,mid,low,high,3,3,0,name,True,False
+gpt-oss-20b,3,compact,ed5094219427c9c9,Interceptions,0.0,1.58 per 90,wrong,3.5,wrong,,abstained,1.58 per 90,wrong,f679abe1,high,high,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,f07492c47a6f4bb1,Shots on target percentage,25.0,50 %,wrong,41.7%,wrong,,abstained,50 %,wrong,4accb7e0,low,mid,high,5,5,0,name,True,False
+gpt-oss-20b,3,compact,f1ec946b94ad9d33,Nation,se SWE,Sweden,wrong,Sweden,wrong,Sweden,wrong,Sweden,wrong,a109e5c8,high,high,high,3,2,1,both,True,True
+gpt-oss-20b,3,compact,f27313c6fed30b51,Position,"DF,MF",,abstained,Midfielder,wrong,,abstained,,abstained,1958c005,low,mid,high,3,3,0,none,False,False
+gpt-oss-20b,3,compact,f2830531e95a5c33,Date of birth,2006.0,02/02/2006,wrong,1999-09-29,correct,2003-12-20,correct,02/02/2006,wrong,a109e5c8,high,high,high,1,1,0,name,True,False
+gpt-oss-20b,3,compact,f351c1cf5fb9825f,Goals per 90 minutes,0.0,0.61,wrong,,abstained,,abstained,,abstained,f333ac24,high,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,f44efd6d075e0b5b,Goals conceded per 90 minutes,1.33,,abstained,0.63,wrong,,abstained,,abstained,f8d2d42c,mid,low,high,1,1,0,none,False,False
+gpt-oss-20b,3,compact,f46ef4339bb8c03c,Date of birth,1994.0,10/02/1990,wrong,,abstained,,abstained,10/02/1990,wrong,6a99e0b1,high,high,high,1,0,1,team,False,True
+gpt-oss-20b,3,compact,f5cb4651cfcf9427,Minutes per start,61.0,,abstained,70.0,correct,,abstained,,abstained,f333ac24,high,mid,mid,5,5,0,none,False,False
+gpt-oss-20b,3,compact,f703ad74f4b080d0,Saves,29.0,1125.0,wrong,29.0,correct,29.0,correct,1125.0,wrong,f679abe1,high,low,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,f704494d41bd3c70,On-offsides,0.44,,abstained,,abstained,,abstained,,abstained,94c79a82,high,mid,high,5,4,1,name,True,False
+gpt-oss-20b,3,compact,f7be205d474d01a6,Assists,0.0,5.0,wrong,,abstained,,abstained,25.0,wrong,1958c005,low,high,mid,1,1,0,none,False,False
+gpt-oss-20b,3,compact,f822af239093ecb3,Clean sheets,3.0,39.0,wrong,13.0,wrong,,abstained,39.0,wrong,30ce77a2,low,low,high,1,1,0,team,False,True
+gpt-oss-20b,3,compact,fa23ba64a71194a4,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,30ce77a2,low,mid,low,5,5,0,none,False,False
+gpt-oss-20b,3,compact,fcaeb2bfbad3a4fa,Clean sheet percentage,0.0,,abstained,42%,wrong,,abstained,,abstained,2a3416b6,low,low,low,3,3,0,none,False,False
+gpt-oss-20b,3,compact,fea6d398e5205f2f,Goals conceded per 90 minutes,0.68,,abstained,0.9433333333333334,wrong,,abstained,0.71 per 90,correct,a98a9189,mid,low,mid,3,3,0,none,False,False
+gpt-oss-20b,3,compact,ff83af2af1487a92,Penalties scored,0,0.0,correct,0.6666666666666666,wrong,,abstained,0.0,correct,4accb7e0,low,high,high,5,4,1,none,False,False
+gemma4-31b,3,compact,01fe10d2305bd9f9,Assists,0.0,0.0,correct,,abstained,,abstained,0.0,correct,1f4ea94e,mid,high,high,1,1,0,none,False,False
+gemma4-31b,3,compact,045827cc3a078eeb,Clean sheets,0.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,0464d75309b3a5bb,Squad,BB Bodrumspor,,abstained,,abstained,,abstained,,abstained,f333ac24,high,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,046b541a748d0097,Shots on target per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,0488348dfd69f85b,Shots per 90 minutes,2.23,0.80 per 90,wrong,,abstained,,abstained,0.8 shots per 90 minutes,wrong,d2b135e1,mid,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,06d78f0904c3bd81,goals scored - goals conceded per 90 minutes,0.17,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,08a930f725433d3d,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,high,1,1,0,none,False,False
+gemma4-31b,3,compact,0aa86a5110618adc,Nation,cz CZE,,abstained,,abstained,,abstained,Netherlands,wrong,30ce77a2,low,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,0b115f1efc45a4d2,Position,MF,,abstained,Midfielder,wrong,,abstained,Goalkeeper,wrong,4accb7e0,low,mid,high,1,1,0,none,False,False
+gemma4-31b,3,compact,0c399068d98f9903,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,0cd527299b045a3f,Clean sheets,3.0,,abstained,,abstained,,abstained,8.0,wrong,30ce77a2,low,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,0dae5edb8df8db7d,Interceptions,12.0,0.57 interceptions per 90,wrong,,abstained,,abstained,0.57 per 90,wrong,94c79a82,high,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,0e0e0bfdad18617a,Position,"DF,MF",Attacker,wrong,Forward,wrong,,abstained,Attacker,wrong,1958c005,low,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,0e4304f8067e460a,Position,"DF,MF",central midfielders,wrong,Forward,wrong,,abstained,central midfielder,wrong,1f4ea94e,mid,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,0ffc423ebaba646a,Clean sheet percentage,100.0,,abstained,,abstained,,abstained,,abstained,72e0ee7b,high,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,10d1dfdadd7622ec,Position,"DF,MF",G,wrong,Forward,wrong,Forward,wrong,Goalkeeper,wrong,1f4ea94e,mid,mid,high,3,2,1,team,False,True
+gemma4-31b,3,compact,114388c8053d1dda,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,,abstained,,abstained,a98a9189,mid,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,11ece662b16a8af5,Draws,7.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,135b009daacf67e2,Date of birth,2004.0,02/07/2004,wrong,2006-01-12,correct,2006-01-21,correct,02/07/2004,wrong,169df85b,high,high,high,3,1,2,both,True,True
+gemma4-31b,3,compact,139b203f8baf1504,Goals per 90 minutes,0.35,0.52,wrong,,abstained,,abstained,0.52 goals/90,wrong,d2b135e1,mid,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,145e8f18b6aa675c,On-offsides,0.71,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,1636b9c94ecd3f39,Goals conceded,16.0,,abstained,9.0,wrong,,abstained,,abstained,30ce77a2,low,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,163e62b32180505f,Position,MF,Primary forward,wrong,Forward,wrong,,abstained,forward,wrong,4accb7e0,low,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,1757a93591a07bb8,Goals per shotots on target,0.31,,abstained,,abstained,,abstained,0.2 goals/shot on target,wrong,d2b135e1,mid,mid,high,5,4,1,both,True,True
+gemma4-31b,3,compact,1827c482c454f763,Non-penalty goals + assists per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,high,high,5,4,1,name,True,False
+gemma4-31b,3,compact,18cffa7b70d2eb23,Own goals,0,,abstained,0.0,correct,,abstained,,abstained,f8d2d42c,mid,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,196abb0077aab084,Yellow cards,11,,abstained,,abstained,,abstained,,abstained,14f47102,low,high,high,1,1,0,none,False,False
+gemma4-31b,3,compact,1a32294127461515,Shots on target against,132.0,,abstained,,abstained,,abstained,,abstained,28d596a0,mid,low,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,1a4142a3e45098bd,Clean sheets,3.0,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,1bd0560f4d37fecf,Points per match,1.38,,abstained,0.67,wrong,,abstained,1.67 PPM,correct,94c79a82,high,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,22174a449ffdfe1c,Goals,2,1.0,wrong,,abstained,,abstained,1.0,wrong,4737cebe,mid,high,high,3,3,0,none,False,False
+gemma4-31b,3,compact,24ddb374e3e93f30,On-offsides,0.85,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,high,1,0,1,team,False,True
+gemma4-31b,3,compact,25cd6c3a478ca770,Goals conceded,16.0,20 goals,correct,23.333333333333332,wrong,28.0,wrong,20 goals,correct,30ce77a2,low,low,high,5,5,0,both,True,True
+gemma4-31b,3,compact,2741777c0e37b21f,Position,GK,SG,wrong,Quarterback,wrong,,abstained,SG,wrong,30ce77a2,low,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,2acea8127627bc69,Goals conceded per 90 minutes,1.4,,abstained,0.0,wrong,,abstained,,abstained,2d70dbe5,high,low,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,2d1f512a7ae2a503,Clean sheet percentage,0.0,33.3 %,wrong,0%,correct,,abstained,33.3 %,wrong,2a3416b6,low,low,high,3,2,1,both,True,True
+gemma4-31b,3,compact,300693cf942c5ac7,Minutes per start,90.0,23.0,wrong,90.0,correct,,abstained,23.0 minutes,wrong,a98a9189,mid,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,307784646da7a0b3,Clean sheet percentage,100.0,15%,wrong,0%,wrong,,abstained,15 %,wrong,72e0ee7b,high,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,326e8ea533723e1a,Minutes per match,90.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,331dee0840466b9d,Losses,14.0,15.0,correct,11.666666666666666,correct,,abstained,15 matches,correct,fac1f795,low,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,34778288acf1c215,Goals per shot,0.08,0.16,wrong,0.12333333333333334,wrong,,abstained,0.176,wrong,9886c32e,high,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,34d8a7b99fe81d5f,Penalties missed,0.0,4.0,wrong,0.0,correct,,abstained,4.0,wrong,f8d2d42c,mid,low,high,5,5,0,name,True,False
+gemma4-31b,3,compact,35b4d1902c7f161e,goals scored - goals conceded per 90 minutes,-0.1,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,35ec9a61b407ccab,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,36cda05b4a92841c,Shots on target percentage,19.2,21.0 %,correct,71.4%,wrong,,abstained,21.0 %,correct,9886c32e,high,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,3782cb8bc431b5f5,Name,Rome-Jayden Owusu-Oduro,,abstained,AZ Alkmaar,wrong,AZ Alkmaar,wrong,,abstained,169df85b,high,high,high,1,0,1,team,False,True
+gemma4-31b,3,compact,3838ef52244a6848,Minutes per match,90.0,,abstained,88.35,correct,,abstained,90.0 minutes,correct,19e50035,high,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,38cbf936d8a847ee,Shots on target percentage,25.0,23.0%,correct,33.0%,correct,,abstained,0.33 ratio,wrong,4accb7e0,low,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,3b552b92db836e03,Draws,0.0,0.0,correct,0.0,correct,0.0,correct,0.0,correct,2a3416b6,low,low,high,5,4,1,team,False,True
+gemma4-31b,3,compact,3cc70e13afc92f2d,Goals per shot,0.08,,abstained,1.2,wrong,,abstained,0.2 goals/shot,wrong,9886c32e,high,mid,high,5,5,0,team,False,True
+gemma4-31b,3,compact,3d616c29859a24b5,Draws,7.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,3f23f1b27b29fcc5,On-offsides,1.24,,abstained,0.0,wrong,,abstained,,abstained,72e0ee7b,high,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,40132164c55c01f4,Losses,3.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,low,high,1,1,0,none,False,False
+gemma4-31b,3,compact,402e781e4608f4ad,Percentage of playing time,9.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,40bc557ea1ba77a3,goals scored - goals conceded per 90 minutes,-0.41,,abstained,,abstained,,abstained,,abstained,f679abe1,high,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,41cafe5e3c5464cf,Wins,1.0,5.5,wrong,11.333333333333334,wrong,,abstained,5.5,wrong,d1c92690,low,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,4544966dbdd1a448,Clean sheets,0.0,9.0,wrong,1.0,wrong,,abstained,9.0,wrong,d1c92690,low,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,46b8c0f7a2fafae7,On-offsides,0.44,,abstained,11.5,wrong,,abstained,,abstained,94c79a82,high,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,46baa6e8fd01c9b5,Goals per shot,0.0,,abstained,0.375,wrong,,abstained,,abstained,f333ac24,high,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,4748fd6e3de25ee5,On-offsides,0.85,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,49646ccdf0d3234b,Fouls suffered,1.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,49bda315024321c6,Goals + assists,3.0,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,high,high,1,0,1,team,False,True
+gemma4-31b,3,compact,4a24b6e45c3a7be2,Goals per shot,0.09,8.9 %,wrong,,abstained,,abstained,8.9 %,wrong,d2b135e1,mid,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,4aae54d36244ddb0,Playing time in minutes,90.0,,abstained,90.0,correct,,abstained,,abstained,2a3416b6,low,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,4afe53d515741a6e,Minutes per start,90.0,90 minutes,correct,84.0,correct,,abstained,90.0 minutes,correct,f8d2d42c,mid,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,4ca14c28b21a9b19,Minutes per start,90.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,4d42c26210893463,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,,abstained,,abstained,72e0ee7b,high,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,4da9a671a064c0c4,Assists,1.0,,abstained,15.0,wrong,,abstained,,abstained,4737cebe,mid,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,4dc466cc81efcc39,On-offsides,-1.12,,abstained,0.0,wrong,,abstained,0.0,wrong,2a3416b6,low,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,4df62db34d55516e,Matches fully played,4.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,4ea6a3f980724dfa,Non-penalty goals + assists per 90 minutes,0.26,0.08,wrong,,abstained,,abstained,0.22 per 90 minutes,correct,94c79a82,high,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,4fdd4ac9cae4f5c9,Losses,3.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,508a342300f4544b,Offsides,1.0,,abstained,12.0,wrong,,abstained,,abstained,9886c32e,high,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,5099a031dfd4300b,Minutes per start,74.0,,abstained,90.0,correct,,abstained,,abstained,4737cebe,mid,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,5131170164179569,passes into the goalkeeper's penalty area,54.0,,abstained,1.1,wrong,,abstained,,abstained,9886c32e,high,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,519ffa653c2d5352,Wins,1.0,,abstained,0.0,wrong,,abstained,,abstained,d1c92690,low,low,high,3,3,0,none,False,False
+gemma4-31b,3,compact,53d3b69ddd332dbc,Wins,1.0,,abstained,0.0,wrong,,abstained,,abstained,72e0ee7b,high,low,high,3,3,0,none,False,False
+gemma4-31b,3,compact,53e62dc6c81bcb07,Goals per shot,0.09,,abstained,,abstained,,abstained,0.207 goals/shot,wrong,94c79a82,high,mid,high,1,0,1,team,False,True
+gemma4-31b,3,compact,576e9adaef46e680,Wins,4.0,,abstained,,abstained,,abstained,,abstained,f679abe1,high,low,high,1,0,1,team,False,True
+gemma4-31b,3,compact,5853eda6a41dba81,Goals conceded,36.0,,abstained,0.0,wrong,,abstained,,abstained,5c6b0637,mid,low,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,5b87a0c548fe2a0c,Matches fully played,5.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,5c216dd5500873f1,Saves,29.0,,abstained,132.0,wrong,,abstained,,abstained,f679abe1,high,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,5cbb9c72ade7a08d,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,2a3416b6,low,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,5e0afd656981be8c,Saves,29.0,5.0,wrong,0.0,wrong,0.0,wrong,5.0,wrong,f679abe1,high,low,high,3,3,0,name,True,False
+gemma4-31b,3,compact,5e3231bede929ab8,Goals per shot,0.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,mid,high,1,0,1,team,False,True
+gemma4-31b,3,compact,5e69189507073e23,Minutes per start,90.0,,abstained,88.7,correct,,abstained,,abstained,19e50035,high,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,5eedad84c12c42fe,Assists,1.0,,abstained,8.5,wrong,,abstained,,abstained,4737cebe,mid,high,high,5,5,0,none,False,False
+gemma4-31b,3,compact,615e3ba6583f1bf9,Goals conceded per 90 minutes,1.33,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,660cc1569f99bd4b,Minutes per start,61.0,,abstained,3.2999999999999994,wrong,,abstained,,abstained,f333ac24,high,mid,high,5,5,0,none,False,False
+gemma4-31b,3,compact,660ee4342cd2fc59,Shots on target percentage,28.9,,abstained,42.2%,wrong,33.3%,correct,,abstained,d2b135e1,mid,mid,high,3,1,2,team,False,True
+gemma4-31b,3,compact,685078d060c69a8a,Shots on target percentage,30.0,53.5 %,wrong,,abstained,,abstained,,abstained,f333ac24,high,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,68f784bbce7bdd96,Saves,29.0,11.333333333333334,wrong,102.33333333333333,wrong,,abstained,11.333333333333334,wrong,f679abe1,high,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,69e42778710169ac,Matches fully played,5.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,high,5,5,0,none,False,False
+gemma4-31b,3,compact,6b2ba700a9c7c593,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,19e50035,high,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,6b4bdad085c1c87a,Wins,1.0,,abstained,1.0,correct,,abstained,,abstained,72e0ee7b,high,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,6cd58b6302dfa96a,Minutes per start,74.0,,abstained,77.76666666666667,correct,76.86666666666667,correct,,abstained,4737cebe,mid,mid,high,3,3,0,name,True,False
+gemma4-31b,3,compact,6d3aac3dcbe17580,Position,GK,,abstained,Goalkeeper,wrong,,abstained,Goalkeeper,wrong,d1c92690,low,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,6dd0dad214c271a7,Goals per shot,0.13,,abstained,0.18666666666666668,wrong,,abstained,0.125 goals/shot,correct,4737cebe,mid,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,6fc1d0538bb93545,Minutes per start,83.0,,abstained,90.0,correct,,abstained,,abstained,1f4ea94e,mid,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,705abe6d685ae340,Saves,29.0,,abstained,,abstained,,abstained,,abstained,f679abe1,high,low,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,70cc5f1ca6f5989f,Goals scored while on the pitch,32.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,70eb40eb0e32700f,On-offsides,-0.79,,abstained,0.0,wrong,,abstained,,abstained,f679abe1,high,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,71e5563536cc9749,Nation,gh GHA,Ghana,wrong,Spain,wrong,Spain,wrong,Ghana,wrong,6a99e0b1,high,high,high,3,1,2,team,False,True
+gemma4-31b,3,compact,72570d858546c7f9,Goals per shot,0.0,,abstained,,abstained,,abstained,,abstained,14f47102,low,mid,high,1,0,1,team,False,True
+gemma4-31b,3,compact,74474791ba8c2f43,Shots on target percentage,19.2,20 %,correct,7.69%,wrong,7.7%,wrong,20.0 %,correct,9886c32e,high,mid,high,3,3,0,name,True,False
+gemma4-31b,3,compact,754a46924811288a,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,high,1,1,0,none,False,False
+gemma4-31b,3,compact,75ea4153219f7fd7,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,76c6466b5f4060c5,Saves,58.0,,abstained,92.33333333333333,wrong,,abstained,56.0,correct,6b91b999,mid,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,77c6cb72f19d21b6,Wins,1.0,,abstained,42.333333333333336,wrong,,abstained,,abstained,72e0ee7b,high,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,7868a5cb2b4611aa,Clean sheet percentage,33.3,112%,wrong,32.1%,correct,,abstained,112% percentage,wrong,f8d2d42c,mid,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,78c70d8c3d41d98d,Draws,16.0,,abstained,11.0,wrong,,abstained,9.0,wrong,19e50035,high,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,7a008e9bc008841a,Goals per shot,0.13,,abstained,0.11666666666666665,correct,0.12333333333333334,correct,0.2 goals/shot,wrong,4737cebe,mid,mid,high,5,4,1,both,True,True
+gemma4-31b,3,compact,7aa89f348b151a8b,Minutes per start,88.0,,abstained,87.0,correct,,abstained,90.0 minutes,correct,6b91b999,mid,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,7afce4eced53ac63,Clean sheet percentage,100.0,,abstained,,abstained,,abstained,,abstained,72e0ee7b,high,low,high,1,1,0,none,False,False
+gemma4-31b,3,compact,7c17b32503ad0d78,Penalty save percentage,100.0,,abstained,100.0%,correct,,abstained,,abstained,30ce77a2,low,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,7c7a9a384f807afd,Position,GK,,abstained,Goalkeeper,wrong,,abstained,Goalkeeper,wrong,d1c92690,low,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,7dc6bcd6d7a28f1d,Goals conceded per 90 minutes,1.33,0.9833333333333334,wrong,,abstained,,abstained,1.03 goals per 90 minutes,correct,f8d2d42c,mid,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,7f43df83a9f2f079,Penalties attempted,0,1.0,wrong,0.0,correct,0.0,correct,1.3333333333333333,wrong,4accb7e0,low,high,high,3,2,1,both,True,True
+gemma4-31b,3,compact,801fab7f2dc87ff0,Penalties saved,0.0,2.6666666666666665,wrong,0.0,correct,,abstained,2.6666666666666665,wrong,a98a9189,mid,low,high,5,3,2,both,True,True
+gemma4-31b,3,compact,8235f87a0ececf20,Goals per shot,0.0,1/20.00,wrong,0.0,correct,0.0,correct,5.00% percent,wrong,14f47102,low,mid,high,3,3,0,name,True,False
+gemma4-31b,3,compact,83c8fa246a8a8834,Minutes per substitute appearance,39.0,,abstained,0.0,wrong,,abstained,,abstained,a98a9189,mid,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,83d416a3ff082726,Clean sheets,5.0,2.0,wrong,0.0,wrong,,abstained,2.0,wrong,fba79ac8,mid,low,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,8582af03e2827b02,Minutes per start,82.0,,abstained,,abstained,,abstained,,abstained,94c79a82,high,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,85b07a6d6783b650,Minutes per start,88.0,,abstained,82.5,correct,,abstained,,abstained,6b91b999,mid,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,871ee8ba1b4511dd,Penalties saved,0.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,884da7b9826ad161,Matches fully played,4.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,high,high,3,1,2,team,False,True
+gemma4-31b,3,compact,88b5398cec9c6dab,Minutes per start,80.0,,abstained,80.2,correct,39.25,wrong,,abstained,4accb7e0,low,mid,high,3,2,1,team,False,True
+gemma4-31b,3,compact,89eac82d92dc8290,Minutes per substitute appearance,13.0,,abstained,,abstained,,abstained,,abstained,9886c32e,high,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,8a04e97565db29c8,Points per match,1.33,,abstained,1.45,correct,,abstained,,abstained,add304fc,low,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,8afd48205cfaae2f,Minutes per substitute appearance,13.0,18 minutes,wrong,,abstained,,abstained,18 minutes,wrong,9886c32e,high,mid,high,1,1,0,name,True,False
+gemma4-31b,3,compact,8c5dc71f26a6aef5,Goals per shot,0.0,,abstained,0.08,wrong,,abstained,,abstained,f679abe1,high,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,8cd239b5c76042b1,Saves,58.0,255.0,wrong,84.66666666666667,wrong,82.0,wrong,255.0,wrong,6b91b999,mid,low,high,5,5,0,name,True,False
+gemma4-31b,3,compact,8d220077fd7098b7,Goals + assists,3.0,5.5,wrong,,abstained,,abstained,5.5,wrong,4accb7e0,low,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,8d798640c4d05216,Name,Joe Walsh,,abstained,,abstained,,abstained,,abstained,72e0ee7b,high,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,8dd577e1e708e945,Draws,7.0,28.0,wrong,0.0,wrong,0.0,wrong,28.0,wrong,6b91b999,mid,low,high,1,1,0,name,True,False
+gemma4-31b,3,compact,8eef5c6ab7fa4291,Losses,3.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,90627e25b54f66e2,Assists,0.0,,abstained,0.0,correct,,abstained,,abstained,a98a9189,mid,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,90d671547d9fe26c,Fouls suffered,0.0,0.0,correct,,abstained,,abstained,0 fouls,correct,d1c92690,low,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,921317420d02bc69,Clean sheets,0.0,3.0,wrong,0.0,correct,0.0,correct,3.0,wrong,d1c92690,low,low,high,5,5,0,team,False,True
+gemma4-31b,3,compact,92ac3b7fd1b8f0b1,Goals per 90 minutes,0.35,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,high,high,1,0,1,team,False,True
+gemma4-31b,3,compact,93d5dbdf0a27385e,passes into the goalkeeper's penalty area,50.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,949ae58aa337a44b,Date of birth,2006.0,25 April 2000,wrong,1995-03-14,correct,,abstained,25 April 2000,wrong,a109e5c8,high,high,high,5,1,4,team,False,True
+gemma4-31b,3,compact,94f2b587262b49cb,Goals per shot,0.09,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,mid,high,1,0,1,team,False,True
+gemma4-31b,3,compact,965820830e352960,Saves,19.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,low,high,1,1,0,none,False,False
+gemma4-31b,3,compact,970128f64e075037,Goals,2,55.0,wrong,12.0,wrong,,abstained,2 goals,correct,4737cebe,mid,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,976d29ccf3d29b4b,Assists,0.0,16 assists,wrong,,abstained,,abstained,16.0,wrong,19e50035,high,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,981fcc60a86a12a3,Saves,29.0,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,high,5,5,0,both,True,True
+gemma4-31b,3,compact,987b6a810a781259,Clean sheets,0.0,16.0,wrong,0.0,correct,,abstained,16.0,wrong,2a3416b6,low,low,high,1,1,0,name,True,False
+gemma4-31b,3,compact,990841add4eddcf0,Penalties scored,0,0.0,correct,0.6666666666666666,wrong,,abstained,0.0,correct,4accb7e0,low,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,99b87c2a4d75ec6c,Penalty save percentage,100.0,0.0 %,wrong,0.0%,wrong,,abstained,0.0 %,wrong,30ce77a2,low,low,high,3,3,0,team,False,True
+gemma4-31b,3,compact,99c4994f966eeb2b,Minutes per start,80.0,,abstained,86.96666666666665,correct,,abstained,,abstained,4accb7e0,low,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,9a70e1f6f1f790bd,Shots per 90 minutes,0.0,,abstained,0.0,correct,,abstained,,abstained,72e0ee7b,high,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,9a7c1dd721982a32,Own goals,0,,abstained,0.0,correct,,abstained,1.0,wrong,2a3416b6,low,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,9e053324a20026a8,Minutes per start,83.0,83 minutes,correct,52.64000000000001,wrong,52.64000000000001,wrong,83 minutes,correct,1f4ea94e,mid,mid,high,5,5,0,team,False,True
+gemma4-31b,3,compact,9fc9107c62c86ea9,On-offsides,1.24,,abstained,,abstained,,abstained,,abstained,72e0ee7b,high,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,9ff858e4efbb6f9c,Goals per shot,0.09,,abstained,,abstained,,abstained,,abstained,94c79a82,high,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,a062e19353346ed4,Second yellow cards,0,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,a081ca59e9608ce5,Draws,0.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,a108aba50f44efae,Offsides,5.0,,abstained,12.0,wrong,,abstained,,abstained,d2b135e1,mid,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,a1287028a237c3a2,Goals per shot,0.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,a202b3b4825a94fe,Assists,0.0,0.0,correct,,abstained,,abstained,0.0,correct,1f4ea94e,mid,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,a2d523ab32e78d50,Wins,1.0,,abstained,0.0,wrong,0.0,wrong,,abstained,72e0ee7b,high,low,high,5,4,1,both,True,True
+gemma4-31b,3,compact,a39bd5a5e7953dfd,Squad,Beerschot Wilrijk,Arsenal,wrong,,abstained,,abstained,Arsenal,wrong,f8d2d42c,mid,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,a494ce443e1088c1,Draws,6.0,,abstained,0.0,wrong,,abstained,,abstained,c924b17d,low,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,a4f87cdebc768916,Saves,87.0,100.0,correct,134.0,wrong,,abstained,100.0,correct,19e50035,high,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,a610cbd51d4ad3f7,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,19e50035,high,low,high,1,0,1,team,False,True
+gemma4-31b,3,compact,a695575fe94d0c58,Shots on target percentage,30.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,mid,high,1,1,0,none,False,False
+gemma4-31b,3,compact,a94aac6c2ec8bb76,Yellow cards,11,1.0,wrong,,abstained,,abstained,1.0,wrong,14f47102,low,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,aa164ef4db659ff3,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,aa3402c2d6019923,Saves,19.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,ac968012f26b5499,Draws,16.0,52.0,wrong,8.0,wrong,11.0,wrong,52.0,wrong,19e50035,high,low,high,5,5,0,name,True,False
+gemma4-31b,3,compact,aec5ac6680fd770f,Clean sheet percentage,0.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,b14c0ef7558f6fed,Matches played,28,,abstained,0.0,wrong,,abstained,,abstained,14f47102,low,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,b5908bcf3defb513,Penalties missed,0.0,,abstained,0.0,correct,,abstained,0.0,correct,6b91b999,mid,low,high,3,2,1,team,False,True
+gemma4-31b,3,compact,b62d645570047130,Minutes per match,88.0,90 minutes,correct,90.0,correct,,abstained,90.0 minutes,correct,f679abe1,high,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,b65349cdc8407d84,Name,Iñaki Williams,Iñaki Williams,correct,André Ayew,wrong,Inaki Williams,correct,Iñaki Williams,correct,6a99e0b1,high,high,high,5,2,3,team,False,True
+gemma4-31b,3,compact,b67d16d1041f7be0,Saves,19.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,b8af9cf23254bb23,Shots on target percentage,0.0,,abstained,31.2%,wrong,,abstained,,abstained,f679abe1,high,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,b92daae320b1fd24,Name,Rome-Jayden Owusu-Oduro,Wouter Goes,wrong,Netherlands,wrong,Netherlands,wrong,Wouter Goes,wrong,169df85b,high,high,high,5,1,4,team,False,True
+gemma4-31b,3,compact,b98634f6b8e3a55b,Penalties attempted,2.0,2.0,correct,11.5,wrong,,abstained,2.0,correct,6b91b999,mid,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,baca2dce3ee66d18,Minutes per start,90.0,,abstained,,abstained,,abstained,,abstained,14f47102,low,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,bbb126fd32c1c595,On-offsides,0.53,,abstained,,abstained,,abstained,,abstained,19e50035,high,mid,low,1,1,0,none,False,False
+gemma4-31b,3,compact,bbb4774195f4aef5,Second yellow cards,0,,abstained,0.0,correct,,abstained,,abstained,19e50035,high,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,bcc283e8003abde3,Minutes per start,88.0,,abstained,90.0,correct,,abstained,,abstained,6b91b999,mid,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,be00c3808c03179b,Goals per shot,0.0,,abstained,0.0,correct,,abstained,0.18 goals/shot,wrong,f333ac24,high,mid,high,3,3,0,both,True,True
+gemma4-31b,3,compact,c0b0d4577172bd7d,passes into the goalkeeper's penalty area,50.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,high,3,2,1,team,False,True
+gemma4-31b,3,compact,c59dbf8b5b50a70e,Minutes per start,82.0,,abstained,79.43333333333334,correct,73.60000000000001,correct,,abstained,94c79a82,high,mid,high,3,3,0,name,True,False
+gemma4-31b,3,compact,c5f3ecdca36688e9,Non-penalty goals per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,ca213a35f86091b6,Penalties attempted,0,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,high,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,cc6333394da0c50c,Goals per shot,0.0,,abstained,,abstained,,abstained,0.2 goals/shot,wrong,14f47102,low,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,cd74fa724fdb5b42,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,f8d2d42c,mid,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,cddc784b84e3a80c,Assists,0.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,high,1,1,0,none,False,False
+gemma4-31b,3,compact,cde2eb862757f363,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,d0b05b08d8d9491e,Clean sheets,0.0,169.0,wrong,,abstained,,abstained,169.0,wrong,2a3416b6,low,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,d28313d4e50b7bf6,Goals per shot,0.0,,abstained,,abstained,,abstained,,abstained,14f47102,low,mid,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,d2895c48e00a17f2,Shots per 90 minutes,2.23,,abstained,0.9,wrong,1.1333333333333335,wrong,,abstained,d2b135e1,mid,high,high,3,2,1,team,False,True
+gemma4-31b,3,compact,d33aa660f4bb9800,Shots on target percentage,33.3,26.0 %,correct,0.0%,wrong,,abstained,26.0 %,correct,1958c005,low,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,d3a50092ce8dec20,Non-penalty goals + assists per 90 minutes,0.0,,abstained,,abstained,,abstained,0.00 goals + assists per 90 minutes,correct,1f4ea94e,mid,high,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,d42d4fc6f52f0ccf,Position,GK,GK,correct,Goalkeeper,wrong,,abstained,Goalkeeper,wrong,2a3416b6,low,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,d4ad1e07b994b6b6,Saves,87.0,,abstained,,abstained,0.0,wrong,,abstained,19e50035,high,low,high,3,2,1,none,False,False
+gemma4-31b,3,compact,d52e349dac6c61f8,Wins,4.0,,abstained,15.0,wrong,,abstained,,abstained,f679abe1,high,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,d58cc0aabb29f8d8,Yellow cards,0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,high,low,5,5,0,none,False,False
+gemma4-31b,3,compact,d6d1bd55cdec79ea,Goals conceded per 90 minutes,0.68,0.5,wrong,,abstained,,abstained,0.5 goals per 90 minutes,wrong,a98a9189,mid,low,high,3,2,1,team,False,True
+gemma4-31b,3,compact,d8d02aef85493fca,Minutes per start,90.0,,abstained,62.300000000000004,wrong,,abstained,,abstained,14f47102,low,mid,high,5,5,0,none,False,False
+gemma4-31b,3,compact,d9fa43a17c695487,Goals per shotots on target,0.31,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,dad80a5b7fda5b3a,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,19e50035,high,low,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,dce9e1c04ec7c829,Position,GK,goalkeeper,wrong,Goalkeeper,wrong,,abstained,Goalkeeper,wrong,30ce77a2,low,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,dd15950ea27ad776,Substitutions,2.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,high,low,1,1,0,none,False,False
+gemma4-31b,3,compact,dd9de28ac9090055,Wins,1.0,1.0,correct,0.0,wrong,,abstained,1.0,correct,72e0ee7b,high,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,dda040746bd30249,Substitutions,0.0,,abstained,0.0,correct,,abstained,,abstained,14f47102,low,high,high,5,5,0,none,False,False
+gemma4-31b,3,compact,e01ca449d21eef6c,Shots on target percentage,28.9,,abstained,58.3%,wrong,,abstained,,abstained,d2b135e1,mid,mid,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,e0f361f12aa63267,Goals conceded per 90 minutes,0.68,,abstained,0.62,correct,,abstained,0.87 goals per 90 minutes,correct,a98a9189,mid,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,e13f7cb6828c2717,Saves,87.0,10.0,wrong,116.0,correct,,abstained,10.0,wrong,19e50035,high,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,e43f1cb7ad173126,Offsides,5.0,,abstained,9.0,wrong,12.0,wrong,,abstained,d2b135e1,mid,high,high,5,4,1,team,False,True
+gemma4-31b,3,compact,e52642c37c590be6,Matches played,28,39 مباريات,wrong,15.333333333333334,wrong,14.0,wrong,39 matches,wrong,14f47102,low,high,high,3,2,1,both,True,True
+gemma4-31b,3,compact,e6c454c6459e5882,Clean sheet percentage,33.3,,abstained,0.0%,wrong,,abstained,44 %,correct,f8d2d42c,mid,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,e7b056019179b080,Shots on target percentage,33.3,,abstained,0.0%,wrong,,abstained,,abstained,1958c005,low,mid,high,5,4,1,team,False,True
+gemma4-31b,3,compact,ea21ea8dcd33526e,Position,GK,goalkeeper,wrong,Goalkeeper,wrong,,abstained,Goalkeeper,wrong,72e0ee7b,high,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,eaa46854d64e7938,Wins,4.0,,abstained,20.0,wrong,,abstained,,abstained,f679abe1,high,low,low,1,1,0,none,False,False
+gemma4-31b,3,compact,eb1cff0ada1bdf29,Minutes per start,90.0,,abstained,89.55,correct,,abstained,90.0 minutes,correct,19e50035,high,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,eb8bccd75209a74a,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,f8d2d42c,mid,mid,low,3,3,0,none,False,False
+gemma4-31b,3,compact,ed49a56ce555b15a,Clean sheet percentage,33.3,5.56 %,wrong,0%,wrong,0%,wrong,5.56 %,wrong,f8d2d42c,mid,low,high,3,3,0,name,True,False
+gemma4-31b,3,compact,ed5094219427c9c9,Interceptions,0.0,,abstained,12.0,wrong,,abstained,41.0,wrong,f679abe1,high,high,low,3,3,0,none,False,False
+gemma4-31b,3,compact,f07492c47a6f4bb1,Shots on target percentage,25.0,50.00 %,wrong,25%,correct,25.0%,correct,50.00 %,wrong,4accb7e0,low,mid,high,5,5,0,name,True,False
+gemma4-31b,3,compact,f1ec946b94ad9d33,Nation,se SWE,Sweden,wrong,Sweden,wrong,Sweden,wrong,Sweden,wrong,a109e5c8,high,high,high,3,2,1,both,True,True
+gemma4-31b,3,compact,f27313c6fed30b51,Position,"DF,MF",,abstained,,abstained,,abstained,Goalkeeper,wrong,1958c005,low,mid,high,3,3,0,none,False,False
+gemma4-31b,3,compact,f2830531e95a5c33,Date of birth,2006.0,02/02/2006,wrong,2006-02-02,correct,2006-02-02,correct,2006-02-02,correct,a109e5c8,high,high,high,1,1,0,name,True,False
+gemma4-31b,3,compact,f351c1cf5fb9825f,Goals per 90 minutes,0.0,,abstained,0.13,wrong,,abstained,,abstained,f333ac24,high,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,f44efd6d075e0b5b,Goals conceded per 90 minutes,1.33,,abstained,0.0,wrong,,abstained,,abstained,f8d2d42c,mid,low,high,1,1,0,none,False,False
+gemma4-31b,3,compact,f46ef4339bb8c03c,Date of birth,1994.0,,abstained,,abstained,,abstained,,abstained,6a99e0b1,high,high,high,1,0,1,team,False,True
+gemma4-31b,3,compact,f5cb4651cfcf9427,Minutes per start,61.0,,abstained,68.73333333333333,correct,,abstained,,abstained,f333ac24,high,mid,mid,5,5,0,none,False,False
+gemma4-31b,3,compact,f703ad74f4b080d0,Saves,29.0,,abstained,28.066666666666666,correct,,abstained,27.0,correct,f679abe1,high,low,low,5,5,0,none,False,False
+gemma4-31b,3,compact,f704494d41bd3c70,On-offsides,0.44,2.0,wrong,1.0,wrong,1.0,wrong,2.0,wrong,94c79a82,high,mid,high,5,4,1,name,True,False
+gemma4-31b,3,compact,f7be205d474d01a6,Assists,0.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,mid,1,1,0,none,False,False
+gemma4-31b,3,compact,f822af239093ecb3,Clean sheets,3.0,,abstained,11.0,wrong,12.0,wrong,,abstained,30ce77a2,low,low,high,1,1,0,team,False,True
+gemma4-31b,3,compact,fa23ba64a71194a4,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,30ce77a2,low,mid,low,5,5,0,none,False,False
+gemma4-31b,3,compact,fcaeb2bfbad3a4fa,Clean sheet percentage,0.0,,abstained,0%,correct,,abstained,,abstained,2a3416b6,low,low,low,3,3,0,none,False,False
+gemma4-31b,3,compact,fea6d398e5205f2f,Goals conceded per 90 minutes,0.68,0.71,correct,0.845,correct,,abstained,0.71 goals/90,correct,a98a9189,mid,low,mid,3,3,0,none,False,False
+gemma4-31b,3,compact,ff83af2af1487a92,Penalties scored,0,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,high,high,5,4,1,none,False,False
+gpt-oss-120b,3,compact,01fe10d2305bd9f9,Assists,0.0,0.21,wrong,​,wrong,,abstained,0.21,wrong,1f4ea94e,mid,high,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,045827cc3a078eeb,Clean sheets,0.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0464d75309b3a5bb,Squad,BB Bodrumspor,Borussia Dortmund,wrong,​,wrong,,abstained,Borussia Dortmund,wrong,f333ac24,high,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,046b541a748d0097,Shots on target per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0488348dfd69f85b,Shots per 90 minutes,2.23,3.6,wrong,,abstained,,abstained,0.39 shots,wrong,d2b135e1,mid,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,06d78f0904c3bd81,goals scored - goals conceded per 90 minutes,0.17,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,08a930f725433d3d,Goals per shotots on target,0.0,,abstained,0.32,wrong,0.28,wrong,,abstained,1f4ea94e,mid,mid,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0aa86a5110618adc,Nation,cz CZE,,abstained,​,wrong,,abstained,Germany,wrong,30ce77a2,low,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0b115f1efc45a4d2,Position,MF,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,mid,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0c399068d98f9903,Penalties missed,0.0,0.0,correct,0.0,correct,,abstained,0.0,correct,6b91b999,mid,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,0cd527299b045a3f,Clean sheets,3.0,17.0,wrong, ,wrong,,abstained,,abstained,30ce77a2,low,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0dae5edb8df8db7d,Interceptions,12.0,,abstained,0.0,wrong,,abstained,,abstained,94c79a82,high,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,0e0e0bfdad18617a,Position,"DF,MF",,abstained,,abstained,,abstained,,abstained,1958c005,low,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,0e4304f8067e460a,Position,"DF,MF",LW,wrong,Midfielder,wrong,Defender,wrong,LW,wrong,1f4ea94e,mid,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,0ffc423ebaba646a,Clean sheet percentage,100.0,31.3 %,wrong,,abstained,,abstained,31.3 %,wrong,72e0ee7b,high,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,10d1dfdadd7622ec,Position,"DF,MF",Defender,wrong,,abstained,,abstained,Defender,wrong,1f4ea94e,mid,mid,high,3,2,1,team,False,True
+gpt-oss-120b,3,compact,114388c8053d1dda,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,0.0,correct,0 goals per 90,correct,a98a9189,mid,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,11ece662b16a8af5,Draws,7.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,135b009daacf67e2,Date of birth,2004.0,2 July 2004,wrong,,abstained,,abstained,2004-07-02,correct,169df85b,high,high,high,3,1,2,both,True,True
+gpt-oss-120b,3,compact,139b203f8baf1504,Goals per 90 minutes,0.35,0.36,correct,,abstained,,abstained,0.36,correct,d2b135e1,mid,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,145e8f18b6aa675c,On-offsides,0.71,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,1636b9c94ecd3f39,Goals conceded,16.0,1.58,wrong,0.0,wrong,,abstained,,abstained,30ce77a2,low,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,163e62b32180505f,Position,MF,forward,wrong,,abstained,,abstained,Forward,wrong,4accb7e0,low,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,1757a93591a07bb8,Goals per shotots on target,0.31,0.1,wrong,0.37,correct,,abstained,0.0,wrong,d2b135e1,mid,mid,high,5,4,1,both,True,True
+gpt-oss-120b,3,compact,1827c482c454f763,Non-penalty goals + assists per 90 minutes,0.0,,abstained,,abstained,,abstained,0.16 per 90 minutes,wrong,1f4ea94e,mid,high,high,5,4,1,name,True,False
+gpt-oss-120b,3,compact,18cffa7b70d2eb23,Own goals,0,,abstained,0.0,correct,,abstained,,abstained,f8d2d42c,mid,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,196abb0077aab084,Yellow cards,11,3.5,wrong,​,wrong,,abstained,2.0,wrong,14f47102,low,high,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,1a32294127461515,Shots on target against,132.0,,abstained,0.0,wrong,,abstained,,abstained,28d596a0,mid,low,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,1a4142a3e45098bd,Clean sheets,3.0,6.0,wrong,​,wrong,,abstained,110.5,wrong,30ce77a2,low,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,1bd0560f4d37fecf,Points per match,1.38,,abstained,,abstained,,abstained,,abstained,94c79a82,high,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,22174a449ffdfe1c,Goals,2,,abstained,​,wrong,,abstained,0.3 goals per 90 minutes,wrong,4737cebe,mid,high,high,3,3,0,none,False,False
+gpt-oss-120b,3,compact,24ddb374e3e93f30,On-offsides,0.85,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,25cd6c3a478ca770,Goals conceded,16.0,18.0,correct,21.0,correct,,abstained,13.0,correct,30ce77a2,low,low,high,5,5,0,both,True,True
+gpt-oss-120b,3,compact,2741777c0e37b21f,Position,GK,,abstained,,abstained,,abstained,Goaltender,wrong,30ce77a2,low,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,2acea8127627bc69,Goals conceded per 90 minutes,1.4,,abstained,Data not found,wrong,0.82,wrong,,abstained,2d70dbe5,high,low,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,2d1f512a7ae2a503,Clean sheet percentage,0.0,0 %,correct,23.5%,wrong,,abstained,0.0 %,correct,2a3416b6,low,low,high,3,2,1,both,True,True
+gpt-oss-120b,3,compact,300693cf942c5ac7,Minutes per start,90.0,90.0,correct,​,wrong,,abstained,,abstained,a98a9189,mid,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,307784646da7a0b3,Clean sheet percentage,100.0,,abstained,,abstained,,abstained,,abstained,72e0ee7b,high,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,326e8ea533723e1a,Minutes per match,90.0,,abstained,90.0,correct,90.0,correct,,abstained,d1c92690,low,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,331dee0840466b9d,Losses,14.0,,abstained,,abstained,,abstained,,abstained,fac1f795,low,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,34778288acf1c215,Goals per shot,0.08,,abstained,0.15,wrong,,abstained,,abstained,9886c32e,high,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,34d8a7b99fe81d5f,Penalties missed,0.0,0.0,correct,0.0,correct,,abstained,0.0,correct,f8d2d42c,mid,low,high,5,5,0,name,True,False
+gpt-oss-120b,3,compact,35b4d1902c7f161e,goals scored - goals conceded per 90 minutes,-0.1,0.46 goals per 90 minutes,wrong,,abstained,,abstained,,abstained,9886c32e,high,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,35ec9a61b407ccab,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,36cda05b4a92841c,Shots on target percentage,19.2,21 %,correct,,abstained,,abstained,21 %,correct,9886c32e,high,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,3782cb8bc431b5f5,Name,Rome-Jayden Owusu-Oduro,Ben Rienstra,wrong,​,wrong,,abstained,Ben Rienstra,wrong,169df85b,high,high,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,3838ef52244a6848,Minutes per match,90.0,,abstained,90.0,correct,,abstained,,abstained,19e50035,high,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,38cbf936d8a847ee,Shots on target percentage,25.0,,abstained,0.33,wrong,33%,correct,,abstained,4accb7e0,low,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,3b552b92db836e03,Draws,0.0,,abstained,0.0,correct,,abstained,,abstained,2a3416b6,low,low,high,5,4,1,team,False,True
+gpt-oss-120b,3,compact,3cc70e13afc92f2d,Goals per shot,0.08,,abstained,1.2,wrong,1.2,wrong,1.2,wrong,9886c32e,high,mid,high,5,5,0,team,False,True
+gpt-oss-120b,3,compact,3d616c29859a24b5,Draws,7.0,38.0,wrong,,abstained,,abstained,0.4,wrong,6b91b999,mid,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,3f23f1b27b29fcc5,On-offsides,1.24,,abstained,0.0,wrong,0.0,wrong,,abstained,72e0ee7b,high,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,40132164c55c01f4,Losses,3.0,2.83,correct,,abstained,,abstained,2.83,correct,d1c92690,low,low,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,402e781e4608f4ad,Percentage of playing time,9.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,40bc557ea1ba77a3,goals scored - goals conceded per 90 minutes,-0.41,,abstained,,abstained,,abstained,-1.4,wrong,f679abe1,high,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,41cafe5e3c5464cf,Wins,1.0,5.0,wrong,29.0,wrong,,abstained,,abstained,d1c92690,low,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,4544966dbdd1a448,Clean sheets,0.0,0.0,correct,,abstained,,abstained,,abstained,d1c92690,low,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,46b8c0f7a2fafae7,On-offsides,0.44,,abstained,,abstained,,abstained,,abstained,94c79a82,high,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,46baa6e8fd01c9b5,Goals per shot,0.0,,abstained,0.12,wrong,,abstained,,abstained,f333ac24,high,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,4748fd6e3de25ee5,On-offsides,0.85,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,49646ccdf0d3234b,Fouls suffered,1.0,5.0,wrong,Data not available.,wrong,,abstained,5.0,wrong,2a3416b6,low,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,49bda315024321c6,Goals + assists,3.0,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,high,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,4a24b6e45c3a7be2,Goals per shot,0.09,28.9 %,wrong,,abstained,,abstained,28.9 %,wrong,d2b135e1,mid,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,4aae54d36244ddb0,Playing time in minutes,90.0,,abstained,,abstained,90.0,correct,,abstained,2a3416b6,low,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,4afe53d515741a6e,Minutes per start,90.0,90.0,correct,90.0,correct,,abstained,70 minutes,correct,f8d2d42c,mid,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,4ca14c28b21a9b19,Minutes per start,90.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,4d42c26210893463,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,0.0,correct,0 goals per 90,correct,72e0ee7b,high,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,4da9a671a064c0c4,Assists,1.0,,abstained,0.7,wrong,,abstained,1.5,wrong,4737cebe,mid,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,4dc466cc81efcc39,On-offsides,-1.12,0.0,wrong,0.0,wrong,0.0,wrong,0.0,wrong,2a3416b6,low,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,4df62db34d55516e,Matches fully played,4.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,4ea6a3f980724dfa,Non-penalty goals + assists per 90 minutes,0.26,0.13 per 90 minutes,wrong,,abstained,,abstained,,abstained,94c79a82,high,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,4fdd4ac9cae4f5c9,Losses,3.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,508a342300f4544b,Offsides,1.0,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,5099a031dfd4300b,Minutes per start,74.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,5131170164179569,passes into the goalkeeper's penalty area,54.0,,abstained,​,wrong,,abstained,,abstained,9886c32e,high,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,519ffa653c2d5352,Wins,1.0,,abstained,0.0,wrong,,abstained,,abstained,d1c92690,low,low,high,3,3,0,none,False,False
+gpt-oss-120b,3,compact,53d3b69ddd332dbc,Wins,1.0,0.0,wrong,,abstained,,abstained,0.0,wrong,72e0ee7b,high,low,high,3,3,0,none,False,False
+gpt-oss-120b,3,compact,53e62dc6c81bcb07,Goals per shot,0.09,,abstained,,abstained,,abstained,,abstained,94c79a82,high,mid,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,576e9adaef46e680,Wins,4.0,,abstained,,abstained,,abstained,,abstained,f679abe1,high,low,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,5853eda6a41dba81,Goals conceded,36.0,,abstained,0.0,wrong,20.0,wrong,,abstained,5c6b0637,mid,low,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,5b87a0c548fe2a0c,Matches fully played,5.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,5c216dd5500873f1,Saves,29.0,36.5,correct,Data not available for the identified entity.,wrong,,abstained,,abstained,f679abe1,high,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,5cbb9c72ade7a08d,Minutes per start,90.0,79 minutes,correct,,abstained,,abstained,81.0,correct,2a3416b6,low,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,5e0afd656981be8c,Saves,29.0,58.666666666666664,wrong,3.4333333333333336,wrong,,abstained,58.666666666666664,wrong,f679abe1,high,low,high,3,3,0,name,True,False
+gpt-oss-120b,3,compact,5e3231bede929ab8,Goals per shot,0.0,10.0 %,wrong, ,wrong,,abstained,,abstained,1958c005,low,mid,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,5e69189507073e23,Minutes per start,90.0,,abstained,​,wrong,,abstained,,abstained,19e50035,high,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,5eedad84c12c42fe,Assists,1.0,,abstained,3.0,wrong,,abstained,,abstained,4737cebe,mid,high,high,5,5,0,none,False,False
+gpt-oss-120b,3,compact,615e3ba6583f1bf9,Goals conceded per 90 minutes,1.33,,abstained,0.9,wrong,,abstained,1.19 goals per 90 minutes,correct,f8d2d42c,mid,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,660cc1569f99bd4b,Minutes per start,61.0,,abstained, ,wrong,,abstained,,abstained,f333ac24,high,mid,high,5,5,0,none,False,False
+gpt-oss-120b,3,compact,660ee4342cd2fc59,Shots on target percentage,28.9,,abstained,58%,wrong,,abstained,,abstained,d2b135e1,mid,mid,high,3,1,2,team,False,True
+gpt-oss-120b,3,compact,685078d060c69a8a,Shots on target percentage,30.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,68f784bbce7bdd96,Saves,29.0,,abstained,,abstained,,abstained,20.0,wrong,f679abe1,high,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,69e42778710169ac,Matches fully played,5.0,,abstained,38.0,wrong,,abstained,,abstained,1958c005,low,high,high,5,5,0,none,False,False
+gpt-oss-120b,3,compact,6b2ba700a9c7c593,Penalties missed,0.0,0.0,correct,,abstained,,abstained,0.0,correct,19e50035,high,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,6b4bdad085c1c87a,Wins,1.0,,abstained,1.0,correct,,abstained,,abstained,72e0ee7b,high,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,6cd58b6302dfa96a,Minutes per start,74.0,,abstained,,abstained,,abstained,73.7 minutes,correct,4737cebe,mid,mid,high,3,3,0,name,True,False
+gpt-oss-120b,3,compact,6d3aac3dcbe17580,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,,abstained,Defender,wrong,d1c92690,low,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,6dd0dad214c271a7,Goals per shot,0.13,0.2,wrong,,abstained,,abstained,0.625,wrong,4737cebe,mid,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,6fc1d0538bb93545,Minutes per start,83.0,,abstained, ,wrong,,abstained,88 minutes,correct,1f4ea94e,mid,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,705abe6d685ae340,Saves,29.0,17.0,wrong,,abstained,,abstained,17.0,wrong,f679abe1,high,low,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,70cc5f1ca6f5989f,Goals scored while on the pitch,32.0,0.0,wrong,45.0,wrong,0.0,wrong,0.0,wrong,6b91b999,mid,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,70eb40eb0e32700f,On-offsides,-0.79,,abstained,0.0,wrong,,abstained,,abstained,f679abe1,high,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,71e5563536cc9749,Nation,gh GHA,Ghana,wrong,Spain,wrong,Spain,wrong,Ghana,wrong,6a99e0b1,high,high,high,3,1,2,team,False,True
+gpt-oss-120b,3,compact,72570d858546c7f9,Goals per shot,0.0,10.0 %,wrong, ,wrong,,abstained,,abstained,14f47102,low,mid,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,74474791ba8c2f43,Shots on target percentage,19.2,29 %,wrong,30.8%,wrong,,abstained,20 %,correct,9886c32e,high,mid,high,3,3,0,name,True,False
+gpt-oss-120b,3,compact,754a46924811288a,Goals + assists while on the pitch,8.0,8.0,correct,,abstained,,abstained,0.3 per 90 minutes,wrong,4737cebe,mid,high,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,75ea4153219f7fd7,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,76c6466b5f4060c5,Saves,58.0,88.0,wrong,​,wrong,56.0,correct,,abstained,6b91b999,mid,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,77c6cb72f19d21b6,Wins,1.0,,abstained,​,wrong,,abstained,,abstained,72e0ee7b,high,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,7868a5cb2b4611aa,Clean sheet percentage,33.3,50 %,wrong,,abstained,,abstained,,abstained,f8d2d42c,mid,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,78c70d8c3d41d98d,Draws,16.0,,abstained,17.0,correct,,abstained,,abstained,19e50035,high,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,7a008e9bc008841a,Goals per shot,0.13,0.1818,wrong,0.07650000000000001,wrong,,abstained,0.21589999999999998,wrong,4737cebe,mid,mid,high,5,4,1,both,True,True
+gpt-oss-120b,3,compact,7aa89f348b151a8b,Minutes per start,88.0,,abstained,660.0,wrong,,abstained,,abstained,6b91b999,mid,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,7afce4eced53ac63,Clean sheet percentage,100.0,29.0 %,wrong,,abstained,,abstained,,abstained,72e0ee7b,high,low,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,7c17b32503ad0d78,Penalty save percentage,100.0,,abstained,0.5,wrong,,abstained,,abstained,30ce77a2,low,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,7c7a9a384f807afd,Position,GK,,abstained,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,d1c92690,low,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,7dc6bcd6d7a28f1d,Goals conceded per 90 minutes,1.33,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,7f43df83a9f2f079,Penalties attempted,0,2.0,wrong,0.0,correct,,abstained,1.3333333333333333,wrong,4accb7e0,low,high,high,3,2,1,both,True,True
+gpt-oss-120b,3,compact,801fab7f2dc87ff0,Penalties saved,0.0,2.0,wrong,0.3333333333333333,wrong,,abstained,4.0,wrong,a98a9189,mid,low,high,5,3,2,both,True,True
+gpt-oss-120b,3,compact,8235f87a0ececf20,Goals per shot,0.0,0.1,wrong,0.0,correct,,abstained,0.1,wrong,14f47102,low,mid,high,3,3,0,name,True,False
+gpt-oss-120b,3,compact,83c8fa246a8a8834,Minutes per substitute appearance,39.0,,abstained,Not available ,wrong,,abstained,,abstained,a98a9189,mid,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,83d416a3ff082726,Clean sheets,5.0,,abstained,​,wrong,,abstained,,abstained,fba79ac8,mid,low,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,8582af03e2827b02,Minutes per start,82.0,,abstained,,abstained,,abstained,,abstained,94c79a82,high,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,85b07a6d6783b650,Minutes per start,88.0,,abstained,90.0,correct,,abstained,,abstained,6b91b999,mid,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,871ee8ba1b4511dd,Penalties saved,0.0,0.0,correct,0.0,correct,,abstained,0.0,correct,a98a9189,mid,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,884da7b9826ad161,Matches fully played,4.0,,abstained,15.0,wrong,,abstained,33.0,wrong,1f4ea94e,mid,high,high,3,1,2,team,False,True
+gpt-oss-120b,3,compact,88b5398cec9c6dab,Minutes per start,80.0,,abstained,77.75,correct,,abstained,,abstained,4accb7e0,low,mid,high,3,2,1,team,False,True
+gpt-oss-120b,3,compact,89eac82d92dc8290,Minutes per substitute appearance,13.0,12 minutes,correct,,abstained,,abstained,11.67 minutes,correct,9886c32e,high,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,8a04e97565db29c8,Points per match,1.33,,abstained,,abstained,,abstained,,abstained,add304fc,low,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,8afd48205cfaae2f,Minutes per substitute appearance,13.0,9.33 minutes,wrong,30.0,wrong,,abstained,9.33 minutes,wrong,9886c32e,high,mid,high,1,1,0,name,True,False
+gpt-oss-120b,3,compact,8c5dc71f26a6aef5,Goals per shot,0.0,,abstained,​,wrong,,abstained,,abstained,f679abe1,high,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,8cd239b5c76042b1,Saves,58.0,136.0,wrong,98.5,wrong,,abstained,198.33333333333334,wrong,6b91b999,mid,low,high,5,5,0,name,True,False
+gpt-oss-120b,3,compact,8d220077fd7098b7,Goals + assists,3.0,10.0,wrong,,abstained,,abstained,10.0,wrong,4accb7e0,low,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,8d798640c4d05216,Name,Joe Walsh,Darren Randolph,wrong,,abstained,,abstained,Darren Randolph,wrong,72e0ee7b,high,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,8dd577e1e708e945,Draws,7.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,low,high,1,1,0,name,True,False
+gpt-oss-120b,3,compact,8eef5c6ab7fa4291,Losses,3.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,90627e25b54f66e2,Assists,0.0,,abstained,0.0,correct,,abstained,,abstained,a98a9189,mid,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,90d671547d9fe26c,Fouls suffered,0.0,0 per 90,correct,,abstained,,abstained,0 per 90,correct,d1c92690,low,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,921317420d02bc69,Clean sheets,0.0,1.0,wrong,​,wrong,,abstained,12.0,wrong,d1c92690,low,low,high,5,5,0,team,False,True
+gpt-oss-120b,3,compact,92ac3b7fd1b8f0b1,Goals per 90 minutes,0.35,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,high,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,93d5dbdf0a27385e,passes into the goalkeeper's penalty area,50.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,949ae58aa337a44b,Date of birth,2006.0,2000-04-25,correct,,abstained,,abstained,2000-04-25,correct,a109e5c8,high,high,high,5,1,4,team,False,True
+gpt-oss-120b,3,compact,94f2b587262b49cb,Goals per shot,0.09,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,mid,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,965820830e352960,Saves,19.0,29.0,wrong,,abstained,,abstained,29.0,wrong,a98a9189,mid,low,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,970128f64e075037,Goals,2,1.0,wrong,​,wrong,,abstained,1.0,wrong,4737cebe,mid,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,976d29ccf3d29b4b,Assists,0.0,47.0,wrong,,abstained,,abstained,33.0,wrong,19e50035,high,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,981fcc60a86a12a3,Saves,29.0,,abstained,82.0,wrong,71.0,wrong,,abstained,f679abe1,high,low,high,5,5,0,both,True,True
+gpt-oss-120b,3,compact,987b6a810a781259,Clean sheets,0.0,16.0,wrong,9.0,wrong,,abstained,12.0,wrong,2a3416b6,low,low,high,1,1,0,name,True,False
+gpt-oss-120b,3,compact,990841add4eddcf0,Penalties scored,0,,abstained,0.0,correct,,abstained,0.0,correct,4accb7e0,low,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,99b87c2a4d75ec6c,Penalty save percentage,100.0,,abstained,40%,wrong,,abstained,,abstained,30ce77a2,low,low,high,3,3,0,team,False,True
+gpt-oss-120b,3,compact,99c4994f966eeb2b,Minutes per start,80.0,,abstained,,abstained,,abstained,76 minutes,correct,4accb7e0,low,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,9a70e1f6f1f790bd,Shots per 90 minutes,0.0,,abstained,3.9,wrong,,abstained,,abstained,72e0ee7b,high,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,9a7c1dd721982a32,Own goals,0,1.0,wrong,​,wrong,,abstained,1.0,wrong,2a3416b6,low,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,9e053324a20026a8,Minutes per start,83.0,96.5 minutes,correct,67.26,correct,52.64000000000001,wrong,96.5 minutes,correct,1f4ea94e,mid,mid,high,5,5,0,team,False,True
+gpt-oss-120b,3,compact,9fc9107c62c86ea9,On-offsides,1.24,0.5,wrong,,abstained,,abstained,0.0,wrong,72e0ee7b,high,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,9ff858e4efbb6f9c,Goals per shot,0.09,0.38,wrong,0.38,wrong,,abstained,0.38,wrong,94c79a82,high,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,a062e19353346ed4,Second yellow cards,0,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,a081ca59e9608ce5,Draws,0.0,2.0,wrong,1.0,wrong,,abstained,,abstained,2a3416b6,low,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,a108aba50f44efae,Offsides,5.0,,abstained,7.0,wrong,,abstained,,abstained,d2b135e1,mid,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,a1287028a237c3a2,Goals per shot,0.0,,abstained,​,wrong,,abstained,,abstained,1958c005,low,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,a202b3b4825a94fe,Assists,0.0,0.0,correct,0.3,wrong,,abstained,0.0,correct,1f4ea94e,mid,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,a2d523ab32e78d50,Wins,1.0,,abstained,0.0,wrong,,abstained,,abstained,72e0ee7b,high,low,high,5,4,1,both,True,True
+gpt-oss-120b,3,compact,a39bd5a5e7953dfd,Squad,Beerschot Wilrijk,Crystal Palace,wrong,Manchester City,wrong,,abstained,Crystal Palace,wrong,f8d2d42c,mid,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,a494ce443e1088c1,Draws,6.0,,abstained,,abstained,,abstained,6.0,correct,c924b17d,low,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,a4f87cdebc768916,Saves,87.0,66.5,correct,,abstained,,abstained,121.0,wrong,19e50035,high,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,a610cbd51d4ad3f7,Penalties missed,0.0,,abstained,​,wrong,,abstained,,abstained,19e50035,high,low,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,a695575fe94d0c58,Shots on target percentage,30.0,,abstained,,abstained,,abstained,0 %,wrong,f333ac24,high,mid,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,a94aac6c2ec8bb76,Yellow cards,11,,abstained,,abstained,,abstained,,abstained,14f47102,low,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,aa164ef4db659ff3,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,aa3402c2d6019923,Saves,19.0,4.14,wrong,,abstained,,abstained,4.14,wrong,a98a9189,mid,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,ac968012f26b5499,Draws,16.0,52.0,wrong,0.0,wrong,,abstained,52.0,wrong,19e50035,high,low,high,5,5,0,name,True,False
+gpt-oss-120b,3,compact,aec5ac6680fd770f,Clean sheet percentage,0.0,13 %,wrong,,abstained,,abstained,13 %,wrong,2a3416b6,low,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,b14c0ef7558f6fed,Matches played,28,4.0,wrong,0.0,wrong,,abstained,,abstained,14f47102,low,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,b5908bcf3defb513,Penalties missed,0.0,1.0,wrong,0.0,correct,,abstained,1.0,wrong,6b91b999,mid,low,high,3,2,1,team,False,True
+gpt-oss-120b,3,compact,b62d645570047130,Minutes per match,88.0,,abstained,90.0,correct,,abstained,,abstained,f679abe1,high,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,b65349cdc8407d84,Name,Iñaki Williams,Iñaki Williams,correct,Value,wrong,,abstained,Iñaki Williams,correct,6a99e0b1,high,high,high,5,2,3,team,False,True
+gpt-oss-120b,3,compact,b67d16d1041f7be0,Saves,19.0,14.0,wrong,,abstained,,abstained,14.0,wrong,a98a9189,mid,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,b8af9cf23254bb23,Shots on target percentage,0.0,38.5 %,wrong,,abstained,,abstained,,abstained,f679abe1,high,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,b92daae320b1fd24,Name,Rome-Jayden Owusu-Oduro,,abstained,Netherlands,wrong,Netherlands,wrong,,abstained,169df85b,high,high,high,5,1,4,team,False,True
+gpt-oss-120b,3,compact,b98634f6b8e3a55b,Penalties attempted,2.0,1.0,wrong,2.0,correct,2.0,correct,,abstained,6b91b999,mid,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,baca2dce3ee66d18,Minutes per start,90.0,90.0 minutes,correct,,abstained,,abstained,90.0 minutes,correct,14f47102,low,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,bbb126fd32c1c595,On-offsides,0.53,,abstained,0.0,wrong,,abstained,,abstained,19e50035,high,mid,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,bbb4774195f4aef5,Second yellow cards,0,0.0,correct,0.0,correct,,abstained,0.0,correct,19e50035,high,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,bcc283e8003abde3,Minutes per start,88.0,,abstained,​,wrong,,abstained,,abstained,6b91b999,mid,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,be00c3808c03179b,Goals per shot,0.0,0.1818,wrong,​,wrong,,abstained,0.1818,wrong,f333ac24,high,mid,high,3,3,0,both,True,True
+gpt-oss-120b,3,compact,c0b0d4577172bd7d,passes into the goalkeeper's penalty area,50.0,,abstained,Data not available,wrong,,abstained,,abstained,1958c005,low,high,high,3,2,1,team,False,True
+gpt-oss-120b,3,compact,c59dbf8b5b50a70e,Minutes per start,82.0,,abstained,76.66666666666667,correct,,abstained,,abstained,94c79a82,high,mid,high,3,3,0,name,True,False
+gpt-oss-120b,3,compact,c5f3ecdca36688e9,Non-penalty goals per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,ca213a35f86091b6,Penalties attempted,0,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,high,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,cc6333394da0c50c,Goals per shot,0.0,22.7 %,wrong,0.45,wrong,,abstained,22.7 %,wrong,14f47102,low,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,cd74fa724fdb5b42,Minutes per start,90.0,90 minutes,correct,​,wrong,,abstained,,abstained,f8d2d42c,mid,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,cddc784b84e3a80c,Assists,0.0,22.0,wrong,,abstained,,abstained,12.5,wrong,1958c005,low,high,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,cde2eb862757f363,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,d0b05b08d8d9491e,Clean sheets,0.0,4.0,wrong,​,wrong,,abstained,11.0,wrong,2a3416b6,low,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,d28313d4e50b7bf6,Goals per shot,0.0,,abstained,​,wrong,,abstained,,abstained,14f47102,low,mid,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,d2895c48e00a17f2,Shots per 90 minutes,2.23,,abstained,Value,wrong,,abstained,0.45,wrong,d2b135e1,mid,high,high,3,2,1,team,False,True
+gpt-oss-120b,3,compact,d33aa660f4bb9800,Shots on target percentage,33.3,,abstained,,abstained,,abstained,,abstained,1958c005,low,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,d3a50092ce8dec20,Non-penalty goals + assists per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,high,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,d42d4fc6f52f0ccf,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,2a3416b6,low,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,d4ad1e07b994b6b6,Saves,87.0,,abstained,Data not available for the identified entity.,wrong,,abstained,31.0,wrong,19e50035,high,low,high,3,2,1,none,False,False
+gpt-oss-120b,3,compact,d52e349dac6c61f8,Wins,4.0,,abstained, ,wrong,,abstained,,abstained,f679abe1,high,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,d58cc0aabb29f8d8,Yellow cards,0,1.0,wrong,,abstained,,abstained,0.5,wrong,d1c92690,low,high,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,d6d1bd55cdec79ea,Goals conceded per 90 minutes,0.68,0.01 goals per 90 minutes,wrong,1.1066666666666667,wrong,1.2,wrong,1.13 goals per 90 minutes,wrong,a98a9189,mid,low,high,3,2,1,team,False,True
+gpt-oss-120b,3,compact,d8d02aef85493fca,Minutes per start,90.0,,abstained,,abstained,,abstained,,abstained,14f47102,low,mid,high,5,5,0,none,False,False
+gpt-oss-120b,3,compact,d9fa43a17c695487,Goals per shotots on target,0.31,0.17,wrong,,abstained,,abstained,0.09,wrong,d2b135e1,mid,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,dad80a5b7fda5b3a,Penalties missed,0.0,,abstained,,abstained,,abstained,,abstained,19e50035,high,low,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,dce9e1c04ec7c829,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,30ce77a2,low,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,dd15950ea27ad776,Substitutions,2.0,,abstained,0.0,wrong,,abstained,,abstained,a98a9189,mid,high,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,dd9de28ac9090055,Wins,1.0,,abstained,0.0,wrong,,abstained,1.0,correct,72e0ee7b,high,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,dda040746bd30249,Substitutions,0.0,,abstained,1.8,wrong,,abstained,,abstained,14f47102,low,high,high,5,5,0,none,False,False
+gpt-oss-120b,3,compact,e01ca449d21eef6c,Shots on target percentage,28.9,41.0 %,wrong,0.23,wrong,,abstained,41 %,wrong,d2b135e1,mid,mid,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,e0f361f12aa63267,Goals conceded per 90 minutes,0.68,0.40 per 90 minutes,wrong,0.95,wrong,,abstained,,abstained,a98a9189,mid,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,e13f7cb6828c2717,Saves,87.0,0.0,wrong,,abstained,,abstained,23.5,wrong,19e50035,high,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,e43f1cb7ad173126,Offsides,5.0,,abstained,value,wrong,,abstained,,abstained,d2b135e1,mid,high,high,5,4,1,team,False,True
+gpt-oss-120b,3,compact,e52642c37c590be6,Matches played,28,55.666666666666664,wrong,30.0,correct,,abstained,24.5,correct,14f47102,low,high,high,3,2,1,both,True,True
+gpt-oss-120b,3,compact,e6c454c6459e5882,Clean sheet percentage,33.3,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,e7b056019179b080,Shots on target percentage,33.3,,abstained,,abstained,,abstained,,abstained,1958c005,low,mid,high,5,4,1,team,False,True
+gpt-oss-120b,3,compact,ea21ea8dcd33526e,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,72e0ee7b,high,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,eaa46854d64e7938,Wins,4.0,52.0,wrong,,abstained,,abstained,,abstained,f679abe1,high,low,low,1,1,0,none,False,False
+gpt-oss-120b,3,compact,eb1cff0ada1bdf29,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,19e50035,high,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,eb8bccd75209a74a,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,f8d2d42c,mid,mid,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,ed49a56ce555b15a,Clean sheet percentage,33.3,5.56 %,wrong,,abstained,,abstained,0 %,wrong,f8d2d42c,mid,low,high,3,3,0,name,True,False
+gpt-oss-120b,3,compact,ed5094219427c9c9,Interceptions,0.0,,abstained,12.3 per 90 minutes,wrong,,abstained,,abstained,f679abe1,high,high,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,f07492c47a6f4bb1,Shots on target percentage,25.0,,abstained,22.2%,correct,,abstained,50 %,wrong,4accb7e0,low,mid,high,5,5,0,name,True,False
+gpt-oss-120b,3,compact,f1ec946b94ad9d33,Nation,se SWE,Sweden,wrong,Sweden,wrong,Sweden,wrong,Sweden,wrong,a109e5c8,high,high,high,3,2,1,both,True,True
+gpt-oss-120b,3,compact,f27313c6fed30b51,Position,"DF,MF",,abstained,Midfielder,wrong,,abstained,,abstained,1958c005,low,mid,high,3,3,0,none,False,False
+gpt-oss-120b,3,compact,f2830531e95a5c33,Date of birth,2006.0,2006-02-02,correct,2005-03-16,correct,2004-03-08,correct,2006-02-02,correct,a109e5c8,high,high,high,1,1,0,name,True,False
+gpt-oss-120b,3,compact,f351c1cf5fb9825f,Goals per 90 minutes,0.0,0.49,wrong,,abstained,,abstained,,abstained,f333ac24,high,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,f44efd6d075e0b5b,Goals conceded per 90 minutes,1.33,,abstained,0.865,wrong,,abstained,,abstained,f8d2d42c,mid,low,high,1,1,0,none,False,False
+gpt-oss-120b,3,compact,f46ef4339bb8c03c,Date of birth,1994.0,,abstained,,abstained,,abstained,,abstained,6a99e0b1,high,high,high,1,0,1,team,False,True
+gpt-oss-120b,3,compact,f5cb4651cfcf9427,Minutes per start,61.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,mid,mid,5,5,0,none,False,False
+gpt-oss-120b,3,compact,f703ad74f4b080d0,Saves,29.0,,abstained,104.0,wrong,,abstained,,abstained,f679abe1,high,low,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,f704494d41bd3c70,On-offsides,0.44,2.0,wrong,0.0,wrong,,abstained,2.0,wrong,94c79a82,high,mid,high,5,4,1,name,True,False
+gpt-oss-120b,3,compact,f7be205d474d01a6,Assists,0.0,,abstained,0.0,correct,,abstained,,abstained,1958c005,low,high,mid,1,1,0,none,False,False
+gpt-oss-120b,3,compact,f822af239093ecb3,Clean sheets,3.0,3.0,correct,10 (2023/24 Czech First League),wrong,,abstained,3.0,correct,30ce77a2,low,low,high,1,1,0,team,False,True
+gpt-oss-120b,3,compact,fa23ba64a71194a4,Minutes per start,90.0,,abstained,90.0,correct,,abstained,810 minutes,wrong,30ce77a2,low,mid,low,5,5,0,none,False,False
+gpt-oss-120b,3,compact,fcaeb2bfbad3a4fa,Clean sheet percentage,0.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,low,low,3,3,0,none,False,False
+gpt-oss-120b,3,compact,fea6d398e5205f2f,Goals conceded per 90 minutes,0.68,,abstained,0.68,correct,,abstained,0.71 goals per 90 minutes,correct,a98a9189,mid,low,mid,3,3,0,none,False,False
+gpt-oss-120b,3,compact,ff83af2af1487a92,Penalties scored,0,4.0,wrong,0.0,correct,,abstained,4.0,wrong,4accb7e0,low,high,high,5,4,1,none,False,False
+mistral-large-3,3,few_5,01fe10d2305bd9f9,Assists,0.0,,abstained,0.0,correct,,abstained,,abstained,1f4ea94e,mid,high,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,045827cc3a078eeb,Clean sheets,0.0,,abstained,0.0,correct,Not applicable for position,wrong,,abstained,2a3416b6,low,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,0464d75309b3a5bb,Squad,BB Bodrumspor,Brighton,wrong,Unknown (insufficient context for precise identification),wrong,,abstained,Charlton Athletic,wrong,f333ac24,high,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,046b541a748d0097,Shots on target per 90 minutes,0.0,,abstained,1.5433333333333332,wrong,1.8,wrong,0.0,correct,6b91b999,mid,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,0488348dfd69f85b,Shots per 90 minutes,2.23,0.5766666666666667,wrong,2.433333333333333,correct,2.5,correct,0.8000000000000002,wrong,d2b135e1,mid,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,06d78f0904c3bd81,goals scored - goals conceded per 90 minutes,0.17,"{'goals scored': 0, 'goals conceded per 90 minutes': 0.91} {'goals scored': None, 'goals conceded per 90 minutes': None}",wrong,,abstained,,abstained,"{'goals scored': 0, 'goals conceded per 90 minutes': 0.91} {'goals scored': None, 'goals conceded per 90 minutes': None}",wrong,30ce77a2,low,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,08a930f725433d3d,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,0aa86a5110618adc,Nation,cz CZE,,abstained,gb GBR,wrong,,abstained,,abstained,30ce77a2,low,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,0b115f1efc45a4d2,Position,MF,,abstained,,abstained,Offensive play in football (soccer),wrong,Outfield player,wrong,4accb7e0,low,mid,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,0c399068d98f9903,Penalties missed,0.0,0.0,correct,0.0,correct,0.0,correct,0.0,correct,6b91b999,mid,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,0cd527299b045a3f,Clean sheets,3.0,,abstained,0.0,wrong,Not applicable,wrong,,abstained,30ce77a2,low,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,0dae5edb8df8db7d,Interceptions,12.0,0.38,wrong,,abstained,Not applicable for this entity class and property,wrong,0.38,wrong,94c79a82,high,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,0e0e0bfdad18617a,Position,"DF,MF",Attacker,wrong,Forward,wrong,Football Player,wrong,Defender or Defensive Midfielder,wrong,1958c005,low,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,0e4304f8067e460a,Position,"DF,MF",Midfielder,wrong,MF,wrong,Football Player,wrong,Midfielder,wrong,1f4ea94e,mid,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,0ffc423ebaba646a,Clean sheet percentage,100.0,,abstained,68.42%,wrong,,abstained,,abstained,72e0ee7b,high,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,10d1dfdadd7622ec,Position,"DF,MF",,abstained,MF,wrong,Attacking Midfielder,wrong,Goalkeeper,wrong,1f4ea94e,mid,mid,high,3,2,1,team,False,True
+mistral-large-3,3,few_5,114388c8053d1dda,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,,abstained,,abstained,a98a9189,mid,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,11ece662b16a8af5,Draws,7.0,,abstained,1.0,wrong,16.666666666666668,wrong,,abstained,6b91b999,mid,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,135b009daacf67e2,Date of birth,2004.0,02/07/2004,wrong,2004-01-15,correct,2004-01-02,correct,02/07/2004,wrong,169df85b,high,high,high,3,1,2,both,True,True
+mistral-large-3,3,few_5,139b203f8baf1504,Goals per 90 minutes,0.35,,abstained,0.07666666666666666,wrong,0.35,correct,,abstained,d2b135e1,mid,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,145e8f18b6aa675c,On-offsides,0.71,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,1636b9c94ecd3f39,Goals conceded,16.0,29.5,wrong,12.0,correct,24.0,wrong,22.666666666666668,wrong,30ce77a2,low,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,163e62b32180505f,Position,MF,Midfielder,wrong,,abstained,,abstained,Midfielder,wrong,4accb7e0,low,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,1757a93591a07bb8,Goals per shotots on target,0.31,,abstained,,abstained,,abstained,0.2,wrong,d2b135e1,mid,mid,high,5,4,1,both,True,True
+mistral-large-3,3,few_5,1827c482c454f763,Non-penalty goals + assists per 90 minutes,0.0,0.16,wrong,0.12,wrong,,abstained,0.10666666666666667,wrong,1f4ea94e,mid,high,high,5,4,1,name,True,False
+mistral-large-3,3,few_5,18cffa7b70d2eb23,Own goals,0,,abstained,0.0,correct,0.0,correct,0.0,correct,f8d2d42c,mid,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,196abb0077aab084,Yellow cards,11,2.6666666666666665,wrong,,abstained,,abstained,2.6666666666666665,wrong,14f47102,low,high,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,1a32294127461515,Shots on target against,132.0,,abstained,11.666666666666666,wrong,,abstained,20.0,wrong,28d596a0,mid,low,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,1a4142a3e45098bd,Clean sheets,3.0,202.0,wrong,2.3333333333333335,correct,,abstained,202.0,wrong,30ce77a2,low,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,1bd0560f4d37fecf,Points per match,1.38,,abstained,1.7,correct,1.4000000000000001,correct,,abstained,94c79a82,high,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,22174a449ffdfe1c,Goals,2,2.0,correct,,abstained,0.30 per 90 minutes,wrong,1.3333333333333333,wrong,4737cebe,mid,high,high,3,3,0,none,False,False
+mistral-large-3,3,few_5,24ddb374e3e93f30,On-offsides,0.85,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,mid,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,25cd6c3a478ca770,Goals conceded,16.0,16.666666666666668,correct,21.333333333333332,correct,20.333333333333332,correct,15.333333333333334,correct,30ce77a2,low,low,high,5,5,0,both,True,True
+mistral-large-3,3,few_5,2741777c0e37b21f,Position,GK,Power Forward,wrong,League standing (example),wrong,Professional golfer,wrong,Power Forward / Center,wrong,30ce77a2,low,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,2acea8127627bc69,Goals conceded per 90 minutes,1.4,0.8,wrong,1.5,correct,,abstained,0.4,wrong,2d70dbe5,high,low,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,2d1f512a7ae2a503,Clean sheet percentage,0.0,0 %,correct,18.75,wrong,,abstained,0.0 %,correct,2a3416b6,low,low,high,3,2,1,both,True,True
+mistral-large-3,3,few_5,300693cf942c5ac7,Minutes per start,90.0,90.0 minutes,correct,90.0,correct,90.0,correct,90.0 minutes,correct,a98a9189,mid,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,307784646da7a0b3,Clean sheet percentage,100.0,,abstained,,abstained,,abstained,22.22 %,wrong,72e0ee7b,high,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,326e8ea533723e1a,Minutes per match,90.0,,abstained,90.0,correct,90.0,correct,90 minutes,correct,d1c92690,low,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,331dee0840466b9d,Losses,14.0,6.0,wrong,12.0,correct,,abstained,6.0,wrong,fac1f795,low,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,34778288acf1c215,Goals per shot,0.08,0.21,wrong,0.18,wrong,0.208,wrong,0.19666666666666666,wrong,9886c32e,high,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,34d8a7b99fe81d5f,Penalties missed,0.0,4.0,wrong,0.0,correct,0.0,correct,2.6666666666666665,wrong,f8d2d42c,mid,low,high,5,5,0,name,True,False
+mistral-large-3,3,few_5,35b4d1902c7f161e,goals scored - goals conceded per 90 minutes,-0.1,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,35ec9a61b407ccab,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,36cda05b4a92841c,Shots on target percentage,19.2,33.0 %,wrong,40.0,wrong,30.0,wrong,33.0 %,wrong,9886c32e,high,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,3782cb8bc431b5f5,Name,Rome-Jayden Owusu-Oduro,,abstained,,abstained,AZ Alkmaar,wrong,,abstained,169df85b,high,high,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,3838ef52244a6848,Minutes per match,90.0,90.0,correct,90.0,correct,90.0,correct,90.0 minutes,correct,19e50035,high,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,38cbf936d8a847ee,Shots on target percentage,25.0,43.0 %,wrong,26.26,correct,30.3%,correct,43.0 %,wrong,4accb7e0,low,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,3b552b92db836e03,Draws,0.0,1.3333333333333333,wrong,,abstained,0.0,correct,0.0,correct,2a3416b6,low,low,high,5,4,1,team,False,True
+mistral-large-3,3,few_5,3cc70e13afc92f2d,Goals per shot,0.08,,abstained,1.2,wrong,1.2,wrong,0.34795,wrong,9886c32e,high,mid,high,5,5,0,team,False,True
+mistral-large-3,3,few_5,3d616c29859a24b5,Draws,7.0,,abstained,,abstained,"Not applicable for position (GK refers to a role in sports, typically Goalkeeper in football/soccer)",wrong,,abstained,6b91b999,mid,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,3f23f1b27b29fcc5,On-offsides,1.24,,abstained,,abstained,0.0,wrong,,abstained,72e0ee7b,high,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,40132164c55c01f4,Losses,3.0,,abstained,0.8 (avg. per 90 in recent season),wrong,,abstained,,abstained,d1c92690,low,low,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,402e781e4608f4ad,Percentage of playing time,9.0,,abstained,65.0,wrong,45.0%,wrong,,abstained,f333ac24,high,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,40bc557ea1ba77a3,goals scored - goals conceded per 90 minutes,-0.41,"{'goals scored': 0, 'goals conceded per 90 minutes': 0.8}",wrong,,abstained,,abstained,"{'goals scored': 0, 'goals conceded per 90 minutes': 0.8} {'goals scored': None, 'goals conceded per 90 minutes': None}",wrong,f679abe1,high,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,41cafe5e3c5464cf,Wins,1.0,4.0,wrong,2.6666666666666665,wrong,4.0,wrong,4.666666666666667,wrong,d1c92690,low,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,4544966dbdd1a448,Clean sheets,0.0,1.0,wrong,0.0,correct,1.0,wrong,0.6666666666666666,wrong,d1c92690,low,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,46b8c0f7a2fafae7,On-offsides,0.44,,abstained,,abstained,12.0,wrong,,abstained,94c79a82,high,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,46baa6e8fd01c9b5,Goals per shot,0.0,,abstained,0.12,wrong,0.08,wrong,0.19999999999999998,wrong,f333ac24,high,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,4748fd6e3de25ee5,On-offsides,0.85,,abstained,,abstained,14 (2022/2023 season),wrong,,abstained,4737cebe,mid,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,49646ccdf0d3234b,Fouls suffered,1.0,,abstained,,abstained,,abstained,,abstained,2a3416b6,low,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,49bda315024321c6,Goals + assists,3.0,,abstained,,abstained,12.0,wrong,0.0,wrong,4accb7e0,low,high,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,4a24b6e45c3a7be2,Goals per shot,0.09,,abstained,0.07666666666666667,correct,0.08666666666666667,correct,,abstained,d2b135e1,mid,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,4aae54d36244ddb0,Playing time in minutes,90.0,,abstained,90.0,correct,90.0,correct,,abstained,2a3416b6,low,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,4afe53d515741a6e,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,f8d2d42c,mid,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,4ca14c28b21a9b19,Minutes per start,90.0,60.0,wrong,90.0,correct,,abstained,60 minutes,wrong,d1c92690,low,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,4d42c26210893463,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,,abstained,0.0,correct,72e0ee7b,high,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,4da9a671a064c0c4,Assists,1.0,,abstained,0.7666666666666666,correct,"0.21 per 90 minutes (2022/2023 season, top-tier league average)",wrong,,abstained,4737cebe,mid,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,4dc466cc81efcc39,On-offsides,-1.12,0.0,wrong,,abstained,,abstained,0.0,wrong,2a3416b6,low,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,4df62db34d55516e,Matches fully played,4.0,,abstained,4.0,correct,38.0,wrong,,abstained,1f4ea94e,mid,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,4ea6a3f980724dfa,Non-penalty goals + assists per 90 minutes,0.26,,abstained,0.25,correct,0.25,correct,,abstained,94c79a82,high,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,4fdd4ac9cae4f5c9,Losses,3.0,,abstained,,abstained,,abstained,,abstained,d1c92690,low,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,508a342300f4544b,Offsides,1.0,,abstained,,abstained,"Not applicable (statistic typically refers to football/soccer players; ""Offsides"" is a rule-specific metric not universally available for all players)",wrong,,abstained,9886c32e,high,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,5099a031dfd4300b,Minutes per start,74.0,,abstained,90.0,correct,90.0,correct,,abstained,4737cebe,mid,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,5131170164179569,passes into the goalkeeper's penalty area,54.0,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,519ffa653c2d5352,Wins,1.0,,abstained,3.0,wrong,,abstained,3.0,wrong,d1c92690,low,low,high,3,3,0,none,False,False
+mistral-large-3,3,few_5,53d3b69ddd332dbc,Wins,1.0,,abstained,0.0,wrong,0.0,wrong,,abstained,72e0ee7b,high,low,high,3,3,0,none,False,False
+mistral-large-3,3,few_5,53e62dc6c81bcb07,Goals per shot,0.09,0.19295,wrong,0.12,correct,0.08666666666666667,correct,0.1935,wrong,94c79a82,high,mid,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,576e9adaef46e680,Wins,4.0,,abstained,18.666666666666668,wrong,"3 FA Cup,1 League Cup",correct,,abstained,f679abe1,high,low,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,5853eda6a41dba81,Goals conceded,36.0,,abstained,0.0,wrong,,abstained,,abstained,5c6b0637,mid,low,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,5b87a0c548fe2a0c,Matches fully played,5.0,,abstained,16.333333333333332,wrong,Not enough information to determine,wrong,,abstained,1958c005,low,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,5c216dd5500873f1,Saves,29.0,,abstained,39.6,wrong,,abstained,27.0,correct,f679abe1,high,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,5cbb9c72ade7a08d,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,2a3416b6,low,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,5e0afd656981be8c,Saves,29.0,102.66666666666667,wrong,30.0,correct,,abstained,102.66666666666667,wrong,f679abe1,high,low,high,3,3,0,name,True,False
+mistral-large-3,3,few_5,5e3231bede929ab8,Goals per shot,0.0,,abstained,0.12,wrong,0.11666666666666665,wrong,,abstained,1958c005,low,mid,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,5e69189507073e23,Minutes per start,90.0,90.0,correct,90.0,correct,90.0,correct,90.0 minutes,correct,19e50035,high,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,5eedad84c12c42fe,Assists,1.0,,abstained,2.3333333333333335,wrong,3.0,wrong,,abstained,4737cebe,mid,high,high,5,5,0,none,False,False
+mistral-large-3,3,few_5,615e3ba6583f1bf9,Goals conceded per 90 minutes,1.33,1.29,correct,0.0,wrong,,abstained,1.29,correct,f8d2d42c,mid,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,660cc1569f99bd4b,Minutes per start,61.0,28.2 minutes,wrong,29.7,wrong,93.0,wrong,142 minutes,wrong,f333ac24,high,mid,high,5,5,0,none,False,False
+mistral-large-3,3,few_5,660ee4342cd2fc59,Shots on target percentage,28.9,,abstained,37.8%,correct,42.2%,wrong,,abstained,d2b135e1,mid,mid,high,3,1,2,team,False,True
+mistral-large-3,3,few_5,685078d060c69a8a,Shots on target percentage,30.0,31 %,correct,45.2%,wrong,,abstained,31 %,correct,f333ac24,high,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,68f784bbce7bdd96,Saves,29.0,,abstained,43.5,wrong,,abstained,,abstained,f679abe1,high,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,69e42778710169ac,Matches fully played,5.0,,abstained,34.333333333333336,wrong,38.0,wrong,,abstained,1958c005,low,high,high,5,5,0,none,False,False
+mistral-large-3,3,few_5,6b2ba700a9c7c593,Penalties missed,0.0,0.0,correct,Not applicable,wrong,,abstained,0.0,correct,19e50035,high,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,6b4bdad085c1c87a,Wins,1.0,,abstained,,abstained,4.0,wrong,,abstained,72e0ee7b,high,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,6cd58b6302dfa96a,Minutes per start,74.0,90.0 minutes,correct,71.93333333333334,correct,82.33333333333333,correct,78.25 minutes,correct,4737cebe,mid,mid,high,3,3,0,name,True,False
+mistral-large-3,3,few_5,6d3aac3dcbe17580,Position,GK,Goalkeeper,wrong,,abstained,Goalkeeper,wrong,Goalkeeper,wrong,d1c92690,low,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,6dd0dad214c271a7,Goals per shot,0.13,0.12,correct,0.13,correct,0.12466666666666666,correct,0.124,correct,4737cebe,mid,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,6fc1d0538bb93545,Minutes per start,83.0,90.0 minutes,correct,88.39999999999999,correct,90.0,correct,90 minutes,correct,1f4ea94e,mid,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,705abe6d685ae340,Saves,29.0,,abstained,2.1 per game,wrong,,abstained,,abstained,f679abe1,high,low,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,70cc5f1ca6f5989f,Goals scored while on the pitch,32.0,,abstained,,abstained,0.0,wrong,,abstained,6b91b999,mid,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,70eb40eb0e32700f,On-offsides,-0.79,,abstained,,abstained,,abstained,0.0,wrong,f679abe1,high,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,71e5563536cc9749,Nation,gh GHA,"Ghanesa, Española",wrong,es ESP,wrong,Spain,wrong,"['Ghana', 'Spain']",wrong,6a99e0b1,high,high,high,3,1,2,team,False,True
+mistral-large-3,3,few_5,72570d858546c7f9,Goals per shot,0.0,,abstained,0.12,wrong,0.11666666666666665,wrong,,abstained,14f47102,low,mid,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,74474791ba8c2f43,Shots on target percentage,19.2,20.0 %,correct,46.2%,wrong,38.46%,wrong,20.0 %,correct,9886c32e,high,mid,high,3,3,0,name,True,False
+mistral-large-3,3,few_5,754a46924811288a,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,75ea4153219f7fd7,Penalties missed,0.0,,abstained,3.6666666666666665,wrong,12.0,wrong,,abstained,6b91b999,mid,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,76c6466b5f4060c5,Saves,58.0,46.5,correct,58.666666666666664,correct,78.0,wrong,49.666666666666664,correct,6b91b999,mid,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,77c6cb72f19d21b6,Wins,1.0,,abstained,0.0,wrong,35.0,wrong,,abstained,72e0ee7b,high,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,7868a5cb2b4611aa,Clean sheet percentage,33.3,11 %,wrong,25.0,correct,62.8%,wrong,11 %,wrong,f8d2d42c,mid,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,78c70d8c3d41d98d,Draws,16.0,7.0,wrong,,abstained,6.5,wrong,7.0,wrong,19e50035,high,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,7a008e9bc008841a,Goals per shot,0.13,0.10726666666666666,correct,0.14666666666666667,correct,0.125,correct,0.1716,correct,4737cebe,mid,mid,high,5,4,1,both,True,True
+mistral-large-3,3,few_5,7aa89f348b151a8b,Minutes per start,88.0,,abstained,90.0,correct,90.0,correct,90 minutes,correct,6b91b999,mid,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,7afce4eced53ac63,Clean sheet percentage,100.0,,abstained,100.0,correct,,abstained,0.0 %,wrong,72e0ee7b,high,low,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,7c17b32503ad0d78,Penalty save percentage,100.0,74 %,wrong,16.67%,wrong,1.72%,wrong,25.0 %,wrong,30ce77a2,low,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,7c7a9a384f807afd,Position,GK,Goalkeeper,wrong,Goalkeeper (Team),wrong,Goalkeeper,wrong,Goalkeeper,wrong,d1c92690,low,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,7dc6bcd6d7a28f1d,Goals conceded per 90 minutes,1.33,5.35,wrong,1.5,correct,1.4166666666666667,correct,3.05,wrong,f8d2d42c,mid,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,7f43df83a9f2f079,Penalties attempted,0,1.6666666666666667,wrong,0.0,correct,1.0,wrong,2.0,wrong,4accb7e0,low,high,high,3,2,1,both,True,True
+mistral-large-3,3,few_5,801fab7f2dc87ff0,Penalties saved,0.0,4.0,wrong,0.3333333333333333,wrong,0.0,correct,4.0,wrong,a98a9189,mid,low,high,5,3,2,both,True,True
+mistral-large-3,3,few_5,8235f87a0ececf20,Goals per shot,0.0,0.05333333333333334,wrong,0.07333333333333335,wrong,,abstained,0.05333333333333334,wrong,14f47102,low,mid,high,3,3,0,name,True,False
+mistral-large-3,3,few_5,83c8fa246a8a8834,Minutes per substitute appearance,39.0,,abstained,,abstained,18.5,wrong,,abstained,a98a9189,mid,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,83d416a3ff082726,Clean sheets,5.0,,abstained,0.0,wrong,0.0,wrong,0.0,wrong,fba79ac8,mid,low,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,8582af03e2827b02,Minutes per start,82.0,,abstained,86.3,correct,90.0,correct,,abstained,94c79a82,high,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,85b07a6d6783b650,Minutes per start,88.0,90 min' per appearance,correct,90.0,correct,90.0,correct,90 minutes,correct,6b91b999,mid,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,871ee8ba1b4511dd,Penalties saved,0.0,10.0,wrong,2.3333333333333335,wrong,1.0,wrong,10.0,wrong,a98a9189,mid,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,884da7b9826ad161,Matches fully played,4.0,120.0,wrong,10.0,wrong,11.0,wrong,120.0,wrong,1f4ea94e,mid,high,high,3,1,2,team,False,True
+mistral-large-3,3,few_5,88b5398cec9c6dab,Minutes per start,80.0,,abstained,79.89999999999999,correct,27.46666666666667,wrong,,abstained,4accb7e0,low,mid,high,3,2,1,team,False,True
+mistral-large-3,3,few_5,89eac82d92dc8290,Minutes per substitute appearance,13.0,,abstained,25.3,wrong,25.3,wrong,,abstained,9886c32e,high,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,8a04e97565db29c8,Points per match,1.33,2.3,wrong,0.8000000000000002,wrong,0.3233333333333333,wrong,,abstained,add304fc,low,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,8afd48205cfaae2f,Minutes per substitute appearance,13.0,18 minutes,wrong,,abstained,20.599999999999998,wrong,18 minutes,wrong,9886c32e,high,mid,high,1,1,0,name,True,False
+mistral-large-3,3,few_5,8c5dc71f26a6aef5,Goals per shot,0.0,,abstained,0.12,wrong,0.12,wrong,,abstained,f679abe1,high,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,8cd239b5c76042b1,Saves,58.0,168.0,wrong,81.0,wrong,,abstained,117.33333333333333,wrong,6b91b999,mid,low,high,5,5,0,name,True,False
+mistral-large-3,3,few_5,8d220077fd7098b7,Goals + assists,3.0,,abstained,,abstained,,abstained,,abstained,4accb7e0,low,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,8d798640c4d05216,Name,Joe Walsh,Darren Randolph,wrong,Clean sheet percentage (100%),wrong,Unknown Football (Soccer) Team Statistic,wrong,Darren Randolph,wrong,72e0ee7b,high,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,8dd577e1e708e945,Draws,7.0,2.0,wrong,,abstained,,abstained,2.0,wrong,6b91b999,mid,low,high,1,1,0,name,True,False
+mistral-large-3,3,few_5,8eef5c6ab7fa4291,Losses,3.0,190.0,wrong,0.0,wrong,,abstained,190.0,wrong,d1c92690,low,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,90627e25b54f66e2,Assists,0.0,,abstained,0.0,correct,0.0,correct,,abstained,a98a9189,mid,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,90d671547d9fe26c,Fouls suffered,0.0,,abstained,0.1,wrong,,abstained,1.83 per 90 minutes,wrong,d1c92690,low,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,921317420d02bc69,Clean sheets,0.0,0.6666666666666666,wrong,0.6666666666666666,wrong,2.0,wrong,1.6666666666666667,wrong,d1c92690,low,low,high,5,5,0,team,False,True
+mistral-large-3,3,few_5,92ac3b7fd1b8f0b1,Goals per 90 minutes,0.35,,abstained,0.12,wrong,0.2,wrong,,abstained,d2b135e1,mid,high,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,93d5dbdf0a27385e,passes into the goalkeeper's penalty area,50.0,,abstained,0.3,wrong,,abstained,,abstained,1958c005,low,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,949ae58aa337a44b,Date of birth,2006.0,2 February 2006,wrong,,abstained,,abstained,2 February 2006,wrong,a109e5c8,high,high,high,5,1,4,team,False,True
+mistral-large-3,3,few_5,94f2b587262b49cb,Goals per shot,0.09,,abstained,0.12,correct,0.10333333333333333,correct,,abstained,d2b135e1,mid,mid,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,965820830e352960,Saves,19.0,36.5,wrong,,abstained,,abstained,20.5,correct,a98a9189,mid,low,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,970128f64e075037,Goals,2,,abstained,5.0,wrong,To score goals and contribute to the team's offensive play as a midfielder or forward,wrong,,abstained,4737cebe,mid,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,976d29ccf3d29b4b,Assists,0.0,16.0,wrong,Not applicable,wrong,,abstained,16.0,wrong,19e50035,high,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,981fcc60a86a12a3,Saves,29.0,34.0,correct,68.0,wrong,,abstained,34.0,correct,f679abe1,high,low,high,5,5,0,both,True,True
+mistral-large-3,3,few_5,987b6a810a781259,Clean sheets,0.0,6.666666666666667,wrong,1.6666666666666667,wrong,,abstained,6.666666666666667,wrong,2a3416b6,low,low,high,1,1,0,name,True,False
+mistral-large-3,3,few_5,990841add4eddcf0,Penalties scored,0,,abstained,0.0,correct,0.0,correct,,abstained,4accb7e0,low,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,99b87c2a4d75ec6c,Penalty save percentage,100.0,0.0 %,wrong,0.0,wrong,,abstained,0.0 %,wrong,30ce77a2,low,low,high,3,3,0,team,False,True
+mistral-large-3,3,few_5,99c4994f966eeb2b,Minutes per start,80.0,,abstained,90.0,correct,90.0,correct,90 minutes,correct,4accb7e0,low,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,9a70e1f6f1f790bd,Shots per 90 minutes,0.0,,abstained,0.0,correct,0.0,correct,4.0,wrong,72e0ee7b,high,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,9a7c1dd721982a32,Own goals,0,3.0,wrong,,abstained,0.0,correct,3.0,wrong,2a3416b6,low,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,9e053324a20026a8,Minutes per start,83.0,,abstained,64.315,correct,52.64,wrong,72.375 minutes,correct,1f4ea94e,mid,mid,high,5,5,0,team,False,True
+mistral-large-3,3,few_5,9fc9107c62c86ea9,On-offsides,1.24,,abstained,,abstained,,abstained,0.0,wrong,72e0ee7b,high,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,9ff858e4efbb6f9c,Goals per shot,0.09,0.07050000000000001,correct,0.38,wrong,,abstained,0.0938,correct,94c79a82,high,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,a062e19353346ed4,Second yellow cards,0,,abstained,0.0,correct,,abstained,,abstained,30ce77a2,low,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,a081ca59e9608ce5,Draws,0.0,,abstained,,abstained,,abstained,0.0,correct,2a3416b6,low,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,a108aba50f44efae,Offsides,5.0,2.0,wrong,,abstained,"1.2 (per 90 minutes, 2022/23 season)",wrong,0.09 per match,wrong,d2b135e1,mid,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,a1287028a237c3a2,Goals per shot,0.0,,abstained,0.12,wrong,0.10666666666666667,wrong,,abstained,1958c005,low,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,a202b3b4825a94fe,Assists,0.0,,abstained,0.0,correct,0.12 (per substitute appearance in top 5 European leagues 2022/23 season),wrong,0.0,correct,1f4ea94e,mid,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,a2d523ab32e78d50,Wins,1.0,,abstained,0.0,wrong,0.0,wrong,5.0,wrong,72e0ee7b,high,low,high,5,4,1,both,True,True
+mistral-large-3,3,few_5,a39bd5a5e7953dfd,Squad,Beerschot Wilrijk,Crystal Palace,wrong,Unknown football team,wrong,Goalkeeper,wrong,Crystal Palace,wrong,f8d2d42c,mid,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,a494ce443e1088c1,Draws,6.0,,abstained,,abstained,0.0,wrong,,abstained,c924b17d,low,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,a4f87cdebc768916,Saves,87.0,,abstained,87.0,correct,85.0,correct,100.0,correct,19e50035,high,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,a610cbd51d4ad3f7,Penalties missed,0.0,,abstained,0.6666666666666666,wrong,8.333333333333334,wrong,,abstained,19e50035,high,low,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,a695575fe94d0c58,Shots on target percentage,30.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,mid,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,a94aac6c2ec8bb76,Yellow cards,11,,abstained,,abstained,,abstained,,abstained,14f47102,low,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,aa164ef4db659ff3,Penalties missed,0.0,,abstained,0.0,correct,0.6666666666666666,wrong,0.0,correct,f8d2d42c,mid,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,aa3402c2d6019923,Saves,19.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,ac968012f26b5499,Draws,16.0,6.0,wrong,,abstained,0.0,wrong,6.5,wrong,19e50035,high,low,high,5,5,0,name,True,False
+mistral-large-3,3,few_5,aec5ac6680fd770f,Clean sheet percentage,0.0,,abstained,52.23333333333333,wrong,65.0,wrong,,abstained,2a3416b6,low,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,b14c0ef7558f6fed,Matches played,28,4.0,wrong,0.0,wrong,,abstained,4.0,wrong,14f47102,low,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,b5908bcf3defb513,Penalties missed,0.0,,abstained,0.0,correct,0.0,correct,,abstained,6b91b999,mid,low,high,3,2,1,team,False,True
+mistral-large-3,3,few_5,b62d645570047130,Minutes per match,88.0,,abstained,90.0,correct,90.0,correct,90.0 minutes,correct,f679abe1,high,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,b65349cdc8407d84,Name,Iñaki Williams,Iñaki Williams,correct,Thomas Partey,wrong,Thomas Partey,wrong,Iñaki Williams,correct,6a99e0b1,high,high,high,5,2,3,team,False,True
+mistral-large-3,3,few_5,b67d16d1041f7be0,Saves,19.0,,abstained,,abstained,,abstained,,abstained,a98a9189,mid,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,b8af9cf23254bb23,Shots on target percentage,0.0,,abstained,38.5,wrong,75.0% (Premier League 2023/24 avg for top defensive teams),wrong,,abstained,f679abe1,high,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,b92daae320b1fd24,Name,Rome-Jayden Owusu-Oduro,,abstained,Netherlands national football team,wrong,Kingdom of the Netherlands,wrong,Kees Smit,wrong,169df85b,high,high,high,5,1,4,team,False,True
+mistral-large-3,3,few_5,b98634f6b8e3a55b,Penalties attempted,2.0,2.0,correct,2.0,correct,2.0,correct,2.0,correct,6b91b999,mid,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,baca2dce3ee66d18,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,14f47102,low,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,bbb126fd32c1c595,On-offsides,0.53,,abstained,,abstained,,abstained,,abstained,19e50035,high,mid,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,bbb4774195f4aef5,Second yellow cards,0,,abstained,0.0,correct,,abstained,,abstained,19e50035,high,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,bcc283e8003abde3,Minutes per start,88.0,90 minutes,correct,90.0,correct,90.0,correct,90.0 minutes,correct,6b91b999,mid,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,be00c3808c03179b,Goals per shot,0.0,0.1809,wrong,0.0,correct,0.10500000000000001,wrong,0.18000000000000002,wrong,f333ac24,high,mid,high,3,3,0,both,True,True
+mistral-large-3,3,few_5,c0b0d4577172bd7d,passes into the goalkeeper's penalty area,50.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,high,3,2,1,team,False,True
+mistral-large-3,3,few_5,c59dbf8b5b50a70e,Minutes per start,82.0,,abstained,73.39999999999999,correct,90.0,correct,,abstained,94c79a82,high,mid,high,3,3,0,name,True,False
+mistral-large-3,3,few_5,c5f3ecdca36688e9,Non-penalty goals per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,ca213a35f86091b6,Penalties attempted,0,0.04,wrong,0.0,correct,8.0,wrong,,abstained,4accb7e0,low,high,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,cc6333394da0c50c,Goals per shot,0.0,,abstained,0.12,wrong,0.11,wrong,,abstained,14f47102,low,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,cd74fa724fdb5b42,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,f8d2d42c,mid,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,cddc784b84e3a80c,Assists,0.0,,abstained,0.0,correct,,abstained,,abstained,1958c005,low,high,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,cde2eb862757f363,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,d0b05b08d8d9491e,Clean sheets,0.0,6.0,wrong,0.0,correct,,abstained,6.0,wrong,2a3416b6,low,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,d28313d4e50b7bf6,Goals per shot,0.0,0.13,wrong,0.11499999999999999,wrong,,abstained,0.13,wrong,14f47102,low,mid,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,d2895c48e00a17f2,Shots per 90 minutes,2.23,,abstained,1.1,wrong,0.7666666666666666,wrong,,abstained,d2b135e1,mid,high,high,3,2,1,team,False,True
+mistral-large-3,3,few_5,d33aa660f4bb9800,Shots on target percentage,33.3,23.0 %,wrong,29.400000000000002,correct,,abstained,23.0 %,wrong,1958c005,low,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,d3a50092ce8dec20,Non-penalty goals + assists per 90 minutes,0.0,,abstained,0.12,wrong,0.12,wrong,,abstained,1f4ea94e,mid,high,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,d42d4fc6f52f0ccf,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,GK,correct,Goalkeeper,wrong,2a3416b6,low,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,d4ad1e07b994b6b6,Saves,87.0,,abstained,,abstained,,abstained,,abstained,19e50035,high,low,high,3,2,1,none,False,False
+mistral-large-3,3,few_5,d52e349dac6c61f8,Wins,4.0,,abstained,0.0,wrong,Not applicable for this entity type,wrong,,abstained,f679abe1,high,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,d58cc0aabb29f8d8,Yellow cards,0,0.5,wrong,0.0,correct,0.0,correct,0.5,wrong,d1c92690,low,high,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,d6d1bd55cdec79ea,Goals conceded per 90 minutes,0.68,,abstained,1.22,wrong,1.12,wrong,1.15,wrong,a98a9189,mid,low,high,3,2,1,team,False,True
+mistral-large-3,3,few_5,d8d02aef85493fca,Minutes per start,90.0,,abstained,83.33333333333333,correct,90.0,correct,,abstained,14f47102,low,mid,high,5,5,0,none,False,False
+mistral-large-3,3,few_5,d9fa43a17c695487,Goals per shotots on target,0.31,0.4,correct,,abstained,,abstained,0.4,correct,d2b135e1,mid,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,dad80a5b7fda5b3a,Penalties missed,0.0,,abstained,0.0,correct,,abstained,,abstained,19e50035,high,low,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,dce9e1c04ec7c829,Position,GK,Goalkeeper,wrong,Football Club (Soccer Team),wrong,Goalkeeper,wrong,Goalkeeper,wrong,30ce77a2,low,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,dd15950ea27ad776,Substitutions,2.0,0.0,wrong,,abstained,,abstained,0.0,wrong,a98a9189,mid,high,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,dd9de28ac9090055,Wins,1.0,166.0,wrong,1.0,correct,7.0,wrong,219.0,wrong,72e0ee7b,high,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,dda040746bd30249,Substitutions,0.0,,abstained,,abstained,,abstained,3.0,wrong,14f47102,low,high,high,5,5,0,none,False,False
+mistral-large-3,3,few_5,e01ca449d21eef6c,Shots on target percentage,28.9,41.0 %,wrong,26.666666666666668,correct,35.0,correct,41.0 %,wrong,d2b135e1,mid,mid,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,e0f361f12aa63267,Goals conceded per 90 minutes,0.68,0.76,correct,0.96,wrong,0.81,correct,1.0233333333333332,wrong,a98a9189,mid,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,e13f7cb6828c2717,Saves,87.0,3.0 per game,wrong,74.66666666666667,correct,,abstained,3.0 saves per game,wrong,19e50035,high,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,e43f1cb7ad173126,Offsides,5.0,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,high,high,5,4,1,team,False,True
+mistral-large-3,3,few_5,e52642c37c590be6,Matches played,28,15.666666666666666,wrong,24.666666666666668,correct,17.333333333333332,wrong,87.66666666666667,wrong,14f47102,low,high,high,3,2,1,both,True,True
+mistral-large-3,3,few_5,e6c454c6459e5882,Clean sheet percentage,33.3,30.0 %,correct,22.866666666666664,wrong,28.6%,correct,0.0 %,wrong,f8d2d42c,mid,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,e7b056019179b080,Shots on target percentage,33.3,,abstained,25.0,correct,25.0%,correct,,abstained,1958c005,low,mid,high,5,4,1,team,False,True
+mistral-large-3,3,few_5,ea21ea8dcd33526e,Position,GK,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,Goalkeeper,wrong,72e0ee7b,high,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,eaa46854d64e7938,Wins,4.0,,abstained,12.0,wrong,,abstained,,abstained,f679abe1,high,low,low,1,1,0,none,False,False
+mistral-large-3,3,few_5,eb1cff0ada1bdf29,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,90.0 minutes,correct,19e50035,high,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,eb8bccd75209a74a,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,f8d2d42c,mid,mid,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,ed49a56ce555b15a,Clean sheet percentage,33.3,5.56 %,wrong,0.0,wrong,66.67%,wrong,28.57 %,correct,f8d2d42c,mid,low,high,3,3,0,name,True,False
+mistral-large-3,3,few_5,ed5094219427c9c9,Interceptions,0.0,41.0,wrong,,abstained,Not applicable,wrong,41.0,wrong,f679abe1,high,high,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,f07492c47a6f4bb1,Shots on target percentage,25.0,25.0 %,correct,41.7,wrong,41.7%,wrong,25.0 %,correct,4accb7e0,low,mid,high,5,5,0,name,True,False
+mistral-large-3,3,few_5,f1ec946b94ad9d33,Nation,se SWE,Sweden,wrong,se SWE,correct,Sweden,wrong,Sweden,wrong,a109e5c8,high,high,high,3,2,1,both,True,True
+mistral-large-3,3,few_5,f27313c6fed30b51,Position,"DF,MF",,abstained,Mid-table team (inferred from performance metrics),wrong,Attacking Midfielder,wrong,Forward,wrong,1958c005,low,mid,high,3,3,0,none,False,False
+mistral-large-3,3,few_5,f2830531e95a5c33,Date of birth,2006.0,02/02/2006,wrong,2006-02-02,correct,2006-02-02,correct,02/02/2006,wrong,a109e5c8,high,high,high,1,1,0,name,True,False
+mistral-large-3,3,few_5,f351c1cf5fb9825f,Goals per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,f44efd6d075e0b5b,Goals conceded per 90 minutes,1.33,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,high,1,1,0,none,False,False
+mistral-large-3,3,few_5,f46ef4339bb8c03c,Date of birth,1994.0,04/07/1995,wrong,,abstained,,abstained,04/07/1995,wrong,6a99e0b1,high,high,high,1,0,1,team,False,True
+mistral-large-3,3,few_5,f5cb4651cfcf9427,Minutes per start,61.0,74.67,correct,68.5,correct,87.33333333333333,wrong,74.67 minutes,correct,f333ac24,high,mid,mid,5,5,0,none,False,False
+mistral-large-3,3,few_5,f703ad74f4b080d0,Saves,29.0,,abstained,29.0,correct,29.0,correct,29.0,correct,f679abe1,high,low,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,f704494d41bd3c70,On-offsides,0.44,2.0,wrong,,abstained,0.39999999999999997,correct,2.0,wrong,94c79a82,high,mid,high,5,4,1,name,True,False
+mistral-large-3,3,few_5,f7be205d474d01a6,Assists,0.0,,abstained,0-2 (varies by player and season),correct,"Defender (DF) and Midfielder (MF) positions in soccer typically do not have standardized assist statistics, as assists are more commonly tracked for attacking positions like Forwards (FW) or Attacking Midfielders (AM). No verifiable assist data available for these roles.",wrong,,abstained,1958c005,low,high,mid,1,1,0,none,False,False
+mistral-large-3,3,few_5,f822af239093ecb3,Clean sheets,3.0,2.0,wrong,10.0,wrong,12 (2022/2023 season),wrong,2.0,wrong,30ce77a2,low,low,high,1,1,0,team,False,True
+mistral-large-3,3,few_5,fa23ba64a71194a4,Minutes per start,90.0,90 minutes,correct,90.0,correct,90.0,correct,90 minutes,correct,30ce77a2,low,mid,low,5,5,0,none,False,False
+mistral-large-3,3,few_5,fcaeb2bfbad3a4fa,Clean sheet percentage,0.0,,abstained,22.22,wrong,33.33,wrong,,abstained,2a3416b6,low,low,low,3,3,0,none,False,False
+mistral-large-3,3,few_5,fea6d398e5205f2f,Goals conceded per 90 minutes,0.68,0.71,correct,1.2,wrong,1.12,wrong,0.71,correct,a98a9189,mid,low,mid,3,3,0,none,False,False
+mistral-large-3,3,few_5,ff83af2af1487a92,Penalties scored,0,4.0,wrong,0.0,correct,0.0,correct,7.666666666666667,wrong,4accb7e0,low,high,high,5,4,1,none,False,False
+deepseek-v4.1-flash,3,few_3,01fe10d2305bd9f9,Assists,0.0,,abstained,0.0,correct,0.0,correct,,abstained,1f4ea94e,mid,high,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,045827cc3a078eeb,Clean sheets,0.0,,abstained,0.0,correct,0.0,correct,,abstained,2a3416b6,low,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0464d75309b3a5bb,Squad,BB Bodrumspor,,abstained,Ukraine national football team,wrong,Manchester City,wrong,,abstained,f333ac24,high,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,046b541a748d0097,Shots on target per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,6b91b999,mid,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0488348dfd69f85b,Shots per 90 minutes,2.23,3.60 per 90 minutes,wrong,2.5500000000000003,correct,2.4299999999999997,correct,3.60 shots per 90 minutes,wrong,d2b135e1,mid,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,06d78f0904c3bd81,goals scored - goals conceded per 90 minutes,0.17,,abstained,,abstained,,abstained,,abstained,30ce77a2,low,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,08a930f725433d3d,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0aa86a5110618adc,Nation,cz CZE,,abstained,gb ENG,wrong,,abstained,,abstained,30ce77a2,low,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0b115f1efc45a4d2,Position,MF,,abstained,DF,wrong,Goalkeeper,wrong,,abstained,4accb7e0,low,mid,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0c399068d98f9903,Penalties missed,0.0,,abstained,0.0,correct,0.0,correct,,abstained,6b91b999,mid,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0cd527299b045a3f,Clean sheets,3.0,,abstained,0.0,wrong,0.0,wrong,,abstained,30ce77a2,low,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0dae5edb8df8db7d,Interceptions,12.0,,abstained,,abstained,,abstained,,abstained,94c79a82,high,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0e0e0bfdad18617a,Position,"DF,MF",,abstained,FW,wrong,Forward,wrong,,abstained,1958c005,low,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0e4304f8067e460a,Position,"DF,MF",LW,wrong,FW,wrong,Forward,wrong,Left Wing,wrong,1f4ea94e,mid,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,0ffc423ebaba646a,Clean sheet percentage,100.0,,abstained,0.0,wrong,,abstained,,abstained,72e0ee7b,high,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,10d1dfdadd7622ec,Position,"DF,MF",,abstained,MF,wrong,Forward,wrong,,abstained,1f4ea94e,mid,mid,high,3,2,1,team,False,True
+deepseek-v4.1-flash,3,few_3,114388c8053d1dda,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,0.0,correct,,abstained,a98a9189,mid,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,11ece662b16a8af5,Draws,7.0,,abstained,0.0,wrong,,abstained,,abstained,6b91b999,mid,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,135b009daacf67e2,Date of birth,2004.0,2 July 2004,wrong,2004-12-02,correct,2004-11-09,correct,2 July 2004,wrong,169df85b,high,high,high,3,1,2,both,True,True
+deepseek-v4.1-flash,3,few_3,139b203f8baf1504,Goals per 90 minutes,0.35,,abstained,0.07,wrong,0.31,correct,,abstained,d2b135e1,mid,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,145e8f18b6aa675c,On-offsides,0.71,,abstained,,abstained,0.0,wrong,,abstained,a98a9189,mid,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,1636b9c94ecd3f39,Goals conceded,16.0,,abstained,8.666666666666666,wrong,8.333333333333334,wrong,,abstained,30ce77a2,low,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,163e62b32180505f,Position,MF,,abstained,FW,wrong,Forward,wrong,,abstained,4accb7e0,low,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,1757a93591a07bb8,Goals per shotots on target,0.31,,abstained,,abstained,,abstained,1.57,wrong,d2b135e1,mid,mid,high,5,4,1,both,True,True
+deepseek-v4.1-flash,3,few_3,1827c482c454f763,Non-penalty goals + assists per 90 minutes,0.0,,abstained,0.06,wrong,0.06999999999999999,wrong,,abstained,1f4ea94e,mid,high,high,5,4,1,name,True,False
+deepseek-v4.1-flash,3,few_3,18cffa7b70d2eb23,Own goals,0,,abstained,0.0,correct,0.0,correct,,abstained,f8d2d42c,mid,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,196abb0077aab084,Yellow cards,11,,abstained,4.0,wrong,,abstained,,abstained,14f47102,low,high,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,1a32294127461515,Shots on target against,132.0,,abstained,0.0,wrong,0.0,wrong,,abstained,28d596a0,mid,low,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,1a4142a3e45098bd,Clean sheets,3.0,,abstained,,abstained,,abstained,202.0,wrong,30ce77a2,low,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,1bd0560f4d37fecf,Points per match,1.38,,abstained,1.4666666666666668,correct,0.9699999999999999,wrong,,abstained,94c79a82,high,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,22174a449ffdfe1c,Goals,2,,abstained,0.0,wrong,0.0,wrong,,abstained,4737cebe,mid,high,high,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,24ddb374e3e93f30,On-offsides,0.85,,abstained,0.0,wrong,,abstained,,abstained,4737cebe,mid,mid,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,25cd6c3a478ca770,Goals conceded,16.0,16.0,correct,13.0,correct,13.0,correct,15.0,correct,30ce77a2,low,low,high,5,5,0,both,True,True
+deepseek-v4.1-flash,3,few_3,2741777c0e37b21f,Position,GK,,abstained,QB,wrong,,abstained,,abstained,30ce77a2,low,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,2acea8127627bc69,Goals conceded per 90 minutes,1.4,,abstained,,abstained,0.0,wrong,,abstained,2d70dbe5,high,low,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,2d1f512a7ae2a503,Clean sheet percentage,0.0,,abstained,11.1,wrong,,abstained,0.0 %,correct,2a3416b6,low,low,high,3,2,1,both,True,True
+deepseek-v4.1-flash,3,few_3,300693cf942c5ac7,Minutes per start,90.0,,abstained,90.0,correct,87.25,correct,,abstained,a98a9189,mid,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,307784646da7a0b3,Clean sheet percentage,100.0,,abstained,,abstained,22.82,wrong,,abstained,72e0ee7b,high,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,326e8ea533723e1a,Minutes per match,90.0,,abstained,90.0,correct,90.0,correct,,abstained,d1c92690,low,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,331dee0840466b9d,Losses,14.0,,abstained,4.5200000000000005,wrong,,abstained,,abstained,fac1f795,low,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,34778288acf1c215,Goals per shot,0.08,,abstained,0.06333333333333334,correct,0.09333333333333334,correct,,abstained,9886c32e,high,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,34d8a7b99fe81d5f,Penalties missed,0.0,4.0,wrong,0.0,correct,0.0,correct,4.0,wrong,f8d2d42c,mid,low,high,5,5,0,name,True,False
+deepseek-v4.1-flash,3,few_3,35b4d1902c7f161e,goals scored - goals conceded per 90 minutes,-0.1,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,35ec9a61b407ccab,Goals + assists while on the pitch,8.0,,abstained,,abstained,,abstained,,abstained,4737cebe,mid,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,36cda05b4a92841c,Shots on target percentage,19.2,21.0 %,correct,40.0,wrong,,abstained,21.0 %,correct,9886c32e,high,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,3782cb8bc431b5f5,Name,Rome-Jayden Owusu-Oduro,,abstained,AZ Alkmaar,wrong,AZ Alkmaar,wrong,,abstained,169df85b,high,high,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,3838ef52244a6848,Minutes per match,90.0,,abstained,90.0,correct,90.0,correct,90 minutes,correct,19e50035,high,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,38cbf936d8a847ee,Shots on target percentage,25.0,,abstained,33.1,correct,33.0,correct,,abstained,4accb7e0,low,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,3b552b92db836e03,Draws,0.0,,abstained,0.3333333333333333,wrong,0.0,correct,,abstained,2a3416b6,low,low,high,5,4,1,team,False,True
+deepseek-v4.1-flash,3,few_3,3cc70e13afc92f2d,Goals per shot,0.08,,abstained,0.31,wrong,0.6566666666666666,wrong,1.2,wrong,9886c32e,high,mid,high,5,5,0,team,False,True
+deepseek-v4.1-flash,3,few_3,3d616c29859a24b5,Draws,7.0,,abstained,0.0,wrong,272.3333333333333,wrong,,abstained,6b91b999,mid,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,3f23f1b27b29fcc5,On-offsides,1.24,,abstained,,abstained,0.0,wrong,,abstained,72e0ee7b,high,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,40132164c55c01f4,Losses,3.0,,abstained,0.0,wrong,,abstained,,abstained,d1c92690,low,low,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,402e781e4608f4ad,Percentage of playing time,9.0,,abstained,58.93333333333334,wrong,,abstained,,abstained,f333ac24,high,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,40bc557ea1ba77a3,goals scored - goals conceded per 90 minutes,-0.41,,abstained,,abstained,,abstained,,abstained,f679abe1,high,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,41cafe5e3c5464cf,Wins,1.0,,abstained,1.3333333333333333,correct,0.0,wrong,,abstained,d1c92690,low,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4544966dbdd1a448,Clean sheets,0.0,0.0,correct,1.0,wrong,0.6666666666666666,wrong,0.0,correct,d1c92690,low,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,46b8c0f7a2fafae7,On-offsides,0.44,,abstained,0.0,wrong,0.0,wrong,,abstained,94c79a82,high,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,46baa6e8fd01c9b5,Goals per shot,0.0,,abstained,0.11666666666666665,wrong,0.12,wrong,,abstained,f333ac24,high,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4748fd6e3de25ee5,On-offsides,0.85,,abstained,0.0,wrong,,abstained,,abstained,4737cebe,mid,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,49646ccdf0d3234b,Fouls suffered,1.0,,abstained,0.0,wrong,Not verified,wrong,,abstained,2a3416b6,low,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,49bda315024321c6,Goals + assists,3.0,,abstained,,abstained,0.0,wrong,,abstained,4accb7e0,low,high,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,4a24b6e45c3a7be2,Goals per shot,0.09,,abstained,0.11666666666666665,correct,0.11499999999999999,correct,,abstained,d2b135e1,mid,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4aae54d36244ddb0,Playing time in minutes,90.0,,abstained,180.0,wrong,180.0,wrong,,abstained,2a3416b6,low,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4afe53d515741a6e,Minutes per start,90.0,,abstained,,abstained,90.0,correct,,abstained,f8d2d42c,mid,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4ca14c28b21a9b19,Minutes per start,90.0,,abstained,90.0,correct,,abstained,,abstained,d1c92690,low,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4d42c26210893463,Non-penalty goals per 90 minutes,0.0,,abstained,0.0,correct,0.0,correct,0.00 goals per 90 minutes,correct,72e0ee7b,high,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4da9a671a064c0c4,Assists,1.0,,abstained,4.0,wrong,1.6666666666666667,wrong,,abstained,4737cebe,mid,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4dc466cc81efcc39,On-offsides,-1.12,,abstained,0.0,wrong,0.0,wrong,,abstained,2a3416b6,low,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4df62db34d55516e,Matches fully played,4.0,,abstained,3.3333333333333335,correct,0.0,wrong,,abstained,1f4ea94e,mid,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4ea6a3f980724dfa,Non-penalty goals + assists per 90 minutes,0.26,,abstained,0.15666666666666665,wrong,,abstained,0.47 per 90 minutes,wrong,94c79a82,high,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,4fdd4ac9cae4f5c9,Losses,3.0,,abstained,,abstained,0.0,wrong,,abstained,d1c92690,low,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,508a342300f4544b,Offsides,1.0,,abstained,0.6666666666666666,wrong,0.2,wrong,,abstained,9886c32e,high,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5099a031dfd4300b,Minutes per start,74.0,,abstained,76.66666666666667,correct,,abstained,,abstained,4737cebe,mid,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5131170164179569,passes into the goalkeeper's penalty area,54.0,,abstained,,abstained,,abstained,,abstained,9886c32e,high,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,519ffa653c2d5352,Wins,1.0,,abstained,3.0,wrong,0.0,wrong,,abstained,d1c92690,low,low,high,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,53d3b69ddd332dbc,Wins,1.0,,abstained,,abstained,0.0,wrong,,abstained,72e0ee7b,high,low,high,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,53e62dc6c81bcb07,Goals per shot,0.09,,abstained,0.10333333333333333,correct,0.12,correct,,abstained,94c79a82,high,mid,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,576e9adaef46e680,Wins,4.0,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,5853eda6a41dba81,Goals conceded,36.0,,abstained,0.0,wrong,0.0,wrong,,abstained,5c6b0637,mid,low,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5b87a0c548fe2a0c,Matches fully played,5.0,,abstained,1.0,wrong,0.0,wrong,,abstained,1958c005,low,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5c216dd5500873f1,Saves,29.0,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5cbb9c72ade7a08d,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,2a3416b6,low,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5e0afd656981be8c,Saves,29.0,,abstained,0.0,wrong,0.0,wrong,109.0,wrong,f679abe1,high,low,high,3,3,0,name,True,False
+deepseek-v4.1-flash,3,few_3,5e3231bede929ab8,Goals per shot,0.0,,abstained,0.08,wrong,0.12,wrong,,abstained,1958c005,low,mid,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,5e69189507073e23,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,19e50035,high,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,5eedad84c12c42fe,Assists,1.0,,abstained,0.0,wrong,1.6666666666666667,wrong,,abstained,4737cebe,mid,high,high,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,615e3ba6583f1bf9,Goals conceded per 90 minutes,1.33,1.00 per 90 minutes,correct,,abstained,,abstained,1.00 goals per 90 minutes,correct,f8d2d42c,mid,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,660cc1569f99bd4b,Minutes per start,61.0,,abstained,67.93333333333334,correct,45.0,wrong,,abstained,f333ac24,high,mid,high,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,660ee4342cd2fc59,Shots on target percentage,28.9,,abstained,42.96666666666667,wrong,,abstained,,abstained,d2b135e1,mid,mid,high,3,1,2,team,False,True
+deepseek-v4.1-flash,3,few_3,685078d060c69a8a,Shots on target percentage,30.0,,abstained,0.0,wrong,,abstained,,abstained,f333ac24,high,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,68f784bbce7bdd96,Saves,29.0,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,69e42778710169ac,Matches fully played,5.0,,abstained,,abstained,0.0,wrong,,abstained,1958c005,low,high,high,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,6b2ba700a9c7c593,Penalties missed,0.0,,abstained,,abstained,0.0,correct,,abstained,19e50035,high,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,6b4bdad085c1c87a,Wins,1.0,,abstained,0.0,wrong,0.0,wrong,,abstained,72e0ee7b,high,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,6cd58b6302dfa96a,Minutes per start,74.0,,abstained,69.0,correct,90.0,correct,,abstained,4737cebe,mid,mid,high,3,3,0,name,True,False
+deepseek-v4.1-flash,3,few_3,6d3aac3dcbe17580,Position,GK,,abstained,Goalkeeper,wrong,Goalkeeper,wrong,,abstained,d1c92690,low,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,6dd0dad214c271a7,Goals per shot,0.13,,abstained,0.11,correct,0.12000000000000001,correct,,abstained,4737cebe,mid,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,6fc1d0538bb93545,Minutes per start,83.0,,abstained,69.0,correct,77.6,correct,,abstained,1f4ea94e,mid,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,705abe6d685ae340,Saves,29.0,87.0,wrong,1.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,70cc5f1ca6f5989f,Goals scored while on the pitch,32.0,,abstained,0.0,wrong,0.0,wrong,0.0,wrong,6b91b999,mid,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,70eb40eb0e32700f,On-offsides,-0.79,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,71e5563536cc9749,Nation,gh GHA,Ghanesa Española,wrong,es ESP,wrong,Spain,wrong,Ghana,wrong,6a99e0b1,high,high,high,3,1,2,team,False,True
+deepseek-v4.1-flash,3,few_3,72570d858546c7f9,Goals per shot,0.0,,abstained,0.08,wrong,0.12,wrong,,abstained,14f47102,low,mid,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,74474791ba8c2f43,Shots on target percentage,19.2,,abstained,34.6,wrong,,abstained,19 %,correct,9886c32e,high,mid,high,3,3,0,name,True,False
+deepseek-v4.1-flash,3,few_3,754a46924811288a,Goals + assists while on the pitch,8.0,1.0,wrong,,abstained,,abstained,,abstained,4737cebe,mid,high,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,75ea4153219f7fd7,Penalties missed,0.0,,abstained,0.0,correct,,abstained,,abstained,6b91b999,mid,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,76c6466b5f4060c5,Saves,58.0,,abstained,69.5,correct,68.0,correct,,abstained,6b91b999,mid,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,77c6cb72f19d21b6,Wins,1.0,,abstained,1.6666666666666667,wrong,0.0,wrong,,abstained,72e0ee7b,high,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7868a5cb2b4611aa,Clean sheet percentage,33.3,,abstained,31.299999999999997,correct,33.3,correct,,abstained,f8d2d42c,mid,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,78c70d8c3d41d98d,Draws,16.0,,abstained,9.0,wrong,7.0,wrong,,abstained,19e50035,high,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7a008e9bc008841a,Goals per shot,0.13,,abstained,0.10666666666666667,correct,0.09666666666666668,wrong,0.20000000000000004,wrong,4737cebe,mid,mid,high,5,4,1,both,True,True
+deepseek-v4.1-flash,3,few_3,7aa89f348b151a8b,Minutes per start,88.0,,abstained,90.0,correct,90.0,correct,,abstained,6b91b999,mid,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7afce4eced53ac63,Clean sheet percentage,100.0,,abstained,100.0,correct,0.0,wrong,,abstained,72e0ee7b,high,low,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7c17b32503ad0d78,Penalty save percentage,100.0,0.0 %,wrong,71.43333333333334,wrong,1.7%,wrong,0.0 %,wrong,30ce77a2,low,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7c7a9a384f807afd,Position,GK,,abstained,GK,correct,Goalkeeper,wrong,,abstained,d1c92690,low,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7dc6bcd6d7a28f1d,Goals conceded per 90 minutes,1.33,1.20 goals conceded per 90,correct,1.33,correct,1.33,correct,1.2,correct,f8d2d42c,mid,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,7f43df83a9f2f079,Penalties attempted,0,1.0,wrong,0.0,correct,0.0,correct,1.0,wrong,4accb7e0,low,high,high,3,2,1,both,True,True
+deepseek-v4.1-flash,3,few_3,801fab7f2dc87ff0,Penalties saved,0.0,0.0,correct,0.0,correct,0.0,correct,0.0,correct,a98a9189,mid,low,high,5,3,2,both,True,True
+deepseek-v4.1-flash,3,few_3,8235f87a0ececf20,Goals per shot,0.0,0.1,wrong,0.08666666666666667,wrong,0.05,wrong,0.1,wrong,14f47102,low,mid,high,3,3,0,name,True,False
+deepseek-v4.1-flash,3,few_3,83c8fa246a8a8834,Minutes per substitute appearance,39.0,,abstained,26.0,wrong,,abstained,,abstained,a98a9189,mid,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,83d416a3ff082726,Clean sheets,5.0,,abstained,0.0,wrong,0.0,wrong,,abstained,fba79ac8,mid,low,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,8582af03e2827b02,Minutes per start,82.0,,abstained,76.0,correct,76.66666666666667,correct,,abstained,94c79a82,high,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,85b07a6d6783b650,Minutes per start,88.0,,abstained,86.0,correct,90.0,correct,,abstained,6b91b999,mid,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,871ee8ba1b4511dd,Penalties saved,0.0,,abstained,0.3333333333333333,wrong,0.0,correct,,abstained,a98a9189,mid,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,884da7b9826ad161,Matches fully played,4.0,,abstained,4.666666666666667,correct,0.0,wrong,,abstained,1f4ea94e,mid,high,high,3,1,2,team,False,True
+deepseek-v4.1-flash,3,few_3,88b5398cec9c6dab,Minutes per start,80.0,,abstained,73.33333333333333,correct,,abstained,,abstained,4accb7e0,low,mid,high,3,2,1,team,False,True
+deepseek-v4.1-flash,3,few_3,89eac82d92dc8290,Minutes per substitute appearance,13.0,,abstained,0.0,wrong,,abstained,,abstained,9886c32e,high,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,8a04e97565db29c8,Points per match,1.33,,abstained,1.4000000000000001,correct,1.3033333333333335,correct,,abstained,add304fc,low,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,8afd48205cfaae2f,Minutes per substitute appearance,13.0,,abstained,0.0,wrong,,abstained,,abstained,9886c32e,high,mid,high,1,1,0,name,True,False
+deepseek-v4.1-flash,3,few_3,8c5dc71f26a6aef5,Goals per shot,0.0,,abstained,0.08,wrong,,abstained,,abstained,f679abe1,high,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,8cd239b5c76042b1,Saves,58.0,,abstained,75.0,correct,52.0,correct,17.0,wrong,6b91b999,mid,low,high,5,5,0,name,True,False
+deepseek-v4.1-flash,3,few_3,8d220077fd7098b7,Goals + assists,3.0,,abstained,1.0,wrong,0.0,wrong,2.0,wrong,4accb7e0,low,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,8d798640c4d05216,Name,Joe Walsh,Darren Randolph,wrong,David de Gea,wrong,Clean sheet percentage,wrong,Darren Randolph,wrong,72e0ee7b,high,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,8dd577e1e708e945,Draws,7.0,,abstained,0.0,wrong,0.0,wrong,,abstained,6b91b999,mid,low,high,1,1,0,name,True,False
+deepseek-v4.1-flash,3,few_3,8eef5c6ab7fa4291,Losses,3.0,,abstained,0.0,wrong,,abstained,,abstained,d1c92690,low,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,90627e25b54f66e2,Assists,0.0,,abstained,0.0,correct,0.0,correct,,abstained,a98a9189,mid,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,90d671547d9fe26c,Fouls suffered,0.0,,abstained,0.0,correct,,abstained,,abstained,d1c92690,low,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,921317420d02bc69,Clean sheets,0.0,0.0,correct,0.6666666666666666,wrong,0.0,correct,0.0,correct,d1c92690,low,low,high,5,5,0,team,False,True
+deepseek-v4.1-flash,3,few_3,92ac3b7fd1b8f0b1,Goals per 90 minutes,0.35,,abstained,0.16333333333333333,wrong,0.2633333333333333,correct,,abstained,d2b135e1,mid,high,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,93d5dbdf0a27385e,passes into the goalkeeper's penalty area,50.0,,abstained,0.0,wrong,,abstained,,abstained,1958c005,low,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,949ae58aa337a44b,Date of birth,2006.0,2 February 2006,wrong,1987.0,correct,1990-07-08,correct,2 February 2006,wrong,a109e5c8,high,high,high,5,1,4,team,False,True
+deepseek-v4.1-flash,3,few_3,94f2b587262b49cb,Goals per shot,0.09,0.17,wrong,0.11666666666666665,correct,0.12,correct,0.17,wrong,d2b135e1,mid,mid,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,965820830e352960,Saves,19.0,,abstained,0.0,wrong,0.0,wrong,,abstained,a98a9189,mid,low,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,970128f64e075037,Goals,2,,abstained,2.3333333333333335,correct,0.13,wrong,,abstained,4737cebe,mid,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,976d29ccf3d29b4b,Assists,0.0,,abstained,0.0,correct,10.5,wrong,,abstained,19e50035,high,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,981fcc60a86a12a3,Saves,29.0,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,high,5,5,0,both,True,True
+deepseek-v4.1-flash,3,few_3,987b6a810a781259,Clean sheets,0.0,9.0,wrong,0.0,correct,0.0,correct,16.0,wrong,2a3416b6,low,low,high,1,1,0,name,True,False
+deepseek-v4.1-flash,3,few_3,990841add4eddcf0,Penalties scored,0,,abstained,0.0,correct,0.0,correct,,abstained,4accb7e0,low,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,99b87c2a4d75ec6c,Penalty save percentage,100.0,,abstained,0.0,wrong,0.0,wrong,,abstained,30ce77a2,low,low,high,3,3,0,team,False,True
+deepseek-v4.1-flash,3,few_3,99c4994f966eeb2b,Minutes per start,80.0,,abstained,76.0,correct,75.6,correct,,abstained,4accb7e0,low,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,9a70e1f6f1f790bd,Shots per 90 minutes,0.0,,abstained,4.0,wrong,,abstained,,abstained,72e0ee7b,high,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,9a7c1dd721982a32,Own goals,0,,abstained,0.0,correct,0.0,correct,,abstained,2a3416b6,low,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,9e053324a20026a8,Minutes per start,83.0,,abstained,84.89999999999999,correct,96.5,correct,,abstained,1f4ea94e,mid,mid,high,5,5,0,team,False,True
+deepseek-v4.1-flash,3,few_3,9fc9107c62c86ea9,On-offsides,1.24,,abstained,0.0,wrong,0.0,wrong,,abstained,72e0ee7b,high,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,9ff858e4efbb6f9c,Goals per shot,0.09,,abstained,,abstained,0.11333333333333334,correct,,abstained,94c79a82,high,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a062e19353346ed4,Second yellow cards,0,,abstained,,abstained,0.0,correct,,abstained,30ce77a2,low,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a081ca59e9608ce5,Draws,0.0,,abstained,0.0,correct,0.0,correct,,abstained,2a3416b6,low,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a108aba50f44efae,Offsides,5.0,,abstained,5.0,correct,0.2,wrong,,abstained,d2b135e1,mid,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a1287028a237c3a2,Goals per shot,0.0,,abstained,0.08,wrong,0.06,wrong,,abstained,1958c005,low,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a202b3b4825a94fe,Assists,0.0,,abstained,0.0,correct,0.0,correct,,abstained,1f4ea94e,mid,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a2d523ab32e78d50,Wins,1.0,,abstained,0.0,wrong,0.0,wrong,,abstained,72e0ee7b,high,low,high,5,4,1,both,True,True
+deepseek-v4.1-flash,3,few_3,a39bd5a5e7953dfd,Squad,Beerschot Wilrijk,,abstained,,abstained,Not verifiable,wrong,,abstained,f8d2d42c,mid,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a494ce443e1088c1,Draws,6.0,,abstained,0.0,wrong,,abstained,,abstained,c924b17d,low,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a4f87cdebc768916,Saves,87.0,,abstained,0.0,wrong,0.0,wrong,,abstained,19e50035,high,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a610cbd51d4ad3f7,Penalties missed,0.0,,abstained,0.0,correct,0.0,correct,,abstained,19e50035,high,low,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,a695575fe94d0c58,Shots on target percentage,30.0,,abstained,,abstained,,abstained,,abstained,f333ac24,high,mid,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,a94aac6c2ec8bb76,Yellow cards,11,,abstained,0.0,wrong,0.0,wrong,,abstained,14f47102,low,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,aa164ef4db659ff3,Penalties missed,0.0,,abstained,0.0,correct,0.0,correct,,abstained,f8d2d42c,mid,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,aa3402c2d6019923,Saves,19.0,,abstained,0.0,wrong,0.0,wrong,2.00 saves per start,wrong,a98a9189,mid,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,ac968012f26b5499,Draws,16.0,,abstained,4.666666666666667,wrong,9.0,wrong,,abstained,19e50035,high,low,high,5,5,0,name,True,False
+deepseek-v4.1-flash,3,few_3,aec5ac6680fd770f,Clean sheet percentage,0.0,,abstained,31.299999999999997,wrong,29.399999999999995,wrong,,abstained,2a3416b6,low,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,b14c0ef7558f6fed,Matches played,28,,abstained,1.0,wrong,0.0,wrong,,abstained,14f47102,low,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,b5908bcf3defb513,Penalties missed,0.0,,abstained,0.0,correct,0.0,correct,,abstained,6b91b999,mid,low,high,3,2,1,team,False,True
+deepseek-v4.1-flash,3,few_3,b62d645570047130,Minutes per match,88.0,,abstained,90.0,correct,90.0,correct,,abstained,f679abe1,high,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,b65349cdc8407d84,Name,Iñaki Williams,Iñaki Williams,correct,Abdul Rahman Baba,wrong,Álex Remiro,wrong,Iñaki Williams,correct,6a99e0b1,high,high,high,5,2,3,team,False,True
+deepseek-v4.1-flash,3,few_3,b67d16d1041f7be0,Saves,19.0,,abstained,0.0,wrong,0.0,wrong,,abstained,a98a9189,mid,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,b8af9cf23254bb23,Shots on target percentage,0.0,,abstained,34.2,wrong,,abstained,,abstained,f679abe1,high,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,b92daae320b1fd24,Name,Rome-Jayden Owusu-Oduro,,abstained,Netherlands,wrong,Netherlands,wrong,,abstained,169df85b,high,high,high,5,1,4,team,False,True
+deepseek-v4.1-flash,3,few_3,b98634f6b8e3a55b,Penalties attempted,2.0,,abstained,2.0,correct,2.0,correct,2.0,correct,6b91b999,mid,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,baca2dce3ee66d18,Minutes per start,90.0,,abstained,87.33333333333333,correct,,abstained,,abstained,14f47102,low,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,bbb126fd32c1c595,On-offsides,0.53,,abstained,,abstained,,abstained,,abstained,19e50035,high,mid,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,bbb4774195f4aef5,Second yellow cards,0,,abstained,0.0,correct,0.0,correct,,abstained,19e50035,high,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,bcc283e8003abde3,Minutes per start,88.0,,abstained,90.0,correct,90.0,correct,,abstained,6b91b999,mid,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,be00c3808c03179b,Goals per shot,0.0,,abstained,0.085,wrong,,abstained,0.18000000000000002,wrong,f333ac24,high,mid,high,3,3,0,both,True,True
+deepseek-v4.1-flash,3,few_3,c0b0d4577172bd7d,passes into the goalkeeper's penalty area,50.0,,abstained,,abstained,,abstained,,abstained,1958c005,low,high,high,3,2,1,team,False,True
+deepseek-v4.1-flash,3,few_3,c59dbf8b5b50a70e,Minutes per start,82.0,,abstained,66.66666666666667,correct,71.03333333333333,correct,69.18 minutes,correct,94c79a82,high,mid,high,3,3,0,name,True,False
+deepseek-v4.1-flash,3,few_3,c5f3ecdca36688e9,Non-penalty goals per 90 minutes,0.0,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,ca213a35f86091b6,Penalties attempted,0,,abstained,0.0,correct,0.0,correct,,abstained,4accb7e0,low,high,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,cc6333394da0c50c,Goals per shot,0.0,13.6 %,wrong,0.12333333333333334,wrong,0.12333333333333334,wrong,0.136,wrong,14f47102,low,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,cd74fa724fdb5b42,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,f8d2d42c,mid,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,cddc784b84e3a80c,Assists,0.0,12.0,wrong,0.0,correct,0.0,correct,12.0,wrong,1958c005,low,high,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,cde2eb862757f363,Goals per shotots on target,0.0,,abstained,,abstained,,abstained,,abstained,1f4ea94e,mid,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d0b05b08d8d9491e,Clean sheets,0.0,,abstained,0.0,correct,0.0,correct,,abstained,2a3416b6,low,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d28313d4e50b7bf6,Goals per shot,0.0,,abstained,,abstained,0.11,wrong,,abstained,14f47102,low,mid,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d2895c48e00a17f2,Shots per 90 minutes,2.23,,abstained,1.5666666666666667,wrong,0.95,wrong,,abstained,d2b135e1,mid,high,high,3,2,1,team,False,True
+deepseek-v4.1-flash,3,few_3,d33aa660f4bb9800,Shots on target percentage,33.3,,abstained,0.0,wrong,,abstained,,abstained,1958c005,low,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d3a50092ce8dec20,Non-penalty goals + assists per 90 minutes,0.0,,abstained,0.05000000000000001,wrong,0.06,wrong,,abstained,1f4ea94e,mid,high,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d42d4fc6f52f0ccf,Position,GK,,abstained,GK,correct,Goalkeeper,wrong,Goalkeeper,wrong,2a3416b6,low,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d4ad1e07b994b6b6,Saves,87.0,,abstained,0.0,wrong,0.0,wrong,,abstained,19e50035,high,low,high,3,2,1,none,False,False
+deepseek-v4.1-flash,3,few_3,d52e349dac6c61f8,Wins,4.0,,abstained,0.0,wrong,,abstained,,abstained,f679abe1,high,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d58cc0aabb29f8d8,Yellow cards,0,,abstained,1.0,wrong,0.0,correct,1.0,wrong,d1c92690,low,high,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d6d1bd55cdec79ea,Goals conceded per 90 minutes,0.68,0.7,correct,,abstained,,abstained,0.70 goals per 90 minutes,correct,a98a9189,mid,low,high,3,2,1,team,False,True
+deepseek-v4.1-flash,3,few_3,d8d02aef85493fca,Minutes per start,90.0,,abstained,51.0,wrong,53.0,wrong,,abstained,14f47102,low,mid,high,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,d9fa43a17c695487,Goals per shotots on target,0.31,,abstained,,abstained,,abstained,,abstained,d2b135e1,mid,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,dad80a5b7fda5b3a,Penalties missed,0.0,,abstained,0.0,correct,0.0,correct,,abstained,19e50035,high,low,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,dce9e1c04ec7c829,Position,GK,,abstained,GK,correct,Goalkeeper,wrong,,abstained,30ce77a2,low,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,dd15950ea27ad776,Substitutions,2.0,,abstained,0.0,wrong,,abstained,,abstained,a98a9189,mid,high,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,dd9de28ac9090055,Wins,1.0,,abstained,1.0,correct,0.3333333333333333,wrong,,abstained,72e0ee7b,high,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,dda040746bd30249,Substitutions,0.0,,abstained,0.0,correct,0.0,correct,,abstained,14f47102,low,high,high,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,e01ca449d21eef6c,Shots on target percentage,28.9,,abstained,33.3,correct,,abstained,,abstained,d2b135e1,mid,mid,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,e0f361f12aa63267,Goals conceded per 90 minutes,0.68,0.40 per 90,wrong,0.7966666666666667,correct,0.8066666666666666,correct,0.40 per 90 minutes,wrong,a98a9189,mid,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,e13f7cb6828c2717,Saves,87.0,,abstained,2.766666666666667,wrong,3.0333333333333337,wrong,,abstained,19e50035,high,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,e43f1cb7ad173126,Offsides,5.0,,abstained,2.0,wrong,0.0,wrong,,abstained,d2b135e1,mid,high,high,5,4,1,team,False,True
+deepseek-v4.1-flash,3,few_3,e52642c37c590be6,Matches played,28,,abstained,22.333333333333332,correct,15.0,wrong,27.0,correct,14f47102,low,high,high,3,2,1,both,True,True
+deepseek-v4.1-flash,3,few_3,e6c454c6459e5882,Clean sheet percentage,33.3,,abstained,27.75,correct,0.0,wrong,,abstained,f8d2d42c,mid,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,e7b056019179b080,Shots on target percentage,33.3,,abstained,7.666666666666667,wrong,7.0,wrong,,abstained,1958c005,low,mid,high,5,4,1,team,False,True
+deepseek-v4.1-flash,3,few_3,ea21ea8dcd33526e,Position,GK,,abstained,GK,correct,Goalkeeper,wrong,,abstained,72e0ee7b,high,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,eaa46854d64e7938,Wins,4.0,,abstained,0.0,wrong,0.0,wrong,,abstained,f679abe1,high,low,low,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,eb1cff0ada1bdf29,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,19e50035,high,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,eb8bccd75209a74a,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,f8d2d42c,mid,mid,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,ed49a56ce555b15a,Clean sheet percentage,33.3,5.56 %,wrong,33.3,correct,0.0,wrong,5.56 %,wrong,f8d2d42c,mid,low,high,3,3,0,name,True,False
+deepseek-v4.1-flash,3,few_3,ed5094219427c9c9,Interceptions,0.0,,abstained,0.0,correct,,abstained,,abstained,f679abe1,high,high,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f07492c47a6f4bb1,Shots on target percentage,25.0,50.00 %,wrong,33.3,correct,30.53333333333333,correct,50.00 %,wrong,4accb7e0,low,mid,high,5,5,0,name,True,False
+deepseek-v4.1-flash,3,few_3,f1ec946b94ad9d33,Nation,se SWE,Sweden,wrong,se SWE,correct,Sweden,wrong,Sweden,wrong,a109e5c8,high,high,high,3,2,1,both,True,True
+deepseek-v4.1-flash,3,few_3,f27313c6fed30b51,Position,"DF,MF",,abstained,MF,wrong,Goalkeeper,wrong,,abstained,1958c005,low,mid,high,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f2830531e95a5c33,Date of birth,2006.0,2 February 2006,wrong,2006-02-02,correct,2006-02-02,correct,2 February 2006,wrong,a109e5c8,high,high,high,1,1,0,name,True,False
+deepseek-v4.1-flash,3,few_3,f351c1cf5fb9825f,Goals per 90 minutes,0.0,,abstained,0.135,wrong,,abstained,,abstained,f333ac24,high,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f44efd6d075e0b5b,Goals conceded per 90 minutes,1.33,,abstained,,abstained,,abstained,,abstained,f8d2d42c,mid,low,high,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f46ef4339bb8c03c,Date of birth,1994.0,04/07/1995,wrong,1992-08-28,correct,,abstained,04/07/1995,wrong,6a99e0b1,high,high,high,1,0,1,team,False,True
+deepseek-v4.1-flash,3,few_3,f5cb4651cfcf9427,Minutes per start,61.0,,abstained,56.666666666666664,correct,74.33333333333333,correct,,abstained,f333ac24,high,mid,mid,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f703ad74f4b080d0,Saves,29.0,,abstained,35.0,correct,29.0,correct,,abstained,f679abe1,high,low,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f704494d41bd3c70,On-offsides,0.44,,abstained,0.0,wrong,0.6666666666666666,wrong,,abstained,94c79a82,high,mid,high,5,4,1,name,True,False
+deepseek-v4.1-flash,3,few_3,f7be205d474d01a6,Assists,0.0,,abstained,0.0,correct,0.0,correct,,abstained,1958c005,low,high,mid,1,1,0,none,False,False
+deepseek-v4.1-flash,3,few_3,f822af239093ecb3,Clean sheets,3.0,,abstained,0.0,wrong,0.0,wrong,,abstained,30ce77a2,low,low,high,1,1,0,team,False,True
+deepseek-v4.1-flash,3,few_3,fa23ba64a71194a4,Minutes per start,90.0,,abstained,90.0,correct,90.0,correct,,abstained,30ce77a2,low,mid,low,5,5,0,none,False,False
+deepseek-v4.1-flash,3,few_3,fcaeb2bfbad3a4fa,Clean sheet percentage,0.0,,abstained,0.0,correct,0.0,correct,,abstained,2a3416b6,low,low,low,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,fea6d398e5205f2f,Goals conceded per 90 minutes,0.68,,abstained,1.0566666666666666,wrong,1.135,wrong,0.71 goals per 90 minutes,correct,a98a9189,mid,low,mid,3,3,0,none,False,False
+deepseek-v4.1-flash,3,few_3,ff83af2af1487a92,Penalties scored,0,,abstained,0.0,correct,0.0,correct,,abstained,4accb7e0,low,high,high,5,4,1,none,False,False

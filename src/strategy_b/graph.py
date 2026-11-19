@@ -39,6 +39,7 @@ class AgentState(TypedDict, total=False):
     evidence_urls: dict[str, list[str]]
     status: str
     plan_parsed: list[dict]
+    plan_entity: str | None  # plan.v2: the entity identified before writing the queries
     calls: Annotated[list[dict], operator.add]  # every LLM call, in order: {step, request, response}
     events: Annotated[list[str], operator.add]  # validation events (§8)
 
@@ -52,6 +53,7 @@ class AgentContext:
     plan_tpl: Template
     synth_tpl: Template
     count_tokens: Callable[[str], int]
+    notes: dict[str, str] | None = None  # property descriptions ({property_notes})
 
 
 def _call(ctx: AgentContext, step: str, request: Request) -> tuple[Response | None, dict, str | None]:
@@ -64,12 +66,13 @@ def _call(ctx: AgentContext, step: str, request: Request) -> tuple[Response | No
 
 
 def build_graph(ctx: AgentContext):
+    """LangGraph of one run: plan (identify the entity, plan queries) → search → synthesize."""
     cfg, variant = ctx.cfg, ctx.variant
     params = ctx.caller.cfg.params
 
     def plan(state: AgentState) -> dict:
         task = state["task"]
-        system, user, labels = steps.render_plan(ctx.plan_tpl, task, variant.with_context, cfg.max_subqueries)
+        system, user, labels = steps.render_plan(ctx.plan_tpl, task, variant.with_context, cfg.max_subqueries, ctx.notes)
         # reuse_retrieval: every run uses the plan of run 1 (same request -> cached response -> same queries).
         run_index = 1 if cfg.reuse_retrieval else state["run_index"]
         request = Request(system, [{"role": "user", "content": user}], params, run_index)
@@ -78,6 +81,7 @@ def build_graph(ctx: AgentContext):
             return {"labels": labels, "calls": [log], "status": failed, "events": ["plan_call_failed"]}
         calls = [log]
         queries, events, ok = steps.parse_plan(resp.text, task, labels, cfg.max_subqueries)
+        entity = steps.plan_entity(resp.text)
         if not ok:
             repair = Request(system, request.messages + [
                 {"role": "assistant", "content": resp.text},
@@ -90,7 +94,8 @@ def build_graph(ctx: AgentContext):
                 events += [f"repair:{e}" for e in ev2]
         if not ok:
             return {"labels": labels, "calls": calls, "events": events, "status": "plan_invalid"}
-        return {"labels": labels, "calls": calls, "events": events, "queries": queries, "plan_parsed": queries}
+        return {"labels": labels, "calls": calls, "events": events, "queries": queries, "plan_parsed": queries,
+                "plan_entity": entity}
 
     def retrieve(state: AgentState) -> dict:
         queries = state["queries"]
@@ -119,9 +124,36 @@ def build_graph(ctx: AgentContext):
                                                     ctx.count_tokens, cfg.max_chars_per_result)
         return {"search_log": search_log, "results": logged, "evidence": evidence, "events": events + ev}
 
+    def after(next_node: str):
+        return lambda state: END if state.get("status") else next_node
+
+    g = StateGraph(AgentState)
+    g.add_node("plan", plan)
+    g.add_node("retrieve", retrieve)
+    g.add_node("synthesize", synthesize_node(ctx))
+    g.add_edge(START, "plan")
+    g.add_conditional_edges("plan", after("retrieve"), ["retrieve", END])
+    g.add_conditional_edges("retrieve", after("synthesize"), ["synthesize", END])
+    g.add_edge("synthesize", END)
+    return g.compile()
+
+
+def build_replay_graph(ctx: AgentContext):
+    """START → synthesize → END, on a state that already holds the labels and evidence of an earlier run."""
+    g = StateGraph(AgentState)
+    g.add_node("synthesize", synthesize_node(ctx))
+    g.add_edge(START, "synthesize")
+    g.add_edge("synthesize", END)
+    return g.compile()
+
+
+def synthesize_node(ctx: AgentContext):
+    """The synthesis step: answer from the evidence, with citations, and validate the answer."""
+    variant, params = ctx.variant, ctx.caller.cfg.params
+
     def synthesize(state: AgentState) -> dict:
         task, labels, evidence = state["task"], state["labels"], state["evidence"]
-        system, user = steps.render_synthesis(ctx.synth_tpl, task, variant.with_context, evidence)
+        system, user = steps.render_synthesis(ctx.synth_tpl, task, variant.with_context, evidence, ctx.notes)
         request = Request(system, [{"role": "user", "content": user}], params, state["run_index"])
         resp, log, failed = _call(ctx, "synthesize", request)
         if failed:
@@ -145,15 +177,4 @@ def build_graph(ctx: AgentContext):
         status = "truncated" if last.finish_reason == "length" else "ok"
         return {"calls": calls, "events": events, "predictions": preds, "evidence_urls": cites, "status": status}
 
-    def after(next_node: str):
-        return lambda state: END if state.get("status") else next_node
-
-    g = StateGraph(AgentState)
-    g.add_node("plan", plan)
-    g.add_node("retrieve", retrieve)
-    g.add_node("synthesize", synthesize)
-    g.add_edge(START, "plan")
-    g.add_conditional_edges("plan", after("retrieve"), ["retrieve", END])
-    g.add_conditional_edges("retrieve", after("synthesize"), ["synthesize", END])
-    g.add_edge("synthesize", END)
-    return g.compile()
+    return synthesize

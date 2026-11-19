@@ -1,0 +1,36 @@
+{
+ "node_type": "Team",
+ "source": "tasks/football/raw/intermediate/snapshot",
+ "source_hash": "3b4a3d919a7f8f08bcd90d2fa9e853c0542ac6e52232be3951eea0b3dfdf4ef5",
+ "hash": "03733149cd267717d74fa43ec461c27a3ef83cf68ba836026b4f4a3ae0dcdee2",
+ "nodes": 343,
+ "without_stats": 0,
+ "lifted": 343,
+ "lifted, other competitions kept as context": 62,
+ "lifted_from": {
+  "domestic": 265,
+  "international": 78
+ },
+ "dropped_duplicates": [
+  "Country",
+  "Squad"
+ ],
+ "name_clashes": {},
+ "stats": {
+  "nodes": 9819,
+  "edges": 25385,
+  "nodes_per_type": {
+   "Country": 12,
+   "League": 18,
+   "Player": 9446,
+   "Team": 343
+  },
+  "edges_per_type": {
+   "NATIONALITY": 4988,
+   "OCCURS_IN": 18,
+   "PLAYED_FOR": 8278,
+   "PLAYER_STATS_IN_LEAGUE": 11696,
+   "TEAM_STATS_IN_LEAGUE": 405
+  }
+ }
+}

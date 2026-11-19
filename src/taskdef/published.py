@@ -180,6 +180,7 @@ def node_properties(cfg: TaskDefConfig, graph: Graph | None, pop_file: dict[str,
 
 
 def load_scores(cfg: TaskDefConfig, graph: Graph | None) -> Scores:
+    """pop(p) and raw centrality for the published method, from files or from the snapshot."""
     pc = cfg.published
     t = cfg.dataset.node_type
     pop_file = _read_popularity_file(Path(pc.popularity_file), pc.popularity_scale) if pc.popularity_file else None
@@ -241,6 +242,7 @@ def _published_path(path: str) -> tuple[str, list[str], str, int]:
 
 
 def graph_node_data(graph: Graph, cfg: TaskDefConfig, node_ids: list[str]) -> dict[str, NodeData]:
+    """Own properties and published-format context of each node, from the snapshot."""
     from .context import context_elements, detect_n1, n1_keys
 
     n1 = n1_keys(detect_n1(graph))
@@ -323,6 +325,7 @@ def node_strata(scores: Scores, keys: list[str], method: str) -> tuple[dict[str,
 def property_classes(
     scores: Scores, node: NodeData, method: str, threshold: float
 ) -> tuple[dict[str, list[str]], dict[str, Any]]:
+    """Split the properties into easy and hard pools (threshold, or quartiles of pop over context(n))."""
     if method == "threshold":
         pools = {
             "easy": sorted(p for p, v in scores.pop.items() if v >= threshold),
@@ -452,6 +455,7 @@ def _task_id(dataset: str, task: PublishedTask) -> str:
 
 
 def task_rows(cfg: TaskDefConfig, tasks: list[PublishedTask], scores: Scores) -> tuple[list[dict], list[dict]]:
+    """Rows of tasks.csv and ground_truth.csv for published-method tasks (duplicates removed)."""
     t = cfg.dataset.node_type
     rows, gt = [], []
     seen = set()
@@ -552,6 +556,7 @@ def _leak_partners(cfg: TaskDefConfig):
 
 
 def build_published(cfg: TaskDefConfig, refresh_snapshot: bool = False, overwrite: bool = False) -> dict:
+    """Build a task set with the published (DOLAP) method."""
     from .pipeline import code_version, load_snapshot
 
     out_dir = Path(cfg.output_dir)
@@ -695,6 +700,7 @@ def parse_published_input(text: str) -> dict[str, str]:
 
 
 def read_published_tasks(path: Path) -> list[tuple[str, list[str], list[str], dict]]:
+    """Read the published tasks file: (node, H, G, metadata) per row."""
     csv.field_size_limit(1 << 30)
     rows = []
     with open(path, encoding="utf-8", newline="") as fh:

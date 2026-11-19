@@ -1,0 +1,173 @@
+{
+ "f1": {
+  "gpt-oss:20b": {
+   "compact": 0.215,
+   "zero-shot": 0.154,
+   "zero-shot + CoT": 0.206,
+   "1-shot": 0.2,
+   "1-shot + CoT": 0.178,
+   "3-shot": 0.195,
+   "3-shot + CoT": 0.224,
+   "5-shot": 0.212,
+   "5-shot + CoT": 0.221
+  },
+  "gemma4:31b": {
+   "compact": 0.243,
+   "zero-shot": 0.261,
+   "zero-shot + CoT": 0.299,
+   "1-shot": 0.225,
+   "1-shot + CoT": 0.235,
+   "3-shot": 0.183,
+   "3-shot + CoT": 0.205,
+   "5-shot": 0.225,
+   "5-shot + CoT": 0.234
+  },
+  "gpt-oss:120b": {
+   "compact": 0.305,
+   "zero-shot": 0.248,
+   "zero-shot + CoT": 0.26,
+   "1-shot": 0.213,
+   "1-shot + CoT": 0.247,
+   "3-shot": 0.222,
+   "3-shot + CoT": 0.267,
+   "5-shot": 0.235,
+   "5-shot + CoT": 0.204
+  },
+  "mistral-large-3": {
+   "compact": 0.158,
+   "zero-shot": 0.243,
+   "zero-shot + CoT": 0.207,
+   "1-shot": 0.228,
+   "1-shot + CoT": 0.263,
+   "3-shot": 0.255,
+   "3-shot + CoT": 0.292,
+   "5-shot": 0.255,
+   "5-shot + CoT": 0.261
+  },
+  "deepseek-v4.1-flash": {
+   "compact": 0.193,
+   "zero-shot": 0.212,
+   "zero-shot + CoT": 0.212,
+   "1-shot": 0.246,
+   "1-shot + CoT": 0.269,
+   "3-shot": 0.274,
+   "3-shot + CoT": 0.227,
+   "5-shot": 0.205,
+   "5-shot + CoT": 0.309
+  }
+ },
+ "precision": {
+  "gpt-oss:20b": {
+   "compact": 0.217,
+   "zero-shot": 0.213,
+   "zero-shot + CoT": 0.269,
+   "1-shot": 0.274,
+   "1-shot + CoT": 0.246,
+   "3-shot": 0.286,
+   "3-shot + CoT": 0.306,
+   "5-shot": 0.29,
+   "5-shot + CoT": 0.297
+  },
+  "gemma4:31b": {
+   "compact": 0.301,
+   "zero-shot": 0.444,
+   "zero-shot + CoT": 0.5,
+   "1-shot": 0.395,
+   "1-shot + CoT": 0.4,
+   "3-shot": 0.311,
+   "3-shot + CoT": 0.333,
+   "5-shot": 0.395,
+   "5-shot + CoT": 0.391
+  },
+  "gpt-oss:120b": {
+   "compact": 0.326,
+   "zero-shot": 0.422,
+   "zero-shot + CoT": 0.5,
+   "1-shot": 0.381,
+   "1-shot + CoT": 0.474,
+   "3-shot": 0.378,
+   "3-shot + CoT": 0.476,
+   "5-shot": 0.4,
+   "5-shot + CoT": 0.385
+  },
+  "mistral-large-3": {
+   "compact": 0.159,
+   "zero-shot": 0.284,
+   "zero-shot + CoT": 0.25,
+   "1-shot": 0.245,
+   "1-shot + CoT": 0.289,
+   "3-shot": 0.284,
+   "3-shot + CoT": 0.333,
+   "5-shot": 0.271,
+   "5-shot + CoT": 0.286
+  },
+  "deepseek-v4.1-flash": {
+   "compact": 0.202,
+   "zero-shot": 0.268,
+   "zero-shot + CoT": 0.268,
+   "1-shot": 0.31,
+   "1-shot + CoT": 0.365,
+   "3-shot": 0.317,
+   "3-shot + CoT": 0.273,
+   "5-shot": 0.23,
+   "5-shot + CoT": 0.362
+  }
+ },
+ "abstention": {
+  "gpt-oss:20b": {
+   "compact": 0.019,
+   "zero-shot": 0.435,
+   "zero-shot + CoT": 0.38,
+   "1-shot": 0.426,
+   "1-shot + CoT": 0.435,
+   "3-shot": 0.481,
+   "3-shot + CoT": 0.426,
+   "5-shot": 0.426,
+   "5-shot + CoT": 0.407
+  },
+  "gemma4:31b": {
+   "compact": 0.324,
+   "zero-shot": 0.583,
+   "zero-shot + CoT": 0.574,
+   "1-shot": 0.602,
+   "1-shot + CoT": 0.583,
+   "3-shot": 0.583,
+   "3-shot + CoT": 0.556,
+   "5-shot": 0.602,
+   "5-shot + CoT": 0.574
+  },
+  "gpt-oss:120b": {
+   "compact": 0.12,
+   "zero-shot": 0.583,
+   "zero-shot + CoT": 0.648,
+   "1-shot": 0.611,
+   "1-shot + CoT": 0.648,
+   "3-shot": 0.583,
+   "3-shot + CoT": 0.611,
+   "5-shot": 0.583,
+   "5-shot + CoT": 0.639
+  },
+  "mistral-large-3": {
+   "compact": 0.009,
+   "zero-shot": 0.25,
+   "zero-shot + CoT": 0.296,
+   "1-shot": 0.13,
+   "1-shot + CoT": 0.167,
+   "3-shot": 0.185,
+   "3-shot + CoT": 0.222,
+   "5-shot": 0.111,
+   "5-shot + CoT": 0.157
+  },
+  "deepseek-v4.1-flash": {
+   "compact": 0.083,
+   "zero-shot": 0.343,
+   "zero-shot + CoT": 0.343,
+   "1-shot": 0.343,
+   "1-shot + CoT": 0.417,
+   "3-shot": 0.241,
+   "3-shot + CoT": 0.287,
+   "5-shot": 0.194,
+   "5-shot + CoT": 0.259
+  }
+ }
+}

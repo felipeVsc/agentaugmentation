@@ -17,11 +17,14 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "ruff>=0.6"]
 # Strategy A with local models (Ollama needs no SDK: it is called over HTTP).
 local = ["codecarbon>=3.0", "tiktoken>=0.7", "tokenizers>=0.19"]
-# Strategy B (search agent): LangGraph orchestration; Tavily is called over HTTP.
-agent = ["langgraph>=1.0"]
+# Strategy B (search agent): LangGraph orchestration; Tavily and Ollama search are called over HTTP;
+# fastembed ranks the chunks of Ollama search results.
+agent = ["langgraph>=1.0", "fastembed>=0.3"]
+# Analysis: the scripts in notebooks/ (figures, tables, report notebooks).
+reports = ["matplotlib>=3.8", "nbformat>=5.9", "jupyter>=1.0"]
 # Strategy A with API models (optional).
 api = ["openai>=1.40", "anthropic>=0.40", "google-genai>=1.0", "ecologits>=0.6", "tiktoken>=0.7"]
 

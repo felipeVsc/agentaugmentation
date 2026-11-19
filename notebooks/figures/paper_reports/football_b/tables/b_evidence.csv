@@ -1,0 +1,6 @@
+model,evidence items,evidence tokens,truncated,answered
+gpt-oss:20b,5.0195,2600.3947,0.7587,0.2315
+gemma4:31b,4.5216,2537.802,0.537,0.2162
+gpt-oss:120b,5.3808,2701.6597,0.9874,0.2329
+mistral-large-3,5.1548,2706.5662,0.9958,0.3026
+deepseek-v4.1-flash,5.1925,2689.463,0.9805,0.0753

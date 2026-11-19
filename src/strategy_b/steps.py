@@ -11,11 +11,12 @@ from typing import Any
 
 from strategy_a.parsing import _norm, extract_json
 from strategy_a.tasks import Task
-from strategy_a.templates import Template, fill, load_template, path_label, render_known, render_targets, target_labels
+from strategy_a.templates import (Template, fill, load_template, render_known, render_property_notes,
+                                  render_targets, target_labels)
 
 from .search import SearchResult, is_blocked
 
-PLAN_ALLOWED = {"node_type", "known_properties", "target_properties", "graph_context", "max_queries"}
+PLAN_ALLOWED = {"node_type", "known_properties", "target_properties", "graph_context", "max_queries", "property_notes"}
 SYNTH_ALLOWED = PLAN_ALLOWED | {"evidence", "output_format"}
 PLAN_REQUIRED = ({"known_properties"}, {"target_properties"})
 SYNTH_REQUIRED = ({"known_properties"}, {"target_properties"}, {"evidence"}, {"output_format"})
@@ -23,10 +24,12 @@ IDENTIFYING = ("name", "iata", "icao", "code", "city", "country")
 
 
 def load_plan_template(path) -> Template:
+    """Load and check a plan prompt template."""
     return load_template(path, PLAN_ALLOWED, PLAN_REQUIRED)
 
 
 def load_synth_template(path) -> Template:
+    """Load and check a synthesis prompt template."""
     return load_template(path, SYNTH_ALLOWED, SYNTH_REQUIRED)
 
 
@@ -49,30 +52,37 @@ def render_graph_context(task: Task, with_context: bool) -> str:
     return "Related elements in the graph:\n" + "\n".join(lines)
 
 
-def _values(task: Task, labels: dict[str, str], with_context: bool, max_queries: int) -> dict[str, str]:
+def _values(task: Task, labels: dict[str, str], with_context: bool, max_queries: int,
+            notes: dict[str, str] | None = None) -> dict[str, str]:
     return {
         "node_type": task.node_type,
         "known_properties": render_known(task.G, "list"),
         "target_properties": render_targets(labels),
         "graph_context": render_graph_context(task, with_context),
         "max_queries": str(max_queries),
+        "property_notes": render_property_notes(task, notes),
     }
 
 
-def render_plan(tpl: Template, task: Task, with_context: bool, max_queries: int) -> tuple[str | None, str, dict]:
+def render_plan(tpl: Template, task: Task, with_context: bool, max_queries: int,
+                notes: dict[str, str] | None = None) -> tuple[str | None, str, dict]:
+    """Render the plan prompt of a task. Returns (system, user, labels)."""
     labels = target_labels(task.H)
-    values = _values(task, labels, with_context, max_queries)
+    values = _values(task, labels, with_context, max_queries, notes)
     return (fill(tpl.system, values).strip() or None), _tidy(fill(tpl.user, values)), labels
 
 
 def synth_output_format(labels: dict[str, str]) -> str:
+    """JSON object showing the expected synthesis answer: value, unit and cited sources per property."""
     entry = {"value": "<value or null>", "unit": "<unit or null>", "sources": ["<evidence numbers>"]}
     return json.dumps({"predictions": {label: entry for label in labels}}, ensure_ascii=False)
 
 
-def render_synthesis(tpl: Template, task: Task, with_context: bool, evidence: list[dict]) -> tuple[str | None, str]:
+def render_synthesis(tpl: Template, task: Task, with_context: bool, evidence: list[dict],
+                     notes: dict[str, str] | None = None) -> tuple[str | None, str]:
+    """Render the synthesis prompt of a task, with the evidence. Returns (system, user)."""
     labels = target_labels(task.H)
-    values = _values(task, labels, with_context, 0)
+    values = _values(task, labels, with_context, 0, notes)
     values["evidence"] = render_evidence(evidence)
     values["output_format"] = synth_output_format(labels)
     return (fill(tpl.system, values).strip() or None), _tidy(fill(tpl.user, values))
@@ -162,6 +172,13 @@ def parse_plan(text: str, task: Task, labels: dict[str, str], max_queries: int) 
     return queries, events, True
 
 
+def plan_entity(text: str) -> str | None:
+    """The entity the plan identified (plan.v2 ``"entity"``), for the log; None when absent."""
+    obj, _ = extract_json(text)
+    value = obj.get("entity") if isinstance(obj, dict) else None
+    return None if value is None else str(value)
+
+
 PLAN_REPAIR = (
     'Your answer could not be used. Reply with only a JSON object {{"queries": [{{"id": "q1", "query": "...", '
     '"targets": ["<property>"]}}]}} with at most {max_queries} queries covering: {targets}.'
@@ -221,6 +238,7 @@ def build_evidence(
 
 
 def render_evidence(evidence: list[dict]) -> str:
+    """Render the evidence as '[id] title / URL / content' blocks."""
     if not evidence:
         return "(no evidence was found)"
     return "\n\n".join(f"[{e['id']}] {e['title']}\nURL: {e['url']}\n{e['content']}" for e in evidence)

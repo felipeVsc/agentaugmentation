@@ -75,6 +75,7 @@ class CallFailed(Exception):
 
 
 def http_error_kind(status_code: int | None) -> str:
+    """Map an HTTP status code to an error kind (rate_limit, timeout, server, auth, ...)."""
     if status_code is None:
         return "connection"
     if status_code == 429:

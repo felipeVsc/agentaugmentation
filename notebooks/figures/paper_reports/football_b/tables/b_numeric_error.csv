@@ -1,0 +1,11 @@
+model,variant,wrong numeric answers,rel. error 25%,rel. error median,rel. error 75%,share that are 0
+deepseek-v4.1-flash,search,3,0.8819,0.8889,1.4444,0.0
+deepseek-v4.1-flash,search + memory,9,0.7069,1.0,4.0645,0.1111
+gemma4:31b,search,19,0.6046,0.8333,2.625,0.0
+gemma4:31b,search + memory,16,0.773,0.9545,2.4375,0.0625
+gpt-oss:120b,search,33,0.5385,0.9881,2.25,0.1212
+gpt-oss:120b,search + memory,33,0.6608,1.0,2.4146,0.1515
+gpt-oss:20b,search,40,0.6087,1.0,2.6897,0.05
+gpt-oss:20b,search + memory,45,0.6667,0.9556,1.6905,0.1556
+mistral-large-3,search,29,0.625,0.9211,2.5402,0.069
+mistral-large-3,search + memory,37,0.6912,1.0,2.131,0.1622

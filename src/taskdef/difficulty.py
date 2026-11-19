@@ -18,6 +18,7 @@ class Difficulty:
 
 
 def surprise(probability: float) -> float:
+    """−log2(probability), never negative."""
     # max() turns -0.0 into 0.0 when probability == 1.
     return max(0.0, -math.log2(probability))
 

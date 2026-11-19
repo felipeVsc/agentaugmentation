@@ -16,6 +16,7 @@ from .runner import Runner
 
 
 def estimate(runner: Runner, pending_only: bool = False) -> list[dict]:
+    """Estimate calls, input/output tokens and cost per (model, variant), from the rendered prompts."""
     runner.prepare()
     jobs = runner.pending() if pending_only else runner.jobs()
     tok = {}
@@ -55,6 +56,7 @@ def estimate(runner: Runner, pending_only: bool = False) -> list[dict]:
 
 
 def print_estimate(rows: list[dict]) -> None:
+    """Print the rows of `estimate` as a table with totals."""
     def money(x):
         return "      n/a" if x is None else f"{x:9.2f}"
 

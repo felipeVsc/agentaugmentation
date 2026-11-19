@@ -20,6 +20,7 @@ SCALAR_TYPES = ("string", "integer", "float", "boolean", "date")
 
 
 def infer_type(value) -> str:
+    """Value type name: null, boolean, integer, float, string, list, map or other"""
     if value is None:
         return "null"
     if isinstance(value, bool):
@@ -38,6 +39,7 @@ def infer_type(value) -> str:
 
 
 def is_null(value, empty_string_is_null: bool = True) -> bool:
+    """True for None, NaN and (optionally) blank strings."""
     if value is None:
         return True
     if isinstance(value, float) and math.isnan(value):
@@ -71,6 +73,7 @@ class Edge(Element):
 
 
 def choose_node_type(labels: list[str], node_type: str, label_priority: list[str]) -> str:
+    """Type of a node with several labels: first in label_priority, else node_type, else the first label."""
     for label in label_priority:
         if label in labels:
             return label

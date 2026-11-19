@@ -14,6 +14,8 @@ A file without markers is a user message only. ``{{`` and ``}}`` are literal bra
 
 from __future__ import annotations
 
+import dataclasses
+
 import hashlib
 import json
 import re
@@ -36,14 +38,19 @@ MAIN_ALLOWED = {
     # Published DOLAP 2026 prompts: H names comma-separated ([PROPERTIES]) and the exact published user input.
     "properties_csv",
     "published_input",
+    # Figure 2 prompts of the October 2026 draft on a built task set: the user input in the published format
+    # (own properties as ``input:``, context properties as published context entries) and property descriptions.
+    "paper_input",
+    "property_notes",
 }
 # Each group needs one of its placeholders: the known properties, the properties to find, the output format.
 REQUIRED_GROUPS = (
-    {"known_properties", "published_input"},
+    {"known_properties", "published_input", "paper_input"},
     {"target_properties", "properties_csv"},
     {"output_format", "properties_csv"},  # the published prompts spell out the CSV format themselves
 )
-EXAMPLE_ALLOWED = {"node_type", "known_properties", "target_properties", "answer", "index"}
+EXAMPLE_ALLOWED = {"node_type", "known_properties", "target_properties", "answer", "index",
+                   "example_input", "answer_csv"}  # the published examples: `name: "value"` lines, CSV answer
 
 DEFAULT_EXAMPLE = """Example {index}
 Known properties of the {node_type}:
@@ -74,10 +81,12 @@ class Template:
 
 
 def placeholders(text: str) -> set[str]:
+    """Names of the {placeholders} in a template text."""
     return {m.group(1) for m in PLACEHOLDER.finditer(text) if m.group(1)}
 
 
 def fill(text: str, values: dict[str, str]) -> str:
+    """Replace the {placeholders} of a template text; {{ and }} give literal braces."""
     def sub(m: re.Match) -> str:
         if m.group(0) == "{{":
             return "{"
@@ -181,6 +190,7 @@ def _value(v: Any) -> str:
 
 
 def render_known(G: list[dict], fmt: str) -> str:
+    """Render the given properties G as a JSON list or a bullet list."""
     if fmt == "json":
         return json.dumps(
             [{"property": path_label(g["path"], g["property_name"]), "value": g["value"]} for g in G],
@@ -191,14 +201,17 @@ def render_known(G: list[dict], fmt: str) -> str:
 
 
 def render_targets(labels: dict[str, str]) -> str:
+    """Render the hidden properties to recover as a bullet list."""
     return "\n".join(f"- {label}" for label in labels)
 
 
 def render_output_format(labels: dict[str, str]) -> str:
+    """JSON object showing the expected answer: one '<value or null>' per hidden property."""
     return json.dumps({label: "<value or null>" for label in labels}, ensure_ascii=False)
 
 
 def render_examples(template: Template, examples: list[Example], fmt: str) -> str:
+    """Render the few-shot examples with the template's example block."""
     block = template.example or DEFAULT_EXAMPLE
     rendered = []
     for i, ex in enumerate(examples, 1):
@@ -213,6 +226,8 @@ def render_examples(template: Template, examples: list[Example], fmt: str) -> st
                     "known_properties": render_known(ex.G, fmt),
                     "target_properties": render_targets(labels),
                     "answer": answer,
+                    "example_input": "\n".join(f"{g['property_name']}: {_quoted(g['value'])}" for g in ex.G),
+                    "answer_csv": "\n".join(f"{label}, {_plain(ex.answers[key])}" for label, key in labels.items()),
                 },
             )
         )
@@ -235,7 +250,60 @@ def published_input(task: Task, with_context: bool) -> str:
     return text
 
 
-def render(template: Template, task: Task, examples_text: str, fmt: str, with_context: bool = False) -> Rendered:
+def given(task: Task, G_origin: str) -> Task:
+    """The task as the model sees it: with ``G_origin == "own"``, G keeps only n's own properties."""
+    if G_origin == "all":
+        return task
+    own = [g for g in task.G if g.get("origin", "node" if g["path"] == task.node_type else "context") == "node"]
+    return dataclasses.replace(task, G=own)
+
+
+def _plain(v: Any) -> str:
+    """A value as written in the published prompts: 672.0 -> 672."""
+    if isinstance(v, float) and v.is_integer():
+        return str(int(v))
+    return str(v)
+
+
+def _quoted(v: Any) -> str:
+    return f'"{v}"' if isinstance(v, str) else _plain(v)
+
+
+def _is_own_entry(task: Task, g: dict) -> bool:
+    return g.get("origin", "node" if g["path"] == task.node_type else "context") == "node"
+
+
+def context_entry(g: dict) -> list:
+    """A context property of G in the published format ``[kind, [relationships], element type, property, value]``."""
+    rels = re.findall(r"\[([^\]]+)\]", g["path"])
+    kind = "edge" if g["path"].endswith(("->", "-")) and not g["path"].endswith(g["element_type"]) else "node"
+    return [kind, rels, g["element_type"], g["property_name"], g["value"]]
+
+
+def paper_input(task: Task) -> str:
+    """The user message of the published prompts, built from G: n's own properties as ``input: p:v,...`` and the
+    context properties as published context entries; ``[NO_CONTEXT_ADDED]`` when G has none."""
+    own = [g for g in task.G if _is_own_entry(task, g)]
+    ctx = [context_entry(g) for g in task.G if not _is_own_entry(task, g)]
+    lines = ["Here is the entity extracted from the database that you should seek information about:", "",
+             "input: " + ",".join(f"{g['property_name']}:{g['value']}" for g in own), ""]
+    lines.append(f"Here are some relationships and relationships information about this property in the graph: {ctx}."
+                 if ctx else "context: [NO_CONTEXT_ADDED].")
+    return "\n".join(lines)
+
+
+def render_property_notes(task: Task, notes: dict[str, str] | None) -> str:
+    """Descriptions of the properties of H and G that have one (``property_notes`` in the config)."""
+    if not notes:
+        return ""
+    names = list(dict.fromkeys([h["property_name"] for h in task.H] + [g["property_name"] for g in task.G]))
+    lines = [f"- {n}: {notes[n]}" for n in names if n in notes]
+    return ("Notes on some properties:\n" + "\n".join(lines)) if lines else ""
+
+
+def render(template: Template, task: Task, examples_text: str, fmt: str, with_context: bool = False,
+           notes: dict[str, str] | None = None) -> Rendered:
+    """Render the system and user prompts of a task with a template (with or without context)."""
     labels = target_labels(task.H)
     needed = placeholders(template.system) | placeholders(template.user)
     values = {
@@ -246,9 +314,15 @@ def render(template: Template, task: Task, examples_text: str, fmt: str, with_co
         "examples": examples_text,
         "properties_csv": ",".join(h["property_name"] for h in task.H),
         "published_input": published_input(task, with_context) if "published_input" in needed else "",
+        "paper_input": paper_input(task) if "paper_input" in needed else "",
+        "property_notes": render_property_notes(task, notes),
     }
-    system = fill(template.system, values).strip() or None
-    return Rendered(system, fill(template.user, values).strip(), labels)
+    system = _tidy(fill(template.system, values)) or None
+    return Rendered(system, _tidy(fill(template.user, values)), labels)
+
+
+def _tidy(text: str) -> str:
+    return re.sub(r"\n{3,}", "\n\n", text).strip()  # an empty {property_notes} leaves blank lines
 
 
 def pfe_text(template: Template, examples_text: str) -> str:

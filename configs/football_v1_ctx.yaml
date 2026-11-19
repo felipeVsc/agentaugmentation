@@ -1,0 +1,49 @@
+# Football task set with the sampling of airports v5 (configs/airports_v5_ctx.yaml), and the matched no-context set.
+#   tasks snapshot --config configs/football_raw.yaml       # export of Neo4j
+#   venv/bin/python scripts/football_lift_stats.py          # a player's season statistics become its own properties
+#   tasks build --config configs/football_v1_ctx.yaml
+# 3 nodes per centrality stratum, |H| = 1, |G| in {1, 3, 5}: 27 x 3 x 1 x 3 = 243 tasks before skips.
+
+dataset:
+  name: football
+  node_type: Player
+  context_max_hops: null
+  source: snapshot
+  snapshot_dir: tasks/football/snapshot_lifted   # see scripts/football_lift_stats.py
+  node_id_property: Player ID                    # already the node id in the snapshot
+
+neo4j:
+  uri: bolt://localhost:7687      # overridden by NEO4J_URI; user/password only from NEO4J_USER / NEO4J_PASSWORD
+  database: null                  # overridden by NEO4J_DATABASE
+  id_function: elementId
+
+centrality:
+  measure: pagerank
+  epsilon: 1.0e-6
+  # Players only have outgoing relationships, so directed PageRank gives every player the same score (one stratum,
+  # difficulty 0). Undirected, as degree-like centrality: 1,912 distinct player scores.
+  directed: false
+
+sampling:
+  max_n: 3
+  max_H: 1
+  sizes_G: [1, 3, 5]
+  use_context: true
+  G_strata_by: popularity
+  G_min_own: 1
+  replace_unusable_nodes: true
+  G_context_fallback: true
+  no_context_output_dir: tasks/football/v1_noctx/
+  seed: 42
+
+properties:
+  # Internal fbref ids, as airport_id for airports. Country.Name / Code and the statistics' Country give the player's
+  # nationality in another form than Nation ("France" against "fr FRA"), which the value check does not catch.
+  exclude_properties: [Player ID, Team ID, Country.Name, Country.Code, PLAYER_STATS_IN_LEAGUE.Country]
+  never_hide: []
+  leakage_pairs: []
+  empty_string_is_null: true
+  leak_min_substring_len: 4
+
+task_set_version: football-v1-ctx
+output_dir: tasks/football/v1_ctx/

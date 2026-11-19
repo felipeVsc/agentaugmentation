@@ -192,26 +192,83 @@
   ],
   "pfe_tokens": {
     "compact|cloud-gpt-oss-20b": 81,
+    "compact|cloud-gemma4-31b": 81,
+    "compact|cloud-gpt-oss-120b": 81,
+    "compact|cloud-deepseek-v4.1-flash": 81,
     "zero|cloud-gpt-oss-20b": 192,
+    "zero|cloud-gemma4-31b": 192,
+    "zero|cloud-gpt-oss-120b": 192,
+    "zero|cloud-deepseek-v4.1-flash": 192,
     "few1|cloud-gpt-oss-20b": 227,
+    "few1|cloud-gemma4-31b": 227,
+    "few1|cloud-gpt-oss-120b": 227,
+    "few1|cloud-deepseek-v4.1-flash": 227,
     "few3|cloud-gpt-oss-20b": 293,
+    "few3|cloud-gemma4-31b": 293,
+    "few3|cloud-gpt-oss-120b": 293,
+    "few3|cloud-deepseek-v4.1-flash": 293,
     "few5|cloud-gpt-oss-20b": 381,
+    "few5|cloud-gemma4-31b": 381,
+    "few5|cloud-gpt-oss-120b": 381,
+    "few5|cloud-deepseek-v4.1-flash": 381,
     "zerocot|cloud-gpt-oss-20b": 244,
+    "zerocot|cloud-gemma4-31b": 244,
+    "zerocot|cloud-gpt-oss-120b": 244,
+    "zerocot|cloud-deepseek-v4.1-flash": 244,
     "1cot|cloud-gpt-oss-20b": 284,
+    "1cot|cloud-gemma4-31b": 284,
+    "1cot|cloud-gpt-oss-120b": 284,
+    "1cot|cloud-deepseek-v4.1-flash": 284,
     "3cot|cloud-gpt-oss-20b": 345,
+    "3cot|cloud-gemma4-31b": 345,
+    "3cot|cloud-gpt-oss-120b": 345,
+    "3cot|cloud-deepseek-v4.1-flash": 345,
     "5cot|cloud-gpt-oss-20b": 433,
+    "5cot|cloud-gemma4-31b": 433,
+    "5cot|cloud-gpt-oss-120b": 433,
+    "5cot|cloud-deepseek-v4.1-flash": 433,
     "compact_ctx|cloud-gpt-oss-20b": 81,
+    "compact_ctx|cloud-gemma4-31b": 81,
+    "compact_ctx|cloud-gpt-oss-120b": 81,
+    "compact_ctx|cloud-deepseek-v4.1-flash": 81,
     "zero_ctx|cloud-gpt-oss-20b": 192,
+    "zero_ctx|cloud-gemma4-31b": 192,
+    "zero_ctx|cloud-gpt-oss-120b": 192,
+    "zero_ctx|cloud-deepseek-v4.1-flash": 192,
     "few1_ctx|cloud-gpt-oss-20b": 227,
+    "few1_ctx|cloud-gemma4-31b": 227,
+    "few1_ctx|cloud-gpt-oss-120b": 227,
+    "few1_ctx|cloud-deepseek-v4.1-flash": 227,
     "few3_ctx|cloud-gpt-oss-20b": 293,
+    "few3_ctx|cloud-gemma4-31b": 293,
+    "few3_ctx|cloud-gpt-oss-120b": 293,
+    "few3_ctx|cloud-deepseek-v4.1-flash": 293,
     "few5_ctx|cloud-gpt-oss-20b": 381,
+    "few5_ctx|cloud-gemma4-31b": 381,
+    "few5_ctx|cloud-gpt-oss-120b": 381,
+    "few5_ctx|cloud-deepseek-v4.1-flash": 381,
     "zerocot_ctx|cloud-gpt-oss-20b": 244,
+    "zerocot_ctx|cloud-gemma4-31b": 244,
+    "zerocot_ctx|cloud-gpt-oss-120b": 244,
+    "zerocot_ctx|cloud-deepseek-v4.1-flash": 244,
     "1cot_ctx|cloud-gpt-oss-20b": 284,
+    "1cot_ctx|cloud-gemma4-31b": 284,
+    "1cot_ctx|cloud-gpt-oss-120b": 284,
+    "1cot_ctx|cloud-deepseek-v4.1-flash": 284,
     "3cot_ctx|cloud-gpt-oss-20b": 345,
-    "5cot_ctx|cloud-gpt-oss-20b": 433
+    "3cot_ctx|cloud-gemma4-31b": 345,
+    "3cot_ctx|cloud-gpt-oss-120b": 345,
+    "3cot_ctx|cloud-deepseek-v4.1-flash": 345,
+    "5cot_ctx|cloud-gpt-oss-20b": 433,
+    "5cot_ctx|cloud-gemma4-31b": 433,
+    "5cot_ctx|cloud-gpt-oss-120b": 433,
+    "5cot_ctx|cloud-deepseek-v4.1-flash": 433
   },
   "tokenizers": {
-    "cloud-gpt-oss-20b": "cl100k_base"
+    "cloud-gpt-oss-20b": "cl100k_base",
+    "cloud-gemma4-31b": "cl100k_base",
+    "cloud-gpt-oss-120b": "cl100k_base",
+    "cloud-deepseek-v4.1-flash": "cl100k_base"
   },
   "models": [
     {
@@ -220,16 +277,16 @@
       "model": "gpt-oss:20b",
       "params": {
         "temperature": 0.7,
-        "max_tokens": 1024
+        "max_tokens": 4096
       },
-      "max_concurrency": 2,
+      "max_concurrency": 3,
       "rpm": null,
       "timeout_s": 600,
       "max_retries": 5,
-      "api_key_env": null,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
       "base_url": null,
       "options": {
-        "num_ctx": 4096,
+        "num_ctx": 8192,
         "keep_alive": "30m",
         "seed": 0,
         "base_url": "https://ollama.com",
@@ -243,13 +300,138 @@
         "electricity_mix_zone": null,
         "country_iso_code": "BRA"
       },
-      "pricing": null,
+      "pricing": {
+        "input_per_mtok": 0.07,
+        "output_per_mtok": 0.3,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-27"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cloud-gemma4-31b",
+      "provider": "ollama",
+      "model": "gemma4:31b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": false
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "google_genai",
+        "ecologits_model": "gemma-4-31b-it",
+        "electricity_mix_zone": null,
+        "country_iso_code": "BRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.4,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cloud-gpt-oss-120b",
+      "provider": "ollama",
+      "model": "gpt-oss:120b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": "low"
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "huggingface_hub",
+        "ecologits_model": "openai/gpt-oss-120b",
+        "electricity_mix_zone": null,
+        "country_iso_code": "BRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cloud-deepseek-v4.1-flash",
+      "provider": "ollama",
+      "model": "deepseek-v4.1-flash",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": false
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "mistralai",
+        "ecologits_model": "zai-glm-5-3",
+        "electricity_mix_zone": null,
+        "country_iso_code": "BRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
       "enabled": true
     }
   ],
   "model_versions": {
     "cloud-gpt-oss-20b": [
       "gpt-oss:20b (Ollama Cloud)"
+    ],
+    "cloud-gemma4-31b": [
+      "gemma4:31b (Ollama Cloud)"
+    ],
+    "cloud-gpt-oss-120b": [
+      "gpt-oss:120b (Ollama Cloud)"
+    ],
+    "cloud-deepseek-v4.1-flash": [
+      "deepseek-v4.1-flash (Ollama Cloud)"
     ],
     "cloud-gemma4": [
       "gemma4:31b (Ollama Cloud)"
@@ -275,6 +457,65 @@
         "completion",
         "tools",
         "thinking"
+      ],
+      "show_error": null
+    },
+    "cloud-gemma4-31b": {
+      "model": "gemma4:31b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gemma4:31b",
+        "format": "",
+        "family": "gemma4",
+        "families": null,
+        "parameter_size": "32682372656",
+        "quantization_level": "BF16"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "show_error": null
+    },
+    "cloud-gpt-oss-120b": {
+      "model": "gpt-oss:120b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gpt-oss:120b",
+        "format": "",
+        "family": "gptoss",
+        "families": null,
+        "parameter_size": "116829156672",
+        "quantization_level": "MXFP4"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "show_error": null
+    },
+    "cloud-deepseek-v4.1-flash": {
+      "model": "deepseek-v4.1-flash",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "deepseek-v4.1-flash",
+        "format": "",
+        "family": "deepseek_v41",
+        "families": null,
+        "parameter_size": "763205315794",
+        "quantization_level": "FP8"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
       ],
       "show_error": null
     }
@@ -441,10 +682,20 @@
         "model": "gpt-oss:20b",
         "options": {
           "base_url": "https://ollama.com",
-          "think": "low"
+          "think": "low",
+          "num_ctx": 8192
         },
-        "max_concurrency": 2,
+        "params": {
+          "max_tokens": 4096
+        },
+        "max_concurrency": 3,
         "max_retries": 5,
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.07,
+          "output_per_mtok": 0.3,
+          "as_of": "2026-10-27"
+        },
         "energy": {
           "method": "ecologits",
           "ecologits_provider": "huggingface_hub",
@@ -452,14 +703,49 @@
         }
       },
       {
+        "id": "cloud-gemma4-31b",
+        "model": "gemma4:31b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false,
+          "num_ctx": 8192
+        },
+        "params": {
+          "max_tokens": 4096
+        },
+        "max_concurrency": 3,
+        "max_retries": 5,
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.14,
+          "output_per_mtok": 0.4,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "google_genai",
+          "ecologits_model": "gemma-4-31b-it"
+        }
+      },
+      {
         "id": "cloud-gpt-oss-120b",
         "model": "gpt-oss:120b",
         "options": {
           "base_url": "https://ollama.com",
-          "think": "low"
+          "think": "low",
+          "num_ctx": 8192
         },
-        "max_concurrency": 2,
+        "params": {
+          "max_tokens": 4096
+        },
+        "max_concurrency": 3,
         "max_retries": 5,
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.15,
+          "output_per_mtok": 0.6,
+          "as_of": "2026-10-28"
+        },
         "energy": {
           "method": "ecologits",
           "ecologits_provider": "huggingface_hub",
@@ -467,44 +753,53 @@
         }
       },
       {
-        "id": "cloud-nemotron-3-super",
-        "model": "nemotron-3-super",
+        "id": "cloud-deepseek-v4.1-flash",
+        "model": "deepseek-v4.1-flash",
         "options": {
           "base_url": "https://ollama.com",
-          "think": false
+          "think": false,
+          "num_ctx": 8192
         },
-        "max_concurrency": 2,
-        "max_retries": 5,
-        "energy": {
-          "method": "none"
-        }
-      },
-      {
-        "id": "cloud-glm-5.3-flash",
-        "model": "glm-5.3-flash",
-        "options": {
-          "base_url": "https://ollama.com",
-          "think": false
+        "params": {
+          "max_tokens": 4096
         },
-        "max_concurrency": 2,
+        "max_concurrency": 3,
         "max_retries": 5,
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.3,
+          "output_per_mtok": 1.2,
+          "as_of": "2026-10-28"
+        },
         "energy": {
-          "method": "none"
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "zai-glm-5-3"
         }
       },
       {
         "id": "cloud-mistral-large-3",
         "model": "mistral-large-3:675b",
         "options": {
-          "base_url": "https://ollama.com"
+          "base_url": "https://ollama.com",
+          "num_ctx": 8192
         },
-        "max_concurrency": 2,
+        "params": {
+          "max_tokens": 4096
+        },
         "max_retries": 5,
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.5,
+          "output_per_mtok": 1.5,
+          "as_of": "2026-10-27"
+        },
         "energy": {
           "method": "ecologits",
           "ecologits_provider": "mistralai",
           "ecologits_model": "mistral-large-2512"
-        }
+        },
+        "enabled": false
       },
       {
         "id": "cloud-gemma4",
@@ -537,7 +832,7 @@
       }
     ]
   },
-  "code_version": "unknown (not a git repository)",
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
   "runs": [
     {
       "start": "2026-10-23T12:39:54.128459+00:00",
@@ -585,11 +880,104 @@
           "failures": 0
         }
       }
+    },
+    {
+      "start": "2026-11-11T02:45:36.857160+00:00",
+      "end": "2026-11-11T02:55:32.618081+00:00",
+      "counts": {
+        "ok": 3238,
+        "parse_error": 2
+      },
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 3240,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T02:55:32.908707+00:00",
+      "end": "2026-11-11T03:31:14.147190+00:00",
+      "counts": {
+        "ok": 3173,
+        "parse_error": 49
+      },
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 3222,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T03:31:14.473115+00:00",
+      "end": "2026-11-11T03:48:43.861954+00:00",
+      "counts": {
+        "ok": 3240
+      },
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 3240,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T03:48:44.209241+00:00",
+      "end": "2026-11-11T04:01:51.559474+00:00",
+      "counts": {
+        "ok": 3240
+      },
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 3240,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T04:01:51.996382+00:00",
+      "end": "2026-11-11T04:01:53.429818+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
     }
   ],
   "status_counts": {
-    "ok": 3902,
+    "ok": 16793,
     "truncated": 3,
-    "parse_error": 1
+    "parse_error": 52
   }
 }

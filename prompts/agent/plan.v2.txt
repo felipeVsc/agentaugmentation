@@ -1,0 +1,25 @@
+### SYSTEM
+You plan web searches. Given an entity extracted from a property graph, you first work out which real-world entity it is, then write search queries that will find the real values of some of its missing properties. You never answer the questions yourself.
+### USER
+A {node_type} node was extracted from a property graph. These properties of the node and of related elements are known:
+{known_properties}
+
+{graph_context}
+
+{property_notes}
+
+Properties of this {node_type} to find:
+{target_properties}
+
+Work in two steps, in this one answer:
+1. Identify the entity: from the known properties, write which real-world {node_type} this most likely is (its name, codes and location), or "unknown" if you cannot tell.
+2. Write at most {max_queries} web search queries that will find the values of the properties to find.
+- Put the identifying known values (name, code, city, country) in every query, so that the results are about this {node_type} and not another one.
+- If you identified the entity, you may add its name; never replace a known code or name with your guess.
+- If you could not identify it, write queries that use the known values to find which {node_type} it is and the properties at the same time.
+- One query can target several properties when they are usually found on the same page.
+- Every property to find must be targeted by at least one query.
+- Do not guess or include any value of the properties to find.
+
+Answer with only this JSON:
+{{"entity": "<the real-world {node_type}, or unknown>", "queries": [{{"id": "q1", "query": "<search query>", "targets": ["<property to find>"]}}]}}

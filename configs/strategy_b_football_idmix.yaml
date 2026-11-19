@@ -1,0 +1,86 @@
+# Strategy B on football-v1-ctx-idmix (239 tasks, G = own + context properties), 5 models, 3 repetitions, Ollama web search.
+#   strategy-b check --config configs/strategy_b_football_idmix.yaml
+#   strategy-b run   --config configs/strategy_b_football_idmix.yaml [--models cloud-gpt-oss-20b] [--retry-failed]
+#   or everything, one model at a time: zsh scripts/run_football_b.sh
+# The settings of airports v5 (configs/strategy_b_v5_ctx.yaml): plan v2, the same prompts, models, search
+# (Ollama web search, 30 s between calls, waits up to 6 h on a rate limit) and blocklist (only the authors' GitHub;
+# the dataset's source, fbref.com, is allowed: the agent searches as a real user would).
+
+inputs:
+  tasks: tasks/football/v1_ctx_idmix/tasks.csv   # no property_notes: as Strategy A on football, no property descriptions
+runs_per_task: 3
+output_dir: results/football/v1_ctx_idmix/strategy_b/
+search_cache_dir: results/football/search_cache_ollama/   # shared by all models and variants (and later football sets)
+cache_dir: results/football/strategy_b_cache/   # LLM responses; shared with a later context-off set, whose tasks identical
+                                                # to context on give the same prompts (the key includes run_index)
+# search_max_credits: 3000   # with Ollama, 1 credit = 1 search: caps the searches of one run (plan quota)
+
+search:
+  tool: ollama            # tavily | ollama | mock | "module:Class"
+  api_key_env: OLLAMA_API_KEY
+  timeout_s: 30
+  min_interval_s: 30      # 2026-10-30: pace the API calls (120 searches/h) to stay under the hourly and session limits
+  ranking: embedding      # chunks ranked by cosine similarity to the query (none = first chunks)
+  embed_model: BAAI/bge-small-en-v1.5   # fastembed, ONNX on CPU, deterministic
+  chunk_chars: 500        # Tavily advanced: chunks of at most 500 characters
+  chunks_per_source: 3    # Tavily advanced default
+  max_page_chars: 30000   # only the start of very long pages (whole PDFs) is ranked
+  prefilter_chunks: 12    # embed only the 12 chunks with the best BM25 score per page (95% same top-3, 1.6x faster)
+  embed_cache: results/football/search_cache_ollama/embeddings.sqlite   # chunk embeddings; identical results
+results_per_query: 5
+max_subqueries: 3         # as in the DOLAP runs; |H| = 1 here, so the cap rarely binds
+max_evidence_tokens: 3000
+max_chars_per_result: 1500
+reuse_retrieval: false
+max_rate_limit_wait_s: 21600  # Ollama web search limits (hourly ~300/h, then a "session" limit with Retry-After up to ~2 h+): wait instead of failing
+
+blocked_domains:
+  - github.com/felipeVsc
+
+pfe_tokenizer: cl100k_base
+
+variants:
+  - id: search_evidence                 # evidence only: isolates the effect of search (AGENT_SPEC §5.3)
+    plan: prompts/agent/plan.v2.txt
+    synthesize: prompts/agent/synth.v2.txt
+    synthesis: evidence_only
+
+model_defaults:
+  provider: ollama
+  api_key_env: OLLAMA_API_KEY
+  params: {temperature: 0.7, max_tokens: 4096}   # includes gpt-oss's reasoning tokens
+  max_concurrency: 3   # Ollama Pro: 3 concurrent requests per account, so run one model (and one strategy) at a time
+  timeout_s: 600
+  max_retries: 5
+  energy: {method: none}
+  options: {num_ctx: 16384, keep_alive: 30m, seed: 0}   # evidence makes prompts longer than in Strategy A
+
+models:
+  # Reasoning off for every model that allows it (2026-10-28). gpt-oss cannot turn it off
+  # (`think: false` is ignored), so it runs at the lowest effort, `low`; its reasoning tokens are logged per run.
+  # Energy: EcoLogits; models it does not know use a registered model of similar size (total / active parameters).
+  - id: cloud-gpt-oss-20b               # 21B total, 3.6B active (MoE)
+    model: gpt-oss:20b
+    options: {base_url: "https://ollama.com", think: low}
+    pricing: {input_per_mtok: 0.07, output_per_mtok: 0.3, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-20b}
+  - id: cloud-gpt-oss-120b              # 117B total, 5.1B active (MoE)
+    model: gpt-oss:120b
+    options: {base_url: "https://ollama.com", think: low}
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.6, as_of: "2026-10-28"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-120b}
+  - id: cloud-gemma4-31b               # 31B, dense; replaces nemotron-3-super (2026-10-28): without thinking it
+    model: gemma4:31b                   # wrote its reasoning in the answer, with thinking it was the only model
+    options: {base_url: "https://ollama.com", think: false}   # reasoning at length (~1,240 tokens per run)
+    pricing: {input_per_mtok: 0.14, output_per_mtok: 0.40, as_of: "2026-10-28"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: google_genai, ecologits_model: gemma-4-31b-it}   # the same model
+  - id: cloud-mistral-large-3           # 675B total, 41B active (MoE); no reasoning mode
+    model: mistral-large-3:675b
+    options: {base_url: "https://ollama.com"}
+    pricing: {input_per_mtok: 0.5, output_per_mtok: 1.5, as_of: "2026-10-28"}   # USD per 1M tokens (Ollama Cloud)
+    energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: mistral-large-2512}   # the same model
+  - id: cloud-deepseek-v4.1-flash       # 763B total, ~16B active (MoE); replaces minimax-m3.1-flash (2026-10-28), whose
+    model: deepseek-v4.1-flash          # `low` reasoning was ~1,000 tokens per run; glm-5.3-flash reasoned in its answer
+    options: {base_url: "https://ollama.com", think: false}   # reasoning really off (~12 output tokens per run)
+    pricing: {input_per_mtok: 0.30, output_per_mtok: 1.20, as_of: "2026-10-28"}   # peak rate (upper bound); off-peak, outside 12:00-18:00 UTC on weekdays, is half
+    energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: zai-glm-5-3}   # closest total size: 744B / 40B active

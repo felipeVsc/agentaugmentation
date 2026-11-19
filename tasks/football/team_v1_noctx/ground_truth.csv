@@ -1,0 +1,28 @@
+task_id,prop_key,value,value_type
+8a4202028c3a0f5a,Team.Opponent - Average number of shots per 90 minutes,7.63,float
+3b0039f2a428939d,Team.Opponent - Average number of saves (excluding penalties),115.0,float
+faf8d4d3d5e35db0,Team.Opponent - Average number of unused substitutes,102.0,float
+6e112ef5036892bc,Team.Number of matches fully played by a player,237.0,float
+1b38ed57aa2bd5ac,Team.Opponent - Average number of fouls suffered,391.0,float
+dd7524b1a4e0f37e,Team.Opponent - Average goalkeeper playing time per 90 minutes,34.0,float
+6363df1081a6b28c,Team.Opponent - Average age of players who played,26.8,float
+644c8bc3ffb78046,Team.Number of assists per 90 minutes,0.92,float
+0de650a3fd1c9be9,Team.Number of goals conceded per 90 minutes,1.5,float
+0eb709e3eb17f3ef,Team.Opponent - Average goals + assists per 90 minutes,2.15,float
+a07203ade1f0726c,Team.Opponent - Average number of players used,27,integer
+704fe3f9d1a1411d,Team.Opponent - Average goals + assists while on the pitch,58,integer
+9878067480dcf00d,Team.Opponent - Average losses,10.0,float
+567a5580d0419c17,Team.Number of penalties scored by opponents,2,integer
+409815cf0bb17d2a,Team.Opponent - Average number of goals / shot,0.07,float
+7989ba665b097b0c,Team.Number of second yellow cards received,3,integer
+b0979399a7935b30,Team.Percentage of matches with a clean sheet,17.6,float
+ef30c086552cb052,Team.Opponent - Average shots on target,132.0,float
+5e577360efb07658,Team.Number of shots on target conceded,126.0,float
+10136bc7dc373941,Team.Non-penalty goals,29,integer
+5e8a01b05ed95990,Team.Number of shots on target by the team per 90 minutes,5.06,float
+bf26a75757fc7692,Team.Opponent - Average number of non-penalty goals scored per 90 minutes,1.18,float
+f1c378e126608810,Team.Opponent - Average number of shots on target per 90 minutes,3.59,float
+41916f80e7c4b702,Team.Opponent - Average number of non-penalty goals scored per 90 minutes,1.44,float
+1ef601036f82035c,Team.Opponent - Average number of interceptions,316.0,float
+50b05c4826769cd1,Team.Team name,"""Gil Vicente FC""",string
+a480b027d7a748fb,Team.Opponent - Average number of minutes played / substitute appearance,22.0,float

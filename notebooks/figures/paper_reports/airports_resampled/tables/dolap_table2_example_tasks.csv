@@ -1,0 +1,5 @@
+airport,task,H,G,difficulty (newDiffMeasure)
+UKOH,1862b7189640064c,runways,"country_code (Country), dst, source, type, tz_database_timezone",0.61
+UKOH,07975c97ff6cbf15,icao,country,12.91
+LIBG,40e8332f167b4cde,runways,"cpi (Country), cpi_change (Country), currency_code (Country), labor_participation (Country), commercial_flights",0.61
+LIBG,047c65d4179df1f4,icao,"armed_forces (Country), cpi (Country), cpi_change (Country), gasoline_price (Country), commercial_flights",12.91

@@ -1,0 +1,222 @@
+{
+ "version": "v2",
+ "task_set": "airports-v5-ctx",
+ "seed": 7,
+ "examples": [
+  {
+   "node_id": "VEAT",
+   "node_type": "Airport",
+   "centrality_stratum": "high",
+   "H": [
+    {
+     "prop_key": "Airport.icao",
+     "property_name": "icao",
+     "element_type": "Airport",
+     "path": "Airport"
+    },
+    {
+     "prop_key": "Airport.runways",
+     "property_name": "runways",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.city",
+     "property_name": "city",
+     "element_type": "Airport",
+     "element_id": "VEAT",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Agartala"
+    },
+    {
+     "prop_key": "Airport.timezone",
+     "property_name": "timezone",
+     "element_type": "Airport",
+     "element_id": "VEAT",
+     "path": "Airport",
+     "origin": "node",
+     "value": "5.5"
+    }
+   ],
+   "answers": {
+    "Airport.icao": "VEAT",
+    "Airport.runways": 1.0
+   }
+  },
+  {
+   "node_id": "ZUNP",
+   "node_type": "Airport",
+   "centrality_stratum": "mid",
+   "H": [
+    {
+     "prop_key": "Airport.longitude",
+     "property_name": "longitude",
+     "element_type": "Airport",
+     "path": "Airport"
+    },
+    {
+     "prop_key": "Airport.latitude",
+     "property_name": "latitude",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.iata",
+     "property_name": "iata",
+     "element_type": "Airport",
+     "element_id": "ZUNP",
+     "path": "Airport",
+     "origin": "node",
+     "value": "HZH"
+    },
+    {
+     "prop_key": "Airport.timezone",
+     "property_name": "timezone",
+     "element_type": "Airport",
+     "element_id": "ZUNP",
+     "path": "Airport",
+     "origin": "node",
+     "value": "8"
+    }
+   ],
+   "answers": {
+    "Airport.longitude": 109.1499,
+    "Airport.latitude": 26.32217
+   }
+  },
+  {
+   "node_id": "HLNF",
+   "node_type": "Airport",
+   "centrality_stratum": "low",
+   "H": [
+    {
+     "prop_key": "Airport.timezone",
+     "property_name": "timezone",
+     "element_type": "Airport",
+     "path": "Airport"
+    },
+    {
+     "prop_key": "Airport.city",
+     "property_name": "city",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.icao",
+     "property_name": "icao",
+     "element_type": "Airport",
+     "element_id": "HLNF",
+     "path": "Airport",
+     "origin": "node",
+     "value": "HLNF"
+    },
+    {
+     "prop_key": "Airport.altitude",
+     "property_name": "altitude",
+     "element_type": "Airport",
+     "element_id": "HLNF",
+     "path": "Airport",
+     "origin": "node",
+     "value": 42.0
+    },
+    {
+     "prop_key": "Airport.dst",
+     "property_name": "dst",
+     "element_type": "Airport",
+     "element_id": "HLNF",
+     "path": "Airport",
+     "origin": "node",
+     "value": "N"
+    }
+   ],
+   "answers": {
+    "Airport.timezone": "2",
+    "Airport.city": "Ras Lanouf V 40"
+   }
+  },
+  {
+   "node_id": "VIGR",
+   "node_type": "Airport",
+   "centrality_stratum": "mid",
+   "H": [
+    {
+     "prop_key": "Airport.tz_database_timezone",
+     "property_name": "tz_database_timezone",
+     "element_type": "Airport",
+     "path": "Airport"
+    },
+    {
+     "prop_key": "Airport.dst",
+     "property_name": "dst",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "VIGR",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Gwalior Airport"
+    },
+    {
+     "prop_key": "Airport.latitude",
+     "property_name": "latitude",
+     "element_type": "Airport",
+     "element_id": "VIGR",
+     "path": "Airport",
+     "origin": "node",
+     "value": 26.29330062866211
+    }
+   ],
+   "answers": {
+    "Airport.tz_database_timezone": "Asia/Calcutta",
+    "Airport.dst": "N"
+   }
+  },
+  {
+   "node_id": "GMTT",
+   "node_type": "Airport",
+   "centrality_stratum": "high",
+   "H": [
+    {
+     "prop_key": "Airport.altitude",
+     "property_name": "altitude",
+     "element_type": "Airport",
+     "path": "Airport"
+    },
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.icao",
+     "property_name": "icao",
+     "element_type": "Airport",
+     "element_id": "GMTT",
+     "path": "Airport",
+     "origin": "node",
+     "value": "GMTT"
+    }
+   ],
+   "answers": {
+    "Airport.altitude": 62.0,
+    "Airport.name": "Ibn Batouta Airport"
+   }
+  }
+ ]
+}

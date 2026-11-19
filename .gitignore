@@ -1,0 +1,66 @@
+# Secrets: only the template is shared
+.env
+.env.*
+!.env.example
+
+# Python, tools, OS
+venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# External code (Comparing-Nodes, the context function of [1])
+context_gen/
+
+# Raw per-run logs: up to ~190 MB each, too large for git. Every figure and table is computed from results/*/scored/,
+# results/energy_effort/ and the results.csv files, which stay in git. Share the raw logs separately if needed.
+results/**/runs.jsonl
+results/**/runs.csv
+
+# Caches (LLM responses, web searches, chunk embeddings): ~1.4 GB of small files. They only avoid repeating paid API
+# calls; results do not depend on them.
+results/**/cache/
+results/**/search_cache/
+results/**/search_cache_ollama/
+results/**/strategy_b_cache/
+*.sqlite
+
+# Graph export for sharing (43 MB); regenerate with scripts/export_football_lifted.py
+exports/
+
+# Results of earlier task-set versions, pilots and the incomplete context-off Strategy B run: kept locally, not shared
+results/airports/v2_ctx/
+results/airports/v3_ctx/
+results/airports/v4_ctx/
+results/airports/v5/
+results/airports/v5_noctx/strategy_b*/
+results/football/v1_noctx_idmix/strategy_b*/
+results/football/*/strategy_a_archive_p0.2_allstrata/
+results/football/identifier_test/
+results/airports/dolap2026/strategy_b_smoke/
+results/noctx_b_logs/
+results/*/b_logs/
+results/*/v5_logs/
+
+# Specs, paper drafts and local notes: kept locally, not shared
+docs/*SPEC*.md
+docs/METRICS.md
+docs/PLAN.md
+docs/*.pdf
+docs/PROJECT_CONTEXT_HANDOVER.md
+memory.md
+imgs/
+logs/
+
+# Alternative run configs and scripts that only switch API keys or accounts (credit limits during the runs)
+configs/*_websearch*.yaml
+configs/*_new.yaml
+configs/*part2*.yaml
+scripts/run_football_b_gemma_websearchkey.sh
+scripts/run_football_b_split.sh
+scripts/run_noctx_b_lanes.sh
+scripts/merge_b_lanes.py
+scripts/football_b_failures.py

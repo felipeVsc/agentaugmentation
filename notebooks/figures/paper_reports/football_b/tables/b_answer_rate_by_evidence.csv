@@ -1,0 +1,6 @@
+model,"answer rate, 0–2 items","answer rate, 3–4 items","answer rate, 5–6 items","answer rate, 7+ items"
+gpt-oss:20b,0.0,0.2376,0.2384,0.1852
+gemma4:31b,0.0,0.1591,0.2626,0.6667
+gpt-oss:120b,0.0,0.2441,0.222,0.2809
+mistral-large-3,,0.2368,0.3236,0.2885
+deepseek-v4.1-flash,0.0,0.0795,0.064,0.1429

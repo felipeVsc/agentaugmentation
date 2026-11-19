@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\caption{Strategy A on the 108 resampled airport tasks: F1 and precision (P) of each model and prompt, voted over 3 runs. Bold: each model's best prompt by F1 (A best).}
+\label{tab:strategy-a-prompts}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{gpt-oss:20b} & \multicolumn{2}{c}{gemma4:31b} & \multicolumn{2}{c}{gpt-oss:120b} & \multicolumn{2}{c}{mistral-large-3} & \multicolumn{2}{c}{deepseek-v4.1-flash} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}
+Prompt & F1 & P & F1 & P & F1 & P & F1 & P & F1 & P & Mean F1 \\
+\midrule
+compact & 0.21 & 0.22 & 0.24 & 0.30 & \textbf{0.30} & 0.33 & 0.16 & 0.16 & 0.19 & 0.20 & 0.22 \\
+zero-shot & 0.15 & 0.21 & 0.26 & 0.44 & 0.25 & 0.42 & 0.24 & 0.28 & 0.21 & 0.27 & 0.22 \\
+zero-shot + CoT & 0.21 & 0.27 & \textbf{0.30} & 0.50 & 0.26 & 0.50 & 0.21 & 0.25 & 0.21 & 0.27 & 0.24 \\
+1-shot & 0.20 & 0.27 & 0.23 & 0.40 & 0.21 & 0.38 & 0.23 & 0.24 & 0.25 & 0.31 & 0.22 \\
+1-shot + CoT & 0.18 & 0.25 & 0.23 & 0.40 & 0.25 & 0.47 & 0.26 & 0.29 & 0.27 & 0.36 & 0.24 \\
+3-shot & 0.20 & 0.29 & 0.18 & 0.31 & 0.22 & 0.38 & 0.26 & 0.28 & 0.27 & 0.32 & 0.23 \\
+3-shot + CoT & \textbf{0.22} & 0.31 & 0.20 & 0.33 & 0.27 & 0.48 & \textbf{0.29} & 0.33 & 0.23 & 0.27 & 0.24 \\
+5-shot & 0.21 & 0.29 & 0.23 & 0.40 & 0.23 & 0.40 & 0.26 & 0.27 & 0.20 & 0.23 & 0.23 \\
+5-shot + CoT & 0.22 & 0.30 & 0.23 & 0.39 & 0.20 & 0.39 & 0.26 & 0.29 & \textbf{0.31} & 0.36 & 0.25 \\
+\bottomrule
+\end{tabular}
+\end{table}

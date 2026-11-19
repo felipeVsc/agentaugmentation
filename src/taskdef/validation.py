@@ -28,7 +28,12 @@ def validate_tasks(
     leakage_pairs: LeakagePairs,
     min_substring_len: int,
     g_value=lambda c: c.score,
+    h_value=lambda c: c.popularity,
 ) -> None:
+    """Check a task set before writing it: unique ids, H and G disjoint, leakage pairs not split, strata
+    consistent, one ground-truth value per hidden property, no ground-truth value inside G.
+    Raises TaskSetValidationError with every problem found.
+    """
     errors: list[str] = []
 
     counts = Counter(t.task_id for t in tasks)
@@ -50,7 +55,7 @@ def validate_tasks(
             errors.append(f"{t.task_id}: size_H/size_G do not match H/G")
         if node_q.stratum(t.node_centrality) != t.node_stratum:
             errors.append(f"{t.task_id}: node_stratum does not match the node quartiles")
-        if any(h_q.stratum(c.popularity) != t.H_stratum for c in t.H):
+        if any(h_q.stratum(h_value(c)) != t.H_stratum for c in t.H):
             errors.append(f"{t.task_id}: an H property is outside H_stratum")
         if any(g_q.stratum(g_value(c)) != t.G_stratum for c in t.G):
             errors.append(f"{t.task_id}: a G property is outside G_stratum")

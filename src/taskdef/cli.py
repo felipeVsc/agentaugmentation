@@ -1,4 +1,4 @@
-"""Command line: ``tasks check-connection | snapshot | build --config <file>``."""
+"""Command line: ``tasks check-connection | snapshot | build | check-context --config <file>``."""
 
 from __future__ import annotations
 
@@ -20,6 +20,7 @@ def _load_env(env_file: str) -> None:
 
 
 def cmd_check_connection(args) -> int:
+    """`tasks check-connection`: connect to Neo4j (read only) and list labels and relationship types."""
     from .neo4j_source import check_connection
 
     cfg = load_config(args.config)
@@ -35,6 +36,7 @@ def cmd_check_connection(args) -> int:
 
 
 def cmd_snapshot(args) -> int:
+    """`tasks snapshot`: export the graph snapshot from Neo4j only."""
     from .pipeline import load_snapshot
 
     cfg = load_config(args.config)
@@ -47,6 +49,7 @@ def cmd_snapshot(args) -> int:
 
 
 def cmd_build(args) -> int:
+    """`tasks build`: build a task set (snapshot, centrality, context, popularity, sampling)."""
     from .pipeline import build
 
     cfg = load_config(args.config)
@@ -58,6 +61,34 @@ def cmd_build(args) -> int:
     print(f"  duplicates removed: {report['duplicates_removed']}, zero difficulty: {report['zero_difficulty']}")
     print(f"  nodes available per stratum: {report['nodes_available']}")
     return 0
+
+
+def cmd_check_context(args) -> int:
+    """`tasks check-context`: compare the snapshot's context(n) with the published context script."""
+    import csv
+
+    from .context_neo4j import check_context
+    from .output import write_json
+    from .pipeline import load_snapshot
+
+    logging.getLogger("neo4j").setLevel(logging.ERROR)  # the script's id() calls are deprecated in Neo4j 5
+    cfg = load_config(args.config)
+    graph, _info = load_snapshot(cfg)
+    if args.nodes:
+        node_ids = args.nodes
+    else:
+        with open(Path(cfg.output_dir) / "tasks.csv", newline="", encoding="utf-8") as f:
+            node_ids = sorted({row["node_id"] for row in csv.DictReader(f)})
+    result = check_context(cfg, graph, node_ids)
+    out = Path(cfg.output_dir) / "intermediate" / "context_check.json"
+    write_json(out, result)
+    print(f"many-to-one (script):   {result['many_to_one_script']}")
+    print(f"many-to-one (snapshot): {result['many_to_one_snapshot']}")
+    for node_id, r in result["nodes"].items():
+        status = "ok" if not r["only_script"] and not r["only_snapshot"] else "DIFFERENT"
+        print(f"  {node_id}: script {r['script_properties']}, snapshot {r['snapshot_properties']} properties - {status}")
+    print(f"{'Contexts match' if result['match'] else 'Contexts differ'}; details in {out}")
+    return 0 if result["match"] else 1
 
 
 def _print_published(manifest: dict) -> None:
@@ -75,6 +106,7 @@ def _print_published(manifest: dict) -> None:
 
 
 def cmd_build_published(args) -> int:
+    """`tasks build-published`: build a task set with the published (DOLAP) method."""
     from .published import build_published
 
     cfg = load_config(args.config)
@@ -83,6 +115,7 @@ def cmd_build_published(args) -> int:
 
 
 def cmd_import_published(args) -> int:
+    """`tasks import-published`: import the DOLAP tasks from the published results."""
     from .published import import_published
 
     cfg = load_config(args.config)
@@ -100,6 +133,7 @@ def cmd_import_published(args) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Entry point of the `tasks` command."""
     parser = argparse.ArgumentParser(prog="tasks", description="Build benchmark task sets (TASKDEFINITION_SPEC.md)")
     parser.add_argument("--env-file", default=".env", help="file with NEO4J_* variables (default: .env)")
     parser.add_argument("-v", "--verbose", action="store_true")
@@ -119,6 +153,11 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--refresh-snapshot", action="store_true", help="export from Neo4j even if a snapshot exists")
     p.add_argument("--overwrite", action="store_true", help="replace an existing task set (development only)")
     p.set_defaults(func=cmd_build)
+
+    p = sub.add_parser("check-context", help="compare the snapshot context with findContextOfNode.py on Neo4j")
+    p.add_argument("--config", required=True)
+    p.add_argument("--nodes", nargs="+", help="node ids (default: the nodes of the built task set)")
+    p.set_defaults(func=cmd_check_context)
 
     p = sub.add_parser("build-published", help="draw a task set with the published DOLAP 2026 design")
     p.add_argument("--config", required=True)

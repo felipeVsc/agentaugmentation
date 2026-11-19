@@ -56,7 +56,7 @@ class Neo4jConfig:
 class DatasetConfig:
     name: str
     node_type: str
-    context_max_hops: int = 3
+    context_max_hops: int | None = None  # None: n:1 paths are not limited, as in findContextOfNode.py
     # "neo4j": export a snapshot from Neo4j (or reuse the one in output_dir/intermediate).
     # "snapshot": read an existing snapshot directory (snapshot_dir).
     source: str = "neo4j"
@@ -78,6 +78,9 @@ class CentralityConfig:
     max_iter: int = 200
     tol: float = 1.0e-10
     edge_measure: str = "endpoint_mean"
+    # Per element type: "max" divides by the type's maximum; "percentile" uses the rank within the type
+    # (ties get their average rank, rank / count), so types with different scales become comparable.
+    normalize: str = "max"
 
 
 @dataclass
@@ -94,8 +97,22 @@ class SamplingConfig:
     # How properties are stratified. "popularity": H and G share one partition, the quartiles of pop(p)
     # over the distinct (element type, property) pairs of N ∪ context(N) (the draft's single set of
     # property-score pairs, with H stratified by popularity; TASKDEFINITION_SPEC.md §5.1).
+    # "pop_x_cent": the draft's Algorithm 2: one partition of the property-score pairs
+    # (p, pop(p) * cent_p(e)) over the elements e of N ∪ context(N), for H (score pop(p) * cent(n)) and G.
     # "score": H by pop(p), G by its own quartiles of pop(p) * cent_p(e).
     G_strata_by: str = "popularity"
+    # G holds at least this many properties of n itself (capped at |G|); the rest may come from context.
+    # A G made only of context properties cannot identify n (TASKDEFINITION_SPEC.md open question 12).
+    G_min_own: int = 1
+    # When a drawn node cannot fill a cell (H stratum × G stratum × sizes), draw the next nodes of its centrality
+    # stratum, in the same random order, until one can. False: the cell is skipped for that node (the draft).
+    replace_unusable_nodes: bool = False
+    # When no node of the stratum (drawn or replacement) has an own property in the G stratum, fill G with context
+    # properties only, as a last resort (co-authors' decision of 2026-10-28; ``G_context_fallback`` in tasks.csv).
+    G_context_fallback: bool = False
+    # Also write the matched no-context task set here: for each task, the same node, H, |G| and G stratum, with each
+    # context property of G replaced by an own property of the node (``paired_task_id`` links the two sets).
+    no_context_output_dir: str | None = None
 
     @property
     def H_sizes(self) -> list[int]:
@@ -222,7 +239,7 @@ class TaskDefConfig:
             raise ConfigError("dataset.source must be 'neo4j' or 'snapshot'")
         if self.dataset.source == "snapshot" and not self.dataset.snapshot_dir:
             raise ConfigError("dataset.snapshot_dir is required when dataset.source is 'snapshot'")
-        if self.dataset.context_max_hops < 1:
+        if self.dataset.context_max_hops is not None and self.dataset.context_max_hops < 1:
             raise ConfigError("dataset.context_max_hops must be >= 1")
         if self.centrality.measure not in ("pagerank", "degree"):
             raise ConfigError("centrality.measure must be 'pagerank' or 'degree'")
@@ -233,8 +250,12 @@ class TaskDefConfig:
         for name in ("max_n", "max_H", "max_G"):
             if getattr(self.sampling, name) < 1:
                 raise ConfigError(f"sampling.{name} must be >= 1")
-        if self.sampling.G_strata_by not in ("score", "popularity"):
-            raise ConfigError("sampling.G_strata_by must be 'score' or 'popularity'")
+        if self.sampling.G_strata_by not in ("score", "popularity", "pop_x_cent"):
+            raise ConfigError("sampling.G_strata_by must be 'pop_x_cent', 'popularity' or 'score'")
+        if self.centrality.normalize not in ("max", "percentile"):
+            raise ConfigError("centrality.normalize must be 'max' or 'percentile'")
+        if self.sampling.G_min_own < 0:
+            raise ConfigError("sampling.G_min_own must be >= 0")
         for name in ("sizes_H", "sizes_G"):
             sizes = getattr(self.sampling, name)
             if sizes is not None and (
@@ -264,6 +285,7 @@ def _section(cls, data: Any, name: str):
 
 
 def load_config(path: str | Path) -> TaskDefConfig:
+    """Read and validate a task-definition YAML config."""
     with open(path, encoding="utf-8") as fh:
         raw = yaml.safe_load(fh) or {}
     if not isinstance(raw, dict):

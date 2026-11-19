@@ -1,0 +1,1216 @@
+model,runs,A best prompt,task_id,property,truth,B answer,B,A best answer,A best,A zero-shot answer,A zero-shot,node_id,node_stratum,H_stratum,G_stratum,size_G,n_G_own,n_G_context
+gpt-oss-20b,3,fewcot_3,00d88c04ef3bda41,name,Northern Peninsula Airport,Bamaga,wrong,Adelaide Airport,wrong,Adelaide Airport,wrong,YBAM,mid,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,018c9b09aa202afe,country,Norway,Sweden,wrong,Finland,wrong,,abstained,ENSR,mid,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,02766d961d6cd174,commercial_flights,280,,abstained,,abstained,1490000.0,wrong,LIBG,low,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,02b52a1198c97df2,commercial_flights,3767,,abstained,1989000.0,wrong,,abstained,ESNZ,mid,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,047c65d4179df1f4,icao,LIBG,,abstained,,abstained,LUGA,wrong,LIBG,low,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,04ee095c23556e17,runwaysLength,7218.0,"[1690, 10787, 5587] ft",wrong,2200.0,wrong,,abstained,SBAR,high,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,057429abe37bb1a0,type,airport,Small Airport,wrong,airport,correct,airport,correct,YWWL,low,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,071c93092efc0e8c,commercial_flights,3168,,abstained,121829.5,wrong,231427.0,wrong,LTAY,mid,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,07975c97ff6cbf15,icao,UKOH,,abstained,UA,wrong,UA,wrong,UKOH,low,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,0ad75c2755895136,altitude,62.0,207 ft,wrong,,abstained,,abstained,SEST,high,high,high,5,1,4
+gpt-oss-20b,3,fewcot_3,0d2d73a828b51d72,source,OurAirports,,abstained,,abstained,Eurostat,wrong,ESNZ,mid,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,1150e13e5d4db0ae,runwaysLength,5453.0,3252 m,wrong,,abstained,,abstained,LFOV,low,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,11def8660b3e9832,runways,1.0,1.0,correct,,abstained,,abstained,LIPR,mid,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,1305e9b85a937e13,commercial_flights,136,453000 flights,wrong,,abstained,,abstained,LFOV,low,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,1359bb03395e49db,longitude,142.459,145.755278,wrong,145.755004883,wrong,149.3858524415,wrong,YBAM,mid,high,high,5,2,3
+gpt-oss-20b,3,fewcot_3,1673998d744a9b6f,runways,1.0,"7R/25L, 15/33, 7L/25R",wrong,,abstained,3.0,wrong,PADU,high,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,175e3546baa94139,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,1793984451a58351,runwaysLength,3879.5,"2530, 3962, 2438 m",wrong,"4250,3500",correct,3945.3333333333335,correct,YWWL,low,mid,high,3,3,0
+gpt-oss-20b,3,fewcot_3,1862b7189640064c,runways,1.0,2.0,wrong,2.6666666666666665,wrong,3.0,wrong,UKOH,low,mid,high,5,4,1
+gpt-oss-20b,3,fewcot_3,18744a9fd04b25c9,commercial_flights,402,879.0,wrong,0.0,wrong,,abstained,EGLK,low,low,mid,5,5,0
+gpt-oss-20b,3,fewcot_3,197c52a322ea759d,runwaysWidth,148.0,148 ft,correct,45.0,wrong,50.0,wrong,LIPR,mid,mid,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,19a46fffa88a0297,distCity,10070.299531668838,2.5 km,wrong,,abstained,,abstained,LFQA,low,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,19a6197fe6efcad9,type,airport,airport,correct,airport,correct,,abstained,SBAR,high,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,1b6b1113751b5d44,commercial_flights,3767,51448 flights,wrong,,abstained,1800000.0,wrong,ESNZ,mid,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,1d0a8977a1629882,city,Dinslaken,Berlin,wrong,,abstained,,abstained,EDLD,low,mid,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,1d7ddde3591a40d4,runwaysWidth,138.0,45 m,correct,,abstained,,abstained,UKOH,low,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,1dde1ee1acb6be5d,commercial_flights,5841,22863.0,wrong,4095154.6666666665,wrong,521000.0,wrong,LDPL,high,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,1f0772c6475fdcda,tz_database_timezone,America/Fortaleza,Europe/Paris,wrong,Europe/Paris,wrong,Europe/Paris,wrong,SBAR,high,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,1f26b94f340a6174,runwaysLength,4500.0,6100 ft,wrong,,abstained,,abstained,PADU,high,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,23530a488479364e,latitude,53.900100708,39.01195,wrong,,abstained,39.8283,wrong,PADU,high,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,24588b9fd5cc7825,commercial_flights,5356,2044 flights,wrong,,abstained,37300000.0,wrong,LGSM,high,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,24dc4dc280c4c993,source,OurAirports,User,wrong,,abstained,,abstained,EDLD,low,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,24ff769941c40de9,runwaysLength,4921.0,4000 m,wrong,3600.0,wrong,3450.0,wrong,EDLD,low,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,253aa2e39cb05d44,country,United States,United States,correct,Russia,wrong,Russia,wrong,PADU,high,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,291bec56a6238d05,commercial_flights,0,,abstained,239980.66666666666,wrong,836500.0,wrong,LSMF,low,low,high,5,5,0
+gpt-oss-20b,3,fewcot_3,2a0fa36e77de8da8,distCity,14448566.677822953,10 km,wrong,17000.0,wrong,15000.0,wrong,YBAM,mid,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,2a277cb5b0c4bdc9,runwaysWidth,148.0,45 m,correct,30.0,wrong,45.0,wrong,LDPL,high,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,2aca50309660da2b,runwaysWidth,148.0,45 m,correct,,abstained,,abstained,SBAR,high,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,2b7efc68a2659b20,tz_database_timezone,America/Tortola,Europe/Moscow,wrong,,abstained,,abstained,TUPW,mid,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,2c55bb6f7a9d0c36,commercial_flights,48539,,abstained,104842.66666666667,wrong,433266.6666666667,wrong,LEBB,high,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,2d190cd6441fcdab,dst,E,,abstained,E,correct,,abstained,LIPR,mid,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,2d5c36f848e2bc78,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,2df9d76e6cd9f7f6,runways,1.0,12/30,wrong,,abstained,1.0,correct,LIPR,mid,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,2fca4a55f455826f,distCity,8796.15474899182,9000 m,correct,3600.0,wrong,10500.0,correct,UKOH,low,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,32628949e04d420b,runways,1.0,5462 ft,wrong,,abstained,,abstained,YBAM,mid,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,3324023f5468b67c,country,United States,United States,correct,United States,correct,United States,correct,PADU,high,high,high,5,2,3
+gpt-oss-20b,3,fewcot_3,3599d3d2304bc581,commercial_flights,3168,,abstained,12232.0,wrong,12232.0,wrong,LTAY,mid,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,36cd9d631dafc791,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,37ab84abe6f32772,icao,LFQA,,abstained,,abstained,ESOX,wrong,LFQA,low,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,37c85aac3ed51a89,city,Reims,,abstained,Växjö,wrong,,abstained,LFQA,low,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,39b48228aaf1284c,runways,1.0,8202 × 138 ft,wrong,1.0,correct,800.6666666666666,wrong,UKOH,low,mid,mid,5,2,3
+gpt-oss-20b,3,fewcot_3,3a1c78d73f916a80,source,OurAirports,,abstained,,abstained,OpenFlights,wrong,YWWL,low,high,mid,3,3,0
+gpt-oss-20b,3,fewcot_3,3a9d7851210b5f80,commercial_flights,3168,,abstained,,abstained,15000.0,wrong,LTAY,mid,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,3c345711d9b81f43,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,3e9ac6334bda31d2,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,Santiago,wrong,Saint-Étienne,wrong,SEST,high,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,3eabf7027e340313,name,Northern Peninsula Airport,RAAF Base Amberley,wrong,Amberley,wrong,Amberley,wrong,YBAM,mid,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,40e8332f167b4cde,runways,1.0,"Runway 15/33: 9,186 × 197 ft; Runway 24/06: 4,921 × 148 ft",wrong,1.0,correct,1.0,correct,LIBG,low,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,42e0dce0e45312dc,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,42f6c9da69668486,timezone,-9,-9.0,correct,-9.0,correct,-9.0,correct,PADU,high,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,43e9cf600bd14cda,timezone,-9,-7.5,correct,1.6666666666666667,wrong,1.0,wrong,PADU,high,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,44d2c92191e1681b,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,46aec55fce126803,name,Samos Airport,,abstained,,abstained,Swansea Airport,wrong,LGSM,high,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,47abad7e29ea733e,tz_database_timezone,America/Tortola,America/St_Thomas,wrong,America/Port_of_Spain,wrong,America/Puerto_Rico,wrong,TUPW,mid,high,high,5,1,4
+gpt-oss-20b,3,fewcot_3,488523559e83a6a1,altitude,62.0,62 ft,correct,423.3333333333333,wrong,1378.3333333333333,wrong,SEST,high,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,4a46dfb947826e28,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,4b7ab1f37a4b6bfc,commercial_flights,1937,,abstained,18300000.0,wrong,1400000.0,wrong,LFRZ,low,low,high,3,3,0
+gpt-oss-20b,3,fewcot_3,4c1f1e2dddfb1355,commercial_flights,5841,68584 count,wrong,558973.6666666666,wrong,278000.0,wrong,LDPL,high,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,4e2b211f93f63ac2,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,4e64ef49b878804b,city,Rimini,Sao Paulo,wrong,Tashkent,wrong,,abstained,LIPR,mid,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,4f059e71935e5aa3,city,Rimini,,abstained,Bristol,wrong,Utrecht,wrong,LIPR,mid,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,4f61db667a8b608b,latitude,44.89350128173828,45.743056 degrees,wrong,,abstained,47.0173,wrong,LDPL,high,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,52f4d2bc7ae943e9,commercial_flights,5356,451000.0,wrong,,abstained,,abstained,LGSM,high,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,534a4c12fbf83f0c,iata,TAR,,abstained,,abstained,,abstained,LIBG,low,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,555ce0e3c18330d5,city,West Wyalong,,abstained,,abstained,,abstained,YWWL,low,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,5709a047069b10e5,runwaysWidth,148.0,197 ft,correct,,abstained,,abstained,LIPR,mid,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,575381cbc5d60097,runwaysWidth,66.0,,abstained,35.0,wrong,37.5,wrong,SEST,high,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,5783e554ddcefdaf,commercial_flights,3168,,abstained,4590.0,wrong,,abstained,LTAY,mid,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,57bb12149cb2d370,commercial_flights,48539,,abstained,8527.0,wrong,8527.0,wrong,LEBB,high,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,5959c65c56846bac,source,OurAirports,OpenFlights,wrong,Legacy,wrong,OpenFlights,wrong,LIPR,mid,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,59efaf55f7445f8e,runways,1.0,3.0,wrong,1.0,correct,2.0,wrong,LTAY,mid,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,5accd061b8325ffe,commercial_flights,48539,,abstained,342811.0,wrong,342811.0,wrong,LEBB,high,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,5b50df3658943907,commercial_flights,5356,,abstained,35186.0,wrong,35186.0,wrong,LGSM,high,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,5b64b4ff5498533d,altitude,859.0,13 ft,wrong,,abstained,,abstained,YWWL,low,high,high,5,5,0
+gpt-oss-20b,3,fewcot_3,5bafab6786fc094c,runwaysWidth,98.0,30 m,correct,,abstained,18.0,wrong,EDLD,low,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,5db565bf7cea6cda,runwaysLength,3879.5,"2559 ft, 5200 ft",wrong,1198.3333333333333,wrong,1156.6666666666667,wrong,YWWL,low,mid,high,5,5,0
+gpt-oss-20b,3,fewcot_3,5e5db2a9c95816b9,commercial_flights,3017,,abstained,63373.0,wrong,63373.0,wrong,LIPR,mid,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,5ea9d4094994e820,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,6002536615488533,latitude,53.900100708,40.55390 degrees,wrong,,abstained,,abstained,PADU,high,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,604517a11d5c568a,country,Ukraine,Estonia,wrong,,abstained,Slovenia,wrong,UKOH,low,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,611e83dd38f302c2,commercial_flights,3767,,abstained,,abstained,1500000.0,wrong,ESNZ,mid,low,mid,5,2,3
+gpt-oss-20b,3,fewcot_3,61ad9efa2b5b689d,commercial_flights,5356,,abstained,,abstained,483609.0,wrong,LGSM,high,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,6375e8089be1747d,runwaysLength,3879.5,5200 ft,wrong,1306.6666666666667,wrong,1466.6666666666667,wrong,YWWL,low,mid,mid,3,3,0
+gpt-oss-20b,3,fewcot_3,658a453afb6526ee,commercial_flights,136,49.0,wrong,,abstained,,abstained,LFOV,low,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,677b24d92b6852c9,source,OurAirports,OurAirports,correct,,abstained,Eurostat airport statistics,wrong,LDPL,high,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,68678ce03ce9aedc,runways,1.0,"04/22: 4,997 ft (1,523 m); 15/33: 9,997 ft (3,047 m)",wrong,3382.0,wrong,688.3333333333334,wrong,YBAM,mid,mid,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,68c95271551c448b,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,high,3,1,2
+gpt-oss-20b,3,fewcot_3,68d615c27dcc4ba6,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,high,5,1,4
+gpt-oss-20b,3,fewcot_3,690d2602b54a7326,runwaysWidth,138.0,42 m,correct,40.0,wrong,45.0,wrong,UKOH,low,mid,high,3,3,0
+gpt-oss-20b,3,fewcot_3,69c0415d592230f0,tz_database_timezone,Europe/Rome,Europe/Rome,correct,Europe/Rome,correct,Europe/Rome,correct,LIPR,mid,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,6b925692bbc6eeb6,iata,TAR,,abstained,,abstained,,abstained,LIBG,low,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,6eab58730a15005c,country,Brazil,Iceland,wrong,,abstained,,abstained,SBAR,high,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,6f4e8fed84a51980,source,OurAirports,OurAirports,correct,OurAirports,correct,,abstained,YWWL,low,high,high,3,3,0
+gpt-oss-20b,3,fewcot_3,70b7ae2748e2d635,commercial_flights,1937,,abstained,140000.0,wrong,,abstained,LFRZ,low,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,726ba92985ccced5,country,France,Spain,wrong,,abstained,,abstained,LFQA,low,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,72c65ecc4148395c,runwaysWidth,98.0,46 m,wrong,,abstained,,abstained,EDLD,low,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,739f4c57a3fb3ce6,commercial_flights,5356,5687 flights,correct,160000.0,wrong,41000.0,wrong,LGSM,high,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,740d7a41da771521,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,74595c7842bd2702,commercial_flights,5841,,abstained,238689.0,wrong,238689.0,wrong,LDPL,high,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,75c94df1f8e7c044,iata,VIJ,KTP,wrong,,abstained,MCN,wrong,TUPW,mid,mid,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,788e50d1e05150f4,country,Ukraine,Ukraine,correct,Ukraine,correct,Ukraine,correct,UKOH,low,high,high,5,4,1
+gpt-oss-20b,3,fewcot_3,78d5fa34c478a1b7,country,France,Italy,wrong,,abstained,,abstained,LFOV,low,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,792b7669ff7e222e,runwaysLength,6706.0,,abstained,2500.0,wrong,2240.0,wrong,LGSM,high,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,7b8e0b49350e5f8b,country,Brazil,Brazil,correct,Brazil,correct,Brazil,correct,SBAR,high,high,high,5,1,4
+gpt-oss-20b,3,fewcot_3,7ca73663d32ad809,runwaysWidth,101.0,61 m,wrong,45.0,wrong,,abstained,ESNZ,mid,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,7df1a5e39466884a,commercial_flights,0,,abstained,,abstained,,abstained,LSMF,low,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,7e23310c4c06759f,city,West Wyalong,Melbourne,wrong,Atlanta,wrong,,abstained,YWWL,low,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,7e2ec384a145441c,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,7e9c9117ddcecaa8,runwaysWidth,148.0,45 m,correct,40.0,wrong,40.0,wrong,SBAR,high,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,804b8d6fc48fc662,city,Spanish Town,San Juan,wrong,Pune,wrong,San Juan,wrong,TUPW,mid,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,809b3379829f3567,icao,UKOH,UKOH,correct,UUKR,wrong,UKKK,wrong,UKOH,low,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,8329e70cbe436788,latitude,37.68999862670898,,abstained,41.1322,wrong,,abstained,LGSM,high,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,83c9a51e429b0ead,source,OurAirports,OurAirports,correct,Legacy,wrong,Legacy,wrong,EDLD,low,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,8481c235bd0200d0,distCity,7506.017230666509,,abstained,7500.0,correct,3350.0,wrong,SBAR,high,mid,high,5,1,4
+gpt-oss-20b,3,fewcot_3,84e14e8caf9a0ae0,runwaysWidth,148.0,60 m,correct,45.0,wrong,45.0,wrong,LIPR,mid,mid,high,5,1,4
+gpt-oss-20b,3,fewcot_3,87073059e63c84fd,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,8729549ba7b599d6,dst,E,E,correct,E,correct,E,correct,LIPR,mid,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,874d9908f64bda80,icao,UKOH,UKDR,wrong,ULWW,wrong,UKKK,wrong,UKOH,low,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,88f28528b0d60bf8,commercial_flights,5356,"268,301 flights",wrong,500333.3333333333,wrong,1282666.6666666667,wrong,LGSM,high,low,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,89623d123ebb016d,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,89cf93370f16c670,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,8a8b1d4e9fca4c69,commercial_flights,5356,217400.0,wrong,1901500.0,wrong,,abstained,LGSM,high,low,high,5,1,4
+gpt-oss-20b,3,fewcot_3,8b1518260afa7646,tz_database_timezone,America/Tortola,America/Tortola,correct,Asia/Vientiane,wrong,America/St_Thomas,wrong,TUPW,mid,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,8c1bfb7d2c34b34e,dst,E,,abstained,,abstained,E,correct,LIBG,low,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,8c8d3d5800de3461,commercial_flights,0,,abstained,,abstained,,abstained,LSMF,low,low,high,3,3,0
+gpt-oss-20b,3,fewcot_3,906a58f00773015f,source,OurAirports,,abstained,,abstained,,abstained,LIPR,mid,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,90c69a4b6edbefde,commercial_flights,48539,51448 flights,correct,9397888.666666666,wrong,898566.6666666666,wrong,LEBB,high,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,90e383d8e1029173,distCity,14448566.677822953,,abstained,,abstained,65000.0,wrong,YBAM,mid,mid,mid,3,3,0
+gpt-oss-20b,3,fewcot_3,950d73994e7be07e,tz_database_timezone,Europe/Rome,,abstained,,abstained,,abstained,LIPR,mid,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,95c02d0737fd8405,icao,UKOH,UKOH,correct,URKK,wrong,UKHK,wrong,UKOH,low,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,987c8f4d2b09c1ee,runways,1.0,4500 ft,wrong,1.0,correct,1171.3333333333333,wrong,PADU,high,mid,mid,5,2,3
+gpt-oss-20b,3,fewcot_3,9883056ad976f45f,runways,1.0,3.0,wrong,,abstained,,abstained,LFOV,low,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,9c145b93e28b7a45,iata,VIJ,VIJ,correct,VGD,wrong,VGQ,wrong,TUPW,mid,mid,high,5,1,4
+gpt-oss-20b,3,fewcot_3,9e26f900e1daaa53,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,high,5,1,4
+gpt-oss-20b,3,fewcot_3,9e9ce22beaaae6d4,distCity,7506.017230666509,5 km,wrong,6100.0,correct,9500.0,correct,SBAR,high,mid,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,9f78abeb92a5da4e,commercial_flights,1937,,abstained,,abstained,,abstained,LFRZ,low,low,high,5,5,0
+gpt-oss-20b,3,fewcot_3,9f7aadbc77fa3e56,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,a06f1a9386482f5a,source,OurAirports,,abstained,,abstained,Eurostat,wrong,LIPR,mid,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,a1cdcf413fb07b71,commercial_flights,1937,,abstained,40500.0,wrong,,abstained,LFRZ,low,low,mid,5,5,0
+gpt-oss-20b,3,fewcot_3,a2f362c1523c8087,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,a325d4df1fd44b66,runways,1.0,1.0,correct,1.0,correct,,abstained,LTAY,mid,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,a3d55f98abf0bca4,runways,1.0,Runway 11/29: 8020 x 148 ft; Runway 18/36: 8174 x 197 ft,wrong,1.0,correct,1.0,correct,ENSR,mid,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,a42b3a1d5f39d335,commercial_flights,1937,,abstained,,abstained,27000.0,wrong,LFRZ,low,low,mid,3,3,0
+gpt-oss-20b,3,fewcot_3,a4b322be7d79d185,runwaysLength,4921.0,1500 m,correct,3102.5,wrong,3000.0,wrong,EDLD,low,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,a56fa21bbb756d0f,tz_database_timezone,Europe/Paris,,abstained,,abstained,,abstained,LFRZ,low,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,a60e21be305e884d,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,a74eb8b98496990e,icao,YBAM,TQPF,wrong,,abstained,,abstained,YBAM,mid,high,mid,3,2,1
+gpt-oss-20b,3,fewcot_3,a9a5ab0ef3ac173e,runways,1.0,,abstained,406.0,wrong,"Approximately 1,500 runways in Australia (based on the number of airports and typical runway count per airport)",wrong,YBAM,mid,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,a9a946b80d81da96,longitude,6.865278,13.2877 degrees,wrong,8.5622,wrong,8.5955°E,wrong,EDLD,low,high,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,aa24de5f407711d4,altitude,138.0,14 ft,wrong,,abstained,746.0,wrong,LEBB,high,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,ab34b0e9ba18e71f,commercial_flights,48539,453000 number,wrong,,abstained,,abstained,LEBB,high,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,ab447910c9128b49,icao,YBAM,YBCG,wrong,,abstained,MGB,wrong,YBAM,mid,high,high,3,3,0
+gpt-oss-20b,3,fewcot_3,abdbc64108d74104,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,ad198b9901ccf9e0,commercial_flights,280,,abstained,2057234.0,wrong,1250000.0,wrong,LIBG,low,low,high,5,2,3
+gpt-oss-20b,3,fewcot_3,af37720cc9e1baa8,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,af9b404341a8f59f,iata,SNR,GRZ,wrong,BRE,wrong,,abstained,LFRZ,low,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,b08fa90bd27bfd17,commercial_flights,1937,1649 flights,correct,,abstained,0.0,wrong,LFRZ,low,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,b0f1d6239366f457,icao,SEST,,abstained,,abstained,,abstained,SEST,high,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,b1ffcf47ce531097,runways,1.0,"06/24 9,840 ft (2,999 m)",wrong,1.0,correct,"10/28 (2,800 m), 16/34 (1,500 m)",wrong,PADU,high,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,b2f03aa443cbc88e,city,Dinslaken,Hünxe,wrong,,abstained,Schönebeck,wrong,EDLD,low,mid,high,5,4,1
+gpt-oss-20b,3,fewcot_3,b30b70504aa05d8a,tz_database_timezone,America/Tortola,America/New_York,wrong,,abstained,,abstained,TUPW,mid,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,b506bd1f8371e5d1,commercial_flights,48539,50331.0,correct,,abstained,50331.0,correct,LEBB,high,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,b5dd97c6e89433ba,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,b6f38b6bbbd6c643,type,airport,medium airport,wrong,airport,correct,airport,correct,YWWL,low,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,b860deb662188eb3,type,airport,airport,correct,airport,correct,,abstained,EDLD,low,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,b8d6e0cc7416f053,distCity,1880.9420239134909,12 km,wrong,,abstained,,abstained,LSMF,low,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,bb39bb6750619d00,runwaysLength,7398.0,3800 m,wrong,,abstained,,abstained,LEBB,high,mid,low,5,1,4
+gpt-oss-20b,3,fewcot_3,bcbccfea14ce6d9e,commercial_flights,5841,,abstained,353400.6666666667,wrong,436811.0,wrong,LDPL,high,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,bcc35c16ec536415,altitude,859.0,859 ft,correct,460.3333333333333,wrong,385.8,wrong,YWWL,low,high,mid,5,5,0
+gpt-oss-20b,3,fewcot_3,bdb1deb25c08a76e,runwaysLength,3879.5,1585 m,wrong,1219.0,wrong,1350.0,wrong,YWWL,low,mid,mid,5,5,0
+gpt-oss-20b,3,fewcot_3,be5212696ad571cc,timezone,-6,-5.0,correct,9.0,wrong,3.0,wrong,SEST,high,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,bf4d3ba357b12954,commercial_flights,3017,,abstained,251945.0,wrong,531500.0,wrong,LIPR,mid,low,high,5,1,4
+gpt-oss-20b,3,fewcot_3,bf9866dc7896c660,timezone,-4,-5.0,correct,,abstained,,abstained,TUPW,mid,high,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,c0293d15521c3d76,runwaysWidth,66.0,50 ft,correct,37.5,wrong,37.5,wrong,SEST,high,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,c1ad55428099bc8e,tz_database_timezone,America/Fortaleza,Africa/Sao_Tome,wrong,America/Sao_Paulo,wrong,America/Sao_Paulo,wrong,SBAR,high,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,c2bdaa77866c4a36,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,high,5,1,4
+gpt-oss-20b,3,fewcot_3,c37478e2a709ca5f,commercial_flights,0,453000 number,wrong,,abstained,,abstained,LSMF,low,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,c3932857c60d6ddc,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,c4f6617e86fa4350,longitude,29.7012996674,,abstained,,abstained,-5.805400000000001,wrong,LTAY,mid,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,c80d8524a445ba94,commercial_flights,3767,,abstained,27107.0,wrong,27107.0,wrong,ESNZ,mid,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,c921b3b0221ca7ff,city,Rimini,,abstained,,abstained,,abstained,LIPR,mid,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,c9feb55120d967a3,commercial_flights,3767,,abstained,214000.0,wrong,253000.0,wrong,ESNZ,mid,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,cb30ecfd9762cb9e,longitude,29.7012996674,,abstained,,abstained,,abstained,LTAY,mid,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,cbea0a3196fc723d,timezone,-6,-5.0,correct,-5.0,correct,-5.0,correct,SEST,high,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,cbed7541cf8fe34b,commercial_flights,5356,6943.0,correct,,abstained,,abstained,LGSM,high,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,cc7e42c7b6d8c9d4,source,OurAirports,,abstained,OurAirports,correct,OpenFlights,wrong,ESNZ,mid,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,cd3f12b0d61e0127,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,cf071bcdc01c34c4,commercial_flights,5356,227477.5,wrong,2439666.6666666665,wrong,6210573.666666667,wrong,LGSM,high,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,cf25533f5fbb016c,timezone,-4,,abstained,,abstained,,abstained,TUPW,mid,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,d0f3a69d4cd32cb0,latitude,40.517502,,abstained,,abstained,,abstained,LIBG,low,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,d156060d44b6e457,tz_database_timezone,Europe/Rome,,abstained,Europe/Nicosia,wrong,,abstained,LIPR,mid,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,d2d11794b4e69682,runwaysLength,7218.0,3200 m,wrong,,abstained,,abstained,SBAR,high,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,d35bdffeed699d78,runways,1.0,"01/19: 5,252 × 150 ft; 10/28: 5,000 × 150 ft",correct,,abstained,,abstained,PADU,high,mid,high,5,2,3
+gpt-oss-20b,3,fewcot_3,d3861ced1129772e,commercial_flights,280,129278.0,wrong,,abstained,3222000.0,wrong,LIBG,low,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,d3acf54d0de77869,altitude,138.0,,abstained,506.5,wrong,12 meters,wrong,LEBB,high,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,d54e83aeef2408da,commercial_flights,5841,,abstained,4800000.0,wrong,,abstained,LDPL,high,low,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,d5c66bf26f69666f,runwaysWidth,148.0,75 ft,wrong,,abstained,,abstained,LDPL,high,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,d8d13eb74868a313,runwaysLength,4500.0,4500 ft,correct,1524.0,wrong,1386.5,wrong,PADU,high,mid,high,3,1,2
+gpt-oss-20b,3,fewcot_3,d9fc84501a7c6421,longitude,6.865278,6.865278 degrees,correct,12.247551333333334,wrong,13.404927,wrong,EDLD,low,high,high,5,3,2
+gpt-oss-20b,3,fewcot_3,da4f63bb8b1b0500,runwaysWidth,148.0,,abstained,45.0,wrong,1036 m,wrong,LEBB,high,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,db2629977951430b,distCity,9434.15362332344,6020 m,wrong,,abstained,,abstained,LGSM,high,mid,low,1,1,0
+gpt-oss-20b,3,fewcot_3,dc3808847e176d18,latitude,44.89350128173828,,abstained,49.2255,wrong,"42.6788°N, 23.3302°E",wrong,LDPL,high,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,ded98c8fcbfec46c,distCity,2158896.099702787,,abstained,,abstained,,abstained,SEST,high,mid,high,5,1,4
+gpt-oss-20b,3,fewcot_3,e09f91c9d4b43c4a,distCity,8796.15474899182,15 km,wrong,10000.0,correct,35000.0,wrong,UKOH,low,mid,high,1,1,0
+gpt-oss-20b,3,fewcot_3,e15aa3e57a386321,runwaysLength,7398.0,2825 m,correct,,abstained,2686.5,wrong,LEBB,high,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,e1da6199bca3c4e7,icao,LEBB,,abstained,LFTI,wrong,LIPV,wrong,LEBB,high,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,e23a2ea7891a5725,city,Spanish Town,,abstained,,abstained,,abstained,TUPW,mid,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,e577242a8b459a82,type,airport,Defunct,wrong,airport,correct,airport,correct,EDLD,low,high,high,1,1,0
+gpt-oss-20b,3,fewcot_3,e59b67580986a154,city,San Cristóbal,Christiansted,wrong,Jaffna,wrong,Sedona,wrong,SEST,high,mid,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,e5bd8ea9d2f77823,longitude,142.459,142.45 degrees,correct,-79.3101,wrong,115.777°E,wrong,YBAM,mid,high,mid,5,2,3
+gpt-oss-20b,3,fewcot_3,e6e7b5fe60710cfd,commercial_flights,3767,,abstained,2400000.0,wrong,8183333.333333333,wrong,ESNZ,mid,low,high,5,1,4
+gpt-oss-20b,3,fewcot_3,e736ea68bfc10ded,name,Samos Airport,Ljubljana Jože Pučnik Airport,wrong,,abstained,Bari Airport,wrong,LGSM,high,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,e7ec7ea5bd05ac2c,runwaysLength,6706.0,3718 m,wrong,,abstained,,abstained,LGSM,high,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,e989fca502c19da1,distCity,2158896.099702787,5000 m,wrong,,abstained,,abstained,SEST,high,mid,mid,5,1,4
+gpt-oss-20b,3,fewcot_3,ef0fc6eb6b7d600f,dst,E,,abstained,E,correct,E,correct,LIPR,mid,high,high,5,1,4
+gpt-oss-20b,3,fewcot_3,ef4ed149f3e5e2ad,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,3,0,3
+gpt-oss-20b,3,fewcot_3,f0b4477b6048c94d,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,f0e699299c320551,type,airport,airport,correct,airport,correct,airport,correct,SBAR,high,high,high,3,1,2
+gpt-oss-20b,3,fewcot_3,f14b8a26a69520b7,commercial_flights,280,,abstained,106500.0,wrong,2239000.0,wrong,LIBG,low,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,f173fd27d06956a8,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,f2c592d0b19f3de7,runways,1.0,,abstained,1.0,correct,,abstained,YBAM,mid,mid,high,5,1,4
+gpt-oss-20b,3,fewcot_3,f2ecaf039d3ae208,commercial_flights,3168,231427.0,wrong,231427.0,wrong,231427.0,wrong,LTAY,mid,low,low,1,0,1
+gpt-oss-20b,3,fewcot_3,f2fe343c50294942,longitude,9.06482982635498,,abstained,,abstained,,abstained,LSMF,low,high,low,1,1,0
+gpt-oss-20b,3,fewcot_3,f3c44cf9d11c921b,latitude,48.03139877319336,45.8275 °,wrong,46.0309,wrong,,abstained,LFOV,low,high,low,3,1,2
+gpt-oss-20b,3,fewcot_3,f56fbd2914f87106,runways,1.0,10663.0 ft,wrong,2.0,wrong,,abstained,LIPR,mid,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,f73a423ce34494de,icao,SEST,MMRX,wrong,ZBSB,wrong,,abstained,SEST,high,high,mid,1,1,0
+gpt-oss-20b,3,fewcot_3,fad28c7ac309e584,runwaysLength,9678.0,2874 m,correct,2500.0,wrong,2600.0,wrong,LDPL,high,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,fc4b4f742793259f,city,Östersund,Frankfurt,wrong,,abstained,,abstained,ESNZ,mid,mid,low,3,1,2
+gpt-oss-20b,3,fewcot_3,fc62d245c20717dc,commercial_flights,402,879.0,wrong,0.0,wrong,,abstained,EGLK,low,low,mid,3,3,0
+gpt-oss-20b,3,fewcot_3,fd49c6094acb8389,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,mid,3,1,2
+gpt-oss-20b,3,fewcot_3,fd9df196bf041a56,commercial_flights,3017,22863 flights,wrong,121594.0,wrong,121594.0,wrong,LIPR,mid,low,low,5,0,5
+gpt-oss-20b,3,fewcot_3,fe80f42a3df17a3e,commercial_flights,3017,,abstained,214000.0,wrong,253000.0,wrong,LIPR,mid,low,high,1,1,0
+gpt-oss-20b,3,fewcot_3,fe96f2b87a0aa0f2,country,Turkey,Oman,wrong,,abstained,France,wrong,LTAY,mid,high,low,5,1,4
+gpt-oss-20b,3,fewcot_3,feeb99f716638c26,runways,1.0,,abstained,1.0,correct,,abstained,LTAY,mid,mid,low,1,1,0
+gemma4-31b,3,zerocot,00d88c04ef3bda41,name,Northern Peninsula Airport,Bamaga Injinoo Airport,wrong,Bamford Airport,wrong,Bamford Airport,wrong,YBAM,mid,high,high,1,1,0
+gemma4-31b,3,zerocot,018c9b09aa202afe,country,Norway,,abstained,,abstained,,abstained,ENSR,mid,high,low,5,1,4
+gemma4-31b,3,zerocot,02766d961d6cd174,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,1,1,0
+gemma4-31b,3,zerocot,02b52a1198c97df2,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,mid,3,1,2
+gemma4-31b,3,zerocot,047c65d4179df1f4,icao,LIBG,,abstained,,abstained,,abstained,LIBG,low,high,low,5,1,4
+gemma4-31b,3,zerocot,04ee095c23556e17,runwaysLength,7218.0,,abstained,,abstained,,abstained,SBAR,high,mid,high,1,1,0
+gemma4-31b,3,zerocot,057429abe37bb1a0,type,airport,,abstained,airport,correct,airport,correct,YWWL,low,high,mid,1,1,0
+gemma4-31b,3,zerocot,071c93092efc0e8c,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,low,5,0,5
+gemma4-31b,3,zerocot,07975c97ff6cbf15,icao,UKOH,,abstained,UK,wrong,UK,wrong,UKOH,low,high,high,1,1,0
+gemma4-31b,3,zerocot,0ad75c2755895136,altitude,62.0,207 ft,wrong,,abstained,0.0,wrong,SEST,high,high,high,5,1,4
+gemma4-31b,3,zerocot,0d2d73a828b51d72,source,OurAirports,,abstained,,abstained,,abstained,ESNZ,mid,high,low,1,1,0
+gemma4-31b,3,zerocot,1150e13e5d4db0ae,runwaysLength,5453.0,,abstained,,abstained,,abstained,LFOV,low,mid,low,3,1,2
+gemma4-31b,3,zerocot,11def8660b3e9832,runways,1.0,,abstained,1.0,correct,1.0,correct,LIPR,mid,mid,low,3,1,2
+gemma4-31b,3,zerocot,1305e9b85a937e13,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,5,0,5
+gemma4-31b,3,zerocot,1359bb03395e49db,longitude,142.459,,abstained,145.755004883,wrong,145.755004883,wrong,YBAM,mid,high,high,5,2,3
+gemma4-31b,3,zerocot,1673998d744a9b6f,runways,1.0,,abstained,,abstained,,abstained,PADU,high,mid,high,1,1,0
+gemma4-31b,3,zerocot,175e3546baa94139,commercial_flights,3168,"7,048 Movements",wrong,,abstained,,abstained,LTAY,mid,low,mid,5,1,4
+gemma4-31b,3,zerocot,1793984451a58351,runwaysLength,3879.5,"2286, 3657 m",wrong,2886.0,wrong,3605.3333333333335,correct,YWWL,low,mid,high,3,3,0
+gemma4-31b,3,zerocot,1862b7189640064c,runways,1.0,8/26,wrong,1.0,correct,1x3000m,wrong,UKOH,low,mid,high,5,4,1
+gemma4-31b,3,zerocot,18744a9fd04b25c9,commercial_flights,402,879 commercial movements,wrong,,abstained,,abstained,EGLK,low,low,mid,5,5,0
+gemma4-31b,3,zerocot,197c52a322ea759d,runwaysWidth,148.0,148 ft,correct,,abstained,,abstained,LIPR,mid,mid,mid,5,1,4
+gemma4-31b,3,zerocot,19a46fffa88a0297,distCity,10070.299531668838,,abstained,,abstained,,abstained,LFQA,low,mid,low,3,1,2
+gemma4-31b,3,zerocot,19a6197fe6efcad9,type,airport,medium airport,wrong,airport,correct,airport,correct,SBAR,high,high,mid,3,1,2
+gemma4-31b,3,zerocot,1b6b1113751b5d44,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,mid,1,1,0
+gemma4-31b,3,zerocot,1d0a8977a1629882,city,Dinslaken,Berlin,wrong,,abstained,Berlin,wrong,EDLD,low,mid,mid,5,1,4
+gemma4-31b,3,zerocot,1d7ddde3591a40d4,runwaysWidth,138.0,,abstained,,abstained,,abstained,UKOH,low,mid,mid,3,1,2
+gemma4-31b,3,zerocot,1dde1ee1acb6be5d,commercial_flights,5841,,abstained,53289.333333333336,wrong,109198.33333333333,wrong,LDPL,high,low,high,3,1,2
+gemma4-31b,3,zerocot,1f0772c6475fdcda,tz_database_timezone,America/Fortaleza,America/Chicago,wrong,America/Argentina/Buenos_Aires,wrong,America/Mazatlan,wrong,SBAR,high,high,mid,1,1,0
+gemma4-31b,3,zerocot,1f26b94f340a6174,runwaysLength,4500.0,,abstained,,abstained,,abstained,PADU,high,mid,mid,3,1,2
+gemma4-31b,3,zerocot,23530a488479364e,latitude,53.900100708,,abstained,,abstained,,abstained,PADU,high,high,high,1,1,0
+gemma4-31b,3,zerocot,24588b9fd5cc7825,commercial_flights,5356,484 000 flights,wrong,269214.0,wrong,220338.0,wrong,LGSM,high,low,high,3,1,2
+gemma4-31b,3,zerocot,24dc4dc280c4c993,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,EDLD,low,high,mid,3,1,2
+gemma4-31b,3,zerocot,24ff769941c40de9,runwaysLength,4921.0,"3,800; 2,340; 780 m",wrong,,abstained,,abstained,EDLD,low,mid,mid,3,1,2
+gemma4-31b,3,zerocot,253aa2e39cb05d44,country,United States,United States,correct,Russia,wrong,Russia,wrong,PADU,high,high,mid,5,1,4
+gemma4-31b,3,zerocot,291bec56a6238d05,commercial_flights,0,,abstained,0.0,correct,0.0,correct,LSMF,low,low,high,5,5,0
+gemma4-31b,3,zerocot,2a0fa36e77de8da8,distCity,14448566.677822953,,abstained,15000.0,wrong,13000.0,wrong,YBAM,mid,mid,high,3,1,2
+gemma4-31b,3,zerocot,2a277cb5b0c4bdc9,runwaysWidth,148.0,45 m,correct,,abstained,,abstained,LDPL,high,mid,low,5,1,4
+gemma4-31b,3,zerocot,2aca50309660da2b,runwaysWidth,148.0,,abstained,,abstained,,abstained,SBAR,high,mid,mid,3,1,2
+gemma4-31b,3,zerocot,2b7efc68a2659b20,tz_database_timezone,America/Tortola,,abstained,,abstained,,abstained,TUPW,mid,high,mid,1,1,0
+gemma4-31b,3,zerocot,2c55bb6f7a9d0c36,commercial_flights,48539,,abstained,150050.0,wrong,132432.33333333334,wrong,LEBB,high,low,high,3,1,2
+gemma4-31b,3,zerocot,2d190cd6441fcdab,dst,E,,abstained,,abstained,,abstained,LIPR,mid,high,low,5,1,4
+gemma4-31b,3,zerocot,2d5c36f848e2bc78,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,5,1,4
+gemma4-31b,3,zerocot,2df9d76e6cd9f7f6,runways,1.0,,abstained,1.0,correct,1.0,correct,LIPR,mid,mid,high,3,1,2
+gemma4-31b,3,zerocot,2fca4a55f455826f,distCity,8796.15474899182,,abstained,,abstained,,abstained,UKOH,low,mid,mid,1,1,0
+gemma4-31b,3,zerocot,32628949e04d420b,runways,1.0,5462 ft,wrong,1.0,correct,1.0,correct,YBAM,mid,mid,mid,1,1,0
+gemma4-31b,3,zerocot,3324023f5468b67c,country,United States,United States,correct,United States,correct,United States,correct,PADU,high,high,high,5,2,3
+gemma4-31b,3,zerocot,3599d3d2304bc581,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,low,3,0,3
+gemma4-31b,3,zerocot,36cd9d631dafc791,city,Spanish Town,Carolina,wrong,San Juan,wrong,,abstained,TUPW,mid,mid,high,3,1,2
+gemma4-31b,3,zerocot,37ab84abe6f32772,icao,LFQA,,abstained,,abstained,,abstained,LFQA,low,high,low,3,1,2
+gemma4-31b,3,zerocot,37c85aac3ed51a89,city,Reims,Skopje,wrong,,abstained,,abstained,LFQA,low,mid,low,5,1,4
+gemma4-31b,3,zerocot,39b48228aaf1284c,runways,1.0,"8,202 x 138 ft",wrong,1.0,correct,,abstained,UKOH,low,mid,mid,5,2,3
+gemma4-31b,3,zerocot,3a1c78d73f916a80,source,OurAirports,,abstained,OurAirports,correct,,abstained,YWWL,low,high,mid,3,3,0
+gemma4-31b,3,zerocot,3a9d7851210b5f80,commercial_flights,3168,"7,048 movements",wrong,10935.666666666666,wrong,0.0,wrong,LTAY,mid,low,mid,1,1,0
+gemma4-31b,3,zerocot,3c345711d9b81f43,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,high,3,1,2
+gemma4-31b,3,zerocot,3e9ac6334bda31d2,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,Stockholm,wrong,Stockholm,wrong,SEST,high,mid,high,1,1,0
+gemma4-31b,3,zerocot,3eabf7027e340313,name,Northern Peninsula Airport,RAAF Base Amberley,wrong,Amberley,wrong,Amberley,wrong,YBAM,mid,high,mid,1,1,0
+gemma4-31b,3,zerocot,40e8332f167b4cde,runways,1.0,,abstained,1.0,correct,,abstained,LIBG,low,mid,low,5,1,4
+gemma4-31b,3,zerocot,42e0dce0e45312dc,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,high,3,1,2
+gemma4-31b,3,zerocot,42f6c9da69668486,timezone,-9,,abstained,12.0,wrong,12.0,wrong,PADU,high,high,mid,3,1,2
+gemma4-31b,3,zerocot,43e9cf600bd14cda,timezone,-9,,abstained,,abstained,1.0,wrong,PADU,high,high,high,3,1,2
+gemma4-31b,3,zerocot,44d2c92191e1681b,commercial_flights,280,476 movimenti,wrong,343342.0,wrong,38400800.0,wrong,LIBG,low,low,high,3,1,2
+gemma4-31b,3,zerocot,46aec55fce126803,name,Samos Airport,,abstained,Lanzarote Airport,wrong,Kalamata International Airport,wrong,LGSM,high,high,low,1,1,0
+gemma4-31b,3,zerocot,47abad7e29ea733e,tz_database_timezone,America/Tortola,,abstained,America/ St_Johns,wrong,America/St_Johns,wrong,TUPW,mid,high,high,5,1,4
+gemma4-31b,3,zerocot,488523559e83a6a1,altitude,62.0,62 ft,correct,450 m,wrong,2240 m,wrong,SEST,high,high,mid,5,1,4
+gemma4-31b,3,zerocot,4a46dfb947826e28,commercial_flights,41,"5,400 flights per year",wrong,,abstained,,abstained,LFQA,low,low,low,3,0,3
+gemma4-31b,3,zerocot,4b7ab1f37a4b6bfc,commercial_flights,1937,,abstained,,abstained,,abstained,LFRZ,low,low,high,3,3,0
+gemma4-31b,3,zerocot,4c1f1e2dddfb1355,commercial_flights,5841,,abstained,109912.33333333333,wrong,121130.33333333333,wrong,LDPL,high,low,high,1,1,0
+gemma4-31b,3,zerocot,4e2b211f93f63ac2,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,mid,1,1,0
+gemma4-31b,3,zerocot,4e64ef49b878804b,city,Rimini,,abstained,,abstained,,abstained,LIPR,mid,mid,mid,1,1,0
+gemma4-31b,3,zerocot,4f059e71935e5aa3,city,Rimini,,abstained,Zadar,wrong,Brussels,wrong,LIPR,mid,mid,low,1,1,0
+gemma4-31b,3,zerocot,4f61db667a8b608b,latitude,44.89350128173828,45.742931,wrong,45.815,wrong,45.815,wrong,LDPL,high,high,low,5,1,4
+gemma4-31b,3,zerocot,52f4d2bc7ae943e9,commercial_flights,5356,,abstained,,abstained,,abstained,LGSM,high,low,low,1,0,1
+gemma4-31b,3,zerocot,534a4c12fbf83f0c,iata,TAR,,abstained,,abstained,,abstained,LIBG,low,mid,low,1,1,0
+gemma4-31b,3,zerocot,555ce0e3c18330d5,city,West Wyalong,,abstained,,abstained,,abstained,YWWL,low,mid,high,1,1,0
+gemma4-31b,3,zerocot,5709a047069b10e5,runwaysWidth,148.0,,abstained,,abstained,,abstained,LIPR,mid,mid,low,5,1,4
+gemma4-31b,3,zerocot,575381cbc5d60097,runwaysWidth,66.0,144-148 ft,wrong,45.0,wrong,45.0,wrong,SEST,high,mid,high,3,1,2
+gemma4-31b,3,zerocot,5783e554ddcefdaf,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,mid,3,1,2
+gemma4-31b,3,zerocot,57bb12149cb2d370,commercial_flights,48539,,abstained,8527.0,wrong,,abstained,LEBB,high,low,low,1,0,1
+gemma4-31b,3,zerocot,5959c65c56846bac,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,LIPR,mid,high,mid,3,1,2
+gemma4-31b,3,zerocot,59efaf55f7445f8e,runways,1.0,,abstained,1.0,correct,1.0,correct,LTAY,mid,mid,low,5,1,4
+gemma4-31b,3,zerocot,5accd061b8325ffe,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,low,3,0,3
+gemma4-31b,3,zerocot,5b50df3658943907,commercial_flights,5356,,abstained,,abstained,,abstained,LGSM,high,low,low,3,0,3
+gemma4-31b,3,zerocot,5b64b4ff5498533d,altitude,859.0,859 ft,correct,105.33333333333333,wrong,110.0,wrong,YWWL,low,high,high,5,5,0
+gemma4-31b,3,zerocot,5bafab6786fc094c,runwaysWidth,98.0,30 m,correct,,abstained,,abstained,EDLD,low,mid,mid,1,1,0
+gemma4-31b,3,zerocot,5db565bf7cea6cda,runwaysLength,3879.5,"1585, 780 m",wrong,1237.3333333333333,wrong,1237.3333333333333,wrong,YWWL,low,mid,high,5,5,0
+gemma4-31b,3,zerocot,5e5db2a9c95816b9,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,low,3,0,3
+gemma4-31b,3,zerocot,5ea9d4094994e820,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,1,0,1
+gemma4-31b,3,zerocot,6002536615488533,latitude,53.900100708,,abstained,,abstained,,abstained,PADU,high,high,mid,1,1,0
+gemma4-31b,3,zerocot,604517a11d5c568a,country,Ukraine,Ukraine,correct,France,wrong,Albania,wrong,UKOH,low,high,mid,5,1,4
+gemma4-31b,3,zerocot,611e83dd38f302c2,commercial_flights,3767,2.712 vols commerciaux - décollages et atterrissages,wrong,13397.0,wrong,45510.666666666664,wrong,ESNZ,mid,low,mid,5,2,3
+gemma4-31b,3,zerocot,61ad9efa2b5b689d,commercial_flights,5356,,abstained,483609.0,wrong,,abstained,LGSM,high,low,low,5,0,5
+gemma4-31b,3,zerocot,6375e8089be1747d,runwaysLength,3879.5,"2559, 5200 ft",wrong,1100m,correct,1200.0,wrong,YWWL,low,mid,mid,3,3,0
+gemma4-31b,3,zerocot,658a453afb6526ee,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,3,0,3
+gemma4-31b,3,zerocot,677b24d92b6852c9,source,OurAirports,,abstained,,abstained,,abstained,LDPL,high,high,low,3,1,2
+gemma4-31b,3,zerocot,68678ce03ce9aedc,runways,1.0,2.0,wrong,1.0,correct,1.0,correct,YBAM,mid,mid,mid,5,1,4
+gemma4-31b,3,zerocot,68c95271551c448b,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,high,3,1,2
+gemma4-31b,3,zerocot,68d615c27dcc4ba6,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,high,5,1,4
+gemma4-31b,3,zerocot,690d2602b54a7326,runwaysWidth,138.0,42 m,correct,,abstained,45.0,wrong,UKOH,low,mid,high,3,3,0
+gemma4-31b,3,zerocot,69c0415d592230f0,tz_database_timezone,Europe/Rome,Europe/Rome,correct,Europe/Rome,correct,Europe/Rome,correct,LIPR,mid,high,high,1,1,0
+gemma4-31b,3,zerocot,6b925692bbc6eeb6,iata,TAR,,abstained,,abstained,,abstained,LIBG,low,mid,low,3,1,2
+gemma4-31b,3,zerocot,6eab58730a15005c,country,Brazil,Anguilla,wrong,,abstained,,abstained,SBAR,high,high,mid,5,1,4
+gemma4-31b,3,zerocot,6f4e8fed84a51980,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,YWWL,low,high,high,3,3,0
+gemma4-31b,3,zerocot,70b7ae2748e2d635,commercial_flights,1937,,abstained,,abstained,0.0,wrong,LFRZ,low,low,mid,1,1,0
+gemma4-31b,3,zerocot,726ba92985ccced5,country,France,,abstained,,abstained,,abstained,LFQA,low,high,low,5,1,4
+gemma4-31b,3,zerocot,72c65ecc4148395c,runwaysWidth,98.0,,abstained,,abstained,,abstained,EDLD,low,mid,high,1,1,0
+gemma4-31b,3,zerocot,739f4c57a3fb3ce6,commercial_flights,5356,,abstained,,abstained,11719.0,wrong,LGSM,high,low,mid,3,1,2
+gemma4-31b,3,zerocot,740d7a41da771521,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,high,1,1,0
+gemma4-31b,3,zerocot,74595c7842bd2702,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,low,3,0,3
+gemma4-31b,3,zerocot,75c94df1f8e7c044,iata,VIJ,,abstained,,abstained,,abstained,TUPW,mid,mid,mid,5,1,4
+gemma4-31b,3,zerocot,788e50d1e05150f4,country,Ukraine,Ukraine,correct,Ukraine,correct,Ukraine,correct,UKOH,low,high,high,5,4,1
+gemma4-31b,3,zerocot,78d5fa34c478a1b7,country,France,,abstained,,abstained,,abstained,LFOV,low,high,low,5,1,4
+gemma4-31b,3,zerocot,792b7669ff7e222e,runwaysLength,6706.0,,abstained,,abstained,,abstained,LGSM,high,mid,low,5,1,4
+gemma4-31b,3,zerocot,7b8e0b49350e5f8b,country,Brazil,Portugal,wrong,Cape Verde,wrong,Cape Verde,wrong,SBAR,high,high,high,5,1,4
+gemma4-31b,3,zerocot,7ca73663d32ad809,runwaysWidth,101.0,,abstained,,abstained,,abstained,ESNZ,mid,mid,low,1,1,0
+gemma4-31b,3,zerocot,7df1a5e39466884a,commercial_flights,0,,abstained,,abstained,,abstained,LSMF,low,low,mid,1,1,0
+gemma4-31b,3,zerocot,7e23310c4c06759f,city,West Wyalong,,abstained,,abstained,,abstained,YWWL,low,mid,mid,1,1,0
+gemma4-31b,3,zerocot,7e2ec384a145441c,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,5,0,5
+gemma4-31b,3,zerocot,7e9c9117ddcecaa8,runwaysWidth,148.0,"45, 60 m",wrong,45m,correct,45m,correct,SBAR,high,mid,high,3,1,2
+gemma4-31b,3,zerocot,804b8d6fc48fc662,city,Spanish Town,Spanish Town,correct,,abstained,,abstained,TUPW,mid,mid,high,1,1,0
+gemma4-31b,3,zerocot,809b3379829f3567,icao,UKOH,UKOH,correct,UKKH,wrong,UKKH,wrong,UKOH,low,high,mid,1,1,0
+gemma4-31b,3,zerocot,8329e70cbe436788,latitude,37.68999862670898,,abstained,47.25305,wrong,,abstained,LGSM,high,high,low,5,1,4
+gemma4-31b,3,zerocot,83c9a51e429b0ead,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,EDLD,low,high,high,3,1,2
+gemma4-31b,3,zerocot,8481c235bd0200d0,distCity,7506.017230666509,11 km,wrong,11000.0,wrong,9333.333333333334,correct,SBAR,high,mid,high,5,1,4
+gemma4-31b,3,zerocot,84e14e8caf9a0ae0,runwaysWidth,148.0,"45, 60 m",wrong,,abstained,,abstained,LIPR,mid,mid,high,5,1,4
+gemma4-31b,3,zerocot,87073059e63c84fd,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,3,1,2
+gemma4-31b,3,zerocot,8729549ba7b599d6,dst,E,E,correct,E Europe,wrong,E Europe,wrong,LIPR,mid,high,mid,5,1,4
+gemma4-31b,3,zerocot,874d9908f64bda80,icao,UKOH,UKBB,wrong,UKBB,wrong,UKBB,wrong,UKOH,low,high,mid,3,1,2
+gemma4-31b,3,zerocot,88f28528b0d60bf8,commercial_flights,5356,"268,301 flights",wrong,288547.3333333333,wrong,322405.0,wrong,LGSM,high,low,mid,5,1,4
+gemma4-31b,3,zerocot,89623d123ebb016d,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,1,1,0
+gemma4-31b,3,zerocot,89cf93370f16c670,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,mid,5,1,4
+gemma4-31b,3,zerocot,8a8b1d4e9fca4c69,commercial_flights,5356,,abstained,,abstained,,abstained,LGSM,high,low,high,5,1,4
+gemma4-31b,3,zerocot,8b1518260afa7646,tz_database_timezone,America/Tortola,America/Tortola,correct,America/St_Thomas,wrong,America/St_Thomas,wrong,TUPW,mid,high,mid,5,1,4
+gemma4-31b,3,zerocot,8c1bfb7d2c34b34e,dst,E,,abstained,,abstained,N,wrong,LIBG,low,high,low,3,1,2
+gemma4-31b,3,zerocot,8c8d3d5800de3461,commercial_flights,0,,abstained,124201.5,wrong,,abstained,LSMF,low,low,high,3,3,0
+gemma4-31b,3,zerocot,906a58f00773015f,source,OurAirports,,abstained,,abstained,,abstained,LIPR,mid,high,high,3,1,2
+gemma4-31b,3,zerocot,90c69a4b6edbefde,commercial_flights,48539,54K ops,wrong,19931.0,wrong,24054.0,wrong,LEBB,high,low,mid,3,1,2
+gemma4-31b,3,zerocot,90e383d8e1029173,distCity,14448566.677822953,8 km,wrong,12000.0,wrong,13333.333333333334,wrong,YBAM,mid,mid,mid,3,3,0
+gemma4-31b,3,zerocot,950d73994e7be07e,tz_database_timezone,Europe/Rome,,abstained,,abstained,,abstained,LIPR,mid,high,mid,1,1,0
+gemma4-31b,3,zerocot,95c02d0737fd8405,icao,UKOH,UKOH,correct,UKKH,wrong,UKKH,wrong,UKOH,low,high,high,3,1,2
+gemma4-31b,3,zerocot,987c8f4d2b09c1ee,runways,1.0,13/31,wrong,1.0,correct,1.0,correct,PADU,high,mid,mid,5,2,3
+gemma4-31b,3,zerocot,9883056ad976f45f,runways,1.0,,abstained,1.0,correct,,abstained,LFOV,low,mid,low,5,1,4
+gemma4-31b,3,zerocot,9c145b93e28b7a45,iata,VIJ,VIJ,correct,VGX,wrong,VGX,wrong,TUPW,mid,mid,high,5,1,4
+gemma4-31b,3,zerocot,9e26f900e1daaa53,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,high,5,1,4
+gemma4-31b,3,zerocot,9e9ce22beaaae6d4,distCity,7506.017230666509,11 km,wrong,15000.0,wrong,13666.666666666666,wrong,SBAR,high,mid,mid,5,1,4
+gemma4-31b,3,zerocot,9f78abeb92a5da4e,commercial_flights,1937,7778 mouvements,wrong,0.0,wrong,0.0,wrong,LFRZ,low,low,high,5,5,0
+gemma4-31b,3,zerocot,9f7aadbc77fa3e56,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,low,1,0,1
+gemma4-31b,3,zerocot,a06f1a9386482f5a,source,OurAirports,,abstained,,abstained,,abstained,LIPR,mid,high,low,3,1,2
+gemma4-31b,3,zerocot,a1cdcf413fb07b71,commercial_flights,1937,,abstained,12781.0,wrong,12056.0,wrong,LFRZ,low,low,mid,5,5,0
+gemma4-31b,3,zerocot,a2f362c1523c8087,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,5,1,4
+gemma4-31b,3,zerocot,a325d4df1fd44b66,runways,1.0,,abstained,1.0,correct,1.0,correct,LTAY,mid,mid,low,3,1,2
+gemma4-31b,3,zerocot,a3d55f98abf0bca4,runways,1.0,two parallel,wrong,1.0,correct,1.0,correct,ENSR,mid,mid,low,5,1,4
+gemma4-31b,3,zerocot,a42b3a1d5f39d335,commercial_flights,1937,,abstained,7925.333333333333,wrong,13129.0,wrong,LFRZ,low,low,mid,3,3,0
+gemma4-31b,3,zerocot,a4b322be7d79d185,runwaysLength,4921.0,,abstained,,abstained,,abstained,EDLD,low,mid,high,3,1,2
+gemma4-31b,3,zerocot,a56fa21bbb756d0f,tz_database_timezone,Europe/Paris,Europe/Paris,correct,,abstained,,abstained,LFRZ,low,high,low,1,1,0
+gemma4-31b,3,zerocot,a60e21be305e884d,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,1,0,1
+gemma4-31b,3,zerocot,a74eb8b98496990e,icao,YBAM,TQPF,wrong,,abstained,,abstained,YBAM,mid,high,mid,3,2,1
+gemma4-31b,3,zerocot,a9a5ab0ef3ac173e,runways,1.0,,abstained,,abstained,,abstained,YBAM,mid,mid,high,1,1,0
+gemma4-31b,3,zerocot,a9a946b80d81da96,longitude,6.865278,9.68012° east,wrong,10.567188999999999,wrong,10.5672,wrong,EDLD,low,high,mid,5,1,4
+gemma4-31b,3,zerocot,aa24de5f407711d4,altitude,138.0,,abstained,,abstained,,abstained,LEBB,high,high,low,3,1,2
+gemma4-31b,3,zerocot,ab34b0e9ba18e71f,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,high,1,1,0
+gemma4-31b,3,zerocot,ab447910c9128b49,icao,YBAM,YBAM,correct,YPAD,wrong,YPAD,wrong,YBAM,mid,high,high,3,3,0
+gemma4-31b,3,zerocot,abdbc64108d74104,commercial_flights,1151,,abstained,8138.0,wrong,,abstained,ENSR,mid,low,low,5,0,5
+gemma4-31b,3,zerocot,ad198b9901ccf9e0,commercial_flights,280,,abstained,14683.333333333334,wrong,,abstained,LIBG,low,low,high,5,2,3
+gemma4-31b,3,zerocot,af37720cc9e1baa8,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,3,0,3
+gemma4-31b,3,zerocot,af9b404341a8f59f,iata,SNR,,abstained,LUG,wrong,,abstained,LFRZ,low,mid,low,1,1,0
+gemma4-31b,3,zerocot,b08fa90bd27bfd17,commercial_flights,1937,,abstained,,abstained,112525.0,wrong,LFRZ,low,low,high,1,1,0
+gemma4-31b,3,zerocot,b0f1d6239366f457,icao,SEST,,abstained,,abstained,,abstained,SEST,high,high,high,1,1,0
+gemma4-31b,3,zerocot,b1ffcf47ce531097,runways,1.0,"9,840 ft",wrong,1.0,correct,1.0,correct,PADU,high,mid,mid,1,1,0
+gemma4-31b,3,zerocot,b2f03aa443cbc88e,city,Dinslaken,Hamburg,wrong,Hamburg,wrong,Frankfurt,wrong,EDLD,low,mid,high,5,4,1
+gemma4-31b,3,zerocot,b30b70504aa05d8a,tz_database_timezone,America/Tortola,America/New_York,wrong,,abstained,,abstained,TUPW,mid,high,high,1,1,0
+gemma4-31b,3,zerocot,b506bd1f8371e5d1,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,low,5,0,5
+gemma4-31b,3,zerocot,b5dd97c6e89433ba,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,3,1,2
+gemma4-31b,3,zerocot,b6f38b6bbbd6c643,type,airport,,abstained,airport,correct,airport,correct,YWWL,low,high,high,1,1,0
+gemma4-31b,3,zerocot,b860deb662188eb3,type,airport,,abstained,,abstained,,abstained,EDLD,low,high,mid,1,1,0
+gemma4-31b,3,zerocot,b8d6e0cc7416f053,distCity,1880.9420239134909,,abstained,,abstained,,abstained,LSMF,low,mid,low,1,1,0
+gemma4-31b,3,zerocot,bb39bb6750619d00,runwaysLength,7398.0,,abstained,,abstained,,abstained,LEBB,high,mid,low,5,1,4
+gemma4-31b,3,zerocot,bcbccfea14ce6d9e,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,low,5,0,5
+gemma4-31b,3,zerocot,bcc35c16ec536415,altitude,859.0,859 ft,correct,315.0,wrong,350.3333333333333,wrong,YWWL,low,high,mid,5,5,0
+gemma4-31b,3,zerocot,bdb1deb25c08a76e,runwaysLength,3879.5,"780, 1585 m",wrong,1180.0,wrong,1281.6666666666667,wrong,YWWL,low,mid,mid,5,5,0
+gemma4-31b,3,zerocot,be5212696ad571cc,timezone,-6,-5 hours offset from UTC,correct,-5.0,correct,-5.0,correct,SEST,high,high,mid,3,1,2
+gemma4-31b,3,zerocot,bf4d3ba357b12954,commercial_flights,3017,,abstained,12394.333333333334,wrong,14246.0,wrong,LIPR,mid,low,high,5,1,4
+gemma4-31b,3,zerocot,bf9866dc7896c660,timezone,-4,,abstained,,abstained,,abstained,TUPW,mid,high,mid,3,1,2
+gemma4-31b,3,zerocot,c0293d15521c3d76,runwaysWidth,66.0,45 m,wrong,45m,wrong,45m,wrong,SEST,high,mid,mid,3,1,2
+gemma4-31b,3,zerocot,c1ad55428099bc8e,tz_database_timezone,America/Fortaleza,Atlantic/Azores,wrong,America/Sao_Paulo,wrong,America/Sao_Paulo,wrong,SBAR,high,high,high,1,1,0
+gemma4-31b,3,zerocot,c2bdaa77866c4a36,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,high,5,1,4
+gemma4-31b,3,zerocot,c37478e2a709ca5f,commercial_flights,0,,abstained,,abstained,,abstained,LSMF,low,low,high,1,1,0
+gemma4-31b,3,zerocot,c3932857c60d6ddc,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,1,0,1
+gemma4-31b,3,zerocot,c4f6617e86fa4350,longitude,29.7012996674,,abstained,13.425933333333333,wrong,14.7506,wrong,LTAY,mid,high,low,3,1,2
+gemma4-31b,3,zerocot,c80d8524a445ba94,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,low,1,0,1
+gemma4-31b,3,zerocot,c921b3b0221ca7ff,city,Rimini,,abstained,,abstained,,abstained,LIPR,mid,mid,high,1,1,0
+gemma4-31b,3,zerocot,c9feb55120d967a3,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,high,1,1,0
+gemma4-31b,3,zerocot,cb30ecfd9762cb9e,longitude,29.7012996674,,abstained,12.492200000000002,wrong,13.4063,wrong,LTAY,mid,high,low,1,1,0
+gemma4-31b,3,zerocot,cbea0a3196fc723d,timezone,-6,-5 hours offset from UTC,correct,,abstained,,abstained,SEST,high,high,high,3,1,2
+gemma4-31b,3,zerocot,cbed7541cf8fe34b,commercial_flights,5356,,abstained,12659.333333333334,wrong,10748.333333333334,wrong,LGSM,high,low,mid,1,1,0
+gemma4-31b,3,zerocot,cc7e42c7b6d8c9d4,source,OurAirports,,abstained,,abstained,,abstained,ESNZ,mid,high,low,3,1,2
+gemma4-31b,3,zerocot,cd3f12b0d61e0127,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,1,1,0
+gemma4-31b,3,zerocot,cf071bcdc01c34c4,commercial_flights,5356,,abstained,,abstained,,abstained,LGSM,high,low,high,1,1,0
+gemma4-31b,3,zerocot,cf25533f5fbb016c,timezone,-4,,abstained,,abstained,,abstained,TUPW,mid,high,high,3,1,2
+gemma4-31b,3,zerocot,d0f3a69d4cd32cb0,latitude,40.517502,,abstained,47.2525,wrong,,abstained,LIBG,low,high,low,1,1,0
+gemma4-31b,3,zerocot,d156060d44b6e457,tz_database_timezone,Europe/Rome,,abstained,,abstained,,abstained,LIPR,mid,high,low,1,1,0
+gemma4-31b,3,zerocot,d2d11794b4e69682,runwaysLength,7218.0,,abstained,,abstained,,abstained,SBAR,high,mid,mid,1,1,0
+gemma4-31b,3,zerocot,d35bdffeed699d78,runways,1.0,4600 ft,wrong,,abstained,,abstained,PADU,high,mid,high,5,2,3
+gemma4-31b,3,zerocot,d3861ced1129772e,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,5,0,5
+gemma4-31b,3,zerocot,d3acf54d0de77869,altitude,138.0,,abstained,,abstained,,abstained,LEBB,high,high,low,1,1,0
+gemma4-31b,3,zerocot,d54e83aeef2408da,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,5,1,4
+gemma4-31b,3,zerocot,d5c66bf26f69666f,runwaysWidth,148.0,,abstained,,abstained,,abstained,LDPL,high,mid,low,1,1,0
+gemma4-31b,3,zerocot,d8d13eb74868a313,runwaysLength,4500.0,"9,844 ft",wrong,,abstained,,abstained,PADU,high,mid,high,3,1,2
+gemma4-31b,3,zerocot,d9fc84501a7c6421,longitude,6.865278,,abstained,11.473425666666666,wrong,11.3964,wrong,EDLD,low,high,high,5,3,2
+gemma4-31b,3,zerocot,da4f63bb8b1b0500,runwaysWidth,148.0,,abstained,,abstained,,abstained,LEBB,high,mid,low,1,1,0
+gemma4-31b,3,zerocot,db2629977951430b,distCity,9434.15362332344,,abstained,,abstained,,abstained,LGSM,high,mid,low,1,1,0
+gemma4-31b,3,zerocot,dc3808847e176d18,latitude,44.89350128173828,,abstained,46.51705933333333,wrong,45.5837,wrong,LDPL,high,high,low,1,1,0
+gemma4-31b,3,zerocot,ded98c8fcbfec46c,distCity,2158896.099702787,,abstained,,abstained,,abstained,SEST,high,mid,high,5,1,4
+gemma4-31b,3,zerocot,e09f91c9d4b43c4a,distCity,8796.15474899182,11 km,wrong,14000.0,wrong,11666.666666666666,correct,UKOH,low,mid,high,1,1,0
+gemma4-31b,3,zerocot,e15aa3e57a386321,runwaysLength,7398.0,,abstained,,abstained,,abstained,LEBB,high,mid,low,3,1,2
+gemma4-31b,3,zerocot,e1da6199bca3c4e7,icao,LEBB,,abstained,,abstained,,abstained,LEBB,high,high,low,5,1,4
+gemma4-31b,3,zerocot,e23a2ea7891a5725,city,Spanish Town,,abstained,,abstained,,abstained,TUPW,mid,mid,mid,1,1,0
+gemma4-31b,3,zerocot,e577242a8b459a82,type,airport,station,wrong,,abstained,location,wrong,EDLD,low,high,high,1,1,0
+gemma4-31b,3,zerocot,e59b67580986a154,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,Sycra,wrong,St. Croix,wrong,SEST,high,mid,mid,1,1,0
+gemma4-31b,3,zerocot,e5bd8ea9d2f77823,longitude,142.459,142.45033,correct,145.47516666666667,wrong,145.45036666666667,wrong,YBAM,mid,high,mid,5,2,3
+gemma4-31b,3,zerocot,e6e7b5fe60710cfd,commercial_flights,3767,,abstained,116666.33333333333,wrong,13108.666666666666,wrong,ESNZ,mid,low,high,5,1,4
+gemma4-31b,3,zerocot,e736ea68bfc10ded,name,Samos Airport,,abstained,Luxembourg,wrong,Luxembourg Airport,wrong,LGSM,high,high,low,3,1,2
+gemma4-31b,3,zerocot,e7ec7ea5bd05ac2c,runwaysLength,6706.0,,abstained,,abstained,,abstained,LGSM,high,mid,low,3,1,2
+gemma4-31b,3,zerocot,e989fca502c19da1,distCity,2158896.099702787,16 km,wrong,,abstained,,abstained,SEST,high,mid,mid,5,1,4
+gemma4-31b,3,zerocot,ef0fc6eb6b7d600f,dst,E,E,correct,E,correct,E,correct,LIPR,mid,high,high,5,1,4
+gemma4-31b,3,zerocot,ef4ed149f3e5e2ad,commercial_flights,1151,,abstained,,abstained,,abstained,ENSR,mid,low,low,3,0,3
+gemma4-31b,3,zerocot,f0b4477b6048c94d,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,3,1,2
+gemma4-31b,3,zerocot,f0e699299c320551,type,airport,medium airport,wrong,airport,correct,airport,correct,SBAR,high,high,high,3,1,2
+gemma4-31b,3,zerocot,f14b8a26a69520b7,commercial_flights,280,28067 flights,wrong,115619.0,wrong,75117.33333333333,wrong,LIBG,low,low,high,1,1,0
+gemma4-31b,3,zerocot,f173fd27d06956a8,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,low,1,0,1
+gemma4-31b,3,zerocot,f2c592d0b19f3de7,runways,1.0,2.0,wrong,1.0,correct,1.0,correct,YBAM,mid,mid,high,5,1,4
+gemma4-31b,3,zerocot,f2ecaf039d3ae208,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,low,1,0,1
+gemma4-31b,3,zerocot,f2fe343c50294942,longitude,9.06482982635498,,abstained,,abstained,,abstained,LSMF,low,high,low,1,1,0
+gemma4-31b,3,zerocot,f3c44cf9d11c921b,latitude,48.03139877319336,,abstained,,abstained,,abstained,LFOV,low,high,low,3,1,2
+gemma4-31b,3,zerocot,f56fbd2914f87106,runways,1.0,,abstained,1.0,correct,1.0,correct,LIPR,mid,mid,mid,3,1,2
+gemma4-31b,3,zerocot,f73a423ce34494de,icao,SEST,HLLQ,wrong,KJFK,wrong,KJFK,wrong,SEST,high,high,mid,1,1,0
+gemma4-31b,3,zerocot,fad28c7ac309e584,runwaysLength,9678.0,5841 feet,wrong,,abstained,,abstained,LDPL,high,mid,low,3,1,2
+gemma4-31b,3,zerocot,fc4b4f742793259f,city,Östersund,,abstained,,abstained,,abstained,ESNZ,mid,mid,low,3,1,2
+gemma4-31b,3,zerocot,fc62d245c20717dc,commercial_flights,402,879 commercial movements,wrong,,abstained,,abstained,EGLK,low,low,mid,3,3,0
+gemma4-31b,3,zerocot,fd49c6094acb8389,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,mid,3,1,2
+gemma4-31b,3,zerocot,fd9df196bf041a56,commercial_flights,3017,,abstained,121594.0,wrong,,abstained,LIPR,mid,low,low,5,0,5
+gemma4-31b,3,zerocot,fe80f42a3df17a3e,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,high,1,1,0
+gemma4-31b,3,zerocot,fe96f2b87a0aa0f2,country,Turkey,,abstained,,abstained,,abstained,LTAY,mid,high,low,5,1,4
+gemma4-31b,3,zerocot,feeb99f716638c26,runways,1.0,,abstained,1.0,correct,1.0,correct,LTAY,mid,mid,low,1,1,0
+gpt-oss-120b,3,compact,00d88c04ef3bda41,name,Northern Peninsula Airport,Bamaga Injinoo Airport,wrong,Bamaga Airport,wrong,Bamaga Airport,wrong,YBAM,mid,high,high,1,1,0
+gpt-oss-120b,3,compact,018c9b09aa202afe,country,Norway,,abstained,United Kingdom,wrong,,abstained,ENSR,mid,high,low,5,1,4
+gpt-oss-120b,3,compact,02766d961d6cd174,commercial_flights,280,,abstained,85500.0,wrong,,abstained,LIBG,low,low,mid,1,1,0
+gpt-oss-120b,3,compact,02b52a1198c97df2,commercial_flights,3767,,abstained,​,wrong,,abstained,ESNZ,mid,low,mid,3,1,2
+gpt-oss-120b,3,compact,047c65d4179df1f4,icao,LIBG,LTFM,wrong,FHSH,wrong,,abstained,LIBG,low,high,low,5,1,4
+gpt-oss-120b,3,compact,04ee095c23556e17,runwaysLength,7218.0,7218 ft,correct,,abstained,,abstained,SBAR,high,mid,high,1,1,0
+gpt-oss-120b,3,compact,057429abe37bb1a0,type,airport,airport,correct,airport,correct,airport,correct,YWWL,low,high,mid,1,1,0
+gpt-oss-120b,3,compact,071c93092efc0e8c,commercial_flights,3168,63894 flights,wrong,116963.5,wrong,,abstained,LTAY,mid,low,low,5,0,5
+gpt-oss-120b,3,compact,07975c97ff6cbf15,icao,UKOH,,abstained,UK,wrong,UK,wrong,UKOH,low,high,high,1,1,0
+gpt-oss-120b,3,compact,0ad75c2755895136,altitude,62.0,207 ft,wrong,0 m,wrong,,abstained,SEST,high,high,high,5,1,4
+gpt-oss-120b,3,compact,0d2d73a828b51d72,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,ESNZ,mid,high,low,1,1,0
+gpt-oss-120b,3,compact,1150e13e5d4db0ae,runwaysLength,5453.0,,abstained,1631.5,wrong,,abstained,LFOV,low,mid,low,3,1,2
+gpt-oss-120b,3,compact,11def8660b3e9832,runways,1.0,,abstained,1.0,correct,,abstained,LIPR,mid,mid,low,3,1,2
+gpt-oss-120b,3,compact,1305e9b85a937e13,commercial_flights,136,,abstained,849000.0,wrong,,abstained,LFOV,low,low,low,5,0,5
+gpt-oss-120b,3,compact,1359bb03395e49db,longitude,142.459,145.755004883 degrees,wrong,145.755004883,wrong,145.92463658866666,wrong,YBAM,mid,high,high,5,2,3
+gpt-oss-120b,3,compact,1673998d744a9b6f,runways,1.0,1.0,correct,3.0,wrong,2.6666666666666665,wrong,PADU,high,mid,high,1,1,0
+gpt-oss-120b,3,compact,175e3546baa94139,commercial_flights,3168,,abstained,6166.666666666667,wrong,5000.0,wrong,LTAY,mid,low,mid,5,1,4
+gpt-oss-120b,3,compact,1793984451a58351,runwaysLength,3879.5,8930 m,wrong,3962 m,wrong,3962.0,correct,YWWL,low,mid,high,3,3,0
+gpt-oss-120b,3,compact,1862b7189640064c,runways,1.0,1.0,correct,,abstained,2.0,wrong,UKOH,low,mid,high,5,4,1
+gpt-oss-120b,3,compact,18744a9fd04b25c9,commercial_flights,402,879 flights,wrong,0.0,wrong,,abstained,EGLK,low,low,mid,5,5,0
+gpt-oss-120b,3,compact,197c52a322ea759d,runwaysWidth,148.0,148 ft,correct,45 m,correct,,abstained,LIPR,mid,mid,mid,5,1,4
+gpt-oss-120b,3,compact,19a46fffa88a0297,distCity,10070.299531668838,,abstained,​,wrong,,abstained,LFQA,low,mid,low,3,1,2
+gpt-oss-120b,3,compact,19a6197fe6efcad9,type,airport,airport,correct,,abstained,airport,correct,SBAR,high,high,mid,3,1,2
+gpt-oss-120b,3,compact,1b6b1113751b5d44,commercial_flights,3767,,abstained,value,wrong,,abstained,ESNZ,mid,low,mid,1,1,0
+gpt-oss-120b,3,compact,1d0a8977a1629882,city,Dinslaken,Norddeich,wrong,Berlin,wrong,Berlin,wrong,EDLD,low,mid,mid,5,1,4
+gpt-oss-120b,3,compact,1d7ddde3591a40d4,runwaysWidth,138.0,,abstained,45 meters,correct,,abstained,UKOH,low,mid,mid,3,1,2
+gpt-oss-120b,3,compact,1dde1ee1acb6be5d,commercial_flights,5841,,abstained,67666.66666666667,wrong,26166.666666666668,wrong,LDPL,high,low,high,3,1,2
+gpt-oss-120b,3,compact,1f0772c6475fdcda,tz_database_timezone,America/Fortaleza,America/Fortaleza,correct,Asia/Dubai,wrong,America/Maceio,wrong,SBAR,high,high,mid,1,1,0
+gpt-oss-120b,3,compact,1f26b94f340a6174,runwaysLength,4500.0,3400 ft,correct,3841.0,correct,,abstained,PADU,high,mid,mid,3,1,2
+gpt-oss-120b,3,compact,23530a488479364e,latitude,53.900100708,,abstained,37.0902° N,wrong,39.8283,wrong,PADU,high,high,high,1,1,0
+gpt-oss-120b,3,compact,24588b9fd5cc7825,commercial_flights,5356,488000 flights,wrong,76666.66666666667,wrong,30000.0,wrong,LGSM,high,low,high,3,1,2
+gpt-oss-120b,3,compact,24dc4dc280c4c993,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,EDLD,low,high,mid,3,1,2
+gpt-oss-120b,3,compact,24ff769941c40de9,runwaysLength,4921.0,15200 m,wrong,4000.0,correct,4000.0,correct,EDLD,low,mid,mid,3,1,2
+gpt-oss-120b,3,compact,253aa2e39cb05d44,country,United States,United States,correct,United States of America,wrong,United States,correct,PADU,high,high,mid,5,1,4
+gpt-oss-120b,3,compact,291bec56a6238d05,commercial_flights,0,50 flights,wrong,6500.0,wrong,,abstained,LSMF,low,low,high,5,5,0
+gpt-oss-120b,3,compact,2a0fa36e77de8da8,distCity,14448566.677822953,10.19 km,wrong,4000.0,wrong,,abstained,YBAM,mid,mid,high,3,1,2
+gpt-oss-120b,3,compact,2a277cb5b0c4bdc9,runwaysWidth,148.0,148 ft,correct,45 m,correct,,abstained,LDPL,high,mid,low,5,1,4
+gpt-oss-120b,3,compact,2aca50309660da2b,runwaysWidth,148.0,148 ft,correct,45 m,correct,,abstained,SBAR,high,mid,mid,3,1,2
+gpt-oss-120b,3,compact,2b7efc68a2659b20,tz_database_timezone,America/Tortola,,abstained,Europe/London,wrong,,abstained,TUPW,mid,high,mid,1,1,0
+gpt-oss-120b,3,compact,2c55bb6f7a9d0c36,commercial_flights,48539,333000 flights,wrong,195000.0,wrong,295000.0,wrong,LEBB,high,low,high,3,1,2
+gpt-oss-120b,3,compact,2d190cd6441fcdab,dst,E,,abstained,U,wrong,,abstained,LIPR,mid,high,low,5,1,4
+gpt-oss-120b,3,compact,2d5c36f848e2bc78,commercial_flights,280,0.0,wrong,0.0,wrong,,abstained,LIBG,low,low,mid,5,1,4
+gpt-oss-120b,3,compact,2df9d76e6cd9f7f6,runways,1.0,1.0,correct,"Runway 12/30 – 2,200 m (7,218 ft), asphalt",wrong,1.0,correct,LIPR,mid,mid,high,3,1,2
+gpt-oss-120b,3,compact,2fca4a55f455826f,distCity,8796.15474899182,10 km,wrong,7000.0,correct,8000.0,correct,UKOH,low,mid,mid,1,1,0
+gpt-oss-120b,3,compact,32628949e04d420b,runways,1.0,1.0,correct,,abstained,,abstained,YBAM,mid,mid,mid,1,1,0
+gpt-oss-120b,3,compact,3324023f5468b67c,country,United States,United States,correct,United States,correct,United States,correct,PADU,high,high,high,5,2,3
+gpt-oss-120b,3,compact,3599d3d2304bc581,commercial_flights,3168,,abstained,12232.0,wrong,,abstained,LTAY,mid,low,low,3,0,3
+gpt-oss-120b,3,compact,36cd9d631dafc791,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,high,3,1,2
+gpt-oss-120b,3,compact,37ab84abe6f32772,icao,LFQA,,abstained,LIMP,wrong,,abstained,LFQA,low,high,low,3,1,2
+gpt-oss-120b,3,compact,37c85aac3ed51a89,city,Reims,Eindhoven,wrong,Kirkenes,wrong,,abstained,LFQA,low,mid,low,5,1,4
+gpt-oss-120b,3,compact,39b48228aaf1284c,runways,1.0,1.3333333333333333,correct,1667.0,wrong,1.0,correct,UKOH,low,mid,mid,5,2,3
+gpt-oss-120b,3,compact,3a1c78d73f916a80,source,OurAirports,OurAirports,correct,OurAirports,correct,,abstained,YWWL,low,high,mid,3,3,0
+gpt-oss-120b,3,compact,3a9d7851210b5f80,commercial_flights,3168,,abstained,4870.0,wrong,37500.0,wrong,LTAY,mid,low,mid,1,1,0
+gpt-oss-120b,3,compact,3c345711d9b81f43,commercial_flights,3168,,abstained,​,wrong,,abstained,LTAY,mid,low,high,3,1,2
+gpt-oss-120b,3,compact,3e9ac6334bda31d2,city,San Cristóbal,San Cristóbal,correct,San Salvador,wrong,San Carlos,wrong,SEST,high,mid,high,1,1,0
+gpt-oss-120b,3,compact,3eabf7027e340313,name,Northern Peninsula Airport,RAAF Base Amberley,wrong,Amberley,wrong,Amberley,wrong,YBAM,mid,high,mid,1,1,0
+gpt-oss-120b,3,compact,40e8332f167b4cde,runways,1.0,,abstained,1.0,correct,,abstained,LIBG,low,mid,low,5,1,4
+gpt-oss-120b,3,compact,42e0dce0e45312dc,commercial_flights,3017,,abstained,182333.33333333334,wrong,150000.0,wrong,LIPR,mid,low,high,3,1,2
+gpt-oss-120b,3,compact,42f6c9da69668486,timezone,-9,-10 hours,correct,-9.0,correct,-9.0,correct,PADU,high,high,mid,3,1,2
+gpt-oss-120b,3,compact,43e9cf600bd14cda,timezone,-9,-4 hours,wrong,1.0,wrong,,abstained,PADU,high,high,high,3,1,2
+gpt-oss-120b,3,compact,44d2c92191e1681b,commercial_flights,280,,abstained,228000.0,wrong,250000.0,wrong,LIBG,low,low,high,3,1,2
+gpt-oss-120b,3,compact,46aec55fce126803,name,Samos Airport,,abstained,Sumburgh Airport,wrong,,abstained,LGSM,high,high,low,1,1,0
+gpt-oss-120b,3,compact,47abad7e29ea733e,tz_database_timezone,America/Tortola,America/Tortola,correct,America/Port_of_Spain,wrong,Atlantic/Bermuda,wrong,TUPW,mid,high,high,5,1,4
+gpt-oss-120b,3,compact,488523559e83a6a1,altitude,62.0,1010 m,wrong,0 m,wrong,33 meters,wrong,SEST,high,high,mid,5,1,4
+gpt-oss-120b,3,compact,4a46dfb947826e28,commercial_flights,41,1374 flights per year,wrong,,abstained,,abstained,LFQA,low,low,low,3,0,3
+gpt-oss-120b,3,compact,4b7ab1f37a4b6bfc,commercial_flights,1937,,abstained,,abstained,,abstained,LFRZ,low,low,high,3,3,0
+gpt-oss-120b,3,compact,4c1f1e2dddfb1355,commercial_flights,5841,,abstained,23433.333333333332,wrong,15100.0,wrong,LDPL,high,low,high,1,1,0
+gpt-oss-120b,3,compact,4e2b211f93f63ac2,commercial_flights,48539,,abstained,5094150.0,wrong,,abstained,LEBB,high,low,mid,1,1,0
+gpt-oss-120b,3,compact,4e64ef49b878804b,city,Rimini,,abstained,Belfast,wrong,,abstained,LIPR,mid,mid,mid,1,1,0
+gpt-oss-120b,3,compact,4f059e71935e5aa3,city,Rimini,,abstained,Longyearbyen,wrong,,abstained,LIPR,mid,mid,low,1,1,0
+gpt-oss-120b,3,compact,4f61db667a8b608b,latitude,44.89350128173828,45.7429 degrees,wrong,45.742,wrong,56.2995,wrong,LDPL,high,high,low,5,1,4
+gpt-oss-120b,3,compact,52f4d2bc7ae943e9,commercial_flights,5356,,abstained,400000.0,wrong,,abstained,LGSM,high,low,low,1,0,1
+gpt-oss-120b,3,compact,534a4c12fbf83f0c,iata,TAR,,abstained,LKN,wrong,,abstained,LIBG,low,mid,low,1,1,0
+gpt-oss-120b,3,compact,555ce0e3c18330d5,city,West Wyalong,,abstained,,abstained,,abstained,YWWL,low,mid,high,1,1,0
+gpt-oss-120b,3,compact,5709a047069b10e5,runwaysWidth,148.0,60 m,correct,45 m,correct,,abstained,LIPR,mid,mid,low,5,1,4
+gpt-oss-120b,3,compact,575381cbc5d60097,runwaysWidth,66.0,148 ft,wrong,45 m,wrong,45 m,wrong,SEST,high,mid,high,3,1,2
+gpt-oss-120b,3,compact,5783e554ddcefdaf,commercial_flights,3168,,abstained,0.0,wrong,,abstained,LTAY,mid,low,mid,3,1,2
+gpt-oss-120b,3,compact,57bb12149cb2d370,commercial_flights,48539,,abstained,8527.0,wrong,,abstained,LEBB,high,low,low,1,0,1
+gpt-oss-120b,3,compact,5959c65c56846bac,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,LIPR,mid,high,mid,3,1,2
+gpt-oss-120b,3,compact,59efaf55f7445f8e,runways,1.0,8.0,wrong,1.0,correct,,abstained,LTAY,mid,mid,low,5,1,4
+gpt-oss-120b,3,compact,5accd061b8325ffe,commercial_flights,48539,,abstained,3000.0,wrong,,abstained,LEBB,high,low,low,3,0,3
+gpt-oss-120b,3,compact,5b50df3658943907,commercial_flights,5356,268301 flights,wrong,35186.0,wrong,,abstained,LGSM,high,low,low,3,0,3
+gpt-oss-120b,3,compact,5b64b4ff5498533d,altitude,859.0,859 ft,correct,330 m,correct,,abstained,YWWL,low,high,high,5,5,0
+gpt-oss-120b,3,compact,5bafab6786fc094c,runwaysWidth,98.0,30 m,correct,,abstained,,abstained,EDLD,low,mid,mid,1,1,0
+gpt-oss-120b,3,compact,5db565bf7cea6cda,runwaysLength,3879.5,7759 ft,wrong,1562.0,wrong,1524.0,wrong,YWWL,low,mid,high,5,5,0
+gpt-oss-120b,3,compact,5e5db2a9c95816b9,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,low,3,0,3
+gpt-oss-120b,3,compact,5ea9d4094994e820,commercial_flights,41,,abstained,512000.0,wrong,,abstained,LFQA,low,low,low,1,0,1
+gpt-oss-120b,3,compact,6002536615488533,latitude,53.900100708,38-58.454917N degrees,wrong,,abstained,,abstained,PADU,high,high,mid,1,1,0
+gpt-oss-120b,3,compact,604517a11d5c568a,country,Ukraine,Poland,wrong,Germany,wrong,,abstained,UKOH,low,high,mid,5,1,4
+gpt-oss-120b,3,compact,611e83dd38f302c2,commercial_flights,3767,15578 flights,wrong,6400.0,wrong,12000.0,wrong,ESNZ,mid,low,mid,5,2,3
+gpt-oss-120b,3,compact,61ad9efa2b5b689d,commercial_flights,5356,,abstained,483609.0,wrong,,abstained,LGSM,high,low,low,5,0,5
+gpt-oss-120b,3,compact,6375e8089be1747d,runwaysLength,3879.5,7759 ft,wrong,1524.0,wrong,1524.0,wrong,YWWL,low,mid,mid,3,3,0
+gpt-oss-120b,3,compact,658a453afb6526ee,commercial_flights,136,,abstained,"2,500,000",wrong,,abstained,LFOV,low,low,low,3,0,3
+gpt-oss-120b,3,compact,677b24d92b6852c9,source,OurAirports,,abstained,OurAirports,correct,,abstained,LDPL,high,high,low,3,1,2
+gpt-oss-120b,3,compact,68678ce03ce9aedc,runways,1.0,2.3333333333333335,wrong,1.0,correct,1.0,correct,YBAM,mid,mid,mid,5,1,4
+gpt-oss-120b,3,compact,68c95271551c448b,commercial_flights,3767,,abstained,178733.33333333334,wrong,,abstained,ESNZ,mid,low,high,3,1,2
+gpt-oss-120b,3,compact,68d615c27dcc4ba6,commercial_flights,48539,,abstained,365000.0,wrong,,abstained,LEBB,high,low,high,5,1,4
+gpt-oss-120b,3,compact,690d2602b54a7326,runwaysWidth,138.0,138 ft,correct,45 m,correct,45 m,correct,UKOH,low,mid,high,3,3,0
+gpt-oss-120b,3,compact,69c0415d592230f0,tz_database_timezone,Europe/Rome,,abstained,Europe/Rome,correct,Europe/Rome,correct,LIPR,mid,high,high,1,1,0
+gpt-oss-120b,3,compact,6b925692bbc6eeb6,iata,TAR,,abstained,IOM,wrong,,abstained,LIBG,low,mid,low,3,1,2
+gpt-oss-120b,3,compact,6eab58730a15005c,country,Brazil,Brunei,wrong,,abstained,,abstained,SBAR,high,high,mid,5,1,4
+gpt-oss-120b,3,compact,6f4e8fed84a51980,source,OurAirports,OurAirports,correct,OurAirports,correct,,abstained,YWWL,low,high,high,3,3,0
+gpt-oss-120b,3,compact,70b7ae2748e2d635,commercial_flights,1937,,abstained,1000.0,wrong,,abstained,LFRZ,low,low,mid,1,1,0
+gpt-oss-120b,3,compact,726ba92985ccced5,country,France,,abstained,Norway,wrong,,abstained,LFQA,low,high,low,5,1,4
+gpt-oss-120b,3,compact,72c65ecc4148395c,runwaysWidth,98.0,148 ft,wrong,,abstained,,abstained,EDLD,low,mid,high,1,1,0
+gpt-oss-120b,3,compact,739f4c57a3fb3ce6,commercial_flights,5356,4801 flights,correct,10933.333333333334,wrong,,abstained,LGSM,high,low,mid,3,1,2
+gpt-oss-120b,3,compact,740d7a41da771521,commercial_flights,3168,,abstained,600000.0,wrong,,abstained,LTAY,mid,low,high,1,1,0
+gpt-oss-120b,3,compact,74595c7842bd2702,commercial_flights,5841,,abstained,238689.0,wrong,238689.0,wrong,LDPL,high,low,low,3,0,3
+gpt-oss-120b,3,compact,75c94df1f8e7c044,iata,VIJ,KIN,wrong,KIN,wrong,KIN,wrong,TUPW,mid,mid,mid,5,1,4
+gpt-oss-120b,3,compact,788e50d1e05150f4,country,Ukraine,Ukraine,correct,Ukraine,correct,Ukraine,correct,UKOH,low,high,high,5,4,1
+gpt-oss-120b,3,compact,78d5fa34c478a1b7,country,France,,abstained,Norway,wrong,,abstained,LFOV,low,high,low,5,1,4
+gpt-oss-120b,3,compact,792b7669ff7e222e,runwaysLength,6706.0,3364 m,wrong,,abstained,,abstained,LGSM,high,mid,low,5,1,4
+gpt-oss-120b,3,compact,7b8e0b49350e5f8b,country,Brazil,Brazil,correct,Brazil,correct,Brazil,correct,SBAR,high,high,high,5,1,4
+gpt-oss-120b,3,compact,7ca73663d32ad809,runwaysWidth,101.0,,abstained,45 m,wrong,,abstained,ESNZ,mid,mid,low,1,1,0
+gpt-oss-120b,3,compact,7df1a5e39466884a,commercial_flights,0,,abstained,value,wrong,,abstained,LSMF,low,low,mid,1,1,0
+gpt-oss-120b,3,compact,7e23310c4c06759f,city,West Wyalong,Charnay-lès-Mâcon,wrong,Los Angeles,wrong,,abstained,YWWL,low,mid,mid,1,1,0
+gpt-oss-120b,3,compact,7e2ec384a145441c,commercial_flights,41,,abstained,​,wrong,,abstained,LFQA,low,low,low,5,0,5
+gpt-oss-120b,3,compact,7e9c9117ddcecaa8,runwaysWidth,148.0,148 ft,correct,45 m,correct,45.0,wrong,SBAR,high,mid,high,3,1,2
+gpt-oss-120b,3,compact,804b8d6fc48fc662,city,Spanish Town,Spanish Town,correct,Pune,wrong,Pune,wrong,TUPW,mid,mid,high,1,1,0
+gpt-oss-120b,3,compact,809b3379829f3567,icao,UKOH,UKOH,correct,UKKH,wrong,UKKH,wrong,UKOH,low,high,mid,1,1,0
+gpt-oss-120b,3,compact,8329e70cbe436788,latitude,37.68999862670898,46.2237 degrees,wrong,,abstained,,abstained,LGSM,high,high,low,5,1,4
+gpt-oss-120b,3,compact,83c9a51e429b0ead,source,OurAirports,,abstained,OurAirports,correct,,abstained,EDLD,low,high,high,3,1,2
+gpt-oss-120b,3,compact,8481c235bd0200d0,distCity,7506.017230666509,,abstained,7000.0,correct,5300.0,wrong,SBAR,high,mid,high,5,1,4
+gpt-oss-120b,3,compact,84e14e8caf9a0ae0,runwaysWidth,148.0,,abstained,45 m,correct,45.0,wrong,LIPR,mid,mid,high,5,1,4
+gpt-oss-120b,3,compact,87073059e63c84fd,commercial_flights,280,,abstained,20000.0,wrong,,abstained,LIBG,low,low,mid,3,1,2
+gpt-oss-120b,3,compact,8729549ba7b599d6,dst,E,E,correct,E,correct,E,correct,LIPR,mid,high,mid,5,1,4
+gpt-oss-120b,3,compact,874d9908f64bda80,icao,UKOH,UKDR,wrong,UKLL,wrong,UKBB,wrong,UKOH,low,high,mid,3,1,2
+gpt-oss-120b,3,compact,88f28528b0d60bf8,commercial_flights,5356,268301 flights,wrong,248000.0,wrong,149000.0,wrong,LGSM,high,low,mid,5,1,4
+gpt-oss-120b,3,compact,89623d123ebb016d,commercial_flights,5841,,abstained,value,wrong,,abstained,LDPL,high,low,mid,1,1,0
+gpt-oss-120b,3,compact,89cf93370f16c670,commercial_flights,48539,,abstained,​,wrong,,abstained,LEBB,high,low,mid,5,1,4
+gpt-oss-120b,3,compact,8a8b1d4e9fca4c69,commercial_flights,5356,,abstained,198500.0,wrong,185000.0,wrong,LGSM,high,low,high,5,1,4
+gpt-oss-120b,3,compact,8b1518260afa7646,tz_database_timezone,America/Tortola,America/Tortola,correct,Asia/Ho_Chi_Minh,wrong,Asia/Kolkata,wrong,TUPW,mid,high,mid,5,1,4
+gpt-oss-120b,3,compact,8c1bfb7d2c34b34e,dst,E,,abstained,N,wrong,,abstained,LIBG,low,high,low,3,1,2
+gpt-oss-120b,3,compact,8c8d3d5800de3461,commercial_flights,0,,abstained,value,wrong,,abstained,LSMF,low,low,high,3,3,0
+gpt-oss-120b,3,compact,906a58f00773015f,source,OurAirports,OurAirports,correct,OurAirports,correct,,abstained,LIPR,mid,high,high,3,1,2
+gpt-oss-120b,3,compact,90c69a4b6edbefde,commercial_flights,48539,54000 flights,correct,103400.0,wrong,46000.0,correct,LEBB,high,low,mid,3,1,2
+gpt-oss-120b,3,compact,90e383d8e1029173,distCity,14448566.677822953,5.3 km,wrong,5000.0,wrong,15000.0,wrong,YBAM,mid,mid,mid,3,3,0
+gpt-oss-120b,3,compact,950d73994e7be07e,tz_database_timezone,Europe/Rome,,abstained,,abstained,,abstained,LIPR,mid,high,mid,1,1,0
+gpt-oss-120b,3,compact,95c02d0737fd8405,icao,UKOH,UKOH,correct,UKKH,wrong,UKKH,wrong,UKOH,low,high,high,3,1,2
+gpt-oss-120b,3,compact,987c8f4d2b09c1ee,runways,1.0,1.0,correct,1.0,correct,1.0,correct,PADU,high,mid,mid,5,2,3
+gpt-oss-120b,3,compact,9883056ad976f45f,runways,1.0,2.0,wrong,1.0,correct,,abstained,LFOV,low,mid,low,5,1,4
+gpt-oss-120b,3,compact,9c145b93e28b7a45,iata,VIJ,VIJ,correct,VIJ,correct,VIJ,correct,TUPW,mid,mid,high,5,1,4
+gpt-oss-120b,3,compact,9e26f900e1daaa53,commercial_flights,3168,,abstained,​,wrong,,abstained,LTAY,mid,low,high,5,1,4
+gpt-oss-120b,3,compact,9e9ce22beaaae6d4,distCity,7506.017230666509,12 km,wrong,7000.0,correct,10000.0,correct,SBAR,high,mid,mid,5,1,4
+gpt-oss-120b,3,compact,9f78abeb92a5da4e,commercial_flights,1937,1820 flights per year,correct,5233.333333333333,wrong,,abstained,LFRZ,low,low,high,5,5,0
+gpt-oss-120b,3,compact,9f7aadbc77fa3e56,commercial_flights,3017,,abstained,170000.0,wrong,1300000.0,wrong,LIPR,mid,low,low,1,0,1
+gpt-oss-120b,3,compact,a06f1a9386482f5a,source,OurAirports,OurAirports,correct,OurAirports,correct,,abstained,LIPR,mid,high,low,3,1,2
+gpt-oss-120b,3,compact,a1cdcf413fb07b71,commercial_flights,1937,,abstained,1600.0,correct,,abstained,LFRZ,low,low,mid,5,5,0
+gpt-oss-120b,3,compact,a2f362c1523c8087,commercial_flights,3017,,abstained,2100.0,wrong,,abstained,LIPR,mid,low,mid,5,1,4
+gpt-oss-120b,3,compact,a325d4df1fd44b66,runways,1.0,5.0,wrong,,abstained,1.0,correct,LTAY,mid,mid,low,3,1,2
+gpt-oss-120b,3,compact,a3d55f98abf0bca4,runways,1.0,1.0,correct,2.0,wrong,1.0,correct,ENSR,mid,mid,low,5,1,4
+gpt-oss-120b,3,compact,a42b3a1d5f39d335,commercial_flights,1937,,abstained,600.0,wrong,,abstained,LFRZ,low,low,mid,3,3,0
+gpt-oss-120b,3,compact,a4b322be7d79d185,runwaysLength,4921.0,8530 ft,wrong,2600.0,wrong,,abstained,EDLD,low,mid,high,3,1,2
+gpt-oss-120b,3,compact,a56fa21bbb756d0f,tz_database_timezone,Europe/Paris,,abstained,​,wrong,,abstained,LFRZ,low,high,low,1,1,0
+gpt-oss-120b,3,compact,a60e21be305e884d,commercial_flights,136,,abstained,512000.0,wrong,,abstained,LFOV,low,low,low,1,0,1
+gpt-oss-120b,3,compact,a74eb8b98496990e,icao,YBAM,EGLF,wrong,​,wrong,,abstained,YBAM,mid,high,mid,3,2,1
+gpt-oss-120b,3,compact,a9a5ab0ef3ac173e,runways,1.0,,abstained,"1,200",correct,,abstained,YBAM,mid,mid,high,1,1,0
+gpt-oss-120b,3,compact,a9a946b80d81da96,longitude,6.865278,8.558350 degrees,wrong,8.5706°E,wrong,,abstained,EDLD,low,high,mid,5,1,4
+gpt-oss-120b,3,compact,aa24de5f407711d4,altitude,138.0,,abstained,,abstained,,abstained,LEBB,high,high,low,3,1,2
+gpt-oss-120b,3,compact,ab34b0e9ba18e71f,commercial_flights,48539,,abstained,value,wrong,,abstained,LEBB,high,low,high,1,1,0
+gpt-oss-120b,3,compact,ab447910c9128b49,icao,YBAM,YGFN,wrong,YUCM,wrong,,abstained,YBAM,mid,high,high,3,3,0
+gpt-oss-120b,3,compact,abdbc64108d74104,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,5,0,5
+gpt-oss-120b,3,compact,ad198b9901ccf9e0,commercial_flights,280,,abstained,97666.66666666667,wrong,116666.66666666667,wrong,LIBG,low,low,high,5,2,3
+gpt-oss-120b,3,compact,af37720cc9e1baa8,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,3,0,3
+gpt-oss-120b,3,compact,af9b404341a8f59f,iata,SNR,,abstained,SDL,wrong,,abstained,LFRZ,low,mid,low,1,1,0
+gpt-oss-120b,3,compact,b08fa90bd27bfd17,commercial_flights,1937,1514 flights per year,correct,30000.0,wrong,,abstained,LFRZ,low,low,high,1,1,0
+gpt-oss-120b,3,compact,b0f1d6239366f457,icao,SEST,,abstained,,abstained,,abstained,SEST,high,high,high,1,1,0
+gpt-oss-120b,3,compact,b1ffcf47ce531097,runways,1.0,1.0,correct,1.0,correct,1.0,correct,PADU,high,mid,mid,1,1,0
+gpt-oss-120b,3,compact,b2f03aa443cbc88e,city,Dinslaken,Dinslaken,correct,Leipzig,wrong,,abstained,EDLD,low,mid,high,5,4,1
+gpt-oss-120b,3,compact,b30b70504aa05d8a,tz_database_timezone,America/Tortola,America/Anchorage,wrong,Europe/London,wrong,,abstained,TUPW,mid,high,high,1,1,0
+gpt-oss-120b,3,compact,b506bd1f8371e5d1,commercial_flights,48539,,abstained,59000.0,correct,,abstained,LEBB,high,low,low,5,0,5
+gpt-oss-120b,3,compact,b5dd97c6e89433ba,commercial_flights,3017,,abstained,120000.0,wrong,,abstained,LIPR,mid,low,mid,3,1,2
+gpt-oss-120b,3,compact,b6f38b6bbbd6c643,type,airport,airport,correct,airport,correct,airport,correct,YWWL,low,high,high,1,1,0
+gpt-oss-120b,3,compact,b860deb662188eb3,type,airport,airport,correct,airport,correct,,abstained,EDLD,low,high,mid,1,1,0
+gpt-oss-120b,3,compact,b8d6e0cc7416f053,distCity,1880.9420239134909,10 km,wrong,8000.0,wrong,,abstained,LSMF,low,mid,low,1,1,0
+gpt-oss-120b,3,compact,bb39bb6750619d00,runwaysLength,7398.0,,abstained,​,wrong,,abstained,LEBB,high,mid,low,5,1,4
+gpt-oss-120b,3,compact,bcbccfea14ce6d9e,commercial_flights,5841,,abstained,220655.5,wrong,436811.0,wrong,LDPL,high,low,low,5,0,5
+gpt-oss-120b,3,compact,bcc35c16ec536415,altitude,859.0,859 ft,correct,311 meters,correct,328.3333333333333,wrong,YWWL,low,high,mid,5,5,0
+gpt-oss-120b,3,compact,bdb1deb25c08a76e,runwaysLength,3879.5,2365 m,wrong,1524.0,wrong,1524.0,wrong,YWWL,low,mid,mid,5,5,0
+gpt-oss-120b,3,compact,be5212696ad571cc,timezone,-6,-5 hours,correct,-5.0,correct,-5.0,correct,SEST,high,high,mid,3,1,2
+gpt-oss-120b,3,compact,bf4d3ba357b12954,commercial_flights,3017,,abstained,19000.0,wrong,,abstained,LIPR,mid,low,high,5,1,4
+gpt-oss-120b,3,compact,bf9866dc7896c660,timezone,-4,0 hours,wrong,value,wrong,,abstained,TUPW,mid,high,mid,3,1,2
+gpt-oss-120b,3,compact,c0293d15521c3d76,runwaysWidth,66.0,45 m,wrong,45 m,wrong,45 m,wrong,SEST,high,mid,mid,3,1,2
+gpt-oss-120b,3,compact,c1ad55428099bc8e,tz_database_timezone,America/Fortaleza,America/Sao_Paulo,wrong,America/Los_Angeles,wrong,America/Los_Angeles,wrong,SBAR,high,high,high,1,1,0
+gpt-oss-120b,3,compact,c2bdaa77866c4a36,commercial_flights,5841,,abstained,70000.0,wrong,86000.0,wrong,LDPL,high,low,high,5,1,4
+gpt-oss-120b,3,compact,c37478e2a709ca5f,commercial_flights,0,,abstained,value,wrong,,abstained,LSMF,low,low,high,1,1,0
+gpt-oss-120b,3,compact,c3932857c60d6ddc,commercial_flights,280,,abstained,383000.0,wrong,,abstained,LIBG,low,low,low,1,0,1
+gpt-oss-120b,3,compact,c4f6617e86fa4350,longitude,29.7012996674,23.9444444444444 degrees,wrong,24.9758,wrong,,abstained,LTAY,mid,high,low,3,1,2
+gpt-oss-120b,3,compact,c80d8524a445ba94,commercial_flights,3767,,abstained,value,wrong,,abstained,ESNZ,mid,low,low,1,0,1
+gpt-oss-120b,3,compact,c921b3b0221ca7ff,city,Rimini,,abstained,Berlin,wrong,,abstained,LIPR,mid,mid,high,1,1,0
+gpt-oss-120b,3,compact,c9feb55120d967a3,commercial_flights,3767,,abstained,450000.0,wrong,,abstained,ESNZ,mid,low,high,1,1,0
+gpt-oss-120b,3,compact,cb30ecfd9762cb9e,longitude,29.7012996674,,abstained,30.0515,wrong,,abstained,LTAY,mid,high,low,1,1,0
+gpt-oss-120b,3,compact,cbea0a3196fc723d,timezone,-6,-5 hours,correct,-5.0,correct,-5.0,correct,SEST,high,high,high,3,1,2
+gpt-oss-120b,3,compact,cbed7541cf8fe34b,commercial_flights,5356,,abstained,5000.0,correct,,abstained,LGSM,high,low,mid,1,1,0
+gpt-oss-120b,3,compact,cc7e42c7b6d8c9d4,source,OurAirports,,abstained,OurAirports,correct,,abstained,ESNZ,mid,high,low,3,1,2
+gpt-oss-120b,3,compact,cd3f12b0d61e0127,commercial_flights,3017,,abstained,117500.0,wrong,,abstained,LIPR,mid,low,mid,1,1,0
+gpt-oss-120b,3,compact,cf071bcdc01c34c4,commercial_flights,5356,271000 flights,wrong,180333.33333333334,wrong,125666.66666666667,wrong,LGSM,high,low,high,1,1,0
+gpt-oss-120b,3,compact,cf25533f5fbb016c,timezone,-4,,abstained,,abstained,,abstained,TUPW,mid,high,high,3,1,2
+gpt-oss-120b,3,compact,d0f3a69d4cd32cb0,latitude,40.517502,,abstained,​,wrong,,abstained,LIBG,low,high,low,1,1,0
+gpt-oss-120b,3,compact,d156060d44b6e457,tz_database_timezone,Europe/Rome,,abstained,Europe/Oslo,wrong,,abstained,LIPR,mid,high,low,1,1,0
+gpt-oss-120b,3,compact,d2d11794b4e69682,runwaysLength,7218.0,7506 ft,correct,​,wrong,,abstained,SBAR,high,mid,mid,1,1,0
+gpt-oss-120b,3,compact,d35bdffeed699d78,runways,1.0,3300 ft,wrong,2.0,wrong,,abstained,PADU,high,mid,high,5,2,3
+gpt-oss-120b,3,compact,d3861ced1129772e,commercial_flights,280,,abstained,​,wrong,,abstained,LIBG,low,low,low,5,0,5
+gpt-oss-120b,3,compact,d3acf54d0de77869,altitude,138.0,,abstained,236.0,wrong,,abstained,LEBB,high,high,low,1,1,0
+gpt-oss-120b,3,compact,d54e83aeef2408da,commercial_flights,5841,,abstained,30000.0,wrong,,abstained,LDPL,high,low,mid,5,1,4
+gpt-oss-120b,3,compact,d5c66bf26f69666f,runwaysWidth,148.0,148 ft,correct,,abstained,,abstained,LDPL,high,mid,low,1,1,0
+gpt-oss-120b,3,compact,d8d13eb74868a313,runwaysLength,4500.0,3339 ft,wrong,1588.0,wrong,914.0,wrong,PADU,high,mid,high,3,1,2
+gpt-oss-120b,3,compact,d9fc84501a7c6421,longitude,6.865278,6.865278 degrees,correct,9.937000000000001,wrong,,abstained,EDLD,low,high,high,5,3,2
+gpt-oss-120b,3,compact,da4f63bb8b1b0500,runwaysWidth,148.0,,abstained,,abstained,,abstained,LEBB,high,mid,low,1,1,0
+gpt-oss-120b,3,compact,db2629977951430b,distCity,9434.15362332344,13 km,wrong,3500.0,wrong,,abstained,LGSM,high,mid,low,1,1,0
+gpt-oss-120b,3,compact,dc3808847e176d18,latitude,44.89350128173828,,abstained,67.73165,wrong,,abstained,LDPL,high,high,low,1,1,0
+gpt-oss-120b,3,compact,ded98c8fcbfec46c,distCity,2158896.099702787,,abstained,15000.0,wrong,,abstained,SEST,high,mid,high,5,1,4
+gpt-oss-120b,3,compact,e09f91c9d4b43c4a,distCity,8796.15474899182,5.9 km,wrong,,abstained,5000.0,wrong,UKOH,low,mid,high,1,1,0
+gpt-oss-120b,3,compact,e15aa3e57a386321,runwaysLength,7398.0,,abstained,2011 m,correct,,abstained,LEBB,high,mid,low,3,1,2
+gpt-oss-120b,3,compact,e1da6199bca3c4e7,icao,LEBB,EGLL,wrong,EGHH,wrong,,abstained,LEBB,high,high,low,5,1,4
+gpt-oss-120b,3,compact,e23a2ea7891a5725,city,Spanish Town,Fortaleza,wrong,,abstained,,abstained,TUPW,mid,mid,mid,1,1,0
+gpt-oss-120b,3,compact,e577242a8b459a82,type,airport,airport,correct,,abstained,,abstained,EDLD,low,high,high,1,1,0
+gpt-oss-120b,3,compact,e59b67580986a154,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,San Cristóbal,correct,San Cristóbal,correct,SEST,high,mid,mid,1,1,0
+gpt-oss-120b,3,compact,e5bd8ea9d2f77823,longitude,142.459,142.45944 degrees east,correct,142.393°E,correct,142.378°E,correct,YBAM,mid,high,mid,5,2,3
+gpt-oss-120b,3,compact,e6e7b5fe60710cfd,commercial_flights,3767,,abstained,345333.3333333333,wrong,274666.6666666667,wrong,ESNZ,mid,low,high,5,1,4
+gpt-oss-120b,3,compact,e736ea68bfc10ded,name,Samos Airport,Ljubljana Jože Pučnik Airport,wrong,Sumburgh Airport,wrong,,abstained,LGSM,high,high,low,3,1,2
+gpt-oss-120b,3,compact,e7ec7ea5bd05ac2c,runwaysLength,6706.0,,abstained,3200.0,wrong,,abstained,LGSM,high,mid,low,3,1,2
+gpt-oss-120b,3,compact,e989fca502c19da1,distCity,2158896.099702787,7 km,wrong,,abstained,,abstained,SEST,high,mid,mid,5,1,4
+gpt-oss-120b,3,compact,ef0fc6eb6b7d600f,dst,E,European,wrong,E,correct,E,correct,LIPR,mid,high,high,5,1,4
+gpt-oss-120b,3,compact,ef4ed149f3e5e2ad,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,3,0,3
+gpt-oss-120b,3,compact,f0b4477b6048c94d,commercial_flights,5841,,abstained,154000.0,wrong,267000.0,wrong,LDPL,high,low,mid,3,1,2
+gpt-oss-120b,3,compact,f0e699299c320551,type,airport,medium_airport,wrong,airport,correct,airport,correct,SBAR,high,high,high,3,1,2
+gpt-oss-120b,3,compact,f14b8a26a69520b7,commercial_flights,280,,abstained,158333.33333333334,wrong,104000.0,wrong,LIBG,low,low,high,1,1,0
+gpt-oss-120b,3,compact,f173fd27d06956a8,commercial_flights,5841,,abstained,73000.0,wrong,,abstained,LDPL,high,low,low,1,0,1
+gpt-oss-120b,3,compact,f2c592d0b19f3de7,runways,1.0,1.0,correct,1.0,correct,,abstained,YBAM,mid,mid,high,5,1,4
+gpt-oss-120b,3,compact,f2ecaf039d3ae208,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,low,1,0,1
+gpt-oss-120b,3,compact,f2fe343c50294942,longitude,9.06482982635498,,abstained,,abstained,,abstained,LSMF,low,high,low,1,1,0
+gpt-oss-120b,3,compact,f3c44cf9d11c921b,latitude,48.03139877319336,52.180900 degrees,wrong,​,wrong,,abstained,LFOV,low,high,low,3,1,2
+gpt-oss-120b,3,compact,f56fbd2914f87106,runways,1.0,2.0,wrong,2.0,wrong,,abstained,LIPR,mid,mid,mid,3,1,2
+gpt-oss-120b,3,compact,f73a423ce34494de,icao,SEST,SEST,correct,,abstained,,abstained,SEST,high,high,mid,1,1,0
+gpt-oss-120b,3,compact,fad28c7ac309e584,runwaysLength,9678.0,3200 m,correct,,abstained,2099.0,wrong,LDPL,high,mid,low,3,1,2
+gpt-oss-120b,3,compact,fc4b4f742793259f,city,Östersund,,abstained,Longyearbyen,wrong,,abstained,ESNZ,mid,mid,low,3,1,2
+gpt-oss-120b,3,compact,fc62d245c20717dc,commercial_flights,402,879.0,wrong,0.0,wrong,0.0,wrong,EGLK,low,low,mid,3,3,0
+gpt-oss-120b,3,compact,fd49c6094acb8389,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,mid,3,1,2
+gpt-oss-120b,3,compact,fd9df196bf041a56,commercial_flights,3017,,abstained,121594.0,wrong,121594.0,wrong,LIPR,mid,low,low,5,0,5
+gpt-oss-120b,3,compact,fe80f42a3df17a3e,commercial_flights,3017,,abstained,450000.0,wrong,,abstained,LIPR,mid,low,high,1,1,0
+gpt-oss-120b,3,compact,fe96f2b87a0aa0f2,country,Turkey,Estonia,wrong,​,wrong,Spain,wrong,LTAY,mid,high,low,5,1,4
+gpt-oss-120b,3,compact,feeb99f716638c26,runways,1.0,1.0,correct,2125 m,wrong,,abstained,LTAY,mid,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,00d88c04ef3bda41,name,Northern Peninsula Airport,Bamaga Injinoo Airport,wrong,Bamaga Injinoo Airport,wrong,Balmoral Station Airport,wrong,YBAM,mid,high,high,1,1,0
+mistral-large-3,3,fewcot_5,018c9b09aa202afe,country,Norway,Spain,wrong,Spain,wrong,Netherlands,wrong,ENSR,mid,high,low,5,1,4
+mistral-large-3,3,fewcot_5,02766d961d6cd174,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,02b52a1198c97df2,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,047c65d4179df1f4,icao,LIBG,EPKT,wrong,,abstained,,abstained,LIBG,low,high,low,5,1,4
+mistral-large-3,3,fewcot_5,04ee095c23556e17,runwaysLength,7218.0,"[{'runway': '01/19', 'length': 1690, 'unit_ft': 'ft', 'length_m': 515, 'unit_m': 'm'}, {'runway': '02/20', 'length': 10787, 'unit_ft': 'ft', 'length_m': 3288, 'unit_m': 'm'}, {'runway': '11/29', 'length': 5587, 'unit_ft': 'ft', 'length_m': 1703, 'unit_m': 'm'}]",wrong,"3,065 m; 3,054 m",wrong,,abstained,SBAR,high,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,057429abe37bb1a0,type,airport,medium_airport,wrong,airport,correct,station,wrong,YWWL,low,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,071c93092efc0e8c,commercial_flights,3168,58690.0,wrong,,abstained,231427.0,wrong,LTAY,mid,low,low,5,0,5
+mistral-large-3,3,fewcot_5,07975c97ff6cbf15,icao,UKOH,,abstained,,abstained,UK,wrong,UKOH,low,high,high,1,1,0
+mistral-large-3,3,fewcot_5,0ad75c2755895136,altitude,62.0,207 ft,wrong,63.0,correct,0.0,wrong,SEST,high,high,high,5,1,4
+mistral-large-3,3,fewcot_5,0d2d73a828b51d72,source,OurAirports,OurAirports,correct,Eurostat airport statistics,wrong,Eurostat airport statistics,wrong,ESNZ,mid,high,low,1,1,0
+mistral-large-3,3,fewcot_5,1150e13e5d4db0ae,runwaysLength,5453.0,,abstained,3500.0,wrong,,abstained,LFOV,low,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,11def8660b3e9832,runways,1.0,"[{'direction': '15/33', 'length': 2500, 'width': 45, 'surface': 'asphalt'}, {'direction': '13/31', 'length': 1265, 'width': 20, 'surface': 'asphalt'}] m",wrong,1.0,correct,1.0,correct,LIPR,mid,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,1305e9b85a937e13,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,5,0,5
+mistral-large-3,3,fewcot_5,1359bb03395e49db,longitude,142.459,145.74948,wrong,,abstained,145.755004883,wrong,YBAM,mid,high,high,5,2,3
+mistral-large-3,3,fewcot_5,1673998d744a9b6f,runways,1.0,"[{'runway': '1', 'length': 10600, 'width': 150, 'surface': 'ASP', 'lighted': True}, {'runway': '2', 'length': 10900, 'width': 150, 'surface': 'ASP', 'lighted': True}, {'runway': '3', 'length': 11584, 'surface': 'ASP', 'lighted': True, 'width': 150}] ft",correct,3.0,wrong,,abstained,PADU,high,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,175e3546baa94139,commercial_flights,3168,3653.0,correct,16000.0,wrong,13266.666666666666,wrong,LTAY,mid,low,mid,5,1,4
+mistral-large-3,3,fewcot_5,1793984451a58351,runwaysLength,3879.5,"['10502', '5581'] ft",wrong,11155.0,wrong,3599;3599;3200;3200,correct,YWWL,low,mid,high,3,3,0
+mistral-large-3,3,fewcot_5,1862b7189640064c,runways,1.0,"[{'name': '18L-36R', 'length': 13123, 'width': 197, 'surface': 'paved (concrete)', 'lighted': True}, {'name': '18R-36L', 'length': 11483, 'width': 206, 'surface': 'paved (concrete)', 'lighted': True}, {'name': None, 'length': 3800, 'width': None, 'surface': 'paved (artificial cover)', 'lighted': True, 'note': 'Planned new runway (not yet operational)'}] ft (length and width)",wrong,1.6666666666666667,wrong,3.0,wrong,UKOH,low,mid,high,5,4,1
+mistral-large-3,3,fewcot_5,18744a9fd04b25c9,commercial_flights,402,879.0,wrong,0.0,wrong,,abstained,EGLK,low,low,mid,5,5,0
+mistral-large-3,3,fewcot_5,197c52a322ea759d,runwaysWidth,148.0,148 ft,correct,45.0,wrong,45.0,wrong,LIPR,mid,mid,mid,5,1,4
+mistral-large-3,3,fewcot_5,19a46fffa88a0297,distCity,10070.299531668838,7600 m,correct,10666.666666666666,correct,,abstained,LFQA,low,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,19a6197fe6efcad9,type,airport,airport,correct,airport,correct,city,wrong,SBAR,high,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,1b6b1113751b5d44,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,1d0a8977a1629882,city,Dinslaken,Berlin,wrong,Berlin,wrong,Berlin,wrong,EDLD,low,mid,mid,5,1,4
+mistral-large-3,3,fewcot_5,1d7ddde3591a40d4,runwaysWidth,138.0,45 m,correct,45.0,wrong,"15, 23, 30, 45 (meters, typical widths for international airports)",wrong,UKOH,low,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,1dde1ee1acb6be5d,commercial_flights,5841,,abstained,76666.66666666667,wrong,42333.333333333336,wrong,LDPL,high,low,high,3,1,2
+mistral-large-3,3,fewcot_5,1f0772c6475fdcda,tz_database_timezone,America/Fortaleza,America/Maceio,wrong,America/Maceio,wrong,America/Maceio,wrong,SBAR,high,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,1f26b94f340a6174,runwaysLength,4500.0,5495.0 feet,correct,4500;3300,correct,12500.0,wrong,PADU,high,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,23530a488479364e,latitude,53.900100708,,abstained,37.90630033333334,wrong,,abstained,PADU,high,high,high,1,1,0
+mistral-large-3,3,fewcot_5,24588b9fd5cc7825,commercial_flights,5356,23450.0,wrong,40333.333333333336,wrong,446800.0,wrong,LGSM,high,low,high,3,1,2
+mistral-large-3,3,fewcot_5,24dc4dc280c4c993,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,EDLD,low,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,24ff769941c40de9,runwaysLength,4921.0,"[{'length': 13131, 'runway': '07C/25C'}, {'length': 9192, 'runway': '07L/25R'}, {'length': 13131, 'runway': '07R/25L'}, {'length': 13080, 'runway': '18/36'}, {'length': 4000, 'runway': '07C/25C'}, {'length': 2800, 'runway': '07L/25R'}, {'length': 4000, 'runway': '07R/25L'}, {'length': 4000, 'runway': '18'}, {'length': 13123, 'runway': '07C/25C'}, {'length': 13123, 'runway': '18/36'}, {'length': 2800, 'runway': '07L/25R'}, {'length': 4000, 'runway': '07R/25L'}] ft",wrong,4000.0,correct,3000.0,wrong,EDLD,low,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,253aa2e39cb05d44,country,United States,United States,correct,United States of America,wrong,United States of America,wrong,PADU,high,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,291bec56a6238d05,commercial_flights,0,67969.0,wrong,14000.0,wrong,482.0,wrong,LSMF,low,low,high,5,5,0
+mistral-large-3,3,fewcot_5,2a0fa36e77de8da8,distCity,14448566.677822953,10000 metres,wrong,666.6666666666666,wrong,7166.666666666667,wrong,YBAM,mid,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,2a277cb5b0c4bdc9,runwaysWidth,148.0,45 m,correct,45.0,wrong,45.0,wrong,LDPL,high,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,2aca50309660da2b,runwaysWidth,148.0,60 metres,correct,45.0,wrong,45.0,wrong,SBAR,high,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,2b7efc68a2659b20,tz_database_timezone,America/Tortola,,abstained,,abstained,,abstained,TUPW,mid,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,2c55bb6f7a9d0c36,commercial_flights,48539,51448.0,correct,61333.333333333336,correct,55000.0,correct,LEBB,high,low,high,3,1,2
+mistral-large-3,3,fewcot_5,2d190cd6441fcdab,dst,E,E,correct,A,wrong,N,wrong,LIPR,mid,high,low,5,1,4
+mistral-large-3,3,fewcot_5,2d5c36f848e2bc78,commercial_flights,280,138.0,wrong,0.0,wrong,,abstained,LIBG,low,low,mid,5,1,4
+mistral-large-3,3,fewcot_5,2df9d76e6cd9f7f6,runways,1.0,1.0,correct,1.6666666666666667,wrong,1.0,correct,LIPR,mid,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,2fca4a55f455826f,distCity,8796.15474899182,6 km,wrong,0.0,wrong,,abstained,UKOH,low,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,32628949e04d420b,runways,1.0,"[{'designation': '10/28', 'length': 5462, 'width': 98, 'surface': 'asphalt/grooved', 'elevation_runway_10': 124.0, 'elevation_runway_28': 72.0, 'heading_magnetic_runway_10': 105, 'heading_true_runway_10': 91, 'heading_magnetic_runway_28': 285, 'heading_true_runway_28': 271, 'displaced_threshold_runway_10': 498, 'displaced_threshold_runway_28': 498, 'declared_distances_runway_10': {'TORA': 4964, 'TODA': 4964, 'ASDA': 4964, 'LDA': 4472}, 'declared_distances_runway_28': {'TORA': 4964, 'TODA': 4964, 'ASDA': 4964, 'LDA': 4472}}] ft",wrong,1.0,correct,"1 (primary runway length: 5,462 m)",correct,YBAM,mid,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,3324023f5468b67c,country,United States,United States,correct,United States,correct,United States of America,wrong,PADU,high,high,high,5,2,3
+mistral-large-3,3,fewcot_5,3599d3d2304bc581,commercial_flights,3168,,abstained,12232.0,wrong,12269.666666666666,wrong,LTAY,mid,low,low,3,0,3
+mistral-large-3,3,fewcot_5,36cd9d631dafc791,city,Spanish Town,Mayagüez,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,37ab84abe6f32772,icao,LFQA,,abstained,LEMG,wrong,EDDB,wrong,LFQA,low,high,low,3,1,2
+mistral-large-3,3,fewcot_5,37c85aac3ed51a89,city,Reims,,abstained,Trapani,wrong,"Frankfurt (for Frankfurt Airport, Germany)",wrong,LFQA,low,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,39b48228aaf1284c,runways,1.0,"[{'designation': '03/21', 'length': 8202, 'width': 138, 'surface': 'asphalt/concrete'}] {'length': 'ft', 'width': 'ft'}",wrong,1.0,correct,1.0,correct,UKOH,low,mid,mid,5,2,3
+mistral-large-3,3,fewcot_5,3a1c78d73f916a80,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,YWWL,low,high,mid,3,3,0
+mistral-large-3,3,fewcot_5,3a9d7851210b5f80,commercial_flights,3168,258.0,wrong,2200.0,wrong,1200.0,wrong,LTAY,mid,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,3c345711d9b81f43,commercial_flights,3168,23870.0,wrong,"Unknown (European airports only; no specific data found for airports with DST code ""E"" without additional identifiers like IATA/ICAO)",wrong,,abstained,LTAY,mid,low,high,3,1,2
+mistral-large-3,3,fewcot_5,3e9ac6334bda31d2,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,Trollhättan,wrong,Söderhamn,wrong,SEST,high,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,3eabf7027e340313,name,Northern Peninsula Airport,RAAF Base Amberley,wrong,"Amberley, Queensland",wrong,"Amberley, Australia",wrong,YBAM,mid,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,40e8332f167b4cde,runways,1.0,,abstained,1.0,correct,1.0,correct,LIBG,low,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,42e0dce0e45312dc,commercial_flights,3017,1503461.0,wrong,U,wrong,,abstained,LIPR,mid,low,high,3,1,2
+mistral-large-3,3,fewcot_5,42f6c9da69668486,timezone,-9,-9.0,correct,-9.0,correct,-9.0,correct,PADU,high,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,43e9cf600bd14cda,timezone,-9,-6.0,wrong,1.0,wrong,1.0,wrong,PADU,high,high,high,3,1,2
+mistral-large-3,3,fewcot_5,44d2c92191e1681b,commercial_flights,280,865.0,wrong,1780087.6666666667,wrong,214837.33333333334,wrong,LIBG,low,low,high,3,1,2
+mistral-large-3,3,fewcot_5,46aec55fce126803,name,Samos Airport,,abstained,Tirana International Airport Nënë Tereza,wrong,Amsterdam Airport Schiphol,wrong,LGSM,high,high,low,1,1,0
+mistral-large-3,3,fewcot_5,47abad7e29ea733e,tz_database_timezone,America/Tortola,America/Santo_Domingo,wrong,America/Argentina/Ushuaia,wrong,America/Argentina/Ushuaia,wrong,TUPW,mid,high,high,5,1,4
+mistral-large-3,3,fewcot_5,488523559e83a6a1,altitude,62.0,62 ft,correct,1899.0,wrong,2400.0,wrong,SEST,high,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,4a46dfb947826e28,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,3,0,3
+mistral-large-3,3,fewcot_5,4b7ab1f37a4b6bfc,commercial_flights,1937,,abstained,89333.33333333333,wrong,105582.0,wrong,LFRZ,low,low,high,3,3,0
+mistral-large-3,3,fewcot_5,4c1f1e2dddfb1355,commercial_flights,5841,,abstained,5400.0,correct,1333.3333333333333,wrong,LDPL,high,low,high,1,1,0
+mistral-large-3,3,fewcot_5,4e2b211f93f63ac2,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,4e64ef49b878804b,city,Rimini,Denpasar,wrong,Tegucigalpa,wrong,Anchorage,wrong,LIPR,mid,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,4f059e71935e5aa3,city,Rimini,,abstained,Tétouan,wrong,Istanbul,wrong,LIPR,mid,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,4f61db667a8b608b,latitude,44.89350128173828,44.8935 degrees,correct,45.76693333333333,wrong,45.79033333333333,wrong,LDPL,high,high,low,5,1,4
+mistral-large-3,3,fewcot_5,52f4d2bc7ae943e9,commercial_flights,5356,,abstained,,abstained,,abstained,LGSM,high,low,low,1,0,1
+mistral-large-3,3,fewcot_5,534a4c12fbf83f0c,iata,TAR,,abstained,TLS,wrong,,abstained,LIBG,low,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,555ce0e3c18330d5,city,West Wyalong,,abstained,Unknown (Generic Airport),wrong,,abstained,YWWL,low,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,5709a047069b10e5,runwaysWidth,148.0,45 m,correct,45.0,wrong,45.0,wrong,LIPR,mid,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,575381cbc5d60097,runwaysWidth,66.0,148 ft,wrong,45.0,wrong,45.0,wrong,SEST,high,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,5783e554ddcefdaf,commercial_flights,3168,,abstained,266666.6666666667,wrong,241733.33333333334,wrong,LTAY,mid,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,57bb12149cb2d370,commercial_flights,48539,37187.666666666664,correct,,abstained,8527.0,wrong,LEBB,high,low,low,1,0,1
+mistral-large-3,3,fewcot_5,5959c65c56846bac,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,LIPR,mid,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,59efaf55f7445f8e,runways,1.0,"[{'direction': '16L/34R', 'length': 3750, 'surface': 'Asphalt'}, {'direction': '16R/34L', 'length': 3750, 'surface': 'Asphalt'}, {'direction': '17L/35R', 'length': 4100, 'surface': 'Asphalt'}, {'direction': '17R/35L', 'length': 4100, 'surface': 'Asphalt'}, {'direction': '18/36', 'length': 3060, 'surface': 'Asphalt/Concrete'}, {'direction': '09/27', 'length': 2819, 'surface': 'Concrete'}] m",wrong,2.6666666666666665,wrong,3.0,wrong,LTAY,mid,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,5accd061b8325ffe,commercial_flights,48539,,abstained,,abstained,303270.3333333333,wrong,LEBB,high,low,low,3,0,3
+mistral-large-3,3,fewcot_5,5b50df3658943907,commercial_flights,5356,,abstained,35186.0,wrong,35186.0,wrong,LGSM,high,low,low,3,0,3
+mistral-large-3,3,fewcot_5,5b64b4ff5498533d,altitude,859.0,13 ft,wrong,0.0,wrong,35.0,wrong,YWWL,low,high,high,5,5,0
+mistral-large-3,3,fewcot_5,5bafab6786fc094c,runwaysWidth,98.0,98 ft,correct,,abstained,,abstained,EDLD,low,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,5db565bf7cea6cda,runwaysLength,3879.5,"['2559 x 59', '5200 x 98'] ft",wrong,1266.6666666666667,wrong,1199.3333333333333,wrong,YWWL,low,mid,high,5,5,0
+mistral-large-3,3,fewcot_5,5e5db2a9c95816b9,commercial_flights,3017,,abstained,,abstained,113905.66666666667,wrong,LIPR,mid,low,low,3,0,3
+mistral-large-3,3,fewcot_5,5ea9d4094994e820,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,1,0,1
+mistral-large-3,3,fewcot_5,6002536615488533,latitude,53.900100708,49.4628,wrong,No high-confidence value found,wrong,,abstained,PADU,high,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,604517a11d5c568a,country,Ukraine,,abstained,India,wrong,India,wrong,UKOH,low,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,611e83dd38f302c2,commercial_flights,3767,86693.33333333333,wrong,12500.0,wrong,7733.333333333333,wrong,ESNZ,mid,low,mid,5,2,3
+mistral-large-3,3,fewcot_5,61ad9efa2b5b689d,commercial_flights,5356,484000.0,wrong,483609.0,wrong,307000.0,wrong,LGSM,high,low,low,5,0,5
+mistral-large-3,3,fewcot_5,6375e8089be1747d,runwaysLength,3879.5,"[2559, 5200] ft",wrong,1133.3333333333333,wrong,"1646, 1067",wrong,YWWL,low,mid,mid,3,3,0
+mistral-large-3,3,fewcot_5,658a453afb6526ee,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,3,0,3
+mistral-large-3,3,fewcot_5,677b24d92b6852c9,source,OurAirports,OurAirports,correct,Eurostat airport statistics,wrong,Eurostat airport statistics,wrong,LDPL,high,high,low,3,1,2
+mistral-large-3,3,fewcot_5,68678ce03ce9aedc,runways,1.0,"[{'runway': '04/22', 'length': 4997, 'width': 148, 'surface': 'PEM', 'lighted': True}, {'runway': '15/33', 'length': 10000, 'width': 150, 'surface': 'ASP', 'lighted': True}] ft",wrong,1.3333333333333333,correct,2.0,wrong,YBAM,mid,mid,mid,5,1,4
+mistral-large-3,3,fewcot_5,68c95271551c448b,commercial_flights,3767,212674.33333333334,wrong,Unknown (Eurostat data unavailable for non-European airports),wrong,,abstained,ESNZ,mid,low,high,3,1,2
+mistral-large-3,3,fewcot_5,68d615c27dcc4ba6,commercial_flights,48539,,abstained,55000.0,correct,,abstained,LEBB,high,low,high,5,1,4
+mistral-large-3,3,fewcot_5,690d2602b54a7326,runwaysWidth,138.0,138 ft,correct,45.0,wrong,45.0,wrong,UKOH,low,mid,high,3,3,0
+mistral-large-3,3,fewcot_5,69c0415d592230f0,tz_database_timezone,Europe/Rome,Europe/Rome,correct,Europe/Rome,correct,Europe/Rome,correct,LIPR,mid,high,high,1,1,0
+mistral-large-3,3,fewcot_5,6b925692bbc6eeb6,iata,TAR,LJMB,wrong,EBL,wrong,GVA,wrong,LIBG,low,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,6eab58730a15005c,country,Brazil,United States,wrong,Morocco,wrong,Global (Airport Infrastructure),wrong,SBAR,high,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,6f4e8fed84a51980,source,OurAirports,OurAirports,correct,OurAirports,correct,OurAirports,correct,YWWL,low,high,high,3,3,0
+mistral-large-3,3,fewcot_5,70b7ae2748e2d635,commercial_flights,1937,,abstained,0.0,wrong,,abstained,LFRZ,low,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,726ba92985ccced5,country,France,France,correct,Malta,wrong,Slovenia,wrong,LFQA,low,high,low,5,1,4
+mistral-large-3,3,fewcot_5,72c65ecc4148395c,runwaysWidth,98.0,98 ft,correct,,abstained,,abstained,EDLD,low,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,739f4c57a3fb3ce6,commercial_flights,5356,4867.0,correct,3066.6666666666665,wrong,2266.6666666666665,wrong,LGSM,high,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,740d7a41da771521,commercial_flights,3168,,abstained,386000.0,wrong,,abstained,LTAY,mid,low,high,1,1,0
+mistral-large-3,3,fewcot_5,74595c7842bd2702,commercial_flights,5841,,abstained,,abstained,232126.0,wrong,LDPL,high,low,low,3,0,3
+mistral-large-3,3,fewcot_5,75c94df1f8e7c044,iata,VIJ,KIN,wrong,JMA,wrong,,abstained,TUPW,mid,mid,mid,5,1,4
+mistral-large-3,3,fewcot_5,788e50d1e05150f4,country,Ukraine,Ukraine,correct,Ukraine,correct,Ukraine,correct,UKOH,low,high,high,5,4,1
+mistral-large-3,3,fewcot_5,78d5fa34c478a1b7,country,France,,abstained,India,wrong,Turkey,wrong,LFOV,low,high,low,5,1,4
+mistral-large-3,3,fewcot_5,792b7669ff7e222e,runwaysLength,6706.0,3000 m,wrong,3200;2750,wrong,4000;3600,wrong,LGSM,high,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,7b8e0b49350e5f8b,country,Brazil,Portugal,wrong,Portugal,wrong,Brazil,correct,SBAR,high,high,high,5,1,4
+mistral-large-3,3,fewcot_5,7ca73663d32ad809,runwaysWidth,101.0,"[61, 61, 46, 46] m",wrong,45.0,wrong,45.0,wrong,ESNZ,mid,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,7df1a5e39466884a,commercial_flights,0,,abstained,,abstained,,abstained,LSMF,low,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,7e23310c4c06759f,city,West Wyalong,Hanford,wrong,Tangier,wrong,,abstained,YWWL,low,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,7e2ec384a145441c,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,5,0,5
+mistral-large-3,3,fewcot_5,7e9c9117ddcecaa8,runwaysWidth,148.0,35 m,correct,45.0,wrong,45.0,wrong,SBAR,high,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,804b8d6fc48fc662,city,Spanish Town,Montego Bay,wrong,Nouakchott,wrong,Port-au-Prince,wrong,TUPW,mid,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,809b3379829f3567,icao,UKOH,UKOH,correct,UKOH,correct,UKOH,correct,UKOH,low,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,8329e70cbe436788,latitude,37.68999862670898,44.94139,wrong,48.06726666666666,wrong,52.308613,wrong,LGSM,high,high,low,5,1,4
+mistral-large-3,3,fewcot_5,83c9a51e429b0ead,source,OurAirports,OurAirports,correct,OurAirports,correct,,abstained,EDLD,low,high,high,3,1,2
+mistral-large-3,3,fewcot_5,8481c235bd0200d0,distCity,7506.017230666509,12000 metres,wrong,12000.0,wrong,10500.0,wrong,SBAR,high,mid,high,5,1,4
+mistral-large-3,3,fewcot_5,84e14e8caf9a0ae0,runwaysWidth,148.0,"148, 197 ft",correct,45.0,wrong,45.0,wrong,LIPR,mid,mid,high,5,1,4
+mistral-large-3,3,fewcot_5,87073059e63c84fd,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,8729549ba7b599d6,dst,E,E,correct,E,correct,E,correct,LIPR,mid,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,874d9908f64bda80,icao,UKOH,UKBB,wrong,UKLL,wrong,UKBB,wrong,UKOH,low,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,88f28528b0d60bf8,commercial_flights,5356,268301.0,wrong,230193.0,wrong,80764.66666666667,wrong,LGSM,high,low,mid,5,1,4
+mistral-large-3,3,fewcot_5,89623d123ebb016d,commercial_flights,5841,,abstained,8733.333333333334,wrong,,abstained,LDPL,high,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,89cf93370f16c670,commercial_flights,48539,,abstained,Not available for non-European airports,wrong,,abstained,LEBB,high,low,mid,5,1,4
+mistral-large-3,3,fewcot_5,8a8b1d4e9fca4c69,commercial_flights,5356,,abstained,234430.33333333334,wrong,259000.0,wrong,LGSM,high,low,high,5,1,4
+mistral-large-3,3,fewcot_5,8b1518260afa7646,tz_database_timezone,America/Tortola,America/Tortola,correct,America/St_Thomas,wrong,America/Port_of_Spain,wrong,TUPW,mid,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,8c1bfb7d2c34b34e,dst,E,,abstained,N,wrong,U,wrong,LIBG,low,high,low,3,1,2
+mistral-large-3,3,fewcot_5,8c8d3d5800de3461,commercial_flights,0,,abstained,2966.6666666666665,wrong,4333.333333333333,wrong,LSMF,low,low,high,3,3,0
+mistral-large-3,3,fewcot_5,906a58f00773015f,source,OurAirports,OurAirports,correct,ISO 3166-1,wrong,CIA World Factbook (2023),wrong,LIPR,mid,high,high,3,1,2
+mistral-large-3,3,fewcot_5,90c69a4b6edbefde,commercial_flights,48539,53734.0,correct,45000.0,correct,38333.333333333336,correct,LEBB,high,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,90e383d8e1029173,distCity,14448566.677822953,5000.0 m,wrong,47666.666666666664,wrong,4733.333333333333,wrong,YBAM,mid,mid,mid,3,3,0
+mistral-large-3,3,fewcot_5,950d73994e7be07e,tz_database_timezone,Europe/Rome,Europe/Amsterdam,wrong,,abstained,,abstained,LIPR,mid,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,95c02d0737fd8405,icao,UKOH,UKOH,correct,UKOH,correct,UKOH,correct,UKOH,low,high,high,3,1,2
+mistral-large-3,3,fewcot_5,987c8f4d2b09c1ee,runways,1.0,"[{'name': '13/31', 'length': 4500, 'width': 100, 'surface': 'asphalt', 'condition': 'fair', 'lighting': {'edgeLights': 'Medium', 'REIL': True, 'centerlineLights': False, 'VASI': '4-Box/Left-Side VASI for Rwy 13, 4-Box/Right-Side VASI for Rwy 31'}, 'markings': {'type': 'basic', 'condition': 'Good'}, 'displacedThreshold': 300, 'obstructions': [{'type': 'Boat', 'position': 'Both-Sides', 'height': 105, 'distanceFromEnd': 1500, 'clearanceSlope': '14:1'}, {'type': 'Boat', 'position': 'Both-Sides', 'height': 200, 'distanceFromEnd': 1220, 'clearanceSlope': '6:1'}]}] {'length': 'ft', 'width': 'ft', 'height': 'ft', 'distanceFromEnd': 'ft'}",wrong,1.0,correct,1.0,correct,PADU,high,mid,mid,5,2,3
+mistral-large-3,3,fewcot_5,9883056ad976f45f,runways,1.0,,abstained,1.0,correct,,abstained,LFOV,low,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,9c145b93e28b7a45,iata,VIJ,VIJ,correct,VIJ,correct,VIJ,correct,TUPW,mid,mid,high,5,1,4
+mistral-large-3,3,fewcot_5,9e26f900e1daaa53,commercial_flights,3168,4836.0,wrong,1733.3333333333333,wrong,940.0,wrong,LTAY,mid,low,high,5,1,4
+mistral-large-3,3,fewcot_5,9e9ce22beaaae6d4,distCity,7506.017230666509,12000.0 metres,wrong,8000.0,correct,7000.0,correct,SBAR,high,mid,mid,5,1,4
+mistral-large-3,3,fewcot_5,9f78abeb92a5da4e,commercial_flights,1937,9598.0,wrong,4000.0,wrong,1133.3333333333333,wrong,LFRZ,low,low,high,5,5,0
+mistral-large-3,3,fewcot_5,9f7aadbc77fa3e56,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,low,1,0,1
+mistral-large-3,3,fewcot_5,a06f1a9386482f5a,source,OurAirports,OurAirports,correct,Eurostat airport statistics,wrong,Legacy,wrong,LIPR,mid,high,low,3,1,2
+mistral-large-3,3,fewcot_5,a1cdcf413fb07b71,commercial_flights,1937,9598.0,wrong,1500.0,correct,1000.0,wrong,LFRZ,low,low,mid,5,5,0
+mistral-large-3,3,fewcot_5,a2f362c1523c8087,commercial_flights,3017,,abstained,,abstained,138333.33333333334,wrong,LIPR,mid,low,mid,5,1,4
+mistral-large-3,3,fewcot_5,a325d4df1fd44b66,runways,1.0,5.0,wrong,2.3333333333333335,wrong,2.0,wrong,LTAY,mid,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,a3d55f98abf0bca4,runways,1.0,1.0,correct,1.0,correct,1.0,correct,ENSR,mid,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,a42b3a1d5f39d335,commercial_flights,1937,9598.0,wrong,5000.0,wrong,1500.0,correct,LFRZ,low,low,mid,3,3,0
+mistral-large-3,3,fewcot_5,a4b322be7d79d185,runwaysLength,4921.0,3800 m,wrong,"3023, 2424",wrong,,abstained,EDLD,low,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,a56fa21bbb756d0f,tz_database_timezone,Europe/Paris,,abstained,Europe/Paris,correct,,abstained,LFRZ,low,high,low,1,1,0
+mistral-large-3,3,fewcot_5,a60e21be305e884d,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,1,0,1
+mistral-large-3,3,fewcot_5,a74eb8b98496990e,icao,YBAM,TQPF,wrong,VOTP,wrong,LGAV,wrong,YBAM,mid,high,mid,3,2,1
+mistral-large-3,3,fewcot_5,a9a5ab0ef3ac173e,runways,1.0,"[{'name': '07-25', 'length': 8300, 'width': 148, 'surface': 'paved (asphalt)', 'lighted': True, 'threshold_displacement': {'25': 324}}, {'name': '16L-34R', 'length': 7999, 'width': 148, 'surface': 'paved (asphalt)', 'lighted': True, 'threshold_displacement': {'16L': 758, '34R': 125}}, {'name': '16R-34L', 'length': 12999, 'width': 148, 'surface': 'paved (asphalt)', 'lighted': True, 'threshold_displacement': {'16R': 279}}] ft",wrong,,abstained,,abstained,YBAM,mid,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,a9a946b80d81da96,longitude,6.865278,8.55835,wrong,5.2913,wrong,11.986575333333334,wrong,EDLD,low,high,mid,5,1,4
+mistral-large-3,3,fewcot_5,aa24de5f407711d4,altitude,138.0,203 FT,wrong,129.33333333333334,correct,,abstained,LEBB,high,high,low,3,1,2
+mistral-large-3,3,fewcot_5,ab34b0e9ba18e71f,commercial_flights,48539,,abstained,Not available (Eurostat data limited to European airports only),wrong,,abstained,LEBB,high,low,high,1,1,0
+mistral-large-3,3,fewcot_5,ab447910c9128b49,icao,YBAM,YBCS,wrong,YBCS,wrong,YBBN,wrong,YBAM,mid,high,high,3,3,0
+mistral-large-3,3,fewcot_5,abdbc64108d74104,commercial_flights,1151,,abstained,8138.0,wrong,263000.0,wrong,ENSR,mid,low,low,5,0,5
+mistral-large-3,3,fewcot_5,ad198b9901ccf9e0,commercial_flights,280,3660953.0,wrong,11733.333333333334,wrong,12000.0,wrong,LIBG,low,low,high,5,2,3
+mistral-large-3,3,fewcot_5,af37720cc9e1baa8,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,3,0,3
+mistral-large-3,3,fewcot_5,af9b404341a8f59f,iata,SNR,PRG,wrong,TFS,wrong,,abstained,LFRZ,low,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,b08fa90bd27bfd17,commercial_flights,1937,35.0,wrong,126000.0,wrong,267000.0,wrong,LFRZ,low,low,high,1,1,0
+mistral-large-3,3,fewcot_5,b0f1d6239366f457,icao,SEST,,abstained,,abstained,IATA_CODES_VARIED,wrong,SEST,high,high,high,1,1,0
+mistral-large-3,3,fewcot_5,b1ffcf47ce531097,runways,1.0,"[{'direction': '13/31', 'length': 4500, 'width': 100, 'surface': 'asphalt', 'lighted': True, 'threshold_displaced': {'13': 100, '31': 101}}] {'length': 'ft', 'width': 'ft', 'threshold_displaced': 'ft'}",wrong,1.0,correct,1.0,correct,PADU,high,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,b2f03aa443cbc88e,city,Dinslaken,Lautzenhausen,wrong,Frankfurt,wrong,Frankfurt,wrong,EDLD,low,mid,high,5,4,1
+mistral-large-3,3,fewcot_5,b30b70504aa05d8a,tz_database_timezone,America/Tortola,,abstained,Africa/Casablanca,wrong,,abstained,TUPW,mid,high,high,1,1,0
+mistral-large-3,3,fewcot_5,b506bd1f8371e5d1,commercial_flights,48539,,abstained,,abstained,405515.6666666667,wrong,LEBB,high,low,low,5,0,5
+mistral-large-3,3,fewcot_5,b5dd97c6e89433ba,commercial_flights,3017,,abstained,0.0,wrong,,abstained,LIPR,mid,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,b6f38b6bbbd6c643,type,airport,airport,correct,airport,correct,airport,correct,YWWL,low,high,high,1,1,0
+mistral-large-3,3,fewcot_5,b860deb662188eb3,type,airport,airport,correct,airport,correct,airport,correct,EDLD,low,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,b8d6e0cc7416f053,distCity,1880.9420239134909,,abstained,0.0,wrong,,abstained,LSMF,low,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,bb39bb6750619d00,runwaysLength,7398.0,13123 ft,wrong,3433.3333333333335,wrong,3200.0,wrong,LEBB,high,mid,low,5,1,4
+mistral-large-3,3,fewcot_5,bcbccfea14ce6d9e,commercial_flights,5841,437000.0,wrong,436000.0,wrong,222233.33333333334,wrong,LDPL,high,low,low,5,0,5
+mistral-large-3,3,fewcot_5,bcc35c16ec536415,altitude,859.0,859 ft,correct,262.0,wrong,,abstained,YWWL,low,high,mid,5,5,0
+mistral-large-3,3,fewcot_5,bdb1deb25c08a76e,runwaysLength,3879.5,"1585 x 30, 780 x 18 m",wrong,"1300,1080",wrong,"800, 1000",wrong,YWWL,low,mid,mid,5,5,0
+mistral-large-3,3,fewcot_5,be5212696ad571cc,timezone,-6,-5.0,correct,-5.0,correct,-5.0,correct,SEST,high,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,bf4d3ba357b12954,commercial_flights,3017,,abstained,12000.0,wrong,9000.0,wrong,LIPR,mid,low,high,5,1,4
+mistral-large-3,3,fewcot_5,bf9866dc7896c660,timezone,-4,-3.6666666666666665,correct,-5.0,correct,-5.0,correct,TUPW,mid,high,mid,3,1,2
+mistral-large-3,3,fewcot_5,c0293d15521c3d76,runwaysWidth,66.0,151 ft,wrong,45.0,wrong,45.0,wrong,SEST,high,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,c1ad55428099bc8e,tz_database_timezone,America/Fortaleza,Atlantic/Azores,wrong,Atlantic/Madeira,wrong,America/Sao_Paulo,wrong,SBAR,high,high,high,1,1,0
+mistral-large-3,3,fewcot_5,c2bdaa77866c4a36,commercial_flights,5841,7804.0,wrong,35000.0,wrong,10000.0,wrong,LDPL,high,low,high,5,1,4
+mistral-large-3,3,fewcot_5,c37478e2a709ca5f,commercial_flights,0,,abstained,"(No high-confidence data available for generic ""airport"" without specific identifier)",wrong,,abstained,LSMF,low,low,high,1,1,0
+mistral-large-3,3,fewcot_5,c3932857c60d6ddc,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,1,0,1
+mistral-large-3,3,fewcot_5,c4f6617e86fa4350,longitude,29.7012996674,,abstained,79.5433,wrong,,abstained,LTAY,mid,high,low,3,1,2
+mistral-large-3,3,fewcot_5,c80d8524a445ba94,commercial_flights,3767,76000.0,wrong,,abstained,159369.0,wrong,ESNZ,mid,low,low,1,0,1
+mistral-large-3,3,fewcot_5,c921b3b0221ca7ff,city,Rimini,,abstained,Warsaw,wrong,"Unknown (DST code ""E"" applies to multiple cities in Eastern Europe)",wrong,LIPR,mid,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,c9feb55120d967a3,commercial_flights,3767,,abstained,142500.0,wrong,,abstained,ESNZ,mid,low,high,1,1,0
+mistral-large-3,3,fewcot_5,cb30ecfd9762cb9e,longitude,29.7012996674,,abstained,-16.5725,wrong,,abstained,LTAY,mid,high,low,1,1,0
+mistral-large-3,3,fewcot_5,cbea0a3196fc723d,timezone,-6,-5.0,correct,-5.0,correct,-5.0,correct,SEST,high,high,high,3,1,2
+mistral-large-3,3,fewcot_5,cbed7541cf8fe34b,commercial_flights,5356,1944.3333333333333,wrong,1230.6666666666667,wrong,1146.6666666666667,wrong,LGSM,high,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,cc7e42c7b6d8c9d4,source,OurAirports,OurAirports,correct,Eurostat airport statistics,wrong,OurAirports,correct,ESNZ,mid,high,low,3,1,2
+mistral-large-3,3,fewcot_5,cd3f12b0d61e0127,commercial_flights,3017,,abstained,222000.0,wrong,246500.0,wrong,LIPR,mid,low,mid,1,1,0
+mistral-large-3,3,fewcot_5,cf071bcdc01c34c4,commercial_flights,5356,345300.3333333333,wrong,379575.6666666667,wrong,49315.5,wrong,LGSM,high,low,high,1,1,0
+mistral-large-3,3,fewcot_5,cf25533f5fbb016c,timezone,-4,,abstained,U,wrong,-5.0,correct,TUPW,mid,high,high,3,1,2
+mistral-large-3,3,fewcot_5,d0f3a69d4cd32cb0,latitude,40.517502,,abstained,35.7269,wrong,,abstained,LIBG,low,high,low,1,1,0
+mistral-large-3,3,fewcot_5,d156060d44b6e457,tz_database_timezone,Europe/Rome,,abstained,Europe/Paris,wrong,,abstained,LIPR,mid,high,low,1,1,0
+mistral-large-3,3,fewcot_5,d2d11794b4e69682,runwaysLength,7218.0,2500 m,correct,2700.0,wrong,2812.6666666666665,wrong,SBAR,high,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,d35bdffeed699d78,runways,1.0,1.0,correct,2.0,wrong,1.0,correct,PADU,high,mid,high,5,2,3
+mistral-large-3,3,fewcot_5,d3861ced1129772e,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,5,0,5
+mistral-large-3,3,fewcot_5,d3acf54d0de77869,altitude,138.0,,abstained,364.0,wrong,,abstained,LEBB,high,high,low,1,1,0
+mistral-large-3,3,fewcot_5,d54e83aeef2408da,commercial_flights,5841,11200000 annual number of passengers (proxy for commercial flights activity),wrong,479413.3333333333,wrong,194000.0,wrong,LDPL,high,low,mid,5,1,4
+mistral-large-3,3,fewcot_5,d5c66bf26f69666f,runwaysWidth,148.0,75 ft,wrong,45.0,wrong,45.0,wrong,LDPL,high,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,d8d13eb74868a313,runwaysLength,4500.0,4500 ft,correct,7596.666666666667,wrong,"6000, 5000",correct,PADU,high,mid,high,3,1,2
+mistral-large-3,3,fewcot_5,d9fc84501a7c6421,longitude,6.865278,7.2638913333333335,wrong,13.377726000000001,wrong,11.203704,wrong,EDLD,low,high,high,5,3,2
+mistral-large-3,3,fewcot_5,da4f63bb8b1b0500,runwaysWidth,148.0,150 feet,correct,55.0,wrong,45.0,wrong,LEBB,high,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,db2629977951430b,distCity,9434.15362332344,5900 m,wrong,9333.333333333334,correct,28500.0,wrong,LGSM,high,mid,low,1,1,0
+mistral-large-3,3,fewcot_5,dc3808847e176d18,latitude,44.89350128173828,,abstained,35.7269,wrong,51.839542,wrong,LDPL,high,high,low,1,1,0
+mistral-large-3,3,fewcot_5,ded98c8fcbfec46c,distCity,2158896.099702787,20000 m,wrong,,abstained,25000.0,wrong,SEST,high,mid,high,5,1,4
+mistral-large-3,3,fewcot_5,e09f91c9d4b43c4a,distCity,8796.15474899182,6000 metres,wrong,9666.666666666666,correct,1600.0,wrong,UKOH,low,mid,high,1,1,0
+mistral-large-3,3,fewcot_5,e15aa3e57a386321,runwaysLength,7398.0,"[{'length': 3750, 'unit': 'm'}, {'length': 4100, 'unit': 'm'}, {'length': 3060, 'unit': 'm'}]",wrong,4500.0,wrong,4000;3658,wrong,LEBB,high,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,e1da6199bca3c4e7,icao,LEBB,ELLX,wrong,EGLL,wrong,,abstained,LEBB,high,high,low,5,1,4
+mistral-large-3,3,fewcot_5,e23a2ea7891a5725,city,Spanish Town,,abstained,São Paulo,wrong,Anchorage,wrong,TUPW,mid,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,e577242a8b459a82,type,airport,airport,correct,airport,correct,,abstained,EDLD,low,high,high,1,1,0
+mistral-large-3,3,fewcot_5,e59b67580986a154,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,San Cristóbal,correct,San Cristóbal,correct,SEST,high,mid,mid,1,1,0
+mistral-large-3,3,fewcot_5,e5bd8ea9d2f77823,longitude,142.459,142.4559074074,correct,145.41466333333332,wrong,145.40392466666665,wrong,YBAM,mid,high,mid,5,2,3
+mistral-large-3,3,fewcot_5,e6e7b5fe60710cfd,commercial_flights,3767,100932.0,wrong,250000.0,wrong,247666.66666666666,wrong,ESNZ,mid,low,high,5,1,4
+mistral-large-3,3,fewcot_5,e736ea68bfc10ded,name,Samos Airport,,abstained,Germany,wrong,Frankfurt Airport,wrong,LGSM,high,high,low,3,1,2
+mistral-large-3,3,fewcot_5,e7ec7ea5bd05ac2c,runwaysLength,6706.0,"[{'length': 3270, 'unit': 'm'}, {'length': 3000, 'unit': 'm'}, {'length': 3902, 'unit': 'm'}, {'length': 3660, 'unit': 'm'}]",wrong,4100;3500,wrong,4000;3688,wrong,LGSM,high,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,e989fca502c19da1,distCity,2158896.099702787,,abstained,24000.0,wrong,3035.0,wrong,SEST,high,mid,mid,5,1,4
+mistral-large-3,3,fewcot_5,ef0fc6eb6b7d600f,dst,E,E,correct,E,correct,E,correct,LIPR,mid,high,high,5,1,4
+mistral-large-3,3,fewcot_5,ef4ed149f3e5e2ad,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,3,0,3
+mistral-large-3,3,fewcot_5,f0b4477b6048c94d,commercial_flights,5841,477552.0,wrong,544666.6666666666,wrong,232666.66666666666,wrong,LDPL,high,low,mid,3,1,2
+mistral-large-3,3,fewcot_5,f0e699299c320551,type,airport,airport,correct,airport,correct,airport,correct,SBAR,high,high,high,3,1,2
+mistral-large-3,3,fewcot_5,f14b8a26a69520b7,commercial_flights,280,,abstained,25166.666666666668,wrong,6733.333333333333,wrong,LIBG,low,low,high,1,1,0
+mistral-large-3,3,fewcot_5,f173fd27d06956a8,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,low,1,0,1
+mistral-large-3,3,fewcot_5,f2c592d0b19f3de7,runways,1.0,"[{'runway': '14L-32R', 'dimensions': '9022 x 148 ft', 'surface': 'paved (asphalt)', 'lighted': True}, {'runway': '14R-32L', 'dimensions': '4625 x 148 ft', 'surface': 'paved (asphalt)', 'lighted': False}]",wrong,1.6666666666666667,wrong,2.0,wrong,YBAM,mid,mid,high,5,1,4
+mistral-large-3,3,fewcot_5,f2ecaf039d3ae208,commercial_flights,3168,,abstained,,abstained,223809.0,wrong,LTAY,mid,low,low,1,0,1
+mistral-large-3,3,fewcot_5,f2fe343c50294942,longitude,9.06482982635498,,abstained,,abstained,,abstained,LSMF,low,high,low,1,1,0
+mistral-large-3,3,fewcot_5,f3c44cf9d11c921b,latitude,48.03139877319336,52.35 degrees (N),wrong,35.7269,wrong,,abstained,LFOV,low,high,low,3,1,2
+mistral-large-3,3,fewcot_5,f56fbd2914f87106,runways,1.0,"[{'length': 10663, 'designation': '17/35 (originally 18/36)'}, {'length': 9828, 'designation': '03/21 (originally 03/21, later converted to taxiway)'}, {'length': 11138, 'designation': '16/34 (originally 17/35)'}, {'length': 12467, 'designation': '03/21 (new)'}] ft",wrong,1.0,correct,1.0,correct,LIPR,mid,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,f73a423ce34494de,icao,SEST,,abstained,KIAD,wrong,KEWR,wrong,SEST,high,high,mid,1,1,0
+mistral-large-3,3,fewcot_5,fad28c7ac309e584,runwaysLength,9678.0,,abstained,3533.3333333333335,wrong,4000.0,wrong,LDPL,high,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,fc4b4f742793259f,city,Östersund,,abstained,Tirana,wrong,Paris,wrong,ESNZ,mid,mid,low,3,1,2
+mistral-large-3,3,fewcot_5,fc62d245c20717dc,commercial_flights,402,879.0,wrong,0.0,wrong,,abstained,EGLK,low,low,mid,3,3,0
+mistral-large-3,3,fewcot_5,fd49c6094acb8389,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,mid,3,1,2
+mistral-large-3,3,fewcot_5,fd9df196bf041a56,commercial_flights,3017,,abstained,,abstained,121594.0,wrong,LIPR,mid,low,low,5,0,5
+mistral-large-3,3,fewcot_5,fe80f42a3df17a3e,commercial_flights,3017,,abstained,142500.0,wrong,,abstained,LIPR,mid,low,high,1,1,0
+mistral-large-3,3,fewcot_5,fe96f2b87a0aa0f2,country,Turkey,,abstained,India,wrong,Italy,wrong,LTAY,mid,high,low,5,1,4
+mistral-large-3,3,fewcot_5,feeb99f716638c26,runways,1.0,,abstained,1.3333333333333333,correct,1.0,correct,LTAY,mid,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,00d88c04ef3bda41,name,Northern Peninsula Airport,Northern Peninsula Airport,correct,Ararat Airport,wrong,Amberley Airport,wrong,YBAM,mid,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,018c9b09aa202afe,country,Norway,,abstained,India,wrong,IN,wrong,ENSR,mid,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,02766d961d6cd174,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,02b52a1198c97df2,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,047c65d4179df1f4,icao,LIBG,,abstained,OF,wrong,,abstained,LIBG,low,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,04ee095c23556e17,runwaysLength,7218.0,7218 ft,correct,,abstained,,abstained,SBAR,high,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,057429abe37bb1a0,type,airport,airport,correct,airport,correct,airport,correct,YWWL,low,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,071c93092efc0e8c,commercial_flights,3168,,abstained,231427.0,wrong,231427.0,wrong,LTAY,mid,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,07975c97ff6cbf15,icao,UKOH,,abstained,UKDE,wrong,UA,wrong,UKOH,low,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,0ad75c2755895136,altitude,62.0,207 ft,wrong,,abstained,,abstained,SEST,high,high,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,0d2d73a828b51d72,source,OurAirports,,abstained,Eurostat,wrong,OurAirports,correct,ESNZ,mid,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,1150e13e5d4db0ae,runwaysLength,5453.0,,abstained,3500.0,wrong,,abstained,LFOV,low,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,11def8660b3e9832,runways,1.0,,abstained,2.0,wrong,1.0,correct,LIPR,mid,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,1305e9b85a937e13,commercial_flights,136,,abstained,0.0,wrong,,abstained,LFOV,low,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,1359bb03395e49db,longitude,142.459,145.755278 degrees,wrong,145.755004883,wrong,145.755004883,wrong,YBAM,mid,high,high,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,1673998d744a9b6f,runways,1.0,,abstained,1.5,wrong,1.5,wrong,PADU,high,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,175e3546baa94139,commercial_flights,3168,,abstained,24576.0,wrong,0.0,wrong,LTAY,mid,low,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,1793984451a58351,runwaysLength,3879.5,,abstained,2400.0,wrong,1828.0,wrong,YWWL,low,mid,high,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,1862b7189640064c,runways,1.0,"08/26, 7579 x 148 ft, concrete, lighted, open",wrong,1.3333333333333333,correct,1.3333333333333333,correct,UKOH,low,mid,high,5,4,1
+deepseek-v4.1-flash,3,fewcot_5,18744a9fd04b25c9,commercial_flights,402,879 commercial movements in 2022,wrong,0.0,wrong,0.0,wrong,EGLK,low,low,mid,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,197c52a322ea759d,runwaysWidth,148.0,148 ft,correct,148.0,correct,,abstained,LIPR,mid,mid,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,19a46fffa88a0297,distCity,10070.299531668838,,abstained,,abstained,,abstained,LFQA,low,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,19a6197fe6efcad9,type,airport,medium_airport,wrong,airport,correct,,abstained,SBAR,high,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,1b6b1113751b5d44,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,1d0a8977a1629882,city,Dinslaken,Schönefeld,wrong,Berlin,wrong,,abstained,EDLD,low,mid,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,1d7ddde3591a40d4,runwaysWidth,138.0,,abstained,45.0,wrong,45.0,wrong,UKOH,low,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,1dde1ee1acb6be5d,commercial_flights,5841,,abstained,0.0,wrong,,abstained,LDPL,high,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,1f0772c6475fdcda,tz_database_timezone,America/Fortaleza,America/Maceio,wrong,America/Maceio,wrong,America/Maceio,wrong,SBAR,high,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,1f26b94f340a6174,runwaysLength,4500.0,,abstained,2000.0,wrong,,abstained,PADU,high,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,23530a488479364e,latitude,53.900100708,,abstained,33.3675,wrong,,abstained,PADU,high,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,24588b9fd5cc7825,commercial_flights,5356,16317 commercial aircraft movements,wrong,0.0,wrong,,abstained,LGSM,high,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,24dc4dc280c4c993,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,EDLD,low,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,24ff769941c40de9,runwaysLength,4921.0,"2800, 4000, 4000, 4000 m",wrong,4000.0,correct,,abstained,EDLD,low,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,253aa2e39cb05d44,country,United States,United States,correct,United States,correct,United States,correct,PADU,high,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,291bec56a6238d05,commercial_flights,0,,abstained,0.0,correct,0.0,correct,LSMF,low,low,high,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,2a0fa36e77de8da8,distCity,14448566.677822953,,abstained,11333.333333333334,wrong,5666.666666666667,wrong,YBAM,mid,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,2a277cb5b0c4bdc9,runwaysWidth,148.0,45 m,correct,,abstained,,abstained,LDPL,high,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,2aca50309660da2b,runwaysWidth,148.0,,abstained,45.0,wrong,,abstained,SBAR,high,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,2b7efc68a2659b20,tz_database_timezone,America/Tortola,,abstained,America/New_York,wrong,,abstained,TUPW,mid,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,2c55bb6f7a9d0c36,commercial_flights,48539,,abstained,53581.666666666664,correct,54157.666666666664,correct,LEBB,high,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,2d190cd6441fcdab,dst,E,,abstained,E,correct,U,wrong,LIPR,mid,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,2d5c36f848e2bc78,commercial_flights,280,,abstained,0.0,wrong,0.0,wrong,LIBG,low,low,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,2df9d76e6cd9f7f6,runways,1.0,12/30,wrong,2.0,wrong,2.0,wrong,LIPR,mid,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,2fca4a55f455826f,distCity,8796.15474899182,9 km,wrong,3766.6666666666665,wrong,1500.0,wrong,UKOH,low,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,32628949e04d420b,runways,1.0,5462 ft,wrong,1.0,correct,1821.3333333333333,wrong,YBAM,mid,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,3324023f5468b67c,country,United States,United States,correct,United States,correct,United States,correct,PADU,high,high,high,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,3599d3d2304bc581,commercial_flights,3168,,abstained,,abstained,12232.0,wrong,LTAY,mid,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,36cd9d631dafc791,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,37ab84abe6f32772,icao,LFQA,,abstained,,abstained,,abstained,LFQA,low,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,37c85aac3ed51a89,city,Reims,,abstained,,abstained,,abstained,LFQA,low,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,39b48228aaf1284c,runways,1.0,"03/21 8,202 x 138 ft (2,500 x 42 m) Concrete",wrong,1.3333333333333333,correct,2.3333333333333335,wrong,UKOH,low,mid,mid,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,3a1c78d73f916a80,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,YWWL,low,high,mid,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,3a9d7851210b5f80,commercial_flights,3168,,abstained,13112.0,wrong,0.0,wrong,LTAY,mid,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,3c345711d9b81f43,commercial_flights,3168,,abstained,0.0,wrong,,abstained,LTAY,mid,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,3e9ac6334bda31d2,city,San Cristóbal,San Cristóbal,correct,Puerto Baquerizo Moreno,wrong,Puerto Baquerizo Moreno,wrong,SEST,high,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,3eabf7027e340313,name,Northern Peninsula Airport,RAAF Base Amberley,wrong,Amberley,wrong,Amberley,wrong,YBAM,mid,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,40e8332f167b4cde,runways,1.0,,abstained,2.0,wrong,1.0,correct,LIBG,low,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,42e0dce0e45312dc,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,42f6c9da69668486,timezone,-9,-9 hours offset from UTC,correct,-9.333333333333334,correct,-9.0,correct,PADU,high,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,43e9cf600bd14cda,timezone,-9,,abstained,0.6666666666666666,wrong,1.0,wrong,PADU,high,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,44d2c92191e1681b,commercial_flights,280,,abstained,0.0,wrong,,abstained,LIBG,low,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,46aec55fce126803,name,Samos Airport,,abstained,London Heathrow Airport,wrong,,abstained,LGSM,high,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,47abad7e29ea733e,tz_database_timezone,America/Tortola,,abstained,America/St_Thomas,wrong,America/Port_of_Spain,wrong,TUPW,mid,high,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,488523559e83a6a1,altitude,62.0,62 ft,correct,1480.0,wrong,2800 m,wrong,SEST,high,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,4a46dfb947826e28,commercial_flights,41,,abstained,1.5,wrong,,abstained,LFQA,low,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,4b7ab1f37a4b6bfc,commercial_flights,1937,,abstained,0.0,wrong,,abstained,LFRZ,low,low,high,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,4c1f1e2dddfb1355,commercial_flights,5841,,abstained,12333.666666666666,wrong,0.0,wrong,LDPL,high,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,4e2b211f93f63ac2,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,4e64ef49b878804b,city,Rimini,Lanseria,wrong,,abstained,,abstained,LIPR,mid,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,4f059e71935e5aa3,city,Rimini,,abstained,Palma de Mallorca,wrong,,abstained,LIPR,mid,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,4f61db667a8b608b,latitude,44.89350128173828,43.53889 degrees,wrong,45.7429,wrong,45.7429,wrong,LDPL,high,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,52f4d2bc7ae943e9,commercial_flights,5356,,abstained,0.0,wrong,,abstained,LGSM,high,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,534a4c12fbf83f0c,iata,TAR,,abstained,LGW,wrong,,abstained,LIBG,low,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,555ce0e3c18330d5,city,West Wyalong,,abstained,,abstained,,abstained,YWWL,low,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,5709a047069b10e5,runwaysWidth,148.0,,abstained,45.0,wrong,45.0,wrong,LIPR,mid,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,575381cbc5d60097,runwaysWidth,66.0,151 ft,wrong,,abstained,45.0,wrong,SEST,high,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,5783e554ddcefdaf,commercial_flights,3168,,abstained,,abstained,,abstained,LTAY,mid,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,57bb12149cb2d370,commercial_flights,48539,,abstained,8527.0,wrong,8527.0,wrong,LEBB,high,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,5959c65c56846bac,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,LIPR,mid,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,59efaf55f7445f8e,runways,1.0,5.0,wrong,3.0,wrong,1.0,correct,LTAY,mid,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,5accd061b8325ffe,commercial_flights,48539,,abstained,,abstained,342811.0,wrong,LEBB,high,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,5b50df3658943907,commercial_flights,5356,,abstained,35186.0,wrong,35186.0,wrong,LGSM,high,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,5b64b4ff5498533d,altitude,859.0,,abstained,12.0,wrong,16.5,wrong,YWWL,low,high,high,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,5bafab6786fc094c,runwaysWidth,98.0,30 m,correct,,abstained,,abstained,EDLD,low,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,5db565bf7cea6cda,runwaysLength,3879.5,2559 x 59 ft (780 x 18 m); 5200 x 98 ft (1585 x 30 m),wrong,1274.6666666666667,wrong,1333.3333333333333,wrong,YWWL,low,mid,high,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,5e5db2a9c95816b9,commercial_flights,3017,,abstained,63373.0,wrong,63373.0,wrong,LIPR,mid,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,5ea9d4094994e820,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,6002536615488533,latitude,53.900100708,14.6709 degrees,wrong,,abstained,,abstained,PADU,high,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,604517a11d5c568a,country,Ukraine,,abstained,IN,wrong,Germany,wrong,UKOH,low,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,611e83dd38f302c2,commercial_flights,3767,,abstained,14800.0,wrong,0.0,wrong,ESNZ,mid,low,mid,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,61ad9efa2b5b689d,commercial_flights,5356,,abstained,483609.0,wrong,483609.0,wrong,LGSM,high,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,6375e8089be1747d,runwaysLength,3879.5,2559 x 59 ft (780 x 18 m); 5200 x 98 ft (1585 x 30 m),wrong,1333.3333333333333,wrong,1097.0,wrong,YWWL,low,mid,mid,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,658a453afb6526ee,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,677b24d92b6852c9,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,LDPL,high,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,68678ce03ce9aedc,runways,1.0,"04/22, 15/33",wrong,1.3333333333333333,correct,2.0,wrong,YBAM,mid,mid,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,68c95271551c448b,commercial_flights,3767,,abstained,0.0,wrong,,abstained,ESNZ,mid,low,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,68d615c27dcc4ba6,commercial_flights,48539,,abstained,,abstained,,abstained,LEBB,high,low,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,690d2602b54a7326,runwaysWidth,138.0,138 ft,correct,45.0,wrong,,abstained,UKOH,low,mid,high,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,69c0415d592230f0,tz_database_timezone,Europe/Rome,,abstained,Europe/Rome,correct,Europe/Rome,correct,LIPR,mid,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,6b925692bbc6eeb6,iata,TAR,,abstained,IN,wrong,,abstained,LIBG,low,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,6eab58730a15005c,country,Brazil,United States,wrong,,abstained,,abstained,SBAR,high,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,6f4e8fed84a51980,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,YWWL,low,high,high,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,70b7ae2748e2d635,commercial_flights,1937,,abstained,0.0,wrong,,abstained,LFRZ,low,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,726ba92985ccced5,country,France,,abstained,Ireland,wrong,IN,wrong,LFQA,low,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,72c65ecc4148395c,runwaysWidth,98.0,,abstained,,abstained,,abstained,EDLD,low,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,739f4c57a3fb3ce6,commercial_flights,5356,"5,886 flights",wrong,1798.0,wrong,1689.0,wrong,LGSM,high,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,740d7a41da771521,commercial_flights,3168,,abstained,1077718.0,wrong,,abstained,LTAY,mid,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,74595c7842bd2702,commercial_flights,5841,,abstained,,abstained,238689.0,wrong,LDPL,high,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,75c94df1f8e7c044,iata,VIJ,KTP,wrong,STP,wrong,,abstained,TUPW,mid,mid,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,788e50d1e05150f4,country,Ukraine,Ukraine,correct,Ukraine,correct,Ukraine,correct,UKOH,low,high,high,5,4,1
+deepseek-v4.1-flash,3,fewcot_5,78d5fa34c478a1b7,country,France,,abstained,India,wrong,India,wrong,LFOV,low,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,792b7669ff7e222e,runwaysLength,6706.0,,abstained,3800.0,wrong,,abstained,LGSM,high,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,7b8e0b49350e5f8b,country,Brazil,Portugal,wrong,Portugal,wrong,Portugal,wrong,SBAR,high,high,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,7ca73663d32ad809,runwaysWidth,101.0,,abstained,,abstained,45.0,wrong,ESNZ,mid,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,7df1a5e39466884a,commercial_flights,0,,abstained,0.0,correct,,abstained,LSMF,low,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,7e23310c4c06759f,city,West Wyalong,,abstained,,abstained,,abstained,YWWL,low,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,7e2ec384a145441c,commercial_flights,41,,abstained,,abstained,,abstained,LFQA,low,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,7e9c9117ddcecaa8,runwaysWidth,148.0,30 m,wrong,45.0,wrong,45.0,wrong,SBAR,high,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,804b8d6fc48fc662,city,Spanish Town,Valley/Spanish Town,wrong,Pune,wrong,,abstained,TUPW,mid,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,809b3379829f3567,icao,UKOH,UKOH,correct,UKOH,correct,UKOH,correct,UKOH,low,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,8329e70cbe436788,latitude,37.68999862670898,,abstained,52.3105,wrong,,abstained,LGSM,high,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,83c9a51e429b0ead,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,EDLD,low,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,8481c235bd0200d0,distCity,7506.017230666509,11 km,wrong,10000.0,correct,10666.666666666666,wrong,SBAR,high,mid,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,84e14e8caf9a0ae0,runwaysWidth,148.0,"45, 60 m",wrong,45.0,wrong,45.0,wrong,LIPR,mid,mid,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,87073059e63c84fd,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,8729549ba7b599d6,dst,E,E,correct,E,correct,A,wrong,LIPR,mid,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,874d9908f64bda80,icao,UKOH,UKKK,wrong,UKBB,wrong,,abstained,UKOH,low,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,88f28528b0d60bf8,commercial_flights,5356,268301 flights,wrong,189000.0,wrong,,abstained,LGSM,high,low,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,89623d123ebb016d,commercial_flights,5841,,abstained,0.0,wrong,,abstained,LDPL,high,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,89cf93370f16c670,commercial_flights,48539,,abstained,0.0,wrong,,abstained,LEBB,high,low,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,8a8b1d4e9fca4c69,commercial_flights,5356,,abstained,0.0,wrong,,abstained,LGSM,high,low,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,8b1518260afa7646,tz_database_timezone,America/Tortola,America/St_Thomas,wrong,America/Tortola,correct,America/Tortola,correct,TUPW,mid,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,8c1bfb7d2c34b34e,dst,E,,abstained,U,wrong,U,wrong,LIBG,low,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,8c8d3d5800de3461,commercial_flights,0,,abstained,0.0,correct,0.0,correct,LSMF,low,low,high,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,906a58f00773015f,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,LIPR,mid,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,90c69a4b6edbefde,commercial_flights,48539,54468 flights,correct,54504.0,correct,38338.0,correct,LEBB,high,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,90e383d8e1029173,distCity,14448566.677822953,8000 m,wrong,4600.0,wrong,4800.0,wrong,YBAM,mid,mid,mid,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,950d73994e7be07e,tz_database_timezone,Europe/Rome,,abstained,,abstained,,abstained,LIPR,mid,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,95c02d0737fd8405,icao,UKOH,UKOH,correct,UKOH,correct,UKOH,correct,UKOH,low,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,987c8f4d2b09c1ee,runways,1.0,13/31,wrong,1.0,correct,2.0,wrong,PADU,high,mid,mid,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,9883056ad976f45f,runways,1.0,,abstained,2.0,wrong,2.6666666666666665,wrong,LFOV,low,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,9c145b93e28b7a45,iata,VIJ,VIJ,correct,VIJ,correct,VIJ,correct,TUPW,mid,mid,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,9e26f900e1daaa53,commercial_flights,3168,,abstained,4952.0,wrong,0.0,wrong,LTAY,mid,low,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,9e9ce22beaaae6d4,distCity,7506.017230666509,12 km,wrong,10066.666666666666,wrong,10666.666666666666,wrong,SBAR,high,mid,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,9f78abeb92a5da4e,commercial_flights,1937,,abstained,0.0,wrong,700.0,wrong,LFRZ,low,low,high,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,9f7aadbc77fa3e56,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,a06f1a9386482f5a,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,LIPR,mid,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,a1cdcf413fb07b71,commercial_flights,1937,,abstained,0.6666666666666666,wrong,0.0,wrong,LFRZ,low,low,mid,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,a2f362c1523c8087,commercial_flights,3017,,abstained,0.0,wrong,,abstained,LIPR,mid,low,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,a325d4df1fd44b66,runways,1.0,4.0,wrong,2.3333333333333335,wrong,1.6666666666666667,wrong,LTAY,mid,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,a3d55f98abf0bca4,runways,1.0,2.0,wrong,1.0,correct,1.0,correct,ENSR,mid,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,a42b3a1d5f39d335,commercial_flights,1937,1820 movements,correct,0.0,wrong,0.0,wrong,LFRZ,low,low,mid,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,a4b322be7d79d185,runwaysLength,4921.0,1500 m,correct,2650.0,wrong,Not applicable,wrong,EDLD,low,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,a56fa21bbb756d0f,tz_database_timezone,Europe/Paris,,abstained,Europe/Paris,correct,Europe/Berlin,wrong,LFRZ,low,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,a60e21be305e884d,commercial_flights,136,,abstained,,abstained,,abstained,LFOV,low,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,a74eb8b98496990e,icao,YBAM,TQPF,wrong,,abstained,,abstained,YBAM,mid,high,mid,3,2,1
+deepseek-v4.1-flash,3,fewcot_5,a9a5ab0ef3ac173e,runways,1.0,,abstained,2.0,wrong,,abstained,YBAM,mid,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,a9a946b80d81da96,longitude,6.865278,8.5584 degrees,wrong,8.84105,wrong,9.5668,wrong,EDLD,low,high,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,aa24de5f407711d4,altitude,138.0,364 ft,wrong,,abstained,,abstained,LEBB,high,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,ab34b0e9ba18e71f,commercial_flights,48539,,abstained,0.0,wrong,,abstained,LEBB,high,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,ab447910c9128b49,icao,YBAM,YSBK,wrong,YSSY,wrong,YSSY,wrong,YBAM,mid,high,high,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,abdbc64108d74104,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,ad198b9901ccf9e0,commercial_flights,280,,abstained,48175.0,wrong,,abstained,LIBG,low,low,high,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,af37720cc9e1baa8,commercial_flights,280,,abstained,1.795,wrong,,abstained,LIBG,low,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,af9b404341a8f59f,iata,SNR,,abstained,LGG,wrong,,abstained,LFRZ,low,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b08fa90bd27bfd17,commercial_flights,1937,,abstained,,abstained,,abstained,LFRZ,low,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b0f1d6239366f457,icao,SEST,,abstained,,abstained,,abstained,SEST,high,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b1ffcf47ce531097,runways,1.0,13/31,wrong,1.0,correct,1.0,correct,PADU,high,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b2f03aa443cbc88e,city,Dinslaken,Frankfurt,wrong,Berlin,wrong,Berlin,wrong,EDLD,low,mid,high,5,4,1
+deepseek-v4.1-flash,3,fewcot_5,b30b70504aa05d8a,tz_database_timezone,America/Tortola,,abstained,,abstained,,abstained,TUPW,mid,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b506bd1f8371e5d1,commercial_flights,48539,,abstained,50331.0,correct,22807.666666666668,wrong,LEBB,high,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,b5dd97c6e89433ba,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,b6f38b6bbbd6c643,type,airport,airport,correct,airport,correct,airport,correct,YWWL,low,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b860deb662188eb3,type,airport,,abstained,,abstained,airport,correct,EDLD,low,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,b8d6e0cc7416f053,distCity,1880.9420239134909,,abstained,0.0,wrong,,abstained,LSMF,low,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,bb39bb6750619d00,runwaysLength,7398.0,,abstained,3800.0,wrong,,abstained,LEBB,high,mid,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,bcbccfea14ce6d9e,commercial_flights,5841,437000 flights,wrong,,abstained,436811.0,wrong,LDPL,high,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,bcc35c16ec536415,altitude,859.0,859 ft,correct,262.0,wrong,260.6666666666667,wrong,YWWL,low,high,mid,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,bdb1deb25c08a76e,runwaysLength,3879.5,,abstained,1266.6666666666667,wrong,1138.3333333333333,wrong,YWWL,low,mid,mid,5,5,0
+deepseek-v4.1-flash,3,fewcot_5,be5212696ad571cc,timezone,-6,-5 hours offset from UTC,correct,-5.0,correct,-5.0,correct,SEST,high,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,bf4d3ba357b12954,commercial_flights,3017,,abstained,0.6666666666666666,wrong,0.0,wrong,LIPR,mid,low,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,bf9866dc7896c660,timezone,-4,America/Argentina/Cordoba,wrong,,abstained,1.0,wrong,TUPW,mid,high,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,c0293d15521c3d76,runwaysWidth,66.0,151 ft,wrong,,abstained,45.0,wrong,SEST,high,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,c1ad55428099bc8e,tz_database_timezone,America/Fortaleza,Atlantic/Azores,wrong,America/Los_Angeles,wrong,America/Los_Angeles,wrong,SBAR,high,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,c2bdaa77866c4a36,commercial_flights,5841,,abstained,0.0,wrong,0.0,wrong,LDPL,high,low,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,c37478e2a709ca5f,commercial_flights,0,,abstained,0.0,correct,,abstained,LSMF,low,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,c3932857c60d6ddc,commercial_flights,280,,abstained,,abstained,,abstained,LIBG,low,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,c4f6617e86fa4350,longitude,29.7012996674,,abstained,,abstained,,abstained,LTAY,mid,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,c80d8524a445ba94,commercial_flights,3767,,abstained,,abstained,27107.0,wrong,ESNZ,mid,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,c921b3b0221ca7ff,city,Rimini,,abstained,Athens,wrong,London,wrong,LIPR,mid,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,c9feb55120d967a3,commercial_flights,3767,,abstained,,abstained,,abstained,ESNZ,mid,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,cb30ecfd9762cb9e,longitude,29.7012996674,,abstained,23.9444,wrong,,abstained,LTAY,mid,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,cbea0a3196fc723d,timezone,-6,,abstained,-5.0,correct,-5.0,correct,SEST,high,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,cbed7541cf8fe34b,commercial_flights,5356,5630 flights,correct,0.0,wrong,0.0,wrong,LGSM,high,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,cc7e42c7b6d8c9d4,source,OurAirports,,abstained,OurAirports,correct,OurAirports,correct,ESNZ,mid,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,cd3f12b0d61e0127,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,cf071bcdc01c34c4,commercial_flights,5356,268301 flights,wrong,0.0,wrong,,abstained,LGSM,high,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,cf25533f5fbb016c,timezone,-4,,abstained,0.0,wrong,0.0,wrong,TUPW,mid,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,d0f3a69d4cd32cb0,latitude,40.517502,,abstained,51.4706,wrong,49.467661,wrong,LIBG,low,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,d156060d44b6e457,tz_database_timezone,Europe/Rome,Europe/Rome,correct,Europe/Paris,wrong,,abstained,LIPR,mid,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,d2d11794b4e69682,runwaysLength,7218.0,,abstained,,abstained,,abstained,SBAR,high,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,d35bdffeed699d78,runways,1.0,"13/31: 7,399 ft; 17/35: 6,000 ft",wrong,2.0,wrong,0.6666666666666666,wrong,PADU,high,mid,high,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,d3861ced1129772e,commercial_flights,280,,abstained,0.0,wrong,,abstained,LIBG,low,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,d3acf54d0de77869,altitude,138.0,,abstained,,abstained,,abstained,LEBB,high,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,d54e83aeef2408da,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,d5c66bf26f69666f,runwaysWidth,148.0,,abstained,,abstained,45.0,wrong,LDPL,high,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,d8d13eb74868a313,runwaysLength,4500.0,,abstained,,abstained,,abstained,PADU,high,mid,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,d9fc84501a7c6421,longitude,6.865278,13.500672 degrees,wrong,13.241204000000002,wrong,10.644444666666667,wrong,EDLD,low,high,high,5,3,2
+deepseek-v4.1-flash,3,fewcot_5,da4f63bb8b1b0500,runwaysWidth,148.0,100 ft,wrong,45.0,wrong,,abstained,LEBB,high,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,db2629977951430b,distCity,9434.15362332344,,abstained,6000.0,wrong,,abstained,LGSM,high,mid,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,dc3808847e176d18,latitude,44.89350128173828,27.1841666666667,wrong,,abstained,,abstained,LDPL,high,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,ded98c8fcbfec46c,distCity,2158896.099702787,,abstained,,abstained,,abstained,SEST,high,mid,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,e09f91c9d4b43c4a,distCity,8796.15474899182,2400 m,wrong,7333.333333333333,correct,6833.333333333333,correct,UKOH,low,mid,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,e15aa3e57a386321,runwaysLength,7398.0,,abstained,3326.0,wrong,,abstained,LEBB,high,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,e1da6199bca3c4e7,icao,LEBB,,abstained,,abstained,,abstained,LEBB,high,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,e23a2ea7891a5725,city,Spanish Town,,abstained,Port Elizabeth,wrong,London,wrong,TUPW,mid,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,e577242a8b459a82,type,airport,station,wrong,,abstained,,abstained,EDLD,low,high,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,e59b67580986a154,city,San Cristóbal,Puerto Baquerizo Moreno,wrong,San Cristóbal,correct,Puerto Baquerizo Moreno,wrong,SEST,high,mid,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,e5bd8ea9d2f77823,longitude,142.459,173.828994751 degrees,wrong,142.603001,wrong,142.74876666666668,wrong,YBAM,mid,high,mid,5,2,3
+deepseek-v4.1-flash,3,fewcot_5,e6e7b5fe60710cfd,commercial_flights,3767,,abstained,36666.666666666664,wrong,162066.66666666666,wrong,ESNZ,mid,low,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,e736ea68bfc10ded,name,Samos Airport,,abstained,India,wrong,,abstained,LGSM,high,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,e7ec7ea5bd05ac2c,runwaysLength,6706.0,,abstained,1750.0,wrong,,abstained,LGSM,high,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,e989fca502c19da1,distCity,2158896.099702787,,abstained,10000.0,wrong,15000.0,wrong,SEST,high,mid,mid,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,ef0fc6eb6b7d600f,dst,E,E,correct,E,correct,E,correct,LIPR,mid,high,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,ef4ed149f3e5e2ad,commercial_flights,1151,,abstained,8138.0,wrong,8138.0,wrong,ENSR,mid,low,low,3,0,3
+deepseek-v4.1-flash,3,fewcot_5,f0b4477b6048c94d,commercial_flights,5841,,abstained,,abstained,,abstained,LDPL,high,low,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,f0e699299c320551,type,airport,airport,correct,,abstained,airport,correct,SBAR,high,high,high,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,f14b8a26a69520b7,commercial_flights,280,,abstained,21381.0,wrong,0.0,wrong,LIBG,low,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,f173fd27d06956a8,commercial_flights,5841,,abstained,0.0,wrong,,abstained,LDPL,high,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,f2c592d0b19f3de7,runways,1.0,13/31,wrong,1.3333333333333333,correct,1.0,correct,YBAM,mid,mid,high,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,f2ecaf039d3ae208,commercial_flights,3168,,abstained,231427.0,wrong,231427.0,wrong,LTAY,mid,low,low,1,0,1
+deepseek-v4.1-flash,3,fewcot_5,f2fe343c50294942,longitude,9.06482982635498,,abstained,,abstained,,abstained,LSMF,low,high,low,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,f3c44cf9d11c921b,latitude,48.03139877319336,,abstained,,abstained,,abstained,LFOV,low,high,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,f56fbd2914f87106,runways,1.0,,abstained,1.0,correct,1.6666666666666667,wrong,LIPR,mid,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,f73a423ce34494de,icao,SEST,HLLQ,wrong,,abstained,,abstained,SEST,high,high,mid,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,fad28c7ac309e584,runwaysLength,9678.0,,abstained,3400.0,wrong,,abstained,LDPL,high,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,fc4b4f742793259f,city,Östersund,,abstained,Frankfurt,wrong,,abstained,ESNZ,mid,mid,low,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,fc62d245c20717dc,commercial_flights,402,879 movements per year,wrong,0.0,wrong,0.0,wrong,EGLK,low,low,mid,3,3,0
+deepseek-v4.1-flash,3,fewcot_5,fd49c6094acb8389,city,Spanish Town,San Juan,wrong,San Juan,wrong,San Juan,wrong,TUPW,mid,mid,mid,3,1,2
+deepseek-v4.1-flash,3,fewcot_5,fd9df196bf041a56,commercial_flights,3017,,abstained,121594.0,wrong,121594.0,wrong,LIPR,mid,low,low,5,0,5
+deepseek-v4.1-flash,3,fewcot_5,fe80f42a3df17a3e,commercial_flights,3017,,abstained,,abstained,,abstained,LIPR,mid,low,high,1,1,0
+deepseek-v4.1-flash,3,fewcot_5,fe96f2b87a0aa0f2,country,Turkey,,abstained,India,wrong,India,wrong,LTAY,mid,high,low,5,1,4
+deepseek-v4.1-flash,3,fewcot_5,feeb99f716638c26,runways,1.0,,abstained,1.0,correct,1.0,correct,LTAY,mid,mid,low,1,1,0

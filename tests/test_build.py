@@ -198,3 +198,86 @@ def test_h_and_g_share_one_popularity_partition(config_file, graph):
     assert parts.h is parts.g
     for t in builder.build(parts).tasks:
         assert all(parts.g.stratum(c.popularity) == t.G_stratum for c in t.G)
+
+
+def _builder(config_file, graph, **sampling):
+    from taskdef.centrality import compute_centrality
+    from taskdef.context import detect_n1, n1_keys
+    from taskdef.popularity import compute_popularity
+    from taskdef.sampling import TaskBuilder
+
+    cfg = load_config(config_file(sampling={"max_n": 2, "max_H": 2, "max_G": 2, "seed": 7, **sampling}))
+    return TaskBuilder(graph, cfg, compute_centrality(graph, cfg.centrality), compute_popularity(graph), n1_keys(detect_n1(graph)))
+
+
+def test_g_has_at_least_one_own_property(config_file, graph):
+    builder = _builder(config_file, graph)
+    result = builder.build()
+    assert result.tasks
+    for t in result.tasks:
+        assert any(builder._is_own(c, t.node_id) for c in t.G)
+    assert all(s["reason"] in ("H_insufficient", "G_insufficient", "G_no_own_property") for s in result.report["skipped"])
+
+
+def test_g_min_own_zero_allows_context_only_g(config_file, graph):
+    with_rule = {t.task_id for t in _builder(config_file, graph).build().tasks}
+    builder = _builder(config_file, graph, G_min_own=0)
+    tasks = builder.build().tasks
+    # The rule only replaces context picks: tasks whose G already had an own property are unchanged.
+    kept = {t.task_id for t in tasks if any(builder._is_own(c, t.node_id) for c in t.G)}
+    assert kept <= with_rule
+
+
+def test_replacing_unusable_nodes_only_adds_tasks(config_file, graph):
+    base = _builder(config_file, graph).build()
+    builder = _builder(config_file, graph, replace_unusable_nodes=True)
+    result = builder.build()
+    ids = {t.task_id for t in result.tasks}
+    assert {t.task_id for t in base.tasks} <= ids  # original nodes keep their tasks
+    assert len(result.tasks) + len(result.report["skipped"]) - result.report["duplicates_removed"] >= len(base.tasks)
+    selected = {n for nodes in result.report["nodes_selected"].values() for n in nodes}
+    for t in result.tasks:
+        if t.replaces_node_id:
+            assert t.node_id not in selected and t.replaces_node_id in selected
+            assert builder.cent[t.node_id] is not None and t.node_stratum == next(
+                st for st, nodes in result.report["nodes_selected"].items() if t.replaces_node_id in nodes)
+        else:
+            assert t.node_id in selected
+
+
+def test_context_fallback_only_fills_cells_without_own_properties(config_file, graph):
+    strict = _builder(config_file, graph, replace_unusable_nodes=True).build()
+    builder = _builder(config_file, graph, replace_unusable_nodes=True, G_context_fallback=True)
+    result = builder.build()
+    assert {t.task_id for t in strict.tasks} <= {t.task_id for t in result.tasks}  # strict tasks unchanged
+    for t in result.tasks:
+        own = any(builder._is_own(c, t.node_id) for c in t.G)
+        assert t.G_context_fallback == (not own)
+        if t.G_context_fallback:  # a last resort: the strict build could not fill this cell
+            assert t.task_id not in {s.task_id for s in strict.tasks}
+    assert not any(s["reason"] == "G_no_own_property" for s in result.report["skipped"])
+
+
+def test_no_context_pairs_keep_node_H_size_and_stratum(config_file, graph):
+    builder = _builder(config_file, graph, replace_unusable_nodes=True, G_context_fallback=True)
+    parts = builder.partitions()
+    result = builder.build(parts)
+    out, skipped = builder.build_without_context(result.tasks, parts)
+    assert len(out) + len(skipped) == len(result.tasks)
+    assert len({t.task_id for t in out}) == len(out)
+    by_id = {t.task_id: t for t in result.tasks}
+    exact = {t.task_id for t in result.tasks if not isinstance(builder.without_context(t, parts), str)}
+    assert {p.paired_task_id for p in out if p.paired_task_id} == exact  # a replacement never displaces an exact pair
+    for p in out:
+        assert all(builder._is_own(c, p.node_id) for c in p.G)
+        if not p.paired_task_id:  # a replacement node of the same centrality stratum fills the cell
+            assert p.replaces_node_id and p.node_id != p.replaces_node_id
+            continue
+        t = by_id[p.paired_task_id]
+        assert (p.node_id, p.size_G, p.G_stratum) == (t.node_id, t.size_G, t.G_stratum)
+        assert [c.prop_key for c in p.H] == [c.prop_key for c in t.H]
+        assert all(builder._is_own(c, p.node_id) for c in p.G)
+        assert {c.uid for c in t.G if builder._is_own(c, t.node_id)} <= {c.uid for c in p.G}  # own picks are kept
+        assert all(parts.g.stratum(builder.g_value(c)) == p.G_stratum for c in p.G)
+        assert (p.task_id == t.task_id) == all(builder._is_own(c, t.node_id) for c in t.G)
+    assert all(s["reason"] == "G_insufficient_own" for s in skipped)

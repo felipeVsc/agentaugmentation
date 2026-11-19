@@ -1,0 +1,7 @@
+difficulty,variant,tasks,correct,wrong,abstained,f1,f1_lo,f1_hi,f1_ign,f1_ign_lo,f1_ign_hi,abstention
+easy third,search,400,37,124,239,0.1319,0.0937,0.1705,0.3737,0.2857,0.455,0.5975
+hard third,search,395,42,88,265,0.16,0.1165,0.2056,0.4884,0.3921,0.5787,0.6709
+middle third,search,400,30,109,261,0.1113,0.0753,0.1493,0.355,0.2588,0.4457,0.6525
+easy third,search + memory,400,49,140,211,0.1664,0.1254,0.2118,0.4118,0.3277,0.4873,0.5275
+hard third,search + memory,395,67,106,222,0.2359,0.1886,0.2824,0.5583,0.4757,0.6265,0.562
+middle third,search + memory,400,47,118,235,0.1664,0.1243,0.2111,0.4434,0.3579,0.5225,0.5875

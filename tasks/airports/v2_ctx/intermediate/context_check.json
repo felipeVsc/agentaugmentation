@@ -1,0 +1,129 @@
+{
+  "cardinalities_script": [
+    {
+      "cardinality": "many-to-one",
+      "endLabels": "Country",
+      "endPopulation": 249,
+      "maxIn": 3976,
+      "maxOut": 1,
+      "minIn": 0,
+      "minOut": 0,
+      "relType": "IN",
+      "startLabels": "City",
+      "startPopulation": 44997
+    },
+    {
+      "cardinality": "many-to-one",
+      "endLabels": "City",
+      "endPopulation": 44997,
+      "maxIn": 8,
+      "maxOut": 1,
+      "minIn": 0,
+      "minOut": 0,
+      "relType": "OF",
+      "startLabels": "Airport",
+      "startPopulation": 7698
+    },
+    {
+      "cardinality": "many-to-many",
+      "endLabels": "Airport",
+      "endPopulation": 7698,
+      "maxIn": 150,
+      "maxOut": 217,
+      "minIn": 0,
+      "minOut": 0,
+      "relType": "PASSENGERS",
+      "startLabels": "Airport",
+      "startPopulation": 7698
+    },
+    {
+      "cardinality": "many-to-many",
+      "endLabels": "Airport",
+      "endPopulation": 7698,
+      "maxIn": 911,
+      "maxOut": 915,
+      "minIn": 0,
+      "minOut": 0,
+      "relType": "ROUTE_TO",
+      "startLabels": "Airport",
+      "startPopulation": 7698
+    },
+    {
+      "cardinality": "many-to-many",
+      "endLabels": "Country",
+      "endPopulation": 249,
+      "maxIn": 69,
+      "maxOut": 222,
+      "minIn": 0,
+      "minOut": 0,
+      "relType": "TRADE",
+      "startLabels": "Country",
+      "startPopulation": 249
+    }
+  ],
+  "many_to_one_script": [
+    "IN",
+    "OF"
+  ],
+  "many_to_one_snapshot": [
+    "IN",
+    "OF"
+  ],
+  "match": true,
+  "nodes": {
+    "EDLD": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 70,
+      "snapshot_properties": 70
+    },
+    "LIPR": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 344,
+      "snapshot_properties": 344
+    },
+    "PADU": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 106,
+      "snapshot_properties": 106
+    },
+    "SBAR": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 406,
+      "snapshot_properties": 406
+    },
+    "SEST": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 86,
+      "snapshot_properties": 86
+    },
+    "TUPW": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 93,
+      "snapshot_properties": 93
+    },
+    "UKOH": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 71,
+      "snapshot_properties": 71
+    },
+    "YBAM": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 50,
+      "snapshot_properties": 50
+    },
+    "YWWL": {
+      "only_script": [],
+      "only_snapshot": [],
+      "script_properties": 19,
+      "snapshot_properties": 19
+    }
+  }
+}

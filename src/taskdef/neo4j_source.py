@@ -37,6 +37,7 @@ def convert_value(value):
 
 
 def convert_properties(props: dict) -> tuple[dict, dict]:
+    """Convert Neo4j property values to plain Python values, dropping nulls. Returns (values, types)."""
     values, types = {}, {}
     for name, raw in props.items():
         value, vtype = convert_value(raw)
@@ -75,6 +76,7 @@ def check_connection(neo4j_cfg: Neo4jConfig) -> dict:
 
 
 def export_graph(neo4j_cfg: Neo4jConfig, dataset_cfg: DatasetConfig) -> Graph:
+    """Read the nodes and relationships from Neo4j (read only) into a Graph snapshot."""
     idf = neo4j_cfg.id_function
     params: dict = {}
     node_where = ""

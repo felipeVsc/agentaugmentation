@@ -1,0 +1,11 @@
+model,variant,tasks,correct,wrong,abstained,correct %,wrong %,abstained %,wrong per correct
+deepseek-v4.1-flash,search,239,9,22,208,0.0377,0.0921,0.8703,2.4444
+gemma4:31b,search,239,20,54,165,0.0837,0.2259,0.6904,2.7
+gpt-oss:120b,search,239,27,80,132,0.113,0.3347,0.5523,2.963
+gpt-oss:20b,search,239,24,86,129,0.1004,0.3598,0.5397,3.5833
+mistral-large-3,search,239,29,79,131,0.1213,0.3305,0.5481,2.7241
+deepseek-v4.1-flash,search + memory,239,17,33,189,0.0711,0.1381,0.7908,1.9412
+gemma4:31b,search + memory,239,33,67,139,0.1381,0.2803,0.5816,2.0303
+gpt-oss:120b,search + memory,239,35,76,128,0.1464,0.318,0.5356,2.1714
+gpt-oss:20b,search + memory,239,34,91,114,0.1423,0.3808,0.477,2.6765
+mistral-large-3,search + memory,239,44,97,98,0.1841,0.4059,0.41,2.2045

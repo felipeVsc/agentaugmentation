@@ -56,46 +56,58 @@ models:
     model: mistral:7b
     enabled: false                # ~4 h on this Mac for both conditions
 
-  # --- Ollama Cloud (pay per token; needs OLLAMA_API_KEY in .env). Sizes: Ollama model pages.
-  # The experiment lineup (enabled). Energy: EcoLogits estimates where it has the model (closest open model);
-  # none for Nemotron-3-Super and GLM-5.3-flash, which EcoLogits does not have.
-  # Concurrency: each model has its own pool of calls; the free tier answers 429 above ~2 concurrent calls,
-  # so run one model at a time or raise max_concurrency on a paid plan. 429s are retried with backoff.
+  # --- Ollama Cloud: the current experiment lineup (2026-11-10), with the model settings of the v5 / football runs
+  # (configs/strategy_a_v5_ctx.yaml): reasoning off where a model allows it, gpt-oss at `low` effort, 4096 output
+  # tokens (gpt-oss's reasoning counts in them). The DOLAP protocol is kept: published prompts, 5 runs, no repair.
+  # Key: api_key_env below; run one model at a time (Ollama Pro: 3 concurrent requests per account).
+  #   strategy-a run --config configs/strategy_a_dolap2026.yaml --models cloud-gpt-oss-20b
+  # Cost per model: 3,240 runs, roughly 1-2 M tokens, well under $2.
   - id: cloud-gpt-oss-20b               # 21B total, 3.6B active (MoE)
     model: gpt-oss:20b
-    options: {base_url: "https://ollama.com", think: low}   # gpt-oss cannot turn reasoning off; low effort
-    max_concurrency: 2
+    options: {base_url: "https://ollama.com", think: low, num_ctx: 8192}   # gpt-oss cannot turn reasoning off; low effort
+    params: {max_tokens: 4096}
+    max_concurrency: 3
     max_retries: 5
+    api_key_env: OLLAMA_API_KEY
     pricing: {input_per_mtok: 0.07, output_per_mtok: 0.3, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
     energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-20b}
+  - id: cloud-gemma4-31b                # 31B dense
+    model: gemma4:31b
+    options: {base_url: "https://ollama.com", think: false, num_ctx: 8192}
+    params: {max_tokens: 4096}
+    max_concurrency: 3
+    max_retries: 5
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.14, output_per_mtok: 0.40, as_of: "2026-10-28"}
+    energy: {method: ecologits, ecologits_provider: google_genai, ecologits_model: gemma-4-31b-it}
   - id: cloud-gpt-oss-120b              # 117B total, 5.1B active (MoE)
     model: gpt-oss:120b
-    options: {base_url: "https://ollama.com", think: low}
-    max_concurrency: 2
+    options: {base_url: "https://ollama.com", think: low, num_ctx: 8192}
+    params: {max_tokens: 4096}
+    max_concurrency: 3
     max_retries: 5
-    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.6, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.6, as_of: "2026-10-28"}
     energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-120b}
-  - id: cloud-nemotron-3-super          # ~120B total (MoE)
-    model: nemotron-3-super
-    options: {base_url: "https://ollama.com", think: false}
-    max_concurrency: 2
+  - id: cloud-deepseek-v4.1-flash       # 763B total, ~16B active (MoE)
+    model: deepseek-v4.1-flash
+    options: {base_url: "https://ollama.com", think: false, num_ctx: 8192}
+    params: {max_tokens: 4096}
+    max_concurrency: 3
     max_retries: 5
-    pricing: {input_per_mtok: 0.01, output_per_mtok: 0.6, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
-    energy: {method: none}
-  - id: cloud-glm-5.3-flash             # ~321B total, 18B active (MoE)
-    model: glm-5.3-flash
-    options: {base_url: "https://ollama.com", think: false}
-    max_concurrency: 2
-    max_retries: 5
-    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.5, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
-    energy: {method: none}
-  - id: cloud-mistral-large-3           # 675B total, 41B active (MoE)
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.30, output_per_mtok: 1.20, as_of: "2026-10-28"}
+    energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: zai-glm-5-3}
+  - id: cloud-mistral-large-3           # 675B total, 41B active (MoE); retired by Ollama Cloud (HTTP 410, 2026-11)
     model: mistral-large-3:675b
-    options: {base_url: "https://ollama.com"}
-    max_concurrency: 2
+    options: {base_url: "https://ollama.com", num_ctx: 8192}
+    params: {max_tokens: 4096}
     max_retries: 5
-    pricing: {input_per_mtok: 0.5, output_per_mtok: 1.5, as_of: "2026-10-27"}   # USD per 1M tokens (Ollama Cloud)
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.5, output_per_mtok: 1.5, as_of: "2026-10-27"}
     energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: mistral-large-2512}
+    enabled: false
+  # Dropped from the lineup (reasoning could not be limited): nemotron-3-super, glm-5.3-flash.
 
   # Not in the lineup: gemma4 (used for the one-run test in notebooks/cloud_smoke_gemma4.ipynb), DeepSeek (cost).
   - id: cloud-gemma4                    # 31B dense

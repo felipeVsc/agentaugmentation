@@ -95,3 +95,44 @@ def test_zero_centrality_becomes_epsilon():
     cent = compute_centrality(g, CentralityConfig(measure="degree", epsilon=1e-6))
     assert cent["lonely"] == 1e-6
     assert cent["a"] == 1.0
+
+
+def test_cardinality_classification_follows_the_script():
+    from taskdef.context import cardinality
+
+    assert cardinality(1, 1, 1, 1) == "one-to-one"
+    assert cardinality(0, 3, 0, 1) == "one-to-many"
+    assert cardinality(0, 1, 0, 5) == "many-to-one"
+    assert cardinality(0, 2, 0, 2) == "many-to-many"
+
+
+def test_context_lists_each_element_once_with_its_shortest_path():
+    # A -[IN]-> C -[IN]-> K and A -[NEAR]-> K: K is a direct neighbor (1 hop), not 2 hops away.
+    g = Graph(
+        [node("A", "Airport"), node("A2", "Airport"), node("C", "City"), node("K", "Country"), node("K2", "Country")],
+        [edge("e1", "IN", "A", "C"), edge("e1b", "IN", "A2", "C"), edge("e2", "IN", "C", "K"),
+         edge("e3", "NEAR", "A", "K"), edge("e4", "NEAR", "A", "K2")],
+    )
+    refs = context_elements(g, "A", n1_keys(detect_n1(g)), max_hops=None)
+    ids = [r.element_id for r in refs]
+    assert len(ids) == len(set(ids))
+    assert {r.element_id: r.path for r in refs}["K"] == "Airport-[NEAR]->Country"
+
+
+def test_context_paths_are_unbounded_by_default(graph):
+    refs = context_elements(graph, "A1", n1_keys(detect_n1(graph)), max_hops=None)
+    assert ("K1", "Airport-[IN]->City-[IN]->Country") in {(r.element_id, r.path) for r in refs}
+
+
+def test_percentile_centrality_is_the_rank_within_each_type(graph):
+    from taskdef.centrality import compute_centrality
+    from taskdef.config import CentralityConfig
+
+    cent = compute_centrality(graph, CentralityConfig(normalize="percentile"))
+    for t in {n.type for n in graph.nodes.values()}:
+        ids = [i for i, n in graph.nodes.items() if n.type == t]
+        assert max(cent[i] for i in ids) == 1.0
+        assert all(0 < cent[i] <= 1 for i in ids)
+        by_raw = sorted(ids, key=lambda i: cent.raw[i])
+        assert [cent[i] for i in by_raw] == sorted(cent[i] for i in ids)  # order kept
+    assert all(0 < cent[e] <= 1 for e in graph.edges)

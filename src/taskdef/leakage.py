@@ -4,6 +4,7 @@ from __future__ import annotations
 
 
 def canonical(value) -> str:
+    """Canonical string of a value for leakage checks (booleans, integral floats, case, spaces)."""
     if isinstance(value, bool):
         return "true" if value else "false"
     if isinstance(value, float) and value.is_integer():

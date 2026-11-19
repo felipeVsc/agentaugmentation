@@ -1,0 +1,913 @@
+{
+  "assumptions": [
+    "Graph source is Neo4j; all later steps read the snapshot, not the live database.",
+    "Centrality is normalized per element type (divided by the type's maximum); 0 is replaced by epsilon.",
+    "Edge centrality is the mean of the normalized centralities of its two endpoints.",
+    "Direct neighbors are taken in both directions; n:1 paths follow outgoing relationships only.",
+    "Only scalar properties (string, integer, float, boolean, date) are eligible.",
+    "H strata use pop(p) over the distinct H-eligible properties of the node type, each counted once.",
+    "G strata use pop(p) * cent_p(e) over the set of elements in N ∪ context(N), each (element, property) once.",
+    "Strata: low = [Q0, Q1], mid = (Q1, Q3], high = (Q3, Q4]; if Q3 == Q4, values equal to Q4 go to high.",
+    "A combination with fewer candidates than size_H or size_G is skipped, not filled with fewer properties.",
+    "G holds distinct prop_keys; a prop_key shared by several elements is drawn at most once per task.",
+    "G excludes values that equal an H value, or contain a string H value of at least leak_min_substring_len chars.",
+    "task_id hashes (dataset, node_id, sorted H prop_keys, sorted G (prop_key, element_id)).",
+    "Random draws order candidates by sha256(seed, combination, candidate id)."
+  ],
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
+  "config": {
+    "centrality": {
+      "damping": 0.85,
+      "directed": true,
+      "edge_measure": "endpoint_mean",
+      "epsilon": 1e-06,
+      "max_iter": 200,
+      "measure": "pagerank",
+      "normalize": "max",
+      "tol": 1e-10
+    },
+    "dataset": {
+      "context_max_hops": null,
+      "label_priority": [],
+      "name": "airports",
+      "node_id_property": "icao",
+      "node_type": "Airport",
+      "snapshot_dir": "tasks/airports/v2_ctx/intermediate/snapshot",
+      "source": "snapshot"
+    },
+    "neo4j": {
+      "database": null,
+      "database_env": "NEO4J_DATABASE",
+      "fetch_size": 10000,
+      "id_function": "elementId",
+      "labels": null,
+      "password_env": "NEO4J_PASSWORD",
+      "relationship_types": null,
+      "uri": "bolt://localhost:7687",
+      "uri_env": "NEO4J_URI",
+      "user_env": "NEO4J_USER"
+    },
+    "output_dir": "tasks/airports/v5_ctx/",
+    "properties": {
+      "empty_string_is_null": true,
+      "exclude_properties": [
+        "airport_id"
+      ],
+      "leak_min_substring_len": 4,
+      "leakage_pairs": [],
+      "never_hide": []
+    },
+    "published": {
+      "apply_leakage_pairs": false,
+      "centrality_file": null,
+      "centrality_id_column": "icao",
+      "centrality_score_column": "score",
+      "context_slice": [
+        2,
+        5,
+        10
+      ],
+      "easy_threshold": 0.8,
+      "hidden_requires_value": null,
+      "min_G": null,
+      "node_key": "icao",
+      "node_strata": null,
+      "nodes_per_stratum": 3,
+      "popularity_file": null,
+      "popularity_scale": 100.0,
+      "profile": "code",
+      "properties": [],
+      "property_classes": null,
+      "redraw_H_per_task": null,
+      "seed": 42,
+      "size_G": 3,
+      "size_H": 3
+    },
+    "sampling": {
+      "G_context_fallback": true,
+      "G_min_own": 1,
+      "G_strata_by": "popularity",
+      "max_G": 3,
+      "max_H": 1,
+      "max_n": 3,
+      "no_context_output_dir": "tasks/airports/v5_noctx/",
+      "replace_unusable_nodes": true,
+      "seed": 42,
+      "sizes_G": [
+        1,
+        3,
+        5
+      ],
+      "sizes_H": null,
+      "use_context": true
+    },
+    "task_set_version": "airports-v5-ctx"
+  },
+  "dataset": "airports",
+  "master_seed": 42,
+  "n1_relationships": [
+    {
+      "cardinality": "many-to-one",
+      "edges": 4089,
+      "max_in_degree": 8,
+      "max_out_degree": 1,
+      "n1": true,
+      "relationship": "OF",
+      "source_type": "Airport",
+      "sources": 4089,
+      "target_type": "City"
+    },
+    {
+      "cardinality": "many-to-many",
+      "edges": 9980,
+      "max_in_degree": 150,
+      "max_out_degree": 217,
+      "n1": false,
+      "relationship": "PASSENGERS",
+      "source_type": "Airport",
+      "sources": 348,
+      "target_type": "Airport"
+    },
+    {
+      "cardinality": "many-to-many",
+      "edges": 66771,
+      "max_in_degree": 911,
+      "max_out_degree": 915,
+      "n1": false,
+      "relationship": "ROUTE_TO",
+      "source_type": "Airport",
+      "sources": 3199,
+      "target_type": "Airport"
+    },
+    {
+      "cardinality": "many-to-one",
+      "edges": 44983,
+      "max_in_degree": 3976,
+      "max_out_degree": 1,
+      "n1": true,
+      "relationship": "IN",
+      "source_type": "City",
+      "sources": 44983,
+      "target_type": "Country"
+    },
+    {
+      "cardinality": "many-to-many",
+      "edges": 11125,
+      "max_in_degree": 69,
+      "max_out_degree": 222,
+      "n1": false,
+      "relationship": "TRADE",
+      "source_type": "Country",
+      "sources": 70,
+      "target_type": "Country"
+    }
+  ],
+  "node_type": "Airport",
+  "package_version": "0.1.0",
+  "pairing": {
+    "not_filled": 63,
+    "on_replacement_nodes": 4,
+    "output_dir": "tasks/airports/v5_noctx",
+    "paired": 176,
+    "paired_with": "airports-v5-ctx",
+    "rule": "same node, H, |G| and G stratum; each context property of G replaced by an own property of the node from the same G stratum (stable random order); when the node cannot, the next nodes of its stratum are drawn until one fills the cell",
+    "skipped": [
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "c3932857c60d6ddc"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "a60e21be305e884d"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "5ea9d4094994e820"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "af37720cc9e1baa8"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "658a453afb6526ee"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "4a46dfb947826e28"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "6b925692bbc6eeb6"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "1150e13e5d4db0ae"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "19a46fffa88a0297"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "8c1bfb7d2c34b34e"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "f3c44cf9d11c921b"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "37ab84abe6f32772"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "d3861ced1129772e"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "1305e9b85a937e13"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "7e2ec384a145441c"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "40e8332f167b4cde"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "9883056ad976f45f"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "37c85aac3ed51a89"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LIBG",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "047c65d4179df1f4"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LFOV",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "78d5fa34c478a1b7"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LFQA",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "726ba92985ccced5"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "9f7aadbc77fa3e56"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "ESNZ",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "c80d8524a445ba94"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "f2ecaf039d3ae208"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "5e5db2a9c95816b9"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "3599d3d2304bc581"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "ENSR",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "ef4ed149f3e5e2ad"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "11def8660b3e9832"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "ESNZ",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "fc4b4f742793259f"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "a325d4df1fd44b66"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "a06f1a9386482f5a"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "ESNZ",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "cc7e42c7b6d8c9d4"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "c4f6617e86fa4350"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "fd9df196bf041a56"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "071c93092efc0e8c"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "ENSR",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "abdbc64108d74104"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "5709a047069b10e5"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "59efaf55f7445f8e"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "ENSR",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "a3d55f98abf0bca4"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LIPR",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "2d190cd6441fcdab"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LTAY",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "fe96f2b87a0aa0f2"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "ENSR",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "018c9b09aa202afe"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "f173fd27d06956a8"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "57bb12149cb2d370"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 1,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 1,
+        "task_id": "52f4d2bc7ae943e9"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "74595c7842bd2702"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "5accd061b8325ffe"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 3,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "5b50df3658943907"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "fad28c7ac309e584"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "e15aa3e57a386321"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "e7ec7ea5bd05ac2c"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "677b24d92b6852c9"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "aa24de5f407711d4"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 2,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 3,
+        "task_id": "e736ea68bfc10ded"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "bcbccfea14ce6d9e"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "b506bd1f8371e5d1"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "low",
+        "n_G_context": 5,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "61ad9efa2b5b689d"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "2a277cb5b0c4bdc9"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "bb39bb6750619d00"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "mid",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "792b7669ff7e222e"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LDPL",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "4f61db667a8b608b"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LEBB",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "e1da6199bca3c4e7"
+      },
+      {
+        "G_stratum": "low",
+        "H_stratum": "high",
+        "n_G_context": 4,
+        "no_replacement_found": true,
+        "node_id": "LGSM",
+        "reason": "G_insufficient_own",
+        "size_G": 5,
+        "task_id": "8329e70cbe436788"
+      }
+    ],
+    "task_set_version": "airports-v5-noctx",
+    "tasks": 180
+  },
+  "quartiles": {
+    "G_property_popularity": [
+      0.003333555570371358,
+      0.7108433734939759,
+      0.7550200803212851,
+      1.0,
+      1.0
+    ],
+    "H_property_popularity": [
+      0.003333555570371358,
+      0.7108433734939759,
+      0.7550200803212851,
+      1.0,
+      1.0
+    ],
+    "intervals": "low=[Q0,Q1) mid=[Q1,Q3) high=[Q3,Q4]; Q0==Q1 ties go to low",
+    "node_centrality": [
+      0.006464656173066834,
+      0.006464656173066834,
+      0.006464656173066834,
+      0.012652332720452394,
+      1.0
+    ]
+  },
+  "snapshot": {
+    "hash": "e22941931e5aadeb31e7460c8cebad8f15b0a1c224c9e068b011e80539b6fa82",
+    "path": "tasks/airports/v2_ctx/intermediate/snapshot",
+    "source": "snapshot",
+    "stats": {
+      "edges": 136948,
+      "edges_per_type": {
+        "IN": 44983,
+        "OF": 4089,
+        "PASSENGERS": 9980,
+        "ROUTE_TO": 66771,
+        "TRADE": 11125
+      },
+      "nodes": 52944,
+      "nodes_per_type": {
+        "Airport": 7698,
+        "City": 44997,
+        "Country": 249
+      }
+    }
+  },
+  "strata": {
+    "G_occurrence": {
+      "high": 24,
+      "low": 23,
+      "mid": 44
+    },
+    "H_property": {
+      "high": [
+        "altitude",
+        "country",
+        "dst",
+        "icao",
+        "latitude",
+        "longitude",
+        "name",
+        "source",
+        "timezone",
+        "type",
+        "tz_database_timezone"
+      ],
+      "low": [
+        "commercial_flights"
+      ],
+      "mid": [
+        "city",
+        "distCity",
+        "iata",
+        "runways",
+        "runwaysLength",
+        "runwaysWidth"
+      ]
+    },
+    "H_property_popularity": {
+      "altitude": 1.0,
+      "city": 0.9936347103143673,
+      "commercial_flights": 0.09664848012470771,
+      "country": 1.0,
+      "distCity": 0.8099506365289686,
+      "dst": 1.0,
+      "iata": 0.7887763055339049,
+      "icao": 1.0,
+      "latitude": 1.0,
+      "longitude": 1.0,
+      "name": 1.0,
+      "runways": 0.732138217718888,
+      "runwaysLength": 0.732138217718888,
+      "runwaysWidth": 0.732138217718888,
+      "source": 1.0,
+      "timezone": 1.0,
+      "type": 1.0,
+      "tz_database_timezone": 1.0
+    },
+    "node": {
+      "high": 1925,
+      "low": 4472,
+      "mid": 1301
+    }
+  },
+  "task_set_version": "airports-v5-noctx"
+}

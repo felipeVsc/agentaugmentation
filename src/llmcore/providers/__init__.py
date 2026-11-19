@@ -27,6 +27,7 @@ _REGISTERED: dict[str, type[Provider]] = {}
 
 
 def register_provider(name: str, cls: type[Provider]) -> None:
+    """Register a Provider subclass under `name`, for use in model configs."""
     if not (isinstance(cls, type) and issubclass(cls, Provider)):
         raise TypeError("provider class must subclass llmcore.providers.Provider")
     _REGISTERED[name] = cls
@@ -46,6 +47,7 @@ def _import(path: str) -> type[Provider]:
 
 
 def provider_class(name: str) -> type[Provider]:
+    """Provider class for a name: registered, built-in, or 'module:Class'."""
     if name in _REGISTERED:
         return _REGISTERED[name]
     if name in _BUILTIN:
@@ -56,6 +58,7 @@ def provider_class(name: str) -> type[Provider]:
 
 
 def load_provider(cfg: ModelConfig) -> Provider:
+    """Instantiate the provider of a model config."""
     return provider_class(cfg.provider)(cfg)
 
 

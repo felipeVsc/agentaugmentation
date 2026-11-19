@@ -1,0 +1,29 @@
+node_id,player_id,name,squad,nation,position,centrality_stratum,centrality,raw_centrality,rank_of_9446,percentile,in_taskset,taskset_role,tasks_context,tasks_no_context
+30ce77a2,30ce77a2,Martin Jedlička,cz Viktoria Plzeň,cz CZE,GK,low,0.23596171580764094,3.2835562025758865e-05,8965,0.0343,True,replacement,13,13
+d1c92690,d1c92690,Guillermo Vizcarra,pe Alianza Lima,bo BOL,GK,low,0.2942613115759884,4.0948318734515826e-05,7856,0.1385,True,replacement,13,13
+4accb7e0,4accb7e0,Darko Brašanac,Leganés,rs SRB,MF,low,0.3192485089088081,4.442544494994196e-05,7450,0.2109,True,drawn,12,12
+2a3416b6,2a3416b6,Michal Kukučka,Nürnberg,sk SVK,GK,low,0.31964276665890007,4.448030840422296e-05,7391,0.2172,True,replacement,14,14
+c924b17d,c924b17d,Mads Hermansen,Leicester City,dk DEN,GK,low,0.320410246330992,4.4587108044538463e-05,7310,0.2257,True,replacement,1,1
+14f47102,14f47102,Marwane Saâdane,Al-Fateh,ma MAR,DF,low,0.32069594443819316,4.46268647393376e-05,7288,0.2282,True,drawn,11,11
+1958c005,1958c005,Saeed Ba Atiyah,Al-Fateh,,"DF,MF",low,0.32069594443819316,4.46268647393376e-05,7288,0.2282,True,drawn,12,12
+fac1f795,fac1f795,Devis Vásquez,Empoli,co COL,GK,low,0.32129376447612074,4.471005517075324e-05,7181,0.2392,True,replacement,1,1
+add304fc,add304fc,Renne Rivas,Al-Taawoun,ve VEN,DF,low,0.3215360347423155,4.474376860738175e-05,7099,0.2483,True,replacement,1,1
+d2b135e1,d2b135e1,Kristoffer Peterson,Fortuna Sittard,se SWE,"MF,FW",mid,0.32260276252583947,4.489221051110589e-05,6886,0.2705,True,drawn,12,12
+5c6b0637,5c6b0637,Lionel Mpasi,Rodez AF,cd COD,GK,mid,0.3266043975733683,4.5449063284268035e-05,6505,0.311,True,replacement,1,1
+4737cebe,4737cebe,Adnan Januzaj,Las Palmas,be BEL,"MF,FW",mid,0.4149878103453579,5.774817300293426e-05,5341,0.4347,True,drawn,12,12
+1f4ea94e,1f4ea94e,Osama Al-Khalaf,Al-Orobah,sa KSA,"DF,MF",mid,0.42035871841463746,5.8495568759232475e-05,4485,0.5245,True,drawn,12,12
+28d596a0,28d596a0,Kepa Arrizabalaga,Bournemouth,es ESP,GK,mid,0.4204052278469124,5.8502040840277574e-05,4470,0.5268,True,replacement,1,1
+a98a9189,a98a9189,Nordin Jackers,Club Brugge,be BEL,GK,mid,0.4212604854159749,5.8621055328966255e-05,4251,0.55,True,replacement,14,14
+fba79ac8,fba79ac8,Tiago Volpi,Grêmio,br BRA,GK,mid,0.42696678564698604,5.941512302139529e-05,2933,0.6886,True,replacement,1,1
+f8d2d42c,f8d2d42c,Emile Doucouré,Beerschot Wilrijk,be BEL,GK,mid,0.4278492729703402,5.9537926702254114e-05,2858,0.6971,True,replacement,14,14
+6b91b999,6b91b999,Guillaume Restes,Toulouse,fr FRA,GK,mid,0.4282995515872879,5.96005858137335e-05,2812,0.7021,True,replacement,14,14
+9886c32e,9886c32e,Tom Watson,Sunderland,eng ENG,MF,high,0.4320985706068285,6.01292432877911e-05,2318,0.754,True,replacement,9,9
+f679abe1,f679abe1,Bradley Collins,Coventry City,eng ENG,GK,high,0.433769957134283,6.0361827272033646e-05,2207,0.7658,True,replacement,15,15
+2d70dbe5,2d70dbe5,Paul Nardi,Queens Park Rangers,fr FRA,GK,high,0.4354561132911493,6.059646654342729e-05,2119,0.7758,True,replacement,1,1
+19e50035,19e50035,Freddie Woodman,Preston North End,eng ENG,GK,high,0.4356556372882382,6.062423156691687e-05,2066,0.7809,True,replacement,14,14
+6a99e0b1,6a99e0b1,Iñaki Williams,,gh GHA,,high,0.43742664074130494,6.0870677875090063e-05,2018,0.7864,True,drawn,3,1
+72e0ee7b,72e0ee7b,Joe Walsh,Queens Park Rangers,eng ENG,GK,high,0.4375022931023209,6.088120537860491e-05,2008,0.7871,True,replacement,14,14
+94c79a82,94c79a82,Aytaç Kara,Kasımpaşa,tr TUR,MF,high,0.44079843719376505,6.133988463252543e-05,1860,0.803,True,replacement,9,9
+f333ac24,f333ac24,Celal Dumanlı,BB Bodrumspor,tr TUR,FW,high,0.44106807532578757,6.137740648041601e-05,1850,0.8038,True,replacement,9,9
+a109e5c8,a109e5c8,Lucas Bergvall,,se SWE,,high,0.4412299510856358,6.139993251407689e-05,1827,0.8062,True,drawn,3,1
+169df85b,169df85b,Rome-Jayden Owusu-Oduro,,nl NED,,high,0.5417841767711521,7.539268766568191e-05,882,0.9059,True,drawn,3,1

@@ -15,16 +15,18 @@ the vote over its runs (text: most frequent value, numbers: mean), as in the pap
     correct, wrong, or abstained (no value). precision = c / (c + w), recall = c / |H|,
     F1, abstention rate = a / |H|, error (hallucination) rate = w / |H|, exact match.
 
-Matching uses the paper's tolerance in both: token overlap coefficient >= 0.75 for text,
+Matching uses the paper's tolerance: token overlap coefficient >= 0.75 for text,
 relative similarity >= 0.75 for numbers, latitude/longitude together within 10 km. The paper
 can only compare a coordinate when both latitude and longitude were answered, and skips the
 others; the standard scoring also compares a lone coordinate (within 0.1°, about the 10 km
 radius) and ``location`` as a coordinate pair, so that correct coordinates are not counted wrong.
+The standard scoring is also stricter on text (overlap in both directions) and on lists (a list
+answer to a single-valued property is wrong); see ``matches_standard``.
 """
 
 from __future__ import annotations
 
-import csv
+import ast
 import json
 import math
 import re
@@ -45,6 +47,7 @@ GEO = ("latitude", "longitude")
 
 
 def normalize_tokens(s) -> list[str]:
+    """Lower-case, strip accents and punctuation, and split a value into word tokens."""
     if s is None:
         return []
     s = str(s).lower()
@@ -54,19 +57,43 @@ def normalize_tokens(s) -> list[str]:
 
 
 def overlap_coefficient(s1, s2) -> float:
+    """|A ∩ B| / min(|A|, |B|) over the word tokens of two values (0 if either is empty)."""
     t1, t2 = set(normalize_tokens(s1)), set(normalize_tokens(s2))
     if not t1 or not t2:
         return 0.0
     return len(t1 & t2) / min(len(t1), len(t2))
 
 
+def mutual_overlap(s1, s2) -> float:
+    """Shared tokens over the token count of the *longer* string: both strings must cover each other,
+    so "International Airport" no longer matches "airport" (the overlap coefficient divides by the shorter)."""
+    t1, t2 = set(normalize_tokens(s1)), set(normalize_tokens(s2))
+    if not t1 or not t2:
+        return 0.0
+    return len(t1 & t2) / max(len(t1), len(t2))
+
+
+def is_list(value) -> bool:
+    """A list answer, also as text after ``coerce`` ("['01/19', '02/20']")."""
+    if isinstance(value, (list, tuple)):
+        return True
+    if isinstance(value, str) and value.strip().startswith("["):
+        try:
+            return isinstance(ast.literal_eval(value.strip()), (list, tuple))
+        except (ValueError, SyntaxError):
+            return False
+    return False
+
+
 def haversine(lat1, lon1, lat2, lon2) -> float:
+    """Great-circle distance in km between two (latitude, longitude) points."""
     dlat, dlon = math.radians(lat2 - lat1), math.radians(lon2 - lon1)
     a = math.sin(dlat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon / 2) ** 2
     return 6371 * 2 * math.asin(math.sqrt(a))
 
 
 def relative_similarity(x, y) -> float:
+    """1 − |x − y| / max(|x|, |y|) for two numbers; 0 if either is not a number."""
     try:
         x, y = float(x), float(y)
         return 1 - abs(x - y) / max(abs(x), abs(y), 1e-9)
@@ -136,7 +163,14 @@ def _coordinate(value) -> float | None:
 
 def matches_standard(correct: dict, predicted: dict, prop: str) -> bool | None:
     """``matches`` plus lone coordinates, ``location`` (POINT(lon,lat) in the ground truth) and numbers given
-    as text with a unit (Strategy B answers "2459 ft"; the paper's rule compares such text as a string)."""
+    as text with a unit (Strategy B answers "2459 ft"; the paper's rule compares such text as a string).
+
+    Stricter than the paper in two ways: a list answer to a single-valued property is wrong (its first
+    number used to be compared, so five runway designators matched ``runways`` = 1), and text must
+    overlap in both directions (``mutual_overlap``)."""
+    if (prop != "location" and prop in predicted and prop in correct and correct[prop] is not None
+            and is_list(predicted[prop]) and not is_list(correct[prop])):
+        return False
     if (isinstance(correct.get(prop), float) and isinstance(predicted.get(prop), str)
             and prop not in GEO and prop != "location"):
         x = as_number(prop, predicted[prop])
@@ -156,6 +190,9 @@ def matches_standard(correct: dict, predicted: dict, prop: str) -> bool | None:
             return False
         lon, lat = truth  # POINT(lon,lat)
         return min(haversine(pred[0], pred[1], lat, lon), haversine(pred[1], pred[0], lat, lon)) < 10
+    if (prop not in GEO and isinstance(predicted.get(prop), str) and prop in correct
+            and correct[prop] is not None):
+        return mutual_overlap(correct[prop], predicted[prop]) >= 0.75
     return matches(correct, predicted, prop)
 
 
@@ -193,6 +230,7 @@ def vote(values: list) -> Any:
 
 
 def load_tasks(tasks_csv: Path) -> pd.DataFrame:
+    """Read a DOLAP tasks.csv and add `H_names`, the list of hidden property names of each task."""
     df = pd.read_csv(tasks_csv)
     df["H_names"] = df["H"].map(lambda s: [h["property_name"] for h in json.loads(s)])
     return df
@@ -381,6 +419,12 @@ def coverage(votes: pd.DataFrame) -> pd.DataFrame:
 
 
 def published_metrics(scored: pd.DataFrame, by: list[str]) -> pd.DataFrame:
+    """DOLAP published metrics per group, reproduced only for comparison.
+
+    Precision is 1 whenever a group has a correct answer, recall = accuracy over the compared
+    properties and F1 = 2·acc / (1 + acc). These are NOT the metrics of the new paper; use
+    `standard_metrics` or `evaluation.taskset.metrics`.
+    """
     def agg(g):
         acc = g["correct"].mean() if len(g) else float("nan")
         precision = 1.0 if g["correct"].any() else 0.0

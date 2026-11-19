@@ -1,0 +1,8 @@
+# Short descriptions of airport properties whose meaning or format is specific to the dataset (2026-10-28).
+# Shown in the prompts (Strategy A {property_notes}, Strategy B plan and synthesis) when the property is in H or G.
+commercial_flights: annual number of commercial flights at the airport (Eurostat airport statistics; European airports only)
+distCity: distance in metres between the airport and the centre of the city it serves, computed by the dataset authors
+source: data source of the airport record in OpenFlights (OurAirports, Legacy or User)
+type: kind of location in OpenFlights (airport, station, port or unknown)
+timezone: hours offset from UTC in standard time, as in OpenFlights (e.g. -5, 1, 5.5)
+dst: OpenFlights daylight saving time code (E Europe, A US/Canada, S South America, O Australia, Z New Zealand, N none, U unknown)

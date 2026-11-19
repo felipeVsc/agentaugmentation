@@ -1,0 +1,109 @@
+task_id,prop_key,value,value_type
+e5d07552fced3f3a,Track.time_signature,3,integer
+607a9ff8561e5186,Track.mode,0,integer
+33de686cfe174fa5,Track.valence,0.649,float
+7d6f6efe67b312d8,Track.time_signature,3,integer
+e5212835a8521f95,Track.mode,0,integer
+add547f1cc2d046f,Track.valence,0.649,float
+d2f4766bce29d2dd,Track.duration_ms,196721,integer
+0ef2901d61814f5a,Track.rank,1011,integer
+966ecd730d5bbf08,Track.isrc,"""USAR10100232""",string
+1de67bc590db61dc,Track.duration_ms,196721,integer
+29a56b3752b585a3,Track.rank,1011,integer
+0cd5ac9c1536f2a4,Track.isrc,"""USAR10100232""",string
+3ef7b11f9d66d88f,Track.loudness,-4.819,float
+99af3ab0d698d888,Track.acousticness,0.524,float
+cf4c15fff127a6a0,Track.acousticness,0.0227,float
+40f9e3470d187ac5,Track.loudness,-4.819,float
+c3564cf27de98d59,Track.acousticness,0.524,float
+3b58db97859386df,Track.acousticness,0.0227,float
+3167de8e9945c938,Track.isrc,"""GBUM71800863""",string
+7558f12a16153c19,Track.name,"""No Idea""",string
+f633dfd0069756a1,Track.name,"""U Got It Bad""",string
+2f77077d8ca238c6,Track.isrc,"""GBUM71800863""",string
+3feeaedb7844d4fe,Track.name,"""No Idea""",string
+98c92cce0a6b216f,Track.name,"""U Got It Bad""",string
+63670afa8c69d02c,Track.valence,0.206,float
+9e57638df78579cd,Track.acousticness,0.524,float
+0c29d96ebd560788,Track.energy,0.5,float
+03cd9d5e0e649fba,Track.valence,0.206,float
+29906578fd45c27d,Track.acousticness,0.524,float
+38ed11bed9db6fe4,Track.energy,0.5,float
+f310c19146988f93,Track.popularity,71,integer
+8ae4d4699d1de3f2,Track.name,"""No Idea""",string
+7cc3123b10ed8106,Track.isrc,"""USAR10100232""",string
+4778db5e264e9c36,Track.popularity,71,integer
+5e88d1a3a5509a99,Track.name,"""No Idea""",string
+806161d89d82d12f,Track.isrc,"""USAR10100232""",string
+b0f2d48639703dd7,Track.key,9,integer
+9462034ff77e5135,Track.acousticness,0.000386,float
+5ab7304569e3a549,Track.tempo,134.985,float
+7c68bd0fc45b5f36,Track.key,9,integer
+ad1a65832a4958a3,Track.acousticness,0.000386,float
+c28b5d02b61ee631,Track.tempo,134.985,float
+f0c30f8d1f918f0f,Track.release_date,"""1977-11-01""",string
+dc991968838f40cb,Track.isrc,"""USWB10300376""",string
+9265c92d8fe0792e,Track.rank,5511,integer
+6b2f802b7f786f17,Track.release_date,"""1977-11-01""",string
+9b0e8e1b46ccd1f7,Track.isrc,"""USWB10300376""",string
+b234eaca870cd7b2,Track.rank,5511,integer
+1ecd424c3fe8b5be,Track.acousticness,0.0607,float
+3001814915aca5d6,Track.liveness,0.261,float
+bd65c84b50a921a2,Track.tempo,134.985,float
+dc9df700ddfe37fd,Track.acousticness,0.0607,float
+ecc47b7fdc0d0da6,Track.liveness,0.261,float
+323c950f861f6c25,Track.tempo,134.985,float
+8bf85f6529cebeb8,Track.rank,8841,integer
+aa90387697e4cf2b,Track.isrc,"""USWB10300376""",string
+a6286113bdfade7c,Track.copies,9,integer
+8d24398597da4ba1,Track.rank,8841,integer
+c0b81ac501c65e09,Track.isrc,"""USWB10300376""",string
+7657c6f1f9b81fb4,Track.copies,9,integer
+b817db20f30d56c0,Track.valence,0.676,float
+68171731681965dd,Track.energy,0.951,float
+5d608e29a31f0e1e,Track.key,11,integer
+ae152efcad645419,Track.valence,0.676,float
+06e6fc8b336cd6e4,Track.energy,0.951,float
+c3535438c9c5e0e0,Track.key,11,integer
+7fef40a93d77b0b2,Track.duration_ms,218761,integer
+d720af1e74bf7daf,Track.name,"""Somewhere I Belong""",string
+1425e1d68df95668,Track.name,"""Lady Of Namek""",string
+cd98d1148f68dc70,Track.duration_ms,218761,integer
+59932d2bae3f817d,Track.name,"""Somewhere I Belong""",string
+11fabfc183a6fd24,Track.name,"""Lady Of Namek""",string
+321f9d22b71f3732,Track.time_signature,4,integer
+7a6238180f98f298,Track.liveness,0.232,float
+424e8425be1b2778,Track.time_signature,4,integer
+87603f237de63c8a,Track.time_signature,4,integer
+ceb8b48d6a6257d9,Track.liveness,0.232,float
+c2a5a648cca50598,Track.time_signature,4,integer
+5c51ea32b9d221d8,Track.copies,2,integer
+5651ba781498b808,Track.copies,976,integer
+3c59c028224db0b6,Track.duration_ms,304961,integer
+063d8be9e4269e09,Track.copies,2,integer
+881513f403d7a1c9,Track.copies,976,integer
+0a08a8d99f8cdd03,Track.duration_ms,304961,integer
+99fff9f6be1f8aee,Track.valence,0.19,float
+11c4cc43f24d3144,Track.valence,0.554,float
+7d1ea13b48b31c50,Track.danceability,0.644,float
+ebc80c7050a2315a,Track.valence,0.19,float
+a7cb819b9f348de5,Track.valence,0.554,float
+89fa5848e00d3cb5,Track.danceability,0.644,float
+0b3d36705e9de2f3,Track.isrc,"""QZ5FN1855311""",string
+53332cf0105b415d,Track.duration_ms,149741,integer
+5b7adb47924803df,Track.copies,10,integer
+06bda0b2321de7de,Track.isrc,"""QZ5FN1855311""",string
+bb3857b95f5af2a7,Track.duration_ms,149741,integer
+78e2003b832c4376,Track.copies,10,integer
+4d2195a87de01699,Track.liveness,0.236,float
+86cbed933024d7da,Track.valence,0.554,float
+a497f0defdd40eb9,Track.mode,0,integer
+396cfb780901efa6,Track.liveness,0.236,float
+126a2a8d8aee8570,Track.valence,0.554,float
+4a757442f1f7732d,Track.mode,0,integer
+eae3fc88413b4f65,Track.isrc,"""QZ5FN1855311""",string
+eadbb0d05d790783,Track.popularity,84,integer
+f9f2bce79122eda1,Track.release_date,"""2013-04-06""",string
+38bc6c3f8ed35101,Track.isrc,"""QZ5FN1855311""",string
+77036becfd0091b2,Track.popularity,84,integer
+4f7d71c02db1e8da,Track.release_date,"""2013-04-06""",string

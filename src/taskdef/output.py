@@ -10,6 +10,7 @@ import csv
 import json
 from pathlib import Path
 
+from .context import hops
 from .difficulty import surprise
 from .sampling import Task
 
@@ -40,6 +41,9 @@ TASK_COLUMNS = [
     "G_has_own_property",
     "G_max_hops",
     "G_candidates",
+    "replaces_node_id",
+    "G_context_fallback",
+    "paired_task_id",
 ]
 
 GROUND_TRUTH_COLUMNS = ["task_id", "prop_key", "value", "value_type"]
@@ -49,12 +53,8 @@ def _json(value) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-def hops(path: str) -> int:
-    """Relationships between n and the property's element: 0 for n's own properties."""
-    return path.count("]-")
-
-
 def task_row(task: Task, version: str) -> dict:
+    """One row of tasks.csv for a task."""
     own = [c for c in task.G if hops(c.path) == 0 and c.element_id == task.node_id]
     return {
         "task_id": task.task_id,
@@ -72,7 +72,7 @@ def task_row(task: Task, version: str) -> dict:
         "H": _json(
             [
                 {"prop_key": c.prop_key, "property_name": c.property_name, "element_type": c.element_type, "path": c.path,
-                 "popularity": c.popularity, "centrality": c.centrality, "score": c.score}
+                 "origin": "node", "popularity": c.popularity, "centrality": c.centrality, "score": c.score}
                 for c in task.H
             ]
         ),
@@ -84,6 +84,7 @@ def task_row(task: Task, version: str) -> dict:
                     "element_type": c.element_type,
                     "element_id": c.element_id,
                     "path": c.path,
+                    "origin": "node" if c in own else "context",
                     "value": c.value,
                     "popularity": c.popularity,
                     "centrality": c.centrality,
@@ -104,10 +105,14 @@ def task_row(task: Task, version: str) -> dict:
         "G_has_own_property": bool(own),
         "G_max_hops": max((hops(c.path) for c in task.G), default=0),
         "G_candidates": task.G_candidates,
+        "replaces_node_id": task.replaces_node_id or "",
+        "G_context_fallback": task.G_context_fallback,
+        "paired_task_id": task.paired_task_id or "",
     }
 
 
 def ground_truth_rows(tasks: list[Task]) -> list[dict]:
+    """Rows of ground_truth.csv: one per hidden property of each task."""
     return [
         {"task_id": t.task_id, "prop_key": c.prop_key, "value": c.value, "value_type": c.value_type}
         for t in tasks
@@ -116,6 +121,7 @@ def ground_truth_rows(tasks: list[Task]) -> list[dict]:
 
 
 def write_csv(path: Path, columns: list[str], rows: list[dict]) -> None:
+    """Write rows to a CSV file with the given columns."""
     with open(path, "w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=columns)
         writer.writeheader()
@@ -123,14 +129,17 @@ def write_csv(path: Path, columns: list[str], rows: list[dict]) -> None:
 
 
 def write_tasks(path: Path, tasks: list[Task], version: str) -> None:
+    """Write tasks.csv."""
     write_csv(path, TASK_COLUMNS, [task_row(t, version) for t in tasks])
 
 
 def write_ground_truth(path: Path, rows: list[dict]) -> None:
+    """Write ground_truth.csv (values as JSON)."""
     write_csv(path, GROUND_TRUTH_COLUMNS, [{**r, "value": _json(r["value"])} for r in rows])
 
 
 def write_json(path: Path, data: dict) -> None:
+    """Write a JSON file (sorted keys, indented)."""
     with open(path, "w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, sort_keys=True, ensure_ascii=False)
         fh.write("\n")

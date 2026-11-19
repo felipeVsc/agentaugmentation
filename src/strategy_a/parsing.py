@@ -55,6 +55,7 @@ def _objects(text: str) -> list[str]:
 
 
 def loads_lenient(s: str) -> Any:
+    """Parse JSON, tolerating trailing commas and Python literals (True/False/None); None if impossible."""
     s = s.strip()
     for candidate in (s, _TRAILING_COMMA.sub(r"\1", s)):
         try:
@@ -69,6 +70,7 @@ def loads_lenient(s: str) -> Any:
 
 
 def extract_json(text: str) -> tuple[Any, list[str]]:
+    """Find the answer object in a model response (JSON fence, other fence, last object). Returns (object, events)."""
     events = []
     fences = _FENCE.findall(text)
     json_fences = [body for lang, body in fences if lang.lower() == "json"]
@@ -100,6 +102,7 @@ def _norm(key: str) -> str:
 
 
 def map_predictions(obj: dict, labels: dict[str, str], H: list[dict]) -> ParseResult:
+    """Map the keys of an answer object to the task's hidden properties (labels, names, prop_keys)."""
     keys = [h["prop_key"] for h in H]
     lookup: dict[str, str] = {}
     for h in H:  # weakest aliases first, so labels win
@@ -163,6 +166,7 @@ def extract_csv(text: str) -> tuple[dict | None, list[str]]:
 
 
 def parse_response(text: str, labels: dict[str, str], H: list[dict], output: str = "json") -> ParseResult:
+    """Parse a model response (JSON or CSV output) into one prediction per hidden property."""
     if output == "csv":
         obj, events = extract_csv(text)
         if obj is None:
@@ -192,6 +196,7 @@ REPAIR_INSTRUCTION_CSV = (
 
 
 def repair_instruction(output: str, labels: dict[str, str]) -> str:
+    """Instruction of the repair call, asking the model to restate its answer in the required format."""
     if output == "csv":
         return REPAIR_INSTRUCTION_CSV.replace("{properties}", ",".join(labels))
     return REPAIR_INSTRUCTION.replace(

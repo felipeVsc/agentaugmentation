@@ -14,7 +14,7 @@ from strategy_a.tasks import Task
 from strategy_b import steps
 from strategy_b.config import load_config
 from strategy_b.runner import Runner
-from strategy_b.search import MockSearch, SearchResult, TavilySearch, is_blocked
+from strategy_b.search import MockSearch, OllamaSearch, SearchResult, TavilySearch, is_blocked
 
 from test_strategy_a import G, H, ROOT, write_tasks
 
@@ -211,6 +211,90 @@ def test_tavily_request(monkeypatch):
     assert resp.results[0].url == "https://x" and resp.credits == 1.0
 
 
+def test_ollama_search_filters_blocked_domains_and_ranks_chunks(monkeypatch):
+    sent = {}
+
+    class Resp(io.BytesIO):
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    page = " ".join(["filler " * 70, "Guarulhos elevation is 2459 ft.", "filler " * 70, "runways 2"])
+    items = [{"url": "https://ourairports.com/airports/SBGR", "title": "leak", "content": "elevation 2459"},
+             {"url": "https://example.org/short", "title": "short", "content": "Guarulhos airport"},
+             {"url": "https://en.wikipedia.org/wiki/GRU", "title": "GRU", "content": page},
+             {"url": "https://example.org/third", "title": "third", "content": "more filler"}]
+
+    def fake_urlopen(req, timeout):
+        sent["body"] = json.loads(req.data)
+        sent["auth"] = req.headers.get("Authorization")
+        return Resp(json.dumps({"results": items}).encode())
+
+    monkeypatch.setenv("OLLAMA_API_KEY", "ollama-test")
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    tool = OllamaSearch({"chunk_chars": 100, "chunks_per_source": 2})
+    # Stand-in for the embedding model: a chunk is as similar to the query as its share of "elevation"/"runways".
+    monkeypatch.setattr(tool, "_similarities", lambda q, chunks: [
+        sum(w in c for w in ("elevation", "runways")) / 2 for c in chunks])
+    resp = tool.search("Guarulhos elevation", 2, ["ourairports.com"])
+    assert sent["auth"] == "Bearer ollama-test"
+    assert sent["body"] == {"query": "Guarulhos elevation", "max_results": 10}  # over-fetch to replace blocked results
+    assert [r.url for r in resp.results] == ["https://en.wikipedia.org/wiki/GRU", "https://example.org/short"]
+    best = resp.results[0]
+    assert best.score == 0.5 and best.content.count(" [...] ") == 1
+    assert "2459 ft" in best.content and "runways 2" in best.content and len(best.content) <= 2 * 100 + 7
+    assert resp.raw["blocked_dropped"] == 1 and resp.credits == 1.0
+    assert tool.search("x", 3, []) and sent["body"]["max_results"] == 3  # no blocklist: ask for k
+
+
+def test_ollama_switches_keys_on_rate_limit(monkeypatch):
+    import io
+    import urllib.error
+
+    class Resp(io.BytesIO):
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    limited = {"Bearer key-a"}
+    used = []
+
+    def fake_urlopen(req, timeout):
+        auth = req.headers.get("Authorization")
+        used.append(auth)
+        if auth in limited:
+            raise urllib.error.HTTPError(req.full_url, 429, "limit", {"Retry-After": "120"}, io.BytesIO(b"session limit"))
+        return Resp(json.dumps({"results": [{"url": "https://a.org", "title": "A", "content": "alpha beta"}]}).encode())
+
+    monkeypatch.setenv("KEY_A", "key-a")
+    monkeypatch.setenv("KEY_B", "key-b")
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    tool = OllamaSearch({"api_key_env": ["KEY_A", "KEY_B"], "ranking": "none"})
+    assert tool.search("q", 1, []).results[0].url == "https://a.org"
+    assert used == ["Bearer key-a", "Bearer key-b"]  # the limited key is skipped within the same search
+    tool.search("q2", 1, [])
+    assert used[-1] == "Bearer key-b" and len(used) == 3  # and not tried again until its Retry-After has passed
+    limited.add("Bearer key-b")
+    with pytest.raises(Exception) as info:
+        tool.search("q3", 1, [])
+    assert info.value.kind == "rate_limit" and 100 < info.value.retry_after <= 120  # both limited: the earliest reset
+    assert tool.key_stats["switches"] == 2
+
+
+def test_ollama_chunks_cut_between_words_and_cap_the_page(monkeypatch):
+    monkeypatch.setenv("OLLAMA_API_KEY", "ollama-test")
+    tool = OllamaSearch({"chunk_chars": 20, "max_page_chars": 60, "ranking": "none"})
+    chunks = tool.chunk("alpha  beta\ngamma delta epsilon zeta eta theta iota kappa lambda mu nu xi omicron pi")
+    assert all(len(c) <= 20 for c in chunks) and " ".join(chunks).startswith("alpha beta gamma delta")
+    assert len(" ".join(chunks)) <= 60
+    with pytest.raises(Exception):
+        OllamaSearch({"ranking": "bm25"})
+
+
 def test_search_buffer_normalizes_and_dedupes(tmp_path):
     import threading
     import time as _time
@@ -258,3 +342,105 @@ def test_search_credit_cap(tmp_path):
     with pytest.raises(ProviderError) as err:
         cache.search("c", 5, [])
     assert err.value.kind == "budget" and not err.value.retryable and cache.stats["budget_refused"] == 1
+
+
+def test_plan_v2_identifies_the_entity_and_partial_searches_are_retried(setup, tmp_path):
+    from llmcore.types import ProviderError
+
+    notes = tmp_path / "notes.yaml"
+    notes.write_text("runways: number of runways of the airport\n")
+
+    def llm(req):
+        text = req.messages[-1]["content"]
+        if "Identify the entity" in text:
+            assert "- runways: number of runways of the airport" in text
+            return json.dumps({"entity": "Guarulhos", "queries": [
+                {"id": "q1", "query": "Guarulhos elevation", "targets": ["elevation"]},
+                {"id": "q2", "query": "Guarulhos runways", "targets": ["runways"]}]})
+        assert "- runways: number of runways of the airport" in text
+        return default_llm(req)
+
+    def search(q):
+        return ProviderError("rate_limit", "429") if "runways" in q else GOOD
+
+    runner, _, _ = setup(llm=llm, search=MockSearch({}, responder=search), max_search_retries=0,
+                         inputs={"tasks": str(tmp_path / "tasks.csv"), "property_notes": str(notes)},
+                         variants=[{"id": "search_evidence", "plan": str(ROOT / "prompts/agent/plan.v2.txt"),
+                                    "synthesize": str(ROOT / "prompts/agent/synth.v2.txt")}])
+    assert runner.run() == {"search_partial": 6}
+    log = logs(runner)[0]
+    assert log["plan_entity"] == "Guarulhos"
+    assert [q["error"] is None for q in log["queries"]] == [True, False]
+    from strategy_b.cli import FAILED_STATUSES
+    assert "search_partial" in FAILED_STATUSES
+
+
+class _StubEmbedder:
+    """Bag-of-words vectors over a fixed vocabulary; counts how many texts it embeds."""
+    VOCAB = ["elevation", "runways", "filler", "airport", "guarulhos"]
+
+    def __init__(self):
+        self.n = 0
+
+    def _vec(self, text):
+        self.n += 1
+        return [text.lower().count(w) + 0.01 for w in self.VOCAB]
+
+    def embed(self, texts):
+        return [self._vec(t) for t in texts]
+
+    def query_embed(self, text):
+        return [self._vec(t) for t in ([text] if isinstance(text, str) else text)]
+
+
+def test_ollama_embedding_cache_gives_identical_results_without_embedding_again(monkeypatch, tmp_path):
+    monkeypatch.setenv("OLLAMA_API_KEY", "ollama-test")
+    pages = [{"url": f"https://x/{i}", "title": "t", "content": " ".join(["filler"] * 60 + ["elevation 2459 ft"] + ["filler"] * 60)}
+             for i in range(3)]
+    first = OllamaSearch({"chunk_chars": 80, "embed_cache": str(tmp_path / "emb.sqlite")})
+    first._embedder = stub = _StubEmbedder()
+    a = first._results("Guarulhos elevation", pages)
+    assert stub.n > 0 and first.embed_stats["from_cache"] == 0
+    second = OllamaSearch({"chunk_chars": 80, "embed_cache": str(tmp_path / "emb.sqlite")})
+    second._embedder = stub2 = _StubEmbedder()
+    b = second._results("Guarulhos elevation", pages)
+    assert stub2.n == 0 and second.embed_stats["embedded"] == 0  # everything came from the disk cache
+    assert [(r.content, r.score) for r in a] == [(r.content, r.score) for r in b]
+
+
+def test_ollama_bm25_prefilter_embeds_only_the_best_lexical_chunks(monkeypatch):
+    from strategy_b.search import bm25
+
+    monkeypatch.setenv("OLLAMA_API_KEY", "ollama-test")
+    assert bm25("runway elevation", ["the elevation is 10 ft", "nothing here", "runway and elevation"])[1] == 0.0
+    text = " ".join([f"filler{i}" for i in range(200)] + ["Guarulhos elevation 2459 ft"] + [f"filler{i}" for i in range(200, 400)])
+    tool = OllamaSearch({"chunk_chars": 60, "prefilter_chunks": 4})
+    tool._embedder = stub = _StubEmbedder()
+    [r] = tool._results("Guarulhos elevation", [{"url": "u", "title": "t", "content": text}])
+    assert "2459" in r.content
+    assert stub.n == 4 + 1  # 4 chunks and the query, out of many more chunks
+
+
+def test_search_waits_out_a_rate_limit_with_retry_after(tmp_path):
+    from llmcore.types import ProviderError
+    from strategy_b.search import CachedSearch
+
+    calls, slept = [], []
+
+    def responder(q):
+        calls.append(q)
+        if len(calls) <= 2:
+            err = ProviderError("rate_limit", "hourly search limit", 429)
+            err.retry_after = 600.0
+            return err
+        return GOOD[:1]
+
+    cache = CachedSearch(MockSearch({}, responder=responder), tmp_path / "sc", max_retries=0, sleep=slept.append,
+                         max_rate_limit_wait_s=7200)
+    assert cache.search("Guarulhos elevation", 5, []).results  # waited twice, then succeeded
+    assert slept == [601.0, 601.0] and cache.stats["rate_limit_waits"] == 2
+    no_wait = CachedSearch(MockSearch({}, responder=lambda q: responder(q) if False else (
+        setattr(e := ProviderError("rate_limit", "limit", 429), "retry_after", 600.0) or e)), tmp_path / "sc2",
+        max_retries=0, sleep=slept.append)
+    with pytest.raises(ProviderError):
+        no_wait.search("x", 5, [])  # default: no waiting, the run is marked failed and retried later

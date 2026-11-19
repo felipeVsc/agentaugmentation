@@ -10,9 +10,8 @@ import json
 import sys
 import threading
 from collections import Counter
-from concurrent.futures import ThreadPoolExecutor, wait
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Callable
 
 from llmcore.cache import DiskCache
@@ -35,7 +34,7 @@ from .templates import (
     placeholders,
     render,
     render_examples,
-    render_output_format,
+    given,
     task_effort_texts,
     text_sizes,
 )
@@ -108,6 +107,7 @@ class Runner:
             chosen: list[Example] = self.examples[: v.n_examples]
             self.examples_text[v.id] = render_examples(tpl, chosen, v.template.context_format) if chosen else ""
 
+        self.notes = cfg.notes()
         self.cache = DiskCache(cfg.cache_path)
         self.callers: dict[str, Caller] = {}
         if self.connect:
@@ -140,7 +140,8 @@ class Runner:
         for v in self.variants:
             tpl = self.templates[v.template.id]
             for task in self.tasks:
-                rendered = render(tpl, task, self.examples_text[v.id], v.template.context_format, v.template.with_context)
+                rendered = render(tpl, given(task, v.template.G_origin), self.examples_text[v.id],
+                                  v.template.context_format, v.template.with_context, self.notes)
                 for m in self.models:
                     for r in range(1, self.cfg.runs_per_task + 1):
                         jobs.append(Job(task, v, m, r, rendered))
@@ -358,7 +359,7 @@ class Runner:
 
     def _effort(self, job: Job) -> dict:
         """Sizes of what a person writes: the template once per variant, the task part per task (METRICS.md §6)."""
-        texts = task_effort_texts(job.task, job.variant.template.with_context,
+        texts = task_effort_texts(given(job.task, job.variant.template.G_origin), job.variant.template.with_context,
                                   "published_input" in placeholders(self.templates[job.variant.template.id].user))
         return text_sizes({"template": self.pfe_texts[job.variant.id], **texts}, self.tokenizers[job.model.id])
 

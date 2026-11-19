@@ -183,6 +183,7 @@ class CodeCarbonMeter(EnergyMeter):
 
 
 def make_meter(cfg: ModelConfig, provider_ecologits_name: str | None) -> EnergyMeter:
+    """Energy meter for a model: EcoLogits, CodeCarbon, or a no-op meter."""
     if cfg.energy.method == "ecologits":
         return EcoLogitsMeter(cfg, provider_ecologits_name)
     if cfg.energy.method == "codecarbon":

@@ -1,0 +1,11 @@
+model,variant,same outcome in all runs,f1_sd,f1_ign_sd
+deepseek-v4.1-flash,search,0.8954,0.016,0.1248
+deepseek-v4.1-flash,search + memory,0.841,0.0117,0.0885
+gemma4:31b,search,0.8033,0.0104,0.0344
+gemma4:31b,search + memory,0.7406,0.0198,0.0435
+gpt-oss:120b,search,0.5983,0.0083,0.0056
+gpt-oss:120b,search + memory,0.6151,0.0149,0.0385
+gpt-oss:20b,search,0.59,0.014,0.0574
+gpt-oss:20b,search + memory,0.5565,0.0261,0.0522
+mistral-large-3,search,0.682,0.0142,0.0471
+mistral-large-3,search + memory,0.6067,0.0192,0.0281

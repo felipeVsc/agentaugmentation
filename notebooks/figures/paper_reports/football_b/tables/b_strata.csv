@@ -1,0 +1,19 @@
+index,factor,stratum,variant,tasks,correct,wrong,abstained,f1,f1_lo,f1_hi,f1_ign,f1_ign_lo,f1_ign_hi,abstention
+0,pop(p) of the hidden property (H stratum),high,search,405,31,114,260,0.1127,0.0782,0.1484,0.3523,0.2597,0.4365,0.642
+1,pop(p) of the hidden property (H stratum),low,search,385,41,115,229,0.1516,0.1105,0.196,0.4162,0.3292,0.4979,0.5948
+2,pop(p) of the hidden property (H stratum),mid,search,405,37,92,276,0.1386,0.1007,0.1825,0.4458,0.3509,0.5389,0.6815
+3,pop(p) of the hidden property (H stratum),high,search + memory,405,50,124,231,0.1727,0.1272,0.2149,0.4464,0.3585,0.5198,0.5704
+4,pop(p) of the hidden property (H stratum),low,search + memory,385,61,117,207,0.2167,0.1696,0.2624,0.5105,0.4315,0.5844,0.5377
+5,pop(p) of the hidden property (H stratum),mid,search + memory,405,52,123,230,0.1793,0.138,0.2248,0.4581,0.3762,0.5431,0.5679
+0,given properties (G stratum),high,search,405,40,143,222,0.1361,0.0991,0.1772,0.3587,0.2772,0.4404,0.5481
+1,given properties (G stratum),mid,search,385,30,92,263,0.1183,0.0836,0.1585,0.3947,0.2948,0.4906,0.6831
+2,given properties (G stratum),low,search,405,39,86,280,0.1472,0.1103,0.1892,0.4756,0.3841,0.5618,0.6914
+3,given properties (G stratum),high,search + memory,405,51,170,184,0.1629,0.1232,0.2038,0.375,0.2992,0.4445,0.4543
+4,given properties (G stratum),mid,search + memory,385,47,90,248,0.1801,0.1349,0.2247,0.5109,0.4161,0.5922,0.6442
+5,given properties (G stratum),low,search + memory,405,65,104,236,0.2265,0.1769,0.271,0.5556,0.4706,0.6298,0.5827
+0,centrality of the node (node stratum),mid,search,405,45,90,270,0.1667,0.1219,0.2121,0.5,0.4048,0.5859,0.6667
+1,centrality of the node (node stratum),low,search,390,32,119,239,0.1183,0.0798,0.1599,0.3497,0.2541,0.44,0.6128
+2,centrality of the node (node stratum),high,search,400,32,112,256,0.1176,0.0799,0.1574,0.3636,0.2683,0.4536,0.64
+3,centrality of the node (node stratum),mid,search + memory,405,68,108,229,0.2341,0.1934,0.2872,0.5574,0.483,0.6378,0.5654
+4,centrality of the node (node stratum),low,search + memory,390,43,134,213,0.1517,0.1125,0.1951,0.3909,0.3069,0.473,0.5462
+5,centrality of the node (node stratum),high,search + memory,400,52,122,226,0.1812,0.1366,0.2222,0.4602,0.3732,0.5351,0.565

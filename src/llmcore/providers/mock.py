@@ -23,6 +23,7 @@ _LAST_OBJECT = re.compile(r"\{[^{}]*\}(?![\s\S]*\{[^{}]*\})")
 
 
 def null_answer(prompt: str) -> str:
+    """JSON object with every key of the last JSON object in the prompt set to null (an abstention)."""
     match = _LAST_OBJECT.search(prompt)
     if not match:
         return "{}"

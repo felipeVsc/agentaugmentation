@@ -1,0 +1,17 @@
+# Export of the football graph from Neo4j, unchanged (input of scripts/football_lift_stats.py).
+#   tasks snapshot --config configs/football_raw.yaml
+# Only the snapshot is used; the task set is built from the derived snapshot (configs/football_v1_ctx.yaml).
+
+dataset:
+  name: football
+  node_type: Player
+  source: neo4j
+  node_id_property: Player ID     # fbref player id, unique per player
+
+neo4j:
+  uri: bolt://localhost:7687      # overridden by NEO4J_URI; user/password only from NEO4J_USER / NEO4J_PASSWORD
+  database: null                  # overridden by NEO4J_DATABASE
+  id_function: elementId
+
+task_set_version: football-raw
+output_dir: tasks/football/raw/

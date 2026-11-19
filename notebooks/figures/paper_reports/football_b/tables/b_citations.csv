@@ -1,0 +1,11 @@
+model,source,answers,share,correct,wrong,precision
+deepseek-v4.1-flash,cites the evidence,82,0.9647,24,58,0.2927
+deepseek-v4.1-flash,no citation (memory),3,0.0353,2,1,0.6667
+gemma4:31b,cites the evidence,189,0.863,57,132,0.3016
+gemma4:31b,no citation (memory),30,0.137,11,19,0.3667
+gpt-oss:120b,cites the evidence,170,0.9239,49,121,0.2882
+gpt-oss:120b,no citation (memory),14,0.0761,7,7,0.5
+gpt-oss:20b,cites the evidence,177,0.8634,46,131,0.2599
+gpt-oss:20b,no citation (memory),28,0.1366,13,15,0.4643
+mistral-large-3,cites the evidence,301,0.9805,93,208,0.309
+mistral-large-3,no citation (memory),6,0.0195,3,3,0.5

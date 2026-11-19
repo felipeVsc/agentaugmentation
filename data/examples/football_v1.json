@@ -1,0 +1,204 @@
+{
+ "version": "v2",
+ "task_set": "football-v1-ctx",
+ "seed": 7,
+ "examples": [
+  {
+   "node_id": "41f32541",
+   "node_type": "Player",
+   "centrality_stratum": "high",
+   "H": [
+    {
+     "prop_key": "Player.Nation",
+     "property_name": "Nation",
+     "element_type": "Player",
+     "path": "Player"
+    },
+    {
+     "prop_key": "Player.Date of birth",
+     "property_name": "Date of birth",
+     "element_type": "Player",
+     "path": "Player"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Player.Name",
+     "property_name": "Name",
+     "element_type": "Player",
+     "element_id": "41f32541",
+     "path": "Player",
+     "origin": "node",
+     "value": "Fernando"
+    }
+   ],
+   "answers": {
+    "Player.Nation": "br BRA",
+    "Player.Date of birth": 1987.0
+   }
+  },
+  {
+   "node_id": "16e9d0ea",
+   "node_type": "Player",
+   "centrality_stratum": "mid",
+   "H": [
+    {
+     "prop_key": "Player.Starts",
+     "property_name": "Starts",
+     "element_type": "Player",
+     "path": "Player"
+    },
+    {
+     "prop_key": "Player.Goals",
+     "property_name": "Goals",
+     "element_type": "Player",
+     "path": "Player"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Player.Name",
+     "property_name": "Name",
+     "element_type": "Player",
+     "element_id": "16e9d0ea",
+     "path": "Player",
+     "origin": "node",
+     "value": "Álex Moreno"
+    },
+    {
+     "prop_key": "Player.Position",
+     "property_name": "Position",
+     "element_type": "Player",
+     "element_id": "16e9d0ea",
+     "path": "Player",
+     "origin": "node",
+     "value": "DF"
+    }
+   ],
+   "answers": {
+    "Player.Starts": 11,
+    "Player.Goals": 0
+   }
+  },
+  {
+   "node_id": "48d5bd33",
+   "node_type": "Player",
+   "centrality_stratum": "low",
+   "H": [
+    {
+     "prop_key": "Player.Yellow cards",
+     "property_name": "Yellow cards",
+     "element_type": "Player",
+     "path": "Player"
+    },
+    {
+     "prop_key": "Player.Position",
+     "property_name": "Position",
+     "element_type": "Player",
+     "path": "Player"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Player.Name",
+     "property_name": "Name",
+     "element_type": "Player",
+     "element_id": "48d5bd33",
+     "path": "Player",
+     "origin": "node",
+     "value": "Ruslan Malinovskyi"
+    },
+    {
+     "prop_key": "Player.Red cards",
+     "property_name": "Red cards",
+     "element_type": "Player",
+     "element_id": "48d5bd33",
+     "path": "Player",
+     "origin": "node",
+     "value": 0
+    },
+    {
+     "prop_key": "Player.Starts",
+     "property_name": "Starts",
+     "element_type": "Player",
+     "element_id": "48d5bd33",
+     "path": "Player",
+     "origin": "node",
+     "value": 4
+    }
+   ],
+   "answers": {
+    "Player.Yellow cards": 2,
+    "Player.Position": "MF"
+   }
+  },
+  {
+   "node_id": "f3bc2eb7",
+   "node_type": "Player",
+   "centrality_stratum": "mid",
+   "H": [
+    {
+     "prop_key": "Player.Playing time in minutes",
+     "property_name": "Playing time in minutes",
+     "element_type": "Player",
+     "path": "Player"
+    },
+    {
+     "prop_key": "Player.Matches played",
+     "property_name": "Matches played",
+     "element_type": "Player",
+     "path": "Player"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Player.Squad",
+     "property_name": "Squad",
+     "element_type": "Player",
+     "element_id": "f3bc2eb7",
+     "path": "Player",
+     "origin": "node",
+     "value": "si NK Olimpija Ljubljana"
+    }
+   ],
+   "answers": {
+    "Player.Playing time in minutes": 136.0,
+    "Player.Matches played": 4
+   }
+  },
+  {
+   "node_id": "fd985c15",
+   "node_type": "Player",
+   "centrality_stratum": "high",
+   "H": [
+    {
+     "prop_key": "Player.Red cards",
+     "property_name": "Red cards",
+     "element_type": "Player",
+     "path": "Player"
+    },
+    {
+     "prop_key": "Player.Assists",
+     "property_name": "Assists",
+     "element_type": "Player",
+     "path": "Player"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Player.Squad",
+     "property_name": "Squad",
+     "element_type": "Player",
+     "element_id": "fd985c15",
+     "path": "Player",
+     "origin": "node",
+     "value": "Blackburn Rovers"
+    }
+   ],
+   "answers": {
+    "Player.Red cards": 0,
+    "Player.Assists": 1.0
+   }
+  }
+ ]
+}

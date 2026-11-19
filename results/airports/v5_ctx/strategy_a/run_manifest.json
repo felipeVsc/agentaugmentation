@@ -1,0 +1,791 @@
+{
+  "strategy": "A",
+  "task_set_version": "airports-v5-ctx",
+  "tasks_file": {
+    "path": "tasks/airports/v5_ctx/tasks.csv",
+    "sha256": "fff25906e90c1b32a4a862fff0e11e4d2491d54f34da0316cde5d90e247fbb0a"
+  },
+  "examples_file": {
+    "path": "data/examples/airports_v5.json",
+    "sha256": "d26e9b7487f4510aec9981f45a5fa8a8d9952bb0fb770a06736b17a2e10478b9",
+    "version": "v2"
+  },
+  "templates": {
+    "compact": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/compact.v2.txt",
+      "sha256": "4e9c35c3f204d4e57fcfb475f06b598edd6f1a8fbb908078f0ee48f7024185cd"
+    },
+    "zero": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/zero.v2.txt",
+      "sha256": "752278108fac0667b9edf403ae3d168946fc15dd8e6c481b4e54129a3f7f555c"
+    },
+    "few": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/few.v2.txt",
+      "sha256": "282c7acdec36e02de69e9cbc59a91aefcceddebe343cb93f5907eec837c3c02b"
+    },
+    "zerocot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/zerocot.v2.txt",
+      "sha256": "a67aa25cfba412d560950f3264475e5dc234c3f1e24cee8c26efd77489bcf01e"
+    },
+    "fewcot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2/fewcot.v2.txt",
+      "sha256": "02cc987a84c8f0cad0ccd41224c5f4a4c0551d6b23eb40b1b08263088456f6fb"
+    }
+  },
+  "variants": [
+    {
+      "id": "compact",
+      "template": "compact",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zero",
+      "template": "zero",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_1",
+      "template": "few",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_3",
+      "template": "few",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_5",
+      "template": "few",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zerocot",
+      "template": "zerocot",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_1",
+      "template": "fewcot",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_3",
+      "template": "fewcot",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_5",
+      "template": "fewcot",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    }
+  ],
+  "pfe_tokens": {
+    "compact|cloud-deepseek-v4.1-flash": 81,
+    "zero|cloud-deepseek-v4.1-flash": 192,
+    "few_1|cloud-deepseek-v4.1-flash": 228,
+    "few_3|cloud-deepseek-v4.1-flash": 305,
+    "few_5|cloud-deepseek-v4.1-flash": 375,
+    "zerocot|cloud-deepseek-v4.1-flash": 244,
+    "fewcot_1|cloud-deepseek-v4.1-flash": 280,
+    "fewcot_3|cloud-deepseek-v4.1-flash": 357,
+    "fewcot_5|cloud-deepseek-v4.1-flash": 427
+  },
+  "tokenizers": {
+    "cloud-deepseek-v4.1-flash": "cl100k_base"
+  },
+  "models": [
+    {
+      "id": "cloud-deepseek-v4.1-flash",
+      "provider": "ollama",
+      "model": "deepseek-v4.1-flash",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": null,
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": false
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "mistralai",
+        "ecologits_model": "zai-glm-5-3",
+        "electricity_mix_zone": null,
+        "country_iso_code": "FRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    }
+  ],
+  "model_versions": {
+    "cloud-deepseek-v4.1-flash": [
+      "deepseek-v4.1-flash (Ollama Cloud)"
+    ],
+    "cloud-mistral-large-3": [
+      "mistral-large-3:675b (Ollama Cloud)"
+    ],
+    "cloud-gpt-oss-120b": [
+      "gpt-oss:120b (Ollama Cloud)"
+    ],
+    "cloud-gemma4-31b": [
+      "gemma4:31b (Ollama Cloud)"
+    ],
+    "cloud-gpt-oss-20b": [
+      "gpt-oss:20b (Ollama Cloud)"
+    ]
+  },
+  "model_details": {
+    "cloud-deepseek-v4.1-flash": {
+      "model": "deepseek-v4.1-flash",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "deepseek-v4.1-flash",
+        "format": "",
+        "family": "deepseek_v41",
+        "families": null,
+        "parameter_size": "763205315794",
+        "quantization_level": "FP8"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "show_error": null
+    }
+  },
+  "config": {
+    "inputs": {
+      "tasks": "tasks/airports/v5_ctx/tasks.csv",
+      "examples": "data/examples/airports_v5.json",
+      "property_notes": "data/property_notes/airports.yaml"
+    },
+    "runs_per_task": 3,
+    "pfe_tokenizer": "cl100k_base",
+    "repair": true,
+    "output_dir": "results/airports/v5_ctx/strategy_a/",
+    "cache_dir": "results/airports/v5/strategy_a/cache/",
+    "templates": [
+      {
+        "id": "compact",
+        "file": "templates/figure2/compact.v2.txt",
+        "output": "csv"
+      },
+      {
+        "id": "zero",
+        "file": "templates/figure2/zero.v2.txt",
+        "output": "csv"
+      },
+      {
+        "id": "few",
+        "file": "templates/figure2/few.v2.txt",
+        "output": "csv",
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "id": "zerocot",
+        "file": "templates/figure2/zerocot.v2.txt",
+        "output": "csv",
+        "expected_output_tokens": 300
+      },
+      {
+        "id": "fewcot",
+        "file": "templates/figure2/fewcot.v2.txt",
+        "output": "csv",
+        "expected_output_tokens": 300,
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      }
+    ],
+    "model_defaults": {
+      "provider": "ollama",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "energy": {
+        "method": "none"
+      },
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0
+      }
+    },
+    "models": [
+      {
+        "id": "cloud-gpt-oss-20b",
+        "model": "gpt-oss:20b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "pricing": {
+          "input_per_mtok": 0.07,
+          "output_per_mtok": 0.3,
+          "as_of": "2026-10-27"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-20b"
+        }
+      },
+      {
+        "id": "cloud-gpt-oss-120b",
+        "model": "gpt-oss:120b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "pricing": {
+          "input_per_mtok": 0.15,
+          "output_per_mtok": 0.6,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-120b"
+        }
+      },
+      {
+        "id": "cloud-gemma4-31b",
+        "model": "gemma4:31b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "pricing": {
+          "input_per_mtok": 0.14,
+          "output_per_mtok": 0.4,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "google_genai",
+          "ecologits_model": "gemma-4-31b-it"
+        }
+      },
+      {
+        "id": "cloud-mistral-large-3",
+        "model": "mistral-large-3:675b",
+        "options": {
+          "base_url": "https://ollama.com"
+        },
+        "pricing": {
+          "input_per_mtok": 0.5,
+          "output_per_mtok": 1.5,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "mistral-large-2512"
+        }
+      },
+      {
+        "id": "cloud-deepseek-v4.1-flash",
+        "model": "deepseek-v4.1-flash",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "pricing": {
+          "input_per_mtok": 0.3,
+          "output_per_mtok": 1.2,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "zai-glm-5-3"
+        }
+      }
+    ]
+  },
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
+  "runs": [
+    {
+      "start": "2026-10-28T22:12:11.979196+00:00",
+      "end": "2026-10-28T23:10:56.272979+00:00",
+      "counts": {
+        "ok": 6561
+      },
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 6573,
+          "cache_hits": 81,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-28T23:11:11.227456+00:00",
+      "end": "2026-10-28T23:11:11.519714+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-28T23:11:11.864819+00:00",
+      "end": "2026-10-28T23:11:12.154635+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-28T23:11:12.525046+00:00",
+      "end": "2026-10-28T23:32:32.610546+00:00",
+      "counts": {
+        "ok": 6561
+      },
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 6492,
+          "cache_hits": 83,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-28T23:32:33.097557+00:00",
+      "end": "2026-10-28T23:32:33.406696+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-28T23:32:33.802217+00:00",
+      "end": "2026-10-29T00:05:23.718664+00:00",
+      "counts": {
+        "ok": 6561
+      },
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 6480,
+          "cache_hits": 81,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:05:24.293055+00:00",
+      "end": "2026-10-29T00:05:24.609787+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:37:01.867006+00:00",
+      "end": "2026-10-29T00:37:02.215040+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:37:02.637125+00:00",
+      "end": "2026-10-29T00:37:02.959414+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:37:03.425254+00:00",
+      "end": "2026-10-29T00:37:04.170227+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:37:04.642534+00:00",
+      "end": "2026-10-29T00:37:05.113003+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:37:05.688970+00:00",
+      "end": "2026-10-29T00:37:06.151812+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T00:37:06.596503+00:00",
+      "end": "2026-10-29T00:37:06.954984+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:46.800120+00:00",
+      "end": "2026-10-29T01:09:47.138639+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:47.600707+00:00",
+      "end": "2026-10-29T01:09:47.933200+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:48.406134+00:00",
+      "end": "2026-10-29T01:09:48.752387+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:49.215519+00:00",
+      "end": "2026-10-29T01:09:49.558695+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:50.027539+00:00",
+      "end": "2026-10-29T01:09:50.363569+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:50.813254+00:00",
+      "end": "2026-10-29T01:09:51.143019+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:09:51.612191+00:00",
+      "end": "2026-10-29T01:25:52.564190+00:00",
+      "counts": {
+        "ok": 1937
+      },
+      "callers": {
+        "cloud-mistral-large-3": {
+          "calls": 1913,
+          "cache_hits": 24,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:25:53.674005+00:00",
+      "end": "2026-10-29T01:25:54.066915+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-mistral-large-3": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:25:54.644252+00:00",
+      "end": "2026-10-29T01:56:22.365240+00:00",
+      "counts": {
+        "ok": 6560,
+        "parse_error": 1
+      },
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 6503,
+          "cache_hits": 81,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T01:56:22.945914+00:00",
+      "end": "2026-10-29T01:56:23.302618+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:27.685722+00:00",
+      "end": "2026-10-29T03:42:28.052523+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:28.528903+00:00",
+      "end": "2026-10-29T03:42:28.903443+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:29.388843+00:00",
+      "end": "2026-10-29T03:42:29.732685+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:30.211191+00:00",
+      "end": "2026-10-29T03:42:30.564504+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:31.045328+00:00",
+      "end": "2026-10-29T03:42:31.394509+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:31.868283+00:00",
+      "end": "2026-10-29T03:42:32.231844+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:32.731010+00:00",
+      "end": "2026-10-29T03:42:33.090057+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-mistral-large-3": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:33.578890+00:00",
+      "end": "2026-10-29T03:42:33.947240+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-mistral-large-3": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:34.431052+00:00",
+      "end": "2026-10-29T03:42:34.770473+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-10-29T03:42:35.245682+00:00",
+      "end": "2026-10-29T03:42:35.590151+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    }
+  ],
+  "status_counts": {
+    "ok": 33319,
+    "truncated": 24,
+    "parse_error": 3
+  }
+}

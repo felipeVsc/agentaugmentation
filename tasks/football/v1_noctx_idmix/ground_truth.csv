@@ -1,0 +1,234 @@
+task_id,prop_key,value,value_type
+4fdd4ac9cae4f5c9,Player.Losses,3.0,float
+1a4142a3e45098bd,Player.Clean sheets,3.0,float
+d0b05b08d8d9491e,Player.Clean sheets,0.0,float
+8eef5c6ab7fa4291,Player.Losses,3.0,float
+0cd527299b045a3f,Player.Clean sheets,3.0,float
+045827cc3a078eeb,Player.Clean sheets,0.0,float
+40132164c55c01f4,Player.Losses,3.0,float
+f822af239093ecb3,Player.Clean sheets,3.0,float
+987b6a810a781259,Player.Clean sheets,0.0,float
+4ca14c28b21a9b19,Player.Minutes per start,90.0,float
+2741777c0e37b21f,Player.Position,"""GK""",string
+5cbb9c72ade7a08d,Player.Minutes per start,90.0,float
+d28313d4e50b7bf6,Player.Goals per shot,0.0,float
+a1287028a237c3a2,Player.Goals per shot,0.0,float
+163e62b32180505f,Player.Position,"""MF""",string
+d2f759d5392bfc1e,Player.Goals per shot,0.0,float
+bb92ca9d6742cfce,Player.Goals per shot,0.0,float
+0b115f1efc45a4d2,Player.Position,"""MF""",string
+90d671547d9fe26c,Player.Fouls suffered,0.0,float
+0aa86a5110618adc,Player.Nation,"""cz CZE""",string
+49646ccdf0d3234b,Player.Fouls suffered,1.0,float
+a94aac6c2ec8bb76,Player.Yellow cards,11,integer
+f7be205d474d01a6,Player.Assists,0.0,float
+8d220077fd7098b7,Player.Goals + assists,3.0,float
+196abb0077aab084,Player.Yellow cards,11,integer
+cddc784b84e3a80c,Player.Assists,0.0,float
+a851baa38a1eb200,Player.Goals + assists,3.0,float
+41cafe5e3c5464cf,Player.Wins,1.0,float
+7c17b32503ad0d78,Player.Penalty save percentage,100.0,float
+fcaeb2bfbad3a4fa,Player.Clean sheet percentage,0.0,float
+aec5ac6680fd770f,Player.Clean sheet percentage,0.0,float
+331dee0840466b9d,Player.Losses,14.0,float
+a494ce443e1088c1,Player.Draws,6.0,float
+519ffa653c2d5352,Player.Wins,1.0,float
+99b87c2a4d75ec6c,Player.Penalty save percentage,100.0,float
+40e0570fd8e91e88,Player.Clean sheet percentage,0.0,float
+7c7a9a384f807afd,Player.Position,"""GK""",string
+dce9e1c04ec7c829,Player.Position,"""GK""",string
+4dc466cc81efcc39,Player.On-offsides,-1.12,float
+cc6333394da0c50c,Player.Goals per shot,0.0,float
+0e0e0bfdad18617a,Player.Position,"""DF,MF""",string
+99c4994f966eeb2b,Player.Minutes per start,80.0,float
+8235f87a0ececf20,Player.Goals per shot,0.0,float
+f27313c6fed30b51,Player.Position,"""DF,MF""",string
+1988bde828b56781,Player.Minutes per start,80.0,float
+326e8ea533723e1a,Player.Minutes per match,90.0,float
+a062e19353346ed4,Player.Second yellow cards,0,integer
+9a7c1dd721982a32,Player.Own goals,0,integer
+b14c0ef7558f6fed,Player.Matches played,28,integer
+93d5dbdf0a27385e,Player.passes into the goalkeeper's penalty area,50.0,float
+ca213a35f86091b6,Player.Penalties attempted,0,integer
+e1d83661448fe901,Player.Matches played,28,integer
+7946a62866352574,Player.passes into the goalkeeper's penalty area,50.0,float
+3ce0764e777f319e,Player.Penalties attempted,0,integer
+4544966dbdd1a448,Player.Clean sheets,0.0,float
+1636b9c94ecd3f39,Player.Goals conceded,16.0,float
+a081ca59e9608ce5,Player.Draws,0.0,float
+921317420d02bc69,Player.Clean sheets,0.0,float
+25cd6c3a478ca770,Player.Goals conceded,16.0,float
+720a5e6ff05983c6,Player.Draws,0.0,float
+6d3aac3dcbe17580,Player.Position,"""GK""",string
+fa23ba64a71194a4,Player.Minutes per start,90.0,float
+d42d4fc6f52f0ccf,Player.Position,"""GK""",string
+baca2dce3ee66d18,Player.Minutes per start,90.0,float
+d33aa660f4bb9800,Player.Shots on target percentage,33.3,float
+38cbf936d8a847ee,Player.Shots on target percentage,25.0,float
+d8d02aef85493fca,Player.Minutes per start,90.0,float
+307339655bcccb0f,Player.Shots on target percentage,33.3,float
+f07492c47a6f4bb1,Player.Shots on target percentage,25.0,float
+d58cc0aabb29f8d8,Player.Yellow cards,0,integer
+06d78f0904c3bd81,Player.goals scored - goals conceded per 90 minutes,0.17,float
+4aae54d36244ddb0,Player.Playing time in minutes,90.0,float
+8a04e97565db29c8,Player.Points per match,1.33,float
+5b87a0c548fe2a0c,Player.Matches fully played,5.0,float
+990841add4eddcf0,Player.Penalties scored,0,integer
+dda040746bd30249,Player.Substitutions,0.0,float
+69e42778710169ac,Player.Matches fully played,5.0,float
+c2ddf29dca54fdbf,Player.Penalties scored,0,integer
+b67d16d1041f7be0,Player.Saves,19.0,float
+11ece662b16a8af5,Player.Draws,7.0,float
+7dc6bcd6d7a28f1d,Player.Goals conceded per 90 minutes,1.33,float
+aa3402c2d6019923,Player.Saves,19.0,float
+3d616c29859a24b5,Player.Draws,7.0,float
+615e3ba6583f1bf9,Player.Goals conceded per 90 minutes,1.33,float
+965820830e352960,Player.Saves,19.0,float
+8dd577e1e708e945,Player.Draws,7.0,float
+f44efd6d075e0b5b,Player.Goals conceded per 90 minutes,1.33,float
+145e8f18b6aa675c,Player.On-offsides,0.71,float
+85b07a6d6783b650,Player.Minutes per start,88.0,float
+4afe53d515741a6e,Player.Minutes per start,90.0,float
+cde2eb862757f363,Player.Goals per shotots on target,0.0,float
+4748fd6e3de25ee5,Player.On-offsides,0.85,float
+4a24b6e45c3a7be2,Player.Goals per shot,0.09,float
+08a930f725433d3d,Player.Goals per shotots on target,0.0,float
+cb8818f1446f3754,Player.On-offsides,0.85,float
+2789790caedf3b08,Player.Goals per shot,0.09,float
+dd15950ea27ad776,Player.Substitutions,2.0,float
+046b541a748d0097,Player.Shots on target per 90 minutes,0.0,float
+c5f3ecdca36688e9,Player.Non-penalty goals per 90 minutes,0.0,float
+a202b3b4825a94fe,Player.Assists,0.0,float
+35ec9a61b407ccab,Player.Goals + assists while on the pitch,8.0,float
+139b203f8baf1504,Player.Goals per 90 minutes,0.35,float
+01fe10d2305bd9f9,Player.Assists,0.0,float
+754a46924811288a,Player.Goals + assists while on the pitch,8.0,float
+8bae0ce4d003a693,Player.Goals per 90 minutes,0.35,float
+e0f361f12aa63267,Player.Goals conceded per 90 minutes,0.68,float
+75ea4153219f7fd7,Player.Penalties missed,0.0,float
+e6c454c6459e5882,Player.Clean sheet percentage,33.3,float
+fea6d398e5205f2f,Player.Goals conceded per 90 minutes,0.68,float
+0c399068d98f9903,Player.Penalties missed,0.0,float
+7868a5cb2b4611aa,Player.Clean sheet percentage,33.3,float
+fdb9b19b573549e2,Player.Goals conceded per 90 minutes,0.68,float
+9677ea052c9f7f5e,Player.Penalties missed,0.0,float
+ed49a56ce555b15a,Player.Clean sheet percentage,33.3,float
+300693cf942c5ac7,Player.Minutes per start,90.0,float
+bcc283e8003abde3,Player.Minutes per start,88.0,float
+eb8bccd75209a74a,Player.Minutes per start,90.0,float
+0e4304f8067e460a,Player.Position,"""DF,MF""",string
+5099a031dfd4300b,Player.Minutes per start,74.0,float
+e01ca449d21eef6c,Player.Shots on target percentage,28.9,float
+84e71b8622c5baea,Player.Position,"""DF,MF""",string
+6cd58b6302dfa96a,Player.Minutes per start,74.0,float
+fa6f330117a5f1e4,Player.Shots on target percentage,28.9,float
+90627e25b54f66e2,Player.Assists,0.0,float
+70cc5f1ca6f5989f,Player.Goals scored while on the pitch,32.0,float
+a39bd5a5e7953dfd,Player.Squad,"""Beerschot Wilrijk""",string
+4df62db34d55516e,Player.Matches fully played,4.0,float
+970128f64e075037,Player.Goals,2,integer
+0488348dfd69f85b,Player.Shots per 90 minutes,2.23,float
+d223641cb7c2c387,Player.Matches fully played,4.0,float
+22174a449ffdfe1c,Player.Goals,2,integer
+785327a3042e8954,Player.Shots per 90 minutes,2.23,float
+871ee8ba1b4511dd,Player.Penalties saved,0.0,float
+76c6466b5f4060c5,Player.Saves,58.0,float
+aa164ef4db659ff3,Player.Penalties missed,0.0,float
+83d416a3ff082726,Player.Clean sheets,5.0,float
+5853eda6a41dba81,Player.Goals conceded,36.0,float
+1a32294127461515,Player.Shots on target against,132.0,float
+9f723fdf98abab17,Player.Penalties saved,0.0,float
+8cd239b5c76042b1,Player.Saves,58.0,float
+34d8a7b99fe81d5f,Player.Penalties missed,0.0,float
+83c8fa246a8a8834,Player.Minutes per substitute appearance,39.0,float
+7aa89f348b151a8b,Player.Minutes per start,88.0,float
+cd74fa724fdb5b42,Player.Minutes per start,90.0,float
+6fc1d0538bb93545,Player.Minutes per start,83.0,float
+6dd0dad214c271a7,Player.Goals per shot,0.13,float
+d9fa43a17c695487,Player.Goals per shotots on target,0.31,float
+9e053324a20026a8,Player.Minutes per start,83.0,float
+8c5980a4d9624ec1,Player.Goals per shot,0.13,float
+6783d4f29b6042aa,Player.Goals per shotots on target,0.31,float
+114388c8053d1dda,Player.Non-penalty goals per 90 minutes,0.0,float
+b98634f6b8e3a55b,Player.Penalties attempted,2.0,float
+18cffa7b70d2eb23,Player.Own goals,0,integer
+d3a50092ce8dec20,Player.Non-penalty goals + assists per 90 minutes,0.0,float
+4da9a671a064c0c4,Player.Assists,1.0,float
+a108aba50f44efae,Player.Offsides,5.0,float
+3a76669ebefc012e,Player.Non-penalty goals + assists per 90 minutes,0.0,float
+5eedad84c12c42fe,Player.Assists,1.0,float
+6fe373160b3e3f53,Player.Offsides,5.0,float
+eaa46854d64e7938,Player.Wins,4.0,float
+6b2ba700a9c7c593,Player.Penalties missed,0.0,float
+0ffc423ebaba646a,Player.Clean sheet percentage,100.0,float
+d52e349dac6c61f8,Player.Wins,4.0,float
+dad80a5b7fda5b3a,Player.Penalties missed,0.0,float
+307784646da7a0b3,Player.Clean sheet percentage,100.0,float
+ffcb82617eef2894,Player.Wins,4.0,float
+8586e99945a115d1,Player.Penalties missed,0.0,float
+7afce4eced53ac63,Player.Clean sheet percentage,100.0,float
+b8af9cf23254bb23,Player.Shots on target percentage,0.0,float
+bbb126fd32c1c595,Player.On-offsides,0.53,float
+9fc9107c62c86ea9,Player.On-offsides,1.24,float
+685078d060c69a8a,Player.Shots on target percentage,30.0,float
+89eac82d92dc8290,Player.Minutes per substitute appearance,13.0,float
+9ff858e4efbb6f9c,Player.Goals per shot,0.09,float
+a695575fe94d0c58,Player.Shots on target percentage,30.0,float
+8afd48205cfaae2f,Player.Minutes per substitute appearance,13.0,float
+249487719057373c,Player.Goals per shot,0.09,float
+40bc557ea1ba77a3,Player.goals scored - goals conceded per 90 minutes,-0.41,float
+976d29ccf3d29b4b,Player.Assists,0.0,float
+8d798640c4d05216,Player.Name,"""Joe Walsh""",string
+f351c1cf5fb9825f,Player.Goals per 90 minutes,0.0,float
+35b4d1902c7f161e,Player.goals scored - goals conceded per 90 minutes,-0.1,float
+0dae5edb8df8db7d,Player.Interceptions,12.0,float
+3d38d7f99c3e22f3,Player.Name,"""Rome-Jayden Owusu-Oduro""",string
+f83017967dc5ed80,Player.Date of birth,1994.0,float
+f2830531e95a5c33,Player.Date of birth,2006.0,float
+68f784bbce7bdd96,Player.Saves,29.0,float
+a4f87cdebc768916,Player.Saves,87.0,float
+dd9de28ac9090055,Player.Wins,1.0,float
+5c216dd5500873f1,Player.Saves,29.0,float
+e13f7cb6828c2717,Player.Saves,87.0,float
+77c6cb72f19d21b6,Player.Wins,1.0,float
+5e0afd656981be8c,Player.Saves,29.0,float
+e8a9887394d2c2fe,Player.Saves,87.0,float
+53d3b69ddd332dbc,Player.Wins,1.0,float
+8c5dc71f26a6aef5,Player.Goals per shot,0.0,float
+eb1cff0ada1bdf29,Player.Minutes per start,90.0,float
+3f23f1b27b29fcc5,Player.On-offsides,1.24,float
+46baa6e8fd01c9b5,Player.Goals per shot,0.0,float
+36cda05b4a92841c,Player.Shots on target percentage,19.2,float
+8582af03e2827b02,Player.Minutes per start,82.0,float
+be00c3808c03179b,Player.Goals per shot,0.0,float
+74474791ba8c2f43,Player.Shots on target percentage,19.2,float
+c59dbf8b5b50a70e,Player.Minutes per start,82.0,float
+ed5094219427c9c9,Player.Interceptions,0.0,float
+bbb4774195f4aef5,Player.Second yellow cards,0,integer
+9a70e1f6f1f790bd,Player.Shots per 90 minutes,0.0,float
+402e781e4608f4ad,Player.Percentage of playing time,9.0,float
+508a342300f4544b,Player.Offsides,1.0,float
+4ea6a3f980724dfa,Player.Non-penalty goals + assists per 90 minutes,0.26,float
+f703ad74f4b080d0,Player.Saves,29.0,float
+78c70d8c3d41d98d,Player.Draws,16.0,float
+6b4bdad085c1c87a,Player.Wins,1.0,float
+705abe6d685ae340,Player.Saves,29.0,float
+2acea8127627bc69,Player.Goals conceded per 90 minutes,1.4,float
+981fcc60a86a12a3,Player.Saves,29.0,float
+ac968012f26b5499,Player.Draws,16.0,float
+b60e28a5577bc79c,Player.Wins,1.0,float
+70eb40eb0e32700f,Player.On-offsides,-0.79,float
+5e69189507073e23,Player.Minutes per start,90.0,float
+ea21ea8dcd33526e,Player.Position,"""GK""",string
+f5cb4651cfcf9427,Player.Minutes per start,61.0,float
+34778288acf1c215,Player.Goals per shot,0.08,float
+46b8c0f7a2fafae7,Player.On-offsides,0.44,float
+660cc1569f99bd4b,Player.Minutes per start,61.0,float
+3cc70e13afc92f2d,Player.Goals per shot,0.08,float
+e7dec910fbfe54bb,Player.On-offsides,0.44,float
+b62d645570047130,Player.Minutes per match,88.0,float
+3838ef52244a6848,Player.Minutes per match,90.0,float
+4d42c26210893463,Player.Non-penalty goals per 90 minutes,0.0,float
+0464d75309b3a5bb,Player.Squad,"""BB Bodrumspor""",string
+5131170164179569,Player.passes into the goalkeeper's penalty area,54.0,float
+1bd0560f4d37fecf,Player.Points per match,1.38,float

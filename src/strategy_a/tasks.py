@@ -37,6 +37,7 @@ class Example:
 
 
 def load_tasks(path: str | Path) -> list[Task]:
+    """Read tasks.csv into Task objects. Refuses ground_truth.csv, which a strategy must never read."""
     path = Path(path)
     if path.name == "ground_truth.csv":
         raise ConfigError("Strategy A must never read ground_truth.csv")

@@ -1,0 +1,226 @@
+{
+ "version": "v1",
+ "task_set": "airports-v3-ctx",
+ "examples": [
+  {
+   "node_id": "KATL",
+   "node_type": "Airport",
+   "H": [
+    {
+     "prop_key": "Airport.iata",
+     "property_name": "iata",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "KATL",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Hartsfield Jackson Atlanta International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "KLWB",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "Greenbrier Valley Airport"
+    },
+    {
+     "prop_key": "Airport-[OF]->City.name",
+     "property_name": "name",
+     "element_type": "City",
+     "element_id": "4:115ec432-7f9c-4b74-a217-4aa333cf4883:98471",
+     "path": "Airport-[OF]->City",
+     "origin": "context",
+     "value": "atlanta"
+    }
+   ],
+   "answers": {
+    "Airport.iata": "ATL"
+   }
+  },
+  {
+   "node_id": "KORD",
+   "node_type": "Airport",
+   "H": [
+    {
+     "prop_key": "Airport.altitude",
+     "property_name": "altitude",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "KORD",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Chicago O'Hare International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "KATL",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "Hartsfield Jackson Atlanta International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "EGLL",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "London Heathrow Airport"
+    }
+   ],
+   "answers": {
+    "Airport.altitude": 672.0
+   }
+  },
+  {
+   "node_id": "KDFW",
+   "node_type": "Airport",
+   "H": [
+    {
+     "prop_key": "Airport.city",
+     "property_name": "city",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "KDFW",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Dallas Fort Worth International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "SAEZ",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "Ministro Pistarini International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "KABI",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "Abilene Regional Airport"
+    }
+   ],
+   "answers": {
+    "Airport.city": "Dallas-Fort Worth"
+   }
+  },
+  {
+   "node_id": "LFPG",
+   "node_type": "Airport",
+   "H": [
+    {
+     "prop_key": "Airport.timezone",
+     "property_name": "timezone",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "LFPG",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Charles de Gaulle International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "EDDH",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "Hamburg Airport"
+    },
+    {
+     "prop_key": "Airport-[PASSENGERS]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "OMAA",
+     "path": "Airport-[PASSENGERS]->Airport",
+     "origin": "context",
+     "value": "Abu Dhabi International Airport"
+    }
+   ],
+   "answers": {
+    "Airport.timezone": "1"
+   }
+  },
+  {
+   "node_id": "ZBAA",
+   "node_type": "Airport",
+   "H": [
+    {
+     "prop_key": "Airport.runways",
+     "property_name": "runways",
+     "element_type": "Airport",
+     "path": "Airport"
+    }
+   ],
+   "G": [
+    {
+     "prop_key": "Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "ZBAA",
+     "path": "Airport",
+     "origin": "node",
+     "value": "Beijing Capital International Airport"
+    },
+    {
+     "prop_key": "Airport-[ROUTE_TO]->Airport.name",
+     "property_name": "name",
+     "element_type": "Airport",
+     "element_id": "ZUUU",
+     "path": "Airport-[ROUTE_TO]->Airport",
+     "origin": "context",
+     "value": "Chengdu Shuangliu International Airport"
+    },
+    {
+     "prop_key": "Airport-[OF]->City.name",
+     "property_name": "name",
+     "element_type": "City",
+     "element_id": "4:115ec432-7f9c-4b74-a217-4aa333cf4883:98571",
+     "path": "Airport-[OF]->City",
+     "origin": "context",
+     "value": "beijing"
+    }
+   ],
+   "answers": {
+    "Airport.runways": 3.0
+   }
+  }
+ ]
+}

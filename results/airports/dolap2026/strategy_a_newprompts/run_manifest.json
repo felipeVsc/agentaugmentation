@@ -1,0 +1,774 @@
+{
+  "strategy": "A",
+  "task_set_version": "airports-dolap2026",
+  "tasks_file": {
+    "path": "tasks/airports/dolap2026/tasks.csv",
+    "sha256": "5a467fded376454a70f791c7ce5ffb08f55f7c8fe395d4a555af6543d35719a2"
+  },
+  "examples_file": {
+    "path": "data/examples/airports_v5.json",
+    "sha256": "d26e9b7487f4510aec9981f45a5fa8a8d9952bb0fb770a06736b17a2e10478b9",
+    "version": "v2"
+  },
+  "templates": {
+    "compact": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/compact.v2.txt",
+      "sha256": "e9761139e419b7e9f1ff11c0da0a89a6532be831fbce37c697d7251c10c722d2"
+    },
+    "zero": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/zero.v2.txt",
+      "sha256": "cb8975917d73be6c1d5b828173f0e0c9005b3276346195613d8a0c2f0e02ee51"
+    },
+    "few": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/few.v2.txt",
+      "sha256": "d4e0ea641f488664948b65604c042d647676985399c138e9858fee998dee0ca5"
+    },
+    "zerocot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/zerocot.v2.txt",
+      "sha256": "1e14683e4edff4e09784e6623ce7d97c0a644531bc379a716115ce2f9680d6ae"
+    },
+    "fewcot": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/fewcot.v2.txt",
+      "sha256": "a64b67a606564103928945c0a586b6de78c60f2fdbff76075ca8979b9da3a83b"
+    },
+    "compact_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/compact.v2.txt",
+      "sha256": "e9761139e419b7e9f1ff11c0da0a89a6532be831fbce37c697d7251c10c722d2"
+    },
+    "zero_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/zero.v2.txt",
+      "sha256": "cb8975917d73be6c1d5b828173f0e0c9005b3276346195613d8a0c2f0e02ee51"
+    },
+    "few_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/few.v2.txt",
+      "sha256": "d4e0ea641f488664948b65604c042d647676985399c138e9858fee998dee0ca5"
+    },
+    "zerocot_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/zerocot.v2.txt",
+      "sha256": "1e14683e4edff4e09784e6623ce7d97c0a644531bc379a716115ce2f9680d6ae"
+    },
+    "fewcot_ctx": {
+      "file": "/Users/felipe/Documents/code/topol/agentaugmentation/templates/figure2_dolap/fewcot.v2.txt",
+      "sha256": "a64b67a606564103928945c0a586b6de78c60f2fdbff76075ca8979b9da3a83b"
+    }
+  },
+  "variants": [
+    {
+      "id": "compact",
+      "template": "compact",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zero",
+      "template": "zero",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_1",
+      "template": "few",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_3",
+      "template": "few",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_5",
+      "template": "few",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zerocot",
+      "template": "zerocot",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_1",
+      "template": "fewcot",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_3",
+      "template": "fewcot",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_5",
+      "template": "fewcot",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "compact_ctx",
+      "template": "compact_ctx",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zero_ctx",
+      "template": "zero_ctx",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_ctx_1",
+      "template": "few_ctx",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_ctx_3",
+      "template": "few_ctx",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "few_ctx_5",
+      "template": "few_ctx",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "zerocot_ctx",
+      "template": "zerocot_ctx",
+      "n_examples": 0,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_ctx_1",
+      "template": "fewcot_ctx",
+      "n_examples": 1,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_ctx_3",
+      "template": "fewcot_ctx",
+      "n_examples": 3,
+      "prompt_version": "v2"
+    },
+    {
+      "id": "fewcot_ctx_5",
+      "template": "fewcot_ctx",
+      "n_examples": 5,
+      "prompt_version": "v2"
+    }
+  ],
+  "pfe_tokens": {
+    "compact|cloud-gpt-oss-20b": 81,
+    "compact|cloud-gemma4-31b": 81,
+    "compact|cloud-gpt-oss-120b": 81,
+    "compact|cloud-deepseek-v4.1-flash": 81,
+    "zero|cloud-gpt-oss-20b": 192,
+    "zero|cloud-gemma4-31b": 192,
+    "zero|cloud-gpt-oss-120b": 192,
+    "zero|cloud-deepseek-v4.1-flash": 192,
+    "few_1|cloud-gpt-oss-20b": 228,
+    "few_1|cloud-gemma4-31b": 228,
+    "few_1|cloud-gpt-oss-120b": 228,
+    "few_1|cloud-deepseek-v4.1-flash": 228,
+    "few_3|cloud-gpt-oss-20b": 305,
+    "few_3|cloud-gemma4-31b": 305,
+    "few_3|cloud-gpt-oss-120b": 305,
+    "few_3|cloud-deepseek-v4.1-flash": 305,
+    "few_5|cloud-gpt-oss-20b": 375,
+    "few_5|cloud-gemma4-31b": 375,
+    "few_5|cloud-gpt-oss-120b": 375,
+    "few_5|cloud-deepseek-v4.1-flash": 375,
+    "zerocot|cloud-gpt-oss-20b": 244,
+    "zerocot|cloud-gemma4-31b": 244,
+    "zerocot|cloud-gpt-oss-120b": 244,
+    "zerocot|cloud-deepseek-v4.1-flash": 244,
+    "fewcot_1|cloud-gpt-oss-20b": 280,
+    "fewcot_1|cloud-gemma4-31b": 280,
+    "fewcot_1|cloud-gpt-oss-120b": 280,
+    "fewcot_1|cloud-deepseek-v4.1-flash": 280,
+    "fewcot_3|cloud-gpt-oss-20b": 357,
+    "fewcot_3|cloud-gemma4-31b": 357,
+    "fewcot_3|cloud-gpt-oss-120b": 357,
+    "fewcot_3|cloud-deepseek-v4.1-flash": 357,
+    "fewcot_5|cloud-gpt-oss-20b": 427,
+    "fewcot_5|cloud-gemma4-31b": 427,
+    "fewcot_5|cloud-gpt-oss-120b": 427,
+    "fewcot_5|cloud-deepseek-v4.1-flash": 427,
+    "compact_ctx|cloud-gpt-oss-20b": 81,
+    "compact_ctx|cloud-gemma4-31b": 81,
+    "compact_ctx|cloud-gpt-oss-120b": 81,
+    "compact_ctx|cloud-deepseek-v4.1-flash": 81,
+    "zero_ctx|cloud-gpt-oss-20b": 192,
+    "zero_ctx|cloud-gemma4-31b": 192,
+    "zero_ctx|cloud-gpt-oss-120b": 192,
+    "zero_ctx|cloud-deepseek-v4.1-flash": 192,
+    "few_ctx_1|cloud-gpt-oss-20b": 228,
+    "few_ctx_1|cloud-gemma4-31b": 228,
+    "few_ctx_1|cloud-gpt-oss-120b": 228,
+    "few_ctx_1|cloud-deepseek-v4.1-flash": 228,
+    "few_ctx_3|cloud-gpt-oss-20b": 305,
+    "few_ctx_3|cloud-gemma4-31b": 305,
+    "few_ctx_3|cloud-gpt-oss-120b": 305,
+    "few_ctx_3|cloud-deepseek-v4.1-flash": 305,
+    "few_ctx_5|cloud-gpt-oss-20b": 375,
+    "few_ctx_5|cloud-gemma4-31b": 375,
+    "few_ctx_5|cloud-gpt-oss-120b": 375,
+    "few_ctx_5|cloud-deepseek-v4.1-flash": 375,
+    "zerocot_ctx|cloud-gpt-oss-20b": 244,
+    "zerocot_ctx|cloud-gemma4-31b": 244,
+    "zerocot_ctx|cloud-gpt-oss-120b": 244,
+    "zerocot_ctx|cloud-deepseek-v4.1-flash": 244,
+    "fewcot_ctx_1|cloud-gpt-oss-20b": 280,
+    "fewcot_ctx_1|cloud-gemma4-31b": 280,
+    "fewcot_ctx_1|cloud-gpt-oss-120b": 280,
+    "fewcot_ctx_1|cloud-deepseek-v4.1-flash": 280,
+    "fewcot_ctx_3|cloud-gpt-oss-20b": 357,
+    "fewcot_ctx_3|cloud-gemma4-31b": 357,
+    "fewcot_ctx_3|cloud-gpt-oss-120b": 357,
+    "fewcot_ctx_3|cloud-deepseek-v4.1-flash": 357,
+    "fewcot_ctx_5|cloud-gpt-oss-20b": 427,
+    "fewcot_ctx_5|cloud-gemma4-31b": 427,
+    "fewcot_ctx_5|cloud-gpt-oss-120b": 427,
+    "fewcot_ctx_5|cloud-deepseek-v4.1-flash": 427
+  },
+  "tokenizers": {
+    "cloud-gpt-oss-20b": "cl100k_base",
+    "cloud-gemma4-31b": "cl100k_base",
+    "cloud-gpt-oss-120b": "cl100k_base",
+    "cloud-deepseek-v4.1-flash": "cl100k_base"
+  },
+  "models": [
+    {
+      "id": "cloud-gpt-oss-20b",
+      "provider": "ollama",
+      "model": "gpt-oss:20b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": "low"
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "huggingface_hub",
+        "ecologits_model": "openai/gpt-oss-20b",
+        "electricity_mix_zone": null,
+        "country_iso_code": "FRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.07,
+        "output_per_mtok": 0.3,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-27"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cloud-gemma4-31b",
+      "provider": "ollama",
+      "model": "gemma4:31b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": false
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "google_genai",
+        "ecologits_model": "gemma-4-31b-it",
+        "electricity_mix_zone": null,
+        "country_iso_code": "FRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.14,
+        "output_per_mtok": 0.4,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cloud-gpt-oss-120b",
+      "provider": "ollama",
+      "model": "gpt-oss:120b",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": "low"
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "huggingface_hub",
+        "ecologits_model": "openai/gpt-oss-120b",
+        "electricity_mix_zone": null,
+        "country_iso_code": "FRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.15,
+        "output_per_mtok": 0.6,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cloud-deepseek-v4.1-flash",
+      "provider": "ollama",
+      "model": "deepseek-v4.1-flash",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "rpm": null,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+      "base_url": null,
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0,
+        "base_url": "https://ollama.com",
+        "think": false
+      },
+      "tokenizer": null,
+      "energy": {
+        "method": "ecologits",
+        "ecologits_provider": "mistralai",
+        "ecologits_model": "zai-glm-5-3",
+        "electricity_mix_zone": null,
+        "country_iso_code": "FRA"
+      },
+      "pricing": {
+        "input_per_mtok": 0.3,
+        "output_per_mtok": 1.2,
+        "batch_discount": 0.5,
+        "as_of": "2026-10-28"
+      },
+      "enabled": true
+    }
+  ],
+  "model_versions": {
+    "cloud-gpt-oss-20b": [
+      "gpt-oss:20b (Ollama Cloud)"
+    ],
+    "cloud-gemma4-31b": [
+      "gemma4:31b (Ollama Cloud)"
+    ],
+    "cloud-gpt-oss-120b": [
+      "gpt-oss:120b (Ollama Cloud)"
+    ],
+    "cloud-deepseek-v4.1-flash": [
+      "deepseek-v4.1-flash (Ollama Cloud)"
+    ]
+  },
+  "model_details": {
+    "cloud-gpt-oss-20b": {
+      "model": "gpt-oss:20b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gpt-oss:20b",
+        "format": "",
+        "family": "gptoss",
+        "families": null,
+        "parameter_size": "20914757184",
+        "quantization_level": "MXFP4"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "show_error": null
+    },
+    "cloud-gemma4-31b": {
+      "model": "gemma4:31b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gemma4:31b",
+        "format": "",
+        "family": "gemma4",
+        "families": null,
+        "parameter_size": "32682372656",
+        "quantization_level": "BF16"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "show_error": null
+    },
+    "cloud-gpt-oss-120b": {
+      "model": "gpt-oss:120b",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "gpt-oss:120b",
+        "format": "",
+        "family": "gptoss",
+        "families": null,
+        "parameter_size": "116829156672",
+        "quantization_level": "MXFP4"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "show_error": null
+    },
+    "cloud-deepseek-v4.1-flash": {
+      "model": "deepseek-v4.1-flash",
+      "cloud": true,
+      "base_url": "https://ollama.com",
+      "details": {
+        "parent_model": "deepseek-v4.1-flash",
+        "format": "",
+        "family": "deepseek_v41",
+        "families": null,
+        "parameter_size": "763205315794",
+        "quantization_level": "FP8"
+      },
+      "capabilities": [
+        "completion",
+        "thinking",
+        "tools",
+        "vision"
+      ],
+      "show_error": null
+    }
+  },
+  "config": {
+    "inputs": {
+      "tasks": "tasks/airports/dolap2026/tasks.csv",
+      "examples": "data/examples/airports_v5.json",
+      "property_notes": "data/property_notes/airports.yaml"
+    },
+    "runs_per_task": 3,
+    "pfe_tokenizer": "cl100k_base",
+    "repair": true,
+    "output_dir": "results/airports/dolap2026/strategy_a_newprompts/",
+    "templates": [
+      {
+        "id": "compact",
+        "file": "templates/figure2_dolap/compact.v2.txt",
+        "output": "csv"
+      },
+      {
+        "id": "zero",
+        "file": "templates/figure2_dolap/zero.v2.txt",
+        "output": "csv"
+      },
+      {
+        "id": "few",
+        "file": "templates/figure2_dolap/few.v2.txt",
+        "output": "csv",
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "id": "zerocot",
+        "file": "templates/figure2_dolap/zerocot.v2.txt",
+        "output": "csv",
+        "expected_output_tokens": 300
+      },
+      {
+        "id": "fewcot",
+        "file": "templates/figure2_dolap/fewcot.v2.txt",
+        "output": "csv",
+        "expected_output_tokens": 300,
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "id": "compact_ctx",
+        "file": "templates/figure2_dolap/compact.v2.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "zero_ctx",
+        "file": "templates/figure2_dolap/zero.v2.txt",
+        "output": "csv",
+        "with_context": true
+      },
+      {
+        "id": "few_ctx",
+        "file": "templates/figure2_dolap/few.v2.txt",
+        "output": "csv",
+        "with_context": true,
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "id": "zerocot_ctx",
+        "file": "templates/figure2_dolap/zerocot.v2.txt",
+        "output": "csv",
+        "with_context": true,
+        "expected_output_tokens": 300
+      },
+      {
+        "id": "fewcot_ctx",
+        "file": "templates/figure2_dolap/fewcot.v2.txt",
+        "output": "csv",
+        "with_context": true,
+        "expected_output_tokens": 300,
+        "n_examples": [
+          1,
+          3,
+          5
+        ]
+      }
+    ],
+    "model_defaults": {
+      "provider": "ollama",
+      "params": {
+        "temperature": 0.7,
+        "max_tokens": 4096
+      },
+      "max_concurrency": 3,
+      "timeout_s": 600,
+      "max_retries": 5,
+      "energy": {
+        "method": "none"
+      },
+      "options": {
+        "num_ctx": 8192,
+        "keep_alive": "30m",
+        "seed": 0
+      }
+    },
+    "models": [
+      {
+        "id": "cloud-gpt-oss-20b",
+        "model": "gpt-oss:20b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.07,
+          "output_per_mtok": 0.3,
+          "as_of": "2026-10-27"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-20b"
+        }
+      },
+      {
+        "id": "cloud-gemma4-31b",
+        "model": "gemma4:31b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.14,
+          "output_per_mtok": 0.4,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "google_genai",
+          "ecologits_model": "gemma-4-31b-it"
+        }
+      },
+      {
+        "id": "cloud-gpt-oss-120b",
+        "model": "gpt-oss:120b",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": "low"
+        },
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.15,
+          "output_per_mtok": 0.6,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "huggingface_hub",
+          "ecologits_model": "openai/gpt-oss-120b"
+        }
+      },
+      {
+        "id": "cloud-deepseek-v4.1-flash",
+        "model": "deepseek-v4.1-flash",
+        "options": {
+          "base_url": "https://ollama.com",
+          "think": false
+        },
+        "api_key_env": "OLLAMA_API_KEY_WEBSEARCH",
+        "pricing": {
+          "input_per_mtok": 0.3,
+          "output_per_mtok": 1.2,
+          "as_of": "2026-10-28"
+        },
+        "energy": {
+          "method": "ecologits",
+          "ecologits_provider": "mistralai",
+          "ecologits_model": "zai-glm-5-3"
+        }
+      }
+    ]
+  },
+  "code_version": "f1690985781275b3f137765f24285b0be05db1d1",
+  "runs": [
+    {
+      "start": "2026-11-11T04:01:53.659075+00:00",
+      "end": "2026-11-11T04:07:38.465709+00:00",
+      "counts": {
+        "ok": 1944
+      },
+      "callers": {
+        "cloud-gemma4-31b": {
+          "calls": 1944,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T04:07:38.795302+00:00",
+      "end": "2026-11-11T04:28:16.884262+00:00",
+      "counts": {
+        "ok": 1944
+      },
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 1972,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T04:28:17.230518+00:00",
+      "end": "2026-11-11T04:48:41.157316+00:00",
+      "counts": {
+        "ok": 1944
+      },
+      "callers": {
+        "cloud-gpt-oss-120b": {
+          "calls": 1947,
+          "cache_hits": 0,
+          "retries": 3,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T04:48:41.487926+00:00",
+      "end": "2026-11-11T04:56:28.773326+00:00",
+      "counts": {
+        "ok": 1944
+      },
+      "callers": {
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 1944,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "start": "2026-11-11T04:56:29.085404+00:00",
+      "end": "2026-11-11T04:56:30.046034+00:00",
+      "counts": {},
+      "callers": {
+        "cloud-gpt-oss-20b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-gemma4-31b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-gpt-oss-120b": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        },
+        "cloud-deepseek-v4.1-flash": {
+          "calls": 0,
+          "cache_hits": 0,
+          "retries": 0,
+          "failures": 0
+        }
+      }
+    }
+  ],
+  "status_counts": {
+    "ok": 7776
+  }
+}

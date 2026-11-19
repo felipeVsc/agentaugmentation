@@ -1,0 +1,6 @@
+model,runs,named,match,answered
+gpt-oss:20b,717,0.1199,0.1018,0.2315
+gemma4:31b,717,0.113,0.1074,0.2162
+gpt-oss:120b,717,0.1199,0.106,0.2329
+mistral-large-3,717,0.1702,0.1172,0.3026
+deepseek-v4.1-flash,717,0.1464,0.1185,0.0753

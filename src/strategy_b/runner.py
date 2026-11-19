@@ -75,6 +75,7 @@ class Runner:
         cfg = self.cfg
         self.tasks = load_tasks(cfg.path(cfg.tasks))[: self._limit or None]
         self.task_set_version = self.tasks[0].task_set_version
+        self.notes = cfg.notes()
         self.plan_tpls = {v.id: steps.load_plan_template(cfg.path(v.plan)) for v in self.variants}
         self.synth_tpls = {v.id: steps.load_synth_template(cfg.path(v.synthesize)) for v in self.variants}
         cache = DiskCache(cfg.cache_path)
@@ -86,7 +87,7 @@ class Runner:
         }
         tool = self._search_tool or load_search_tool(cfg.search)
         self.search = CachedSearch(tool, cfg.search_cache_path, cfg.max_search_retries, self.read_search_cache,
-                                   max_credits=cfg.search_max_credits)
+                                   max_credits=cfg.search_max_credits, max_rate_limit_wait_s=cfg.max_rate_limit_wait_s)
         # PFE (§10.2): the plan and synthesis templates as written, without placeholders.
         self.pfe_texts = {
             v.id: pfe_text(self.plan_tpls[v.id], "") + "\n" + pfe_text(self.synth_tpls[v.id], "") for v in self.variants
@@ -98,7 +99,7 @@ class Runner:
         }
         self.graphs = {
             (v.id, m.id): build_graph(AgentContext(cfg, v, self.callers[m.id], self.search, self.plan_tpls[v.id],
-                                                   self.synth_tpls[v.id], self.tokenizers[m.id].count))
+                                                   self.synth_tpls[v.id], self.tokenizers[m.id].count, self.notes))
             for v in self.variants for m in self.models
         }
         self._prepared = True
@@ -152,6 +153,8 @@ class Runner:
         except Exception as exc:  # a bug in one run must not stop the others
             state = {"status": "api_error", "events": [f"unexpected:{type(exc).__name__}: {exc}"], "calls": []}
         status = state.get("status") or "ok"
+        if status in ("ok", "truncated") and any(q.get("error") for q in state.get("search_log") or []):
+            status = "search_partial"  # some searches failed (rate limit, cap): retried by --retry-failed
         predictions = state.get("predictions") or {h["prop_key"]: None for h in job.task.H}
         shared = self.cfg.reuse_retrieval and job.run_index > 1
         usage = self._usage(job, state, shared)
@@ -187,6 +190,7 @@ class Runner:
             "retrieval_shared_with_run": 1 if shared else None,
             "queries": state.get("search_log") or [],
             "plan_parsed": state.get("plan_parsed"),
+            "plan_entity": state.get("plan_entity"),
             "results": state.get("results") or [],
             "evidence_passed": state.get("evidence") or [],
             "calls": state.get("calls") or [],

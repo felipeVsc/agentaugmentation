@@ -37,11 +37,14 @@ md("""
 **What this notebook does.** It runs Strategy A (LLM only, no tools) on the **36 tasks of the published paper**
 *On the Efficacy of Using LLMs for Context Driven Entity Augmentation in Property Graphs* (DOLAP 2026), with the
 **9 published prompts**, **5 runs** per configuration and **both conditions** (without and with graph context),
-using an open-weight model served locally by Ollama. It then scores the answers two ways and compares them with
-the six proprietary models of the paper.
+using open-weight models served by Ollama. It then scores the answers two ways, **the DOLAP scoring and the scoring
+of the current experiments**, and compares them with the six proprietary models of the paper (their published voted
+answers, re-scored here).
 
-**Scope of this run: one model (Qwen3 4B Instruct), to check that the pipeline and the scoring are correct** before
-running more models. Other models are added by running them (section 2); every table and chart picks them up.
+**Models.** The current experiment lineup (gpt-oss:20b, gemma4:31b, gpt-oss:120b, deepseek-v4.1-flash; mistral-large-3
+was retired by Ollama Cloud) with the model settings of the v5 / football runs, plus two earlier runs: Qwen3 4B Instruct
+(local, 5 runs) and gemma4:31b (Ollama Cloud, 1 run, a test). A model appears in every table and chart as soon as its
+runs exist (section 2).
 
 | | Published run | This run |
 |---|---|---|
@@ -49,18 +52,23 @@ running more models. Other models are added by running them (section 2); every t
 | Prompts | 9 (compact, zero, 1/3/5-shot, the same with CoT) | the same 9 files, unchanged |
 | Input | `input: prop:value,…` + context | identical text without context; with context, the same procedure (a slice of 3–8 context entries) with a fixed seed, because the published slices were not saved |
 | Runs | 5, then vote | 5, then the same vote |
-| Models | Gemini 2.5 Pro/Flash, GPT-5/5 mini, Claude Sonnet/Haiku 4.5 | Qwen3 4B Instruct (Ollama, Q4_K_M); more can be added |
+| Models | Gemini 2.5 Pro/Flash, GPT-5/5 mini, Claude Sonnet/Haiku 4.5 | the current lineup (Ollama Cloud), Qwen3 4B (local), gemma4 1-run test |
 | Answers scored | voted answers | voted answers, same tolerance rules |
 
-**Two scorings** (details in `src/evaluation/dolap.py`):
+**Two scorings** (code: `src/evaluation/dolap.py` and `src/evaluation/taskset.py`):
 
-- **Published scoring** reproduces the paper's evaluation notebook: every property the model answered and that has a
-  ground-truth value is compared (also properties that were not asked), unanswered properties are ignored, and F1 is
-  computed with `y_true` all ones. Precision is therefore 1 by construction and **accuracy = recall = correct / answered**,
-  F1 = 2·acc / (1 + acc). This is what Table 3 of the paper reports.
-- **Standard scoring** (EVALUATION_SPEC): only the hidden properties H that have a ground truth. Each one is *correct*,
-  *wrong* (a confident wrong value) or *abstained* (no value). Precision = correct / answered, recall = correct / |H|.
-  This shows what the published scoring hides: abstentions and wrong answers.
+- **DOLAP scoring** (`dolap_score` below; called "published" in the code) reproduces the paper's evaluation notebook:
+  every property the model answered and that has a ground-truth value is compared, **also properties that were not
+  asked** (including values copied from the input), unanswered properties are ignored, the tolerance is lenient
+  (token overlap over the *shorter* string), and F1 is sklearn's with `y_true` all ones. So **precision is 1 by
+  construction** (there are no negatives to predict), **accuracy = recall = correct / answered**, and
+  F1 = 2·acc / (1 + acc). This is what Table 3 of the paper reports, for the best of 18 configurations.
+- **Our scoring** (`our_score` below; the function used by every current experiment, `evaluation.taskset.metrics`):
+  only the hidden properties H that have a ground truth, with the stricter tolerance of the current runs
+  (`dolap.matches_standard`). Each H property is *correct* (c), *wrong* (w, a confident wrong value) or *abstained*
+  (a, no value). **Main metrics: F1 = 2c / (2c + 2w + a) and precision P = c / (c + w)**; beside them
+  **F1 ign = 2c / (2c + w) = 2P / (1 + P)**, the DOLAP formula applied to the asked properties only;
+  recall c / (c + w + a), abstention a / n, error w / n.
 """)
 
 code("""
@@ -97,7 +105,12 @@ plt.rcParams.update({
     "axes.titlesize": 12, "axes.titleweight": "bold", "axes.titlelocation": "left",
     "font.size": 10, "legend.frameon": False, "figure.dpi": 110,
 })
-OLLAMA_ORDER = ["qwen3-4b-instruct", "nemotron-mini-4b", "llama3.2-1b"]
+OLLAMA_ORDER = ["cloud-gpt-oss-20b", "cloud-gemma4-31b", "cloud-gpt-oss-120b", "cloud-deepseek-v4.1-flash",
+                "cloud-gemma4", "qwen3-4b-instruct", "nemotron-mini-4b", "llama3.2-1b"]
+LINEUP = OLLAMA_ORDER[:4]
+VIOLET, YELLOW = "#8a5cd8", "#d9a514"
+MCOLOR = {"cloud-gpt-oss-20b": BLUE, "cloud-gemma4-31b": AQUA, "cloud-gpt-oss-120b": VIOLET,
+          "cloud-deepseek-v4.1-flash": YELLOW, "cloud-gemma4": "#7fd3b4", "qwen3-4b-instruct": "#86b6ef"}
 PUBLISHED_ORDER = ["Claude Sonnet 4.5", "Claude Haiku 4.5", "GPT-5", "GPT-5 Mini", "Gemini 2.5 Pro", "Gemini 2.5 Flash"]
 """)
 
@@ -132,14 +145,15 @@ print("Tasks by number of G values actually given (published: 'G' drawn may incl
 md("""
 ## 2. Running the models
 
-One model takes about 1 hour on an Apple M4 (3,240 runs: 36 tasks × 18 variants × 5 runs). Every answer is cached,
-so re-running is free; set `RUN = True` and list models in `MODELS` to run missing runs or new models
-(ids from `configs/strategy_a_dolap2026.yaml`, e.g. `nemotron-mini-4b`, `llama3.2-1b`, `mistral-7b`).
+Each model has 3,240 runs (36 tasks × 18 variants × 5 runs). The lineup runs on Ollama Cloud with the key named in
+`configs/strategy_a_dolap2026.yaml` (`api_key_env`), one model at a time; every answer is cached, so re-running is free.
+Set `RUN = True` to run the models in `MODELS` (or run `strategy-a run --config configs/strategy_a_dolap2026.yaml
+--models <id>` in a terminal), then re-execute the notebook.
 """)
 
 code("""
 RUN = False
-MODELS = ["qwen3-4b-instruct"]
+MODELS = LINEUP
 if RUN:
     for m in MODELS:
         subprocess.run(["strategy-a", "run", "--config", str(CONFIG), "--models", m], check=True)
@@ -156,17 +170,52 @@ md("## 3. Loading, voting and scoring")
 
 code("""
 runs = D.load_runs(RESULTS)
+cover = runs.groupby(["model", "variant"]).task_id.nunique().groupby("model").min()
+partial = cover[cover < len(tasks)].index.tolist()
+if partial:   # e.g. the 1-task connection test of cloud-gpt-oss-20b, or a model still running
+    print("left out until all 36 tasks × 18 variants have runs:", partial)
+    runs = runs[~runs.model.isin(partial)]
 models_present = [m for m in OLLAMA_ORDER if m in set(runs.model)]
 done = runs.groupby("model").size().reindex(models_present)
 print("runs per model:", done.to_dict(), "(complete = 3240)")
 ollama_votes = D.voted_from_runs(runs, tasks)
 published_votes = D.load_published_votes(PUBLISHED, tasks)
 votes = pd.concat([ollama_votes, published_votes], ignore_index=True)
-sp = D.score_published(votes, node_values)      # one row per compared property (paper's way)
-ss = D.score_standard(votes, tasks, node_values) # one row per H property with a ground truth
+sp = D.score_published(votes, node_values)      # one row per compared property (DOLAP scoring)
+ss = D.score_standard(votes, tasks, node_values) # one row per H property with a ground truth (our scoring)
 print(f"configurations: {len(votes)}; compared properties (published scoring): {len(sp)}; scored H properties: {len(ss)}")
 cov = D.coverage(votes)
 cov[cov.airports < 9]
+""")
+
+md("""
+The two scoring functions used in the rest of the notebook. Both take the scored rows above and a grouping.
+""")
+
+code("""
+from evaluation.taskset import metrics as taskset_metrics   # the scoring of every current experiment
+
+def dolap_score(by):
+    \"\"\"DOLAP: every answered property with a ground truth (asked or not), lenient tolerance, y_true all ones.
+    precision = 1, accuracy = recall = correct / compared, F1 = 2·acc / (1 + acc).\"\"\"
+    return D.published_metrics(sp, by).rename(columns={"f1": "DOLAP F1", "accuracy": "DOLAP accuracy",
+                                                        "precision": "DOLAP precision", "compared": "compared"}).drop(columns="recall")
+
+def our_score(by, data=None):
+    \"\"\"Ours: the asked H properties, correct / wrong / abstained. Main: F1 and precision; F1 ign beside them.\"\"\"
+    rows = []
+    for k, g in (ss if data is None else data).groupby(by):
+        m = taskset_metrics(g)
+        rows.append({**dict(zip(by, k if isinstance(k, tuple) else (k,))), "n": m["properties"], "F1": m["f1"],
+                     "precision": m["precision"], "F1 ign": 2 * m["correct"] / (2 * m["correct"] + m["wrong"]) if m["correct"] else 0.0,
+                     "recall": m["recall"], "abstention": m["abstention_rate"], "error": m["error_rate"],
+                     "correct": m["correct"], "wrong": m["wrong"], "abstained": m["abstained"]})
+    return pd.DataFrame(rows)
+
+side = dolap_score(["source", "model"]).merge(our_score(["source", "model"]), on=["source", "model"])
+print("All 18 configurations pooled, both scorings side by side:")
+side.set_index("model").reindex([m for m in OLLAMA_ORDER + PUBLISHED_ORDER if m in set(side.model)])[
+    ["source", "compared", "DOLAP precision", "DOLAP F1", "n", "F1", "precision", "F1 ign", "abstention", "error"]].round(3)
 """)
 
 md("""
@@ -217,9 +266,8 @@ md("## 4. Results")
 md("""
 ### 4.1 Best configuration per model (Table 3, extended)
 
-For each model and condition: the prompt with the best **published** F1, as in the paper, and next to it the
-**standard** metrics of that same configuration. `compared` is the number of answered properties the published
-F1 rests on.
+For each model and condition: the prompt with the best **DOLAP** F1, as in the paper, and next to it **our**
+metrics of that same configuration. `compared` is the number of answered properties the DOLAP F1 rests on.
 """)
 
 code("""
@@ -229,10 +277,11 @@ both = D.published_metrics(sp, ["source", "model", "context", "prompt"]).merge(
 best = (both.sort_values(["f1_pub", "compared"], ascending=False)
             .groupby(["model", "context"]).head(1)
             .sort_values(["source", "model", "context"]))
+best["f1_ign"] = 2 * best["correct"] / (2 * best["correct"] + best["wrong"])
 cols = ["source", "model", "context", "prompt", "compared", "accuracy", "f1_pub",
-        "properties", "precision_std", "recall_std", "f1_std", "abstention_rate", "error_rate"]
-best_tbl = best[cols].rename(columns={"accuracy": "pub acc (=recall)", "f1_pub": "pub F1", "precision_std": "precision",
-                                      "recall_std": "recall", "f1_std": "F1"})
+        "properties", "f1_std", "precision_std", "f1_ign", "recall_std", "abstention_rate", "error_rate"]
+best_tbl = best[cols].rename(columns={"accuracy": "DOLAP acc (=recall)", "f1_pub": "DOLAP F1", "precision_std": "precision",
+                                      "recall_std": "recall", "f1_std": "F1", "f1_ign": "F1 ign"})
 best_tbl.round(3)
 """)
 
@@ -240,8 +289,8 @@ md("""
 ### 4.2 Overall, over all 9 prompts
 
 Choosing the best prompt after seeing the results favours models with more variance (and the best Sonnet configuration
-rests on 3 answers). The fairer summary averages over all prompts: micro-averaged standard metrics over every scored
-H property, with a 95% bootstrap interval over the 36 tasks.
+rests on 3 answers). The fairer summary pools all prompts: our metrics micro-averaged over every scored H property,
+with a 95% bootstrap interval over the 36 tasks (in the table only).
 """)
 
 code("""
@@ -263,8 +312,9 @@ overall["F1 95% CI"] = [f"[{ci[(m, c)][0]:.2f}, {ci[(m, c)][1]:.2f}]" for m, c i
 pub_overall = D.published_metrics(sp, ["model", "context"])[["model", "context", "accuracy", "compared"]]
 overall = overall.merge(pub_overall, on=["model", "context"]).rename(columns={"accuracy": "pub accuracy"})
 overall = overall.sort_values(["source", "context", "f1"], ascending=[True, True, False])
-overall[["source", "model", "context", "properties", "correct", "wrong", "abstained", "precision", "recall", "f1",
-         "F1 95% CI", "abstention_rate", "error_rate", "pub accuracy", "compared"]].round(3)
+overall["F1 ign"] = 2 * overall.correct / (2 * overall.correct + overall.wrong)
+overall[["source", "model", "context", "properties", "correct", "wrong", "abstained", "f1", "precision", "F1 ign",
+         "recall", "F1 95% CI", "abstention_rate", "error_rate", "pub accuracy", "compared"]].round(3)
 """)
 
 code("""
@@ -390,7 +440,7 @@ for ax, ctx in zip(axes, [False, True]):
         s = sub[sub.model == m].set_index("difficulty_prop").reindex(D.QUADRANTS)
         is_local = m in OLLAMA_ORDER
         ax.plot(range(4), s.recall, marker="o", markersize=6 if is_local else 4, linewidth=2 if is_local else 1,
-                color=BLUE if is_local else MUTED, alpha=1 if is_local else 0.7)
+                color=MCOLOR.get(m, BLUE) if is_local else MUTED, alpha=1 if is_local else 0.7)
         last = s.recall.dropna()
         if len(last) and is_local:
             ax.text(3.08, last.iloc[-1], m, fontsize=8, va="center", color=INK2)
@@ -398,7 +448,7 @@ for ax, ctx in zip(axes, [False, True]):
     ax.set_xlim(-0.2, 3.9); ax.set_ylim(0, 1); ax.yaxis.set_major_formatter(lambda v, _: f"{v:.0%}")
     ax.set_title("With context" if ctx else "Without context", fontsize=11)
 axes[0].set_ylabel("recall (share of hidden properties found)")
-axes[0].plot([], [], color=BLUE, lw=2, marker="o", label="local Ollama models")
+axes[0].plot([], [], color=BLUE, lw=2, marker="o", label="open-weight models (Ollama)")
 axes[0].plot([], [], color=MUTED, lw=1, marker="o", label="published proprietary models")
 axes[0].legend(loc="upper right")
 fig.suptitle("Recall by H/G difficulty quadrant (standard scoring, all prompts)", x=0.01, ha="left", fontweight="bold")
@@ -476,7 +526,7 @@ fig, ax = plt.subplots(figsize=(12, 3.2))
 x = np.arange(len(lat.columns))
 w = 0.8 / max(1, len(lat.index))
 for i, m in enumerate(lat.index):
-    ax.bar(x + i * w - 0.4 + w / 2, lat.loc[m], width=w * 0.9, color=[BLUE, ORANGE, AQUA][i % 3], label=m)
+    ax.bar(x + i * w - 0.4 + w / 2, lat.loc[m], width=w * 0.9, color=MCOLOR.get(m, MUTED), label=m)
 ax.set_xticks(x, lat.columns, rotation=45, ha="right", fontsize=8); ax.grid(axis="x", visible=False)
 ax.set_ylabel("seconds per run"); ax.legend(ncol=3, loc="upper left")
 ax.set_title("Mean latency per run, by prompt and condition")
@@ -485,9 +535,202 @@ fig.tight_layout(); plt.show()
 
 discussion("cost")
 
-md("## 5. Discussion")
+
+md("""
+## 5. Why are the DOLAP numbers higher?
+
+Table 3 of the paper reports F1 0.54–0.80 for the proprietary models; the current experiments report F1 0.1–0.3 for
+the open-weight models. Four things differ at once: **the scoring**, **the choice of configuration**, **the models**
+and **the task set**. This section separates them on the same 36 tasks, then compares the task sets.
+
+### 5.1 From the Table 3 number to our F1, one step at a time
+
+For each model, the DOLAP F1 is recomputed while removing one difference at a time, ending at our F1:
+
+1. **Table 3**: the best of the 18 configurations (9 prompts × with/without context), chosen by the DOLAP F1;
+2. **all 18 configurations pooled** (no choice after seeing the results);
+3. **without values copied from the input**: a property given in G and repeated in the answer is "correct" for free;
+4. **asked properties only**: answers to properties that were not asked (the model adds `name`, `city`, `country`
+   of the airport it recognised) are dropped;
+5. **strict tolerance = F1 ign**: the tolerance of the current runs (text must overlap in both directions, a list
+   answer to a single value is wrong, lone coordinates and units compared); F1 ign = 2P / (1 + P);
+6. **abstentions counted = F1**: an asked property without an answer is a miss.
+""")
+
+code("""
+H = tasks.set_index("task_id").H_names.to_dict()
+G = tasks.set_index("task_id").G_drawn.map(json.loads).to_dict()
+sp["kind"] = ["asked (H)" if p in H[t] else ("copied from the input (G)" if p in G[t] else "not asked")
+              for t, p in zip(sp.task_id, sp.property)]
+
+def f1_from_acc(acc):
+    return 2 * acc / (1 + acc) if acc > 0 else 0.0
+
+STEPS = ["1 Table 3: best of 18", "2 all 18 pooled", "3 without copied input", "4 asked properties only",
+         "5 strict tolerance (F1 ign)", "6 abstentions counted (F1)"]
+
+def ladder(model):
+    a, b = sp[sp.model == model], ss[ss.model == model]
+    cfg = a.groupby(["context", "prompt"]).correct.agg(["mean", "size"]).sort_values(["mean", "size"], ascending=False)
+    c, w, ab = [(b.outcome == o).sum() for o in ("correct", "wrong", "abstained")]
+    vals = [f1_from_acc(cfg["mean"].iloc[0]), f1_from_acc(a.correct.mean()),
+            f1_from_acc(a[a.kind != "copied from the input (G)"].correct.mean()),
+            f1_from_acc(a[a.kind == "asked (H)"].correct.mean()), 2 * c / (2 * c + w), 2 * c / (2 * c + 2 * w + ab)]
+    best_ctx, best_prompt = cfg.index[0]
+    return {**dict(zip(STEPS, vals)), "best configuration": f"{best_prompt}{' + ctx' if best_ctx else ''}",
+            "answers behind it": int(cfg["size"].iloc[0])}
+
+lad_models = [m for m in PUBLISHED_ORDER + OLLAMA_ORDER if m in set(sp.model)]
+lad = pd.DataFrame({m: ladder(m) for m in lad_models}).T
+lad[STEPS] = lad[STEPS].astype(float)
+lad.round(3)
+""")
+
+code("""
+fig, ax = plt.subplots(figsize=(11, 5.2))
+GREYS = dict(zip(PUBLISHED_ORDER, ["#3d3d3a", "#6b6a66", "#2b2b29", "#8a8984", "#55544f", "#a3a29d"]))
+for m in lad_models:
+    ours = m not in PUBLISHED_ORDER
+    y = lad.loc[m, STEPS].to_numpy(float)
+    ax.plot(range(len(STEPS)), y, marker="o", ms=6 if ours else 5, lw=2.2 if ours else 1.4,
+            color=MCOLOR.get(m, BLUE) if ours else GREYS[m], ls="-" if ours else "--", label=m)
+
+ends = sorted(((lad.loc[m, STEPS[-1]], m) for m in lad_models))
+pos = []
+for v, m in ends:   # end labels at least 0.025 apart
+    pos.append(max(v, pos[-1] + 0.025) if pos else v)
+for (v, m), yy in zip(ends, pos):
+    ax.text(len(STEPS) - 1 + 0.08, yy, m, fontsize=8, va="center", color=INK2)
+ax.set_xticks(range(len(STEPS)), [s[2:].replace(" (", "\\n(") for s in STEPS], fontsize=8.5)
+ax.set_xlim(-0.2, len(STEPS) + 0.9); ax.set_ylim(0, 0.85); ax.grid(axis="x", visible=False)
+ax.set_ylabel("F1 (steps 1-5: DOLAP formula, step 6: ours)")
+ax.legend(ncol=2, fontsize=8, loc="upper right", title="dashed = published proprietary models", title_fontsize=8)
+ax.set_title("From Table 3 to our F1 on the same 36 tasks")
+fig.tight_layout(); plt.show()
+""")
+
+md("""
+### 5.2 Is precision really 1?
+
+The paper states that precision is steadily equal to 1. That is a property of the formula, not of the models: the
+evaluation calls sklearn with `y_true` all ones (every compared property "should be correct") and `y_pred` = 1 for a
+correct answer, 0 for a wrong one. With no negative in `y_true` there can be no false positive, so precision is 1 as
+soon as one answer is correct; a wrong answer only counts as a false negative, and recall equals accuracy.
+""")
+
+code("""
+y_pred = [1, 1, 0, 0, 0]      # 2 correct, 3 wrong answers
+y_true = [1] * len(y_pred)    # the DOLAP notebook: every compared property is a positive
+tp = sum(t == 1 and p == 1 for t, p in zip(y_true, y_pred))   # what sklearn counts
+fp = sum(t == 0 and p == 1 for t, p in zip(y_true, y_pred))   # always 0: y_true has no 0
+fn = sum(t == 1 and p == 0 for t, p in zip(y_true, y_pred))   # every wrong answer
+P, R = tp / (tp + fp), tp / (tp + fn)
+print(f"sklearn's formulas, y_true all ones: TP {tp}, FP {fp}, FN {fn} -> precision {P}, recall {R}, F1 {2*P*R/(P+R):.3f} = 2·0.4/(1+0.4)")
+c, w = 2, 3
+print("ours (a wrong answer is a false positive): precision", c / (c + w), "| F1 ign = 2c/(2c+w) =", round(2 * c / (2 * c + w), 3))
+prec = our_score(["source", "model"]).set_index("model").reindex(lad_models)[["source", "precision", "F1 ign", "F1", "error", "abstention"]]
+print("\\nPrecision when a wrong answer counts against the model (all 18 configurations, asked properties):")
+prec.round(3)
+""")
+
+md("""
+### 5.3 Same tasks, same scoring: how much is the model?
+
+With the scoring and the configuration choice held fixed (step 6, all configurations pooled), the remaining
+differences on the 36 tasks are the models. The open-weight models of the current lineup appear here once their runs
+exist; until then gemma4:31b (1-run test) and Qwen3 4B stand in.
+""")
+
+code("""
+same = our_score(["source", "model"]).set_index("model").reindex(lad_models)
+fig, ax = plt.subplots(figsize=(10, 0.42 * len(same) + 1.4))
+y = np.arange(len(same))
+for i, (m, r) in enumerate(same.iterrows()):
+    col = GREYS.get(m) if m in PUBLISHED_ORDER else MCOLOR.get(m, BLUE)
+    ax.barh(i - 0.18, r["F1"], 0.34, color=col)
+    ax.barh(i + 0.18, r["precision"], 0.34, color=col, alpha=0.45)
+    ax.text(r["F1"] + 0.005, i - 0.18, f"F1 {r['F1']:.2f}", va="center", fontsize=8, color=INK2)
+    ax.text(r["precision"] + 0.005, i + 0.18, f"P {r['precision']:.2f}  (F1 ign {r['F1 ign']:.2f})", va="center", fontsize=8, color=INK2)
+ax.set_yticks(y, same.index); ax.invert_yaxis(); ax.set_xlim(0, 0.9); ax.grid(axis="y", visible=False)
+ax.set_xlabel("our scoring, all 18 configurations pooled (solid: F1, light: precision)")
+ax.set_title("The 36 DOLAP tasks under our scoring")
+fig.tight_layout(); plt.show()
+""")
+
+md("""
+### 5.4 Different task sets: the 36 DOLAP tasks against airports v5
+
+The current airports results come from another task set (v5, built by Algorithm 2 of the new draft), with other
+prompts (Figure 2) and 3 runs. Its composition differs from the DOLAP set in ways that lower every model's score.
+""")
+
+code("""
+V5 = {v: ROOT / f"results/airports/{v}/scored/scored_voted.csv" for v in ("v5_ctx", "v5_noctx")}
+ID = {"name", "iata", "icao", "city"}
+cent = pd.read_csv(ROOT / "tasks/airports/v5_ctx/intermediate/centrality.csv", low_memory=False)
+cent = cent[(cent.element_kind == "node") & (cent.element_type == "Airport")].copy()
+cent["rank"] = cent.raw_centrality.rank(ascending=False, method="min").astype(int)
+rank = dict(zip(cent.icao, cent["rank"]))
+
+def composition(name, t, h_names, g_names, scored):
+    return {"task set": name, "tasks": len(t), "airports": t.node_id.nunique(),
+            "airport rank (of 7,698), median": int(np.median([rank.get(n, np.nan) for n in t.node_id.unique()])),
+            "worst airport rank": int(max(rank.get(n, 0) for n in t.node_id.unique())),
+            "mean |H|": round(h_names.map(len).mean(), 2), "mean |G|": round(g_names.map(len).mean(), 2),
+            "G names the airport (name/IATA/ICAO/city)": round(g_names.map(lambda g: bool(set(g) & ID)).mean(), 2),
+            "share of scored H that is commercial_flights": round((scored.property == "commercial_flights").mean(), 2)}
+
+comp = [composition("DOLAP 36", tasks, tasks.H_names, tasks.G_drawn.map(json.loads), ss)]
+v5 = {}
+for v, path in V5.items():
+    t = pd.read_csv(ROOT / f"tasks/airports/{v}/tasks.csv")
+    sc = pd.read_csv(path)
+    v5[v] = sc[sc.strategy.eq("A")]
+    comp.append(composition(f"airports {v}", t, t.H.map(lambda s: [x["property_name"] for x in json.loads(s)]),
+                            t.G.map(lambda s: [x["property_name"] for x in json.loads(s)]), v5[v]))
+pd.DataFrame(comp).set_index("task set").T
+""")
+
+code("""
+rows = []
+for v, sc in v5.items():
+    ids = {r.task_id for r in pd.read_csv(ROOT / f"tasks/airports/{v}/tasks.csv").itertuples()
+           if set(x["property_name"] for x in json.loads(r.G)) & ID}
+    for label, sub in [("all", sc), ("without commercial_flights", sc[sc.property != "commercial_flights"]),
+                       ("G names the airport", sc[sc.task_id.isin(ids)]), ("G does not", sc[~sc.task_id.isin(ids)])]:
+        m = our_score(["model"], data=sub).assign(**{"task set": v, "subset": label})
+        rows.append(m)
+v5m = pd.concat(rows)
+print("Airports v5, Strategy A, all 9 prompts pooled (our scoring):")
+v5m.pivot_table(index=["task set", "subset"], columns="model", values="F1", sort=False).round(3)
+""")
+
+code("""
+print("F1 ign (the DOLAP formula on asked properties) on v5, same subsets:")
+v5m.pivot_table(index=["task set", "subset"], columns="model", values="F1 ign", sort=False).round(3)
+""")
+
+code("""
+props = sorted(set(ss.property) | set(v5["v5_ctx"].property))
+def recall_by_prop(df):
+    return df.assign(c=df.outcome.eq("correct")).groupby("property").c.mean()
+pp = pd.DataFrame({
+    "DOLAP 36, proprietary": recall_by_prop(ss[ss.source == "published"]),
+    "DOLAP 36, open-weight": recall_by_prop(ss[ss.source == "ollama"]),
+    "v5 ctx, lineup": recall_by_prop(v5["v5_ctx"]),
+    "v5 noctx, lineup": recall_by_prop(v5["v5_noctx"]),
+    "share in DOLAP 36": ss[ss.model == ss.model.iloc[0]].property.value_counts(normalize=True),
+    "share in v5 ctx": v5["v5_ctx"][v5["v5_ctx"].model == v5["v5_ctx"].model.iloc[0]].property.value_counts(normalize=True),
+}).reindex(props)
+print("Recall per hidden property (all configurations pooled), and how much of each task set it makes up:")
+pp.round(2)
+""")
+
+discussion("gap")
+
+md("## 6. Discussion")
 discussion("main")
-md("## 6. Limitations")
+md("## 7. Limitations")
 discussion("limits")
 
 nb = nbf.v4.new_notebook()

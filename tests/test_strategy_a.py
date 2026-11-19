@@ -257,3 +257,46 @@ def test_cache_only_skips_missing(setup):
     counts = Runner(cfg, log=lambda m: None).run(cache_only=True)
     assert counts == {"not_cached": 12}
     assert read_results(Path(cfg.output_dir) / "results.csv") == []
+
+
+def test_given_own_keeps_only_the_nodes_properties():
+    from strategy_a.tasks import Task
+    from strategy_a.templates import given
+
+    G = [{"path": "Airport", "property_name": "name", "value": "Orly", "origin": "node"},
+         {"path": "Airport-[IN]->City", "property_name": "name", "value": "Paris", "origin": "context"},
+         {"path": "Airport", "property_name": "icao", "value": "LFPO"}]  # no origin column: own by path
+    task = Task("t", "v", "Airport", "LFPO", [{"prop_key": "Airport.iata", "property_name": "iata"}], G)
+    assert given(task, "all") is task
+    assert [g["property_name"] for g in given(task, "own").G] == ["name", "icao"]
+    assert len(task.G) == 3  # the task itself is not changed
+
+
+def test_figure2_prompts_render_the_published_input_notes_and_examples():
+    from strategy_a.tasks import Example
+    from strategy_a.templates import render_examples
+
+    G = [{"path": "Airport", "property_name": "dst", "element_type": "Airport", "value": "E", "origin": "node"},
+         {"path": "Airport-[ROUTE_TO]->Airport", "property_name": "city", "element_type": "Airport", "value": "Nome",
+          "origin": "context"},
+         {"path": "Airport-[ROUTE_TO]->", "property_name": "equipment", "element_type": "ROUTE_TO", "value": "CNT",
+          "origin": "context"}]
+    H = [{"prop_key": "Airport.timezone", "property_name": "timezone", "element_type": "Airport", "path": "Airport"}]
+    task = Task("t", "v", "Airport", "X", H, G)
+    notes = {"timezone": "hours offset from UTC", "dst": "OpenFlights DST code", "distCity": "unused"}
+    for name in ("zero", "zerocot", "compact"):
+        r = render(load_template(ROOT / f"templates/figure2/{name}.v2.txt"), task, "", "list", notes=notes)
+        assert "input: dst:E" in r.user
+        assert "[['node', ['ROUTE_TO'], 'Airport', 'city', 'Nome'], ['edge', ['ROUTE_TO'], 'ROUTE_TO', 'equipment', 'CNT']]" in r.user
+        assert "- timezone: hours offset from UTC" in r.system and "- dst: OpenFlights DST code" in r.system
+        assert "distCity" not in r.system and "timezone" in r.system
+    own_only = Task("t", "v", "Airport", "X", H, G[:1])
+    r = render(load_template(ROOT / "templates/figure2/zero.v2.txt"), own_only, "", "list")
+    assert "context: [NO_CONTEXT_ADDED]." in r.user and "Notes on some properties" not in r.system
+    tpl = load_template(ROOT / "templates/figure2/few.v2.txt")
+    ex = Example("KXYZ", "Airport", [{"prop_key": "Airport.altitude", "property_name": "altitude", "path": "Airport"}],
+                 [{"path": "Airport", "property_name": "iata", "value": "XYZ"}], {"Airport.altitude": 672.0})
+    text = render_examples(tpl, [ex], "list")
+    assert text == '## Input\n\niata: "XYZ"\n\n## Output\n\nproperty,value\naltitude, 672'
+    r = render(tpl, task, text, "list")
+    assert "# Examples\n\n## Input" in r.system and r.user.startswith("Here is the entity")

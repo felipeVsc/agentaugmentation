@@ -1,0 +1,121 @@
+task_id,prop_key,value,value_type
+5bafab6786fc094c,Airport.runwaysWidth,98.0,float
+72c65ecc4148395c,Airport.runwaysWidth,98.0,float
+b860deb662188eb3,Airport.type,"""airport""",string
+e577242a8b459a82,Airport.type,"""airport""",string
+24ff769941c40de9,Airport.runwaysLength,4921.0,float
+a4b322be7d79d185,Airport.runwaysLength,4921.0,float
+24dc4dc280c4c993,Airport.source,"""OurAirports""",string
+83c9a51e429b0ead,Airport.source,"""OurAirports""",string
+1d0a8977a1629882,Airport.city,"""Dinslaken""",string
+b2f03aa443cbc88e,Airport.city,"""Dinslaken""",string
+a9a946b80d81da96,Airport.longitude,6.865278,float
+d9fc84501a7c6421,Airport.longitude,6.865278,float
+2fca4a55f455826f,Airport.distCity,8796.15474899182,float
+e09f91c9d4b43c4a,Airport.distCity,8796.15474899182,float
+809b3379829f3567,Airport.icao,"""UKOH""",string
+07975c97ff6cbf15,Airport.icao,"""UKOH""",string
+1d7ddde3591a40d4,Airport.runwaysWidth,138.0,float
+690d2602b54a7326,Airport.runwaysWidth,138.0,float
+874d9908f64bda80,Airport.icao,"""UKOH""",string
+95c02d0737fd8405,Airport.icao,"""UKOH""",string
+39b48228aaf1284c,Airport.runways,1.0,float
+1862b7189640064c,Airport.runways,1.0,float
+604517a11d5c568a,Airport.country,"""Ukraine""",string
+788e50d1e05150f4,Airport.country,"""Ukraine""",string
+7e23310c4c06759f,Airport.city,"""West Wyalong""",string
+555ce0e3c18330d5,Airport.city,"""West Wyalong""",string
+057429abe37bb1a0,Airport.type,"""airport""",string
+b6f38b6bbbd6c643,Airport.type,"""airport""",string
+6375e8089be1747d,Airport.runwaysLength,3879.5,float
+1793984451a58351,Airport.runwaysLength,3879.5,float
+3a1c78d73f916a80,Airport.source,"""OurAirports""",string
+6f4e8fed84a51980,Airport.source,"""OurAirports""",string
+bdb1deb25c08a76e,Airport.runwaysLength,3879.5,float
+5db565bf7cea6cda,Airport.runwaysLength,3879.5,float
+bcc35c16ec536415,Airport.altitude,859.0,float
+5b64b4ff5498533d,Airport.altitude,859.0,float
+cd3f12b0d61e0127,Airport.commercial_flights,3017,integer
+fe80f42a3df17a3e,Airport.commercial_flights,3017,integer
+4f059e71935e5aa3,Airport.city,"""Rimini""",string
+4e64ef49b878804b,Airport.city,"""Rimini""",string
+c921b3b0221ca7ff,Airport.city,"""Rimini""",string
+d156060d44b6e457,Airport.tz_database_timezone,"""Europe/Rome""",string
+950d73994e7be07e,Airport.tz_database_timezone,"""Europe/Rome""",string
+69c0415d592230f0,Airport.tz_database_timezone,"""Europe/Rome""",string
+b5dd97c6e89433ba,Airport.commercial_flights,3017,integer
+42e0dce0e45312dc,Airport.commercial_flights,3017,integer
+11def8660b3e9832,Airport.runways,1.0,float
+f56fbd2914f87106,Airport.runways,1.0,float
+2df9d76e6cd9f7f6,Airport.runways,1.0,float
+a06f1a9386482f5a,Airport.source,"""OurAirports""",string
+5959c65c56846bac,Airport.source,"""OurAirports""",string
+906a58f00773015f,Airport.source,"""OurAirports""",string
+a2f362c1523c8087,Airport.commercial_flights,3017,integer
+bf4d3ba357b12954,Airport.commercial_flights,3017,integer
+5709a047069b10e5,Airport.runwaysWidth,148.0,float
+197c52a322ea759d,Airport.runwaysWidth,148.0,float
+84e14e8caf9a0ae0,Airport.runwaysWidth,148.0,float
+2d190cd6441fcdab,Airport.dst,"""E""",string
+8729549ba7b599d6,Airport.dst,"""E""",string
+ef0fc6eb6b7d600f,Airport.dst,"""E""",string
+e23a2ea7891a5725,Airport.city,"""Spanish Town""",string
+804b8d6fc48fc662,Airport.city,"""Spanish Town""",string
+2b7efc68a2659b20,Airport.tz_database_timezone,"""America/Tortola""",string
+b30b70504aa05d8a,Airport.tz_database_timezone,"""America/Tortola""",string
+fd49c6094acb8389,Airport.city,"""Spanish Town""",string
+36cd9d631dafc791,Airport.city,"""Spanish Town""",string
+bf9866dc7896c660,Airport.timezone,"""-4""",string
+cf25533f5fbb016c,Airport.timezone,"""-4""",string
+75c94df1f8e7c044,Airport.iata,"""VIJ""",string
+9c145b93e28b7a45,Airport.iata,"""VIJ""",string
+8b1518260afa7646,Airport.tz_database_timezone,"""America/Tortola""",string
+47abad7e29ea733e,Airport.tz_database_timezone,"""America/Tortola""",string
+32628949e04d420b,Airport.runways,1.0,float
+a9a5ab0ef3ac173e,Airport.runways,1.0,float
+3eabf7027e340313,Airport.name,"""Northern Peninsula Airport""",string
+00d88c04ef3bda41,Airport.name,"""Northern Peninsula Airport""",string
+90e383d8e1029173,Airport.distCity,14448566.677822953,float
+2a0fa36e77de8da8,Airport.distCity,14448566.677822953,float
+a74eb8b98496990e,Airport.icao,"""YBAM""",string
+ab447910c9128b49,Airport.icao,"""YBAM""",string
+68678ce03ce9aedc,Airport.runways,1.0,float
+f2c592d0b19f3de7,Airport.runways,1.0,float
+e5bd8ea9d2f77823,Airport.longitude,142.459,float
+1359bb03395e49db,Airport.longitude,142.459,float
+b1ffcf47ce531097,Airport.runways,1.0,float
+1673998d744a9b6f,Airport.runways,1.0,float
+6002536615488533,Airport.latitude,53.900100708,float
+23530a488479364e,Airport.latitude,53.900100708,float
+1f26b94f340a6174,Airport.runwaysLength,4500.0,float
+d8d13eb74868a313,Airport.runwaysLength,4500.0,float
+42f6c9da69668486,Airport.timezone,"""-9""",string
+43e9cf600bd14cda,Airport.timezone,"""-9""",string
+987c8f4d2b09c1ee,Airport.runways,1.0,float
+d35bdffeed699d78,Airport.runways,1.0,float
+253aa2e39cb05d44,Airport.country,"""United States""",string
+3324023f5468b67c,Airport.country,"""United States""",string
+d2d11794b4e69682,Airport.runwaysLength,7218.0,float
+04ee095c23556e17,Airport.runwaysLength,7218.0,float
+1f0772c6475fdcda,Airport.tz_database_timezone,"""America/Fortaleza""",string
+c1ad55428099bc8e,Airport.tz_database_timezone,"""America/Fortaleza""",string
+2aca50309660da2b,Airport.runwaysWidth,148.0,float
+7e9c9117ddcecaa8,Airport.runwaysWidth,148.0,float
+19a6197fe6efcad9,Airport.type,"""airport""",string
+f0e699299c320551,Airport.type,"""airport""",string
+9e9ce22beaaae6d4,Airport.distCity,7506.017230666509,float
+8481c235bd0200d0,Airport.distCity,7506.017230666509,float
+6eab58730a15005c,Airport.country,"""Brazil""",string
+7b8e0b49350e5f8b,Airport.country,"""Brazil""",string
+e59b67580986a154,Airport.city,"""San Cristóbal""",string
+3e9ac6334bda31d2,Airport.city,"""San Cristóbal""",string
+f73a423ce34494de,Airport.icao,"""SEST""",string
+b0f1d6239366f457,Airport.icao,"""SEST""",string
+c0293d15521c3d76,Airport.runwaysWidth,66.0,float
+575381cbc5d60097,Airport.runwaysWidth,66.0,float
+be5212696ad571cc,Airport.timezone,"""-6""",string
+cbea0a3196fc723d,Airport.timezone,"""-6""",string
+e989fca502c19da1,Airport.distCity,2158896.099702787,float
+ded98c8fcbfec46c,Airport.distCity,2158896.099702787,float
+488523559e83a6a1,Airport.altitude,62.0,float
+0ad75c2755895136,Airport.altitude,62.0,float

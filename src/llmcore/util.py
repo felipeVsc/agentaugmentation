@@ -1,3 +1,5 @@
+"""Small helpers: code version, file hashes and timestamps for run manifests."""
+
 from __future__ import annotations
 
 import hashlib
@@ -7,6 +9,7 @@ from pathlib import Path
 
 
 def code_version() -> str:
+    """Git commit of the code, or a note when not in a git repository."""
     try:
         out = subprocess.run(
             ["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True, cwd=Path(__file__).parent
@@ -17,6 +20,7 @@ def code_version() -> str:
 
 
 def file_sha256(path: str | Path) -> str:
+    """SHA-256 of a file, read in 1 MiB chunks."""
     h = hashlib.sha256()
     with open(path, "rb") as fh:
         for chunk in iter(lambda: fh.read(1 << 20), b""):
@@ -25,4 +29,5 @@ def file_sha256(path: str | Path) -> str:
 
 
 def now_iso() -> str:
+    """Current UTC time in ISO 8601."""
     return datetime.now(timezone.utc).isoformat()

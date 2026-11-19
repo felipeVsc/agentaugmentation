@@ -1,0 +1,64 @@
+task_id,prop_key,value,value_type
+fabec56edf4c49f4,Team.Opponent - Average number of shots per 90 minutes,7.63,float
+f6b27e01d38910bd,Team.Opponent - Average number of saves (excluding penalties),115.0,float
+3525d175dc534745,Team.Substitutions,136,integer
+76a44257a9cc1422,Team.Opponent - Average number of shots per 90 minutes,7.63,float
+92d802af3c482c11,Team.Opponent - Average number of saves (excluding penalties),115.0,float
+f9e0811302c8940a,Team.Opponent - Average number of unused substitutes,102.0,float
+8a4202028c3a0f5a,Team.Opponent - Average number of shots per 90 minutes,7.63,float
+3b0039f2a428939d,Team.Opponent - Average number of saves (excluding penalties),115.0,float
+faf8d4d3d5e35db0,Team.Opponent - Average number of unused substitutes,102.0,float
+0c24f94a1cb4533a,Team.Number of matches fully played by a player,237.0,float
+b6aaa09506c94937,Team.Opponent - Average number of fouls suffered,391.0,float
+6f1e87621e4c5d2e,Team.Opponent - Average wins,3.0,float
+322101e3b2b8ad26,Team.Number of matches fully played by a player,237.0,float
+1bec417c603f86fb,Team.Opponent - Average number of fouls suffered,391.0,float
+dd7524b1a4e0f37e,Team.Opponent - Average goalkeeper playing time per 90 minutes,34.0,float
+113166f45136ebea,Team.Opponent - Average age of players who played,26.8,float
+f8e0d40c76ff5edc,Team.Number of assists per 90 minutes,0.92,float
+c2e01a7b29934bcf,Team.Number of goals per shot by the team,0.13,float
+f99d917c85132d79,Team.Opponent - Average age of players who played,26.8,float
+644c8bc3ffb78046,Team.Number of assists per 90 minutes,0.92,float
+5883c46e8cd6ddb0,Team.Number of goals conceded per 90 minutes,1.5,float
+b1ec9c2d65bc05b6,Team.Opponent - Average number of penalties saved,2.0,float
+4588250930cdbe0b,Team.Number of shots on target by the team per 90 minutes,4.42,float
+c879165047bfe3f1,Team.Opponent - Average goalkeeper playing time per 90 minutes,38.0,float
+5a80fe11224e318b,Team.Opponent - Average goals + assists per 90 minutes,2.15,float
+51c6de030586b8f4,Team.Opponent - Average number of players used,27,integer
+b1412b9ebf91c035,Team.Opponent - Average goals + assists while on the pitch,58,integer
+0eb709e3eb17f3ef,Team.Opponent - Average goals + assists per 90 minutes,2.15,float
+a07203ade1f0726c,Team.Opponent - Average number of players used,27,integer
+704fe3f9d1a1411d,Team.Opponent - Average goals + assists while on the pitch,58,integer
+c2efa4fdbc2b7eb9,Team.Opponent - Average goals conceded,43.0,float
+61c3c572def700b6,Team.Opponent - Average number of assists per 90 minutes,0.95,float
+f9f31f39c6d99646,Team.Opponent - Average goals scored while on the pitch,35,integer
+a82d30009cc8f007,Team.Opponent - Average losses,10.0,float
+279fde7403bf6b6c,Team.Number of penalties scored by opponents,2,integer
+409815cf0bb17d2a,Team.Opponent - Average number of goals / shot,0.07,float
+5dfc64e0886ab166,Team.Opponent - Average number of non-penalty goals / shots on target,0.22,float
+79e286398f59902e,Team.Number of goals / shots on target,0.23,float
+a2ead2ec0bd9e63e,Team.Goals conceded,35.0,float
+1e7ac56697b9ba42,Team.Number of second yellow cards received,3,integer
+70043d50cadbab1a,Team.Percentage of matches with a clean sheet,17.6,float
+5af2d59b694a0fa1,Team.Opponent - Average shots on target,132.0,float
+b13550437c3a9454,Team.Number of second yellow cards received,1,integer
+0c88a8009850d0ad,Team.Opponent - Average goals,56.0,float
+8c1830add04a22bc,Team.Goals + assists per 90 minutes,1.92,float
+7006466433af3ebb,Team.Number of shots on target conceded,126.0,float
+290411a8070d8121,Team.Non-penalty goals,29,integer
+89c7d635666c99de,Team.Number of shots on target by the team per 90 minutes,5.06,float
+5e577360efb07658,Team.Number of shots on target conceded,126.0,float
+10136bc7dc373941,Team.Non-penalty goals,29,integer
+5e8a01b05ed95990,Team.Number of shots on target by the team per 90 minutes,5.06,float
+3cc7caa34628c5c6,Team.Unused substitutes,272,integer
+ef496c0b5f7c8ff0,Team.Opponent - Average number of players used,44,integer
+4ac4aec129849c3a,Team.Opponent - Average number of minutes played by players who played a minimum amount of time,81.0,float
+e0bccaeaa74279ad,Team.Opponent - Average number of non-penalty goals scored per 90 minutes,1.18,float
+712f2643ecad9e31,Team.Opponent - Average number of shots on target per 90 minutes,3.59,float
+f43de4dc2273b6d1,Team.Opponent - Average number of non-penalty goals scored per 90 minutes,1.44,float
+c3fc71194723f124,Team.Shots,578.0,float
+2b0350c08ec76ada,Team.Opponent - Average number of shots on target per 90 minutes,4.92,float
+3a50ac72956a408c,Team.Opponent - Average number of minutes played by players who played a minimum amount of time,81.0,float
+734ecd1db27067c7,Team.Opponent - Average number of interceptions,316.0,float
+fb4ea03fb022175f,Team.Team name,"""Gil Vicente FC""",string
+8506349b77a88801,Team.Opponent - Average number of minutes played / substitute appearance,22.0,float

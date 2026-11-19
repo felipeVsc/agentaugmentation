@@ -9,7 +9,7 @@ from typing import Any
 
 import yaml
 
-from llmcore.config import ConfigError, ModelConfig
+from llmcore.config import ConfigError, ModelConfig, endpoint_output_dir, use_ollama
 
 _VERSION = re.compile(r"\.(v\d+[\w-]*)\.[^.]+$")
 
@@ -26,6 +26,9 @@ class TemplateSpec:
     expected_output_tokens: int = 80  # only for `estimate`
     output: str = "json"  # json | csv (the published prompts ask for CSV `property,value`)
     with_context: bool = False  # {published_input}: the with-context input of the published run
+    # Which G properties the model sees: all of them, or only n's own (origin = node). "own" is the
+    # without-context condition on the same tasks: same H, G without the context properties.
+    G_origin: str = "all"  # all | own
 
     def __post_init__(self):
         if self.output not in ("json", "csv"):
@@ -33,6 +36,8 @@ class TemplateSpec:
         if isinstance(self.n_examples, int):
             self.n_examples = [self.n_examples] if self.n_examples else []
         self.n_examples = [int(n) for n in self.n_examples or [] if int(n) > 0]
+        if self.G_origin not in ("all", "own"):
+            raise ConfigError(f"template {self.id!r}: G_origin must be all or own")
         if self.context_format not in ("list", "json"):
             raise ConfigError(f"template {self.id!r}: context_format must be list or json")
         if self.version is None:
@@ -62,8 +67,19 @@ class StrategyAConfig:
     pfe_tokenizer: str = "cl100k_base"
     cache_dir: str | None = None  # default: <output_dir>/cache
     repair: bool = True  # one repair call on parse failures (LLM_SPEC §7.2)
+    property_notes: str | None = None  # YAML {property name: short description}, for {property_notes}
     raw: dict[str, Any] = field(default_factory=dict, repr=False)
     base_dir: Path = field(default_factory=Path.cwd, repr=False)
+
+    def notes(self) -> dict[str, str]:
+        """The property descriptions of ``inputs.property_notes`` (empty when unset)."""
+        if not self.property_notes:
+            return {}
+        with open(self.path(self.property_notes), encoding="utf-8") as fh:
+            data = yaml.safe_load(fh) or {}
+        if not isinstance(data, dict) or not all(isinstance(v, str) for v in data.values()):
+            raise ConfigError(f"{self.property_notes}: expected a mapping property name -> description")
+        return data
 
     def path(self, p: str | None) -> Path | None:
         if p is None:
@@ -103,7 +119,12 @@ class StrategyAConfig:
         return chosen
 
 
-def load_config(path: str | Path) -> StrategyAConfig:
+def load_config(path: str | Path, ollama: str | None = None) -> StrategyAConfig:
+    """Read and validate a Strategy A YAML config. Refuses a ground_truth.csv as input.
+
+    ``ollama`` ('cloud', 'local' or a URL; default: the config's top-level ``ollama`` key, else the models' own
+    base_url) points the Ollama models at Ollama Cloud or an on-premise server (``llmcore.config.use_ollama``).
+    """
     path = Path(path)
     with open(path, encoding="utf-8") as fh:
         raw = yaml.safe_load(fh) or {}
@@ -119,15 +140,17 @@ def load_config(path: str | Path) -> StrategyAConfig:
     ids = [m.id for m in models]
     if len(set(ids)) != len(ids):
         raise ConfigError("model ids must be unique")
+    endpoint = use_ollama(models, ollama or raw.get("ollama"))
     templates = [TemplateSpec(**t) for t in raw.get("templates") or []]
     if not templates:
         raise ConfigError("no templates configured")
     cfg = StrategyAConfig(
         tasks=inputs["tasks"],
         examples=inputs.get("examples"),
+        property_notes=inputs.get("property_notes"),
         templates=templates,
         models=models,
-        output_dir=raw.get("output_dir") or "results/strategy_a",
+        output_dir=endpoint_output_dir(raw.get("output_dir") or "results/strategy_a", endpoint),
         runs_per_task=int(raw.get("runs_per_task", 5)),
         pfe_tokenizer=raw.get("pfe_tokenizer", raw.get("tokenizer_for_pfe", "cl100k_base")),
         cache_dir=raw.get("cache_dir"),

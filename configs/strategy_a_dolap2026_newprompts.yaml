@@ -1,0 +1,62 @@
+# Strategy A of the new version (Figure 2 prompts, property notes, few-shot examples of v5, repair, 3 runs, the
+# v5 model settings) on the 36 published DOLAP 2026 tasks. The user message is the exact published input
+# ({published_input}): G = the node's own properties, plus the published-style context block in the *_ctx variants.
+# Compared with configs/strategy_a_dolap2026.yaml (published prompts, 5 runs, no repair) only the prompt protocol differs.
+#   strategy-a run --config configs/strategy_a_dolap2026_newprompts.yaml --models cloud-gemma4-31b
+
+inputs:
+  tasks: tasks/airports/dolap2026/tasks.csv
+  examples: data/examples/airports_v5.json          # none of the 9 DOLAP airports (leakage is checked)
+  property_notes: data/property_notes/airports.yaml
+runs_per_task: 3
+pfe_tokenizer: cl100k_base
+repair: true
+output_dir: results/airports/dolap2026/strategy_a_newprompts/
+
+templates:
+  # templates/figure2_dolap = templates/figure2 with {paper_input} -> {published_input}
+  - {id: compact,      file: templates/figure2_dolap/compact.v2.txt, output: csv}
+  - {id: zero,         file: templates/figure2_dolap/zero.v2.txt,    output: csv}
+  - {id: few,          file: templates/figure2_dolap/few.v2.txt,     output: csv, n_examples: [1, 3, 5]}
+  - {id: zerocot,      file: templates/figure2_dolap/zerocot.v2.txt, output: csv, expected_output_tokens: 300}
+  - {id: fewcot,       file: templates/figure2_dolap/fewcot.v2.txt,  output: csv, expected_output_tokens: 300, n_examples: [1, 3, 5]}
+  - {id: compact_ctx,  file: templates/figure2_dolap/compact.v2.txt, output: csv, with_context: true}
+  - {id: zero_ctx,     file: templates/figure2_dolap/zero.v2.txt,    output: csv, with_context: true}
+  - {id: few_ctx,      file: templates/figure2_dolap/few.v2.txt,     output: csv, with_context: true, n_examples: [1, 3, 5]}
+  - {id: zerocot_ctx,  file: templates/figure2_dolap/zerocot.v2.txt, output: csv, with_context: true, expected_output_tokens: 300}
+  - {id: fewcot_ctx,   file: templates/figure2_dolap/fewcot.v2.txt,  output: csv, with_context: true, expected_output_tokens: 300, n_examples: [1, 3, 5]}
+
+model_defaults:
+  provider: ollama
+  params: {temperature: 0.7, max_tokens: 4096}
+  max_concurrency: 3
+  timeout_s: 600
+  max_retries: 5
+  energy: {method: none}
+  options: {num_ctx: 8192, keep_alive: 30m, seed: 0}
+
+models:   # the v5 settings (configs/strategy_a_v5_ctx.yaml); mistral-large-3 was retired by Ollama Cloud
+  - id: cloud-gpt-oss-20b
+    model: gpt-oss:20b
+    options: {base_url: "https://ollama.com", think: low}
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.07, output_per_mtok: 0.3, as_of: "2026-10-27"}
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-20b}
+  - id: cloud-gemma4-31b
+    model: gemma4:31b
+    options: {base_url: "https://ollama.com", think: false}
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.14, output_per_mtok: 0.40, as_of: "2026-10-28"}
+    energy: {method: ecologits, ecologits_provider: google_genai, ecologits_model: gemma-4-31b-it}
+  - id: cloud-gpt-oss-120b
+    model: gpt-oss:120b
+    options: {base_url: "https://ollama.com", think: low}
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.15, output_per_mtok: 0.6, as_of: "2026-10-28"}
+    energy: {method: ecologits, ecologits_provider: huggingface_hub, ecologits_model: openai/gpt-oss-120b}
+  - id: cloud-deepseek-v4.1-flash
+    model: deepseek-v4.1-flash
+    options: {base_url: "https://ollama.com", think: false}
+    api_key_env: OLLAMA_API_KEY
+    pricing: {input_per_mtok: 0.30, output_per_mtok: 1.20, as_of: "2026-10-28"}
+    energy: {method: ecologits, ecologits_provider: mistralai, ecologits_model: zai-glm-5-3}
